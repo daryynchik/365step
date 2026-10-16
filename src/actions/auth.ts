@@ -62,6 +62,7 @@ export async function signInAction(
  * populated product immediately instead of an empty new account.
  */
 export async function demoLoginAction(persona: DemoPersona = "school"): Promise<FormState> {
+  if (process.env.ENABLE_DEMO !== "true") return { error: "Демо-режим выключен. Создайте свой аккаунт." };
   const userId = await ensureDemoUser(persona);
   if (!userId) return { error: "Unknown demo scenario." };
 

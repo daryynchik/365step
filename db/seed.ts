@@ -732,8 +732,10 @@ async function main(): Promise<void> {
   await seedOpportunities();
   await seedAchievements();
 
-  log("Seeding demo account…");
-  await seedDemoUser();
+  if (process.env.ENABLE_DEMO === "true") {
+    log("Seeding demo account…");
+    await seedDemoUser();
+  }
 
   const users = await scalar("SELECT COUNT(*) FROM users");
   log(`\nDone. ${users} user${users === 1 ? "" : "s"} in the database.`);

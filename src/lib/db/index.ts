@@ -60,6 +60,7 @@ async function createSqliteDriver(): Promise<Driver> {
   // the site without any setup, not a substitute for real persistence: set
   // DATABASE_URL to a Postgres/Supabase connection string for that.
   const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+  if (isServerless && process.env.ENABLE_DEMO !== "true") throw new Error("Set DATABASE_URL for durable production storage.");
   const file =
     process.env.SQLITE_PATH ??
     (isServerless ? "/tmp/365step.db" : path.join(process.cwd(), "data", "365step.db"));
@@ -105,37 +106,37 @@ async function createSqliteDriver(): Promise<Driver> {
     }
   }
 
-  let depth = 0;
-
+  // Serialize operations on the single SQLite connection. AsyncLocalStorage
+  // keeps nested operations in their transaction, without admitting unrelated
+  // requests into a transaction that may later roll back.
+  let tail: Promise<void> = Promise.resolve();
+  async function exclusive<T>(fn: () => Promise<T>): Promise<T> {
+    const previous = tail;
+    let release!: () => void;
+    tail = new Promise<void>(resolve => { release = resolve; });
+    await previous;
+    try { return await fn(); } finally { release(); }
+  }
+  const raw: Executor = {
+    async all(sql, params) { return db.prepare(sql).all(...params) as Row[]; },
+    async run(sql, params) { db.prepare(sql).run(...params); },
+  };
   return {
     dialect: "sqlite",
-    async all(sql, params) {
-      return db.prepare(sql).all(...params) as Row[];
-    },
-    async run(sql, params) {
-      db.prepare(sql).run(...params);
-    },
+    all: (sql, params) => exclusive(() => raw.all(sql, params)),
+    run: (sql, params) => exclusive(() => raw.run(sql, params)),
     async transaction(fn) {
-      // better-sqlite3's own transaction() helper cannot wrap async work, so
-      // drive the statements directly. `depth` makes nesting a no-op rather
-      // than a "cannot start a transaction within a transaction" error.
-      if (depth > 0) return fn();
-      depth++;
-      db.exec("BEGIN");
-      try {
-        const result = await fn();
-        db.exec("COMMIT");
-        return result;
-      } catch (error) {
-        db.exec("ROLLBACK");
-        throw error;
-      } finally {
-        depth--;
-      }
+      if (txContext.getStore()) return fn();
+      return exclusive(async () => {
+        db.exec("BEGIN IMMEDIATE");
+        try {
+          const result = await txContext.run(raw, fn);
+          db.exec("COMMIT");
+          return result;
+        } catch(error) { db.exec("ROLLBACK"); throw error; }
+      });
     },
-    async exec(sql) {
-      db.exec(sql);
-    },
+    async exec(sql) { await exclusive(async () => { db.exec(sql); }); },
   };
 }
 

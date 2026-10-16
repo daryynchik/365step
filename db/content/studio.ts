@@ -1,0 +1,3 @@
+import content from '../../src/content/research-curriculum.json';
+import type {SeedCourse} from './types';
+export const STUDIO_COURSES:SeedCourse[]=content.map(m=>({slug:`studio-${m.month}`,track:'Research',title:`Месяц ${m.month}. ${m.title}`,subtitle:m.focus,description:m.brief,difficulty:m.month<5?'beginner':m.month<9?'intermediate':'advanced',subjects:['research','writing'],audiences:['school','university','graduate'],goalSlugs:['start-research','get-into-university','build-portfolio'],accent:'emerald',lessons:[{slug:'workshop',title:m.title,objective:m.focus,estMinutes:18,xp:35,...m.lesson,resources:[{title:m.readingTitle,url:m.readingUrl,source:'OpenStax · внешнее чтение'}]}]}));

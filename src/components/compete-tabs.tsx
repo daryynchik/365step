@@ -50,7 +50,7 @@ export function CompeteTabs({
   function goTo(next: Tab) {
     const merged = new URLSearchParams(params.toString());
     merged.set("tab", next);
-    router.push(`/compete?${merged}`);
+    router.push(`/compete/practice?${merged}`);
   }
 
   const friendUsers: FriendUser[] = friends.map((f) => f.friend);

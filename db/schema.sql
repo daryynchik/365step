@@ -446,3 +446,48 @@ CREATE TABLE IF NOT EXISTS daily_challenge_attempts (
 
 CREATE INDEX IF NOT EXISTS idx_dca_challenge ON daily_challenge_attempts(challenge_id);
 CREATE INDEX IF NOT EXISTS idx_dca_user ON daily_challenge_attempts(user_id);
+
+-- 365step v2: persistent writing studio and friend arena.
+CREATE TABLE IF NOT EXISTS studio_submissions (
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  month_index INTEGER NOT NULL CHECK(month_index BETWEEN 1 AND 12),
+  title TEXT NOT NULL DEFAULT '',
+  body TEXT NOT NULL DEFAULT '',
+  sources TEXT NOT NULL DEFAULT '',
+  checklist TEXT NOT NULL DEFAULT '[]',
+  status TEXT NOT NULL DEFAULT 'draft' CHECK(status IN ('draft','submitted')),
+  revision INTEGER NOT NULL DEFAULT 1,
+  updated_at TEXT NOT NULL,
+  PRIMARY KEY(user_id, month_index)
+);
+CREATE TABLE IF NOT EXISTS arena_profiles (
+  user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  weapon TEXT NOT NULL DEFAULT 'starter',
+  shield TEXT NOT NULL DEFAULT 'starter'
+);
+CREATE TABLE IF NOT EXISTS arena_inventory (
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  item_id TEXT NOT NULL,
+  price INTEGER NOT NULL CHECK(price >= 0),
+  purchased_at TEXT NOT NULL,
+  PRIMARY KEY(user_id,item_id)
+);
+CREATE TABLE IF NOT EXISTS arena_duels (
+  id TEXT PRIMARY KEY,
+  challenger_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  opponent_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  status TEXT NOT NULL CHECK(status IN ('pending','active','completed','declined','expired')),
+  state TEXT NOT NULL,
+  turn_id TEXT NOT NULL,
+  winner_id TEXT REFERENCES users(id),
+  version INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL,
+  expires_at TEXT NOT NULL,
+  CHECK(challenger_id <> opponent_id)
+);
+CREATE INDEX IF NOT EXISTS arena_duels_players ON arena_duels(challenger_id,opponent_id,status);
+CREATE TABLE IF NOT EXISTS auth_attempts (
+  key TEXT PRIMARY KEY,
+  attempts INTEGER NOT NULL,
+  window_start TEXT NOT NULL
+);

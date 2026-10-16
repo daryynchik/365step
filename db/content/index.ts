@@ -1,3 +1,4 @@
+import { STUDIO_COURSES } from "./studio";
 import { CAREER_COURSES } from "./career";
 import { IELTS_COURSES } from "./ielts";
 import { PROJECT_COURSES } from "./projects";
@@ -15,6 +16,7 @@ export const COURSES: SeedCourse[] = [
   ...RESEARCH_COURSES,
   ...PROJECT_COURSES,
   ...CAREER_COURSES,
+  ...STUDIO_COURSES,
 ];
 
 /** Track display order on the Learn page. */
