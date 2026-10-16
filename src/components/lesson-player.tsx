@@ -1,511 +1,305 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Award,
-  Check,
-  CheckCircle2,
-  ExternalLink,
-  Flame,
-  Lightbulb,
-  Loader2,
-  PlayCircle,
-  RotateCcw,
-  Timer,
-  X,
-  Zap,
-} from "lucide-react";
-import clsx from "clsx";
+import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
+import { ArrowUpRight, BookOpen, Check, Loader2, X } from "lucide-react";
+import { clsx } from "clsx";
 
-import { submitLessonAction, type LessonSubmitResult } from "@/actions/lessons";
-import type { Lesson, Question, Resource } from "@/lib/types";
-import { LessonProse } from "./lesson-prose";
-import { Badge, Button, ButtonLink, Card, Panel, ProgressBar } from "./ui";
+import { completeLessonAction } from "@/actions/lessons";
+import { sectionHref, sectionLabel } from "@/content";
+import type { CourseId, Lesson } from "@/content/types";
+import { correctAnswerLabel, isCorrect, type Response } from "@/lib/answers";
+import type { Completion } from "@/lib/game";
+import { Celebration } from "./celebration";
+import { QuestionView } from "./question-view";
+import { RichText } from "./rich-text";
+import { Button, ErrorNote } from "./ui";
+import { WritingStep, type DraftState } from "./writing-step";
 
-type Phase = "theory" | "quiz" | "done";
+type Phase = "theory" | "questions" | "writing" | "done";
 
-/**
- * The lesson player.
- *
- * The whole product's learning principle is Learn → Practice → Feedback, so the
- * player is three phases and nothing more: a short explanation, questions one at
- * a time with the explanation revealed immediately after answering, then the
- * result and the obvious next action.
- *
- * `practiceMode` skips the theory — that is what a "Practice" daily step links
- * to, and what the assistant links to when a score was weak.
- */
-export function LessonPlayer({
-  courseSlug,
-  courseTitle,
-  lesson,
-  questions,
-  resources,
-  practiceMode,
-  alreadyCompleted,
-  previousScore,
-}: {
-  courseSlug: string;
-  courseTitle: string;
+export interface LessonPlayerProps {
+  courseId: CourseId;
   lesson: Lesson;
-  questions: Question[];
-  resources: Resource[];
-  practiceMode: boolean;
-  alreadyCompleted: boolean;
-  previousScore: { correct: number; total: number } | null;
-}) {
-  const router = useRouter();
+  unitTitle: string;
+  tone: string;
+  backHref: string;
+  draft: DraftState | null;
+  aiFeedback: boolean;
+}
 
-  const [phase, setPhase] = useState<Phase>(practiceMode ? "quiz" : "theory");
-  const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [answers, setAnswers] = useState<number[]>([]);
-  const [revealed, setRevealed] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<LessonSubmitResult | null>(null);
+export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draft, aiFeedback }: LessonPlayerProps) {
+  const questions = lesson.questions;
+  const [phase, setPhase] = useState<Phase>("theory");
 
-  const startedAt = useRef(Date.now());
-  const question = questions[index];
-  const isLast = index === questions.length - 1;
+  // Questions are asked in order; a wrong answer sends that question to the back
+  // of the queue once, so the lesson ends on a correct answer to everything.
+  const [queue, setQueue] = useState<number[]>(() => questions.map((_, i) => i));
+  const [position, setPosition] = useState(0);
+  const [response, setResponse] = useState<Response | null>(null);
+  const [checked, setChecked] = useState(false);
+  const [firstTry, setFirstTry] = useState<(Response | null)[]>(() => questions.map(() => null));
+  const [cleared, setCleared] = useState<Set<number>>(new Set());
+  const [shake, setShake] = useState(false);
 
-  const correctCount = useMemo(
-    () => answers.reduce((n, answer, i) => n + (answer === questions[i]?.correctIndex ? 1 : 0), 0),
-    [answers, questions],
+  const [result, setResult] = useState<Completion | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [pending, start] = useTransition();
+
+  const current = queue[position];
+  const question = questions[current];
+  const correct = checked && question ? isCorrect(question, response) : false;
+
+  const totalSteps = 1 + questions.length + (lesson.writing ? 1 : 0);
+  const doneSteps = (phase === "theory" ? 0 : 1) + cleared.size + (phase === "done" ? 1 : 0);
+
+  const finish = useCallback(
+    (responses: (Response | null)[]) => {
+      setError(null);
+      start(async () => {
+        const res = await completeLessonAction(courseId, lesson.id, responses);
+        if (res.ok) {
+          setResult(res.result);
+          setPhase("done");
+        } else {
+          setError(res.error);
+        }
+      });
+    },
+    [courseId, lesson.id],
   );
 
-  // Keyboard answering: 1–4 to pick, Enter to advance. Quiz drilling should not
-  // require the mouse.
-  useEffect(() => {
-    if (phase !== "quiz" || !question) return;
+  const begin = useCallback(() => {
+    if (questions.length > 0) setPhase("questions");
+    else if (lesson.writing) setPhase("writing");
+    else finish([]);
+  }, [questions.length, lesson.writing, finish]);
 
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Enter") {
-        if (revealed) advance();
-        else if (selected !== null) reveal();
-        return;
-      }
-      if (revealed) return;
-      const n = Number(event.key);
-      if (Number.isInteger(n) && n >= 1 && n <= question!.options.length) {
-        setSelected(n - 1);
-      }
+  const check = useCallback(() => {
+    if (!question || response === null || (typeof response === "string" && !response.trim())) return;
+    setChecked(true);
+    const right = isCorrect(question, response);
+    if (firstTry[current] === null) {
+      setFirstTry((prev) => prev.map((r, i) => (i === current ? response : r)));
     }
+    if (right) {
+      setCleared((prev) => new Set(prev).add(current));
+    } else {
+      setShake(true);
+      setTimeout(() => setShake(false), 350);
+      // Ask it again at the end, but only once.
+      if (queue.filter((q) => q === current).length === 1) setQueue((prev) => [...prev, current]);
+    }
+  }, [question, response, current, firstTry, queue]);
 
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  });
-
-  function reveal() {
-    if (selected === null) return;
-    setAnswers((current) => {
-      const next = [...current];
-      next[index] = selected;
-      return next;
-    });
-    setRevealed(true);
-  }
-
-  function advance() {
-    if (!isLast) {
-      setIndex(index + 1);
-      setSelected(null);
-      setRevealed(false);
+  const advance = useCallback(() => {
+    const nextPosition = position + 1;
+    setChecked(false);
+    setResponse(null);
+    if (nextPosition < queue.length) {
+      setPosition(nextPosition);
       return;
     }
-    finish();
+    if (lesson.writing) setPhase("writing");
+    else finish(firstTry);
+  }, [position, queue.length, lesson.writing, finish, firstTry]);
+
+  // Keyboard: 1–4 or A–D to choose, Enter to check / continue.
+  useEffect(() => {
+    if (phase !== "questions" || !question) return;
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      const typing = target.tagName === "INPUT" || target.tagName === "TEXTAREA";
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (checked) advance();
+        else check();
+        return;
+      }
+      if (typing || checked || question.kind !== "choice") return;
+      const index = "1234".indexOf(e.key) >= 0 ? "1234".indexOf(e.key) : "abcd".indexOf(e.key.toLowerCase());
+      if (index >= 0 && index < question.options.length) setResponse(index);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [phase, question, checked, check, advance]);
+
+  const progress = useMemo(() => Math.round((doneSteps / totalSteps) * 100), [doneSteps, totalSteps]);
+
+  if (phase === "done" && result) {
+    return <Celebration result={result} kind={lesson.writing ? "writing" : "lesson"} backHref={backHref} />;
   }
-
-  async function finish() {
-    setSubmitting(true);
-    const finalAnswers = [...answers];
-    if (selected !== null) finalAnswers[index] = selected;
-
-    const seconds = Math.round((Date.now() - startedAt.current) / 1000);
-    const submitted = await submitLessonAction(courseSlug, lesson.slug, finalAnswers, seconds);
-
-    setResult(submitted);
-    setSubmitting(false);
-    setPhase("done");
-    router.refresh();
-  }
-
-  function restart() {
-    setPhase("quiz");
-    setIndex(0);
-    setSelected(null);
-    setAnswers([]);
-    setRevealed(false);
-    setResult(null);
-    startedAt.current = Date.now();
-  }
-
-  // ------------------------------------------------------------------- header
-  const header = (
-    <div className="mb-6">
-      <Link
-        href={`/learn/${courseSlug}`}
-        className="muted inline-flex items-center gap-1.5 text-sm transition-colors hover:text-[var(--fg)]"
-      >
-        <ArrowLeft className="size-3.5" />
-        {courseTitle}
-      </Link>
-
-      <h1 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{lesson.title}</h1>
-
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        <Badge tone="outline">
-          <Timer className="size-3" />
-          {lesson.estMinutes} min
-        </Badge>
-        <Badge tone="xp">
-          <Zap className="size-3" />
-          {lesson.xp} XP
-        </Badge>
-        {practiceMode ? <Badge tone="calm">Practice mode</Badge> : null}
-        {alreadyCompleted && previousScore ? (
-          <Badge tone="done">
-            <Check className="size-3" strokeWidth={3} />
-            Previously {previousScore.correct}/{previousScore.total}
-          </Badge>
-        ) : null}
-      </div>
-
-      <p className="muted mt-3 text-sm leading-relaxed">{lesson.objective}</p>
-    </div>
-  );
-
-  // ------------------------------------------------------------------- theory
-  if (phase === "theory") {
-    return (
-      <div className="animate-[rise_0.4s_both]">
-        {header}
-
-        <Panel className="p-6 sm:p-8">
-          <LessonProse text={lesson.theory} />
-
-          {lesson.example ? (
-            <div className="sunken mt-7 rounded-xl p-5">
-              <p className="eyebrow mb-3 flex items-center gap-1.5">
-                <Lightbulb className="size-3.5" />
-                Worked example
-              </p>
-              <LessonProse text={lesson.example} />
-            </div>
-          ) : null}
-
-          {lesson.takeaway ? (
-            <div
-              className="mt-6 rounded-xl border-l-[3px] py-3 pl-4"
-              style={{ borderColor: "var(--color-arc-mid)" }}
-            >
-              <p className="eyebrow mb-1">The takeaway</p>
-              <p className="text-[15px] font-medium leading-relaxed">{lesson.takeaway}</p>
-            </div>
-          ) : null}
-        </Panel>
-
-        {resources.length > 0 ? (
-          <div className="mt-5">
-            <p className="eyebrow mb-3">Go deeper (optional)</p>
-            <div className="space-y-2">
-              {resources.map((resource) => (
-                <a
-                  key={resource.id}
-                  href={resource.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="surface group flex items-center gap-3 p-3.5 transition-all hover:shadow-soft"
-                >
-                  <PlayCircle className="size-4 shrink-0" style={{ color: "var(--color-arc-mid)" }} />
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm font-medium">{resource.title}</span>
-                    <span className="subtle text-[11px]">
-                      {resource.source}
-                      {resource.durationMin ? ` · ${resource.durationMin} min` : ""}
-                    </span>
-                  </span>
-                  <ExternalLink className="subtle size-3.5 shrink-0" />
-                </a>
-              ))}
-            </div>
-            <p className="subtle mt-3 text-xs leading-relaxed">
-              Watching does not complete the step — the questions below do. That is
-              deliberate.
-            </p>
-          </div>
-        ) : null}
-
-        <div className="mt-6 flex items-center gap-3">
-          <Button size="lg" onClick={() => setPhase("quiz")}>
-            Check yourself
-            <ArrowRight className="size-4" />
-          </Button>
-          <span className="subtle text-xs">
-            {questions.length} question{questions.length === 1 ? "" : "s"}
-          </span>
-        </div>
-      </div>
-    );
-  }
-
-  // --------------------------------------------------------------------- quiz
-  if (phase === "quiz" && question) {
-    const isCorrect = revealed && selected === question.correctIndex;
-
-    return (
-      <div className="animate-[rise_0.4s_both]">
-        {header}
-
-        <div className="mb-4">
-          <div className="mb-2 flex items-baseline justify-between text-xs">
-            <span className="subtle nums">
-              Question {index + 1} of {questions.length}
-            </span>
-            <span className="nums subtle">
-              {correctCount} correct so far
-            </span>
-          </div>
-          <ProgressBar
-            value={(index / questions.length) * 100}
-            gradient
-            height="h-1.5"
-            label="Quiz progress"
-          />
-        </div>
-
-        <Panel className="p-6 sm:p-7">
-          <p className="text-[17px] font-medium leading-relaxed">{question.prompt}</p>
-
-          <div className="mt-5 space-y-2.5" role="radiogroup" aria-label="Answer options">
-            {question.options.map((option, i) => {
-              const isChosen = selected === i;
-              const isAnswer = i === question.correctIndex;
-
-              // After revealing: mark the right answer, and mark a wrong pick.
-              const state = !revealed
-                ? isChosen
-                  ? "chosen"
-                  : "idle"
-                : isAnswer
-                  ? "correct"
-                  : isChosen
-                    ? "wrong"
-                    : "idle";
-
-              return (
-                <button
-                  key={i}
-                  type="button"
-                  role="radio"
-                  aria-checked={isChosen}
-                  disabled={revealed}
-                  onClick={() => setSelected(i)}
-                  className={clsx(
-                    "flex w-full items-start gap-3 rounded-xl border p-4 text-left transition-all",
-                    state === "idle" &&
-                      "border-[var(--border)] hover:border-[var(--border-strong)] disabled:hover:border-[var(--border)]",
-                    state === "chosen" && "border-[var(--fg)] bg-[var(--bg-sunken)]",
-                    state === "correct" &&
-                      "border-[var(--color-done)] bg-[color-mix(in_oklab,var(--color-done)_8%,transparent)]",
-                    state === "wrong" &&
-                      "border-[var(--color-urgent)] bg-[color-mix(in_oklab,var(--color-urgent)_7%,transparent)]",
-                  )}
-                >
-                  <span
-                    className={clsx(
-                      "mt-px flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] font-semibold",
-                      state === "idle" && "border-[var(--border-strong)] subtle",
-                      state === "chosen" && "border-[var(--fg)] bg-[var(--fg)] text-[var(--bg-raised)]",
-                      state === "correct" &&
-                        "border-[var(--color-done)] bg-[var(--color-done)] text-white",
-                      state === "wrong" &&
-                        "border-[var(--color-urgent)] bg-[var(--color-urgent)] text-white",
-                    )}
-                  >
-                    {state === "correct" ? (
-                      <Check className="size-3" strokeWidth={3} />
-                    ) : state === "wrong" ? (
-                      <X className="size-3" strokeWidth={3} />
-                    ) : (
-                      i + 1
-                    )}
-                  </span>
-                  <span className="min-w-0 flex-1 text-sm leading-relaxed">{option}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* instant feedback */}
-          {revealed ? (
-            <div
-              className="mt-5 animate-[rise_0.3s_both] rounded-xl border-l-[3px] py-3 pl-4"
-              style={{
-                borderColor: isCorrect ? "var(--color-done)" : "var(--color-soon)",
-              }}
-            >
-              <p
-                className="mb-1 text-sm font-semibold"
-                style={{ color: isCorrect ? "var(--color-done)" : "var(--color-soon)" }}
-              >
-                {isCorrect ? "Correct" : "Not quite"}
-              </p>
-              <p className="text-[13px] leading-relaxed">{question.explanation}</p>
-            </div>
-          ) : null}
-
-          <div className="hairline mt-6 flex items-center justify-between gap-3 pt-5">
-            <span className="subtle hidden text-[11px] sm:block">
-              Press 1–{question.options.length} to choose, Enter to continue
-            </span>
-
-            {revealed ? (
-              <Button onClick={advance} disabled={submitting}>
-                {submitting ? <Loader2 className="size-4 animate-spin" /> : null}
-                {isLast ? "Finish lesson" : "Next question"}
-                {submitting ? null : <ArrowRight className="size-4" />}
-              </Button>
-            ) : (
-              <Button onClick={reveal} disabled={selected === null}>
-                Check answer
-              </Button>
-            )}
-          </div>
-        </Panel>
-      </div>
-    );
-  }
-
-  // --------------------------------------------------------------------- done
-  // The server recomputes the score from the stored correct answers, so prefer
-  // its numbers; the local tally is only a fallback if the submit failed.
-  const total = result?.total ?? questions.length;
-  const finalCorrect = result?.correct ?? correctCount;
-  const pct = total === 0 ? 100 : Math.round((finalCorrect / total) * 100);
 
   return (
-    <div className="animate-[pop_0.4s_both]">
-      <Panel className="overflow-hidden p-7 text-center sm:p-10">
-        <div
-          className="mx-auto mb-5 flex size-14 items-center justify-center rounded-full"
-          style={{
-            background:
-              pct >= 80
-                ? "color-mix(in oklab, var(--color-done) 13%, transparent)"
-                : "color-mix(in oklab, var(--color-soon) 14%, transparent)",
-            color: pct >= 80 ? "var(--color-done)" : "var(--color-soon)",
-          }}
-        >
-          <CheckCircle2 className="size-7" />
-        </div>
-
-        <h2 className="text-2xl font-semibold tracking-tight">
-          {pct === 100
-            ? "Perfect"
-            : pct >= 80
-              ? "Well done"
-              : pct >= 50
-                ? "Good start"
-                : "Worth another pass"}
-        </h2>
-
-        <p className="muted nums mt-2 text-sm">
-          {finalCorrect} of {total} correct · {pct}%
-        </p>
-
-        {/* rewards */}
-        {result?.ok ? (
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-            {result.xpAwarded ? (
-              <Badge tone="xp">
-                <Zap className="size-3" />+{result.xpAwarded} XP
-              </Badge>
-            ) : (
-              <Badge tone="neutral">Already completed — no XP this time</Badge>
-            )}
-            {result.streakDays ? (
-              <Badge tone="streak">
-                <Flame className="size-3" />
-                {result.streakDays} day streak
-              </Badge>
-            ) : null}
-            {result.levelledUp ? <Badge tone="done">Level up</Badge> : null}
-            {result.dailyPlanComplete ? <Badge tone="done">Day complete</Badge> : null}
-          </div>
-        ) : null}
-
-        {result?.newAchievements && result.newAchievements.length > 0 ? (
-          <div className="sunken mt-6 rounded-xl p-4 text-left">
-            <p className="eyebrow mb-2.5">New achievements</p>
-            <ul className="space-y-2">
-              {result.newAchievements.map((achievement) => (
-                <li key={achievement.code} className="flex items-start gap-2.5">
-                  <Award
-                    className="mt-0.5 size-4 shrink-0"
-                    style={{ color: "var(--color-arc-mid)" }}
-                  />
-                  <span>
-                    <span className="block text-sm font-medium">{achievement.title}</span>
-                    <span className="muted text-xs">{achievement.description}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-
-        {result?.error ? (
-          <p className="mt-5 text-sm text-[var(--color-urgent)]">{result.error}</p>
-        ) : null}
-
-        {/* what next */}
-        <div className="mt-8 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
-          {result?.nextLessonSlug ? (
-            <ButtonLink href={`/learn/${courseSlug}/${result.nextLessonSlug}`} size="lg">
-              Next: {result.nextLessonTitle}
-              <ArrowRight className="size-4" />
-            </ButtonLink>
-          ) : (
-            <ButtonLink href="/dashboard" size="lg">
-              Back to today
-              <ArrowRight className="size-4" />
-            </ButtonLink>
-          )}
-
-          <Button variant="secondary" onClick={restart}>
-            <RotateCcw className="size-3.5" />
-            Try again
-          </Button>
-        </div>
-
-        <div className="hairline mt-7 pt-5">
-          <Link
-            href="/dashboard"
-            className="muted text-sm underline-offset-4 transition-colors hover:text-[var(--fg)] hover:underline"
-          >
-            See how today&apos;s plan looks now
+    <div className="flex min-h-dvh flex-col">
+      <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-3xl items-center gap-4 px-4">
+          <Link href={backHref} aria-label="Выйти из урока" className="rounded-lg p-1.5 text-subtle hover:bg-sunken hover:text-ink">
+            <X className="size-5" />
           </Link>
+          <div className="h-3 flex-1 overflow-hidden rounded-full bg-sunken" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
+            <div className="h-full rounded-full transition-[width] duration-500" style={{ width: `${Math.max(4, progress)}%`, background: tone }} />
+          </div>
+          {phase === "questions" && (
+            <span className="tabular text-sm font-medium text-muted">
+              {cleared.size}/{questions.length}
+            </span>
+          )}
         </div>
-      </Panel>
+      </header>
 
-      {/* Review the material again without leaving the page. */}
-      <Card className="mt-5 p-5">
-        <p className="eyebrow mb-3">Review</p>
-        {lesson.takeaway ? (
-          <p className="text-sm font-medium leading-relaxed">{lesson.takeaway}</p>
-        ) : null}
-        <button
-          type="button"
-          onClick={() => setPhase("theory")}
-          className="muted mt-3 text-sm underline-offset-4 transition-colors hover:text-[var(--fg)] hover:underline"
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-40 pt-8">
+        {phase === "theory" && (
+          <article className="rise">
+            <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: tone }}>
+              {unitTitle}
+            </p>
+            <h1 className="mt-1 text-[28px] font-bold leading-tight tracking-tight">{lesson.title}</h1>
+            <p className="mt-1 text-muted">
+              {lesson.minutes} мин{questions.length > 0 ? ` · ${questions.length} заданий` : ""}
+              {lesson.writing ? ` · письменная работа ${lesson.writing.minWords}–${lesson.writing.maxWords} слов` : ""}
+            </p>
+
+            {lesson.reading && (
+              <section className="mt-6 rounded-xl border border-seminar/20 bg-seminar-soft p-5">
+                <div className="flex items-center gap-2 text-sm font-semibold text-seminar">
+                  <BookOpen className="size-4" /> Прочитай перед уроком
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {lesson.reading.sections.map((id) => (
+                    <a
+                      key={id}
+                      href={sectionHref(id)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 rounded-lg border border-line bg-surface px-3 py-1.5 text-sm font-medium hover:border-line-strong"
+                    >
+                      {sectionLabel(id)}
+                      {id.includes("#") ? " (финал)" : ""}
+                      <ArrowUpRight className="size-3.5 text-subtle" />
+                    </a>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm font-medium">На что обратить внимание:</p>
+                <ul className="mt-2 space-y-1.5 text-sm">
+                  {lesson.reading.guide.map((g) => (
+                    <li key={g} className="flex gap-2.5">
+                      <span className="mt-[0.55em] size-1.5 flex-none rounded-full bg-seminar/60" />
+                      {g}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            <div className="mt-6 space-y-6 text-[16px] leading-relaxed">
+              {lesson.theory.map((block, i) => (
+                <section key={i}>
+                  {block.heading && <h2 className="mb-2 text-lg font-semibold">{block.heading}</h2>}
+                  <RichText text={block.body} />
+                </section>
+              ))}
+            </div>
+
+            {lesson.official && (
+              <a
+                href={lesson.official.url}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-sm hover:border-line-strong"
+              >
+                <span className="grid size-9 flex-none place-items-center rounded-lg bg-sunken text-xs font-bold text-muted">CB</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-medium">Больше практики от College Board</span>
+                  <span className="block truncate text-xs text-muted">{lesson.official.label}</span>
+                </span>
+                <ArrowUpRight className="size-4 flex-none text-subtle" />
+              </a>
+            )}
+          </article>
+        )}
+
+        {phase === "questions" && question && (
+          <div key={`${current}-${position}`} className={clsx("rise", shake && "shake")}>
+            {position >= questions.length && (
+              <p className="mb-4 inline-flex items-center gap-1.5 rounded-lg bg-warn-soft px-2.5 py-1 text-xs font-semibold text-warn">
+                Повтор ошибки
+              </p>
+            )}
+            <QuestionView question={question} response={response} onRespond={setResponse} checked={checked} disabled={checked || pending} />
+          </div>
+        )}
+
+        {phase === "writing" && lesson.writing && (
+          <WritingStep courseId={courseId} lessonId={lesson.id} task={lesson.writing} initial={draft} aiFeedback={aiFeedback} onDone={(r) => {
+            setResult(r);
+            setPhase("done");
+          }} />
+        )}
+
+        {error && (
+          <div className="mt-6">
+            <ErrorNote>{error}</ErrorNote>
+          </div>
+        )}
+      </main>
+
+      {phase === "theory" && (
+        <footer className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface">
+          <div className="mx-auto flex max-w-3xl justify-end px-4 py-4">
+            <Button size="lg" onClick={begin} disabled={pending} className="w-full sm:w-auto">
+              {pending && <Loader2 className="size-4 animate-spin" />}
+              {questions.length > 0 ? "К заданиям" : "К письменной работе"}
+            </Button>
+          </div>
+        </footer>
+      )}
+
+      {phase === "questions" && question && (
+        <footer
+          className={clsx(
+            "fixed inset-x-0 bottom-0 z-30 border-t",
+            !checked && "border-line bg-surface",
+            checked && correct && "feedback-sheet border-accent-line bg-accent-soft",
+            checked && !correct && "feedback-sheet border-danger/25 bg-danger-soft",
+          )}
+          aria-live="polite"
         >
-          Read the explanation again
-        </button>
-      </Card>
+          <div className="mx-auto flex max-w-3xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-end">
+            {checked && (
+              <div className="min-w-0 flex-1">
+                <p className={clsx("flex items-center gap-2 text-lg font-bold", correct ? "text-accent" : "text-danger")}>
+                  {correct ? <Check className="size-5" strokeWidth={3} /> : <X className="size-5" strokeWidth={3} />}
+                  {correct ? "Верно!" : "Не совсем"}
+                </p>
+                {!correct && (
+                  <p className="mt-1 text-sm">
+                    <span className="font-semibold">Правильный ответ:</span> {correctAnswerLabel(question)}
+                  </p>
+                )}
+                <p className="mt-1 max-h-32 overflow-y-auto text-sm leading-relaxed text-ink/80">{question.explanation}</p>
+              </div>
+            )}
+            <div className={clsx("flex", !checked && "w-full justify-end")}>
+              {checked ? (
+                <Button size="lg" variant={correct ? "primary" : "danger-solid"} onClick={advance} disabled={pending} className="w-full sm:w-40">
+                  {pending && <Loader2 className="size-4 animate-spin" />}
+                  Дальше
+                </Button>
+              ) : (
+                <Button
+                  size="lg"
+                  onClick={check}
+                  disabled={response === null || (typeof response === "string" && !response.trim())}
+                  className="w-full sm:w-40"
+                >
+                  Проверить
+                </Button>
+              )}
+            </div>
+          </div>
+        </footer>
+      )}
     </div>
   );
 }

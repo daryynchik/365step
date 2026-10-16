@@ -1,110 +1,268 @@
-import "server-only";
+/**
+ * The demo account and its friends.
+ *
+ * Created on demand (the first time someone presses "Try the demo", or by
+ * `npm run db:seed`), so a fresh database — including Vercel's ephemeral /tmp —
+ * needs no separate seeding step. Everything is written through the same tables
+ * real users write to; the history is simply back-dated.
+ */
 
-import { randomBytes, randomUUID } from "node:crypto";
+import { randomUUID } from "node:crypto";
 
-import { one, run } from "./db";
-import { nowIso } from "./date";
-import { applyOnboarding, type OnboardingProfile } from "./onboarding";
+import { COURSES, flatten } from "@/content";
+import type { CourseId } from "@/content/types";
+import { DEFAULT_SHIELD, DEFAULT_WEAPON, item, simulate, type Fighter, type FighterColor } from "./arena-rules";
+import { one, run, transaction } from "./db";
+import { addDays, nowIso, todayIso } from "./date";
 import { hashPassword } from "./password";
-import { goalBySlug } from "./taxonomy";
+import { lessonPoints, levelFor, POINTS } from "./rules";
 
-export type DemoPersona = "school" | "university" | "graduate";
+export const DEMO_EMAIL = "demo@365step.app";
+export const DEMO_PASSWORD = "demo1234";
 
-interface DemoScenario {
+interface Persona {
   email: string;
   name: string;
-  goalSlug: string;
-  profile: OnboardingProfile;
+  /** Lessons finished in each course, from the start of the path. */
+  done: Partial<Record<CourseId, number>>;
+  /** Consecutive active days ending today (0 = not active today or yesterday). */
+  streak: number;
+  /** Days of history the finished lessons are spread across. */
+  days: number;
+  color: FighterColor;
+  gear: string[];
 }
 
-const SCENARIOS: Record<DemoPersona, DemoScenario> = {
-  // Same account the CLI seed builds with 37 days of history, when present.
-  school: {
-    email: "alex@365step.app",
-    name: "Alex",
-    goalSlug: "get-into-university",
-    profile: {
-      role: "school",
-      grade: "10",
-      country: "Kazakhstan",
-      dailyMinutes: 20,
-      skillLevel: "beginner",
-      interests: ["engineering", "physics", "math"],
-      secondary: ["research", "portfolio", "scholarship"],
-      targetDate: null,
-    },
-  },
-  university: {
-    email: "dana@365step.app",
-    name: "Dana",
-    goalSlug: "find-internship",
-    profile: {
-      role: "university",
-      grade: "year-2",
-      country: "Kazakhstan",
-      dailyMinutes: 30,
-      skillLevel: "intermediate",
-      interests: ["cs", "data-science", "math"],
-      secondary: ["internship", "portfolio", "network"],
-      targetDate: null,
-    },
-  },
-  graduate: {
-    email: "timur@365step.app",
-    name: "Timur",
-    goalSlug: "career-skills",
-    profile: {
-      role: "graduate",
-      grade: "1-2-years",
-      country: "Kazakhstan",
-      dailyMinutes: 20,
-      skillLevel: "intermediate",
-      interests: ["business", "data-science", "economics"],
-      secondary: ["english", "network", "public-speaking"],
-      targetDate: null,
-    },
-  },
+const DEMO: Persona = {
+  email: DEMO_EMAIL,
+  name: "Алия",
+  done: { "sat-rw": 6, "sat-math": 4, seminar: 3 },
+  streak: 6,
+  days: 18,
+  color: "blue",
+  gear: ["bronze-dagger", "leather-buckler"],
 };
 
-export function isDemoPersona(value: unknown): value is DemoPersona {
-  return typeof value === "string" && Object.hasOwn(SCENARIOS, value);
+const FRIENDS: Persona[] = [
+  {
+    email: "daniyar@365step.app",
+    name: "Данияр",
+    done: { "sat-rw": 4, "sat-math": 11 },
+    streak: 12,
+    days: 20,
+    color: "green",
+    gear: ["iron-sword", "iron-shield"],
+  },
+  {
+    email: "madina@365step.app",
+    name: "Мадина",
+    done: { "sat-rw": 11, "sat-math": 2, seminar: 5 },
+    streak: 3,
+    days: 25,
+    color: "violet",
+    gear: ["bronze-dagger", "kite-shield"],
+  },
+  {
+    email: "timur@365step.app",
+    name: "Тимур",
+    done: { "sat-math": 3 },
+    streak: 0,
+    days: 10,
+    color: "amber",
+    gear: [],
+  },
+];
+
+/** Someone who has asked to be friends, so the requests UI has something in it. */
+const STRANGER: Persona = {
+  email: "erlan@365step.app",
+  name: "Ерлан",
+  done: { "sat-rw": 2 },
+  streak: 1,
+  days: 4,
+  color: "red",
+  gear: [],
+};
+
+const DEMO_WRITING = `Walton's letters suggest that ambition can make a person blind to danger. In Letter 1 he admits that his goals are "sufficient to conquer all fear of danger or death" (Letter 1). This shows that Walton treats fear as an obstacle to be defeated rather than a warning to be heard. Because he wants to be the first to "tread a land never before imprinted by the foot of man" (Letter 1), the danger to his crew hardly appears in his reasoning. By opening the novel this way, Shelley prepares the reader to see Victor's story as a mirror of Walton's own choices.
+
+Questions I still want to explore:
+1. Why does Shelley let Walton, not Victor, open and close the novel?
+2. Does Walton's loneliness in Letter 2 explain why he trusts the stranger so quickly?
+3. Is the stranger's warning meant for Walton, or for the reader?`;
+
+function pair(a: string, b: string): [string, string] {
+  return a < b ? [a, b] : [b, a];
 }
 
-/** Returns the demo user's id, creating and onboarding the account on first use. */
-export async function ensureDemoUser(persona: unknown): Promise<string | null> {
-  if (!isDemoPersona(persona)) return null;
-  const scenario = SCENARIOS[persona];
-
-  const existing = await one<{ id: string }>("SELECT id FROM users WHERE email = ?", [
-    scenario.email,
+async function insertPoints(userId: string, amount: number, reason: string, ref: string | null, day: string): Promise<void> {
+  await run("INSERT INTO points (id, user_id, amount, reason, ref, day, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)", [
+    randomUUID(),
+    userId,
+    amount,
+    reason,
+    ref,
+    day,
+    `${day}T12:00:00.000Z`,
   ]);
-  if (existing) return String(existing.id);
+}
 
-  const goal = goalBySlug(scenario.goalSlug);
-  if (!goal) return null;
+/** Creates one persona with back-dated history. Returns the user id and level. */
+async function createPersona(p: Persona, passwordHash: string): Promise<{ id: string; level: number }> {
+  const id = randomUUID();
+  const today = todayIso();
+  await run("INSERT INTO users (id, email, password_hash, name, created_at) VALUES (?, ?, ?, ?, ?)", [
+    id,
+    p.email,
+    passwordHash,
+    p.name,
+    `${addDays(today, -p.days)}T09:00:00.000Z`,
+  ]);
 
-  const userId = randomUUID();
-  try {
-    // Nobody signs in with this password; demo accounts open via the button only.
-    await run(
-      "INSERT INTO users (id, email, password_hash, name, created_at) VALUES (?, ?, ?, ?, ?)",
-      [
-        userId,
-        scenario.email,
-        await hashPassword(randomBytes(24).toString("hex")),
-        scenario.name,
-        nowIso(),
-      ],
-    );
-  } catch (error) {
-    // Two first clicks at once: the other request created it; use that row.
-    const raced = await one<{ id: string }>("SELECT id FROM users WHERE email = ?", [
-      scenario.email,
-    ]);
-    if (raced) return String(raced.id);
-    throw error;
+  // Finished lessons, spread evenly over the history window, the most recent
+  // ones inside the streak so the streak is backed by real activity.
+  const finished: { key: string; correct: number; total: number; points: number }[] = [];
+  for (const [courseId, count] of Object.entries(p.done) as [CourseId, number][]) {
+    for (const entry of flatten(COURSES[courseId]).slice(0, count)) {
+      const total = entry.lesson.questions.length;
+      // A believable score: mostly right, with the odd miss.
+      const correct = total === 0 ? 0 : Math.max(1, total - ((entry.index + p.name.length) % 3 === 0 ? 1 : 0));
+      const points = entry.lesson.writing ? POINTS.writing : lessonPoints(correct, total);
+      finished.push({ key: entry.key, correct, total, points });
+    }
   }
 
-  await applyOnboarding(userId, goal, scenario.profile);
-  return userId;
+  let earned = 0;
+  for (const [i, f] of finished.entries()) {
+    // The last `streak` lessons fall on consecutive days ending today; the rest
+    // are spread over the earlier part of the history.
+    const fromEnd = finished.length - 1 - i;
+    const daysAgo = fromEnd < p.streak ? fromEnd : Math.round(p.days - (i * p.days) / finished.length);
+    const day = addDays(today, -Math.min(daysAgo, p.days));
+    const at = `${day}T12:00:00.000Z`;
+    await run(
+      `INSERT INTO lesson_results (user_id, lesson_key, best_correct, total, attempts, first_done_at, last_done_at, last_day)
+       VALUES (?, ?, ?, ?, 1, ?, ?, ?)`,
+      [id, f.key, f.correct, f.total, at, at, day],
+    );
+    await insertPoints(id, f.points, "Урок пройден", f.key, day);
+    earned += f.points;
+  }
+
+  if (p.streak > 0) {
+    await run("INSERT INTO streaks (user_id, current_days, longest_days, last_active_date, updated_at) VALUES (?, ?, ?, ?, ?)", [
+      id,
+      p.streak,
+      Math.max(p.streak, 9),
+      today,
+      nowIso(),
+    ]);
+  }
+
+  // Gear bought along the way, equipped.
+  let weapon = DEFAULT_WEAPON;
+  let shield = DEFAULT_SHIELD;
+  let spendable = earned;
+  for (const gearId of p.gear) {
+    const g = item(gearId);
+    if (g.price > spendable) continue;
+    spendable -= g.price;
+    await run("INSERT INTO arena_items (user_id, item_id, price, purchased_at) VALUES (?, ?, ?, ?)", [id, g.id, g.price, nowIso()]);
+    await insertPoints(id, -g.price, `Покупка: ${g.name}`, g.id, addDays(today, -2));
+    if (g.kind === "weapon") weapon = g.id;
+    else shield = g.id;
+  }
+  await run("INSERT INTO arena_fighters (user_id, color, weapon, shield, updated_at) VALUES (?, ?, ?, ?, ?)", [
+    id,
+    p.color,
+    weapon,
+    shield,
+    nowIso(),
+  ]);
+
+  return { id, level: levelFor(earned).level };
+}
+
+async function befriend(a: string, b: string, status: "accepted" | "pending", requestedBy: string): Promise<void> {
+  const [x, y] = pair(a, b);
+  await run(
+    "INSERT INTO friendships (id, user_a, user_b, status, requested_by, created_at, responded_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    [randomUUID(), x, y, status, requestedBy, nowIso(), status === "accepted" ? nowIso() : null],
+  );
+}
+
+async function fighterOf(userId: string, name: string, level: number): Promise<Fighter> {
+  const row = await one<{ color: FighterColor; weapon: string; shield: string }>(
+    "SELECT color, weapon, shield FROM arena_fighters WHERE user_id = ?",
+    [userId],
+  );
+  return { userId, name, level, color: row?.color ?? "blue", weapon: row?.weapon ?? DEFAULT_WEAPON, shield: row?.shield ?? DEFAULT_SHIELD };
+}
+
+async function recordDuel(attacker: Fighter, defender: Fighter, seed: number, daysAgo: number): Promise<void> {
+  const fight = simulate(attacker, defender, seed);
+  const winnerId = fight.winner === 0 ? attacker.userId : fight.winner === 1 ? defender.userId : null;
+  const day = addDays(todayIso(), -daysAgo);
+  await run(
+    `INSERT INTO duels (id, attacker_id, defender_id, attacker_fighter, defender_fighter, seed, log, winner_id,
+                        attacker_points, defender_points, day, created_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 0, ?, ?)`,
+    [
+      randomUUID(),
+      attacker.userId,
+      defender.userId,
+      JSON.stringify(attacker),
+      JSON.stringify(defender),
+      seed,
+      JSON.stringify(fight),
+      winnerId,
+      day,
+      `${day}T16:30:00.000Z`,
+    ],
+  );
+}
+
+/** Returns the demo user's id, creating the demo world if it does not exist yet. */
+export async function ensureDemo(): Promise<string> {
+  const existing = await one<{ id: string }>("SELECT id FROM users WHERE email = ?", [DEMO_EMAIL]);
+  if (existing) return String(existing.id);
+
+  const passwordHash = await hashPassword(DEMO_PASSWORD);
+
+  return transaction(async () => {
+    // Another request may have created it while we were hashing.
+    const raced = await one<{ id: string }>("SELECT id FROM users WHERE email = ?", [DEMO_EMAIL]);
+    if (raced) return String(raced.id);
+
+    const me = await createPersona(DEMO, passwordHash);
+    const friends = [];
+    for (const persona of FRIENDS) {
+      const existingFriend = await one<{ id: string }>("SELECT id FROM users WHERE email = ?", [persona.email]);
+      if (existingFriend) continue;
+      const created = await createPersona(persona, passwordHash);
+      friends.push({ ...created, name: persona.name });
+      await befriend(me.id, created.id, "accepted", created.id);
+    }
+    if (!(await one("SELECT id FROM users WHERE email = ?", [STRANGER.email]))) {
+      const stranger = await createPersona(STRANGER, passwordHash);
+      await befriend(me.id, stranger.id, "pending", stranger.id);
+    }
+
+    await run("INSERT INTO writings (user_id, lesson_key, body, words, submitted_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)", [
+      me.id,
+      "seminar/m1-write",
+      DEMO_WRITING,
+      DEMO_WRITING.split(/\s+/).length,
+      nowIso(),
+      nowIso(),
+    ]);
+
+    // A little arena history in both directions.
+    const aliya = await fighterOf(me.id, DEMO.name, me.level);
+    const [daniyar, madina] = await Promise.all(friends.slice(0, 2).map((f) => fighterOf(f.id, f.name, f.level)));
+    if (daniyar) await recordDuel(daniyar, aliya, 1234567, 1);
+    if (madina) await recordDuel(aliya, madina, 7654321, 3);
+
+    return me.id;
+  });
 }

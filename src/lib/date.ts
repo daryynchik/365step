@@ -1,8 +1,6 @@
 /**
- * Date helpers.
- *
- * Everything in the database is an ISO 'YYYY-MM-DD' string, compared as text.
- * These helpers stay in UTC so a step completed at 23:50 and a streak computed
+ * Date helpers. Everything stored is an ISO 'YYYY-MM-DD' string compared as
+ * text, and all of it is UTC so a lesson finished at 23:50 and a streak computed
  * a moment later agree about which day it is.
  */
 
@@ -26,74 +24,49 @@ export function addDays(date: IsoDate, days: number): IsoDate {
   return todayIso(d);
 }
 
-/** Whole days from `from` to `to`. Negative when `to` is in the past. */
 export function daysBetween(from: IsoDate, to: IsoDate): number {
-  const ms = parseIso(to).getTime() - parseIso(from).getTime();
-  return Math.round(ms / 86_400_000);
+  return Math.round((parseIso(to).getTime() - parseIso(from).getTime()) / 86_400_000);
 }
 
-export function daysUntil(date: IsoDate | null, from: IsoDate = todayIso()): number | null {
-  if (!date) return null;
-  return daysBetween(from, date);
+/** The Monday of the week containing `date`. */
+export function weekStart(date: IsoDate = todayIso()): IsoDate {
+  const weekday = parseIso(date).getUTCDay(); // 0 = Sunday
+  return addDays(date, -((weekday + 6) % 7));
 }
 
-/** 1-based day number within a 365-day journey that began on `startDate`. */
-export function dayIndex(startDate: IsoDate, on: IsoDate = todayIso()): number {
-  return Math.max(1, daysBetween(startDate, on) + 1);
-}
-
-export function formatDate(date: IsoDate | null, opts: Intl.DateTimeFormatOptions = {}): string {
-  if (!date) return "No deadline";
-  return parseIso(date).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-    ...opts,
-  });
-}
-
-export function formatDateLong(date: IsoDate | null): string {
-  if (!date) return "No deadline";
-  return parseIso(date).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
-
-export function weekdayLabel(date: IsoDate): string {
-  return parseIso(date).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" });
-}
-
-/** The last `count` days ending today, oldest first. */
+/** The last `count` days ending at `end`, oldest first. */
 export function lastNDays(count: number, end: IsoDate = todayIso()): IsoDate[] {
   return Array.from({ length: count }, (_, i) => addDays(end, -(count - 1 - i)));
 }
 
-/** Urgency band for a deadline — drives the red / amber / green dots. */
-export type Urgency = "closed" | "critical" | "soon" | "comfortable";
+const WEEKDAYS = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 
-export function urgency(daysLeft: number | null): Urgency {
-  if (daysLeft === null) return "comfortable";
-  if (daysLeft < 0) return "closed";
-  if (daysLeft <= 7) return "critical";
-  if (daysLeft <= 30) return "soon";
-  return "comfortable";
+export function weekdayShort(date: IsoDate): string {
+  return WEEKDAYS[parseIso(date).getUTCDay()];
 }
 
-export function deadlineLabel(daysLeft: number | null): string {
-  if (daysLeft === null) return "Rolling";
-  if (daysLeft < 0) return "Closed";
-  if (daysLeft === 0) return "Closes today";
-  if (daysLeft === 1) return "1 day left";
-  return `${daysLeft} days left`;
+export function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("ru-RU", { day: "numeric", month: "long", timeZone: "UTC" });
 }
 
-export function greeting(now: Date = new Date()): string {
-  const hour = now.getHours();
-  if (hour < 12) return "Good morning";
-  if (hour < 18) return "Good afternoon";
-  return "Good evening";
+/** "5 минут назад", "вчера", "3 дня назад" — for activity feeds. */
+export function timeAgo(iso: string, now: Date = new Date()): string {
+  const minutes = Math.round((now.getTime() - new Date(iso).getTime()) / 60_000);
+  if (minutes < 1) return "только что";
+  if (minutes < 60) return `${minutes} ${plural(minutes, "минуту", "минуты", "минут")} назад`;
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return `${hours} ${plural(hours, "час", "часа", "часов")} назад`;
+  const days = Math.round(hours / 24);
+  if (days === 1) return "вчера";
+  if (days < 30) return `${days} ${plural(days, "день", "дня", "дней")} назад`;
+  return formatDate(iso);
+}
+
+/** Russian plural forms: plural(5, "очко", "очка", "очков") -> "очков". */
+export function plural(n: number, one: string, few: string, many: string): string {
+  const mod10 = Math.abs(n) % 10;
+  const mod100 = Math.abs(n) % 100;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+  return many;
 }

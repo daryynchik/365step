@@ -1,333 +1,359 @@
 @import "tailwindcss";
 
-/* ============================================================================
-   365step — design tokens
-   ----------------------------------------------------------------------------
-   The structure is deliberately neutral (near-black on warm off-white) so that
-   colour only ever appears where it carries meaning: the 365-day arc, the
-   streak, XP, and deadline urgency. That is what keeps a dense product feeling
-   calm instead of loud.
-   ========================================================================== */
-
-@theme {
-  /* Warm neutrals — a pure grey reads clinical, which is the wrong feeling. */
-  --color-ink-50: #f8f8f6;
-  --color-ink-100: #f1f0ed;
-  --color-ink-200: #e5e3de;
-  --color-ink-300: #d3d0c9;
-  --color-ink-400: #a3a09a;
-  --color-ink-500: #77746e;
-  --color-ink-600: #565350;
-  --color-ink-700: #3b3937;
-  --color-ink-800: #252422;
-  --color-ink-900: #171615;
-  --color-ink-950: #0d0c0c;
-
-  /* The 365 arc: dawn through to dusk. */
-  --color-arc-start: #f59e0b;
-  --color-arc-mid: #f43f5e;
-  --color-arc-end: #8b5cf6;
-
-  /* Semantic accents. */
-  --color-streak: #f97316;
-  --color-xp: #8b5cf6;
-  --color-done: #10b981;
-  --color-urgent: #e11d48;
-  --color-soon: #f59e0b;
-  --color-calm: #10b981;
-
-  /* Step-kind accents, used by the daily plan and the Learn tracks. */
-  --color-kind-learn: #6366f1;
-  --color-kind-practice: #0ea5e9;
-  --color-kind-build: #d946ef;
-  --color-kind-opportunity: #f59e0b;
-  --color-kind-reflect: #14b8a6;
-
-  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", Arial, system-ui, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
-
-  --radius-card: 1rem;
-  --radius-panel: 1.5rem;
-
-  --shadow-soft: 0 1px 2px rgb(13 12 12 / 0.04), 0 4px 16px -4px rgb(13 12 12 / 0.06);
-  --shadow-lift: 0 2px 4px rgb(13 12 12 / 0.05), 0 12px 32px -8px rgb(13 12 12 / 0.12);
-
-  --animate-rise: rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
-  --animate-fade: fade 0.3s ease both;
-  --animate-pop: pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-  --animate-drift: drift 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes pop {
-  0% {
-    opacity: 0;
-    transform: scale(0.82);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes drift {
-  0% {
-    opacity: 0;
-    transform: translateY(14px) scale(0.97);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes xp-float {
-  0% {
-    opacity: 0;
-    transform: translateY(6px) scale(0.9);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(-6px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-16px);
-  }
-}
-
-@keyframes shimmer {
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-/* --------------------------------------------------------------- base ----- */
-
-:root {
-  --bg: var(--color-ink-50);
-  --bg-raised: #ffffff;
-  --bg-sunken: var(--color-ink-100);
-  --fg: var(--color-ink-900);
-  --fg-muted: var(--color-ink-500);
-  --fg-subtle: var(--color-ink-400);
-  --border: var(--color-ink-200);
-  --border-strong: var(--color-ink-300);
-  --btn-bg: var(--color-ink-900);
-  --btn-fg: #ffffff;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0b0a0a;
-    --bg-raised: #151414;
-    --bg-sunken: #100f0f;
-    --fg: var(--color-ink-50);
-    --fg-muted: var(--color-ink-400);
-    --fg-subtle: var(--color-ink-500);
-    --border: #262424;
-    --border-strong: #343131;
-    --btn-bg: var(--color-ink-50);
-    --btn-fg: var(--color-ink-950);
-    color-scheme: dark;
-  }
-}
-
 /*
- * Dark mode follows the system by default. These `data-theme` hooks let a future
- * toggle override it in either direction by setting the attribute on <html>;
- * nothing sets it today, which is why the media query above is guarded by
- * `:not([data-theme="light"])` rather than standing alone.
+ * Light, quiet, paper-like. One accent (green) for progress and success;
+ * each course has its own muted tone so the path tells you where you are.
  */
-:root[data-theme="dark"] {
-  --bg: #0b0a0a;
-  --bg-raised: #151414;
-  --bg-sunken: #100f0f;
-  --fg: var(--color-ink-50);
-  --fg-muted: var(--color-ink-400);
-  --fg-subtle: var(--color-ink-500);
-  --border: #262424;
-  --border-strong: #343131;
-  --btn-bg: var(--color-ink-50);
-  --btn-fg: var(--color-ink-950);
-  color-scheme: dark;
+:root {
+  --bg: #f6f5f2;
+  --surface: #ffffff;
+  --sunken: #f0eee9;
+  --line: #e4e1da;
+  --line-strong: #d3cfc6;
+  --ink: #1d1c1a;
+  --muted: #66625b;
+  --subtle: #98938a;
+
+  --accent: #2e7d4f;
+  --accent-hover: #276b43;
+  --accent-soft: #e6f2ea;
+  --accent-line: #b9dbc6;
+
+  --danger: #c0442f;
+  --danger-soft: #fbece8;
+  --warn: #b7791f;
+  --warn-soft: #fbf3e2;
+
+  --rw: #3563c9;
+  --rw-soft: #e9eef9;
+  --math: #c0711b;
+  --math-soft: #f9efe2;
+  --seminar: #7a52b3;
+  --seminar-soft: #f0eaf7;
+
+  --flame: #e0702a;
+  --coin: #c9971c;
+
+  --radius: 12px;
+  --shadow: 0 1px 2px rgb(29 28 26 / 0.04), 0 1px 1px rgb(29 28 26 / 0.03);
+  --shadow-lift: 0 6px 24px -8px rgb(29 28 26 / 0.18);
 }
 
-* {
-  border-color: var(--border);
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-line: var(--accent-line);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-rw: var(--rw);
+  --color-rw-soft: var(--rw-soft);
+  --color-math: var(--math);
+  --color-math-soft: var(--math-soft);
+  --color-seminar: var(--seminar);
+  --color-seminar-soft: var(--seminar-soft);
+  --color-flame: var(--flame);
+  --color-coin: var(--coin);
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --radius-card: var(--radius);
+  --shadow-card: var(--shadow);
+  --shadow-lift: var(--shadow-lift);
 }
 
 html {
+  background: var(--bg);
+  color: var(--ink);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   background: var(--bg);
-  color: var(--fg);
   font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "cv11", "ss01";
-  letter-spacing: -0.011em;
+  font-feature-settings: "tnum" 0;
+  line-height: 1.5;
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--color-arc-end) 25%, transparent);
+  background: var(--accent-soft);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-arc-end);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 6px;
 }
 
-/* Tabular numerals wherever a number changes, so nothing jitters. */
-.nums {
+.tabular {
   font-variant-numeric: tabular-nums;
 }
 
-/* ------------------------------------------------------------ utilities --- */
+/* ------------------------------------------------------------- card ---- */
 
-@utility surface {
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-@utility surface-panel {
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-panel);
+/* ------------------------------------------------------------- path ---- */
+
+/* Nodes sit on a gentle zigzag; the offset comes from --x set inline. */
+.path-node {
+  transform: translateX(var(--x, 0));
 }
 
-@utility sunken {
-  background: var(--bg-sunken);
-}
-
-@utility muted {
-  color: var(--fg-muted);
-}
-
-@utility subtle {
-  color: var(--fg-subtle);
-}
-
-/* The section eyebrow used above every major block. */
-@utility eyebrow {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--fg-subtle);
-}
-
-@utility arc-text {
-  background: linear-gradient(
-    100deg,
-    var(--color-arc-start),
-    var(--color-arc-mid) 45%,
-    var(--color-arc-end)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-@utility hairline {
-  border-top: 1px solid var(--border);
-}
-
-/* Skeleton shimmer for loading states. */
-@utility skeleton {
+.node-button {
   position: relative;
-  overflow: hidden;
-  background: var(--bg-sunken);
-  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 58px;
+  border-radius: 50%;
+  border: 0;
+  color: white;
+  background: var(--node, var(--accent));
+  box-shadow: 0 5px 0 var(--node-shadow, var(--accent-hover));
+  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-.skeleton::after {
+.node-button:hover {
+  transform: translateY(1px);
+  box-shadow: 0 4px 0 var(--node-shadow, var(--accent-hover));
+}
+
+.node-button:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--node-shadow, var(--accent-hover));
+}
+
+.node-button[data-state="locked"] {
+  --node: #e3e0d9;
+  --node-shadow: #cdc9bf;
+  color: #a9a49a;
+  cursor: default;
+}
+
+.node-button[data-state="locked"]:hover,
+.node-button[data-state="locked"]:active {
+  transform: none;
+  box-shadow: 0 5px 0 var(--node-shadow);
+}
+
+.node-button[data-state="done"] {
+  --node: var(--coin);
+  --node-shadow: #a77b12;
+}
+
+/* The ring around the lesson you are on. */
+.node-current::before {
   content: "";
   position: absolute;
-  inset: 0;
-  transform: translateX(-100%);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in oklab, var(--fg) 6%, transparent),
-    transparent
-  );
-  animation: shimmer 1.6s infinite;
+  inset: -9px -9px -14px;
+  border-radius: 50%;
+  border: 3px solid var(--node, var(--accent));
+  opacity: 0.25;
+  animation: ring 2.2s ease-in-out infinite;
 }
 
-.xp-float {
-  animation: xp-float 1.6s ease forwards;
+@keyframes ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.45;
+  }
 }
 
-/* Long-form lesson prose. Kept here so lesson bodies need no per-element classes. */
-.prose-lesson {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--fg);
+.start-bubble {
+  animation: bob 1.8s ease-in-out infinite;
 }
 
-.prose-lesson p {
-  margin-bottom: 1rem;
+@keyframes bob {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -4px);
+  }
 }
 
-.prose-lesson p:last-child {
-  margin-bottom: 0;
-}
+/* ----------------------------------------------------- lesson player ---- */
 
-.prose-lesson strong {
-  font-weight: 650;
-}
-
-.prose-lesson .bullet {
+.option {
   display: flex;
-  gap: 0.625rem;
-  margin-bottom: 0.4rem;
-  padding-left: 0.125rem;
+  width: 100%;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  text-align: left;
+  border: 1.5px solid var(--line-strong);
+  border-bottom-width: 3px;
+  border-radius: 12px;
+  background: var(--surface);
+  transition: border-color 100ms ease, background 100ms ease;
 }
 
-.prose-lesson code {
-  font-family: var(--font-mono);
-  font-size: 0.875em;
-  background: var(--bg-sunken);
-  padding: 0.1rem 0.35rem;
-  border-radius: 0.3rem;
+.option:hover:not(:disabled) {
+  background: var(--sunken);
+}
+
+.option[aria-pressed="true"] {
+  border-color: var(--rw);
+  background: var(--rw-soft);
+}
+
+.option[data-result="right"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.option[data-result="wrong"] {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.option-key {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.feedback-sheet {
+  animation: sheet 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes sheet {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.shake {
+  animation: shake 320ms ease;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+/* ------------------------------------------------------- celebration ---- */
+
+.pop-in {
+  animation: pop 520ms cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.rise {
+  animation: rise 420ms ease both;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.check-draw {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: draw 420ms 260ms ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes floatup {
+  from {
+    transform: translateY(0) scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-60px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------------------------ reader ---- */
+
+.reader p {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.7;
+  margin: 0 0 1.1em;
+  text-wrap: pretty;
+}
+
+.reader p:target {
+  background: var(--warn-soft);
+  border-radius: 6px;
+  box-shadow: 0 0 0 6px var(--warn-soft);
+}
+
+.passage {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 1ms !important;
   }
 }

@@ -6,9 +6,7 @@
  * out actually revokes access.
  *
  * Account operations (registration, credential checks) live in `accounts.ts`,
- * which has no request-scoped dependencies. On Supabase this file is the one to
- * replace: everything outside it depends only on `currentUser()` /
- * `requireUser()`.
+ * which has no request-scoped dependencies.
  */
 
 import "server-only";
@@ -30,7 +28,6 @@ const SESSION_DAYS = 30;
 export {
   authenticate,
   findUserByEmail,
-  hasOnboarded,
   pruneSessions,
   registerUser,
   validateCredentials,

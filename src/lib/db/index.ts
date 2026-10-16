@@ -1,28 +1,28 @@
 /**
- * Database access for 365step.
+ * Database access.
  *
  * One async interface, two drivers:
  *
- *   * no DATABASE_URL   ->  SQLite file at ./data/365step.db (better-sqlite3).
- *                           Zero setup: clone, seed, run.
- *   * DATABASE_URL set  ->  PostgreSQL / Supabase (postgres.js).
+ *   * no DATABASE_URL   ->  SQLite file at ./data/365step.db (better-sqlite3)
+ *   * DATABASE_URL set  ->  PostgreSQL / Supabase (postgres.js)
  *
- * Queries are written once, in the SQL subset both dialects accept, with `?`
- * placeholders. For Postgres they are rewritten to $1..$n on the way out.
+ * Queries are written once with `?` placeholders; for Postgres they are
+ * rewritten to $1..$n. The schema is applied when the driver is created, so a
+ * fresh database (or a fresh /tmp on a serverless cold start) just works.
  *
- * Server-side only — it touches node:fs and native addons. It is imported by
- * server components, server actions, and the seed script (which runs outside
- * Next, so this module deliberately avoids Next-specific imports).
+ * Server-only. Imported by server components, server actions and scripts, so
+ * it avoids Next-specific imports.
  */
 
 import { AsyncLocalStorage } from "node:async_hooks";
 import fs from "node:fs";
 import path from "node:path";
 
+import { SCHEMA } from "./schema";
+
 export type SqlParam = string | number | null;
 export type Row = Record<string, unknown>;
 
-/** A thing that can run a parameterised statement: the pool, or one connection. */
 interface Executor {
   all(sql: string, params: SqlParam[]): Promise<Row[]>;
   run(sql: string, params: SqlParam[]): Promise<void>;
@@ -30,19 +30,13 @@ interface Executor {
 
 interface Driver extends Executor {
   dialect: "sqlite" | "postgres";
-  /** Runs `fn` so that either every write inside it lands, or none do. */
   transaction<T>(fn: () => Promise<T>): Promise<T>;
   exec(sql: string): Promise<void>;
 }
 
-/**
- * The connection an open transaction has reserved, scoped to the async call
- * tree that opened it. Concurrent requests each get their own view, so one
- * request's transaction can never capture another request's queries.
- */
+/** The executor an open transaction has reserved, scoped to its async call tree. */
 const txContext = new AsyncLocalStorage<Executor>();
 
-/** `?, ?` -> `$1, $2`. Our queries never contain `?` inside a string literal. */
 function toPgPlaceholders(sql: string): string {
   let i = 0;
   return sql.replace(/\?/g, () => `$${++i}`);
@@ -53,12 +47,9 @@ function toPgPlaceholders(sql: string): string {
 async function createSqliteDriver(): Promise<Driver> {
   const { default: Database } = await import("better-sqlite3");
 
-  // Vercel (and most serverless hosts) give a function a read-only filesystem
-  // except for /tmp — writing to ./data there throws, which is the "site won't
-  // open" crash this guards against. /tmp is ephemeral (wiped on cold start,
-  // not shared across concurrent instances), so this is a fallback for opening
-  // the site without any setup, not a substitute for real persistence: set
-  // DATABASE_URL to a Postgres/Supabase connection string for that.
+  // Serverless hosts only allow writes to /tmp. That copy is ephemeral and not
+  // shared between instances: fine for a first look, not for real users. Set
+  // DATABASE_URL for that.
   const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
   const file =
     process.env.SQLITE_PATH ??
@@ -68,70 +59,40 @@ async function createSqliteDriver(): Promise<Driver> {
   const db = new Database(file);
   db.pragma("journal_mode = WAL");
   db.pragma("foreign_keys = ON");
+  db.exec(SCHEMA);
 
-  // Auto-provision a brand-new file — but ONLY on a serverless host. This is
-  // strictly a "the site should not 500" fallback for Vercel's ephemeral /tmp,
-  // never for local development: `npm run db:seed`/`db:reset` builds a much
-  // richer demo account (37 days of history), and its own applySchema() call
-  // is what first constructs this very driver — auto-seeding here too would
-  // make the CLI script see an "already present" demo account on its very
-  // first run and skip building that history. Locally, an unseeded database
-  // is meant to surface the normal "run npm run db:reset" error instead.
-  //
-  // Talks to the raw better-sqlite3 handle rather than this module's own
-  // all()/run(): those route through the very driver promise this function is
-  // building, so calling them here would await a promise that cannot resolve
-  // until this function returns.
-  if (isServerless) {
-    const hasSchema = db
-      .prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'users'")
-      .get();
-    if (!hasSchema) {
-      try {
-        db.exec(fs.readFileSync(path.join(process.cwd(), "db", "schema.sql"), "utf8"));
-        const { seedRawSqlite } = await import("../../../db/seed-runtime");
-        await seedRawSqlite(db);
-        console.log(
-          "365step: provisioned a temporary SQLite database in /tmp. This resets " +
-            "on the next cold start — set DATABASE_URL to a Postgres/Supabase " +
-            "connection string for real persistence (see README, Deployment).",
-        );
-      } catch (error) {
-        // Surface in the server log. Queries against missing tables will still
-        // fail afterwards with a clear "no such table" the error boundary
-        // recognises, rather than this silently pretending to have succeeded.
-        console.error("365step: automatic database setup failed —", error);
-      }
-    }
-  }
-
-  let depth = 0;
-
-  return {
-    dialect: "sqlite",
+  const executor: Executor = {
     async all(sql, params) {
       return db.prepare(sql).all(...params) as Row[];
     },
     async run(sql, params) {
       db.prepare(sql).run(...params);
     },
-    async transaction(fn) {
-      // better-sqlite3's own transaction() helper cannot wrap async work, so
-      // drive the statements directly. `depth` makes nesting a no-op rather
-      // than a "cannot start a transaction within a transaction" error.
-      if (depth > 0) return fn();
-      depth++;
-      db.exec("BEGIN");
-      try {
-        const result = await fn();
-        db.exec("COMMIT");
-        return result;
-      } catch (error) {
-        db.exec("ROLLBACK");
-        throw error;
-      } finally {
-        depth--;
-      }
+  };
+
+  // better-sqlite3 has one connection and cannot wrap async work in its own
+  // transaction helper. Transactions are queued so two requests never share
+  // one BEGIN; plain reads outside a transaction run immediately.
+  let queue: Promise<unknown> = Promise.resolve();
+
+  return {
+    dialect: "sqlite",
+    ...executor,
+    transaction<T>(fn: () => Promise<T>): Promise<T> {
+      if (txContext.getStore()) return fn();
+      const result = queue.then(async () => {
+        db.exec("BEGIN IMMEDIATE");
+        try {
+          const value = await txContext.run(executor, fn);
+          db.exec("COMMIT");
+          return value;
+        } catch (error) {
+          db.exec("ROLLBACK");
+          throw error;
+        }
+      });
+      queue = result.catch(() => undefined);
+      return result;
     },
     async exec(sql) {
       db.exec(sql);
@@ -141,12 +102,8 @@ async function createSqliteDriver(): Promise<Driver> {
 
 // ------------------------------------------------------------- postgres ----
 
-type PgConnection = {
-  unsafe(q: string, p?: unknown[]): Promise<unknown>;
-};
-type PgPool = PgConnection & {
-  reserve(): Promise<PgConnection & { release(): void }>;
-};
+type PgConnection = { unsafe(q: string, p?: unknown[]): Promise<unknown> };
+type PgPool = PgConnection & { reserve(): Promise<PgConnection & { release(): void }> };
 
 async function createPostgresDriver(url: string): Promise<Driver> {
   const { default: postgres } = await import("postgres");
@@ -155,11 +112,12 @@ async function createPostgresDriver(url: string): Promise<Driver> {
   const pool = postgres(url, {
     max: 5,
     idle_timeout: 20,
-    // Supabase's transaction pooler (port 6543) cannot hold prepared statements.
-    prepare: false,
-    // Supabase requires TLS; a local Postgres over loopback does not have it.
+    prepare: false, // Supabase's transaction pooler cannot hold prepared statements
     ssl: local ? false : "require",
+    onnotice: () => {}, // "relation already exists, skipping" on every cold start
   }) as unknown as PgPool;
+
+  await pool.unsafe(SCHEMA);
 
   const wrap = (conn: PgConnection): Executor => ({
     async all(sql, params) {
@@ -169,17 +127,13 @@ async function createPostgresDriver(url: string): Promise<Driver> {
       await conn.unsafe(toPgPlaceholders(sql), params);
     },
   });
-
   const poolExecutor = wrap(pool);
 
   return {
     dialect: "postgres",
-    all: (sql, params) => poolExecutor.all(sql, params),
-    run: (sql, params) => poolExecutor.run(sql, params),
+    ...poolExecutor,
     async transaction(fn) {
-      if (txContext.getStore()) return fn(); // already inside one
-      // Hold one pooled connection for the whole block, so BEGIN/COMMIT and the
-      // writes between them cannot land on different connections.
+      if (txContext.getStore()) return fn();
       const held = await pool.reserve();
       try {
         await held.unsafe("BEGIN");
@@ -208,7 +162,12 @@ const globalForDb = globalThis as unknown as { __step365Driver?: Promise<Driver>
 function driver(): Promise<Driver> {
   if (!globalForDb.__step365Driver) {
     const url = process.env.DATABASE_URL ?? process.env.POSTGRES_URL;
-    globalForDb.__step365Driver = url ? createPostgresDriver(url) : createSqliteDriver();
+    const created = url ? createPostgresDriver(url) : createSqliteDriver();
+    // A failed connection should be retried on the next request, not cached forever.
+    created.catch(() => {
+      globalForDb.__step365Driver = undefined;
+    });
+    globalForDb.__step365Driver = created;
   }
   return globalForDb.__step365Driver;
 }
@@ -217,19 +176,16 @@ export async function dialect(): Promise<"sqlite" | "postgres"> {
   return (await driver()).dialect;
 }
 
-/** Every matching row. */
 export async function all<T = Row>(sql: string, params: SqlParam[] = []): Promise<T[]> {
   const target = txContext.getStore() ?? (await driver());
   return (await target.all(sql, params)) as T[];
 }
 
-/** The first matching row, or null. */
 export async function one<T = Row>(sql: string, params: SqlParam[] = []): Promise<T | null> {
   const rows = await all<T>(sql, params);
   return rows[0] ?? null;
 }
 
-/** A write. */
 export async function run(sql: string, params: SqlParam[] = []): Promise<void> {
   const target = txContext.getStore() ?? (await driver());
   await target.run(sql, params);
@@ -237,7 +193,7 @@ export async function run(sql: string, params: SqlParam[] = []): Promise<void> {
 
 /** A single numeric aggregate (COUNT, SUM, ...), coerced past driver types. */
 export async function scalar(sql: string, params: SqlParam[] = []): Promise<number> {
-  const row = await one<Record<string, unknown>>(sql, params);
+  const row = await one<Row>(sql, params);
   if (!row) return 0;
   const value = Object.values(row)[0];
   return value === null || value === undefined ? 0 : Number(value);
@@ -253,7 +209,6 @@ export async function exec(sql: string): Promise<void> {
 
 // ----------------------------------------------------------------- helpers --
 
-/** Parses a TEXT column holding JSON, falling back to `fallback` on junk. */
 export function json<T>(value: unknown, fallback: T): T {
   if (value === null || value === undefined) return fallback;
   if (typeof value !== "string") return value as T;
@@ -264,11 +219,6 @@ export function json<T>(value: unknown, fallback: T): T {
   }
 }
 
-/** 0/1 INTEGER columns -> boolean, across both drivers. */
-export function bool(value: unknown): boolean {
-  return value === 1 || value === true || value === "1" || value === "t";
-}
-
 export function num(value: unknown, fallback = 0): number {
   if (value === null || value === undefined) return fallback;
   const n = Number(value);
@@ -277,10 +227,4 @@ export function num(value: unknown, fallback = 0): number {
 
 export function str(value: unknown, fallback = ""): string {
   return value === null || value === undefined ? fallback : String(value);
-}
-
-/** Applies db/schema.sql. Both dialects accept it verbatim. */
-export async function applySchema(): Promise<void> {
-  const file = path.join(process.cwd(), "db", "schema.sql");
-  await exec(fs.readFileSync(file, "utf8"));
 }

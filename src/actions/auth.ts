@@ -2,25 +2,14 @@
 
 import { redirect } from "next/navigation";
 
-import {
-  authenticate,
-  createSession,
-  destroySession,
-  hasOnboarded,
-  pruneSessions,
-  registerUser,
-  validateCredentials,
-} from "@/lib/auth";
-import { ensureDemoUser, type DemoPersona } from "@/lib/demo";
+import { authenticate, createSession, destroySession, pruneSessions, registerUser, validateCredentials } from "@/lib/auth";
+import { ensureDemo } from "@/lib/demo";
 
 export interface FormState {
   error?: string;
 }
 
-export async function signUpAction(
-  _prev: FormState,
-  formData: FormData,
-): Promise<FormState> {
+export async function signUpAction(_prev: FormState, formData: FormData): Promise<FormState> {
   const name = String(formData.get("name") ?? "");
   const email = String(formData.get("email") ?? "");
   const password = String(formData.get("password") ?? "");
@@ -29,44 +18,30 @@ export async function signUpAction(
   if (invalid) return { error: invalid };
 
   const result = await registerUser(email, password, name);
-  if (!result.ok || !result.userId) return { error: result.error ?? "Could not create account." };
+  if (!result.ok || !result.userId) return { error: result.error ?? "Не удалось создать аккаунт." };
 
   await createSession(result.userId);
-
-  // `redirect` signals by throwing, so it must sit outside any try/catch.
-  redirect("/onboarding");
+  // redirect() works by throwing, so it stays outside any try/catch.
+  redirect("/path");
 }
 
-export async function signInAction(
-  _prev: FormState,
-  formData: FormData,
-): Promise<FormState> {
+export async function signInAction(_prev: FormState, formData: FormData): Promise<FormState> {
   const email = String(formData.get("email") ?? "");
   const password = String(formData.get("password") ?? "");
-
-  if (!email || !password) return { error: "Enter your email and password." };
+  if (!email || !password) return { error: "Введи email и пароль." };
 
   const result = await authenticate(email, password);
-  if (!result.ok || !result.userId) return { error: result.error ?? "Could not sign in." };
+  if (!result.ok || !result.userId) return { error: result.error ?? "Не удалось войти." };
 
   await pruneSessions();
   await createSession(result.userId);
-
-  redirect((await hasOnboarded(result.userId)) ? "/dashboard" : "/onboarding");
+  redirect("/path");
 }
 
-/**
- * Signs into one of the demo accounts: school, university or graduate.
- *
- * Present so a first-time visitor — or a judge with two minutes — can see a
- * populated product immediately instead of an empty new account.
- */
-export async function demoLoginAction(persona: DemoPersona = "school"): Promise<FormState> {
-  const userId = await ensureDemoUser(persona);
-  if (!userId) return { error: "Unknown demo scenario." };
-
+export async function demoLoginAction(): Promise<void> {
+  const userId = await ensureDemo();
   await createSession(userId);
-  redirect("/dashboard");
+  redirect("/path");
 }
 
 export async function signOutAction(): Promise<void> {

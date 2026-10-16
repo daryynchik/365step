@@ -2,45 +2,30 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { SignInForm } from "@/components/auth-forms";
-import { DemoLoginButton } from "@/components/demo-login-button";
-import { Panel } from "@/components/ui";
+import { DemoButton, SignInForm } from "@/components/auth-forms";
 import { currentUser } from "@/lib/auth";
 
-export const metadata: Metadata = { title: "Sign in" };
+export const metadata: Metadata = { title: "Вход" };
 export const dynamic = "force-dynamic";
 
 export default async function SignInPage() {
-  if (await currentUser()) redirect("/dashboard");
+  if (await currentUser()) redirect("/path");
 
   return (
     <>
-      <Panel className="p-7 sm:p-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Welcome back</h1>
-        <p className="muted mt-2 text-sm">Pick up where you left off.</p>
-
-        <div className="mt-7">
-          <SignInForm />
-        </div>
-
-        <p className="muted mt-6 text-center text-sm">
-          New here?{" "}
-          <Link href="/signup" className="font-medium text-[var(--fg)] underline-offset-4 hover:underline">
-            Create an account
-          </Link>
-        </p>
-      </Panel>
-
-      <div className="surface mt-5 p-4">
-        <p className="eyebrow mb-2">Demo account</p>
-        <p className="muted text-xs leading-relaxed">
-          Three ready-made scenarios — a school student, a university student and a
-          young professional — each with their own roadmap and today&apos;s plan.
-        </p>
-        <div className="mt-3">
-          <DemoLoginButton size="sm">Open a demo account</DemoLoginButton>
-        </div>
+      <h1 className="text-2xl font-bold tracking-tight">С возвращением</h1>
+      <p className="mb-6 mt-1 text-sm text-muted">Продолжим с того места, где ты остановился.</p>
+      <SignInForm />
+      <div className="my-6 flex items-center gap-3 text-xs text-subtle">
+        <span className="h-px flex-1 bg-line" /> или <span className="h-px flex-1 bg-line" />
       </div>
+      <DemoButton className="w-full">Войти в демо-аккаунт</DemoButton>
+      <p className="mt-6 text-center text-sm text-muted">
+        Ещё нет аккаунта?{" "}
+        <Link href="/signup" className="font-medium text-ink underline-offset-4 hover:underline">
+          Зарегистрироваться
+        </Link>
+      </p>
     </>
   );
 }
