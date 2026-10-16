@@ -1,3 +1,4 @@
+import { IELTS_PRACTICE, IELTS_PRACTICE_ORDER } from "./ielts-practice";
 import type { ChoiceQuestion, Course, InputQuestion } from "./types";
 
 /**
@@ -786,6 +787,8 @@ export const IELTS: Course = {
         },
       ],
     },
+    // Second pass: new passages, recordings and tasks.
+    ...IELTS_PRACTICE,
   ],
 };
 
@@ -807,4 +810,5 @@ export const IELTS_ORDER = [
   "writing-task2",
   "reading-views",
   "speaking-part3",
+  ...IELTS_PRACTICE_ORDER,
 ];

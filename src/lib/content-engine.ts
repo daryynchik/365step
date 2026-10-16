@@ -55,7 +55,7 @@ export function isGeneratable(entry: PathEntry): boolean {
   const { lesson, course } = entry;
   if (lesson.listening || lesson.speaking || lesson.writing) return false;
   if (lesson.questions.length === 0) return false;
-  return course.id === "sat-rw" || course.id === "sat-math" || course.id === "ielts";
+  return course.id === "sat-rw" || course.id === "sat-math" || course.id === "ielts" || course.id === "reading";
 }
 
 // ------------------------------------------------------------- wikipedia --
@@ -71,9 +71,19 @@ const TOPICS = [
 
 type WikiPassage = { title: string; url: string; text: string };
 
+/** Topics for fresh reading in each field. */
+const FIELD_TOPICS: Record<string, string[]> = {
+  medicine: ["Immune system", "Vaccine", "Antibiotic", "Insulin", "Neuron", "Circadian rhythm", "Stem cell", "Blood donation", "Malaria", "Penicillin"],
+  engineering: ["Suspension bridge", "Reinforced concrete", "Wind turbine", "Hydroelectricity", "Electric motor", "Desalination", "Skyscraper", "Jet engine", "Solar cell", "Robotics"],
+  cs: ["Algorithm", "Internet protocol suite", "Public-key cryptography", "Machine learning", "Compiler", "Database", "Computer virus", "Open-source software", "Search engine", "Quantum computing"],
+  business: ["Supply and demand", "Inflation", "Comparative advantage", "Microfinance", "Stock market", "Entrepreneurship", "Behavioral economics", "Globalization", "Central bank", "Brand"],
+  social: ["Cognitive bias", "Urbanization", "Rule of law", "Silk Road", "Bilingualism", "Democracy", "Memory", "Migration", "Human rights", "Archaeology"],
+  science: ["Photosynthesis", "Plate tectonics", "Greenhouse effect", "Catalysis", "Black hole", "Water cycle", "Keystone species", "Speed of light", "Periodic table", "Coral reef"],
+};
+
 /** A passage on a random academic topic; tries a few topics, since the API rate-limits bursts. */
-export async function wikipediaPassage(attempts = 3): Promise<WikiPassage | null> {
-  const shuffled = [...TOPICS].sort(() => Math.random() - 0.5);
+export async function wikipediaPassage(attempts = 3, topics: string[] = TOPICS): Promise<WikiPassage | null> {
+  const shuffled = [...topics].sort(() => Math.random() - 0.5);
   for (let i = 0; i < attempts; i++) {
     const passage = await fetchPassage(shuffled[i]).catch(() => null);
     if (passage) return passage;
@@ -236,8 +246,10 @@ function validRaw(q: RawQuestion): boolean {
 
 async function generate(entry: PathEntry): Promise<{ questions: Question[]; source: PracticeSource } | null> {
   const client = new Anthropic();
-  const wantsPassage = entry.course.id === "ielts" && entry.unit.id === "reading";
-  const passage = wantsPassage ? await wikipediaPassage().catch(() => null) : null;
+  const fieldReading = entry.course.id === "reading";
+  const wantsPassage = fieldReading || (entry.course.id === "ielts" && entry.unit.id.startsWith("reading"));
+  const topics = fieldReading ? FIELD_TOPICS[entry.unit.id] ?? TOPICS : TOPICS;
+  const passage = wantsPassage ? await wikipediaPassage(3, topics).catch(() => null) : null;
   if (wantsPassage && !passage) return null;
 
   const set = await askJson<{ questions: RawQuestion[] }>(client, GENERATOR_SYSTEM, buildRequest(entry, passage), SET_SCHEMA);

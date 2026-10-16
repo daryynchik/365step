@@ -632,6 +632,68 @@ export const ADMISSIONS: Course = {
             checks: { profile: "statement" },
           },
         },
+        {
+          id: "motivation-letter",
+          title: "Мотивационное письмо",
+          summary: "Для вузов Европы и Азии",
+          skill: "Эссе",
+          minutes: 30,
+          theory: [
+            {
+              body:
+                "Многие вузы Европы и Азии вместо эссе Common App просят **мотивационное письмо** (letter of motivation, statement of purpose): одну-две страницы о том, почему ты выбираешь именно эту программу и чем к ней готов.",
+            },
+            {
+              heading: "Структура",
+              body:
+                "• **Начало** — что именно тебя привлекает в специальности, на конкретном примере.\n• **Подготовка** — предметы, проекты, олимпиады, книги: что ты уже сделал.\n• **Почему эта программа** — 2–3 конкретные особенности (курсы, лаборатории, язык обучения, практика).\n• **Цели** — чем хочешь заниматься после учёбы и как программа помогает.\n• Тон деловой, без пересказа всей биографии.",
+            },
+            {
+              heading: "Частые ошибки",
+              body: "Одно письмо на все вузы без изменений, общие слова о «престижном университете», список достижений без объяснения, что они тебе дали.",
+            },
+          ],
+          questions: [
+            {
+              kind: "choice",
+              prompt: "Чем мотивационное письмо обычно отличается от эссе Common App?",
+              options: [
+                "Оно сосредоточено на выбранной программе и подготовке к ней",
+                "Оно всегда длиннее 2 000 слов",
+                "В нём нельзя упоминать специальность",
+                "Его пишет учитель",
+              ],
+              answer: 0,
+              explanation: "Мотивационное письмо — о программе и твоей готовности к ней; эссе Common App — о тебе как человеке.",
+            },
+            {
+              kind: "choice",
+              prompt: "Какая фраза лучше подходит для письма?",
+              options: [
+                "The programme's compulsory industry semester would let me test the sensor design I began in school.",
+                "Your university is very prestigious and famous.",
+                "I have always dreamed of studying abroad.",
+                "I am the best student in my class.",
+              ],
+              answer: 0,
+              explanation: "Конкретная особенность программы связана с собственным опытом.",
+            },
+          ],
+          writing: {
+            prompt:
+              "Write a letter of motivation (250–450 words) for one programme from your list: why this field, how you have prepared, why this specific programme, and what you want to do afterwards.",
+            minWords: 250,
+            maxWords: 450,
+            rubric: [
+              "Названа конкретная программа и 2–3 её особенности",
+              "Подготовка показана через факты, а не через оценки себя",
+              "Есть цель после учёбы",
+              "Деловой тон, нет пересказа всей биографии",
+            ],
+            starters: ["My interest in … began when…", "To prepare, I…", "This programme…"],
+            checks: { profile: "statement" },
+          },
+        },
       ],
     },
     {

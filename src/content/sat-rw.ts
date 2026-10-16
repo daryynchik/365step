@@ -1,3 +1,4 @@
+import { SAT_RW_PRACTICE } from "./sat-rw-practice";
 import type { Course } from "./types";
 
 /**
@@ -1322,5 +1323,7 @@ export const SAT_RW: Course = {
         },
       ],
     },
+    // Second pass: the same skills on new texts, scheduled weeks later.
+    ...SAT_RW_PRACTICE,
   ],
 };

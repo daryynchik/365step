@@ -1,3 +1,4 @@
+import { SAT_MATH_PRACTICE } from "./sat-math-practice";
 import type { Course } from "./types";
 
 /**
@@ -1215,5 +1216,7 @@ export const SAT_MATH: Course = {
         },
       ],
     },
+    // Second pass: the same skills with new problems, scheduled weeks later.
+    ...SAT_MATH_PRACTICE,
   ],
 };

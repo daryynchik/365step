@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { BookOpenText, Check, Flag, Lock, Route, Star, Swords } from "lucide-react";
 
-import { TRACK } from "@/content/track";
+import { COURSES, flatten, PLAN_COURSES } from "@/content";
 import { DemoButton } from "@/components/auth-forms";
 import { ButtonLink, Logo } from "@/components/ui";
 import { currentUser } from "@/lib/auth";
@@ -48,14 +48,14 @@ function PathPreview() {
 export default async function Home() {
   if (await currentUser()) redirect("/path");
 
-  const steps = TRACK.flatMap((d) => d.steps);
-  const questions = steps.reduce((n, s) => n + s.lesson.questions.length, 0);
+  const lessons = PLAN_COURSES.flatMap((id) => flatten(COURSES[id]));
+  const questions = lessons.reduce((n, e) => n + e.lesson.questions.length, 0);
 
   const features = [
     {
       icon: Route,
-      title: "Одна программа",
-      text: `${TRACK.length} дней, ${steps.length} уроков, ${questions} заданий. IELTS и SAT English через день, SAT Math каждый день. Listening и Speaking можно проходить и без звука.`,
+      title: "Свой путь до выпуска",
+      text: `Выбираешь страну, направление и дату окончания школы — и получаешь план именно на твой срок: ${lessons.length} уроков и ${questions} заданий, распределённых по дням, с повторениями и пробными секциями.`,
     },
     {
       icon: Flag,

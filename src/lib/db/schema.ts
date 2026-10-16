@@ -124,6 +124,17 @@ CREATE TABLE IF NOT EXISTS duels (
 CREATE INDEX IF NOT EXISTS idx_duels_attacker ON duels(attacker_id, day);
 CREATE INDEX IF NOT EXISTS idx_duels_defender ON duels(defender_id);
 
+-- The three answers a personal plan is built from (see content/plan.ts).
+CREATE TABLE IF NOT EXISTS student_profiles (
+  user_id    TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  country    TEXT NOT NULL,
+  field      TEXT NOT NULL,
+  grade      INTEGER NOT NULL,
+  graduation TEXT NOT NULL,
+  start_date TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
 -- Application deadlines the student tracks (admissions roadmap).
 CREATE TABLE IF NOT EXISTS deadlines (
   id         TEXT PRIMARY KEY,

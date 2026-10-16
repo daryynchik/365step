@@ -32,7 +32,8 @@ function officialBadge(url: string): string {
 }
 
 export interface LessonPlayerProps {
-  courseId: CourseId;
+  /** "review" for review and mock sections built from the plan. */
+  courseId: CourseId | "review";
   lesson: Lesson;
   unitTitle: string;
   tone: string;
@@ -279,7 +280,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
         )}
 
         {phase === "writing" && lesson.writing && (
-          <WritingStep courseId={courseId} lessonId={lesson.id} task={lesson.writing} initial={draft} aiFeedback={aiFeedback} onDone={(r) => {
+          <WritingStep courseId={courseId as CourseId} lessonId={lesson.id} task={lesson.writing} initial={draft} aiFeedback={aiFeedback} onDone={(r) => {
             setResult(r);
             setPhase("done");
           }} />
@@ -287,7 +288,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
 
         {phase === "speaking" && lesson.speaking && (
           <SpeakingStep
-            courseId={courseId}
+            courseId={courseId as CourseId}
             lessonId={lesson.id}
             spec={lesson.speaking}
             aiExaminer={aiFeedback}

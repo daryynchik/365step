@@ -9,8 +9,10 @@
 
 import { randomUUID } from "node:crypto";
 
-import { COURSES, flatten } from "@/content";
-import { TRACK } from "@/content/track";
+import { COURSES, findByKey, flatten } from "@/content";
+import type { FieldId } from "@/content/fields/ids";
+import { planFor, reviewLesson, type CountryId } from "@/content/plan";
+import type { Lesson } from "@/content/types";
 import { DEFAULT_SHIELD, DEFAULT_WEAPON, item, simulate, type Fighter, type FighterColor } from "./arena-rules";
 import { one, run, transaction } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
@@ -23,7 +25,8 @@ export const DEMO_PASSWORD = "demo1234";
 interface Persona {
   email: string;
   name: string;
-  /** Whole track days finished, plus lessons of the next day. */
+  goal: { country: CountryId; field: FieldId; grade: number; graduationMonthsAhead: number };
+  /** Whole plan days finished (the plan started this many days ago), plus steps of the next day. */
   trackDays: number;
   partial?: number;
   /** Seminar lessons finished. */
@@ -39,6 +42,7 @@ interface Persona {
 const DEMO: Persona = {
   email: DEMO_EMAIL,
   name: "Алия",
+  goal: { country: "usa", field: "cs", grade: 11, graduationMonthsAhead: 8 },
   trackDays: 6,
   partial: 1,
   seminar: 3,
@@ -52,6 +56,7 @@ const FRIENDS: Persona[] = [
   {
     email: "daniyar@365step.app",
     name: "Данияр",
+    goal: { country: "uk", field: "engineering", grade: 11, graduationMonthsAhead: 8 },
     trackDays: 9,
     streak: 12,
     days: 20,
@@ -61,6 +66,7 @@ const FRIENDS: Persona[] = [
   {
     email: "madina@365step.app",
     name: "Мадина",
+    goal: { country: "europe", field: "medicine", grade: 10, graduationMonthsAhead: 20 },
     trackDays: 7,
     partial: 2,
     seminar: 5,
@@ -72,6 +78,7 @@ const FRIENDS: Persona[] = [
   {
     email: "timur@365step.app",
     name: "Тимур",
+    goal: { country: "asia", field: "business", grade: 9, graduationMonthsAhead: 32 },
     trackDays: 2,
     streak: 0,
     days: 10,
@@ -84,6 +91,7 @@ const FRIENDS: Persona[] = [
 const STRANGER: Persona = {
   email: "erlan@365step.app",
   name: "Ерлан",
+  goal: { country: "undecided", field: "undecided", grade: 10, graduationMonthsAhead: 20 },
   trackDays: 1,
   streak: 1,
   days: 4,
@@ -97,6 +105,14 @@ Questions I still want to explore:
 1. Why does Shelley let Walton, not Victor, open and close the novel?
 2. Does Walton's loneliness in Letter 2 explain why he trusts the stranger so quickly?
 3. Is the stranger's warning meant for Walton, or for the reader?`;
+
+/** First day of the month `months` from now. */
+function monthsAhead(today: string, months: number): string {
+  const d = new Date(`${today}T00:00:00Z`);
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() + months);
+  return d.toISOString().slice(0, 10);
+}
 
 function pair(a: string, b: string): [string, string] {
   return a < b ? [a, b] : [b, a];
@@ -126,37 +142,43 @@ async function createPersona(p: Persona, passwordHash: string): Promise<{ id: st
     `${addDays(today, -p.days)}T09:00:00.000Z`,
   ]);
 
-  // Finished lessons, spread evenly over the history window, the most recent
-  // ones inside the streak so the streak is backed by real activity.
-  const finished: { key: string; correct: number; total: number; points: number }[] = [];
-  const entries = [
-    ...TRACK.slice(0, p.trackDays).flatMap((d) => d.steps),
-    ...(TRACK[p.trackDays]?.steps.slice(0, p.partial ?? 0) ?? []),
-    ...flatten(COURSES.seminar).slice(0, p.seminar ?? 0),
+  // The goal, with the plan starting `trackDays` days ago so the student is on schedule.
+  const startDate = addDays(today, -p.trackDays);
+  const graduation = monthsAhead(today, p.goal.graduationMonthsAhead);
+  await run(
+    "INSERT INTO student_profiles (user_id, country, field, grade, graduation, start_date, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    [id, p.goal.country, p.goal.field, p.goal.grade, graduation, startDate, nowIso()],
+  );
+  const plan = planFor({ country: p.goal.country, field: p.goal.field, grade: p.goal.grade, graduation, startDate });
+
+  // Finished steps: each on the date of its plan day; seminar lessons spread over the same days.
+  const finished: { key: string; lesson: Lesson; day: string }[] = [];
+  const planSteps = [
+    ...plan.days.slice(0, p.trackDays).flatMap((d) => d.steps.map((s) => ({ key: s.key, day: d.date }))),
+    ...(plan.days[p.trackDays]?.steps.slice(0, p.partial ?? 0).map((s) => ({ key: s.key, day: today })) ?? []),
   ];
-  entries.forEach(({ lesson, key }, index) => {
-    const total = lesson.questions.length;
-    // A believable score: mostly right, with the odd miss.
-    const correct = total === 0 ? 0 : Math.max(1, total - ((index + p.name.length) % 3 === 0 ? 1 : 0));
-    const points = lesson.writing ? POINTS.writing : lesson.speaking ? POINTS.speaking : lessonPoints(correct, total);
-    finished.push({ key, correct, total, points });
-  });
+  for (const { key, day } of planSteps) {
+    const lesson = key.startsWith("review/") ? reviewLesson(plan, key)?.lesson : findByKey(key)?.lesson;
+    if (lesson) finished.push({ key, lesson, day });
+  }
+  flatten(COURSES.seminar)
+    .slice(0, p.seminar ?? 0)
+    .forEach((e, i) => finished.push({ key: e.key, lesson: e.lesson, day: addDays(startDate, Math.min(p.trackDays, i * 2)) }));
 
   let earned = 0;
-  for (const [i, f] of finished.entries()) {
-    // The last `streak` lessons fall on consecutive days ending today; the rest
-    // are spread over the earlier part of the history.
-    const fromEnd = finished.length - 1 - i;
-    const daysAgo = fromEnd < p.streak ? fromEnd : Math.round(p.days - (i * p.days) / finished.length);
-    const day = addDays(today, -Math.min(daysAgo, p.days));
-    const at = `${day}T12:00:00.000Z`;
+  for (const [index, f] of finished.entries()) {
+    const total = f.lesson.questions.length;
+    // A believable score: mostly right, with the odd miss.
+    const correct = total === 0 ? 0 : Math.max(1, total - ((index + p.name.length) % 3 === 0 ? 1 : 0));
+    const points = f.lesson.writing ? POINTS.writing : f.lesson.speaking ? POINTS.speaking : lessonPoints(correct, total);
+    const at = `${f.day}T12:00:00.000Z`;
     await run(
       `INSERT INTO lesson_results (user_id, lesson_key, best_correct, total, attempts, first_done_at, last_done_at, last_day)
        VALUES (?, ?, ?, ?, 1, ?, ?, ?)`,
-      [id, f.key, f.correct, f.total, at, at, day],
+      [id, f.key, correct, total, at, at, f.day],
     );
-    await insertPoints(id, f.points, "Урок пройден", f.key, day);
-    earned += f.points;
+    await insertPoints(id, points, "Урок пройден", f.key, f.day);
+    earned += points;
   }
 
   if (p.streak > 0) {

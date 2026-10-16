@@ -1,10 +1,11 @@
 import { ADMISSIONS } from "./admissions";
+import { READING } from "./fields";
 import { IELTS } from "./ielts";
 import { SAT_MATH } from "./sat-math";
 import { SAT_RW } from "./sat-rw";
 import { SEMINAR } from "./seminar";
-import { isInTrack, isTrackUnlocked } from "./track";
 import type { Course, CourseId, Lesson, Unit } from "./types";
+import { VOCAB } from "./vocab";
 
 export type { Course, CourseId, Lesson, Question, Unit } from "./types";
 
@@ -13,8 +14,13 @@ export const COURSES: Record<CourseId, Course> = {
   "sat-rw": SAT_RW,
   "sat-math": SAT_MATH,
   admissions: ADMISSIONS,
+  reading: READING,
+  vocab: VOCAB,
   seminar: SEMINAR,
 };
+
+/** Courses whose lessons are scheduled by the personal plan (content/plan.ts). */
+export const PLAN_COURSES: CourseId[] = ["ielts", "sat-rw", "sat-math", "admissions", "reading", "vocab"];
 
 export function isCourseId(value: string): value is CourseId {
   return value in COURSES;
@@ -61,12 +67,8 @@ export function findByKey(key: string): PathEntry | null {
   return courseId && lessonId ? findLesson(courseId, lessonId) : null;
 }
 
-/**
- * Track lessons open day by day (see track.ts). The seminar is its own
- * project and opens lesson by lesson.
- */
-export function isUnlocked(entry: PathEntry, done: Set<string>): boolean {
-  if (isInTrack(entry.course.id)) return isTrackUnlocked(entry.key, done);
+/** The seminar opens lesson by lesson. (Plan courses open day by day — see plan.ts.) */
+export function isSequentiallyUnlocked(entry: PathEntry, done: Set<string>): boolean {
   if (entry.index === 0) return true;
   const previous = flatten(entry.course)[entry.index - 1];
   return done.has(previous.key);

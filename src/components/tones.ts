@@ -8,8 +8,13 @@ export const COURSE_TONE: Record<CourseId, { main: string; dark: string; soft: s
   "sat-rw": { main: "#3563c9", dark: "#274c9e", soft: "var(--rw-soft)" },
   "sat-math": { main: "#c0711b", dark: "#975712", soft: "var(--math-soft)" },
   admissions: { main: "#2f7f86", dark: "#225f64", soft: "var(--admissions-soft)" },
+  reading: { main: "#5a7d2a", dark: "#435e1f", soft: "#eef3e6" },
+  vocab: { main: "#a14a6a", dark: "#7c3851", soft: "#f6eaef" },
   seminar: { main: "#7a52b3", dark: "#5f3f8d", soft: "var(--seminar-soft)" },
 };
+
+/** Neutral tone for review and mock sections. */
+export const REVIEW_TONE = { main: "#56606e", dark: "#3f4752", soft: "#eceef1" };
 
 export function lessonIcon(courseId: CourseId, lesson: Lesson): { icon: LucideIcon; filled: boolean } {
   if (lesson.listening) return { icon: Headphones, filled: false };

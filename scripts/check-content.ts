@@ -12,7 +12,8 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { COURSES, flatten } from "../src/content";
-import { TRACK, TRACK_COURSES } from "../src/content/track";
+import { FIELD_OPTIONS } from "../src/content/fields/ids";
+import { buildPlan, COUNTRIES, reviewLesson } from "../src/content/plan";
 import { parseNumber } from "../src/lib/answers";
 
 const book = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/frankenstein.json"), "utf8")) as {
@@ -75,18 +76,47 @@ for (const course of Object.values(COURSES)) {
   }
 }
 
-// The track must contain every lesson of its courses exactly once.
-const inTrack = TRACK.flatMap((d) => d.steps.map((s) => s.key));
-if (new Set(inTrack).size !== inTrack.length) problems.push("track: a lesson appears twice");
-for (const id of TRACK_COURSES) {
-  for (const e of flatten(COURSES[id])) if (!inTrack.includes(e.key)) problems.push(`track: missing ${e.key}`);
+// Personal plans: every country × field × a range of timelines.
+const start = "2026-09-01";
+const durations = [21, 45, 90, 180, 300, 420, 600, 900];
+let plans = 0;
+let longest = 0;
+for (const country of COUNTRIES) {
+  for (const field of FIELD_OPTIONS) {
+    for (const days of durations) {
+      const graduation = new Date(Date.parse(start) + days * 86_400_000).toISOString().slice(0, 10);
+      const plan = buildPlan({ country: country.id, field: field.id, grade: 11, graduation, startDate: start });
+      const where = `plan ${country.id}/${field.id}/${days}d`;
+      plans++;
+      longest = Math.max(longest, plan.days.length);
+
+      const keys = plan.days.flatMap((d) => d.steps.map((x) => x.key));
+      if (new Set(keys).size !== keys.length) problems.push(`${where}: a step appears twice`);
+      if (plan.days.some((d) => d.steps.length === 0)) problems.push(`${where}: an empty day`);
+      if (plan.days.length !== Math.max(21, Math.min(1000, days))) problems.push(`${where}: ${plan.days.length} days`);
+
+      // Every core lesson is scheduled.
+      for (const id of ["ielts", "sat-rw", "sat-math", "vocab"] as const) {
+        for (const e of flatten(COURSES[id])) if (!keys.includes(e.key)) problems.push(`${where}: missing ${e.key}`);
+      }
+      const fieldTexts = keys.filter((k) => k.startsWith("reading/"));
+      if (fieldTexts.length < 10) problems.push(`${where}: only ${fieldTexts.length} field texts`);
+      if (field.id !== "undecided" && fieldTexts.some((k) => !k.startsWith(`reading/${field.id}-`))) problems.push(`${where}: text from another field`);
+      for (const must of ["admissions/map", "admissions/college-list", "admissions/final-check"]) {
+        if (!keys.includes(must)) problems.push(`${where}: missing ${must}`);
+      }
+      if (country.id === "uk" && !keys.includes("admissions/ucas-statement")) problems.push(`${where}: UK plan without UCAS`);
+      if (country.id === "usa" && keys.includes("admissions/ucas-statement")) problems.push(`${where}: US plan with UCAS`);
+
+      // Every review and mock section can be built.
+      for (const k of keys.filter((x) => x.startsWith("review/"))) {
+        const r = reviewLesson(plan, k);
+        if (!r || r.lesson.questions.length < 3) problems.push(`${where}: review ${k} has too few questions`);
+      }
+    }
+  }
 }
-TRACK.forEach((d, i) => {
-  if (d.steps.length === 0) problems.push(`track: day ${d.day} is empty`);
-  const next = TRACK[i + 1];
-  if (d.english && next?.english && d.english === next.english && i < TRACK.length - 3) problems.push(`track: days ${d.day} and ${next.day} both ${d.english}`);
-});
-console.log(`Track: ${TRACK.length} days, ${inTrack.length} lessons.`);
+console.log(`Plans: ${plans} checked (up to ${longest} days).`);
 
 console.log(`${Object.keys(COURSES).length} courses, ${questions} questions, ${quotes} quoted fragments checked.`);
 if (problems.length) {

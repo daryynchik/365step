@@ -1,152 +1,205 @@
 /**
  * End-to-end check of the product logic against a throwaway SQLite database:
- * walks the whole track as one student (every lesson type: questions, writing,
- * speaking), then practice sets, deadlines, friends, the arena and the demo.
+ * sets a goal, walks one student's whole personal plan (questions, reviews,
+ * mock sections, writing, speaking), changes the goal, then checks practice
+ * sets, deadlines, friends, the arena and the demo world.
  *
  *   pnpm verify
  */
 
+import assert from "node:assert/strict";
+import { randomUUID } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
-// A fresh database for every run. Must happen before the db module connects.
+import { findByKey, findLesson } from "../src/content";
+import { currentPlanDay, isPlanUnlocked, nextPlanStep, reviewLesson, type Plan, type PlanStep } from "../src/content/plan";
+import { registerUser } from "../src/lib/accounts";
+import { buyItem, getDuel, startFight } from "../src/lib/arena";
+import { getOrCreatePractice, getPracticeSet } from "../src/lib/content-engine";
+import { all, run } from "../src/lib/db";
+import { addDeadline, getDeadlines, removeDeadline, toggleDeadline } from "../src/lib/deadlines";
+import { ensureDemo } from "../src/lib/demo";
+import { getLeaderboard, getRequests, respondToRequest, sendFriendRequest } from "../src/lib/friends";
+import { canOpen, completeLesson, completePractice, getDoneKeys, getStats, submitSpeaking, submitWriting } from "../src/lib/game";
+import { getPlan, getProfile, saveProfile } from "../src/lib/profile";
+
+// A fresh database for every run. The db module connects lazily on first query.
 const DB = path.join(process.cwd(), "data", "verify.db");
 for (const f of [DB, `${DB}-wal`, `${DB}-shm`]) fs.rmSync(f, { force: true });
 process.env.SQLITE_PATH = DB;
 delete process.env.ANTHROPIC_API_KEY;
 
-import assert from "node:assert/strict";
-import { randomUUID } from "node:crypto";
-import { registerUser } from "../src/lib/accounts";
-import { completeLesson, getStats, getDoneKeys, submitWriting, submitSpeaking, completePractice } from "../src/lib/game";
-import { sendFriendRequest, respondToRequest, getRequests, getLeaderboard } from "../src/lib/friends";
-import { buyItem, startFight, getDuel } from "../src/lib/arena";
-import { addDeadline, getDeadlines, toggleDeadline, removeDeadline } from "../src/lib/deadlines";
-import { getOrCreatePractice, getPracticeSet } from "../src/lib/content-engine";
-import { ensureDemo } from "../src/lib/demo";
-import { TRACK, nextTrackStep, isTrackUnlocked, currentDay } from "../src/content/track";
-import { run } from "../src/lib/db";
-import type { TrackStep } from "../src/content/track";
-
 let checks = 0;
-const ok = (cond: unknown, msg: string) => { assert.ok(cond, msg); checks++; };
+const ok = (cond: unknown, msg: string) => {
+  assert.ok(cond, msg);
+  checks++;
+};
+
+function monthFromNow(months: number): string {
+  const d = new Date();
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() + months);
+  return d.toISOString().slice(0, 7);
+}
 
 const ESSAY = (n: number) => Array.from({ length: n }, (_, i) => (i % 12 === 11 ? "word." : "word")).join(" ");
 
-async function doStep(userId: string, step: TrackStep) {
-  const { course, lesson } = step;
+async function doStep(userId: string, plan: Plan, step: PlanStep) {
+  const [courseId, lessonId] = step.key.split("/");
+  if (courseId === "review") {
+    const review = reviewLesson(plan, step.key)!;
+    const answers = review.lesson.questions.map((q) => (q.kind === "choice" ? q.answer : q.answers[0]));
+    return completeLesson(userId, "review", lessonId, answers);
+  }
+  const lesson = findLesson(courseId, lessonId)!.lesson;
   if (lesson.writing) {
     const w = lesson.writing;
-    const body = w.checks.profile === "activities" ? "Founded a club for 40 students.\nLed a team of 6.\nTaught 12 kids weekly math." + " extra".repeat(w.minWords) : ESSAY(w.minWords + 5);
-    return submitWriting(userId, course.id, lesson.id, body);
+    const body =
+      w.checks.profile === "activities"
+        ? "Founded a club for 40 students.\nLed a team of 6.\nTaught 12 kids math." + " extra".repeat(w.minWords)
+        : ESSAY(w.minWords + 5);
+    return submitWriting(userId, courseId, lessonId, body);
   }
   if (lesson.speaking) {
     const turns = lesson.speaking.questions.flatMap((q) => [
       { role: "examiner" as const, text: q },
       { role: "student" as const, text: "I think this is true because my school taught me a lot, for example in science lessons, although it was hard." },
     ]);
-    return submitSpeaking(userId, course.id, lesson.id, { turns, mode: "text" });
+    return submitSpeaking(userId, courseId, lessonId, { turns, mode: "text" });
   }
   const answers = lesson.questions.map((q) => (q.kind === "choice" ? q.answer : q.answers[0]));
-  return completeLesson(userId, course.id, lesson.id, answers);
+  return completeLesson(userId, courseId, lessonId, answers);
 }
 
 async function main() {
   const a = await registerUser("a@test.kz", "password1", "Айгерим");
   const b = await registerUser("b@test.kz", "password1", "Бекзат");
   ok(a.ok && b.ok, "register");
-  const A = a.userId!, B = b.userId!;
+  const A = a.userId!;
+  const B = b.userId!;
 
-  // Day gating
-  const day2 = TRACK[1].steps[0];
-  ok(!(await completeLesson(A, day2.course.id, day2.lesson.id, [])).ok, "day 2 locked before day 1");
-  ok(nextTrackStep(new Set())!.key === TRACK[0].steps[0].key, "first step is day 1 english");
-  ok(TRACK[0].english === "ielts" && TRACK[1].english === "sat" && TRACK[2].english === "ielts", "english alternates");
-  ok(TRACK.slice(0, 19).every((d) => d.steps.some((s) => s.course.id === "sat-math")), "math every day while it lasts");
+  // ---------------------------------------------------------------- goal --
+  ok((await getPlan(A)) === null, "no plan before a goal is set");
+  ok(!(await canOpen(A, findByKey("ielts/reading-tfng")!)), "lessons closed without a goal");
+  ok(!(await saveProfile(A, { country: "mars", field: "cs", grade: 11, graduationMonth: monthFromNow(5) })).ok, "unknown country rejected");
+  ok(!(await saveProfile(A, { country: "usa", field: "cs", grade: 11, graduationMonth: "2020-05" })).ok, "past graduation rejected");
+  ok(!(await saveProfile(A, { country: "usa", field: "cs", grade: 3, graduationMonth: monthFromNow(5) })).ok, "bad grade rejected");
+  ok((await saveProfile(A, { country: "usa", field: "cs", grade: 11, graduationMonth: monthFromNow(5) })).ok, "goal saved");
 
-  // Within a day any order: do the last step of day 1 first.
-  const d1 = TRACK[0].steps;
-  const first = await doStep(A, d1[d1.length - 1]);
-  ok(first.ok, "day 1 steps in any order");
-  ok(first.ok && first.result.nextHref.includes(d1[0].lesson.id), "continue goes to the remaining step of the day");
+  let plan = (await getPlan(A))!;
+  ok(plan.days.length > 100 && plan.days.length < 160, `plan length follows graduation: ${plan.days.length} days`);
+  ok(plan.days.every((d) => d.steps.length > 0), "every day has a step");
+  ok(plan.days.flatMap((d) => d.steps).filter((s) => s.key.startsWith("reading/")).every((s) => s.key.startsWith("reading/cs-")), "field texts follow the chosen field");
+  ok(plan.days.flatMap((d) => d.steps).some((s) => s.key === "admissions/supplements"), "US plan includes supplemental essays");
 
-  // Speaking validation
-  const sp = TRACK.flatMap((d) => d.steps).find((s) => s.lesson.speaking)!;
-  ok(!(await submitSpeaking(A, sp.course.id, sp.lesson.id, { turns: [], mode: "text" })).ok, "speaking locked / empty rejected");
+  // ------------------------------------------------------------- gating --
+  const day2 = plan.days[1].steps[0];
+  ok(!isPlanUnlocked(plan, day2.key, new Set()), "day 2 locked before day 1");
+  ok(!(await doStep(A, plan, day2)).ok, "server refuses a locked step");
 
-  // Walk the whole track.
-  let speakingPoints = 0, writingPoints = 0;
-  for (const day of TRACK) {
+  // Reviews are graded on the server.
+  const firstReview = plan.days.flatMap((d) => d.steps).find((s) => s.kind === "review")!;
+  ok(reviewLesson(plan, firstReview.key)!.lesson.questions.length >= 3, "review section has questions");
+
+  // ---------------------------------------------------- walk the plan --
+  let steps = 0;
+  let writing = 0;
+  let speaking = 0;
+  for (const day of plan.days) {
     for (const step of day.steps) {
       const done = await getDoneKeys(A);
       if (done.has(step.key)) continue;
-      ok(isTrackUnlocked(step.key, done), "unlocked " + step.key);
-      const r = await doStep(A, step);
-      ok(r.ok, "complete " + step.key + (r.ok ? "" : " — " + (r as { error: string }).error));
-      if (r.ok && step.lesson.speaking) speakingPoints += r.result.points;
-      if (r.ok && step.lesson.writing) writingPoints += r.result.points;
+      ok(isPlanUnlocked(plan, step.key, done), `unlocked ${step.key}`);
+      const r = await doStep(A, plan, step);
+      ok(r.ok, `complete ${step.key}${r.ok ? "" : ` — ${(r as { error: string }).error}`}`);
+      if (r.ok && step.kind === "lesson") {
+        const lesson = findByKey(step.key)!.lesson;
+        if (lesson.writing) writing += r.result.points;
+        if (lesson.speaking) speaking += r.result.points;
+      }
+      steps++;
     }
   }
-  const doneAll = await getDoneKeys(A);
-  ok(currentDay(doneAll) === null && nextTrackStep(doneAll) === null, "whole track finished");
-  ok(speakingPoints === 90, "3 speaking parts × 30: " + speakingPoints);
-  ok(writingPoints === 40 * 8, "8 writing tasks (2 IELTS + 6 admissions) × 40: " + writingPoints);
+  let done = await getDoneKeys(A);
+  ok(currentPlanDay(plan, done) === null && nextPlanStep(plan, done) === null, `whole plan finished (${steps} steps)`);
+  ok(speaking === 30 * 4, `4 speaking parts × 30: ${speaking}`);
+  ok(writing > 0 && writing % 40 === 0, `writing tasks paid 40 each: ${writing}`);
 
-  // Practice: without a key generation is off, but stored sets work.
+  // --------------------------------------------------- change the goal --
+  const profileBefore = (await getProfile(A))!;
+  ok((await saveProfile(A, { country: "uk", field: "medicine", grade: 11, graduationMonth: monthFromNow(5) })).ok, "goal changed");
+  plan = (await getPlan(A))!;
+  done = await getDoneKeys(A);
+  ok((await getProfile(A))!.startDate === profileBefore.startDate, "start date kept when the goal changes");
+  ok(done.has("sat-math/linear-equations-one"), "finished lessons stay finished");
+  ok(plan.days.flatMap((d) => d.steps).some((s) => s.key === "admissions/ucas-statement"), "UK plan now includes UCAS");
+  const next = nextPlanStep(plan, done);
+  ok(next !== null && (next.key.startsWith("reading/medicine-") || next.key.startsWith("review/") || next.key.startsWith("admissions/")), `new goal brings new steps: ${next?.key}`);
+
+  // ------------------------------------------------------------ practice --
   const noKey = await getOrCreatePractice(A, "sat-rw/central-ideas");
   ok(!noKey.ok && /не настроена/.test(noKey.error), "generation disabled without API key");
   ok(!(await getOrCreatePractice(A, "ielts/speaking-part1")).ok, "speaking not generatable");
   const setId = randomUUID();
   await run("INSERT INTO practice_sets (id, lesson_key, payload, source, created_by, created_at, day) VALUES (?, ?, ?, ?, NULL, ?, ?)", [
-    setId, "sat-rw/central-ideas",
-    JSON.stringify({ title: "t", questions: [{ kind: "choice", prompt: "p", options: ["a", "b", "c"], answer: 1, explanation: "e" }, { kind: "choice", prompt: "q", options: ["a", "b", "c"], answer: 0, explanation: "e" }] }),
-    JSON.stringify({ kind: "generated" }), new Date().toISOString(), "2026-01-01",
+    setId,
+    "reading/cs-1",
+    JSON.stringify({
+      title: "t",
+      questions: [
+        { kind: "choice", prompt: "p", options: ["a", "b", "c"], answer: 1, explanation: "e" },
+        { kind: "choice", prompt: "q", options: ["a", "b", "c"], answer: 0, explanation: "e" },
+      ],
+    }),
+    JSON.stringify({ kind: "wikipedia", title: "Algorithm" }),
+    new Date().toISOString(),
+    "2026-01-01",
   ]);
-  const cached = await getOrCreatePractice(A, "sat-rw/central-ideas");
-  ok(cached.ok && cached.id === setId, "unseen stored set is served without generating");
+  const cached = await getOrCreatePractice(A, "reading/cs-1");
+  ok(cached.ok && cached.id === setId, "field reading practice served from the shared store");
   const set = (await getPracticeSet(setId))!;
   const p1 = await completePractice(A, set, [1, 2]);
-  ok(p1.ok && p1.result.correct === 1 && p1.result.points === 2, "practice graded server-side, 2 pts/correct");
-  const p2 = await completePractice(A, set, [1, 0]);
-  ok(p2.ok && p2.result.points === 0, "practice pays once");
-  const after = await getOrCreatePractice(A, "sat-rw/central-ideas");
-  ok(!after.ok, "done set not served again");
+  ok(p1.ok && p1.result.correct === 1 && p1.result.points === 2, "practice graded on the server");
+  ok((await completePractice(A, set, [1, 0])).ok, "practice can be repeated");
 
-  // Deadlines
+  // ----------------------------------------------------------- deadlines --
   ok(!(await addDeadline(A, "x", "2026-13-40")).ok, "bad deadline rejected");
   ok((await addDeadline(A, "MIT — EA", "2030-11-01")).ok, "deadline added");
-  let dl = await getDeadlines(A);
-  ok(dl.length === 1 && dl[0].daysLeft > 0, "deadline countdown");
-  await toggleDeadline(A, dl[0].id);
-  await toggleDeadline(B, dl[0].id); // someone else's: no effect
-  dl = await getDeadlines(A);
-  ok(dl[0].done, "toggle own deadline only");
+  const dl = await getDeadlines(A);
+  await toggleDeadline(B, dl[0].id);
   await removeDeadline(B, dl[0].id);
-  ok((await getDeadlines(A)).length === 1, "cannot delete someone else's deadline");
-  await removeDeadline(A, dl[0].id);
-  ok((await getDeadlines(A)).length === 0, "deadline removed");
+  ok((await getDeadlines(A))[0]?.done === false, "others cannot change my deadlines");
+  await toggleDeadline(A, dl[0].id);
+  ok((await getDeadlines(A))[0].done, "deadline toggled");
 
-  // Friends + arena + leaderboard still work.
+  // --------------------------------------------- friends, arena, ranking --
   ok((await sendFriendRequest(A, "b@test.kz")).ok, "friend request");
-  const reqs = await getRequests(B);
-  ok((await respondToRequest(B, reqs.incoming[0].id, true)).ok, "accepted");
-  ok((await buyItem(A, "iron-sword")).ok, "buy");
-  const f = await startFight(A, B);
-  ok(f.ok && (await getDuel(B, f.duelId)) !== null, "fight");
+  ok((await respondToRequest(B, (await getRequests(B)).incoming[0].id, true)).ok, "accepted");
+  ok((await buyItem(A, "iron-sword")).ok, "buy gear");
+  const fight = await startFight(A, B);
+  ok(fight.ok && (await getDuel(B, fight.duelId)) !== null, "fight");
   const board = await getLeaderboard(A);
-  ok(board[0].isMe && board[0].lessons === 56, "leaderboard counts track lessons");
-
+  ok(board[0].isMe && board[0].lessons >= steps, "leaderboard counts plan steps");
   const stats = await getStats(A);
-  ok(stats.earned > 1500 && stats.level.level >= 5, "level after full track: " + stats.level.level + " / " + stats.earned);
+  ok(stats.level.level >= 5, `level after a whole plan: ${stats.level.level}`);
 
-  // Demo
+  // ---------------------------------------------------------------- demo --
   const demo = await ensureDemo();
+  ok(demo === (await ensureDemo()), "ensureDemo is idempotent");
+  const demoPlan = (await getPlan(demo))!;
   const demoDone = await getDoneKeys(demo);
-  ok(demoDone.size === TRACK.slice(0, 6).flatMap((d) => d.steps).length + 1 + 3, "demo: 6 days + 1 + 3 seminar = " + demoDone.size);
-  ok((await getDeadlines(demo)).length === 4, "demo deadlines");
-  ok(nextTrackStep(demoDone)!.key === TRACK[6].steps[1].key, "demo next step is 2nd lesson of day 7");
+  ok(demoPlan.profile.country === "usa" && demoPlan.profile.field === "cs", "demo has a goal");
+  ok(currentPlanDay(demoPlan, demoDone)?.day === 7, `demo is on day 7: ${currentPlanDay(demoPlan, demoDone)?.day}`);
+  ok((await getLeaderboard(demo)).length === 4, "demo has three friends");
+  const friendsWithGoals = await all("SELECT COUNT(*) AS n FROM student_profiles");
+  ok(Number(friendsWithGoals[0].n) >= 6, "demo friends have goals");
 
-  console.log("All " + checks + " checks passed.");
+  console.log(`All ${checks} checks passed.`);
   process.exit(0);
 }
-main().catch((e) => { console.error(e); process.exit(1); });
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

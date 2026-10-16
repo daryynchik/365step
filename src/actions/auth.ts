@@ -22,7 +22,7 @@ export async function signUpAction(_prev: FormState, formData: FormData): Promis
 
   await createSession(result.userId);
   // redirect() works by throwing, so it stays outside any try/catch.
-  redirect("/path");
+  redirect("/start");
 }
 
 export async function signInAction(_prev: FormState, formData: FormData): Promise<FormState> {

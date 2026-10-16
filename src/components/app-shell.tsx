@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { BookOpenText, LogOut, Route, Swords, Users } from "lucide-react";
+import { BookOpenText, LogOut, Route, Swords, Target, Users } from "lucide-react";
 import { clsx } from "clsx";
 
 import { signOutAction } from "@/actions/auth";
@@ -64,6 +64,13 @@ function UserMenu({ user }: { user: ShellUser }) {
             <p className="mt-1 text-xs text-muted">Уровень {user.level}</p>
           </div>
           <div className="my-1 h-px bg-line" />
+          <Link
+            href="/start"
+            onClick={() => setOpen(false)}
+            className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-muted hover:bg-sunken hover:text-ink"
+          >
+            <Target className="size-4" /> Изменить цель
+          </Link>
           <button
             type="button"
             disabled={pending}

@@ -9,7 +9,7 @@
  *   - **bold**, __underline__ (underline marks the sentence a question asks about)
  */
 
-export type CourseId = "ielts" | "sat-rw" | "sat-math" | "admissions" | "seminar";
+export type CourseId = "ielts" | "sat-rw" | "sat-math" | "admissions" | "reading" | "vocab" | "seminar";
 
 export interface Passage {
   /** "Text 1", "Text 2" for cross-text questions; omitted otherwise. */

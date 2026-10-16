@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Check, Lock, Trophy } from "lucide-react";
 
-import { flatten, isUnlocked, type Course } from "@/content";
+import { flatten, isSequentiallyUnlocked, type Course } from "@/content";
 import { COURSE_TONE, lessonIcon } from "./tones";
 
 export { COURSE_TONE };
@@ -43,7 +43,7 @@ export function PathMap({ course, done }: { course: Course; done: Set<string> })
             <ol className="flex flex-col items-center gap-7">
               {unitEntries.map((entry, i) => {
                 const isDone = done.has(entry.key);
-                const unlocked = isUnlocked(entry, done);
+                const unlocked = isSequentiallyUnlocked(entry, done);
                 const isCurrent = entry.key === current?.key;
                 const state = isDone ? "done" : unlocked ? "open" : "locked";
                 const x = ZIGZAG[(entry.index + unitIndex) % ZIGZAG.length];

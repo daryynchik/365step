@@ -9,12 +9,13 @@
 
 import { randomUUID } from "node:crypto";
 
-import { COURSES, findLesson, flatten, isUnlocked, lessonKey, type PathEntry } from "@/content";
-import { isInTrack, nextTrackStep } from "@/content/track";
+import { COURSES, findLesson, flatten, isSequentiallyUnlocked, lessonKey, PLAN_COURSES, type PathEntry } from "@/content";
+import { isPlanUnlocked, nextPlanStep, reviewLesson } from "@/content/plan";
 import type { CourseId, Question } from "@/content/types";
 import { isCorrect, type Response } from "./answers";
 import { all, one, run, scalar, str, num, transaction } from "./db";
 import { addDays, lastNDays, nowIso, todayIso, weekStart } from "./date";
+import { getPlan } from "./profile";
 import { DAILY_GOAL, lessonPoints, levelFor, POINTS, type LevelInfo } from "./rules";
 import { countWords } from "./writing";
 
@@ -179,18 +180,23 @@ export interface Completion {
 
 export type CompletionResult = { ok: true; result: Completion } | { ok: false; error: string };
 
-function pathHref(courseId: CourseId): string {
-  return courseId === "seminar" ? "/seminar" : "/path";
+/** Where "Continue" goes: the next step of the plan, or the next seminar lesson. */
+async function continueHref(userId: string, courseId: CourseId | "review", done: Set<string>): Promise<string> {
+  if (courseId === "seminar") {
+    const next = nextLesson("seminar", done);
+    return next ? `/lesson/seminar/${next.lesson.id}` : "/seminar";
+  }
+  const plan = await getPlan(userId);
+  const next = plan ? nextPlanStep(plan, done) : null;
+  return next ? `/lesson/${next.key}` : "/path";
 }
 
-/** Where "Continue" goes after finishing `entry`. */
-function continueHref(entry: PathEntry, done: Set<string>): string {
-  if (isInTrack(entry.course.id)) {
-    const next = nextTrackStep(done);
-    return next ? `/lesson/${next.course.id}/${next.lesson.id}` : "/path";
-  }
-  const next = nextLesson(entry.course.id, done);
-  return next ? `/lesson/${next.course.id}/${next.lesson.id}` : pathHref(entry.course.id);
+/** Whether this student may open a lesson: by day in their plan, or in order in the seminar. */
+export async function canOpen(userId: string, entry: PathEntry, done?: Set<string>): Promise<boolean> {
+  const finished = done ?? (await getDoneKeys(userId));
+  if (!PLAN_COURSES.includes(entry.course.id)) return isSequentiallyUnlocked(entry, finished);
+  const plan = await getPlan(userId);
+  return plan ? isPlanUnlocked(plan, entry.key, finished) : false;
 }
 
 /**
@@ -200,15 +206,15 @@ function continueHref(entry: PathEntry, done: Set<string>): string {
  */
 async function recordCompletion(
   userId: string,
-  entry: PathEntry,
+  target: { key: string; courseId: CourseId | "review" },
   correct: number,
   total: number,
   firstTimePoints: number,
 ): Promise<Completion> {
-  const key = entry.key;
+  const key = target.key;
   const today = todayIso();
 
-  return transaction(async () => {
+  const result = await transaction(async () => {
     const earnedBefore = await earned(userId);
     const existing = await one("SELECT best_correct, last_day FROM lesson_results WHERE user_id = ? AND lesson_key = ?", [userId, key]);
 
@@ -233,9 +239,7 @@ async function recordCompletion(
 
     await addPoints(userId, points, existing ? "Повторение урока" : "Урок пройден", key);
     const { streak, extended } = await touchStreak(userId);
-
     const earnedAfter = earnedBefore + points;
-    const done = await getDoneKeys(userId);
 
     return {
       correct,
@@ -248,9 +252,12 @@ async function recordCompletion(
       leveledUp: levelFor(earnedAfter).level > levelFor(earnedBefore).level,
       earnedToday: await earned(userId, today),
       dailyGoal: DAILY_GOAL,
-      nextHref: continueHref(entry, done),
+      nextHref: "/path",
     };
   });
+
+  result.nextHref = await continueHref(userId, target.courseId, await getDoneKeys(userId));
+  return result;
 }
 
 export async function completeLesson(
@@ -259,17 +266,28 @@ export async function completeLesson(
   lessonId: string,
   responses: (Response | null)[],
 ): Promise<CompletionResult> {
+  // Review and mock sections are built from the student's own plan.
+  if (courseId === "review") {
+    const plan = await getPlan(userId);
+    const key = `review/${lessonId}`;
+    const review = plan ? reviewLesson(plan, key) : null;
+    if (!plan || !review) return { ok: false, error: "Повторение не найдено." };
+    if (!isPlanUnlocked(plan, key, await getDoneKeys(userId))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+    const questions = review.lesson.questions;
+    const correct = questions.filter((q, i) => isCorrect(q, responses[i])).length;
+    const result = await recordCompletion(userId, { key, courseId: "review" }, correct, questions.length, lessonPoints(correct, questions.length));
+    return { ok: true, result };
+  }
+
   const entry = findLesson(courseId, lessonId);
   if (!entry) return { ok: false, error: "Урок не найден." };
   if (entry.lesson.writing) return { ok: false, error: "Этот урок завершается сдачей работы." };
   if (entry.lesson.speaking) return { ok: false, error: "Этот урок завершается разговором с экзаменатором." };
-
-  const done = await getDoneKeys(userId);
-  if (!isUnlocked(entry, done)) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+  if (!(await canOpen(userId, entry))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
 
   const questions = entry.lesson.questions;
   const correct = questions.filter((q, i) => isCorrect(q, responses[i])).length;
-  const result = await recordCompletion(userId, entry, correct, questions.length, lessonPoints(correct, questions.length));
+  const result = await recordCompletion(userId, { key: entry.key, courseId: entry.course.id }, correct, questions.length, lessonPoints(correct, questions.length));
   return { ok: true, result };
 }
 
@@ -339,8 +357,7 @@ export async function submitWriting(userId: string, courseId: string, lessonId: 
   const task = entry?.lesson.writing;
   if (!entry || !task) return { ok: false, error: "Задание не найдено." };
 
-  const done = await getDoneKeys(userId);
-  if (!isUnlocked(entry, done)) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+  if (!(await canOpen(userId, entry))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
 
   const words = countWords(body);
   if (words < task.minWords) return { ok: false, error: `Нужно хотя бы ${task.minWords} слов — сейчас ${words}.` };
@@ -348,7 +365,7 @@ export async function submitWriting(userId: string, courseId: string, lessonId: 
   await saveDraft(userId, courseId, lessonId, body);
   await run("UPDATE writings SET submitted_at = ? WHERE user_id = ? AND lesson_key = ?", [nowIso(), userId, entry.key]);
 
-  const result = await recordCompletion(userId, entry, 0, 0, POINTS.writing);
+  const result = await recordCompletion(userId, { key: entry.key, courseId: entry.course.id }, 0, 0, POINTS.writing);
   return { ok: true, result };
 }
 
@@ -369,8 +386,7 @@ export async function submitSpeaking(
   const spec = entry?.lesson.speaking;
   if (!entry || !spec) return { ok: false, error: "Задание не найдено." };
 
-  const done = await getDoneKeys(userId);
-  if (!isUnlocked(entry, done)) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+  if (!(await canOpen(userId, entry))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
 
   const answers = submission.turns.filter((t) => t.role === "student").map((t) => t.text.trim()).filter(Boolean);
   const words = countWords(answers.join(" "));
@@ -384,7 +400,7 @@ export async function submitSpeaking(
   await saveDraft(userId, courseId, lessonId, transcript);
   await run("UPDATE writings SET submitted_at = ?, words = ? WHERE user_id = ? AND lesson_key = ?", [nowIso(), words, userId, entry.key]);
 
-  const result = await recordCompletion(userId, entry, 0, 0, POINTS.speaking);
+  const result = await recordCompletion(userId, { key: entry.key, courseId: entry.course.id }, 0, 0, POINTS.speaking);
   return { ok: true, result };
 }
 
@@ -418,8 +434,6 @@ export async function completePractice(
     await addPoints(userId, points, "Свежая практика", set.id);
     const { streak, extended } = await touchStreak(userId);
     const earnedAfter = earnedBefore + points;
-    const done = await getDoneKeys(userId);
-    const next = nextTrackStep(done);
     return {
       correct,
       total,
@@ -431,8 +445,9 @@ export async function completePractice(
       leveledUp: levelFor(earnedAfter).level > levelFor(earnedBefore).level,
       earnedToday: await earned(userId, todayIso()),
       dailyGoal: DAILY_GOAL,
-      nextHref: next ? `/lesson/${next.course.id}/${next.lesson.id}` : "/path",
+      nextHref: "/path",
     };
   });
+  result.nextHref = await continueHref(userId, "sat-rw", await getDoneKeys(userId));
   return { ok: true, result };
 }
