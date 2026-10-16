@@ -113,28 +113,49 @@ export function FriendsMini({ standings }: { standings: Standing[] }) {
 
 const OFFICIAL = [
   {
+    group: "SAT",
     title: "Пробные тесты в Bluebook",
     note: "Полные адаптивные тесты College Board",
     url: "https://satsuite.collegeboard.org/practice/practice-tests/bluebook",
   },
   {
+    group: "SAT",
     title: "Student Question Bank",
     note: "Все официальные задания по навыкам",
     url: "https://satsuite.collegeboard.org/practice/student-question-bank",
   },
   {
-    title: "Khan Academy · Digital SAT",
-    note: "Официальный партнёр College Board",
-    url: "https://www.khanacademy.org/digital-sat",
+    group: "IELTS",
+    title: "Примеры заданий IELTS",
+    note: "Официальные sample questions на ielts.org",
+    url: "https://ielts.org/take-a-test/preparation-resources/sample-test-questions",
+  },
+  {
+    group: "IELTS",
+    title: "Cambridge English: подготовка к IELTS",
+    note: "Материалы одного из владельцев экзамена",
+    url: "https://www.cambridgeenglish.org/exams-and-tests/ielts/preparation/",
+  },
+  {
+    group: "Поступление",
+    title: "Темы эссе Common App",
+    note: "Актуальные формулировки на текущий год",
+    url: "https://www.commonapp.org/apply/essay-prompts",
+  },
+  {
+    group: "Поступление",
+    title: "UCAS: personal statement и дедлайны",
+    note: "Официальные правила подачи в Великобритании",
+    url: "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement",
   },
 ];
 
 export function OfficialPractice() {
   return (
     <section className="card p-5">
-      <h2 className="text-[15px] font-semibold">Официальная практика</h2>
+      <h2 className="text-[15px] font-semibold">Официальные материалы</h2>
       <p className="mt-1 text-xs leading-relaxed text-muted">
-        Задания в 365step написаны по формату и навыкам College Board. Сами официальные задания — бесплатно на сайте College Board.
+        Задания 365step написаны в формате SAT и IELTS. Официальные задания принадлежат College Board и владельцам IELTS — они бесплатны на их сайтах.
       </p>
       <ul className="mt-3 space-y-1">
         {OFFICIAL.map((o) => (
@@ -146,6 +167,7 @@ export function OfficialPractice() {
               className="group flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-sunken"
             >
               <span className="min-w-0 flex-1">
+                <span className="block text-[10px] font-semibold uppercase tracking-wide text-subtle">{o.group}</span>
                 <span className="block text-sm font-medium">{o.title}</span>
                 <span className="block text-xs text-muted">{o.note}</span>
               </span>

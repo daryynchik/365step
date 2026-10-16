@@ -3,12 +3,15 @@ import { notFound, redirect } from "next/navigation";
 
 import { findLesson, isUnlocked } from "@/content";
 import { LessonPlayer } from "@/components/lesson-player";
-import { COURSE_TONE } from "@/components/path-map";
+import { COURSE_TONE } from "@/components/tones";
 import { aiFeedbackEnabled } from "@/lib/ai-feedback";
 import { currentUser } from "@/lib/auth";
+import { isGeneratable, practiceEnabled } from "@/lib/content-engine";
 import { getDoneKeys, getWriting } from "@/lib/game";
 
 export const dynamic = "force-dynamic";
+// "More questions on this skill" may generate a new set, which takes a while.
+export const maxDuration = 120;
 
 type Params = Promise<{ course: string; lesson: string }>;
 
@@ -25,7 +28,7 @@ export default async function LessonPage({ params }: { params: Params }) {
   const entry = findLesson(course, lesson);
   if (!entry) notFound();
 
-  const backHref = entry.course.id === "seminar" ? "/seminar" : `/path?course=${entry.course.id}`;
+  const backHref = entry.course.id === "seminar" ? "/seminar" : "/path";
   const done = await getDoneKeys(user.id);
   if (!isUnlocked(entry, done)) redirect(backHref);
 
@@ -35,11 +38,12 @@ export default async function LessonPage({ params }: { params: Params }) {
     <LessonPlayer
       courseId={entry.course.id}
       lesson={entry.lesson}
-      unitTitle={entry.unit.title}
+      unitTitle={entry.course.id === "seminar" ? entry.unit.title : `${entry.course.title} · ${entry.unit.title}`}
       tone={COURSE_TONE[entry.course.id].main}
       backHref={backHref}
       draft={writing ? { body: writing.body, submittedAt: writing.submittedAt } : null}
       aiFeedback={aiFeedbackEnabled()}
+      moreKey={practiceEnabled() && isGeneratable(entry) ? entry.key : null}
     />
   );
 }

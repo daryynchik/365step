@@ -1,14 +1,10 @@
 import Link from "next/link";
-import { Check, Lock, PenLine, Star, Trophy, BookOpen } from "lucide-react";
+import { Check, Lock, Trophy } from "lucide-react";
 
 import { flatten, isUnlocked, type Course } from "@/content";
-import type { CourseId } from "@/content/types";
+import { COURSE_TONE, lessonIcon } from "./tones";
 
-export const COURSE_TONE: Record<CourseId, { main: string; dark: string; soft: string }> = {
-  "sat-rw": { main: "#3563c9", dark: "#274c9e", soft: "var(--rw-soft)" },
-  "sat-math": { main: "#c0711b", dark: "#975712", soft: "var(--math-soft)" },
-  seminar: { main: "#7a52b3", dark: "#5f3f8d", soft: "var(--seminar-soft)" },
-};
+export { COURSE_TONE };
 
 /** Horizontal offsets that make the path snake gently left and right. */
 const ZIGZAG = [0, 46, 70, 46, 0, -46, -70, -46];
@@ -51,7 +47,8 @@ export function PathMap({ course, done }: { course: Course; done: Set<string> })
                 const isCurrent = entry.key === current?.key;
                 const state = isDone ? "done" : unlocked ? "open" : "locked";
                 const x = ZIGZAG[(entry.index + unitIndex) % ZIGZAG.length];
-                const Icon = isDone ? Check : !unlocked ? Lock : entry.lesson.writing ? PenLine : entry.lesson.reading ? BookOpen : Star;
+                const kind = lessonIcon(course.id, entry.lesson);
+                const Icon = isDone ? Check : !unlocked ? Lock : kind.icon;
 
                 const node = (
                   <span
@@ -59,7 +56,7 @@ export function PathMap({ course, done }: { course: Course; done: Set<string> })
                     data-state={state}
                     style={state === "open" ? ({ "--node": tone.main, "--node-shadow": tone.dark } as React.CSSProperties) : undefined}
                   >
-                    <Icon className="size-7" strokeWidth={2.6} fill={state === "open" && !entry.lesson.writing && !entry.lesson.reading ? "currentColor" : "none"} />
+                    <Icon className="size-7" strokeWidth={2.6} fill={state === "open" && kind.filled ? "currentColor" : "none"} />
                   </span>
                 );
 

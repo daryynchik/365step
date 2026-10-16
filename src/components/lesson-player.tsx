@@ -5,18 +5,31 @@ import { useCallback, useEffect, useMemo, useState, useTransition } from "react"
 import { ArrowUpRight, BookOpen, Check, Loader2, X } from "lucide-react";
 import { clsx } from "clsx";
 
-import { completeLessonAction } from "@/actions/lessons";
+import { completeLessonAction, completePracticeAction } from "@/actions/lessons";
 import { sectionHref, sectionLabel } from "@/content";
 import type { CourseId, Lesson } from "@/content/types";
 import { correctAnswerLabel, isCorrect, type Response } from "@/lib/answers";
 import type { Completion } from "@/lib/game";
 import { Celebration } from "./celebration";
+import { ListeningPanel, LISTEN_MODES, type ListenMode } from "./listening-panel";
+import { usePersistentMode } from "./mode-switch";
+import { MorePractice } from "./more-practice";
 import { QuestionView } from "./question-view";
 import { RichText } from "./rich-text";
+import { SpeakingStep } from "./speaking-step";
 import { Button, ErrorNote } from "./ui";
 import { WritingStep, type DraftState } from "./writing-step";
 
-type Phase = "theory" | "questions" | "writing" | "done";
+type Phase = "theory" | "questions" | "writing" | "speaking" | "done";
+
+/** A short badge for an official resource link. */
+function officialBadge(url: string): string {
+  if (url.includes("collegeboard")) return "CB";
+  if (url.includes("ielts")) return "IELTS";
+  if (url.includes("ucas")) return "UCAS";
+  if (url.includes("commonapp")) return "CA";
+  return "↗";
+}
 
 export interface LessonPlayerProps {
   courseId: CourseId;
@@ -26,11 +39,18 @@ export interface LessonPlayerProps {
   backHref: string;
   draft: DraftState | null;
   aiFeedback: boolean;
+  /** When set, this is a generated practice set and completes as one. */
+  practiceSetId?: string;
+  /** Lesson key for "more questions on this skill", when generation is available. */
+  moreKey?: string | null;
+  /** Shown under the title, e.g. the source of a generated passage. */
+  note?: React.ReactNode;
 }
 
-export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draft, aiFeedback }: LessonPlayerProps) {
+export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draft, aiFeedback, practiceSetId, moreKey, note }: LessonPlayerProps) {
   const questions = lesson.questions;
   const [phase, setPhase] = useState<Phase>("theory");
+  const [listenMode, setListenMode] = usePersistentMode<ListenMode>("365step:listen-mode", "audio", LISTEN_MODES);
 
   // Questions are asked in order; a wrong answer sends that question to the back
   // of the queue once, so the lesson ends on a correct answer to everything.
@@ -50,14 +70,16 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
   const question = questions[current];
   const correct = checked && question ? isCorrect(question, response) : false;
 
-  const totalSteps = 1 + questions.length + (lesson.writing ? 1 : 0);
+  const totalSteps = 1 + questions.length + (lesson.writing || lesson.speaking ? 1 : 0);
   const doneSteps = (phase === "theory" ? 0 : 1) + cleared.size + (phase === "done" ? 1 : 0);
 
   const finish = useCallback(
     (responses: (Response | null)[]) => {
       setError(null);
       start(async () => {
-        const res = await completeLessonAction(courseId, lesson.id, responses);
+        const res = practiceSetId
+          ? await completePracticeAction(practiceSetId, responses)
+          : await completeLessonAction(courseId, lesson.id, responses);
         if (res.ok) {
           setResult(res.result);
           setPhase("done");
@@ -66,14 +88,23 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
         }
       });
     },
-    [courseId, lesson.id],
+    [courseId, lesson.id, practiceSetId],
+  );
+
+  /** After the questions (or instead of them): writing, speaking, or done. */
+  const afterQuestions = useCallback(
+    (responses: (Response | null)[]) => {
+      if (lesson.writing) setPhase("writing");
+      else if (lesson.speaking) setPhase("speaking");
+      else finish(responses);
+    },
+    [lesson.writing, lesson.speaking, finish],
   );
 
   const begin = useCallback(() => {
     if (questions.length > 0) setPhase("questions");
-    else if (lesson.writing) setPhase("writing");
-    else finish([]);
-  }, [questions.length, lesson.writing, finish]);
+    else afterQuestions([]);
+  }, [questions.length, afterQuestions]);
 
   const check = useCallback(() => {
     if (!question || response === null || (typeof response === "string" && !response.trim())) return;
@@ -100,9 +131,8 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
       setPosition(nextPosition);
       return;
     }
-    if (lesson.writing) setPhase("writing");
-    else finish(firstTry);
-  }, [position, queue.length, lesson.writing, finish, firstTry]);
+    afterQuestions(firstTry);
+  }, [position, queue.length, afterQuestions, firstTry]);
 
   // Keyboard: 1–4 or A–D to choose, Enter to check / continue.
   useEffect(() => {
@@ -127,7 +157,14 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
   const progress = useMemo(() => Math.round((doneSteps / totalSteps) * 100), [doneSteps, totalSteps]);
 
   if (phase === "done" && result) {
-    return <Celebration result={result} kind={lesson.writing ? "writing" : "lesson"} backHref={backHref} />;
+    return (
+      <Celebration
+        result={result}
+        kind={lesson.writing ? "writing" : lesson.speaking ? "speaking" : "lesson"}
+        backHref={backHref}
+        moreKey={moreKey ?? null}
+      />
+    );
   }
 
   return (
@@ -158,7 +195,10 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
             <p className="mt-1 text-muted">
               {lesson.minutes} мин{questions.length > 0 ? ` · ${questions.length} заданий` : ""}
               {lesson.writing ? ` · письменная работа ${lesson.writing.minWords}–${lesson.writing.maxWords} слов` : ""}
+              {lesson.listening ? " · аудирование" : ""}
+              {lesson.speaking ? " · разговор с экзаменатором" : ""}
             </p>
+            {note}
 
             {lesson.reading && (
               <section className="mt-6 rounded-xl border border-seminar/20 bg-seminar-soft p-5">
@@ -208,15 +248,23 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
                 rel="noreferrer"
                 className="mt-8 flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-sm hover:border-line-strong"
               >
-                <span className="grid size-9 flex-none place-items-center rounded-lg bg-sunken text-xs font-bold text-muted">CB</span>
+                <span className="grid size-9 flex-none place-items-center rounded-lg bg-sunken text-[10px] font-bold text-muted">
+                  {officialBadge(lesson.official.url)}
+                </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-medium">Больше практики от College Board</span>
+                  <span className="block font-medium">Официальные материалы</span>
                   <span className="block truncate text-xs text-muted">{lesson.official.label}</span>
                 </span>
                 <ArrowUpRight className="size-4 flex-none text-subtle" />
               </a>
             )}
+
+            {moreKey && <MorePractice lessonKey={moreKey} className="mt-3" />}
           </article>
+        )}
+
+        {phase === "questions" && lesson.listening && (
+          <ListeningPanel listening={lesson.listening} mode={listenMode} onModeChange={setListenMode} />
         )}
 
         {phase === "questions" && question && (
@@ -237,6 +285,19 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
           }} />
         )}
 
+        {phase === "speaking" && lesson.speaking && (
+          <SpeakingStep
+            courseId={courseId}
+            lessonId={lesson.id}
+            spec={lesson.speaking}
+            aiExaminer={aiFeedback}
+            onDone={(r) => {
+              setResult(r);
+              setPhase("done");
+            }}
+          />
+        )}
+
         {error && (
           <div className="mt-6">
             <ErrorNote>{error}</ErrorNote>
@@ -249,7 +310,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
           <div className="mx-auto flex max-w-3xl justify-end px-4 py-4">
             <Button size="lg" onClick={begin} disabled={pending} className="w-full sm:w-auto">
               {pending && <Loader2 className="size-4 animate-spin" />}
-              {questions.length > 0 ? "К заданиям" : "К письменной работе"}
+              {questions.length > 0 ? "К заданиям" : lesson.speaking ? "К разговору с экзаменатором" : lesson.writing ? "К письменной работе" : "Готово"}
             </Button>
           </div>
         </footer>

@@ -9,8 +9,12 @@ export const POINTS = {
   perfectBonus: 10,
   /** Replaying a finished lesson: once per lesson per day. */
   repeat: 5,
-  /** Submitting a seminar writing task for the first time. */
+  /** Submitting a writing task (seminar, IELTS, admissions) for the first time. */
   writing: 40,
+  /** Finishing a speaking test part for the first time. */
+  speaking: 30,
+  /** Each correct first-try answer in a freshly generated practice set. */
+  practicePerCorrect: 2,
 } as const;
 
 /** Points to earn in a day for the daily goal ring to close. */

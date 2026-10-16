@@ -9,7 +9,7 @@
  *   - **bold**, __underline__ (underline marks the sentence a question asks about)
  */
 
-export type CourseId = "sat-rw" | "sat-math" | "seminar";
+export type CourseId = "ielts" | "sat-rw" | "sat-math" | "admissions" | "seminar";
 
 export interface Passage {
   /** "Text 1", "Text 2" for cross-text questions; omitted otherwise. */
@@ -37,10 +37,12 @@ export interface ChoiceQuestion extends QuestionBase {
   answer: number;
 }
 
-/** A student-produced response, like the SAT's grid-in questions. */
+/**
+ * A typed answer: SAT grid-ins, IELTS gap fills. Numerically equal forms
+ * (0.5, 1/2, .5) match automatically; text is compared case-insensitively.
+ */
 export interface InputQuestion extends QuestionBase {
   kind: "input";
-  /** Accepted answers. Numerically equal forms (0.5, 1/2, .5) match automatically. */
   answers: string[];
 }
 
@@ -51,6 +53,18 @@ export interface TheoryBlock {
   body: string;
 }
 
+/**
+ * How the instant feedback reads a draft:
+ *   seminar    — quotations, chapter citations, commentary (AP Seminar)
+ *   ielts1     — IELTS Writing Task 1: overview, data, paragraphs
+ *   ielts2     — IELTS Writing Task 2: position, paragraphs, linking, conclusion
+ *   statement  — admissions essays: specifics, reflection, clichés, word limit
+ *   activities — Common App activity descriptions, one per line, ≤150 characters
+ *   ucas       — UCAS personal statement: three answers, ≤4,000 characters
+ *   plan       — a structured list (a college list): lines and categories
+ */
+export type WritingProfile = "seminar" | "ielts1" | "ielts2" | "statement" | "activities" | "ucas" | "plan";
+
 export interface WritingTask {
   prompt: string;
   minWords: number;
@@ -59,10 +73,13 @@ export interface WritingTask {
   rubric: string[];
   /** Optional sentence starters for students who get stuck. */
   starters?: string[];
+  /** Data or a visual the task refers to (IELTS Task 1). */
+  table?: DataTable;
   /** What the automatic feedback looks for in the draft. */
   checks: {
-    /** Minimum number of quotations from the book. */
-    quotes: number;
+    profile?: WritingProfile;
+    /** Minimum number of quotations from the book (seminar). */
+    quotes?: number;
     /** Requires a counterargument ("Some readers argue… However…"). */
     counterargument?: boolean;
     /** Requires a cited outside source (author and year, or a link). */
@@ -77,17 +94,48 @@ export interface Reading {
   guide: string[];
 }
 
+/**
+ * A listening recording, stored as its script. The player reads it aloud with
+ * the browser's speech synthesis, or shows it as a transcript when the student
+ * cannot listen — the questions are the same either way.
+ */
+export interface Listening {
+  title: string;
+  /** One line the exam would say before the recording ("You will hear…"). */
+  context: string;
+  lines: { speaker: string; text: string }[];
+}
+
+/**
+ * An IELTS-style speaking test part. The examiner's questions are fixed, so it
+ * works without any AI; with an API key the examiner can react to answers.
+ */
+export interface Speaking {
+  part: 1 | 2 | 3;
+  /** What the examiner says first. */
+  intro: string;
+  /** The examiner's questions, in order. For Part 2 the first is the cue card. */
+  questions: string[];
+  cueCard?: { topic: string; points: string[] };
+  /** Expected words per answer when typed; spoken answers run longer. */
+  targetWords: [number, number];
+}
+
 export interface Lesson {
   id: string;
   title: string;
   /** One line under the title on the path. */
   summary: string;
   minutes: number;
+  /** IELTS skill or admissions stage, shown as a chip on the path. */
+  skill?: string;
   theory: TheoryBlock[];
   questions: Question[];
   reading?: Reading;
+  listening?: Listening;
+  speaking?: Speaking;
   writing?: WritingTask;
-  /** The matching official College Board practice, for SAT skills. */
+  /** Matching official practice (College Board, IELTS partners, UCAS…). */
   official?: { label: string; url: string };
 }
 

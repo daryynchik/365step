@@ -1,18 +1,20 @@
+import { ADMISSIONS } from "./admissions";
+import { IELTS } from "./ielts";
 import { SAT_MATH } from "./sat-math";
 import { SAT_RW } from "./sat-rw";
 import { SEMINAR } from "./seminar";
+import { isInTrack, isTrackUnlocked } from "./track";
 import type { Course, CourseId, Lesson, Unit } from "./types";
 
 export type { Course, CourseId, Lesson, Question, Unit } from "./types";
 
 export const COURSES: Record<CourseId, Course> = {
+  ielts: IELTS,
   "sat-rw": SAT_RW,
   "sat-math": SAT_MATH,
+  admissions: ADMISSIONS,
   seminar: SEMINAR,
 };
-
-/** The SAT courses shown as switchable tracks on the Path page. */
-export const SAT_COURSES: CourseId[] = ["sat-rw", "sat-math"];
 
 export function isCourseId(value: string): value is CourseId {
   return value in COURSES;
@@ -54,15 +56,17 @@ export function findLesson(courseId: string, lessonId: string): PathEntry | null
   return flatten(COURSES[courseId]).find((e) => e.lesson.id === lessonId) ?? null;
 }
 
-export function lessonCount(courseId: CourseId): number {
-  return flatten(COURSES[courseId]).length;
+export function findByKey(key: string): PathEntry | null {
+  const [courseId, lessonId] = key.split("/");
+  return courseId && lessonId ? findLesson(courseId, lessonId) : null;
 }
 
 /**
- * Lessons unlock in order: the first lesson of a course is always open, every
- * other one opens once the lesson before it is done.
+ * Track lessons open day by day (see track.ts). The seminar is its own
+ * project and opens lesson by lesson.
  */
 export function isUnlocked(entry: PathEntry, done: Set<string>): boolean {
+  if (isInTrack(entry.course.id)) return isTrackUnlocked(entry.key, done);
   if (entry.index === 0) return true;
   const previous = flatten(entry.course)[entry.index - 1];
   return done.has(previous.key);
@@ -79,10 +83,4 @@ export function sectionLabel(id: string): string {
 export function sectionHref(id: string): string {
   const [section, paragraph] = id.split("#");
   return `/seminar/read/${section}${paragraph ? `#p-${paragraph}` : ""}`;
-}
-
-export function allLessonKeys(): Set<string> {
-  const keys = new Set<string>();
-  for (const course of Object.values(COURSES)) for (const e of flatten(course)) keys.add(e.key);
-  return keys;
 }

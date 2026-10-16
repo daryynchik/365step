@@ -8,6 +8,7 @@ import { saveDraftAction, submitWritingAction, writingFeedbackAction } from "@/a
 import type { CourseId, WritingTask } from "@/content/types";
 import type { Completion } from "@/lib/game";
 import { analyseDraft, countWords, type CheckStatus } from "@/lib/writing";
+import { DataTableView } from "./question-view";
 import { Button, ErrorNote } from "./ui";
 
 export interface DraftState {
@@ -83,8 +84,13 @@ export function WritingStep({
   return (
     <div className="rise grid gap-6 lg:grid-cols-[minmax(0,1fr)_280px]">
       <div className="min-w-0">
-        <p className="text-xs font-semibold uppercase tracking-wide text-seminar">Задание</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted">Задание</p>
         <p className="mt-1 text-[17px] font-semibold leading-snug">{task.prompt}</p>
+        {task.table && (
+          <div className="mt-4">
+            <DataTableView table={task.table} />
+          </div>
+        )}
         <p className="mt-1 text-sm text-muted">
           {task.minWords}–{task.maxWords} слов, по-английски. Черновик сохраняется сам.
           {initial?.submittedAt ? " Работа уже сдана — можно улучшить и сдать снова." : ""}
@@ -97,7 +103,7 @@ export function WritingStep({
                 key={s}
                 type="button"
                 onClick={() => setBody((b) => (b.trim() ? `${b.trimEnd()} ${s}` : s))}
-                className="rounded-lg border border-dashed border-line-strong px-2.5 py-1 text-xs text-muted hover:border-seminar hover:text-seminar"
+                className="rounded-lg border border-dashed border-line-strong px-2.5 py-1 text-xs text-muted hover:border-ink hover:text-ink"
               >
                 {s}
               </button>
@@ -111,7 +117,7 @@ export function WritingStep({
           spellCheck
           lang="en"
           rows={14}
-          className="passage mt-4 block min-h-80 w-full resize-y rounded-xl border-[1.5px] border-line-strong bg-surface px-5 py-4 outline-none focus:border-seminar"
+          className="passage mt-4 block min-h-80 w-full resize-y rounded-xl border-[1.5px] border-line-strong bg-surface px-5 py-4 outline-none focus:border-accent"
           placeholder="Start with your claim…"
           aria-label="Текст работы"
         />
@@ -124,9 +130,9 @@ export function WritingStep({
         </div>
 
         {feedback && (
-          <section className="mt-5 rounded-xl border border-seminar/25 bg-seminar-soft p-5">
-            <p className="mb-2 flex items-center gap-2 text-sm font-semibold text-seminar">
-              <Sparkles className="size-4" /> Отзыв преподавателя-ИИ
+          <section className="mt-5 rounded-xl border border-line bg-sunken p-5">
+            <p className="mb-2 flex items-center gap-2 text-sm font-semibold text-ink">
+              <Sparkles className="size-4" /> Отзыв ИИ-преподавателя
             </p>
             <p className="whitespace-pre-line text-sm leading-relaxed">{feedback}</p>
           </section>

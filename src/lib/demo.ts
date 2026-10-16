@@ -10,7 +10,7 @@
 import { randomUUID } from "node:crypto";
 
 import { COURSES, flatten } from "@/content";
-import type { CourseId } from "@/content/types";
+import { TRACK } from "@/content/track";
 import { DEFAULT_SHIELD, DEFAULT_WEAPON, item, simulate, type Fighter, type FighterColor } from "./arena-rules";
 import { one, run, transaction } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
@@ -23,8 +23,11 @@ export const DEMO_PASSWORD = "demo1234";
 interface Persona {
   email: string;
   name: string;
-  /** Lessons finished in each course, from the start of the path. */
-  done: Partial<Record<CourseId, number>>;
+  /** Whole track days finished, plus lessons of the next day. */
+  trackDays: number;
+  partial?: number;
+  /** Seminar lessons finished. */
+  seminar?: number;
   /** Consecutive active days ending today (0 = not active today or yesterday). */
   streak: number;
   /** Days of history the finished lessons are spread across. */
@@ -36,7 +39,9 @@ interface Persona {
 const DEMO: Persona = {
   email: DEMO_EMAIL,
   name: "Алия",
-  done: { "sat-rw": 6, "sat-math": 4, seminar: 3 },
+  trackDays: 6,
+  partial: 1,
+  seminar: 3,
   streak: 6,
   days: 18,
   color: "blue",
@@ -47,7 +52,7 @@ const FRIENDS: Persona[] = [
   {
     email: "daniyar@365step.app",
     name: "Данияр",
-    done: { "sat-rw": 4, "sat-math": 11 },
+    trackDays: 9,
     streak: 12,
     days: 20,
     color: "green",
@@ -56,7 +61,9 @@ const FRIENDS: Persona[] = [
   {
     email: "madina@365step.app",
     name: "Мадина",
-    done: { "sat-rw": 11, "sat-math": 2, seminar: 5 },
+    trackDays: 7,
+    partial: 2,
+    seminar: 5,
     streak: 3,
     days: 25,
     color: "violet",
@@ -65,7 +72,7 @@ const FRIENDS: Persona[] = [
   {
     email: "timur@365step.app",
     name: "Тимур",
-    done: { "sat-math": 3 },
+    trackDays: 2,
     streak: 0,
     days: 10,
     color: "amber",
@@ -77,7 +84,7 @@ const FRIENDS: Persona[] = [
 const STRANGER: Persona = {
   email: "erlan@365step.app",
   name: "Ерлан",
-  done: { "sat-rw": 2 },
+  trackDays: 1,
   streak: 1,
   days: 4,
   color: "red",
@@ -122,15 +129,18 @@ async function createPersona(p: Persona, passwordHash: string): Promise<{ id: st
   // Finished lessons, spread evenly over the history window, the most recent
   // ones inside the streak so the streak is backed by real activity.
   const finished: { key: string; correct: number; total: number; points: number }[] = [];
-  for (const [courseId, count] of Object.entries(p.done) as [CourseId, number][]) {
-    for (const entry of flatten(COURSES[courseId]).slice(0, count)) {
-      const total = entry.lesson.questions.length;
-      // A believable score: mostly right, with the odd miss.
-      const correct = total === 0 ? 0 : Math.max(1, total - ((entry.index + p.name.length) % 3 === 0 ? 1 : 0));
-      const points = entry.lesson.writing ? POINTS.writing : lessonPoints(correct, total);
-      finished.push({ key: entry.key, correct, total, points });
-    }
-  }
+  const entries = [
+    ...TRACK.slice(0, p.trackDays).flatMap((d) => d.steps),
+    ...(TRACK[p.trackDays]?.steps.slice(0, p.partial ?? 0) ?? []),
+    ...flatten(COURSES.seminar).slice(0, p.seminar ?? 0),
+  ];
+  entries.forEach(({ lesson, key }, index) => {
+    const total = lesson.questions.length;
+    // A believable score: mostly right, with the odd miss.
+    const correct = total === 0 ? 0 : Math.max(1, total - ((index + p.name.length) % 3 === 0 ? 1 : 0));
+    const points = lesson.writing ? POINTS.writing : lesson.speaking ? POINTS.speaking : lessonPoints(correct, total);
+    finished.push({ key, correct, total, points });
+  });
 
   let earned = 0;
   for (const [i, f] of finished.entries()) {
@@ -256,6 +266,23 @@ export async function ensureDemo(): Promise<string> {
       nowIso(),
       nowIso(),
     ]);
+
+    // A few planner entries so the deadlines card has countdowns.
+    for (const [title, inDays, done] of [
+      ["IELTS — дата экзамена", 9, 0],
+      ["Early Action — первая заявка", 24, 0],
+      ["Стипендия — пакет документов", 52, 0],
+      ["Регистрация на SAT", -3, 1],
+    ] as const) {
+      await run("INSERT INTO deadlines (id, user_id, title, due_date, done, created_at) VALUES (?, ?, ?, ?, ?, ?)", [
+        randomUUID(),
+        me.id,
+        title,
+        addDays(todayIso(), inDays),
+        done,
+        nowIso(),
+      ]);
+    }
 
     // A little arena history in both directions.
     const aliya = await fighterOf(me.id, DEMO.name, me.level);

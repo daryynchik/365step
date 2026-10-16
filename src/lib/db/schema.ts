@@ -123,4 +123,38 @@ CREATE TABLE IF NOT EXISTS duels (
 );
 CREATE INDEX IF NOT EXISTS idx_duels_attacker ON duels(attacker_id, day);
 CREATE INDEX IF NOT EXISTS idx_duels_defender ON duels(defender_id);
+
+-- Application deadlines the student tracks (admissions roadmap).
+CREATE TABLE IF NOT EXISTS deadlines (
+  id         TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  title      TEXT NOT NULL,
+  due_date   TEXT NOT NULL,
+  done       INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_deadlines_user ON deadlines(user_id, due_date);
+
+-- Generated practice: new question sets for a lesson's skill, shared by all
+-- users so each set is generated (and paid for) once.
+CREATE TABLE IF NOT EXISTS practice_sets (
+  id         TEXT PRIMARY KEY,
+  lesson_key TEXT NOT NULL,
+  payload    TEXT NOT NULL,
+  source     TEXT NOT NULL,
+  created_by TEXT REFERENCES users(id) ON DELETE SET NULL,
+  created_at TEXT NOT NULL,
+  day        TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_practice_sets_lesson ON practice_sets(lesson_key, created_at);
+CREATE INDEX IF NOT EXISTS idx_practice_sets_creator ON practice_sets(created_by, day);
+
+CREATE TABLE IF NOT EXISTS practice_results (
+  user_id  TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  set_id   TEXT NOT NULL REFERENCES practice_sets(id) ON DELETE CASCADE,
+  correct  INTEGER NOT NULL,
+  total    INTEGER NOT NULL,
+  done_at  TEXT NOT NULL,
+  PRIMARY KEY (user_id, set_id)
+);
 `;

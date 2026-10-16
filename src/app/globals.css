@@ -30,6 +30,10 @@
   --math-soft: #f9efe2;
   --seminar: #7a52b3;
   --seminar-soft: #f0eaf7;
+  --ielts: #b8483f;
+  --ielts-soft: #f8ebe9;
+  --admissions: #2f7f86;
+  --admissions-soft: #e5f1f2;
 
   --flame: #e0702a;
   --coin: #c9971c;
@@ -62,6 +66,10 @@
   --color-math-soft: var(--math-soft);
   --color-seminar: var(--seminar);
   --color-seminar-soft: var(--seminar-soft);
+  --color-ielts: var(--ielts);
+  --color-ielts-soft: var(--ielts-soft);
+  --color-admissions: var(--admissions);
+  --color-admissions-soft: var(--admissions-soft);
   --color-flame: var(--flame);
   --color-coin: var(--coin);
   --font-sans: var(--font-onest), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;

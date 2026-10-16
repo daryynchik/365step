@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "db:seed": "tsx scripts/seed.ts",
     "db:schema": "tsx scripts/print-schema.ts",
-    "check:content": "tsx scripts/check-content.ts"
+    "check:content": "tsx scripts/check-content.ts",
+    "verify": "NODE_OPTIONS=--conditions=react-server tsx scripts/verify.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
@@ -21,6 +22,7 @@
     "postgres": "^3.4.5",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
+    "server-only": "0.0.1",
     "three": "^0.180.0"
   },
   "devDependencies": {

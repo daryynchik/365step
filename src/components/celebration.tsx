@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowUp, Target } from "lucide-react";
 
 import type { Completion } from "@/lib/game";
+import { MorePractice } from "./more-practice";
 import { buttonClass, Coin, Flame } from "./ui";
 
 const CONFETTI_COLORS = ["#2e7d4f", "#3563c9", "#c0711b", "#7a52b3", "#c9971c", "#e0702a"];
@@ -101,10 +102,13 @@ export function Celebration({
   result,
   kind,
   backHref,
+  moreKey = null,
 }: {
   result: Completion;
-  kind: "lesson" | "writing";
+  kind: "lesson" | "writing" | "speaking";
   backHref: string;
+  /** Offer a fresh practice set on the same skill. */
+  moreKey?: string | null;
 }) {
   const points = useCountUp(result.points);
   const continueRef = useRef<HTMLAnchorElement>(null);
@@ -116,7 +120,7 @@ export function Celebration({
   }, []);
 
   const title =
-    kind === "writing" ? "Работа сдана!" : perfect ? "Без единой ошибки!" : result.firstTime ? "Урок пройден!" : "Повторение засчитано";
+    kind === "writing" ? "Работа сдана!" : kind === "speaking" ? "Часть экзамена пройдена!" : perfect ? "Без единой ошибки!" : result.firstTime ? "Урок пройден!" : "Повторение засчитано";
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center px-4 py-10">
@@ -184,6 +188,7 @@ export function Celebration({
           Продолжить
         </Link>
       </div>
+      {moreKey && <MorePractice lessonKey={moreKey} className="rise mt-3 w-full max-w-md" />}
     </div>
   );
 }

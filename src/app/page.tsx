@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BookOpenText, Check, Lock, Route, Star, Swords } from "lucide-react";
+import { BookOpenText, Check, Flag, Lock, Route, Star, Swords } from "lucide-react";
 
-import { COURSES, flatten } from "@/content";
+import { TRACK } from "@/content/track";
 import { DemoButton } from "@/components/auth-forms";
 import { ButtonLink, Logo } from "@/components/ui";
 import { currentUser } from "@/lib/auth";
@@ -19,9 +19,9 @@ function PathPreview() {
   ] as const;
   return (
     <div className="card relative mx-auto w-full max-w-sm overflow-hidden p-6">
-      <div className="rounded-xl bg-rw px-4 py-3 text-white shadow-[0_4px_0_#274c9e]">
-        <p className="text-[11px] font-semibold uppercase tracking-wide text-white/70">Раздел 2</p>
-        <p className="font-bold">Craft and Structure</p>
+      <div className="rounded-xl bg-accent px-4 py-3 text-white shadow-[0_4px_0_var(--accent-hover)]">
+        <p className="text-[11px] font-semibold uppercase tracking-wide text-white/70">Дни 1–5</p>
+        <p className="font-bold">Неделя 1</p>
       </div>
       <ol className="mt-8 flex flex-col items-center gap-6 pb-2">
         {nodes.map((n, i) => (
@@ -48,14 +48,19 @@ function PathPreview() {
 export default async function Home() {
   if (await currentUser()) redirect("/path");
 
-  const satLessons = flatten(COURSES["sat-rw"]).length + flatten(COURSES["sat-math"]).length;
-  const satQuestions = [...flatten(COURSES["sat-rw"]), ...flatten(COURSES["sat-math"])].reduce((n, e) => n + e.lesson.questions.length, 0);
+  const steps = TRACK.flatMap((d) => d.steps);
+  const questions = steps.reduce((n, s) => n + s.lesson.questions.length, 0);
 
   const features = [
     {
       icon: Route,
-      title: "Путь SAT",
-      text: `${satLessons} навыков из официальной спецификации College Board и ${satQuestions} заданий в формате цифрового SAT. Каждый урок — 10 минут.`,
+      title: "Одна программа",
+      text: `${TRACK.length} дней, ${steps.length} уроков, ${questions} заданий. IELTS и SAT English через день, SAT Math каждый день. Listening и Speaking можно проходить и без звука.`,
+    },
+    {
+      icon: Flag,
+      title: "Поступление",
+      text: "Выбор вузов, дедлайны, активности, Personal Statement, UCAS и стипендии — шаги поступления прямо в программе, с планировщиком дедлайнов.",
     },
     {
       icon: BookOpenText,
@@ -88,10 +93,10 @@ export default async function Home() {
           <div>
             <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
               Каждый день —<br />
-              один шаг к SAT.
+              шаг к поступлению.
             </h1>
             <p className="mt-5 max-w-md text-lg text-muted">
-              Короткие уроки по навыкам College Board, годовой курс чтения и письма и друзья, с которыми не хочется пропускать.
+              IELTS, SAT и поступление за рубеж — в одной программе из коротких уроков. И друзья, с которыми не хочется пропускать.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/signup" size="lg">
@@ -104,7 +109,7 @@ export default async function Home() {
           <PathPreview />
         </section>
 
-        <section className="grid gap-4 pb-20 md:grid-cols-3">
+        <section className="grid gap-4 pb-20 sm:grid-cols-2 lg:grid-cols-4">
           {features.map(({ icon: Icon, title, text }) => (
             <div key={title} className="card p-6">
               <Icon className="size-6 text-accent" />
@@ -119,7 +124,7 @@ export default async function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-subtle sm:flex-row sm:justify-between">
           <span>365step</span>
           <span>
-            SAT и AP — товарные знаки College Board, который не связан с этим сайтом.{" "}
+            SAT и AP — товарные знаки College Board, IELTS — British Council, IDP и Cambridge. Они не связаны с этим сайтом.{" "}
             <Link href="https://satsuite.collegeboard.org/practice" className="underline-offset-2 hover:underline">
               Официальная практика
             </Link>

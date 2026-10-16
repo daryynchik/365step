@@ -12,6 +12,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { COURSES, flatten } from "../src/content";
+import { TRACK, TRACK_COURSES } from "../src/content/track";
 import { parseNumber } from "../src/lib/answers";
 
 const book = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/frankenstein.json"), "utf8")) as {
@@ -30,7 +31,15 @@ for (const course of Object.values(COURSES)) {
     if (ids.has(lesson.id)) problems.push(`${key}: duplicate lesson id`);
     ids.add(lesson.id);
 
-    if (lesson.questions.length === 0 && !lesson.writing) problems.push(`${key}: no questions and no writing task`);
+    if (lesson.questions.length === 0 && !lesson.writing && !lesson.speaking) problems.push(`${key}: nothing to do`);
+    if (lesson.listening && lesson.listening.lines.length < 3) problems.push(`${key}: listening script too short`);
+    if (lesson.speaking) {
+      const sp = lesson.speaking;
+      if (sp.questions.length === 0) problems.push(`${key}: speaking has no questions`);
+      if (sp.part === 2 && !sp.cueCard) problems.push(`${key}: Part 2 needs a cue card`);
+      if (sp.targetWords[0] >= sp.targetWords[1]) problems.push(`${key}: bad targetWords`);
+    }
+    if (lesson.writing && lesson.writing.minWords >= lesson.writing.maxWords) problems.push(`${key}: bad word range`);
 
     for (const section of lesson.reading?.sections ?? []) {
       const [id, paragraph] = section.split("#");
@@ -47,7 +56,7 @@ for (const course of Object.values(COURSES)) {
         if (new Set(q.options).size !== q.options.length) problems.push(`${where}: duplicate options`);
       } else {
         if (q.answers.length === 0) problems.push(`${where}: no accepted answers`);
-        for (const a of q.answers) if (parseNumber(a) === null && !/^[a-z0-9]+$/i.test(a)) problems.push(`${where}: odd answer "${a}"`);
+        for (const a of q.answers) if (parseNumber(a) === null && !/^[a-z0-9][a-z0-9 '-]*$/i.test(a)) problems.push(`${where}: odd answer "${a}"`);
       }
 
       // Quotations attributed to the novel: “…” followed by (Ch. N) or (Letter N).
@@ -65,6 +74,19 @@ for (const course of Object.values(COURSES)) {
     });
   }
 }
+
+// The track must contain every lesson of its courses exactly once.
+const inTrack = TRACK.flatMap((d) => d.steps.map((s) => s.key));
+if (new Set(inTrack).size !== inTrack.length) problems.push("track: a lesson appears twice");
+for (const id of TRACK_COURSES) {
+  for (const e of flatten(COURSES[id])) if (!inTrack.includes(e.key)) problems.push(`track: missing ${e.key}`);
+}
+TRACK.forEach((d, i) => {
+  if (d.steps.length === 0) problems.push(`track: day ${d.day} is empty`);
+  const next = TRACK[i + 1];
+  if (d.english && next?.english && d.english === next.english && i < TRACK.length - 3) problems.push(`track: days ${d.day} and ${next.day} both ${d.english}`);
+});
+console.log(`Track: ${TRACK.length} days, ${inTrack.length} lessons.`);
 
 console.log(`${Object.keys(COURSES).length} courses, ${questions} questions, ${quotes} quoted fragments checked.`);
 if (problems.length) {
