@@ -5,6 +5,8 @@ import { useEffect } from "react";
 /** Scrolls the current lesson into view once, so a long path opens where you are. */
 export function ScrollIntoView({ targetId }: { targetId: string }) {
   useEffect(() => {
+    // Explicit links to a path section take precedence over the current lesson.
+    if (window.location.hash) return;
     const el = document.getElementById(targetId);
     if (!el) return;
     const rect = el.getBoundingClientRect();

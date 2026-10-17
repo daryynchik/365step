@@ -57,11 +57,7 @@ export function ButtonLink({
 export function Logo({ className }: { className?: string }) {
   return (
     <span className={clsx("inline-flex items-center gap-2 font-bold tracking-tight text-ink", className)}>
-      <svg viewBox="0 0 24 24" className="size-[1.15em]" aria-hidden>
-        <rect x="2" y="14" width="5" height="8" rx="1.5" fill="var(--accent)" opacity="0.45" />
-        <rect x="9.5" y="9" width="5" height="13" rx="1.5" fill="var(--accent)" opacity="0.7" />
-        <rect x="17" y="3" width="5" height="19" rx="1.5" fill="var(--accent)" />
-      </svg>
+      <img src="/brand/step-mark.png" alt="" className="size-[1.5em] object-contain" width={32} height={32} />
       365step
     </span>
   );

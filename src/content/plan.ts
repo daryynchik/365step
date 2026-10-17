@@ -74,6 +74,8 @@ export interface Plan {
   deadlinePassed: boolean;
   /** Index (0-based) of the first day after the deadline. */
   prepDays: number;
+  /** Optional guided tool lessons; do not move or gate the existing daily plan. */
+  tutorials: PlanStep[];
   newLessons: number;
   reviewSteps: number;
   /** Average steps per day before the deadline. */
@@ -173,7 +175,7 @@ export function lessonLabel(courseId: CourseId, lesson: Lesson): string {
     case "sat-rw":
       return "SAT · Reading & Writing";
     case "sat-math":
-      return "SAT · Math";
+      return lesson.tutorial ? "SAT · Desmos" : "SAT · Math";
     case "admissions":
       return "Поступление";
     case "reading":
@@ -229,7 +231,8 @@ export function buildPlan(profile: StudentProfile): Plan {
   const place = (day: number, step: PlanStep) => slots[Math.min(total - 1, Math.max(0, day))].push(step);
 
   const english = englishEntries();
-  const math = entriesOf(SAT_MATH);
+  const math = entriesOf(SAT_MATH, (lesson) => !lesson.tutorial);
+  const tutorials = entriesOf(SAT_MATH, (lesson) => !!lesson.tutorial).map(lessonStep);
   const vocab = entriesOf(VOCAB);
   const field = fieldEntries(profile.field);
 
@@ -284,6 +287,7 @@ export function buildPlan(profile: StudentProfile): Plan {
     deadlinePassed,
     prepDays: prep,
     newLessons,
+    tutorials,
     reviewSteps: reviews,
     load: Math.round((prepSteps / Math.max(1, prep)) * 10) / 10,
   };
@@ -312,6 +316,7 @@ export function planDayOf(plan: Plan, key: string): number | null {
 
 /** Open when every step of every earlier day is done. */
 export function isPlanUnlocked(plan: Plan, key: string, done: Set<string>): boolean {
+  if (plan.tutorials.some((step) => step.key === key)) return true;
   const day = planDayOf(plan, key);
   if (day === null) return false;
   for (const d of plan.days) {

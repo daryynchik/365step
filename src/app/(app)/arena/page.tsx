@@ -5,9 +5,10 @@ import { ChevronRight } from "lucide-react";
 import { clsx } from "clsx";
 
 import { ArenaWorkshop } from "@/components/arena/arena-workshop";
+import { FightRequests } from "@/components/arena/fight-requests";
 import { FightButton } from "@/components/arena/fight-button";
 import { Avatar } from "@/components/ui";
-import { getFighter, getOwnedItems, recentDuels, rewardedFightsToday } from "@/lib/arena";
+import { getFightRequests, getFighter, getOwnedItems, recentDuels, rewardedFightsToday } from "@/lib/arena";
 import { FIGHT_REWARD, item, powerRating, REWARDED_FIGHTS_PER_DAY } from "@/lib/arena-rules";
 import { currentUser } from "@/lib/auth";
 import { timeAgo } from "@/lib/date";
@@ -22,13 +23,14 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
   if (!user) redirect("/signin");
   const { opponent } = await searchParams;
 
-  const [me, owned, points, friendIds, duels, rewarded] = await Promise.all([
+  const [me, owned, points, friendIds, duels, rewarded, requests] = await Promise.all([
     getFighter(user.id),
     getOwnedItems(user.id),
     balance(user.id),
     getFriendIds(user.id),
     recentDuels(user.id),
     rewardedFightsToday(user.id),
+    getFightRequests(user.id),
   ]);
   const opponents = (await Promise.all(friendIds.map((id) => getFighter(id)))).sort((a, b) =>
     a.userId === opponent ? -1 : b.userId === opponent ? 1 : powerRating(b) - powerRating(a),
@@ -41,7 +43,7 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Арена</h1>
         <p className="max-w-2xl text-sm text-muted">
-          Очки за уроки превращаются в снаряжение. Вызывай друзей: бой рассчитывается по уровню, оружию и щиту, а его можно пересмотреть в 3D.
+          Очки за уроки превращаются в снаряжение. Отправь другу вызов и дождись согласия. После принятия вы увидите бой своих персонажей.
         </p>
       </div>
 
@@ -53,9 +55,11 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
         balance={points}
       />
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <FightRequests requests={requests} userId={user.id} />
+
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <section className="card p-5">
-          <div className="flex items-baseline justify-between gap-3">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
             <h2 className="text-[15px] font-semibold">Соперники</h2>
             <span className="text-xs text-muted">
               Оплачиваемых боёв сегодня: {left} из {REWARDED_FIGHTS_PER_DAY}
@@ -92,7 +96,7 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
                     >
                       {power}
                     </span>
-                    <FightButton opponentId={o.userId} highlight={o.userId === opponent} />
+                    <FightButton key={`${o.userId}-${requests.some((r) => r.attackerId === o.userId || r.defenderId === o.userId)}`} opponentId={o.userId} highlight={o.userId === opponent} requested={requests.some((r) => r.attackerId === o.userId || r.defenderId === o.userId)} />
                   </li>
                 );
               })}

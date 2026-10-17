@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { BookOpenText, LogOut, Route, Swords, Target, Users } from "lucide-react";
+import { BookOpenText, LogOut, Route, Swords, Target, Trophy, Users } from "lucide-react";
 import { clsx } from "clsx";
 
 import { signOutAction } from "@/actions/auth";
@@ -12,6 +12,7 @@ import { Avatar, Coin, Flame, Logo } from "./ui";
 const NAV = [
   { href: "/path", label: "Путь", icon: Route },
   { href: "/seminar", label: "Проект", icon: BookOpenText },
+  { href: "/opportunities", label: "Конкурсы", icon: Trophy },
   { href: "/friends", label: "Друзья", icon: Users },
   { href: "/arena", label: "Арена", icon: Swords },
 ] as const;
@@ -24,6 +25,7 @@ export interface ShellUser {
   streak: number;
   activeToday: boolean;
   pendingRequests: number;
+  pendingFights: number;
 }
 
 function UserMenu({ user }: { user: ShellUser }) {
@@ -132,9 +134,9 @@ export function AppShell({ user, children }: { user: ShellUser; children: React.
               >
                 <Icon className="size-4" />
                 {label}
-                {href === "/friends" && user.pendingRequests > 0 && (
+                {((href === "/friends" && user.pendingRequests > 0) || (href === "/arena" && user.pendingFights > 0)) && (
                   <span className="grid size-4 place-items-center rounded-full bg-danger text-[10px] font-bold text-white">
-                    {user.pendingRequests}
+                    {href === "/arena" ? user.pendingFights : user.pendingRequests}
                   </span>
                 )}
               </Link>
@@ -151,7 +153,7 @@ export function AppShell({ user, children }: { user: ShellUser; children: React.
       <main className="mx-auto max-w-6xl px-4 py-6 md:py-8">{children}</main>
 
       <nav
-        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-4 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] md:hidden"
         aria-label="Навигация"
       >
         {NAV.map(({ href, label, icon: Icon }) => (
@@ -166,7 +168,7 @@ export function AppShell({ user, children }: { user: ShellUser; children: React.
           >
             <Icon className="size-[22px]" strokeWidth={active === href ? 2.4 : 2} />
             {label}
-            {href === "/friends" && user.pendingRequests > 0 && (
+            {((href === "/friends" && user.pendingRequests > 0) || (href === "/arena" && user.pendingFights > 0)) && (
               <span className="absolute right-[calc(50%-18px)] top-1.5 size-2 rounded-full bg-danger" />
             )}
           </Link>

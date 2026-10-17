@@ -40,6 +40,7 @@ export default async function LessonPage({ params }: { params: Params }) {
     return (
       <LessonPlayer
         courseId="review"
+        calculatorAvailable={review.strand === "math"}
         lesson={review.lesson}
         unitTitle={review.mock ? "Пробная секция" : "Повторение"}
         tone={tone}
@@ -54,7 +55,7 @@ export default async function LessonPage({ params }: { params: Params }) {
   const entry = findLesson(course, lesson);
   if (!entry) notFound();
 
-  const backHref = entry.course.id === "seminar" ? "/seminar" : "/path";
+  const backHref = entry.lesson.tutorial ? "/path#desmos" : entry.course.id === "seminar" ? "/seminar" : "/path";
   if (!(await canOpen(user.id, entry))) redirect(backHref);
 
   const writing = entry.lesson.writing ? await getWriting(user.id, entry.key) : null;

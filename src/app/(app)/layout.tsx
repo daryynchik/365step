@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 
 import { AppShell } from "@/components/app-shell";
 import { currentUser } from "@/lib/auth";
+import { getFightRequests } from "@/lib/arena";
 import { getRequests } from "@/lib/friends";
 import { getStats } from "@/lib/game";
 import { getProfile } from "@/lib/profile";
@@ -15,7 +16,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   // Everything inside the app is built around the student's goal.
   if (!(await getProfile(user.id))) redirect("/start");
 
-  const [stats, requests] = await Promise.all([getStats(user.id), getRequests(user.id)]);
+  const [stats, requests, fights] = await Promise.all([getStats(user.id), getRequests(user.id), getFightRequests(user.id)]);
 
   return (
     <AppShell
@@ -27,6 +28,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         streak: stats.streak.current,
         activeToday: stats.streak.activeToday,
         pendingRequests: requests.incoming.length,
+        pendingFights: fights.filter((r) => r.defenderId === user.id).length,
       }}
     >
       {children}

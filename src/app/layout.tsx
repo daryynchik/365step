@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description:
     "Подготовка к SAT по официальной структуре College Board, годовой курс чтения и письма в духе AP Seminar и арена, где очки за учёбу превращаются в снаряжение.",
   applicationName: "365step",
+  icons: { icon: "/brand/step-mark.png", apple: "/brand/step-mark.png" },
 };
 
 export const viewport: Viewport = {

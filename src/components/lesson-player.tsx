@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
-import { ArrowUpRight, BookOpen, Check, Loader2, X } from "lucide-react";
+import { ArrowUpRight, BookOpen, Calculator, Check, Loader2, X } from "lucide-react";
 import { clsx } from "clsx";
 
 import { completeLessonAction, completePracticeAction } from "@/actions/lessons";
@@ -16,7 +16,9 @@ import { usePersistentMode } from "./mode-switch";
 import { MorePractice } from "./more-practice";
 import { QuestionView } from "./question-view";
 import { RichText } from "./rich-text";
+import { SatCalculator } from "./sat-calculator";
 import { SpeakingStep } from "./speaking-step";
+import { TutorialMaterials } from "./tutorial-materials";
 import { Button, ErrorNote } from "./ui";
 import { WritingStep, type DraftState } from "./writing-step";
 
@@ -44,13 +46,17 @@ export interface LessonPlayerProps {
   practiceSetId?: string;
   /** Lesson key for "more questions on this skill", when generation is available. */
   moreKey?: string | null;
+  /** SAT Math tools, including mathematical review and mock sections. */
+  calculatorAvailable?: boolean;
   /** Shown under the title, e.g. the source of a generated passage. */
   note?: React.ReactNode;
 }
 
-export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draft, aiFeedback, practiceSetId, moreKey, note }: LessonPlayerProps) {
+export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draft, aiFeedback, practiceSetId, moreKey, note, calculatorAvailable = courseId === "sat-math" }: LessonPlayerProps) {
   const questions = lesson.questions;
+  const [calculatorOpen, setCalculatorOpen] = useState(false);
   const [phase, setPhase] = useState<Phase>("theory");
+  const showCalculator = calculatorAvailable && (phase === "questions" || (phase === "theory" && !!lesson.tutorial));
   const [listenMode, setListenMode] = usePersistentMode<ListenMode>("365step:listen-mode", "audio", LISTEN_MODES);
 
   // Questions are asked in order; a wrong answer sends that question to the back
@@ -140,6 +146,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
     if (phase !== "questions" || !question) return;
     const onKey = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
+      if (target.closest("[data-sat-calculator], [data-calculator-trigger]")) return;
       const typing = target.tagName === "INPUT" || target.tagName === "TEXTAREA";
       if (e.key === "Enter") {
         e.preventDefault();
@@ -169,15 +176,21 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
   }
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <>
+    <div className={clsx("flex min-h-dvh flex-col", showCalculator && calculatorOpen && "pr-[min(52vw,520px)]")}>
       <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-3xl items-center gap-4 px-4">
+        <div className="mx-auto flex h-14 max-w-3xl items-center gap-2 px-4 sm:gap-4">
           <Link href={backHref} aria-label="Выйти из урока" className="rounded-lg p-1.5 text-subtle hover:bg-sunken hover:text-ink">
             <X className="size-5" />
           </Link>
           <div className="h-3 flex-1 overflow-hidden rounded-full bg-sunken" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
             <div className="h-full rounded-full transition-[width] duration-500" style={{ width: `${Math.max(4, progress)}%`, background: tone }} />
           </div>
+          {showCalculator && (
+            <Button size="sm" variant="secondary" data-calculator-trigger aria-label="Калькулятор Desmos" aria-expanded={calculatorOpen} aria-controls="sat-calculator" onClick={() => setCalculatorOpen((value) => !value)}>
+              <Calculator className="size-4" /><span className={clsx(calculatorOpen && "max-sm:hidden")}>Desmos</span>
+            </Button>
+          )}
           {phase === "questions" && (
             <span className="tabular text-sm font-medium text-muted">
               {cleared.size}/{questions.length}
@@ -200,6 +213,13 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
               {lesson.speaking ? " · разговор с экзаменатором" : ""}
             </p>
             {note}
+            {lesson.tutorial && (
+              <section className="mt-6 rounded-xl border border-math/20 bg-math-soft p-4">
+                <p className="text-sm font-semibold text-math">Попробуй по ходу объяснения</p>
+                <p className="mt-1 text-sm">Открой Desmos сверху и повторяй шаги в калькуляторе справа. Затем перейди к пяти заданиям.</p>
+                <ul className="mt-3 space-y-1.5 text-sm">{lesson.tutorial.objectives.map((objective) => <li key={objective} className="flex items-start gap-2"><Check className="mt-0.5 size-4 flex-none text-math" />{objective}</li>)}</ul>
+              </section>
+            )}
 
             {lesson.reading && (
               <section className="mt-6 rounded-xl border border-seminar/20 bg-seminar-soft p-5">
@@ -241,6 +261,8 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
                 </section>
               ))}
             </div>
+
+            {lesson.tutorial && <TutorialMaterials tutorial={lesson.tutorial} />}
 
             {lesson.official && (
               <a
@@ -307,7 +329,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
       </main>
 
       {phase === "theory" && (
-        <footer className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface">
+        <footer className={clsx("fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface", showCalculator && calculatorOpen && "right-[min(52vw,520px)]")}>
           <div className="mx-auto flex max-w-3xl justify-end px-4 py-4">
             <Button size="lg" onClick={begin} disabled={pending} className="w-full sm:w-auto">
               {pending && <Loader2 className="size-4 animate-spin" />}
@@ -321,6 +343,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
         <footer
           className={clsx(
             "fixed inset-x-0 bottom-0 z-30 border-t",
+            showCalculator && calculatorOpen && "right-[min(52vw,520px)]",
             !checked && "border-line bg-surface",
             checked && correct && "feedback-sheet border-accent-line bg-accent-soft",
             checked && !correct && "feedback-sheet border-danger/25 bg-danger-soft",
@@ -363,5 +386,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
         </footer>
       )}
     </div>
+    {showCalculator && <SatCalculator open={calculatorOpen} onClose={() => setCalculatorOpen(false)} />}
+    </>
   );
 }

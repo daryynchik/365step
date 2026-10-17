@@ -1,9 +1,9 @@
 /**
  * The arena: each user's fighter, the gear they own, and fights between friends.
  *
- * Fights are asynchronous — you challenge a friend's fighter as it is equipped
- * right now, the server simulates the fight once with a random seed, and both
- * players can replay it. Both loadouts are frozen into the duel row, so a replay
+ * A friend must accept an invitation before a fight is simulated. Both
+ * players can then replay the same saved result. Both loadouts are frozen into
+ * the duel row, so a replay
  * never changes when someone buys new gear later.
  */
 
@@ -118,10 +118,7 @@ export async function rewardedFightsToday(userId: string): Promise<number> {
 
 export type FightOutcome = { ok: true; duelId: string } | { ok: false; error: string };
 
-export async function startFight(userId: string, opponentId: string): Promise<FightOutcome> {
-  if (userId === opponentId) return { ok: false, error: "С собой сражаться нельзя." };
-  if (!(await areFriends(userId, opponentId))) return { ok: false, error: "Сражаться можно только с друзьями." };
-
+async function createAcceptedDuel(userId: string, opponentId: string): Promise<FightOutcome> {
   return transaction(async () => {
     const [attacker, defender, rewarded] = await Promise.all([
       getFighter(userId),
@@ -168,6 +165,75 @@ export async function startFight(userId: string, opponentId: string): Promise<Fi
     await addPoints(userId, attackerPoints, "Бой на арене", id);
     await addPoints(opponentId, defenderPoints, "Защита на арене", id);
     return { ok: true as const, duelId: id };
+  });
+}
+
+export interface FightRequest {
+  id: string;
+  attackerId: string;
+  defenderId: string;
+  attackerName: string;
+  defenderName: string;
+  createdAt: string;
+  expiresAt: string;
+}
+
+export async function getFightRequests(userId: string): Promise<FightRequest[]> {
+  const rows = await all(
+    `SELECT r.*, a.name AS attacker_name, d.name AS defender_name
+     FROM arena_requests r JOIN users a ON a.id = r.attacker_id JOIN users d ON d.id = r.defender_id
+     WHERE (r.attacker_id = ? OR r.defender_id = ?) AND r.status = 'pending' AND r.expires_at > ?
+     ORDER BY r.created_at DESC`, [userId, userId, nowIso()],
+  );
+  return rows.map((r) => ({
+    id: str(r.id), attackerId: str(r.attacker_id), defenderId: str(r.defender_id),
+    attackerName: str(r.attacker_name), defenderName: str(r.defender_name),
+    createdAt: str(r.created_at), expiresAt: str(r.expires_at),
+  }));
+}
+
+export async function requestFight(userId: string, opponentId: string): Promise<Result> {
+  if (userId === opponentId) return { ok: false, error: "С собой сражаться нельзя." };
+  if (!(await areFriends(userId, opponentId))) return { ok: false, error: "Вызывать на бой можно только друзей." };
+  return transaction(async () => {
+    const now = nowIso();
+    const [a, b] = [userId, opponentId].sort();
+    await run("UPDATE arena_requests SET status = 'expired' WHERE pair_a = ? AND pair_b = ? AND status = 'pending' AND expires_at <= ?", [a, b, now]);
+    const count = await scalar("SELECT COUNT(*) FROM arena_requests WHERE attacker_id = ? AND created_at >= ?", [userId, `${todayIso()}T00:00:00.000Z`]);
+    if (count >= 30) return { ok: false, error: "На сегодня достаточно вызовов. Попробуй завтра." };
+    const inserted = await one(
+      `INSERT INTO arena_requests (id, attacker_id, defender_id, pair_a, pair_b, status, created_at, expires_at)
+       VALUES (?, ?, ?, ?, ?, 'pending', ?, ?) ON CONFLICT DO NOTHING RETURNING id`,
+      [randomUUID(), userId, opponentId, a, b, now, new Date(Date.parse(now) + 72 * 3600000).toISOString()],
+    );
+    return inserted ? { ok: true } : { ok: false, error: "Между вами уже есть заявка. Ответь на входящую или дождись друга." };
+  });
+}
+
+export type RequestResponse = { ok: true; duelId?: string } | { ok: false; error: string };
+
+export async function respondToFightRequest(userId: string, requestId: string, response: "accept" | "decline" | "cancel"): Promise<RequestResponse> {
+  if (!["accept", "decline", "cancel"].includes(response)) return { ok: false, error: "Неизвестное действие." };
+  return transaction(async () => {
+    const request = await one("SELECT * FROM arena_requests WHERE id = ? AND status = 'pending' AND expires_at > ?", [requestId, nowIso()]);
+    if (!request) return { ok: false, error: "Заявка уже обработана или истекла." };
+    const actor = response === "cancel" ? request.attacker_id : request.defender_id;
+    if (actor !== userId) return { ok: false, error: "Это не твоя заявка." };
+    if (response === "accept" && !(await areFriends(str(request.attacker_id), str(request.defender_id)))) {
+      return { ok: false, error: "Для боя нужно оставаться друзьями." };
+    }
+    // The conditional UPDATE is the claim: concurrent accepts cannot simulate
+    // a second duel or pay a second reward, including with PostgreSQL.
+    const claimed = await one(
+      "UPDATE arena_requests SET status = ?, answered_at = ? WHERE id = ? AND status = 'pending' AND expires_at > ? RETURNING id",
+      [response === "accept" ? "accepted" : response === "decline" ? "declined" : "cancelled", nowIso(), requestId, nowIso()],
+    );
+    if (!claimed) return { ok: false, error: "Заявка уже обработана или истекла." };
+    if (response !== "accept") return { ok: true };
+    const duel = await createAcceptedDuel(str(request.attacker_id), str(request.defender_id));
+    if (!duel.ok) throw new Error(duel.error); // Roll back the claim together with the duel.
+    await run("UPDATE arena_requests SET duel_id = ? WHERE id = ?", [duel.duelId, requestId]);
+    return { ok: true, duelId: duel.duelId };
   });
 }
 

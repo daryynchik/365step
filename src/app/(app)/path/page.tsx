@@ -5,6 +5,7 @@ import { Settings2 } from "lucide-react";
 
 import { FIELD_OPTIONS } from "@/content/fields/ids";
 import { COUNTRIES, currentPlanDay, nextPlanStep, todayPlanDay } from "@/content/plan";
+import { DesmosPath } from "@/components/desmos-path";
 import { DeadlinesCard } from "@/components/deadlines-card";
 import { PlanMap } from "@/components/plan-map";
 import { DailyGoalCard, FriendsMini, OfficialPractice } from "@/components/sidebar";
@@ -127,6 +128,8 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
             <p className="font-semibold">≈ {plan.load} задания в день</p>
           </div>
         </div>
+
+        <DesmosPath lessons={plan.tutorials} done={done} />
 
         <div className="mx-auto max-w-md">
           <PlanMap plan={plan} done={done} today={today} openWeek={week !== undefined && /^\d+$/.test(week) ? Number(week) : null} />

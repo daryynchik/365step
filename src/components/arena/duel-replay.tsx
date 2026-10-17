@@ -98,7 +98,7 @@ export function DuelReplay({
     const home = [-1.05, 1.05];
     rigs.forEach((rig, i) => {
       rig.root.position.x = home[i];
-      rig.root.rotation.y = i === 0 ? Math.PI / 2 - 0.35 : -Math.PI / 2 + 0.35;
+      rig.root.scale.x = i === 0 ? -1 : 1;
       scene.add(rig.root);
     });
 
@@ -143,6 +143,7 @@ export function DuelReplay({
         // Attacker: step in, wind up, swing, step back.
         const step = p < 0.4 ? ease(p / 0.4) : p < 0.6 ? 1 : 1 - ease((p - 0.6) / 0.4);
         a.root.position.x = home[hit.by] + dir * 0.55 * step;
+        a.body.rotation.z = -dir * 0.12 * step;
         const windUp = p < 0.3 ? ease(p / 0.3) : p < 0.45 ? 1 - ease((p - 0.3) / 0.15) : 0;
         a.rightArm.rotation.x = -0.35 - 2.1 * windUp + (p >= 0.45 && p < 0.65 ? 0.5 * Math.sin(((p - 0.45) / 0.2) * Math.PI) : 0);
 
@@ -154,6 +155,7 @@ export function DuelReplay({
         const dodge = hit.miss ? Math.sin(clamp01((p - 0.25) / 0.55) * Math.PI) : 0;
         d.root.position.x = home[hit.by === 0 ? 1 : 0] + dir * 0.18 * recoil * (hit.miss ? 0 : hit.blocked ? 0.4 : 1);
         d.root.position.z = 0.45 * dodge;
+        d.body.rotation.z = dir * 0.1 * recoil;
 
         if (p >= 0.45 && landed < index) {
           landed = index;

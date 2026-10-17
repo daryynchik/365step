@@ -124,6 +124,24 @@ CREATE TABLE IF NOT EXISTS duels (
 CREATE INDEX IF NOT EXISTS idx_duels_attacker ON duels(attacker_id, day);
 CREATE INDEX IF NOT EXISTS idx_duels_defender ON duels(defender_id);
 
+-- A duel can only be created after the invited friend accepts. Keep requests
+-- separately so pending, declined and cancelled invitations never award points.
+CREATE TABLE IF NOT EXISTS arena_requests (
+  id          TEXT PRIMARY KEY,
+  attacker_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  defender_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  pair_a      TEXT NOT NULL,
+  pair_b      TEXT NOT NULL,
+  status      TEXT NOT NULL DEFAULT 'pending',
+  duel_id     TEXT REFERENCES duels(id),
+  created_at  TEXT NOT NULL,
+  expires_at  TEXT NOT NULL,
+  answered_at TEXT
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_arena_request_pending
+  ON arena_requests(pair_a, pair_b) WHERE status = 'pending';
+CREATE INDEX IF NOT EXISTS idx_arena_request_defender ON arena_requests(defender_id, status);
+
 -- The three answers a personal plan is built from (see content/plan.ts).
 CREATE TABLE IF NOT EXISTS student_profiles (
   user_id    TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,

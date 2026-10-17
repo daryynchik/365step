@@ -9,7 +9,7 @@
 
 import { randomUUID } from "node:crypto";
 
-import { COURSES, findLesson, flatten, isSequentiallyUnlocked, lessonKey, PLAN_COURSES, type PathEntry } from "@/content";
+import { COURSES, findByKey, findLesson, flatten, isSequentiallyUnlocked, lessonKey, PLAN_COURSES, type PathEntry } from "@/content";
 import { isPlanUnlocked, nextPlanStep, reviewLesson } from "@/content/plan";
 import type { CourseId, Question } from "@/content/types";
 import { isCorrect, type Response } from "./answers";
@@ -181,12 +181,17 @@ export interface Completion {
 export type CompletionResult = { ok: true; result: Completion } | { ok: false; error: string };
 
 /** Where "Continue" goes: the next step of the plan, or the next seminar lesson. */
-async function continueHref(userId: string, courseId: CourseId | "review", done: Set<string>): Promise<string> {
+async function continueHref(userId: string, target: { key?: string; courseId: CourseId | "review" }, done: Set<string>): Promise<string> {
+  const { courseId } = target;
   if (courseId === "seminar") {
     const next = nextLesson("seminar", done);
     return next ? `/lesson/seminar/${next.lesson.id}` : "/seminar";
   }
   const plan = await getPlan(userId);
+  if (target.key && findByKey(target.key)?.lesson.tutorial) {
+    const tutorial = plan?.tutorials.find((step) => !done.has(step.key));
+    return tutorial ? `/lesson/${tutorial.key}` : "/path#desmos";
+  }
   const next = plan ? nextPlanStep(plan, done) : null;
   return next ? `/lesson/${next.key}` : "/path";
 }
@@ -256,7 +261,7 @@ async function recordCompletion(
     };
   });
 
-  result.nextHref = await continueHref(userId, target.courseId, await getDoneKeys(userId));
+  result.nextHref = await continueHref(userId, target, await getDoneKeys(userId));
   return result;
 }
 
@@ -448,6 +453,6 @@ export async function completePractice(
       nextHref: "/path",
     };
   });
-  result.nextHref = await continueHref(userId, "sat-rw", await getDoneKeys(userId));
+  result.nextHref = await continueHref(userId, { courseId: "sat-rw" }, await getDoneKeys(userId));
   return { ok: true, result };
 }

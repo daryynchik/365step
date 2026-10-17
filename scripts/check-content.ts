@@ -42,6 +42,14 @@ for (const course of Object.values(COURSES)) {
     }
     if (lesson.writing && lesson.writing.minWords >= lesson.writing.maxWords) problems.push(`${key}: bad word range`);
 
+    if (lesson.tutorial) {
+      if (!lesson.tutorial.objectives.length || !lesson.tutorial.resources.length) problems.push(`${key}: incomplete tutorial`);
+      for (const resource of lesson.tutorial.resources) {
+        try { if (new URL(resource.url).protocol !== "https:") problems.push(`${key}: insecure resource URL`); }
+        catch { problems.push(`${key}: malformed resource URL`); }
+      }
+    }
+
     for (const section of lesson.reading?.sections ?? []) {
       const [id, paragraph] = section.split("#");
       const found = book.find((s) => s.id === id);
@@ -95,9 +103,11 @@ for (const country of COUNTRIES) {
       if (plan.days.some((d) => d.steps.length === 0)) problems.push(`${where}: an empty day`);
       if (plan.days.length !== Math.max(21, Math.min(1000, days))) problems.push(`${where}: ${plan.days.length} days`);
 
-      // Every core lesson is scheduled.
+      const tutorialKeys = plan.tutorials.map((step) => step.key);
+      if (tutorialKeys.length !== 8 || new Set([...keys, ...tutorialKeys]).size !== keys.length + tutorialKeys.length) problems.push(`${where}: tutorial missing, duplicated, or mixed into daily plan`);
+      // Each lesson belongs to its daily schedule or independent tutorial module.
       for (const id of ["ielts", "sat-rw", "sat-math", "vocab"] as const) {
-        for (const e of flatten(COURSES[id])) if (!keys.includes(e.key)) problems.push(`${where}: missing ${e.key}`);
+        for (const e of flatten(COURSES[id])) if (!(e.lesson.tutorial ? tutorialKeys : keys).includes(e.key)) problems.push(`${where}: missing ${e.key}`);
       }
       const fieldTexts = keys.filter((k) => k.startsWith("reading/"));
       if (fieldTexts.length < 10) problems.push(`${where}: only ${fieldTexts.length} field texts`);

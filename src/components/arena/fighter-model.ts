@@ -3,9 +3,9 @@ import * as THREE from "three";
 import { COLORS, item, type FighterColor } from "@/lib/arena-rules";
 
 /**
- * A small stylised fighter built from primitives — no model files to load.
- * Arms hang from shoulder pivots so the duel scene can swing them; the weapon
- * sits in the right hand, the shield on the left forearm.
+ * A painted human character in a 2.5D scene. The original generated artwork
+ * replaces the old primitive body. Separate equipment pivots keep shop items
+ * and their attack/block animations visible in replays.
  */
 
 export interface FighterRig {
@@ -18,8 +18,6 @@ export interface FighterRig {
   dispose(): void;
 }
 
-const SKIN = "#f1c7a3";
-const DARK = "#2a2723";
 
 function mat(color: string, opts: Partial<THREE.MeshStandardMaterialParameters> = {}): THREE.MeshStandardMaterial {
   return new THREE.MeshStandardMaterial({ color, roughness: 0.7, metalness: 0.05, ...opts });
@@ -166,46 +164,37 @@ export function buildFighter(color: FighterColor, weaponId: string, shieldId: st
   const body = new THREE.Group();
   root.add(body);
 
-  const outfit = mat(COLORS[color].hex);
-  const outfitDark = mat(new THREE.Color(COLORS[color].hex).multiplyScalar(0.7).getStyle());
-  const skin = mat(SKIN);
-  const dark = mat(DARK);
-  const boots = mat("#3d332b");
-
-  // Legs
-  for (const side of [-1, 1]) {
-    body.add(mesh(new THREE.CapsuleGeometry(0.11, 0.32, 4, 10), outfitDark, side * 0.14, 0.38, 0));
-    body.add(mesh(new THREE.BoxGeometry(0.2, 0.12, 0.28), boots, side * 0.14, 0.08, 0.04));
-  }
-
-  // Torso, belt, head
-  body.add(mesh(new THREE.CapsuleGeometry(0.27, 0.36, 6, 14), outfit, 0, 0.98, 0));
-  body.add(mesh(new THREE.CylinderGeometry(0.285, 0.285, 0.08, 18), mat("#5a4330"), 0, 0.78, 0));
-  body.add(mesh(new THREE.BoxGeometry(0.1, 0.09, 0.04), mat("#d4a72c", { metalness: 0.8, roughness: 0.3 }), 0, 0.78, 0.29));
-  body.add(mesh(new THREE.SphereGeometry(0.25, 24, 18), skin, 0, 1.55, 0));
-
-  // Hair cap, eyes, a hint of a smile
-  const hair = mesh(new THREE.SphereGeometry(0.262, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2.1), dark, 0, 1.58, -0.01);
-  hair.rotation.x = -0.25;
-  body.add(hair);
-  for (const side of [-1, 1]) body.add(mesh(new THREE.SphereGeometry(0.032, 10, 8), dark, side * 0.09, 1.56, 0.225));
-  const smile = mesh(new THREE.TorusGeometry(0.06, 0.012, 6, 16, Math.PI), dark, 0, 1.47, 0.23);
-  smile.rotation.z = Math.PI;
-  body.add(smile);
-
-  // Arms: a pivot at each shoulder, the arm hanging below it.
-  const arm = (side: number) => {
-    const pivot = new THREE.Group();
-    pivot.position.set(side * 0.36, 1.22, 0);
-    pivot.add(mesh(new THREE.CapsuleGeometry(0.085, 0.36, 4, 10), outfit, 0, -0.24, 0));
-    pivot.add(mesh(new THREE.SphereGeometry(0.09, 12, 10), skin, 0, -0.5, 0));
-    body.add(pivot);
-    return pivot;
+  const texture = new THREE.TextureLoader().load("/characters/step-guardian.png");
+  texture.colorSpace = THREE.SRGBColorSpace;
+  const outfit = new THREE.MeshStandardMaterial({
+    map: texture, transparent: true, alphaTest: 0.12, side: THREE.DoubleSide,
+    roughness: 1, metalness: 0, emissive: "#000000", toneMapped: false,
+  });
+  // Recolour only green cloth. Skin, leather and metal keep their painted tones.
+  const cloth = new THREE.Color(COLORS[color].hex);
+  outfit.onBeforeCompile = (shader) => {
+    shader.uniforms.clothColor = { value: cloth };
+    shader.fragmentShader = "uniform vec3 clothColor;\n" + shader.fragmentShader;
+    shader.fragmentShader = shader.fragmentShader.replace("#include <map_fragment>", `
+      #include <map_fragment>
+      float greenMask = smoothstep(0.002, 0.02, diffuseColor.g - max(diffuseColor.r, diffuseColor.b));
+      float shade = dot(diffuseColor.rgb, vec3(0.2126, 0.7152, 0.0722));
+      diffuseColor.rgb = mix(diffuseColor.rgb, clothColor * (shade * 2.4 + 0.12), greenMask);
+    `);
   };
-  const rightArm = arm(1);
-  const leftArm = arm(-1);
+  outfit.customProgramCacheKey = () => "step-guardian-cloth-v1";
+  const portrait = mesh(new THREE.PlaneGeometry(1.4, 2.1), outfit, 0, 1.07, 0);
+  portrait.castShadow = false;
+  body.add(portrait);
+
+  // Equipment sits at the character's hands, independent from the painted body.
+  const rightArm = new THREE.Group();
+  rightArm.position.set(-0.26, 1.48, 0.07);
+  const leftArm = new THREE.Group();
+  leftArm.position.set(0.36, 1.47, 0.08);
   rightArm.rotation.x = -0.35;
   leftArm.rotation.x = -0.6;
+  body.add(rightArm, leftArm);
 
   const weapon = buildWeapon(item(weaponId).model);
   weapon.position.set(0, -0.52, 0.04);
@@ -217,7 +206,7 @@ export function buildFighter(color: FighterColor, weaponId: string, shieldId: st
   shield.rotation.y = -0.25;
   leftArm.add(shield);
 
-  const flashables = [outfit, outfitDark, skin];
+  const flashables = [outfit];
 
   return {
     root,
@@ -226,6 +215,7 @@ export function buildFighter(color: FighterColor, weaponId: string, shieldId: st
     leftArm,
     flashables,
     dispose() {
+      texture.dispose();
       root.traverse((obj) => {
         if (obj instanceof THREE.Mesh) {
           obj.geometry.dispose();

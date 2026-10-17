@@ -87,7 +87,7 @@ export function ArenaWorkshop({
   };
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[380px_minmax(0,1fr)]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[380px_minmax(0,1fr)]">
       <section className="card overflow-hidden">
         <div className="relative bg-gradient-to-b from-sunken to-surface">
           <FighterViewer {...loadout} className="block h-80 w-full" />
@@ -108,7 +108,7 @@ export function ArenaWorkshop({
             <Stat label="Блок" value={`${Math.round(stats.block * 100)}%`} />
             <Stat label="Очки" value={points} />
           </div>
-          <p className="mt-3 text-xs text-muted">Здоровье растёт с уровнем — то есть с каждым пройденным уроком.</p>
+          <p className="mt-3 text-xs text-muted">Твой Страж пути. Здоровье растёт с уровнем — то есть с каждым пройденным уроком.</p>
 
           <p className="mt-5 text-sm font-medium">Цвет формы</p>
           <div className="mt-2 flex gap-2">

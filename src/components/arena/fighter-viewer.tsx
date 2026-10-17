@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 import type { FighterColor } from "@/lib/arena-rules";
 import { buildFighter, createStage, type FighterRig } from "./fighter-model";
 
-/** The player's own fighter: idles, turns slowly, and can be rotated by dragging. */
+/** Painted character with breathing motion and a small pointer-driven parallax. */
 export function FighterViewer({
   color,
   weapon,
@@ -19,6 +18,7 @@ export function FighterViewer({
   shield: string;
   className?: string;
 }) {
+  const [unavailable, setUnavailable] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stageRef = useRef<{ scene: THREE.Scene; rig: FighterRig | null } | null>(null);
 
@@ -31,21 +31,22 @@ export function FighterViewer({
     try {
       stage = createStage(canvas);
     } catch {
-      return; // No WebGL: the page still works, just without the 3D figure.
+      setUnavailable(true);
+      return;
     }
     const { renderer, scene } = stage;
     const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 50);
-    camera.position.set(0.9, 1.5, 4.4);
-
-    const controls = new OrbitControls(camera, canvas);
-    controls.target.set(0, 0.95, 0);
-    controls.enablePan = false;
-    controls.enableZoom = false;
-    controls.enableDamping = true;
-    controls.autoRotate = true;
-    controls.autoRotateSpeed = 1.2;
-    controls.minPolarAngle = Math.PI / 3;
-    controls.maxPolarAngle = Math.PI / 2.05;
+    camera.position.set(0, 1.3, 4.7);
+    camera.lookAt(0, 1.05, 0);
+    let pointer = 0;
+    const move = (event: PointerEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      pointer = ((event.clientX - rect.left) / rect.width - 0.5) * 0.18;
+    };
+    const leave = () => { pointer = 0; };
+    canvas.addEventListener("pointermove", move);
+    canvas.addEventListener("pointerleave", leave);
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     stageRef.current = { scene, rig: null };
 
@@ -66,11 +67,11 @@ export function FighterViewer({
       const t = clock.getElapsedTime();
       const rig = stageRef.current?.rig;
       if (rig) {
-        rig.body.position.y = Math.sin(t * 2.2) * 0.015;
-        rig.rightArm.rotation.x = -0.35 + Math.sin(t * 2.2) * 0.04;
-        rig.leftArm.rotation.x = -0.6 - Math.sin(t * 2.2) * 0.03;
+        rig.body.position.y = reduced.matches ? 0 : Math.sin(t * 2.2) * 0.015;
+        rig.body.rotation.y += (pointer - rig.body.rotation.y) * 0.06;
+        rig.rightArm.rotation.x = -0.35 + (reduced.matches ? 0 : Math.sin(t * 2.2) * 0.04);
+        rig.leftArm.rotation.x = -0.6 - (reduced.matches ? 0 : Math.sin(t * 2.2) * 0.03);
       }
-      controls.update();
       renderer.render(scene, camera);
       raf = requestAnimationFrame(loop);
     };
@@ -79,7 +80,8 @@ export function FighterViewer({
     return () => {
       cancelAnimationFrame(raf);
       observer.disconnect();
-      controls.dispose();
+      canvas.removeEventListener("pointermove", move);
+      canvas.removeEventListener("pointerleave", leave);
       stageRef.current?.rig?.dispose();
       stageRef.current = null;
       stage.dispose();
@@ -100,5 +102,6 @@ export function FighterViewer({
     }
   }, [color, weapon, shield]);
 
-  return <canvas ref={canvasRef} className={className} style={{ touchAction: "pan-y", cursor: "grab" }} aria-label="3D-модель твоего бойца" />;
+  if (unavailable) return <img src="/characters/step-guardian.png" alt="Твой герой-путешественник" className={(className ?? "") + " object-contain"} />;
+  return <canvas ref={canvasRef} className={className} style={{ touchAction: "pan-y" }} role="img" aria-label="Твой герой-путешественник в выбранном снаряжении" />;
 }

@@ -53,7 +53,7 @@ export function practiceEnabled(): boolean {
 
 export function isGeneratable(entry: PathEntry): boolean {
   const { lesson, course } = entry;
-  if (lesson.listening || lesson.speaking || lesson.writing) return false;
+  if (lesson.tutorial || lesson.listening || lesson.speaking || lesson.writing) return false;
   if (lesson.questions.length === 0) return false;
   return course.id === "sat-rw" || course.id === "sat-math" || course.id === "ielts" || course.id === "reading";
 }

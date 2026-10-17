@@ -121,6 +121,13 @@ export interface Speaking {
   targetWords: [number, number];
 }
 
+export interface LessonResource {
+  title: string;
+  url: string;
+  publisher: string;
+  kind: "guide" | "video" | "interactive" | "practice";
+}
+
 export interface Lesson {
   id: string;
   title: string;
@@ -129,6 +136,8 @@ export interface Lesson {
   minutes: number;
   /** IELTS skill or admissions stage, shown as a chip on the path. */
   skill?: string;
+  /** Guided tool lessons appear in a separate module on the student's path. */
+  tutorial?: { objectives: string[]; resources: LessonResource[] };
   theory: TheoryBlock[];
   questions: Question[];
   reading?: Reading;
