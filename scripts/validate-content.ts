@@ -121,6 +121,9 @@ function toMathjs(s: string): string {
     .replace(/√\(/g, " sqrt(")
     .replace(/√(\d+)/g, " sqrt($1)")
     .replace(/π/g, "pi")
+    // "sin 50°", "cos(40°)" are degrees
+    .replace(/(sin|cos|tan)\s*\(?\s*(\d+(?:\.\d+)?)\s*°\s*\)?/g, "$1($2 deg)")
+    .replace(/°/g, "")
     .replace(/,(?=\d{3}\b)/g, "")
     .replace(/^\$/, "")
     .replace(/%$/, "")
@@ -159,8 +162,8 @@ function variablesIn(expr: string): string[] {
 function formulaOf(choice: string): string | null {
   // Inequalities ("x < 9", "12 ≤ t < 20") are relations to reason about, not values.
   if (/[<>≤≥≠]/.test(choice)) return null;
-  // Words ("2 and −5", "Zero") make it a worded choice; sqrt, log and pi are math.
-  if (/[A-Za-z]{2,}/.test(choice.replace(/sqrt|log|pi/g, ""))) return null;
+  // Words ("2 and −5", "Zero") make it a worded choice; sqrt, log, pi and trig are math.
+  if (/[A-Za-z]{2,}/.test(choice.replace(/sqrt|log|pi|sin|cos|tan/g, ""))) return null;
   const parts = choice.split("=");
   if (parts.length === 1) return choice;
   if (parts.length !== 2) return null;
