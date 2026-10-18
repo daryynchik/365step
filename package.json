@@ -11,19 +11,24 @@
     "db:seed": "tsx scripts/seed.ts",
     "db:schema": "tsx scripts/print-schema.ts",
     "check:content": "tsx scripts/check-content.ts",
-    "verify": "NODE_OPTIONS=--conditions=react-server tsx scripts/verify.ts"
+    "verify": "NODE_OPTIONS=--conditions=react-server tsx scripts/verify.ts",
+    "lint": "eslint .",
+    "test": "tsx --test \"src/**/*.test.ts\"",
+    "validate:content": "tsx scripts/validate-content.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
     "better-sqlite3": "^12.11.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
+    "mathjs": "^15.2.0",
     "next": "^16.3.6",
     "postgres": "^3.4.5",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "server-only": "0.0.1",
-    "three": "^0.180.0"
+    "three": "^0.180.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.6",
@@ -32,6 +37,8 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.180.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.2",
     "tailwindcss": "^4.0.6",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"

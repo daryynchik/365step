@@ -11,6 +11,10 @@
 
 export type CourseId = "ielts" | "sat-rw" | "sat-math" | "admissions" | "reading" | "vocab" | "seminar";
 
+/** Lessons assembled per student rather than authored: reviews, the diagnostic, practice from the task bank. */
+export type VirtualCourseId = "review" | "diagnostic" | "bank";
+export type AnyCourseId = CourseId | VirtualCourseId;
+
 export interface Passage {
   /** "Text 1", "Text 2" for cross-text questions; omitted otherwise. */
   label?: string;

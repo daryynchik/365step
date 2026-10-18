@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { BookOpenText, LogOut, Route, Swords, Target, Trophy, Users } from "lucide-react";
+import { BarChart3, BookOpenText, LogOut, Route, Swords, Target, Trophy, Users } from "lucide-react";
 import { clsx } from "clsx";
 
 import { signOutAction } from "@/actions/auth";
@@ -72,6 +72,13 @@ function UserMenu({ user }: { user: ShellUser }) {
             className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-muted hover:bg-sunken hover:text-ink"
           >
             <Target className="size-4" /> Изменить цель
+          </Link>
+          <Link
+            href="/start/scores"
+            onClick={() => setOpen(false)}
+            className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-muted hover:bg-sunken hover:text-ink"
+          >
+            <BarChart3 className="size-4" /> Мои баллы
           </Link>
           <button
             type="button"

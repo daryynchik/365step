@@ -153,6 +153,41 @@ CREATE TABLE IF NOT EXISTS student_profiles (
   updated_at TEXT NOT NULL
 );
 
+-- The exams the student reported (content/exams.ts ScoresInput), as last saved.
+-- The plan reads this; score_history keeps every change.
+CREATE TABLE IF NOT EXISTS student_scores (
+  user_id    TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  payload    TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+-- One row per exam per change: scores, target and exam date with when they were recorded.
+CREATE TABLE IF NOT EXISTS score_history (
+  id          TEXT PRIMARY KEY,
+  user_id     TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  exam        TEXT NOT NULL,
+  total       REAL,
+  sections    TEXT NOT NULL DEFAULT '{}',
+  taken_date  TEXT,
+  source      TEXT,
+  target      REAL,
+  exam_date   TEXT,
+  recorded_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_score_history_user ON score_history(user_id, exam, recorded_at);
+
+-- Diagnostic results, one row per section per attempt. level: easy | medium | hard.
+CREATE TABLE IF NOT EXISTS diagnostic_results (
+  id       TEXT PRIMARY KEY,
+  user_id  TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  section  TEXT NOT NULL,
+  correct  INTEGER NOT NULL,
+  total    INTEGER NOT NULL,
+  level    TEXT NOT NULL,
+  taken_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_diagnostic_user ON diagnostic_results(user_id, section, taken_at);
+
 -- Application deadlines the student tracks (admissions roadmap).
 CREATE TABLE IF NOT EXISTS deadlines (
   id         TEXT PRIMARY KEY,

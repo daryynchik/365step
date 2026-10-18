@@ -7,7 +7,7 @@ import { clsx } from "clsx";
 
 import { completeLessonAction, completePracticeAction } from "@/actions/lessons";
 import { sectionHref, sectionLabel } from "@/content";
-import type { CourseId, Lesson } from "@/content/types";
+import type { AnyCourseId, CourseId, Lesson } from "@/content/types";
 import { correctAnswerLabel, isCorrect, type Response } from "@/lib/answers";
 import type { Completion } from "@/lib/game";
 import { Celebration } from "./celebration";
@@ -35,7 +35,7 @@ function officialBadge(url: string): string {
 
 export interface LessonPlayerProps {
   /** "review" for review and mock sections built from the plan. */
-  courseId: CourseId | "review";
+  courseId: AnyCourseId;
   lesson: Lesson;
   unitTitle: string;
   tone: string;

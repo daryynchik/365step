@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 
 import { findLesson } from "@/content";
+import { diagnosticLesson, isDiagnosticSection } from "@/content/diagnostic";
 import { isPlanUnlocked, reviewLesson, STRAND_COURSE } from "@/content/plan";
 import { LessonPlayer } from "@/components/lesson-player";
 import { COURSE_TONE } from "@/components/tones";
@@ -20,6 +21,7 @@ type Params = Promise<{ course: string; lesson: string }>;
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { course, lesson } = await params;
   if (course === "review") return { title: lesson.startsWith("mock-") ? "Пробная секция" : "Повторение" };
+  if (course === "diagnostic") return { title: "Диагностика" };
   return { title: findLesson(course, lesson)?.lesson.title ?? "Урок" };
 }
 
@@ -27,6 +29,23 @@ export default async function LessonPage({ params }: { params: Params }) {
   const user = await currentUser();
   if (!user) redirect("/signin");
   const { course, lesson } = await params;
+
+  if (course === "diagnostic") {
+    if (!isDiagnosticSection(lesson)) notFound();
+    return (
+      <LessonPlayer
+        courseId="diagnostic"
+        calculatorAvailable={lesson === "sat-math"}
+        lesson={diagnosticLesson(lesson)}
+        unitTitle="Диагностика"
+        tone={COURSE_TONE[lesson === "ielts-reading" ? "ielts" : lesson].main}
+        backHref="/diagnostic"
+        draft={null}
+        aiFeedback={false}
+        moreKey={null}
+      />
+    );
+  }
 
   // Reviews and mock sections only exist inside the student's own plan.
   if (course === "review") {

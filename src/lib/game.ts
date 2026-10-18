@@ -11,12 +11,14 @@ import { randomUUID } from "node:crypto";
 
 import { COURSES, findByKey, findLesson, flatten, isSequentiallyUnlocked, lessonKey, PLAN_COURSES, type PathEntry } from "@/content";
 import { isPlanUnlocked, nextPlanStep, reviewLesson } from "@/content/plan";
-import type { CourseId, Question } from "@/content/types";
+import { isDiagnosticSection } from "@/content/diagnostic";
+import type { AnyCourseId, CourseId, Question } from "@/content/types";
 import { isCorrect, type Response } from "./answers";
 import { all, one, run, scalar, str, num, transaction } from "./db";
 import { addDays, lastNDays, nowIso, todayIso, weekStart } from "./date";
 import { getPlan } from "./profile";
 import { DAILY_GOAL, lessonPoints, levelFor, POINTS, type LevelInfo } from "./rules";
+import { recordDiagnostic } from "./scores";
 import { countWords } from "./writing";
 
 // ---------------------------------------------------------------- points --
@@ -181,7 +183,7 @@ export interface Completion {
 export type CompletionResult = { ok: true; result: Completion } | { ok: false; error: string };
 
 /** Where "Continue" goes: the next step of the plan, or the next seminar lesson. */
-async function continueHref(userId: string, target: { key?: string; courseId: CourseId | "review" }, done: Set<string>): Promise<string> {
+async function continueHref(userId: string, target: { key?: string; courseId: AnyCourseId }, done: Set<string>): Promise<string> {
   const { courseId } = target;
   if (courseId === "seminar") {
     const next = nextLesson("seminar", done);
@@ -211,7 +213,7 @@ export async function canOpen(userId: string, entry: PathEntry, done?: Set<strin
  */
 async function recordCompletion(
   userId: string,
-  target: { key: string; courseId: CourseId | "review" },
+  target: { key: string; courseId: AnyCourseId },
   correct: number,
   total: number,
   firstTimePoints: number,
@@ -271,6 +273,16 @@ export async function completeLesson(
   lessonId: string,
   responses: (Response | null)[],
 ): Promise<CompletionResult> {
+  // The diagnostic sets the starting level of a section; open to everyone with a goal.
+  if (courseId === "diagnostic") {
+    if (!isDiagnosticSection(lessonId)) return { ok: false, error: "Диагностика не найдена." };
+    const outcome = await recordDiagnostic(userId, lessonId, responses);
+    const key = `diagnostic/${lessonId}`;
+    const result = await recordCompletion(userId, { key, courseId: "diagnostic" }, outcome.correct, outcome.total, lessonPoints(outcome.correct, outcome.total));
+    result.nextHref = "/diagnostic";
+    return { ok: true, result };
+  }
+
   // Review and mock sections are built from the student's own plan.
   if (courseId === "review") {
     const plan = await getPlan(userId);

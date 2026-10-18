@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 
 import { requireUser } from "@/lib/auth";
 import { saveProfile, type ProfileInput } from "@/lib/profile";
+import { getScores } from "@/lib/scores";
 
 export async function saveGoalAction(input: ProfileInput): Promise<{ ok: false; error: string } | void> {
   const user = await requireUser();
@@ -16,5 +17,6 @@ export async function saveGoalAction(input: ProfileInput): Promise<{ ok: false; 
   });
   if (!result.ok) return result;
   revalidatePath("/", "layout");
-  redirect("/path");
+  // First time through: the scores step comes next.
+  redirect((await getScores(user.id)) ? "/path" : "/start/scores");
 }

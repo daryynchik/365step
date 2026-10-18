@@ -13,6 +13,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { findByKey, findLesson } from "../src/content";
+import { diagnosticQuestions } from "../src/content/diagnostic";
 import { currentPlanDay, isPlanUnlocked, nextPlanStep, reviewLesson, type Plan, type PlanStep } from "../src/content/plan";
 import { registerUser } from "../src/lib/accounts";
 import { buyItem, getDuel, getFightRequests, requestFight, respondToFightRequest } from "../src/lib/arena";
@@ -23,6 +24,7 @@ import { ensureDemo } from "../src/lib/demo";
 import { getLeaderboard, getRequests, respondToRequest, sendFriendRequest } from "../src/lib/friends";
 import { canOpen, completeLesson, completePractice, getDoneKeys, getStats, submitSpeaking, submitWriting } from "../src/lib/game";
 import { getPlan, getProfile, saveProfile } from "../src/lib/profile";
+import { getDiagnosticLevels, getScoreHistory, getScores, saveScores } from "../src/lib/scores";
 
 // A fresh database for every run. The db module connects lazily on first query.
 const DB = path.join(process.cwd(), "data", "verify.db");
@@ -93,6 +95,35 @@ async function main() {
   ok(plan.days.every((d) => d.steps.length > 0), "every day has a step");
   ok(plan.days.flatMap((d) => d.steps).filter((s) => s.key.startsWith("reading/")).every((s) => s.key.startsWith("reading/cs-")), "field texts follow the chosen field");
   ok(plan.days.flatMap((d) => d.steps).some((s) => s.key === "admissions/supplements"), "US plan includes supplemental essays");
+
+  // -------------------------------------------------------------- scores --
+  ok((await getScores(A)) === null, "no scores before the scores step");
+  const satEntry = (total: number, rw: number, math: number) => ({
+    exam: "sat" as const,
+    current: { total, sections: { rw, math } },
+    takenDate: null,
+    source: "bluebook" as const,
+    target: 1400,
+    examDate: null,
+  });
+  ok(!(await saveScores(A, { entries: [satEntry(1160, 620, 530)] })).ok, "SAT sections must add up to the total");
+  ok((await saveScores(A, { entries: [satEntry(1150, 620, 530)] })).ok, "scores saved");
+  ok((await saveScores(A, { entries: [satEntry(1150, 620, 530)] })).ok, "same scores saved again");
+  ok((await getScoreHistory(A)).length === 1, "unchanged scores add no history");
+  ok((await saveScores(A, { entries: [satEntry(1210, 640, 570), { exam: "ielts", current: null, takenDate: null, source: null, target: 7, examDate: null }] })).ok, "scores updated");
+  const history = await getScoreHistory(A);
+  ok(history.length === 3 && history.filter((h) => h.exam === "sat").map((h) => h.total).join() === "1150,1210", "history keeps every SAT result");
+  ok((await getScores(A))!.entries.length === 2, "current scores hold both exams");
+
+  const diagnosticAnswers = diagnosticQuestions("ielts-reading").map((q) => (q.kind === "choice" ? q.answer : q.answers[0]));
+  ok(diagnosticAnswers.length === 12, "diagnostic has 12 questions");
+  const diag = await completeLesson(A, "diagnostic", "ielts-reading", diagnosticAnswers);
+  ok(diag.ok && diag.result.nextHref === "/diagnostic", "diagnostic completes and returns to the list");
+  ok((await getDiagnosticLevels(A))["ielts-reading"] === "hard", "all right on the diagnostic: hard");
+  const halfRight = diagnosticAnswers.map((a, i) => (i % 2 === 0 ? a : null));
+  await completeLesson(A, "diagnostic", "ielts-reading", halfRight);
+  ok((await getDiagnosticLevels(A))["ielts-reading"] === "medium", "latest diagnostic wins: half right is medium");
+  ok(!(await completeLesson(A, "diagnostic", "chemistry", [])).ok, "unknown diagnostic section rejected");
 
   // ------------------------------------------------------------- gating --
   const day2 = plan.days[1].steps[0];
