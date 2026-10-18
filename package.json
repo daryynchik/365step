@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "test": "tsx --test \"src/**/*.test.ts\"",
     "validate:content": "tsx scripts/validate-content.ts",
-    "bank:index": "tsx scripts/bank-index.ts"
+    "bank:index": "tsx scripts/bank-index.ts",
+    "compare:plans": "tsx scripts/compare-plans.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
