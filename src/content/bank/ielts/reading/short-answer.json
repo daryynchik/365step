@@ -1,0 +1,641 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "completion",
+  "skill": "short-answer",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p1",
+   "title": "Bees in the City",
+   "text": "**A** Beekeeping is no longer only a country hobby. In cities such as London, Paris and New York, people keep beehives on rooftops, balconies and even in small back gardens. Some city halls and hotels have their own hives, and the honey is sold in their shops or served at breakfast.\n\n**B** City bees may seem out of place, but in some ways cities suit them well. Parks, gardens and tree-lined streets offer a wide variety of flowers that bloom at different times of year. In the countryside, by contrast, large fields often contain just one crop, which flowers for only a few weeks.\n\n**C** Cities are also warmer than the surrounding countryside, especially at night, because buildings and roads store heat. This means that the season when flowers are open can begin earlier in spring and last longer into autumn. Bees can therefore collect food for more weeks each year.\n\n**D** However, experts warn that too many hives in one area can cause problems. Honeybees compete with wild bees, such as bumblebees, for the same flowers. If there are not enough flowers for all of them, wild bees may suffer, and some of these species are already rare.\n\n**E** For this reason, some cities now encourage residents to plant more flowers rather than add more hives. A single window box of lavender or a corner of a garden left to grow wild can provide food for many kinds of insects. As one beekeeper put it, 'Bees need flowers first, and honey comes later.'",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p2",
+   "title": "The Sea Otter",
+   "text": "**A** Sea otters live along the coasts of the northern Pacific Ocean, from Japan to California. Unlike most sea mammals, they have no thick layer of fat to keep them warm. Instead, they rely on their fur, which is the densest of any animal, with up to one million hairs in a single square inch.\n\n**B** Because cold water quickly takes heat from the body, sea otters must eat a great deal. An adult may eat food equal to about a quarter of its body weight every day. Its diet includes sea urchins, crabs, clams and other animals that live on the sea floor.\n\n**C** Sea otters are one of the few animals known to use tools. Floating on its back, an otter places a flat stone on its chest and strikes a shellfish against it until the shell breaks. Some otters keep a favourite stone in a loose pocket of skin under the arm.\n\n**D** In the 1700s and 1800s, sea otters were hunted for their valuable fur, and by the early 1900s only a few thousand remained. An international agreement in 1911 protected them, and their numbers slowly began to recover in many areas.\n\n**E** Scientists now know that sea otters play an important role in their environment. By eating sea urchins, which feed on kelp, otters help underwater kelp forests to grow. These forests provide shelter for many species of fish.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p3",
+   "title": "Keeping Time",
+   "text": "**A** For most of human history, people measured time by watching the sky. The position of the sun told them roughly whether it was morning, midday or evening, and the changing shape of the moon helped them count the months.\n\n**B** The ancient Egyptians were among the first to build tools for measuring time. They used shadow clocks, which showed the hour by the length and direction of a shadow, and water clocks, in which water dripped slowly from one container into another. Water clocks had one great advantage: they worked at night and on cloudy days.\n\n**C** Mechanical clocks appeared in Europe in the late thirteenth century. These early clocks were large, heavy machines placed in church towers, and many of them had no hands at all; instead, they rang a bell to mark the hours. They were not very accurate and could lose or gain many minutes in a day.\n\n**D** A great improvement came in 1656, when the Dutch scientist Christiaan Huygens built the first pendulum clock. A swinging pendulum keeps a very regular rhythm, and Huygens's clock was accurate to within about a minute a day. Pendulum clocks soon spread across Europe.\n\n**E** Today, the most accurate clocks in the world are atomic clocks, which measure the vibrations of atoms. The best of them would lose less than one second in millions of years. Without them, satellite navigation systems such as GPS could not tell people where they are.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p1",
+   "title": "Drinking Water from the Sea",
+   "text": "**A** About 97 percent of the water on Earth is salty, and most of the remaining fresh water is locked in ice or underground. As populations grow and droughts become more frequent, many countries are turning to the sea itself as a source of drinking water through a process called desalination.\n\n**B** The oldest method of removing salt from water is distillation: seawater is heated until it turns to steam, and the steam is cooled and collected as fresh water, leaving the salt behind. Sailors used simple versions of this technique for centuries. However, boiling large amounts of water requires enormous quantities of energy.\n\n**C** Most modern plants instead use a method called reverse osmosis. Seawater is pushed at high pressure through membranes with pores so small that water molecules can pass through but salt cannot. Improvements in membranes and pumps have greatly reduced the energy needed, although desalinated water is still usually more expensive than water from rivers or underground sources.\n\n**D** Desalination also raises environmental concerns. For every litre of fresh water produced, plants discharge roughly one and a half litres of brine, a liquid far saltier than seawater. If this brine is released carelessly, it can sink to the sea floor and harm the organisms that live there. Some plants now dilute the brine or spread it through many small outlets.\n\n**E** Despite these challenges, desalination is expanding rapidly, particularly in the Middle East, where some countries obtain most of their drinking water from the sea. Researchers are also experimenting with plants powered by solar energy, which could make the process cleaner and cheaper in sunny, dry regions.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p2",
+   "title": "Lichens: Partners in Survival",
+   "text": "**A** Lichens are among the most widespread living things on Earth, yet few people notice them. They grow as crusty patches on rocks, leafy growths on tree bark and tufts hanging from branches, and they can be found everywhere from tropical forests to the frozen deserts of Antarctica.\n\n**B** For a long time, scientists believed that a lichen was a single organism. In the nineteenth century, however, the Swiss botanist Simon Schwendener proposed that each lichen is in fact a partnership between a fungus and an alga or a type of bacterium that can photosynthesise. His idea was strongly opposed at first, but it is now accepted.\n\n**C** In this partnership, the fungus provides a protective structure and absorbs water and minerals, while its partner uses sunlight to produce sugars that feed both. This cooperation allows lichens to survive in places where neither partner could live alone, such as bare rock or extremely cold mountain tops.\n\n**D** Lichens grow very slowly, sometimes only a millimetre a year. Because some species grow at a known, steady rate, geologists have used them to estimate how long ago rock surfaces were exposed, for example after a glacier retreated. This method, called lichenometry, works best for surfaces that are a few hundred years old.\n\n**E** Lichens are also sensitive to air pollution, especially sulphur dioxide. In the industrial cities of the nineteenth century, many species disappeared. Today, scientists survey lichens to monitor air quality, and the return of sensitive species to some cities has been taken as a sign that the air has become cleaner.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p3",
+   "title": "Farming Upwards",
+   "text": "**A** In a former warehouse on the edge of a city, rows of lettuce grow on shelves stacked ten levels high. There is no soil and no sunlight; instead, the plants' roots sit in water enriched with nutrients, and pink-purple LED lights shine on the leaves for up to eighteen hours a day. This is a vertical farm.\n\n**B** Supporters say vertical farms offer several advantages. Because the plants grow indoors, they are protected from storms, droughts and pests, so few or no pesticides are needed. Water is recycled through the system, and many farms report using up to 95 percent less water than conventional fields.\n\n**C** Growing food close to where people live also reduces the distance it must travel. Lettuce grown in another country may spend days in trucks before reaching a supermarket, losing freshness along the way. A vertical farm in the city can deliver the same produce within hours of harvest.\n\n**D** The main problem is energy. Replacing the sun with electric lights is expensive, and in regions where electricity comes mainly from fossil fuels, the carbon emissions of indoor farming can be higher than those of traditional agriculture. Several well-funded vertical farming companies have closed in recent years because they could not make a profit.\n\n**E** For now, vertical farms grow mostly leafy greens and herbs, which are light, grow quickly and sell at high prices. Staple crops such as wheat and rice need far more space and light, and experts doubt that they will be grown this way on a large scale in the near future.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p1",
+   "title": "Radiocarbon Dating and Its Limits",
+   "text": "**A** Living things constantly take in carbon from the atmosphere, including a small proportion of carbon-14, a radioactive form of the element. When an organism dies, it stops absorbing carbon, and the carbon-14 it contains begins to decay at a steady rate, halving roughly every 5,730 years. By measuring how much carbon-14 remains in a sample of bone, wood or cloth, scientists can estimate how long ago the organism died.\n\n**B** The technique, developed by the American chemist Willard Libby in the late 1940s, transformed archaeology. For the first time, researchers could assign dates to objects from prehistoric sites that had left no written records. Libby received the Nobel Prize in Chemistry in 1960 for the work.\n\n**C** Early users of the method assumed that the amount of carbon-14 in the atmosphere had always been constant. It soon became clear that this was not the case: levels have varied over time because of changes in the sun's activity and in Earth's magnetic field. Raw radiocarbon ages must therefore be 'calibrated' against records from objects of known age, such as tree rings, which can be counted year by year.\n\n**D** Human activity has complicated matters further. Since the Industrial Revolution, the burning of fossil fuels, which contain no carbon-14, has diluted the proportion of carbon-14 in the air, while nuclear weapons tests in the 1950s and 1960s temporarily almost doubled it. Samples from these periods therefore require special treatment.\n\n**E** The method also has a natural limit. After about 50,000 years, so little carbon-14 remains that it can no longer be measured reliably. For older materials, scientists must turn to other techniques, such as those based on the decay of potassium or uranium, which can date rocks millions or even billions of years old.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p2",
+   "title": "How Animals Sleep",
+   "text": "**A** Almost every animal that has been carefully studied shows some form of sleep, a state of reduced activity and responsiveness from which it can be woken. Yet the amount and pattern of sleep vary enormously. Some bats sleep for around twenty hours a day, while adult elephants in the wild have been recorded sleeping for only about two hours.\n\n**B** Many marine mammals face a particular challenge: they must surface to breathe. Dolphins solve this problem by resting one half of the brain at a time. During this 'unihemispheric' sleep, one eye remains open and the animal continues to swim slowly, apparently keeping watch for predators and staying close to its group.\n\n**C** Some birds do something similar. Studies of frigatebirds, which can stay at sea for weeks without landing, found that they sleep while flying, often with one half of the brain at a time and for only a few seconds at once. In total, they slept less than an hour a day in flight, far less than they did on land.\n\n**D** Why sleep exists at all remains a puzzle. A sleeping animal cannot feed, mate or easily escape danger, so sleep must provide important benefits to have survived in so many species. Leading theories suggest that sleep helps to save energy, to repair tissues, and to strengthen memories by reorganising connections in the brain.\n\n**E** Evidence that sleep is essential comes from experiments in which animals are deprived of it. Even fruit flies that are kept awake show reduced learning, and when finally allowed to rest, they sleep longer and more deeply than usual, as if paying back a debt. Such findings suggest that sleep serves functions that cannot simply be postponed.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p3",
+   "title": "The Urban Heat Island",
+   "text": "**A** On a summer evening, the centre of a large city can be several degrees warmer than the countryside just a few kilometres away. This phenomenon, known as the urban heat island, was first described in the early nineteenth century by Luke Howard, an amateur scientist who recorded temperatures in and around London.\n\n**B** Several factors combine to produce the effect. Dark surfaces such as asphalt and roofing absorb much of the sunlight that falls on them and release the heat slowly after sunset. Tall buildings trap this heat by reducing the flow of air and by blocking the escape of heat radiation to the sky. Engines, air conditioners and industry add further heat.\n\n**C** The lack of vegetation also plays a role. Plants cool their surroundings through evapotranspiration, releasing water vapour that absorbs heat as it evaporates. In heavily built-up areas, where soil is sealed beneath concrete, this natural cooling is largely absent.\n\n**D** The consequences can be serious. During heat waves, high night-time temperatures prevent people's bodies from recovering from the heat of the day, and death rates rise, particularly among the elderly. Higher temperatures also increase demand for air conditioning, which in turn releases more heat and can strain electricity networks.\n\n**E** Cities are experimenting with a range of responses, from planting trees and creating parks to painting roofs in reflective colours. Such measures are not equally effective everywhere: a reflective roof that cools a building in a hot climate may increase heating costs in a cold one. Planners are therefore increasingly using detailed temperature maps to target the neighbourhoods that would benefit most.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat do some cities now encourage residents to plant?",
+   "answer": [
+    "flowers",
+    "more flowers"
+   ],
+   "explanation": "Абзац E: encourage residents to plant more flowers."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one type of public building that has its own beehives.",
+   "answer": [
+    "city halls",
+    "city hall",
+    "hotels",
+    "hotel"
+   ],
+   "explanation": "Абзац A: city halls and hotels."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat may happen to wild bees if there are not enough flowers?",
+   "answer": [
+    "they may suffer",
+    "suffer"
+   ],
+   "explanation": "Абзац D: wild bees may suffer."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn which part of the day are cities especially warmer than the countryside?",
+   "answer": [
+    "at night",
+    "night"
+   ],
+   "explanation": "Абзац C: especially at night."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich city is mentioned first as a place where people keep hives?",
+   "answer": [
+    "london"
+   ],
+   "explanation": "Абзац A: London, Paris and New York — первым назван Лондон."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nHow many hairs can a sea otter have in one square inch of fur?",
+   "answer": [
+    "one million",
+    "1 million",
+    "1000000",
+    "up to one million"
+   ],
+   "explanation": "Абзац A: up to one million hairs in a single square inch."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn what year did an international agreement protect sea otters?",
+   "answer": [
+    "1911"
+   ],
+   "explanation": "Абзац D: An international agreement in 1911."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat does an otter place on its chest to break shells?",
+   "answer": [
+    "a flat stone",
+    "flat stone",
+    "a stone",
+    "stone"
+   ],
+   "explanation": "Абзац C: places a flat stone on its chest."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich animals that feed on kelp do sea otters eat?",
+   "answer": [
+    "sea urchins",
+    "urchins"
+   ],
+   "explanation": "Абзац E: by eating sea urchins, which feed on kelp."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhere do some otters keep a favourite stone?",
+   "answer": [
+    "under the arm",
+    "pocket of skin",
+    "a loose pocket",
+    "loose pocket of skin"
+   ],
+   "explanation": "Абзац C: in a loose pocket of skin under the arm."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn which century did mechanical clocks appear in Europe?",
+   "answer": [
+    "thirteenth century",
+    "the thirteenth century",
+    "late thirteenth century",
+    "13th century"
+   ],
+   "explanation": "Абзац C: in the late thirteenth century."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat nationality was Christiaan Huygens?",
+   "answer": [
+    "dutch"
+   ],
+   "explanation": "Абзац D: the Dutch scientist Christiaan Huygens."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nAbout how accurate was Huygens's clock each day?",
+   "answer": [
+    "about a minute",
+    "one minute",
+    "a minute",
+    "within about a minute"
+   ],
+   "explanation": "Абзац D: accurate to within about a minute a day."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat two features of a shadow showed the hour on a shadow clock?",
+   "answer": [
+    "length and direction",
+    "its length and direction"
+   ],
+   "explanation": "Абзац B: by the length and direction of a shadow."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat would the best atomic clocks lose in millions of years?",
+   "answer": [
+    "less than one second",
+    "one second",
+    "less than a second"
+   ],
+   "explanation": "Абзац E: lose less than one second in millions of years."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat percentage of the water on Earth is salty?",
+   "answer": [
+    "97 percent",
+    "97%",
+    "97",
+    "about 97 percent"
+   ],
+   "explanation": "Абзац A: About 97 percent."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich group of people used simple distillation for centuries?",
+   "answer": [
+    "sailors"
+   ],
+   "explanation": "Абзац B: Sailors used simple versions of this technique."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nHow much brine is produced for each litre of fresh water?",
+   "answer": [
+    "one and a half litres",
+    "1.5 litres",
+    "about 1.5 litres",
+    "roughly one and a half litres"
+   ],
+   "explanation": "Абзац D: roughly one and a half litres of brine."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn which region is desalination expanding particularly fast?",
+   "answer": [
+    "the middle east",
+    "middle east"
+   ],
+   "explanation": "Абзац E: particularly in the Middle East."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nBesides membranes, which equipment has been improved to cut energy use?",
+   "answer": [
+    "pumps"
+   ],
+   "explanation": "Абзац C: improvements in membranes and pumps."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich continent with frozen deserts is mentioned?",
+   "answer": [
+    "antarctica"
+   ],
+   "explanation": "Абзац A: the frozen deserts of Antarctica."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn which century did Schwendener propose his idea?",
+   "answer": [
+    "nineteenth century",
+    "the nineteenth century",
+    "19th century"
+   ],
+   "explanation": "Абзац B: In the nineteenth century."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat does the fungus absorb besides water?",
+   "answer": [
+    "minerals"
+   ],
+   "explanation": "Абзац C: absorbs water and minerals."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nHow fast do some lichens grow each year?",
+   "answer": [
+    "a millimetre",
+    "one millimetre",
+    "1 millimetre",
+    "1 mm"
+   ],
+   "explanation": "Абзац D: sometimes only a millimetre a year."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat is the name of the method that uses lichens to date rock surfaces?",
+   "answer": [
+    "lichenometry"
+   ],
+   "explanation": "Абзац D: This method, called lichenometry."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat type of building does the vertical farm in paragraph A occupy?",
+   "answer": [
+    "a former warehouse",
+    "former warehouse",
+    "warehouse"
+   ],
+   "explanation": "Абзац A: In a former warehouse."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nHow many levels high are the shelves of lettuce?",
+   "answer": [
+    "ten",
+    "10",
+    "ten levels"
+   ],
+   "explanation": "Абзац A: shelves stacked ten levels high."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one weather threat that indoor plants are protected from.",
+   "answer": [
+    "storms",
+    "droughts"
+   ],
+   "explanation": "Абзац B: protected from storms, droughts and pests."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat vehicles carry imported lettuce to supermarkets?",
+   "answer": [
+    "trucks"
+   ],
+   "explanation": "Абзац C: may spend days in trucks."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one staple crop that experts doubt will be grown in vertical farms soon.",
+   "answer": [
+    "wheat",
+    "rice"
+   ],
+   "explanation": "Абзац E: staple crops such as wheat and rice."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat nationality was Willard Libby?",
+   "answer": [
+    "american"
+   ],
+   "explanation": "Абзац B: the American chemist Willard Libby."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn what year did Libby receive the Nobel Prize?",
+   "answer": [
+    "1960"
+   ],
+   "explanation": "Абзац B: Libby received the Nobel Prize in Chemistry in 1960."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one natural factor that has changed carbon-14 levels over time.",
+   "answer": [
+    "the sun's activity",
+    "sun's activity",
+    "solar activity",
+    "earth's magnetic field",
+    "magnetic field"
+   ],
+   "explanation": "Абзац C: changes in the sun's activity and in Earth's magnetic field."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat type of fuel contains no carbon-14?",
+   "answer": [
+    "fossil fuels",
+    "fossil fuel"
+   ],
+   "explanation": "Абзац D: fossil fuels, which contain no carbon-14."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nAfter roughly how many years can carbon-14 no longer be measured reliably?",
+   "answer": [
+    "50000",
+    "50,000",
+    "about 50,000",
+    "50,000 years"
+   ],
+   "explanation": "Абзац E: After about 50,000 years."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nAbout how many hours a day do some bats sleep?",
+   "answer": [
+    "twenty",
+    "20",
+    "around twenty",
+    "twenty hours"
+   ],
+   "explanation": "Абзац A: around twenty hours a day."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat does a dolphin keep open during unihemispheric sleep?",
+   "answer": [
+    "one eye",
+    "an eye"
+   ],
+   "explanation": "Абзац B: one eye remains open."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich seabirds were found to sleep while flying?",
+   "answer": [
+    "frigatebirds"
+   ],
+   "explanation": "Абзац C: Studies of frigatebirds."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one benefit of sleep suggested by leading theories.",
+   "answer": [
+    "saving energy",
+    "save energy",
+    "repairing tissues",
+    "repair tissues",
+    "strengthening memories",
+    "strengthen memories"
+   ],
+   "explanation": "Абзац D: save energy, repair tissues, strengthen memories."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich insects showed reduced learning when kept awake?",
+   "answer": [
+    "fruit flies"
+   ],
+   "explanation": "Абзац E: Even fruit flies that are kept awake."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nIn which city did Luke Howard record temperatures?",
+   "answer": [
+    "london"
+   ],
+   "explanation": "Абзац A: in and around London."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhich group of people is especially at risk during heat waves?",
+   "answer": [
+    "the elderly",
+    "elderly",
+    "elderly people"
+   ],
+   "explanation": "Абзац D: particularly among the elderly."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one material mentioned as a dark surface.",
+   "answer": [
+    "asphalt",
+    "roofing"
+   ],
+   "explanation": "Абзац B: asphalt and roofing."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nWhat can increased demand for air conditioning strain?",
+   "answer": [
+    "electricity networks",
+    "electricity network"
+   ],
+   "explanation": "Абзац D: can strain electricity networks."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Answer the question. Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for your answer.\n\nName one measure cities use to cool themselves.",
+   "answer": [
+    "planting trees",
+    "trees",
+    "creating parks",
+    "parks",
+    "reflective roofs",
+    "painting roofs"
+   ],
+   "explanation": "Абзац E: planting trees, creating parks, painting roofs in reflective colours."
+  }
+ ]
+}

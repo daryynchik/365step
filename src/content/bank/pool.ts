@@ -16,11 +16,17 @@ import { SKILLS, type Skill } from "./taxonomy";
 
 export type PoolTask =
   | { id: string; skill: string; difficulty: Level; kind: "question"; question: Question }
-  | { id: string; skill: string; difficulty: Level; kind: "writing"; title: string; writing: WritingTask }
-  | { id: string; skill: string; difficulty: Level; kind: "speaking"; title: string; speaking: Speaking }
+  | { id: string; skill: string; difficulty: Level; kind: "writing"; title: string; writing: WritingTask; notes?: PromptNotes }
+  | { id: string; skill: string; difficulty: Level; kind: "speaking"; title: string; speaking: Speaking; notes?: PromptNotes }
   | { id: string; skill: string; difficulty: Level; kind: "listening"; title: string; listening: Listening; questions: Question[] };
 
 export type SkillPool = Record<Level, PoolTask[]>;
+
+/** For prompts from the bank: what a strong response contains and how it is assessed. */
+export interface PromptNotes {
+  plan: string;
+  criteria: string;
+}
 
 /** Second-pass authored lessons that practise the same skill. */
 const EXTRA_LESSONS: Record<string, string[]> = {
@@ -60,8 +66,9 @@ let pools: Map<string, SkillPool> | null = null;
 
 function fromBank(t: Task): PoolTask {
   const base = { id: t.id, skill: t.skill, difficulty: LEVEL_OF[t.difficulty] };
-  if (t.type === "essay-prompt") return { ...base, kind: "writing", title: t.stem.slice(0, 80), writing: toWriting(t) };
-  if (t.type === "speaking-prompt") return { ...base, kind: "speaking", title: t.stem.slice(0, 80), speaking: toSpeaking(t) };
+  const notes = { plan: String(t.answer), criteria: t.explanation };
+  if (t.type === "essay-prompt") return { ...base, kind: "writing", title: t.stem.slice(0, 80), writing: toWriting(t), notes };
+  if (t.type === "speaking-prompt") return { ...base, kind: "speaking", title: t.stem.slice(0, 80), speaking: toSpeaking(t), notes };
   return { ...base, kind: "question", question: toQuestion(t) };
 }
 

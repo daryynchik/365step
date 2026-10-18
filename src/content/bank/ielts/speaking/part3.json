@@ -1,0 +1,312 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "speaking",
+  "domain": "speaking",
+  "skill": "part3",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to places to visit.",
+   "questions": [
+    "Why do people like visiting new places?",
+    "Is it better to travel alone or with others?",
+    "How has tourism changed in your country?",
+    "Should famous places limit the number of visitors?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to helping others.",
+   "questions": [
+    "Why do some people do volunteer work?",
+    "Should schools encourage students to help others?",
+    "Is it the government's job to help people in need?",
+    "Are people less helpful today than in the past?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to gifts.",
+   "questions": [
+    "Why do people give gifts?",
+    "Is it better to give money or a present?",
+    "Do people spend too much money on gifts?",
+    "How do traditions of giving gifts differ between generations?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to films and books.",
+   "questions": [
+    "Why do people enjoy stories?",
+    "Are books more valuable than films?",
+    "Will people still read printed books in the future?",
+    "Should children's screen time be limited?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to hobbies.",
+   "questions": [
+    "Why are hobbies important?",
+    "Do people have less free time than in the past?",
+    "Can a hobby become a job?",
+    "What hobbies are popular among young people?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to food and health.",
+   "questions": [
+    "How have eating habits changed in your country?",
+    "Should the government control what food is sold?",
+    "Is it important for families to eat together?",
+    "Why do some people choose not to eat meat?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to travel.",
+   "questions": [
+    "What are the benefits of travelling abroad?",
+    "Does tourism always help local people?",
+    "How might travel change in the future?",
+    "Is it necessary to travel to learn about other cultures?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to decisions.",
+   "questions": [
+    "What important decisions do young people have to make?",
+    "Should parents make decisions for their children?",
+    "Do people make better decisions when they are older?",
+    "How does the internet affect the decisions people make?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to learning skills.",
+   "questions": [
+    "What skills are most important for young people today?",
+    "Should schools teach practical skills like cooking or managing money?",
+    "Is it better to learn from a teacher or online?",
+    "How might the skills employers want change in the future?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to education.",
+   "questions": [
+    "What makes a good teacher?",
+    "Should students be able to choose what they study?",
+    "Will online learning replace schools?",
+    "How important are exams?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to work and stress.",
+   "questions": [
+    "Why do people feel so busy today?",
+    "Is stress always a bad thing?",
+    "What can employers do to reduce stress?",
+    "Will people work fewer hours in the future?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to technology.",
+   "questions": [
+    "How has technology changed communication?",
+    "Are there disadvantages to relying on technology?",
+    "Should children use smartphones?",
+    "Which inventions of the last century were most important?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to traditions.",
+   "questions": [
+    "Why are traditional festivals important?",
+    "Are traditions disappearing in your country?",
+    "Should traditions change over time?",
+    "How do globalisation and the internet affect local culture?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to community.",
+   "questions": [
+    "What makes a strong community?",
+    "Do people know their neighbours as well as they used to?",
+    "How can cities encourage people to help each other?",
+    "Is social media good for communities?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to opinions and persuasion.",
+   "questions": [
+    "Why do people find it hard to change their opinions?",
+    "Does the media influence what people think?",
+    "Should schools teach students how to evaluate information?",
+    "Is it possible to have a truly balanced view of a topic?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to rules and laws.",
+   "questions": [
+    "Why do societies need laws?",
+    "Should all laws be obeyed, even unfair ones?",
+    "How should young people be taught about the law?",
+    "Are punishments the best way to make people follow rules?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to challenges and success.",
+   "questions": [
+    "Is failure necessary for success?",
+    "Do people today give up too easily?",
+    "Should parents protect children from difficulties?",
+    "How do different cultures view success?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to achievement and recognition.",
+   "questions": [
+    "Why do people want recognition for their achievements?",
+    "Are team achievements more valuable than individual ones?",
+    "Do societies reward the right kinds of achievements?",
+    "Should students receive prizes at school?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to urban change.",
+   "questions": [
+    "Why do cities change so quickly?",
+    "Should old buildings be preserved or replaced?",
+    "How does development affect people who live in an area?",
+    "What will cities look like in fifty years?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 3,
+   "stem": "We've been talking about a personal experience. I'd like to discuss with you some more general questions related to innovation.",
+   "questions": [
+    "Where do new ideas usually come from?",
+    "Should governments invest in new ideas or private companies?",
+    "Do schools encourage creativity enough?",
+    "Is innovation always a good thing?"
+   ],
+   "answer": "Extended answers (4–6 sentences) that give an opinion, a reason, an example and a comparison or prediction; language for speculating and conceding (I'd say…, While it's true that…, In the future, people might…).",
+   "explanation": "Часть 3 — абстрактная дискуссия 4–5 минут. Экзаменатор проверяет умение рассуждать: мнение — причина — пример — уступка. Короткие ответы снижают балл за Fluency and Coherence. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  }
+ ]
+}

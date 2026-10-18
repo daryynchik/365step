@@ -6,7 +6,7 @@
 
 import { randomUUID } from "node:crypto";
 
-import { diagnosticQuestions } from "@/content/diagnostic";
+import { diagnosticItems, levelFromDiagnostic } from "@/content/diagnostic";
 import { validateScores, type DiagnosticSection, type ExamEntry, type Level, type ScoresInput } from "@/content/exams";
 import { isCorrect, type Response } from "./answers";
 import { all, json, num, one, run, str, transaction } from "./db";
@@ -85,14 +85,6 @@ export async function saveScores(userId: string, input: ScoresInput, today = tod
 
 // ---------------------------------------------------------- diagnostic --
 
-/** Starting level from first-try accuracy on the diagnostic. */
-export function levelFromDiagnostic(correct: number, total: number): Level {
-  const rate = total > 0 ? correct / total : 0;
-  if (rate < 0.5) return "easy";
-  if (rate <= 0.8) return "medium";
-  return "hard";
-}
-
 export interface DiagnosticOutcome {
   correct: number;
   total: number;
@@ -100,19 +92,20 @@ export interface DiagnosticOutcome {
 }
 
 export async function recordDiagnostic(userId: string, section: DiagnosticSection, responses: (Response | null)[]): Promise<DiagnosticOutcome> {
-  const questions = diagnosticQuestions(section);
-  const correct = questions.filter((q, i) => isCorrect(q, responses[i])).length;
-  const level = levelFromDiagnostic(correct, questions.length);
+  const items = diagnosticItems(section);
+  const results = items.map((item, i) => ({ difficulty: item.difficulty, correct: isCorrect(item.question, responses[i]) }));
+  const correct = results.filter((r) => r.correct).length;
+  const level = levelFromDiagnostic(results);
   await run("INSERT INTO diagnostic_results (id, user_id, section, correct, total, level, taken_at) VALUES (?, ?, ?, ?, ?, ?, ?)", [
     randomUUID(),
     userId,
     section,
     correct,
-    questions.length,
+    items.length,
     level,
     nowIso(),
   ]);
-  return { correct, total: questions.length, level };
+  return { correct, total: items.length, level };
 }
 
 /** The latest diagnostic level of every section the student has taken. */

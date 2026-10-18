@@ -89,6 +89,10 @@ function skillLesson(plan: Plan, id: string, skill: Skill, level: Level, round: 
     ...(first?.kind === "speaking" ? { speaking: first.speaking } : {}),
     ...(first?.kind === "listening" ? { listening: first.listening } : {}),
   };
+  if ((first?.kind === "writing" || first?.kind === "speaking") && first.notes) {
+    lesson.theory.push({ heading: "Что оценивают в этом задании", body: first.notes.criteria });
+    lesson.theory.push({ heading: "План сильного ответа", body: first.notes.plan });
+  }
   if (skill.lesson) lesson.theory.push({ heading: "Если забыл приёмы", body: `Повтори урок «${skill.title}» — он есть в твоём плане раньше.` });
   return { lesson, section: skill.section, mock: false, level, taskSkills: skills, shortages: draw.shortages };
 }

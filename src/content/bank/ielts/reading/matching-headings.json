@@ -1,0 +1,752 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "matching",
+  "skill": "matching-headings",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p1",
+   "title": "Bees in the City",
+   "text": "**A** Beekeeping is no longer only a country hobby. In cities such as London, Paris and New York, people keep beehives on rooftops, balconies and even in small back gardens. Some city halls and hotels have their own hives, and the honey is sold in their shops or served at breakfast.\n\n**B** City bees may seem out of place, but in some ways cities suit them well. Parks, gardens and tree-lined streets offer a wide variety of flowers that bloom at different times of year. In the countryside, by contrast, large fields often contain just one crop, which flowers for only a few weeks.\n\n**C** Cities are also warmer than the surrounding countryside, especially at night, because buildings and roads store heat. This means that the season when flowers are open can begin earlier in spring and last longer into autumn. Bees can therefore collect food for more weeks each year.\n\n**D** However, experts warn that too many hives in one area can cause problems. Honeybees compete with wild bees, such as bumblebees, for the same flowers. If there are not enough flowers for all of them, wild bees may suffer, and some of these species are already rare.\n\n**E** For this reason, some cities now encourage residents to plant more flowers rather than add more hives. A single window box of lavender or a corner of a garden left to grow wild can provide food for many kinds of insects. As one beekeeper put it, 'Bees need flowers first, and honey comes later.'",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p2",
+   "title": "The Sea Otter",
+   "text": "**A** Sea otters live along the coasts of the northern Pacific Ocean, from Japan to California. Unlike most sea mammals, they have no thick layer of fat to keep them warm. Instead, they rely on their fur, which is the densest of any animal, with up to one million hairs in a single square inch.\n\n**B** Because cold water quickly takes heat from the body, sea otters must eat a great deal. An adult may eat food equal to about a quarter of its body weight every day. Its diet includes sea urchins, crabs, clams and other animals that live on the sea floor.\n\n**C** Sea otters are one of the few animals known to use tools. Floating on its back, an otter places a flat stone on its chest and strikes a shellfish against it until the shell breaks. Some otters keep a favourite stone in a loose pocket of skin under the arm.\n\n**D** In the 1700s and 1800s, sea otters were hunted for their valuable fur, and by the early 1900s only a few thousand remained. An international agreement in 1911 protected them, and their numbers slowly began to recover in many areas.\n\n**E** Scientists now know that sea otters play an important role in their environment. By eating sea urchins, which feed on kelp, otters help underwater kelp forests to grow. These forests provide shelter for many species of fish.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p4",
+   "title": "Why Schools Should Teach Cooking",
+   "text": "**A** In many countries, cooking has quietly disappeared from the school timetable. I believe this is a mistake. Knowing how to prepare a simple, healthy meal is as useful as any skill a young person can learn, and schools are the best place to teach it.\n\n**B** Some people argue that cooking should be taught at home. In an ideal world, perhaps it would be. But many parents work long hours and rely on ready meals, and children who never see food being prepared cannot be expected to learn by themselves.\n\n**C** Cooking lessons also support other subjects. Measuring ingredients involves maths, and understanding why bread rises is a lesson in science. In my experience, students who struggle in a normal classroom often concentrate better when they can work with their hands.\n\n**D** Critics point to the cost of kitchens and ingredients. These costs are real, but they are small compared with the long-term costs of poor diets, which are linked to illnesses that are expensive to treat. A basic kitchen classroom is a sensible investment.\n\n**E** I am not suggesting that every student should become a chef. The aim is more modest: to make sure that no one leaves school unable to boil an egg or cook a pan of vegetables. That, surely, is not too much to ask.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p1",
+   "title": "Drinking Water from the Sea",
+   "text": "**A** About 97 percent of the water on Earth is salty, and most of the remaining fresh water is locked in ice or underground. As populations grow and droughts become more frequent, many countries are turning to the sea itself as a source of drinking water through a process called desalination.\n\n**B** The oldest method of removing salt from water is distillation: seawater is heated until it turns to steam, and the steam is cooled and collected as fresh water, leaving the salt behind. Sailors used simple versions of this technique for centuries. However, boiling large amounts of water requires enormous quantities of energy.\n\n**C** Most modern plants instead use a method called reverse osmosis. Seawater is pushed at high pressure through membranes with pores so small that water molecules can pass through but salt cannot. Improvements in membranes and pumps have greatly reduced the energy needed, although desalinated water is still usually more expensive than water from rivers or underground sources.\n\n**D** Desalination also raises environmental concerns. For every litre of fresh water produced, plants discharge roughly one and a half litres of brine, a liquid far saltier than seawater. If this brine is released carelessly, it can sink to the sea floor and harm the organisms that live there. Some plants now dilute the brine or spread it through many small outlets.\n\n**E** Despite these challenges, desalination is expanding rapidly, particularly in the Middle East, where some countries obtain most of their drinking water from the sea. Researchers are also experimenting with plants powered by solar energy, which could make the process cleaner and cheaper in sunny, dry regions.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p2",
+   "title": "Lichens: Partners in Survival",
+   "text": "**A** Lichens are among the most widespread living things on Earth, yet few people notice them. They grow as crusty patches on rocks, leafy growths on tree bark and tufts hanging from branches, and they can be found everywhere from tropical forests to the frozen deserts of Antarctica.\n\n**B** For a long time, scientists believed that a lichen was a single organism. In the nineteenth century, however, the Swiss botanist Simon Schwendener proposed that each lichen is in fact a partnership between a fungus and an alga or a type of bacterium that can photosynthesise. His idea was strongly opposed at first, but it is now accepted.\n\n**C** In this partnership, the fungus provides a protective structure and absorbs water and minerals, while its partner uses sunlight to produce sugars that feed both. This cooperation allows lichens to survive in places where neither partner could live alone, such as bare rock or extremely cold mountain tops.\n\n**D** Lichens grow very slowly, sometimes only a millimetre a year. Because some species grow at a known, steady rate, geologists have used them to estimate how long ago rock surfaces were exposed, for example after a glacier retreated. This method, called lichenometry, works best for surfaces that are a few hundred years old.\n\n**E** Lichens are also sensitive to air pollution, especially sulphur dioxide. In the industrial cities of the nineteenth century, many species disappeared. Today, scientists survey lichens to monitor air quality, and the return of sensitive species to some cities has been taken as a sign that the air has become cleaner.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p4",
+   "title": "The Case for Learning Latin",
+   "text": "**A** When I tell people that I teach Latin, they often ask why anyone should learn a language that nobody speaks. It is a fair question. My answer is that Latin is useful not because students will speak it, but because of what learning it does to the way they think about language.\n\n**B** Latin is a highly inflected language: the endings of words change to show their role in a sentence. To read even a simple sentence, students must analyse each word carefully. I have found that this habit of close attention carries over to their reading and writing in English.\n\n**C** Supporters of Latin often claim that it improves students' vocabulary, since many English words come from Latin roots. This is true, but I think the claim is overstated. Students can learn these roots in a few lessons; they do not need years of study to discover that 'aqua' means water.\n\n**D** A stronger argument is that Latin opens a door to a long literary tradition. Reading Virgil or Ovid in the original is a different experience from reading a translation, and students who manage it gain a confidence that few other achievements provide.\n\n**E** None of this means that Latin should be compulsory. Many students will gain more from studying a modern language that allows them to talk to people in other countries. But for those who enjoy puzzles and patterns, Latin deserves a place in the curriculum.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p1",
+   "title": "Radiocarbon Dating and Its Limits",
+   "text": "**A** Living things constantly take in carbon from the atmosphere, including a small proportion of carbon-14, a radioactive form of the element. When an organism dies, it stops absorbing carbon, and the carbon-14 it contains begins to decay at a steady rate, halving roughly every 5,730 years. By measuring how much carbon-14 remains in a sample of bone, wood or cloth, scientists can estimate how long ago the organism died.\n\n**B** The technique, developed by the American chemist Willard Libby in the late 1940s, transformed archaeology. For the first time, researchers could assign dates to objects from prehistoric sites that had left no written records. Libby received the Nobel Prize in Chemistry in 1960 for the work.\n\n**C** Early users of the method assumed that the amount of carbon-14 in the atmosphere had always been constant. It soon became clear that this was not the case: levels have varied over time because of changes in the sun's activity and in Earth's magnetic field. Raw radiocarbon ages must therefore be 'calibrated' against records from objects of known age, such as tree rings, which can be counted year by year.\n\n**D** Human activity has complicated matters further. Since the Industrial Revolution, the burning of fossil fuels, which contain no carbon-14, has diluted the proportion of carbon-14 in the air, while nuclear weapons tests in the 1950s and 1960s temporarily almost doubled it. Samples from these periods therefore require special treatment.\n\n**E** The method also has a natural limit. After about 50,000 years, so little carbon-14 remains that it can no longer be measured reliably. For older materials, scientists must turn to other techniques, such as those based on the decay of potassium or uranium, which can date rocks millions or even billions of years old.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p2",
+   "title": "How Animals Sleep",
+   "text": "**A** Almost every animal that has been carefully studied shows some form of sleep, a state of reduced activity and responsiveness from which it can be woken. Yet the amount and pattern of sleep vary enormously. Some bats sleep for around twenty hours a day, while adult elephants in the wild have been recorded sleeping for only about two hours.\n\n**B** Many marine mammals face a particular challenge: they must surface to breathe. Dolphins solve this problem by resting one half of the brain at a time. During this 'unihemispheric' sleep, one eye remains open and the animal continues to swim slowly, apparently keeping watch for predators and staying close to its group.\n\n**C** Some birds do something similar. Studies of frigatebirds, which can stay at sea for weeks without landing, found that they sleep while flying, often with one half of the brain at a time and for only a few seconds at once. In total, they slept less than an hour a day in flight, far less than they did on land.\n\n**D** Why sleep exists at all remains a puzzle. A sleeping animal cannot feed, mate or easily escape danger, so sleep must provide important benefits to have survived in so many species. Leading theories suggest that sleep helps to save energy, to repair tissues, and to strengthen memories by reorganising connections in the brain.\n\n**E** Evidence that sleep is essential comes from experiments in which animals are deprived of it. Even fruit flies that are kept awake show reduced learning, and when finally allowed to rest, they sleep longer and more deeply than usual, as if paying back a debt. Such findings suggest that sleep serves functions that cannot simply be postponed.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p4",
+   "title": "The Myth of Multitasking",
+   "text": "**A** We like to believe that we can do several things at once: answer emails during a meeting, listen to a podcast while studying, check messages while driving. I want to argue that, for most tasks that require thought, multitasking is largely an illusion, and an expensive one.\n\n**B** What feels like doing two things simultaneously is usually rapid switching between them. Each switch carries a small cost, as the brain disengages from one set of rules and loads another. Individually these costs are tiny, but they accumulate, and studies consistently find that people who switch frequently take longer and make more errors than those who complete tasks one at a time.\n\n**C** Defenders of multitasking point out that some combinations work well. Walking while talking, or listening to music while washing dishes, seems to cause few problems. This is true, but it does not contradict my argument. These examples pair an automatic activity with one that requires attention; the difficulty arises when both tasks demand conscious thought.\n\n**D** Perhaps the most troubling finding is that people who multitask heavily are often the most confident in their ability to do so, even though their performance is no better, and sometimes worse, than that of others. Our sense of being productive, in other words, is a poor guide to whether we actually are.\n\n**E** I am not suggesting that we can always avoid interruptions; modern work rarely allows that. But we can choose to protect periods of uninterrupted concentration for our most demanding tasks. The evidence suggests that doing so is not a luxury but one of the simplest ways to work better.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "Why wild bees are disappearing",
+    "The history of beekeeping",
+    "How honey is made",
+    "Beehives in unexpected urban places"
+   ],
+   "answer": 3,
+   "explanation": "Абзац A перечисляет крыши, балконы, ратуши и отели — ульи в неожиданных местах города (D). Об исчезновении диких пчёл, истории пчеловодства и производстве мёда в нём нет."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "Farmers who keep bees",
+    "The best time to collect honey",
+    "A greater variety of flowers in cities",
+    "The dangers of city traffic for bees"
+   ],
+   "answer": 2,
+   "explanation": "Главное в B — в городе больше разных цветов, цветущих в разное время (C). Движение, фермеры и сбор мёда не упоминаются."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "How city warmth lengthens the flowering season",
+    "Why bees avoid hot weather",
+    "Buildings designed for bees",
+    "Bees in winter"
+   ],
+   "answer": 0,
+   "explanation": "C объясняет, что городское тепло продлевает сезон цветения (A). Бегства от жары, зданий для пчёл и зимы нет."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "The value of rare bees as pets",
+    "How bumblebees make honey",
+    "The benefits of more hives",
+    "A risk of keeping too many hives"
+   ],
+   "answer": 3,
+   "explanation": "D — предупреждение: слишком много ульев вредит диким пчёлам (D). B и C не о тексте; D противоположна смыслу."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "A beekeeper's favourite recipe",
+    "Selling honey in shops",
+    "Laws against keeping bees",
+    "Planting flowers instead of adding hives"
+   ],
+   "answer": 3,
+   "explanation": "E советует сажать цветы, а не добавлять ульи (D). Рецептов, продаж и запретов нет."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "The sea otter's diet",
+    "Dangers facing sea otters today",
+    "How sea otters stay warm",
+    "Where to watch sea otters"
+   ],
+   "answer": 2,
+   "explanation": "A: нет жира — тепло держит плотный мех (C). Где наблюдать, рацион и угрозы описаны в других абзацах или не описаны вовсе."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "The use of stones",
+    "Life in kelp forests",
+    "A large appetite in cold water",
+    "Hunting for fur"
+   ],
+   "answer": 2,
+   "explanation": "B: холодная вода — много еды, четверть веса в день (C). Охота на мех — D, камни — C, лес из ламинарии — E."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "Sleeping in groups",
+    "A rare ability to use tools",
+    "Why otters float on their backs",
+    "Teaching young otters to swim"
+   ],
+   "answer": 1,
+   "explanation": "C — использование камней как инструментов (B). Плавание на спине — лишь деталь способа; обучения детёнышей и сна в группах нет."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "A new hunting season",
+    "Moving otters to new coasts",
+    "From near extinction to recovery",
+    "The price of sea otter fur today"
+   ],
+   "answer": 2,
+   "explanation": "D: охота почти истребила выдр, после соглашения 1911 года численность восстанавливается (C). Цен, нового сезона охоты и переселения нет."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Otters as pets",
+    "The growth of sea urchin numbers",
+    "Protecting forests under the sea",
+    "Why fish avoid otters"
+   ],
+   "answer": 2,
+   "explanation": "E: выдры едят ежей и тем помогают лесам ламинарии (C). Рыбы, наоборот, находят там укрытие; домашних выдр нет; ежей становится меньше, а не больше."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "The history of school meals",
+    "Famous chefs who started at school",
+    "Why children dislike vegetables",
+    "A useful skill that has been lost from schools"
+   ],
+   "answer": 3,
+   "explanation": "A: готовку убрали из расписания, а это полезный навык (D). Истории питания, известных поваров и нелюбви к овощам нет."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "The rise of ready meals in restaurants",
+    "Children who teach their parents",
+    "Why home is not always enough",
+    "Parents who cook every day"
+   ],
+   "answer": 2,
+   "explanation": "B: дома научить не всегда получается — родители заняты (C). Остальные заголовки не отражают аргумент."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "The science of baking bread",
+    "Students who prefer maths",
+    "Classroom rules for kitchens",
+    "Links with other subjects"
+   ],
+   "answer": 3,
+   "explanation": "C: кулинария поддерживает математику и естествознание (D). Хлеб — лишь пример; предпочтения и правила не обсуждаются."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "Illnesses caused by cooking",
+    "Answering the argument about cost",
+    "The high price of healthy food",
+    "Building a new school"
+   ],
+   "answer": 1,
+   "explanation": "D отвечает на довод о стоимости кухонь (B). Цен на здоровую еду, новой школы и болезней от готовки нет."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Training future chefs",
+    "The perfect boiled egg",
+    "Ending all cooking classes",
+    "A modest goal"
+   ],
+   "answer": 3,
+   "explanation": "E: цель скромная — чтобы никто не ушёл из школы, не умея сварить яйцо (D). Автор прямо говорит, что не готовит поваров; яйцо — пример; D противоположно."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "A history of water shortages",
+    "How ice stores fresh water",
+    "The cost of building desalination plants",
+    "The pressure to find new water sources"
+   ],
+   "answer": 3,
+   "explanation": "A: мало пресной воды, растёт население и засухи — страны ищут новые источники (D). Истории нехватки, льда как хранилища и стоимости строительства абзац не раскрывает."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "An old method with a high energy cost",
+    "Why sailors avoided seawater",
+    "A modern solution to an old problem",
+    "The discovery of salt"
+   ],
+   "answer": 0,
+   "explanation": "B: дистилляция — давний метод, но требует огромной энергии (A). Моряки, наоборот, ей пользовались; современный метод — в C."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "Filtering salt through tiny holes",
+    "The rising price of electricity",
+    "Water from rivers and lakes",
+    "Problems with old pumps"
+   ],
+   "answer": 0,
+   "explanation": "C описывает обратный осмос — мембраны с порами, которые пропускают воду, но не соль (A). Цены на электричество, реки и старые насосы не основная тема."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "Fish farming near desalination plants",
+    "Why seawater is getting saltier",
+    "Cleaning beaches after storms",
+    "A waste product that can harm the sea"
+   ],
+   "answer": 3,
+   "explanation": "D: рассол как отход, вредящий морскому дну (D). Рыбных ферм, засоления морей и уборки пляжей нет."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Growth and new ideas despite the problems",
+    "The end of desalination",
+    "A region with plenty of rain",
+    "Why solar energy is unreliable"
+   ],
+   "answer": 0,
+   "explanation": "E: опреснение растёт, исследуют солнечные станции (A). B и D противоречат; Ближний Восток как раз засушлив."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "A rare plant of the tropics",
+    "How to grow lichens at home",
+    "The colours of lichens",
+    "Common but often overlooked"
+   ],
+   "answer": 3,
+   "explanation": "A: лишайники повсюду, но их мало кто замечает (D). Они не редки и не только тропические; выращивание и цвета не обсуждаются."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "A controversial idea that changed science",
+    "The life of a Swiss teacher",
+    "The first photographs of lichens",
+    "Why bacteria cannot photosynthesise"
+   ],
+   "answer": 0,
+   "explanation": "B: идея Швенденера о союзе гриба и водоросли сначала встретила сопротивление, а теперь признана (A). Биографии, фото и D (противоречит тексту) нет."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "How each partner contributes",
+    "Competition between fungi and algae",
+    "Why lichens avoid mountain tops",
+    "The danger of eating lichens"
+   ],
+   "answer": 0,
+   "explanation": "C: гриб даёт структуру и влагу, партнёр — сахара (A). Конкуренции нет — это сотрудничество; на вершинах они как раз выживают."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "The fastest-growing lichens",
+    "Collecting rock samples",
+    "Using slow growth to measure time",
+    "Why glaciers are retreating"
+   ],
+   "answer": 2,
+   "explanation": "D: медленный и равномерный рост позволяет датировать поверхности (C). Причины отступления ледников, быстрый рост и сбор образцов не тема."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Lichens as a source of pollution",
+    "The history of industrial cities",
+    "Medicines made from lichens",
+    "Living indicators of air quality"
+   ],
+   "answer": 3,
+   "explanation": "E: лишайники как индикаторы чистоты воздуха (D). Они не загрязняют; история городов — фон; лекарств нет."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "Answering a common question",
+    "The history of the Latin language",
+    "Why nobody speaks Latin today",
+    "A career as a teacher"
+   ],
+   "answer": 0,
+   "explanation": "A: автор отвечает на частый вопрос «зачем учить латынь» (A). Истории языка, причин его «смерти» и карьеры нет."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "The difficulty of Latin grammar tests",
+    "English words borrowed from Latin",
+    "Students who dislike grammar",
+    "A habit that improves reading and writing"
+   ],
+   "answer": 3,
+   "explanation": "B: внимательный разбор окончаний переносится на чтение и письмо по-английски (D). Заимствованные слова — тема C."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "Learning Latin roots in one year",
+    "A list of useful words",
+    "Why vocabulary is unimportant",
+    "An argument that is exaggerated"
+   ],
+   "answer": 3,
+   "explanation": "C: довод о словаре верен, но преувеличен (D). «Один год» противоречит «a few lessons»; D слишком сильно."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "A visit to Rome",
+    "The poets students dislike",
+    "Access to great literature",
+    "Problems with translations"
+   ],
+   "answer": 2,
+   "explanation": "D: латынь открывает литературную традицию в оригинале (C). Перевод лишь сравнивается; поездок и нелюбимых поэтов нет."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Latin for every student",
+    "The decline of modern languages",
+    "Puzzles and games in the classroom",
+    "A place in the curriculum, but not for everyone"
+   ],
+   "answer": 3,
+   "explanation": "E: не обязательно, но место в программе для любителей головоломок (D). B противоречит; упадка современных языков нет."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "Why bones last longer than wood",
+    "Measuring the decay of a radioactive element",
+    "The discovery of carbon in the atmosphere",
+    "How plants make carbon-14"
+   ],
+   "answer": 1,
+   "explanation": "A объясняет принцип: после смерти углерод-14 распадается с постоянной скоростью, и по остатку оценивают время (B). Открытие углерода, образование C-14 растениями и сравнение костей с деревом не тема."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "Libby's childhood interest in history",
+    "A breakthrough rewarded with a prize",
+    "The difficulties of studying written records",
+    "A rival method developed in Europe"
+   ],
+   "answer": 1,
+   "explanation": "B: метод Либби изменил археологию и принёс Нобелевскую премию (B). Письменные источники, конкурирующего метода и детства Либби в абзаце нет."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "A method that needs no calibration",
+    "Correcting a mistaken assumption",
+    "The role of the sun in plant growth",
+    "How to count tree rings"
+   ],
+   "answer": 1,
+   "explanation": "C: допущение о постоянном уровне C-14 оказалось неверным, отсюда калибровка (B). Кольца деревьев — лишь инструмент; D противоположно."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "Fossil fuels as a source of carbon-14",
+    "The end of the Industrial Revolution",
+    "How modern human activity distorts the record",
+    "The benefits of nuclear testing"
+   ],
+   "answer": 2,
+   "explanation": "D: сжигание топлива и ядерные испытания исказили уровень C-14 (C). Пользы испытаний нет; ископаемое топливо как раз не содержит C-14; конца революции нет."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Dating the age of the universe",
+    "Why uranium is dangerous",
+    "The oldest objects ever found",
+    "The age beyond which the method fails"
+   ],
+   "answer": 3,
+   "explanation": "E: после ~50 000 лет метод ненадёжен — нужны другие (D). Возраста Вселенной, опасности урана и древнейших находок нет."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "Why elephants need more sleep than bats",
+    "The definition of a dream",
+    "Animals that never sleep",
+    "Great variation in how much animals sleep"
+   ],
+   "answer": 3,
+   "explanation": "A: сон есть почти у всех, но его количество сильно различается (D). B переворачивает данные; о снах и животных без сна речи нет."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "The dangers of breathing underwater",
+    "Sleeping with half the brain in the water",
+    "How dolphins catch fish at night",
+    "Marine mammals that cannot swim"
+   ],
+   "answer": 1,
+   "explanation": "B: дельфины спят одним полушарием, чтобы всплывать и следить за опасностью (B). Охоты, неумения плавать и дыхания под водой нет."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "Measuring the speed of birds",
+    "Rest during long flights",
+    "Birds that migrate at night",
+    "Why frigatebirds avoid land"
+   ],
+   "answer": 1,
+   "explanation": "C: фрегаты спят в полёте короткими эпизодами (B). Ночной миграции и скорости нет; на суше они как раз спят больше."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "The dangers faced by sleeping animals",
+    "A final explanation of sleep",
+    "How animals choose where to sleep",
+    "An unsolved question and possible answers"
+   ],
+   "answer": 3,
+   "explanation": "D: зачем нужен сон — загадка; перечислены ведущие теории (D). Опасности — лишь часть аргумента; окончательного объяснения нет; выбор места не обсуждается."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "Why debts must be repaid",
+    "Insects that sleep in winter",
+    "Evidence from depriving animals of sleep",
+    "Teaching fruit flies to sleep"
+   ],
+   "answer": 2,
+   "explanation": "E: опыты с лишением сна показывают, что он необходим (C). Обучения сну, долгов и зимней спячки нет."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph A?",
+   "choices": [
+    "How to answer emails efficiently",
+    "The history of the podcast",
+    "Why driving is dangerous",
+    "A widespread belief challenged"
+   ],
+   "answer": 3,
+   "explanation": "A: распространённую уверенность в многозадачности автор называет иллюзией (D). Остальное — примеры, а не тема абзаца."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph B?",
+   "choices": [
+    "A new method of studying",
+    "Why some errors are useful",
+    "The speed of the human brain",
+    "The hidden cost of switching"
+   ],
+   "answer": 3,
+   "explanation": "B: каждое переключение имеет цену, и она накапливается (D). Нового метода, пользы ошибок и скорости мозга нет."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph C?",
+   "choices": [
+    "An objection considered and answered",
+    "The pleasure of washing dishes",
+    "Combinations that always fail",
+    "Learning to walk and talk"
+   ],
+   "answer": 0,
+   "explanation": "C: автор рассматривает возражение и показывает, что оно не опровергает его аргумент (A). Мытьё посуды — пример; «всегда не работают» противоречит тексту."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph D?",
+   "choices": [
+    "Confidence that does not match performance",
+    "The most productive workers",
+    "Why multitaskers perform better",
+    "A test of memory"
+   ],
+   "answer": 0,
+   "explanation": "D: активные «многозадачники» уверены в себе сильнее всех, хотя результаты не лучше (A). C противоположно; о самых продуктивных и тесте памяти нет."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Which heading best fits paragraph E?",
+   "choices": [
+    "A call to ban smartphones",
+    "Why interruptions are always harmful",
+    "The luxury of free time",
+    "A practical recommendation"
+   ],
+   "answer": 3,
+   "explanation": "E: практический совет — защищать периоды концентрации (D). Запрета смартфонов нет; автор признаёт, что прерываний не избежать; «роскошь» он отрицает."
+  }
+ ]
+}

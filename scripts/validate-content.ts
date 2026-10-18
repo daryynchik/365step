@@ -105,7 +105,8 @@ for (const t of tasks) {
   if (/\.\.\.|…|\bнет[:,]|\?\s/.test(prose)) errors.push(`${t.id}: explanation looks unfinished — ${t.explanation.slice(0, 80)}`);
   if (t.type === "mcq" && !/[A-D]\)/.test(t.explanation) && !/\([A-D]\)/.test(t.explanation)) {
     const letter = "ABCD"[t.answer as number];
-    if (letter && !t.explanation.includes(letter) && !FIXED_CHOICES[t.skill.split(".")[1]]) warnings.push(`${t.id}: explanation does not name the right choice (${letter})`);
+    const byParagraph = (t.choices ?? []).every((c) => c.startsWith("Paragraph "));
+    if (letter && !byParagraph && !t.explanation.includes(letter) && !FIXED_CHOICES[t.skill.split(".")[1]]) warnings.push(`${t.id}: explanation does not name the right choice (${letter})`);
   }
 }
 
@@ -264,7 +265,13 @@ for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
  * stems count as near-duplicates only when they also share most numbers.
  */
 function normalise(t: Task): string {
-  return `${t.passage ?? ""} ${t.passage2 ?? ""} ${t.stem}`
+  // Items on a shared passage (IELTS) can share a stem ("Which heading best fits
+  // paragraph B?"); the passage and the choices tell them apart.
+  // Prompts share the examiner's script (left out for speaking); their questions,
+  // cue cards and data differ.
+  const extra = [...(t.questions ?? []), t.cueCard?.topic ?? "", ...(t.table?.rows.flat() ?? [])].join(" ");
+  const stem = t.type === "speaking-prompt" ? "" : t.stem;
+  return `${t.passageRef ?? ""} ${t.passage ?? ""} ${t.passage2 ?? ""} ${stem} ${(t.choices ?? []).join(" ")} ${extra}`
     .toLowerCase()
     .replace(/[−–—]/g, "-")
     .replace(/[“”«»"']/g, "")

@@ -1,0 +1,352 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "writing",
+  "domain": "task2",
+  "skill": "task2",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nSome people think that all children should learn to play a musical instrument at school. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position: agree (or partly agree). Body 1: music develops discipline and concentration (practice example). Body 2: playing together builds teamwork; concession — not every child enjoys it, so choice of instrument matters. Conclusion: restate position.",
+   "explanation": "Task Response: ясная позиция «to what extent» с первого абзаца. Coherence: один довод — один абзац. Lexical: develop discipline, extracurricular, compulsory. Ошибка: писать про музыку вообще, а не про обязательное обучение в школе."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nMany people now shop online rather than in stores. Do you think this is a positive or negative development?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position: mainly positive. Body 1: convenience and lower prices (example). Body 2: concession — local shops close and people lose social contact; but online shopping also helps small sellers reach customers. Conclusion.",
+   "explanation": "Task Response: ответ «positive or negative» должен быть явным. Coherence: развитие доводов с примерами. Lexical: convenience, local businesses, decline. Ошибка: описывать плюсы и минусы, не сказав, что перевешивает."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "discussion",
+   "stem": "Write about the following topic:\n\nSome people prefer to live in a big city, while others prefer to live in the countryside. Discuss both views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Обе точки зрения раскрыты в отдельных абзацах",
+    "Собственное мнение высказано (если требуется)",
+    "Каждая идея объяснена и подкреплена примером",
+    "Связки разнообразны и уместны"
+   ],
+   "answer": "Intro + opinion. Body 1: city — jobs, education, entertainment. Body 2: countryside — clean air, lower costs, quieter life. Body 3/Conclusion: own view (e.g., depends on life stage).",
+   "explanation": "Task Response: обе точки зрения + собственное мнение. Coherence: отдельные абзацы для взглядов. Lexical: amenities, cost of living, pace of life. Ошибка: забыть своё мнение."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "problem-solution",
+   "stem": "Write about the following topic:\n\nIn many cities, there is too much traffic. What problems does this cause, and what can be done to reduce it?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Названы конкретные причины или проблемы",
+    "Решения прямо связаны с названными проблемами",
+    "Есть пример или объяснение, как решение работает",
+    "Чёткое деление на абзацы: проблемы — решения"
+   ],
+   "answer": "Problems: air pollution and health; lost time and stress. Solutions: better public transport; congestion charges; cycling lanes — each linked to a problem.",
+   "explanation": "Task Response: обе части — проблемы и решения. Связывайте решения с проблемами. Lexical: congestion, emissions, commute. Ошибка: перечислить решения без объяснения, как они работают."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "two-part",
+   "stem": "Write about the following topic:\n\nMany young people today spend a lot of time playing computer games. Why is this? Is it a good or bad thing?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Ответ на оба вопроса задания, каждому — свой абзац",
+    "Ответы развёрнуты, с объяснением и примером",
+    "Введение называет оба аспекта",
+    "Заключение кратко отвечает на оба вопроса"
+   ],
+   "answer": "Part 1 (why): games are designed to be engaging, social online play, easy access on phones. Part 2 (good/bad): skills like problem solving vs. less exercise and sleep; position: harmful only in excess.",
+   "explanation": "Task Response: два вопроса — два ответа. Lexical: addictive, in moderation, sedentary. Ошибка: ответить только на «good or bad»."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nSome people believe that students should wear school uniforms. Do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position stated. Body 1: equality — less pressure about clothes. Body 2: saves time and money; concession — limits self-expression, but schools can allow some choice. Conclusion.",
+   "explanation": "Task Response: позиция на протяжении всего эссе. Coherence: связки For one thing, Moreover, Admittedly. Lexical: peer pressure, self-expression. Ошибка: менять позицию в заключении."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "discussion",
+   "stem": "Write about the following topic:\n\nSome people think that children should start school at a very early age, while others believe they should not begin until they are older. Discuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Обе точки зрения раскрыты в отдельных абзацах",
+    "Собственное мнение высказано (если требуется)",
+    "Каждая идея объяснена и подкреплена примером",
+    "Связки разнообразны и уместны"
+   ],
+   "answer": "View 1: early start — social skills, early literacy, helps working parents. View 2: later start — play is important, children need time with family. Opinion: balanced view or clear side.",
+   "explanation": "Task Response: обе стороны и мнение. Lexical: early childhood, socialise, formal education. Ошибка: перепутать «early age» с подростковым возрастом."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nSome people argue that governments should spend money on public services rather than on the arts. To what extent do you agree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position: partly agree — essential services first, but arts have value. Body 1: health and education as priorities. Body 2: arts support identity, tourism and well-being and need relatively little funding. Conclusion: balance.",
+   "explanation": "Task Response: «to what extent» допускает частичное согласие, но оно должно быть ясным. Coherence: уступка и контраргумент. Lexical: allocate funding, cultural heritage, priorities. Ошибка: обсуждать только искусство."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "discussion",
+   "stem": "Write about the following topic:\n\nSome people believe that university education should be free for everyone, while others think students should pay for it. Discuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Обе точки зрения раскрыты в отдельных абзацах",
+    "Собственное мнение высказано (если требуется)",
+    "Каждая идея объяснена и подкреплена примером",
+    "Связки разнообразны и уместны"
+   ],
+   "answer": "View 1: free — equal opportunity, benefits society. View 2: pay — students benefit personally, taxpayers' burden. Opinion with reason (e.g., free for low-income students).",
+   "explanation": "Task Response: аргументы обеих сторон с примерами + мнение. Lexical: tuition fees, social mobility, taxpayers. Ошибка: общие фразы без примеров."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "problem-solution",
+   "stem": "Write about the following topic:\n\nIn many countries, people are throwing away more food than ever before. Why is this happening, and what can be done about it?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Названы конкретные причины или проблемы",
+    "Решения прямо связаны с названными проблемами",
+    "Есть пример или объяснение, как решение работает",
+    "Чёткое деление на абзацы: проблемы — решения"
+   ],
+   "answer": "Causes: bulk buying, confusion over best-before dates, supermarket standards for appearance. Solutions: clearer labels, donation of unsold food, education; each linked to a cause.",
+   "explanation": "Task Response: причины и решения, связанные между собой. Lexical: food waste, expiry date, redistribute. Grammar: условные и пассивные конструкции. Ошибка: смешать причины и решения в одном абзаце."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "two-part",
+   "stem": "Write about the following topic:\n\nIn some countries, more and more people are choosing to live alone. What are the reasons for this? Is it a positive or negative trend?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Ответ на оба вопроса задания, каждому — свой абзац",
+    "Ответы развёрнуты, с объяснением и примером",
+    "Введение называет оба аспекта",
+    "Заключение кратко отвечает на оба вопроса"
+   ],
+   "answer": "Reasons: later marriage, higher incomes, urban jobs, ageing population. Evaluation: independence vs. loneliness and housing demand; clear position.",
+   "explanation": "Task Response: оба вопроса. Coherence: абзац причин, абзац оценки. Lexical: single-person households, independence, isolation. Ошибка: перечислить причины без оценки тренда."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nTechnology is making it easier for people to work from home. Some people think this has more advantages than disadvantages. Do you agree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position: agree with reservations. Advantages: no commute, flexibility, wider talent pool. Disadvantages: isolation, blurred work-life boundaries. Weighing: advantages outweigh if managed.",
+   "explanation": "Task Response: сравнение «more advantages than disadvantages» — нужно взвесить, а не просто перечислить. Lexical: flexible working, work-life balance, isolation. Ошибка: не сказать, что перевешивает."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "discussion",
+   "stem": "Write about the following topic:\n\nSome people think that the best way to reduce crime is to give longer prison sentences. Others believe there are better ways. Discuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Обе точки зрения раскрыты в отдельных абзацах",
+    "Собственное мнение высказано (если требуется)",
+    "Каждая идея объяснена и подкреплена примером",
+    "Связки разнообразны и уместны"
+   ],
+   "answer": "View 1: deterrence and public safety. View 2: rehabilitation, education, addressing poverty. Opinion: combination, emphasis on prevention.",
+   "explanation": "Task Response: обе точки зрения, мнение. Lexical: deterrent, rehabilitation, reoffend. Ошибка: эмоциональные утверждения без аргументов."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "problem-solution",
+   "stem": "Write about the following topic:\n\nMany children today are overweight. What are the causes of this problem, and what measures can be taken to solve it?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Названы конкретные причины или проблемы",
+    "Решения прямо связаны с названными проблемами",
+    "Есть пример или объяснение, как решение работает",
+    "Чёткое деление на абзацы: проблемы — решения"
+   ],
+   "answer": "Causes: processed food, less physical activity, screen time. Measures: school meals and PE, limits on advertising to children, family education.",
+   "explanation": "Task Response: причины и меры. Coherence: каждое решение отвечает на причину. Lexical: sedentary lifestyle, junk food, physical education. Ошибка: общие советы «eat healthy» без конкретных мер."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nSome people believe that the main purpose of education is to prepare individuals for the workforce. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position: partly disagree — employment is one purpose, but education also develops citizens and critical thinkers. Body 1: concession — economic value of skills. Body 2: civic and personal aims; skills employers value are also broad. Conclusion.",
+   "explanation": "Task Response: аргументированная позиция с нюансами. Coherence: продуманная уступка. Lexical: workforce, critical thinking, civic responsibility. Grammar: сложные конструкции (While it is undeniable that…). Ошибка: подменить тему разговором о качестве школ."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "discussion",
+   "stem": "Write about the following topic:\n\nSome argue that international tourism benefits local communities, while others believe it harms them. Discuss both views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Обе точки зрения раскрыты в отдельных абзацах",
+    "Собственное мнение высказано (если требуется)",
+    "Каждая идея объяснена и подкреплена примером",
+    "Связки разнообразны и уместны"
+   ],
+   "answer": "Benefits: income, jobs, preservation of heritage. Harms: rising prices, cultural change, environmental pressure. Opinion: depends on management; examples of limits and local ownership.",
+   "explanation": "Task Response: обе стороны с конкретикой + мнение. Lexical: local economy, overtourism, cultural erosion. Ошибка: слишком общие примеры, не связанные с местными сообществами."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "two-part",
+   "stem": "Write about the following topic:\n\nIn many countries, the proportion of older people is increasing. What problems might this cause? What can be done to address them?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Ответ на оба вопроса задания, каждому — свой абзац",
+    "Ответы развёрнуты, с объяснением и примером",
+    "Введение называет оба аспекта",
+    "Заключение кратко отвечает на оба вопроса"
+   ],
+   "answer": "Problems: pension costs, healthcare demand, fewer workers. Solutions: raising retirement age gradually, encouraging migration, investment in preventive health.",
+   "explanation": "Task Response: проблемы и решения. Lexical: ageing population, pension system, workforce shortage. Grammar: модальные и условные (would need to, unless). Ошибка: не связать решения с проблемами."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "opinion",
+   "stem": "Write about the following topic:\n\nIt is sometimes argued that too many people today rely on social media for news, and that this is harmful to society. To what extent do you agree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Позиция ясна во введении и не меняется до конца",
+    "Два-три довода, у каждого объяснение и пример",
+    "Учтён противоположный взгляд (уступка), но он не размывает позицию",
+    "Заключение повторяет позицию, без новых идей"
+   ],
+   "answer": "Position: largely agree. Body 1: misinformation and filter bubbles. Body 2: concession — speed and diversity of voices; solution: media literacy. Conclusion.",
+   "explanation": "Task Response: позиция о вреде для общества, не о соцсетях вообще. Lexical: misinformation, echo chamber, media literacy. Ошибка: перескочить на вред соцсетей для здоровья."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "problem-solution",
+   "stem": "Write about the following topic:\n\nIn some cities, housing has become so expensive that many people cannot afford to live there. What are the causes of this, and what solutions can you suggest?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Названы конкретные причины или проблемы",
+    "Решения прямо связаны с названными проблемами",
+    "Есть пример или объяснение, как решение работает",
+    "Чёткое деление на абзацы: проблемы — решения"
+   ],
+   "answer": "Causes: limited land and building restrictions, investment buying, population growth. Solutions: more housing supply, social housing, taxes on empty homes.",
+   "explanation": "Task Response: причины и решения, связанные логически. Lexical: affordable housing, demand outstrips supply, zoning. Ошибка: перечислить решения без объяснения механизма."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "discussion",
+   "stem": "Write about the following topic:\n\nSome people believe that scientific research should be carried out and controlled by governments, while others think it should be left to private companies. Discuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+   "minWords": 250,
+   "maxWords": 380,
+   "rubric": [
+    "Обе точки зрения раскрыты в отдельных абзацах",
+    "Собственное мнение высказано (если требуется)",
+    "Каждая идея объяснена и подкреплена примером",
+    "Связки разнообразны и уместны"
+   ],
+   "answer": "Government: public interest, basic research, long-term goals. Private: efficiency, innovation, funding. Opinion: partnership with public oversight.",
+   "explanation": "Task Response: обе стороны и мнение. Lexical: public interest, profit motive, oversight, innovation. Grammar: уступительные конструкции. Ошибка: описывать науку в целом без вопроса о контроле."
+  }
+ ]
+}

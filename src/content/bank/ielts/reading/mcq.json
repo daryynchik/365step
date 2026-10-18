@@ -1,0 +1,752 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "multiple-choice",
+  "skill": "mcq",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p4",
+   "title": "Why Schools Should Teach Cooking",
+   "text": "**A** In many countries, cooking has quietly disappeared from the school timetable. I believe this is a mistake. Knowing how to prepare a simple, healthy meal is as useful as any skill a young person can learn, and schools are the best place to teach it.\n\n**B** Some people argue that cooking should be taught at home. In an ideal world, perhaps it would be. But many parents work long hours and rely on ready meals, and children who never see food being prepared cannot be expected to learn by themselves.\n\n**C** Cooking lessons also support other subjects. Measuring ingredients involves maths, and understanding why bread rises is a lesson in science. In my experience, students who struggle in a normal classroom often concentrate better when they can work with their hands.\n\n**D** Critics point to the cost of kitchens and ingredients. These costs are real, but they are small compared with the long-term costs of poor diets, which are linked to illnesses that are expensive to treat. A basic kitchen classroom is a sensible investment.\n\n**E** I am not suggesting that every student should become a chef. The aim is more modest: to make sure that no one leaves school unable to boil an egg or cook a pan of vegetables. That, surely, is not too much to ask.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p5",
+   "title": "Should Homework Be Banned?",
+   "text": "**A** Every few years, a newspaper reports that a school somewhere has abolished homework, and the debate begins again. Some parents are delighted; others are horrified. In my view, both sides are partly right, because the real question is not whether homework should exist but what kind of homework is worth setting.\n\n**B** The case against homework is strongest for young children. Research suggests that for pupils in the first years of primary school, homework has little effect on how well they do. For these children, time spent playing, reading for pleasure or simply talking with their families is probably more valuable.\n\n**C** For older students, however, the picture is different. Practising new skills at home helps them remember what they have learned, and learning to plan their own work prepares them for university and employment. I would be worried about a secondary school that set no homework at all.\n\n**D** The problem is that much homework is poorly designed. Worksheets that repeat what was done in class, or projects that depend mainly on how much help parents can give, waste time and can be unfair. Students from busy or poorer homes may not have the same support.\n\n**E** Instead of banning homework, schools should set less of it and make it better. A short task that asks students to think, rather than copy, is worth more than an hour of busywork. Teachers should also explain why each piece of homework matters.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p6",
+   "title": "In Praise of Boredom",
+   "text": "**A** Most of us now carry a device that can end boredom in seconds. Waiting for a bus or standing in a queue, we reach for our phones without thinking. I want to suggest that this habit costs us something important.\n\n**B** Boredom is uncomfortable, but it is not useless. When the mind has nothing to focus on, it begins to wander, and this wandering is often where new ideas come from. Many people say their best ideas arrive in the shower or on a long walk, when they are not trying to think at all.\n\n**C** Some psychologists have tested this idea. In one well-known experiment, people who first did a dull task, such as copying numbers from a phone book, later came up with more creative uses for everyday objects than people who had not been bored. One study does not prove a rule, but the result is interesting.\n\n**D** I am not against technology. Phones help us stay in touch and find information, and I use mine every day. My concern is simply that we no longer allow ourselves even a few minutes with nothing to do.\n\n**E** So the next time you are waiting for a train, try leaving your phone in your pocket. You may feel restless at first. But you might also notice something you would have missed, or have a thought that surprises you.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p4",
+   "title": "The Case for Learning Latin",
+   "text": "**A** When I tell people that I teach Latin, they often ask why anyone should learn a language that nobody speaks. It is a fair question. My answer is that Latin is useful not because students will speak it, but because of what learning it does to the way they think about language.\n\n**B** Latin is a highly inflected language: the endings of words change to show their role in a sentence. To read even a simple sentence, students must analyse each word carefully. I have found that this habit of close attention carries over to their reading and writing in English.\n\n**C** Supporters of Latin often claim that it improves students' vocabulary, since many English words come from Latin roots. This is true, but I think the claim is overstated. Students can learn these roots in a few lessons; they do not need years of study to discover that 'aqua' means water.\n\n**D** A stronger argument is that Latin opens a door to a long literary tradition. Reading Virgil or Ovid in the original is a different experience from reading a translation, and students who manage it gain a confidence that few other achievements provide.\n\n**E** None of this means that Latin should be compulsory. Many students will gain more from studying a modern language that allows them to talk to people in other countries. But for those who enjoy puzzles and patterns, Latin deserves a place in the curriculum.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p5",
+   "title": "Tourism and Fragile Places",
+   "text": "**A** Every summer, crowds of visitors arrive in historic towns, mountain villages and coral islands, attracted by photographs they have seen online. Tourism brings money and jobs, but I believe that in some places it has reached a level that threatens the very things visitors come to see.\n\n**B** Consider the small coastal villages whose streets are now lined with souvenir shops and holiday flats. As property is bought for short-term rentals, rents rise and local families are forced to move away. A village without residents may look charming, but it has lost its life.\n\n**C** Some governments have responded by charging visitors an entry fee or limiting the number of tourists allowed each day. Critics argue that such measures turn heritage into a luxury for the wealthy. I understand this concern, but I think a modest fee, if the money is spent on protecting the site, is a reasonable price to pay.\n\n**D** Tourists themselves can also help. Visiting in the quieter months, staying longer in one place rather than rushing between several, and spending money in locally owned businesses all reduce pressure on popular destinations while supporting their communities.\n\n**E** I do not want to discourage travel, which can broaden the mind and build understanding between cultures. My argument is simply that some places are too fragile to absorb unlimited numbers, and that protecting them now is the only way to ensure that future visitors can still enjoy them.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p6",
+   "title": "Should Museums Return Objects?",
+   "text": "**A** Many of the great museums of Europe and North America hold objects taken from other countries during periods of colonial rule. In recent years, demands for their return have grown louder. In my view, museums should treat these requests far more seriously than they have done in the past.\n\n**B** Museums often argue that they are best placed to protect valuable objects, which might be damaged if returned. This argument may once have been convincing, but many countries now have modern museums with excellent conservation facilities. It also assumes that the people who made the objects cannot be trusted to care for them, an assumption I find uncomfortable.\n\n**C** Another common argument is that large museums allow millions of visitors from around the world to see objects from many cultures in one place. This is a genuine benefit. Yet it does not explain why the objects must stay permanently in one city; long-term loans and travelling exhibitions could serve the same purpose.\n\n**D** Not every case is simple. Some objects were bought legally, and in some cases it is unclear which modern community has the strongest claim. Each request should therefore be examined carefully, with evidence about how the object left its country of origin.\n\n**E** What matters most is a change in attitude. Rather than defending their collections at all costs, museums should begin from the question of how each object came to be there. Where the answer reveals injustice, returning it is not a loss but a way of telling the truth about the past.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p4",
+   "title": "The Myth of Multitasking",
+   "text": "**A** We like to believe that we can do several things at once: answer emails during a meeting, listen to a podcast while studying, check messages while driving. I want to argue that, for most tasks that require thought, multitasking is largely an illusion, and an expensive one.\n\n**B** What feels like doing two things simultaneously is usually rapid switching between them. Each switch carries a small cost, as the brain disengages from one set of rules and loads another. Individually these costs are tiny, but they accumulate, and studies consistently find that people who switch frequently take longer and make more errors than those who complete tasks one at a time.\n\n**C** Defenders of multitasking point out that some combinations work well. Walking while talking, or listening to music while washing dishes, seems to cause few problems. This is true, but it does not contradict my argument. These examples pair an automatic activity with one that requires attention; the difficulty arises when both tasks demand conscious thought.\n\n**D** Perhaps the most troubling finding is that people who multitask heavily are often the most confident in their ability to do so, even though their performance is no better, and sometimes worse, than that of others. Our sense of being productive, in other words, is a poor guide to whether we actually are.\n\n**E** I am not suggesting that we can always avoid interruptions; modern work rarely allows that. But we can choose to protect periods of uninterrupted concentration for our most demanding tasks. The evidence suggests that doing so is not a luxury but one of the simplest ways to work better.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p5",
+   "title": "Is Growth Enough?",
+   "text": "**A** For much of the twentieth century, governments measured their success largely by the growth of gross domestic product, or GDP, the total value of goods and services an economy produces. The assumption was simple: a growing economy meant rising living standards. I believe this assumption, while not entirely wrong, has become dangerously incomplete.\n\n**B** GDP was never designed to measure well-being. Its creators warned that it says nothing about how income is distributed, and it counts some activities that make life worse. A traffic accident, for instance, raises GDP through spending on repairs and medical care, while unpaid work such as caring for children or elderly relatives is not counted at all.\n\n**C** It would be foolish to dismiss growth entirely. In poorer countries, economic growth has lifted hundreds of millions of people out of extreme poverty, providing better food, housing and healthcare. The question is not whether growth matters but whether, beyond a certain level of wealth, it should remain the main goal of policy.\n\n**D** Several countries have begun to publish alternative measures alongside GDP, tracking indicators such as life expectancy, levels of trust and access to green space. Critics complain that such measures are subjective and difficult to compare. They have a point, but an imperfect measure of what matters may be more useful than a precise measure of something that matters less.\n\n**E** What I am proposing, then, is not abandoning GDP but putting it in its place: as one indicator among several, rather than the single number by which a nation judges itself. A society can become richer without becoming better off, and our statistics should be able to tell the difference.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p6",
+   "title": "Lost in Translation?",
+   "text": "**A** Lists of 'untranslatable words' are popular online. We are told that the Portuguese saudade, a longing for something absent, or the Danish hygge, a sense of cosy contentment, have no equivalent in English and therefore reveal something unique about the cultures that use them. I find these lists charming but misleading.\n\n**B** The claim that a word is untranslatable usually means only that English lacks a single word with the same meaning. But languages routinely express ideas with phrases rather than single words, and a skilled translator can convey the sense of saudade in a sentence. To say that a concept cannot be expressed in another language confuses the size of a vocabulary with the limits of thought.\n\n**C** This does not mean that translation is easy or that nothing is lost. Words carry associations, rhythms and histories that rarely survive the move from one language to another. A poem that depends on the sound of its words may lose much of its effect even in an excellent translation, and translators of poetry often describe their work as choosing which losses to accept.\n\n**D** The popularity of untranslatable words also reflects a tendency to treat other cultures as exotic. It is flattering to imagine that a particular people possess a special feeling that the rest of us cannot share. In my experience, however, speakers of different languages recognise one another's emotions far more readily than such lists suggest.\n\n**E** I would rather celebrate translation than its supposed impossibility. Every successful translation is evidence that human experience is broadly shared, even when the words we use to describe it differ. That seems to me a more hopeful lesson than the idea that each language is a locked room.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "What is the writer's main purpose in the passage?",
+   "choices": [
+    "To describe how to cook healthy meals",
+    "To criticize parents who buy ready meals",
+    "To explain how school kitchens are built",
+    "To argue that schools should teach cooking"
+   ],
+   "answer": 3,
+   "explanation": "Весь текст — аргумент за уроки кулинарии в школе (D). Рецептов нет; родителей автор не критикует, а объясняет их занятость; устройство кухонь не описано."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "According to the writer, why do many children not learn to cook at home?",
+   "choices": [
+    "They are not interested in food.",
+    "Their homes do not have kitchens.",
+    "Schools tell them not to cook.",
+    "Their parents often work long hours and use ready meals."
+   ],
+   "answer": 3,
+   "explanation": "Абзац B: родители работают допоздна и полагаются на готовую еду (D). Остальные причины в тексте не названы."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "What does the writer say about students who struggle in a normal classroom?",
+   "choices": [
+    "They often concentrate better when working with their hands.",
+    "They should not take cooking lessons.",
+    "They usually become chefs.",
+    "They prefer science to maths."
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: in my experience, они лучше сосредоточены, работая руками (A). Остальное автор не утверждает."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "How does the writer respond to concerns about cost?",
+   "choices": [
+    "By agreeing that cooking lessons are too expensive",
+    "By comparing them with the larger costs of poor diets",
+    "By saying that kitchens are free",
+    "By suggesting that parents pay for ingredients"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: эти расходы малы по сравнению с последствиями плохого питания (B). Бесплатности, оплаты родителями и согласия с дороговизной нет."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "What does the writer hope every student will be able to do?",
+   "choices": [
+    "Prepare simple food such as an egg or vegetables",
+    "Work as a professional chef",
+    "Run a restaurant",
+    "Teach cooking to others"
+   ],
+   "answer": 0,
+   "explanation": "Абзац E: никто не должен уйти из школы, не умея сварить яйцо или овощи (A). Автор прямо отрицает цель сделать всех поварами."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "What is the writer's overall position on homework?",
+   "choices": [
+    "It should be banned for all students.",
+    "It should be increased for young children.",
+    "It has no effect on learning.",
+    "It should be reduced and improved rather than banned."
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: instead of banning, set less of it and make it better (D). Запрет и увеличение для малышей противоречат тексту; для старших польза признаётся."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "According to the writer, which students benefit least from homework?",
+   "choices": [
+    "Pupils in the first years of primary school",
+    "Students in secondary school",
+    "University students",
+    "Students who plan their own work"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: для детей первых лет начальной школы эффект невелик (A). Старшеклассникам, по автору, домашка полезна; студентов университета текст не обсуждает."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Why does the writer think some homework is unfair?",
+   "choices": [
+    "It is set only on weekends.",
+    "Some students get less help at home than others.",
+    "Teachers do not mark it.",
+    "It is always too difficult."
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: у учеников из занятых или бедных семей нет такой же поддержки (B). Остальные причины не названы."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "What kind of homework does the writer value most?",
+   "choices": [
+    "Long worksheets that repeat lessons",
+    "Projects completed with parents",
+    "Tasks copied from textbooks",
+    "Short tasks that make students think"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: короткое задание, требующее думать, ценнее часа рутины (D). Повторяющие листы и проекты с родителями автор критикует; копирование противоположно идее."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "In paragraph A, the writer suggests that the homework debate",
+   "choices": [
+    "began very recently",
+    "focuses on the wrong question",
+    "has finally been settled",
+    "interests only teachers"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: настоящий вопрос не в том, нужна ли домашка, а какая (B). Спор не решён — он возвращается; родители тоже участвуют; повторяется уже годами."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "What habit does the writer describe in paragraph A?",
+   "choices": [
+    "Reaching for a phone whenever we have to wait",
+    "Reading books in a queue",
+    "Talking to strangers at bus stops",
+    "Walking instead of taking the bus"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: в очереди или на остановке мы машинально берём телефон (A). Остальное не описано."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "According to the writer, where do new ideas often come from?",
+   "choices": [
+    "A wandering mind",
+    "Using a phone",
+    "Working late at night",
+    "Reading the news"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: когда ум блуждает, часто приходят новые идеи (A). Телефон, ночная работа и новости не названы источником идей."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "How does the writer describe the result of the psychology experiment?",
+   "choices": [
+    "Completely convincing",
+    "Impossible to repeat",
+    "Harmful to the participants",
+    "Interesting, though not proof of a rule"
+   ],
+   "answer": 3,
+   "explanation": "Абзац C: одно исследование не доказывает правило, но результат интересный (D). «Полностью убедительно» противоречит оговорке; остальное не упоминается."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "What is the writer's attitude toward technology?",
+   "choices": [
+    "Positive in general, but worried about one effect",
+    "Strongly opposed to all phones",
+    "Completely uncritical",
+    "Uninterested"
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: телефоны полезны, автор ими пользуется, но беспокоится, что у нас не остаётся времени ни на что (A). Противником и некритичным он не является."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "What does the writer suggest readers do while waiting for a train?",
+   "choices": [
+    "Keep their phones in their pockets",
+    "Read the timetable carefully",
+    "Call a friend",
+    "Write down their ideas"
+   ],
+   "answer": 0,
+   "explanation": "Абзац E: try leaving your phone in your pocket (A). Остальные советы в тексте не даются."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "What is the writer's main reason for studying Latin?",
+   "choices": [
+    "It is required for university entry.",
+    "It changes the way students think about language.",
+    "It allows students to speak with people in Rome.",
+    "It is the easiest way to learn vocabulary."
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: польза — в том, как изучение меняет взгляд на язык (B). На латыни не говорят; довод о словаре автор считает преувеличенным; требований вузов текст не упоминает."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "What does the writer say about the vocabulary argument for Latin?",
+   "choices": [
+    "It is completely false.",
+    "It is the strongest argument.",
+    "It applies only to French.",
+    "It is correct but exaggerated."
+   ],
+   "answer": 3,
+   "explanation": "Абзац C: This is true, but I think the claim is overstated (D). Не «ложь» и не «сильнейший» (сильнейший — литература); французский не упоминается."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Why does the writer mention reading Virgil and Ovid in the original?",
+   "choices": [
+    "To show that translations are always wrong",
+    "To prove that Latin is difficult",
+    "To recommend books for beginners",
+    "To illustrate a benefit the writer considers more important"
+   ],
+   "answer": 3,
+   "explanation": "Абзац D: «A stronger argument» — доступ к литературе в оригинале (D). Переводы не названы ошибочными; цель не в трудности и не в рекомендациях новичкам."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Which students does the writer think are best suited to Latin?",
+   "choices": [
+    "Those who struggle with English",
+    "All students without exception",
+    "Those who enjoy puzzles and patterns",
+    "Those who want to travel abroad"
+   ],
+   "answer": 2,
+   "explanation": "Абзац E: for those who enjoy puzzles and patterns (C). Путешественникам автор советует современные языки; «все» противоречит отказу от обязательности."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "What does the writer say about learning Latin roots?",
+   "choices": [
+    "It is impossible without a teacher.",
+    "It harms students' English.",
+    "It can be done in a few lessons.",
+    "It takes several years."
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: Students can learn these roots in a few lessons (C). Остальные утверждения противоречат тексту или отсутствуют."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "What does the writer believe about tourism in general?",
+   "choices": [
+    "It benefits only wealthy countries.",
+    "It is beneficial but can become harmful in some places.",
+    "It should be stopped completely.",
+    "It has no effect on local communities."
+   ],
+   "answer": 1,
+   "explanation": "Абзацы A и E: туризм даёт деньги и рабочие места, но в отдельных местах перешёл опасную черту (B). Запрета нет; влияние на общины описано; о богатых странах не сказано."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "According to the writer, what happens when village property is bought for short-term rentals?",
+   "choices": [
+    "Local families may be forced to leave.",
+    "The village becomes more lively.",
+    "Rents fall for local residents.",
+    "Shops close because of fewer visitors."
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: rents rise and local families are forced to move away (A). Деревня теряет жизнь, а не оживает; аренда растёт; магазины сувениров, наоборот, появляются."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "How does the writer respond to critics of entry fees?",
+   "choices": [
+    "The writer says that heritage should be reserved for the wealthy.",
+    "The writer ignores their arguments.",
+    "The writer accepts their concern but supports modest fees used for protection.",
+    "The writer agrees that fees should be abolished."
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: автор понимает опасения критиков, но считает скромный сбор разумной платой, если деньги идут на защиту места (C). Отмена, элитарность и игнорирование противоречат тексту."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Which of the following does the writer recommend to tourists?",
+   "choices": [
+    "Staying longer in one place",
+    "Visiting only in summer",
+    "Using international hotel chains",
+    "Travelling to as many places as possible"
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: staying longer in one place rather than rushing between several (A). Остальные советы противоположны рекомендациям автора."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Why does the writer think fragile places must be protected now?",
+   "choices": [
+    "To increase the number of visitors",
+    "Because local people dislike tourists",
+    "So that future visitors can still enjoy them",
+    "Because tourism will end soon"
+   ],
+   "answer": 2,
+   "explanation": "Абзац E: protecting them now is the only way to ensure that future visitors can still enjoy them (C). Остальные причины не названы."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "What is the writer's main argument?",
+   "choices": [
+    "Museums should return every object immediately.",
+    "Museums should stop showing objects from other cultures.",
+    "Museums are better at protecting objects than any other institution.",
+    "Museums should take requests to return objects much more seriously."
+   ],
+   "answer": 3,
+   "explanation": "Абзац A: museums should treat these requests far more seriously (D). «Каждый немедленно» противоречит D; прекращать показ автор не предлагает; D — довод музеев, который автор оспаривает."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Why does the writer find one of the museums' arguments 'uncomfortable'?",
+   "choices": [
+    "It suggests that objects should be sold.",
+    "It ignores the number of visitors.",
+    "It was made by politicians.",
+    "It assumes that the objects' makers cannot be trusted to care for them."
+   ],
+   "answer": 3,
+   "explanation": "Абзац B: это допущение, что создателям предметов нельзя доверить их сохранность (D). Продажи, числа посетителей и политиков в тексте нет."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "What alternative to permanent display does the writer suggest?",
+   "choices": [
+    "Selling objects to private collectors",
+    "Showing photographs instead of objects",
+    "Closing large museums",
+    "Long-term loans and travelling exhibitions"
+   ],
+   "answer": 3,
+   "explanation": "Абзац C: long-term loans and travelling exhibitions (D). Остальные варианты в тексте не предлагаются."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Why does the writer say that 'not every case is simple'?",
+   "choices": [
+    "Countries of origin do not want the objects.",
+    "Some objects were acquired legally, and ownership claims can be unclear.",
+    "Most objects are too fragile to move.",
+    "Museums have lost the records of their collections."
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: некоторые предметы куплены законно, и неясно, у какой общины сильнее притязания (B). Хрупкости, утраты записей и нежелания стран нет."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "How does the writer describe returning an object taken unjustly?",
+   "choices": [
+    "As a serious loss for museums",
+    "As a legal requirement",
+    "As a way to attract more visitors",
+    "As a way of telling the truth about the past"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: returning it is not a loss but a way of telling the truth about the past (D). Потерю автор прямо отрицает; закона и привлечения посетителей нет."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "What is the writer's central claim about multitasking?",
+   "choices": [
+    "It is a skill that most people can learn easily.",
+    "It is useful only for automatic activities.",
+    "It has no measurable effect on performance.",
+    "For tasks that require thought, it mostly consists of costly switching."
+   ],
+   "answer": 3,
+   "explanation": "Абзацы A–B: многозадачность в мыслительных задачах — это переключение с накопительной ценой (D). Лёгкий навык и «нет эффекта» противоречат тексту; C — частный случай из абзаца C, а не центральный тезис."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Why does the writer mention walking while talking?",
+   "choices": [
+    "To give an example of dangerous multitasking",
+    "To show that all combinations of tasks fail",
+    "To recommend exercise during meetings",
+    "To acknowledge an apparent counterexample and explain why it is not one"
+   ],
+   "answer": 3,
+   "explanation": "Абзац C: пример защитников многозадачности, который не противоречит аргументу, потому что одно из действий автоматическое (D). Опасности, «все комбинации проваливаются» и совета о прогулках нет."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "What does the writer find most troubling?",
+   "choices": [
+    "Studies of multitasking disagree with one another.",
+    "Heavy multitaskers' confidence is not matched by their results.",
+    "People multitask more at work than at home.",
+    "Multitasking is becoming less common."
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: Perhaps the most troubling finding — уверенность не совпадает с результатами (B). Остальное не утверждается; исследования, напротив, «consistently find»."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "According to the writer, why do frequent switches lead to worse performance?",
+   "choices": [
+    "Small costs of each switch add up over time.",
+    "The brain cannot hold any rules at all.",
+    "Switching makes tasks more interesting.",
+    "People who switch work more slowly by choice."
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: costs are tiny but they accumulate (A). Мозг не «вообще не держит правил»; интереса и сознательного замедления в тексте нет."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "What does the writer recommend in the final paragraph?",
+   "choices": [
+    "Taking more frequent breaks",
+    "Protecting time for uninterrupted work on demanding tasks",
+    "Avoiding all interruptions at work",
+    "Working only on automatic tasks"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: protect periods of uninterrupted concentration for our most demanding tasks (B). Избегать всех прерываний автор считает невозможным; остального нет."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "What is the writer's main argument?",
+   "choices": [
+    "Poorer countries should stop pursuing economic growth.",
+    "GDP should be treated as one indicator among several rather than the main measure of success.",
+    "Economic growth has done more harm than good.",
+    "GDP should be replaced by a single measure of happiness."
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: not abandoning GDP but putting it in its place (B). Вред роста, единая мера счастья и отказ бедных стран от роста противоречат тексту."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Why does the writer mention a traffic accident?",
+   "choices": [
+    "To argue that roads should be safer",
+    "To explain how insurance works",
+    "To give an example of unpaid work",
+    "To show that GDP can rise because of something harmful"
+   ],
+   "answer": 3,
+   "explanation": "Абзац B: авария увеличивает ВВП за счёт ремонта и лечения (D). Безопасность дорог и страхование не обсуждаются; неоплачиваемая работа — другой пример."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "How does the writer view economic growth in poorer countries?",
+   "choices": [
+    "It has been too slow to matter.",
+    "It is less important than well-being measures.",
+    "It has brought major improvements to many people's lives.",
+    "It has mainly benefited the wealthy."
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: рост вывел сотни миллионов из крайней бедности (C). Остальное не утверждается; вопрос о «главной цели» автор ставит лишь для богатых стран."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "How does the writer respond to criticism of alternative measures?",
+   "choices": [
+    "By rejecting it completely",
+    "By agreeing that only GDP should be used",
+    "By claiming that the measures are perfectly objective",
+    "By accepting it partly but arguing that such measures are still worthwhile"
+   ],
+   "answer": 3,
+   "explanation": "Абзац D: They have a point, but an imperfect measure of what matters may be more useful (D). Полного отказа, согласия только на ВВП и «полной объективности» нет."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "What does the writer mean by saying that 'a society can become richer without becoming better off'?",
+   "choices": [
+    "Wealth makes people unhappy.",
+    "Statistics about wealth are always false.",
+    "Rising income does not necessarily mean improved quality of life.",
+    "Rich societies always become poorer later."
+   ],
+   "answer": 2,
+   "explanation": "Абзац E: богатство и благополучие — не одно и то же (C). «Всегда беднеют», «богатство делает несчастными» и «статистика ложна» — искажения."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "What is the writer's attitude toward lists of untranslatable words?",
+   "choices": [
+    "They are an accurate guide to other cultures.",
+    "They should be banned from the internet.",
+    "They are appealing but give a false impression.",
+    "They are completely worthless."
+   ],
+   "answer": 2,
+   "explanation": "Абзац A: charming but misleading (C). «Бесполезны» и «запретить» — слишком сильно; «точный путеводитель» противоречит."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "According to the writer, what does 'untranslatable' usually mean in practice?",
+   "choices": [
+    "The idea cannot be expressed in English at all.",
+    "Translators have never tried to translate the word.",
+    "The word is very rare in its own language.",
+    "English has no single word with the same meaning."
+   ],
+   "answer": 3,
+   "explanation": "Абзац B: usually means only that English lacks a single word (D). B — это заблуждение, которое автор опровергает; остального в тексте нет."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "What does the writer concede in paragraph C?",
+   "choices": [
+    "Translation inevitably loses some features of the original.",
+    "Most translations are poor.",
+    "Poetry should never be translated.",
+    "Untranslatable words really exist."
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: This does not mean that nothing is lost — ассоциации, ритм, звучание теряются (A). Плохие переводы, запрет переводить поэзию и существование непереводимых слов автор не признаёт."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "Why, according to the writer, are untranslatable words so popular?",
+   "choices": [
+    "They appeal to a tendency to see other cultures as exotic.",
+    "They are useful for learning grammar.",
+    "They are taught in most schools.",
+    "They help translators find work."
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: отражают склонность видеть другие культуры экзотическими (A). Грамматики, школ и работы переводчиков нет."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "What 'hopeful lesson' does the writer draw from successful translations?",
+   "choices": [
+    "Translators should invent new words.",
+    "Human experience is broadly shared across languages.",
+    "Every language will eventually disappear.",
+    "English is the most flexible language."
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: каждый удачный перевод — свидетельство того, что опыт людей во многом общий (B). Остальные выводы автор не делает."
+  }
+ ]
+}

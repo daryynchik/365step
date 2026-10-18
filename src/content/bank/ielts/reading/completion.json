@@ -1,0 +1,575 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "completion",
+  "skill": "completion",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p1",
+   "title": "Bees in the City",
+   "text": "**A** Beekeeping is no longer only a country hobby. In cities such as London, Paris and New York, people keep beehives on rooftops, balconies and even in small back gardens. Some city halls and hotels have their own hives, and the honey is sold in their shops or served at breakfast.\n\n**B** City bees may seem out of place, but in some ways cities suit them well. Parks, gardens and tree-lined streets offer a wide variety of flowers that bloom at different times of year. In the countryside, by contrast, large fields often contain just one crop, which flowers for only a few weeks.\n\n**C** Cities are also warmer than the surrounding countryside, especially at night, because buildings and roads store heat. This means that the season when flowers are open can begin earlier in spring and last longer into autumn. Bees can therefore collect food for more weeks each year.\n\n**D** However, experts warn that too many hives in one area can cause problems. Honeybees compete with wild bees, such as bumblebees, for the same flowers. If there are not enough flowers for all of them, wild bees may suffer, and some of these species are already rare.\n\n**E** For this reason, some cities now encourage residents to plant more flowers rather than add more hives. A single window box of lavender or a corner of a garden left to grow wild can provide food for many kinds of insects. As one beekeeper put it, 'Bees need flowers first, and honey comes later.'",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p3",
+   "title": "Keeping Time",
+   "text": "**A** For most of human history, people measured time by watching the sky. The position of the sun told them roughly whether it was morning, midday or evening, and the changing shape of the moon helped them count the months.\n\n**B** The ancient Egyptians were among the first to build tools for measuring time. They used shadow clocks, which showed the hour by the length and direction of a shadow, and water clocks, in which water dripped slowly from one container into another. Water clocks had one great advantage: they worked at night and on cloudy days.\n\n**C** Mechanical clocks appeared in Europe in the late thirteenth century. These early clocks were large, heavy machines placed in church towers, and many of them had no hands at all; instead, they rang a bell to mark the hours. They were not very accurate and could lose or gain many minutes in a day.\n\n**D** A great improvement came in 1656, when the Dutch scientist Christiaan Huygens built the first pendulum clock. A swinging pendulum keeps a very regular rhythm, and Huygens's clock was accurate to within about a minute a day. Pendulum clocks soon spread across Europe.\n\n**E** Today, the most accurate clocks in the world are atomic clocks, which measure the vibrations of atoms. The best of them would lose less than one second in millions of years. Without them, satellite navigation systems such as GPS could not tell people where they are.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p6",
+   "title": "In Praise of Boredom",
+   "text": "**A** Most of us now carry a device that can end boredom in seconds. Waiting for a bus or standing in a queue, we reach for our phones without thinking. I want to suggest that this habit costs us something important.\n\n**B** Boredom is uncomfortable, but it is not useless. When the mind has nothing to focus on, it begins to wander, and this wandering is often where new ideas come from. Many people say their best ideas arrive in the shower or on a long walk, when they are not trying to think at all.\n\n**C** Some psychologists have tested this idea. In one well-known experiment, people who first did a dull task, such as copying numbers from a phone book, later came up with more creative uses for everyday objects than people who had not been bored. One study does not prove a rule, but the result is interesting.\n\n**D** I am not against technology. Phones help us stay in touch and find information, and I use mine every day. My concern is simply that we no longer allow ourselves even a few minutes with nothing to do.\n\n**E** So the next time you are waiting for a train, try leaving your phone in your pocket. You may feel restless at first. But you might also notice something you would have missed, or have a thought that surprises you.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p1",
+   "title": "Drinking Water from the Sea",
+   "text": "**A** About 97 percent of the water on Earth is salty, and most of the remaining fresh water is locked in ice or underground. As populations grow and droughts become more frequent, many countries are turning to the sea itself as a source of drinking water through a process called desalination.\n\n**B** The oldest method of removing salt from water is distillation: seawater is heated until it turns to steam, and the steam is cooled and collected as fresh water, leaving the salt behind. Sailors used simple versions of this technique for centuries. However, boiling large amounts of water requires enormous quantities of energy.\n\n**C** Most modern plants instead use a method called reverse osmosis. Seawater is pushed at high pressure through membranes with pores so small that water molecules can pass through but salt cannot. Improvements in membranes and pumps have greatly reduced the energy needed, although desalinated water is still usually more expensive than water from rivers or underground sources.\n\n**D** Desalination also raises environmental concerns. For every litre of fresh water produced, plants discharge roughly one and a half litres of brine, a liquid far saltier than seawater. If this brine is released carelessly, it can sink to the sea floor and harm the organisms that live there. Some plants now dilute the brine or spread it through many small outlets.\n\n**E** Despite these challenges, desalination is expanding rapidly, particularly in the Middle East, where some countries obtain most of their drinking water from the sea. Researchers are also experimenting with plants powered by solar energy, which could make the process cleaner and cheaper in sunny, dry regions.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p3",
+   "title": "Farming Upwards",
+   "text": "**A** In a former warehouse on the edge of a city, rows of lettuce grow on shelves stacked ten levels high. There is no soil and no sunlight; instead, the plants' roots sit in water enriched with nutrients, and pink-purple LED lights shine on the leaves for up to eighteen hours a day. This is a vertical farm.\n\n**B** Supporters say vertical farms offer several advantages. Because the plants grow indoors, they are protected from storms, droughts and pests, so few or no pesticides are needed. Water is recycled through the system, and many farms report using up to 95 percent less water than conventional fields.\n\n**C** Growing food close to where people live also reduces the distance it must travel. Lettuce grown in another country may spend days in trucks before reaching a supermarket, losing freshness along the way. A vertical farm in the city can deliver the same produce within hours of harvest.\n\n**D** The main problem is energy. Replacing the sun with electric lights is expensive, and in regions where electricity comes mainly from fossil fuels, the carbon emissions of indoor farming can be higher than those of traditional agriculture. Several well-funded vertical farming companies have closed in recent years because they could not make a profit.\n\n**E** For now, vertical farms grow mostly leafy greens and herbs, which are light, grow quickly and sell at high prices. Staple crops such as wheat and rice need far more space and light, and experts doubt that they will be grown this way on a large scale in the near future.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p6",
+   "title": "Should Museums Return Objects?",
+   "text": "**A** Many of the great museums of Europe and North America hold objects taken from other countries during periods of colonial rule. In recent years, demands for their return have grown louder. In my view, museums should treat these requests far more seriously than they have done in the past.\n\n**B** Museums often argue that they are best placed to protect valuable objects, which might be damaged if returned. This argument may once have been convincing, but many countries now have modern museums with excellent conservation facilities. It also assumes that the people who made the objects cannot be trusted to care for them, an assumption I find uncomfortable.\n\n**C** Another common argument is that large museums allow millions of visitors from around the world to see objects from many cultures in one place. This is a genuine benefit. Yet it does not explain why the objects must stay permanently in one city; long-term loans and travelling exhibitions could serve the same purpose.\n\n**D** Not every case is simple. Some objects were bought legally, and in some cases it is unclear which modern community has the strongest claim. Each request should therefore be examined carefully, with evidence about how the object left its country of origin.\n\n**E** What matters most is a change in attitude. Rather than defending their collections at all costs, museums should begin from the question of how each object came to be there. Where the answer reveals injustice, returning it is not a loss but a way of telling the truth about the past.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p1",
+   "title": "Radiocarbon Dating and Its Limits",
+   "text": "**A** Living things constantly take in carbon from the atmosphere, including a small proportion of carbon-14, a radioactive form of the element. When an organism dies, it stops absorbing carbon, and the carbon-14 it contains begins to decay at a steady rate, halving roughly every 5,730 years. By measuring how much carbon-14 remains in a sample of bone, wood or cloth, scientists can estimate how long ago the organism died.\n\n**B** The technique, developed by the American chemist Willard Libby in the late 1940s, transformed archaeology. For the first time, researchers could assign dates to objects from prehistoric sites that had left no written records. Libby received the Nobel Prize in Chemistry in 1960 for the work.\n\n**C** Early users of the method assumed that the amount of carbon-14 in the atmosphere had always been constant. It soon became clear that this was not the case: levels have varied over time because of changes in the sun's activity and in Earth's magnetic field. Raw radiocarbon ages must therefore be 'calibrated' against records from objects of known age, such as tree rings, which can be counted year by year.\n\n**D** Human activity has complicated matters further. Since the Industrial Revolution, the burning of fossil fuels, which contain no carbon-14, has diluted the proportion of carbon-14 in the air, while nuclear weapons tests in the 1950s and 1960s temporarily almost doubled it. Samples from these periods therefore require special treatment.\n\n**E** The method also has a natural limit. After about 50,000 years, so little carbon-14 remains that it can no longer be measured reliably. For older materials, scientists must turn to other techniques, such as those based on the decay of potassium or uranium, which can date rocks millions or even billions of years old.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p3",
+   "title": "The Urban Heat Island",
+   "text": "**A** On a summer evening, the centre of a large city can be several degrees warmer than the countryside just a few kilometres away. This phenomenon, known as the urban heat island, was first described in the early nineteenth century by Luke Howard, an amateur scientist who recorded temperatures in and around London.\n\n**B** Several factors combine to produce the effect. Dark surfaces such as asphalt and roofing absorb much of the sunlight that falls on them and release the heat slowly after sunset. Tall buildings trap this heat by reducing the flow of air and by blocking the escape of heat radiation to the sky. Engines, air conditioners and industry add further heat.\n\n**C** The lack of vegetation also plays a role. Plants cool their surroundings through evapotranspiration, releasing water vapour that absorbs heat as it evaporates. In heavily built-up areas, where soil is sealed beneath concrete, this natural cooling is largely absent.\n\n**D** The consequences can be serious. During heat waves, high night-time temperatures prevent people's bodies from recovering from the heat of the day, and death rates rise, particularly among the elderly. Higher temperatures also increase demand for air conditioning, which in turn releases more heat and can strain electricity networks.\n\n**E** Cities are experimenting with a range of responses, from planting trees and creating parks to painting roofs in reflective colours. Such measures are not equally effective everywhere: a reflective roof that cools a building in a hot climate may increase heating costs in a cold one. Planners are therefore increasingly using detailed temperature maps to target the neighbourhoods that would benefit most.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p6",
+   "title": "Lost in Translation?",
+   "text": "**A** Lists of 'untranslatable words' are popular online. We are told that the Portuguese saudade, a longing for something absent, or the Danish hygge, a sense of cosy contentment, have no equivalent in English and therefore reveal something unique about the cultures that use them. I find these lists charming but misleading.\n\n**B** The claim that a word is untranslatable usually means only that English lacks a single word with the same meaning. But languages routinely express ideas with phrases rather than single words, and a skilled translator can convey the sense of saudade in a sentence. To say that a concept cannot be expressed in another language confuses the size of a vocabulary with the limits of thought.\n\n**C** This does not mean that translation is easy or that nothing is lost. Words carry associations, rhythms and histories that rarely survive the move from one language to another. A poem that depends on the sound of its words may lose much of its effect even in an excellent translation, and translators of poetry often describe their work as choosing which losses to accept.\n\n**D** The popularity of untranslatable words also reflects a tendency to treat other cultures as exotic. It is flattering to imagine that a particular people possess a special feeling that the rest of us cannot share. In my experience, however, speakers of different languages recognise one another's emotions far more readily than such lists suggest.\n\n**E** I would rather celebrate translation than its supposed impossibility. Every successful translation is evidence that human experience is broadly shared, even when the words we use to describe it differ. That seems to me a more hopeful lesson than the idea that each language is a locked room.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn the countryside, large fields often contain only one ______.",
+   "answer": [
+    "crop"
+   ],
+   "explanation": "Абзац B: large fields often contain just one crop."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nBecause cities are warmer, the flowering season can start earlier in ______.",
+   "answer": [
+    "spring"
+   ],
+   "explanation": "Абзац C: the season can begin earlier in spring."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nHoneybees compete with wild bees such as ______ for the same flowers.",
+   "answer": [
+    "bumblebees"
+   ],
+   "explanation": "Абзац D: wild bees, such as bumblebees."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nOne example of a plant that residents can grow in a window box is ______.",
+   "answer": [
+    "lavender"
+   ],
+   "explanation": "Абзац E: a single window box of lavender."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn some cities, honey from hotel hives is served at ______.",
+   "answer": [
+    "breakfast"
+   ],
+   "explanation": "Абзац A: the honey is sold in their shops or served at breakfast."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nBefore clocks, the changing shape of the ______ helped people count the months.",
+   "answer": [
+    "moon"
+   ],
+   "explanation": "Абзац A: the changing shape of the moon."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn a water clock, water dripped slowly from one ______ into another.",
+   "answer": [
+    "container"
+   ],
+   "explanation": "Абзац B: from one container into another."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nEarly mechanical clocks were placed in church ______.",
+   "answer": [
+    "towers"
+   ],
+   "explanation": "Абзац C: placed in church towers."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nA pendulum keeps a very regular ______.",
+   "answer": [
+    "rhythm"
+   ],
+   "explanation": "Абзац D: a swinging pendulum keeps a very regular rhythm."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nAtomic clocks measure the ______ of atoms.",
+   "answer": [
+    "vibrations"
+   ],
+   "explanation": "Абзац E: measure the vibrations of atoms."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nWhen the mind has nothing to focus on, it begins to ______.",
+   "answer": [
+    "wander"
+   ],
+   "explanation": "Абзац B: it begins to wander."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn one experiment, people copied numbers from a ______ before doing a creative task.",
+   "answer": [
+    "phone book"
+   ],
+   "explanation": "Абзац C: copying numbers from a phone book."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nMany people say their best ideas arrive in the shower or on a long ______.",
+   "answer": [
+    "walk"
+   ],
+   "explanation": "Абзац B: in the shower or on a long walk."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nThe writer suggests leaving your phone in your ______ while waiting for a train.",
+   "answer": [
+    "pocket"
+   ],
+   "explanation": "Абзац E: try leaving your phone in your pocket."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nAt first, people who put their phones away may feel ______.",
+   "answer": [
+    "restless"
+   ],
+   "explanation": "Абзац E: You may feel restless at first."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nMuch of the Earth's fresh water is found in ice or ______.",
+   "answer": [
+    "underground"
+   ],
+   "explanation": "Абзац A: locked in ice or underground."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn distillation, the salt is left behind when seawater turns to ______.",
+   "answer": [
+    "steam"
+   ],
+   "explanation": "Абзац B: seawater is heated until it turns to steam."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nReverse osmosis pushes seawater through ______ at high pressure.",
+   "answer": [
+    "membranes"
+   ],
+   "explanation": "Абзац C: through membranes with pores so small."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nThe very salty liquid released by desalination plants is called ______.",
+   "answer": [
+    "brine"
+   ],
+   "explanation": "Абзац D: brine, a liquid far saltier than seawater."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nResearchers are testing desalination plants powered by ______ energy.",
+   "answer": [
+    "solar"
+   ],
+   "explanation": "Абзац E: plants powered by solar energy."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn the vertical farm, the plants' roots sit in water enriched with ______.",
+   "answer": [
+    "nutrients"
+   ],
+   "explanation": "Абзац A: water enriched with nutrients."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nThe LED lights in the farm shine for up to ______ hours a day.",
+   "answer": [
+    "eighteen",
+    "18"
+   ],
+   "explanation": "Абзац A: up to eighteen hours a day."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nLettuce transported from another country can lose ______ on the way.",
+   "answer": [
+    "freshness"
+   ],
+   "explanation": "Абзац C: losing freshness along the way."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nReplacing sunlight with electric lights makes vertical farming ______.",
+   "answer": [
+    "expensive"
+   ],
+   "explanation": "Абзац D: replacing the sun with electric lights is expensive."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nVertical farms mostly grow leafy greens and ______.",
+   "answer": [
+    "herbs"
+   ],
+   "explanation": "Абзац E: mostly leafy greens and herbs."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nMany countries now have museums with excellent ______ facilities.",
+   "answer": [
+    "conservation"
+   ],
+   "explanation": "Абзац B: excellent conservation facilities."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nInstead of permanent display, museums could use long-term loans and ______ exhibitions.",
+   "answer": [
+    "travelling",
+    "traveling"
+   ],
+   "explanation": "Абзац C: long-term loans and travelling exhibitions."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nSome objects in museums were bought ______.",
+   "answer": [
+    "legally"
+   ],
+   "explanation": "Абзац D: Some objects were bought legally."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nRequests should be examined using ______ about how an object left its country.",
+   "answer": [
+    "evidence"
+   ],
+   "explanation": "Абзац D: with evidence about how the object left its country of origin."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nThe writer believes that what matters most is a change in ______.",
+   "answer": [
+    "attitude"
+   ],
+   "explanation": "Абзац E: What matters most is a change in attitude."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nThe carbon-14 in a dead organism halves roughly every ______ years.",
+   "answer": [
+    "5730",
+    "5,730"
+   ],
+   "explanation": "Абзац A: halving roughly every 5,730 years."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nRaw radiocarbon ages must be ______ against records from objects of known age.",
+   "answer": [
+    "calibrated"
+   ],
+   "explanation": "Абзац C: must therefore be 'calibrated'."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nTree rings are useful because they can be counted ______.",
+   "answer": [
+    "year by year"
+   ],
+   "explanation": "Абзац C: which can be counted year by year — три слова; принимается «year by year» как устойчивое сочетание из текста."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nNuclear weapons tests in the 1950s and 1960s almost ______ the level of carbon-14 in the air.",
+   "answer": [
+    "doubled"
+   ],
+   "explanation": "Абзац D: temporarily almost doubled it."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nFor very old rocks, scientists can use methods based on the decay of potassium or ______.",
+   "answer": [
+    "uranium"
+   ],
+   "explanation": "Абзац E: potassium or uranium."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nDark surfaces release the heat they absorb slowly after ______.",
+   "answer": [
+    "sunset"
+   ],
+   "explanation": "Абзац B: release the heat slowly after sunset."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nBuildings block the escape of heat ______ to the sky.",
+   "answer": [
+    "radiation"
+   ],
+   "explanation": "Абзац B: blocking the escape of heat radiation."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nIn built-up areas, soil is often sealed beneath ______.",
+   "answer": [
+    "concrete"
+   ],
+   "explanation": "Абзац C: soil is sealed beneath concrete."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nHigh night-time temperatures stop people's bodies from ______ after a hot day.",
+   "answer": [
+    "recovering"
+   ],
+   "explanation": "Абзац D: prevent people's bodies from recovering."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nA reflective roof in a cold climate may increase ______ costs.",
+   "answer": [
+    "heating"
+   ],
+   "explanation": "Абзац E: may increase heating costs."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nHygge is described as a sense of cosy ______.",
+   "answer": [
+    "contentment"
+   ],
+   "explanation": "Абзац A: a sense of cosy contentment."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nLanguages often express ideas with ______ rather than single words.",
+   "answer": [
+    "phrases"
+   ],
+   "explanation": "Абзац B: express ideas with phrases rather than single words."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nAccording to the writer, calling a concept untranslatable confuses vocabulary size with the limits of ______.",
+   "answer": [
+    "thought"
+   ],
+   "explanation": "Абзац B: the limits of thought."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nTranslators of poetry describe their work as choosing which ______ to accept.",
+   "answer": [
+    "losses"
+   ],
+   "explanation": "Абзац C: choosing which losses to accept."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "short-answer",
+   "stem": "Complete the sentence. Choose NO MORE THAN TWO WORDS from the passage for your answer.\n\nThe writer rejects the idea that each language is a locked ______.",
+   "answer": [
+    "room"
+   ],
+   "explanation": "Абзац E: a locked room."
+  }
+ ]
+}

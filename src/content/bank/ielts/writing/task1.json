@@ -1,0 +1,844 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "writing",
+  "domain": "task1",
+  "skill": "task1",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The bar chart below shows the number of students in one school who chose four different after-school clubs in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: football was clearly the most popular club, attracting more than twice as many students as drama or art; robotics was second. Details: football 85; robotics 62; drama 40; art 33 (the least popular). Compare: football exceeded art by 52; drama and art were close.",
+   "explanation": "Task Achievement: главное — overview о лидере (футбол) и сравнение, а не перечисление четырёх цифр. Coherence: сгруппируйте популярные (футбол, робототехника) и менее популярные (театр, искусство). Lexical: the most popular, more than twice as many, attracted. Grammar: прошедшее время — 2023 год.",
+   "table": {
+    "caption": "Students in after-school clubs, 2023",
+    "head": [
+     "Club",
+     "Number of students"
+    ],
+    "rows": [
+     [
+      "Football",
+      "85"
+     ],
+     [
+      "Drama",
+      "40"
+     ],
+     [
+      "Robotics",
+      "62"
+     ],
+     [
+      "Art",
+      "33"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The line graph below shows the average monthly temperature in a city over one year. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: temperatures rose steadily from a low in January to a peak in July and then fell again towards the end of the year. Details: −6 °C in January; 14 °C in May; peak 24 °C in July; 15 °C in September; 1 °C in November.",
+   "explanation": "Task Achievement: overview о годовом цикле (минимум зимой, пик в июле). Не описывайте каждый месяц одинаково — выделите рост, пик и спад. Lexical: rose steadily, peaked at, dropped to, below freezing. Ошибка: объяснять причины (сезоны) вместо данных.",
+   "table": {
+    "caption": "Average temperature (°C)",
+    "head": [
+     "Month",
+     "Temperature"
+    ],
+    "rows": [
+     [
+      "January",
+      "-6"
+     ],
+     [
+      "March",
+      "2"
+     ],
+     [
+      "May",
+      "14"
+     ],
+     [
+      "July",
+      "24"
+     ],
+     [
+      "September",
+      "15"
+     ],
+     [
+      "November",
+      "1"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The pie chart below shows how a family spent its monthly budget. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: housing and food together took up 60 percent of the budget, while savings were the smallest share. Details: housing 35%; food 25%; transport and other 15% each; savings 10%.",
+   "explanation": "Task Achievement: overview о крупнейших статьях (жильё + еда = 60%). Сравнения: a third of the budget, equal shares. Coherence: от большего к меньшему. Ошибка: писать «I think the family spends too much» — мнения в Task 1 нет.",
+   "table": {
+    "caption": "Monthly budget (%)",
+    "head": [
+     "Category",
+     "Share"
+    ],
+    "rows": [
+     [
+      "Housing",
+      "35"
+     ],
+     [
+      "Food",
+      "25"
+     ],
+     [
+      "Transport",
+      "15"
+     ],
+     [
+      "Savings",
+      "10"
+     ],
+     [
+      "Other",
+      "15"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "table",
+   "stem": "The table below shows the number of visitors to a museum on each day of one week. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview выделяет общую закономерность таблицы",
+    "Данные сгруппированы (по категориям или годам), а не перечислены строкой за строкой",
+    "Сравнения с цифрами: higher than, twice as much, the lowest",
+    "Нет мнения и выдуманных причин"
+   ],
+   "answer": "Overview: weekend attendance was far higher than on weekdays, with Sunday the busiest day; the museum was closed on Monday. Details: weekdays 290–410, rising towards Friday; Saturday 980; Sunday 1,040 — around three times a typical weekday.",
+   "explanation": "Task Achievement: заметьте и главное (выходные), и деталь (закрыто в понедельник). Группируйте будни и выходные. Lexical: attendance, roughly three times as many, the busiest/quietest day.",
+   "table": {
+    "caption": "Museum visitors",
+    "head": [
+     "Day",
+     "Visitors"
+    ],
+    "rows": [
+     [
+      "Monday",
+      "Closed"
+     ],
+     [
+      "Tuesday",
+      "320"
+     ],
+     [
+      "Wednesday",
+      "290"
+     ],
+     [
+      "Thursday",
+      "350"
+     ],
+     [
+      "Friday",
+      "410"
+     ],
+     [
+      "Saturday",
+      "980"
+     ],
+     [
+      "Sunday",
+      "1,040"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "process",
+   "stem": "The diagram below shows how rainwater is collected and used in a house. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview: сколько этапов, где начало и конец",
+    "Этапы описаны по порядку со связками (first, after that, finally)",
+    "Используется пассивный залог (is heated, are transported)",
+    "Ни один этап не пропущен"
+   ],
+   "answer": "Overview: a five-stage process from rain on the roof to use in the garden and toilets. Stages: rain falls on the roof → collected by gutters → passes through a filter → stored in an underground tank → pumped to the garden and toilets.",
+   "explanation": "Task Achievement: все этапы и overview (сколько этапов, начало и конец). Coherence: first, next, after that, finally. Grammar: пассив — is collected, is filtered, is pumped. Ошибка: пропустить фильтр или насос.",
+   "passage": "Stages shown in the diagram:\n1. Rain falls on the sloping roof.\n2. Gutters along the roof collect the water.\n3. The water passes through a filter that removes leaves and dirt.\n4. It is stored in an underground tank.\n5. A pump sends the water to taps in the garden and to the toilets."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "map",
+   "stem": "The maps below show a park in 2000 and today. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview: главные изменения в целом",
+    "Изменения сгруппированы по частям карты",
+    "Точная лексика: was replaced by, was extended, to the north of",
+    "Времена согласованы: past для старой карты, present perfect/past для изменений"
+   ],
+   "answer": "Overview: the park has become more developed for visitors, with new play and refreshment facilities, while the lake has remained. Changes: open grass in the north → children's playground; a café added beside the lake; the car park extended; trees remain in the south.",
+   "explanation": "Task Achievement: overview общих изменений + основные конкретные. Lexical: was replaced by, was added, was extended, remained unchanged. Grammar: past simple для 2000 года, present perfect для изменений к сегодняшнему дню.",
+   "passage": "Park in 2000: a lake in the centre; open grass in the north; trees in the south; a small car park at the west entrance.\nPark today: the lake remains in the centre; a children's playground in the north; a café next to the lake; trees still in the south; the car park is twice as large."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The bar chart below shows the number of books borrowed from a library by children and adults over four years. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: borrowing by children rose steadily while borrowing by adults declined slightly, so children overtook adults in 2022. Details: children 12 → 23 thousand; adults 20 → 16 thousand; crossover between 2021 and 2022.",
+   "explanation": "Task Achievement: ключевая особенность — пересечение линий трендов. Сравнивайте группы, а не описывайте их отдельно. Lexical: overtook, a gradual decline, almost doubled.",
+   "table": {
+    "caption": "Books borrowed (thousands)",
+    "head": [
+     "Year",
+     "Children",
+     "Adults"
+    ],
+    "rows": [
+     [
+      "2020",
+      "12",
+      "20"
+     ],
+     [
+      "2021",
+      "15",
+      "18"
+     ],
+     [
+      "2022",
+      "19",
+      "17"
+     ],
+     [
+      "2023",
+      "23",
+      "16"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The line graph below shows the percentage of households in three countries with internet access between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: access rose in all three countries, but Country A remained the leader throughout, while Country C, though starting lowest, grew fastest. Details: A 40 → 93%; B 15 → 84%; C 5 → 66% (more than thirteenfold). The gap between A and C narrowed from 35 to 27 points.",
+   "explanation": "Task Achievement: два наблюдения в overview — общий рост и разная скорость. Сравнивайте темпы (fastest growth, narrowed the gap). Coherence: группируйте по странам или по периодам, но последовательно. Grammar: past simple + rose/increased/climbed.",
+   "table": {
+    "caption": "Households with internet access (%)",
+    "head": [
+     "Year",
+     "Country A",
+     "Country B",
+     "Country C"
+    ],
+    "rows": [
+     [
+      "2000",
+      "40",
+      "15",
+      "5"
+     ],
+     [
+      "2005",
+      "60",
+      "30",
+      "12"
+     ],
+     [
+      "2010",
+      "78",
+      "52",
+      "25"
+     ],
+     [
+      "2015",
+      "88",
+      "70",
+      "45"
+     ],
+     [
+      "2020",
+      "93",
+      "84",
+      "66"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "table",
+   "stem": "The table below shows the average time, in minutes per day, that people in different age groups spent on four leisure activities. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview выделяет общую закономерность таблицы",
+    "Данные сгруппированы (по категориям или годам), а не перечислены строкой за строкой",
+    "Сравнения с цифрами: higher than, twice as much, the lowest",
+    "Нет мнения и выдуманных причин"
+   ],
+   "answer": "Overview: older people spent much more time watching TV and reading, whereas younger people spent far more time on social media and sport. Details: TV 95 → 210 with age; social media 140 → 10; reading 15 → 55; sport 45 → 15.",
+   "explanation": "Task Achievement: overview о противоположных тенденциях по возрасту. Группируйте занятия, растущие и падающие с возрастом. Lexical: the reverse was true, declined steadily with age, more than double. Ошибка: перечислить все 16 чисел.",
+   "table": {
+    "caption": "Daily leisure time (minutes)",
+    "head": [
+     "Activity",
+     "15–24",
+     "25–44",
+     "45–64",
+     "65+"
+    ],
+    "rows": [
+     [
+      "Watching TV",
+      "95",
+      "110",
+      "150",
+      "210"
+     ],
+     [
+      "Social media",
+      "140",
+      "75",
+      "35",
+      "10"
+     ],
+     [
+      "Sport",
+      "45",
+      "30",
+      "20",
+      "15"
+     ],
+     [
+      "Reading",
+      "15",
+      "20",
+      "30",
+      "55"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "process",
+   "stem": "The diagram below shows how coffee beans are processed for sale. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview: сколько этапов, где начало и конец",
+    "Этапы описаны по порядку со связками (first, after that, finally)",
+    "Используется пассивный залог (is heated, are transported)",
+    "Ни один этап не пропущен"
+   ],
+   "answer": "Overview: a seven-stage process from picking the ripe berries to packing roasted, ground coffee. Stages: picked → pulped → fermented and washed → dried in the sun → hulled → roasted → ground and packed.",
+   "explanation": "Task Achievement: все семь этапов, overview с началом и концом. Grammar: пассив и последовательность (once the beans have been dried, they are…). Lexical: точные глаголы из схемы, а не «then they do something»."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "map",
+   "stem": "The maps below show the centre of a small town in 1980 and in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview: главные изменения в целом",
+    "Изменения сгруппированы по частям карты",
+    "Точная лексика: was replaced by, was extended, to the north of",
+    "Времена согласованы: past для старой карты, present perfect/past для изменений"
+   ],
+   "answer": "Overview: the town centre was transformed from an area dominated by traffic and industry into a pedestrian and residential area. Changes: main road → pedestrian street; factory → apartments; bus station moved to the east; new park on former car park.",
+   "explanation": "Task Achievement: overview общей трансформации. Coherence: по частям карты или по типу изменений. Lexical: was converted into, was relocated, was pedestrianised, made way for.",
+   "passage": "Town centre in 1980: a main road ran through the centre from west to east; a factory stood in the north; a large car park was in the south; the bus station was next to the main road in the centre.\nTown centre in 2020: the main road has become a pedestrian street with shops; the factory has been replaced by apartments; the car park is now a park; the bus station has moved to the eastern edge of the centre."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The bar chart below shows the sources of electricity in one country in 2005 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: the country shifted away from coal towards renewable energy, with wind and solar rising from almost nothing to nearly a quarter of generation; gas became the largest source. Details: coal 48 → 22; wind/solar 2 → 24; gas 30 → 35; nuclear and hydro roughly stable.",
+   "explanation": "Task Achievement: главные сдвиги (уголь вниз, ВИЭ вверх) и смена лидера. Сравнения в процентных пунктах. Lexical: halved, twelvefold increase, remained stable. Ошибка: причины перехода — это мнение.",
+   "table": {
+    "caption": "Electricity generation (%)",
+    "head": [
+     "Source",
+     "2005",
+     "2020"
+    ],
+    "rows": [
+     [
+      "Coal",
+      "48",
+      "22"
+     ],
+     [
+      "Gas",
+      "30",
+      "35"
+     ],
+     [
+      "Nuclear",
+      "15",
+      "13"
+     ],
+     [
+      "Wind and solar",
+      "2",
+      "24"
+     ],
+     [
+      "Hydro",
+      "5",
+      "6"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "table",
+   "stem": "The table below shows the percentage of graduates from one university who found jobs in different sectors within six months of graduating, in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview выделяет общую закономерность таблицы",
+    "Данные сгруппированы (по категориям или годам), а не перечислены строкой за строкой",
+    "Сравнения с цифрами: higher than, twice as much, the lowest",
+    "Нет мнения и выдуманных причин"
+   ],
+   "answer": "Overview: technology rose from a minor to the leading sector, while finance and government lost ground. Details: technology 12 → 28; finance 25 → 19; government 18 → 10; education 22 → 18; health 15 → 17; other unchanged.",
+   "explanation": "Task Achievement: overview о смене лидера (финансы → технологии). Группируйте растущие и падающие сектора. Lexical: more than doubled, fell by eight points, overtook.",
+   "table": {
+    "caption": "Graduates' first jobs (%)",
+    "head": [
+     "Sector",
+     "2010",
+     "2020"
+    ],
+    "rows": [
+     [
+      "Technology",
+      "12",
+      "28"
+     ],
+     [
+      "Education",
+      "22",
+      "18"
+     ],
+     [
+      "Finance",
+      "25",
+      "19"
+     ],
+     [
+      "Health",
+      "15",
+      "17"
+     ],
+     [
+      "Government",
+      "18",
+      "10"
+     ],
+     [
+      "Other",
+      "8",
+      "8"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The line graph below shows the number of international tourists arriving in a country each quarter over two years. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: arrivals followed the same seasonal pattern in both years, peaking in July–September; Year 2 was higher in three quarters but slightly lower at the peak. Details: Q3 410 vs 390; Q2 260 → 300; Q1 120 → 140; Q4 150 → 180.",
+   "explanation": "Task Achievement: два слоя — сезонность и сравнение лет, включая исключение (Q3). Coherence: сначала паттерн, затем сравнение. Lexical: seasonal peak, slightly fewer, followed a similar pattern.",
+   "table": {
+    "caption": "Tourist arrivals (thousands)",
+    "head": [
+     "Quarter",
+     "Year 1",
+     "Year 2"
+    ],
+    "rows": [
+     [
+      "Jan–Mar",
+      "120",
+      "140"
+     ],
+     [
+      "Apr–Jun",
+      "260",
+      "300"
+     ],
+     [
+      "Jul–Sep",
+      "410",
+      "390"
+     ],
+     [
+      "Oct–Dec",
+      "150",
+      "180"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The chart below shows the average annual earnings of men and women in four occupations, in thousands of dollars. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: men earned more than women in every occupation, but the gap varied greatly, being widest among lawyers and narrowest among teachers and nurses. Details: lawyers 120 vs 96 (gap 24); engineers 82 vs 74 (8); nurses 61 vs 59 (2); teachers 54 vs 52 (2).",
+   "explanation": "Task Achievement: overview о разрыве и его разной величине — это ключевая особенность, а не просто «мужчины больше». Сравнивайте разрывы в абсолютных числах или процентах. Lexical: the disparity, marginally higher, by a considerable margin. Ошибка: объяснять дискриминацией — данных о причинах нет.",
+   "table": {
+    "caption": "Average annual earnings ($ thousands)",
+    "head": [
+     "Occupation",
+     "Men",
+     "Women"
+    ],
+    "rows": [
+     [
+      "Engineers",
+      "82",
+      "74"
+     ],
+     [
+      "Nurses",
+      "61",
+      "59"
+     ],
+     [
+      "Lawyers",
+      "120",
+      "96"
+     ],
+     [
+      "Teachers",
+      "54",
+      "52"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "table",
+   "stem": "The table below shows information about water use in five countries: total water use per person and the percentage used for agriculture, industry and households. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview выделяет общую закономерность таблицы",
+    "Данные сгруппированы (по категориям или годам), а не перечислены строкой за строкой",
+    "Сравнения с цифрами: higher than, twice as much, the lowest",
+    "Нет мнения и выдуманных причин"
+   ],
+   "answer": "Overview: total use per person varied enormously, and agriculture was the main use in most countries, though industry dominated in the highest-consuming country, D. Details: D 2,600 (industry 50%) and A 1,800 (agriculture 80%) highest; E only 300; households never above a quarter.",
+   "explanation": "Task Achievement: связать два типа данных (объём и структуру) в overview. Coherence: группируйте страны по профилю (аграрный, промышленный). Lexical: accounted for, the bulk of, by far the highest. Grammar: сложные сравнения (nearly nine times as much as).",
+   "table": {
+    "caption": "Water use",
+    "head": [
+     "Country",
+     "Litres per person per day",
+     "Agriculture (%)",
+     "Industry (%)",
+     "Households (%)"
+    ],
+    "rows": [
+     [
+      "A",
+      "1,800",
+      "80",
+      "12",
+      "8"
+     ],
+     [
+      "B",
+      "950",
+      "40",
+      "42",
+      "18"
+     ],
+     [
+      "C",
+      "600",
+      "65",
+      "10",
+      "25"
+     ],
+     [
+      "D",
+      "2,600",
+      "35",
+      "50",
+      "15"
+     ],
+     [
+      "E",
+      "300",
+      "70",
+      "5",
+      "25"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "process",
+   "stem": "The diagram below shows how glass bottles are recycled. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview: сколько этапов, где начало и конец",
+    "Этапы описаны по порядку со связками (first, after that, finally)",
+    "Используется пассивный залог (is heated, are transported)",
+    "Ни один этап не пропущен"
+   ],
+   "answer": "Overview: a cyclical process in which used bottles are collected, cleaned and melted to make new bottles, which return to shops. Stages: collection points → transported to a plant → sorted by colour → washed → crushed → melted with sand at 1,500 °C → moulded → filled and sent to shops.",
+   "explanation": "Task Achievement: подчеркнуть цикличность в overview. Grammar: пассив и причастия (having been sorted, the glass is…), условия (at a temperature of). Lexical: точные термины — crushed, molten, moulded. Ошибка: пропустить сортировку по цвету.",
+   "passage": "Stages shown in the diagram:\n1. Used bottles are left at collection points.\n2. Trucks take them to a recycling plant.\n3. Bottles are sorted by colour (clear, green, brown).\n4. They are washed to remove labels and dirt.\n5. The glass is crushed into small pieces.\n6. It is melted with sand in a furnace at about 1,500 °C.\n7. The molten glass is shaped in moulds into new bottles.\n8. New bottles are filled and delivered to shops, and the cycle begins again."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "map",
+   "stem": "The maps below show an island before and after the construction of tourist facilities. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview: главные изменения в целом",
+    "Изменения сгруппированы по частям карты",
+    "Точная лексика: was replaced by, was extended, to the north of",
+    "Времена согласованы: past для старой карты, present perfect/past для изменений"
+   ],
+   "answer": "Overview: the island changed from an undeveloped place into a tourist resort, though the eastern half remained largely natural. Changes: west — huts in two clusters, a restaurant and reception in the centre, a pier in the south, footpaths and a vehicle track linking them; trees preserved in the east; beach to the west now used for swimming.",
+   "explanation": "Task Achievement: overview + точное расположение изменений. Lexical: was constructed, links, is situated adjacent to, remained untouched. Grammar: past для «before», present/present perfect для «after». Ошибка: оценивать, хорошо ли это для природы.",
+   "passage": "Before: the island is about 250 metres long; there are trees across the eastern half and palm trees in the west; there is a beach on the western side; there are no buildings.\nAfter: accommodation huts stand in two groups in the west and centre; a reception building and a restaurant are in the middle of the island; a pier has been built on the southern coast; footpaths connect the huts, and a vehicle track links the reception with the pier; trees in the east remain; the western beach is marked for swimming."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "chart",
+   "stem": "The chart below shows the percentage of adults in one country who used three types of transport to commute to work in 1990, 2005 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Введение перефразирует, что показывает график",
+    "Есть overview: главная тенденция или самое большое/малое значение",
+    "Ключевые цифры названы и сравнены, а не перечислены подряд",
+    "Нет личного мнения и причин, которых нет в данных"
+   ],
+   "answer": "Overview: the car remained the main way to commute, but its share peaked in 2005, while cycling and walking almost doubled by 2020 after a small fall. Details: car 48 → 61 → 52; public transport fell steadily 40 → 26; cycling/walking 12 → 10 → 22.",
+   "explanation": "Task Achievement: заметить неравномерные тенденции (пик автомобиля в 2005, разворот у велосипеда). Coherence: по видам транспорта или периодам, но с сравнением. Lexical: reached a peak, a steady decline, rebounded. Ошибка: описывать только начало и конец, пропуская 2005.",
+   "table": {
+    "caption": "Commuting by transport type (%)",
+    "head": [
+     "Year",
+     "Car",
+     "Public transport",
+     "Bicycle or walking"
+    ],
+    "rows": [
+     [
+      "1990",
+      "48",
+      "40",
+      "12"
+     ],
+     [
+      "2005",
+      "61",
+      "29",
+      "10"
+     ],
+     [
+      "2020",
+      "52",
+      "26",
+      "22"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "essay-prompt",
+   "taskKind": "table",
+   "stem": "The table below shows the results of a survey of 1,000 people about how often they used five public services in one year. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+   "minWords": 150,
+   "maxWords": 240,
+   "rubric": [
+    "Overview выделяет общую закономерность таблицы",
+    "Данные сгруппированы (по категориям или годам), а не перечислены строкой за строкой",
+    "Сравнения с цифрами: higher than, twice as much, the lowest",
+    "Нет мнения и выдуманных причин"
+   ],
+   "answer": "Overview: parks and public transport were used most often, while the pool and library were the services most respondents never used. Details: parks and transport 65% frequent users; pool 58% never; library 42% never; hospital mostly used occasionally (60%).",
+   "explanation": "Task Achievement: overview о самых и наименее используемых. Группируйте сервисы по профилю использования. Lexical: the majority of respondents, a minority, the most frequently used. Ошибка: перечислять 15 цифр подряд.",
+   "table": {
+    "caption": "Use of public services (% of respondents)",
+    "head": [
+     "Service",
+     "Never",
+     "1–5 times",
+     "More than 5 times"
+    ],
+    "rows": [
+     [
+      "Library",
+      "42",
+      "35",
+      "23"
+     ],
+     [
+      "Public pool",
+      "58",
+      "22",
+      "20"
+     ],
+     [
+      "Hospital",
+      "31",
+      "60",
+      "9"
+     ],
+     [
+      "Public transport",
+      "15",
+      "20",
+      "65"
+     ],
+     [
+      "Parks",
+      "8",
+      "27",
+      "65"
+     ]
+    ]
+   }
+  }
+ ]
+}

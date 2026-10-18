@@ -1,0 +1,312 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "speaking",
+  "domain": "speaking",
+  "skill": "part1",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about hometown.",
+   "questions": [
+    "Where is your hometown?",
+    "What do you like most about it?",
+    "Has it changed much since you were a child?",
+    "Would you like to live there in the future?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about food.",
+   "questions": [
+    "What kind of food do you like?",
+    "Do you prefer eating at home or in restaurants?",
+    "Can you cook?",
+    "Is there any food you didn't like as a child but enjoy now?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about weekends.",
+   "questions": [
+    "What do you usually do at weekends?",
+    "Do you prefer to spend weekends with friends or family?",
+    "Did you have the same weekend activities when you were younger?",
+    "Is there anything you would like to do at weekends but can't?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about weather.",
+   "questions": [
+    "What kind of weather do you like?",
+    "What is the weather usually like where you live?",
+    "Does the weather affect your mood?",
+    "Do you check the weather forecast often?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about music.",
+   "questions": [
+    "How often do you listen to music?",
+    "What kind of music do you enjoy?",
+    "Have you ever learned to play an instrument?",
+    "Do you like listening to music while you study?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about shopping.",
+   "questions": [
+    "Do you enjoy shopping?",
+    "Do you prefer shopping online or in shops?",
+    "What was the last thing you bought?",
+    "Who do you usually go shopping with?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about sport.",
+   "questions": [
+    "Do you play any sports?",
+    "What sports are popular in your country?",
+    "Did you do sport at school?",
+    "Do you prefer watching sport or doing it?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about your studies.",
+   "questions": [
+    "What are you studying at the moment?",
+    "Why did you choose this subject?",
+    "What is the most difficult part of your studies?",
+    "What would you like to do after you finish?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about public transport.",
+   "questions": [
+    "How do you usually travel around your city?",
+    "Is public transport good where you live?",
+    "What could be done to improve it?",
+    "Do you think people will use cars less in the future?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about reading.",
+   "questions": [
+    "Do you enjoy reading?",
+    "What kinds of books do you like?",
+    "Do you prefer printed books or e-books?",
+    "Did your parents read to you when you were a child?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about friends.",
+   "questions": [
+    "Do you have many friends?",
+    "How often do you see your friends?",
+    "What do you usually do together?",
+    "Is it easy to make new friends as an adult?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about technology.",
+   "questions": [
+    "What technology do you use every day?",
+    "Is there any technology you couldn't live without?",
+    "Do you think people use their phones too much?",
+    "How has technology changed the way you study?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about holidays.",
+   "questions": [
+    "What do you like to do on holiday?",
+    "Do you prefer holidays in your own country or abroad?",
+    "What is the best holiday you have had?",
+    "Do you plan your holidays carefully?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about the internet.",
+   "questions": [
+    "How much time do you spend online each day?",
+    "What do you mainly use the internet for?",
+    "Do you think the internet is always reliable?",
+    "Did you use the internet a lot as a child?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about time management.",
+   "questions": [
+    "Are you good at managing your time?",
+    "How do you organise your day?",
+    "Do you ever put things off until later?",
+    "What advice would you give someone who is always late?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about art.",
+   "questions": [
+    "Do you enjoy looking at art?",
+    "Have you visited an art gallery recently?",
+    "Do you think art should be taught at school?",
+    "Is there a piece of art you particularly remember?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about noise.",
+   "questions": [
+    "Is the place where you live noisy or quiet?",
+    "Do noises ever bother you?",
+    "Do you prefer to work in silence or with background noise?",
+    "Are cities becoming noisier?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about patience.",
+   "questions": [
+    "Would you describe yourself as a patient person?",
+    "In what situations do you lose patience?",
+    "Is patience important in your studies?",
+    "Do you think people today are less patient than in the past?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about advertisements.",
+   "questions": [
+    "Do you pay attention to advertisements?",
+    "Where do you see the most advertising?",
+    "Have you ever bought something because of an advert?",
+    "Do you think there is too much advertising today?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 1,
+   "stem": "In this part of the test, I'd like to ask you some questions about yourself. Let's talk about history.",
+   "questions": [
+    "Are you interested in history?",
+    "What period of history do you find most interesting?",
+    "Did you enjoy history lessons at school?",
+    "Do you think it is important to learn about history?"
+   ],
+   "answer": "Short, direct answers (2–3 sentences) with a reason or example for each question; natural everyday vocabulary; past and present tenses where the question asks about change.",
+   "explanation": "Часть 1 — 4–5 минут знакомых тем. Отвечайте прямо и добавляйте причину или пример: «Yes, I do, because…». Не заучивайте ответы — экзаменатор это замечает. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  }
+ ]
+}

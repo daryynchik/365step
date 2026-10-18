@@ -1,0 +1,752 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "matching",
+  "skill": "matching-information",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p2",
+   "title": "The Sea Otter",
+   "text": "**A** Sea otters live along the coasts of the northern Pacific Ocean, from Japan to California. Unlike most sea mammals, they have no thick layer of fat to keep them warm. Instead, they rely on their fur, which is the densest of any animal, with up to one million hairs in a single square inch.\n\n**B** Because cold water quickly takes heat from the body, sea otters must eat a great deal. An adult may eat food equal to about a quarter of its body weight every day. Its diet includes sea urchins, crabs, clams and other animals that live on the sea floor.\n\n**C** Sea otters are one of the few animals known to use tools. Floating on its back, an otter places a flat stone on its chest and strikes a shellfish against it until the shell breaks. Some otters keep a favourite stone in a loose pocket of skin under the arm.\n\n**D** In the 1700s and 1800s, sea otters were hunted for their valuable fur, and by the early 1900s only a few thousand remained. An international agreement in 1911 protected them, and their numbers slowly began to recover in many areas.\n\n**E** Scientists now know that sea otters play an important role in their environment. By eating sea urchins, which feed on kelp, otters help underwater kelp forests to grow. These forests provide shelter for many species of fish.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p3",
+   "title": "Keeping Time",
+   "text": "**A** For most of human history, people measured time by watching the sky. The position of the sun told them roughly whether it was morning, midday or evening, and the changing shape of the moon helped them count the months.\n\n**B** The ancient Egyptians were among the first to build tools for measuring time. They used shadow clocks, which showed the hour by the length and direction of a shadow, and water clocks, in which water dripped slowly from one container into another. Water clocks had one great advantage: they worked at night and on cloudy days.\n\n**C** Mechanical clocks appeared in Europe in the late thirteenth century. These early clocks were large, heavy machines placed in church towers, and many of them had no hands at all; instead, they rang a bell to mark the hours. They were not very accurate and could lose or gain many minutes in a day.\n\n**D** A great improvement came in 1656, when the Dutch scientist Christiaan Huygens built the first pendulum clock. A swinging pendulum keeps a very regular rhythm, and Huygens's clock was accurate to within about a minute a day. Pendulum clocks soon spread across Europe.\n\n**E** Today, the most accurate clocks in the world are atomic clocks, which measure the vibrations of atoms. The best of them would lose less than one second in millions of years. Without them, satellite navigation systems such as GPS could not tell people where they are.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p5",
+   "title": "Should Homework Be Banned?",
+   "text": "**A** Every few years, a newspaper reports that a school somewhere has abolished homework, and the debate begins again. Some parents are delighted; others are horrified. In my view, both sides are partly right, because the real question is not whether homework should exist but what kind of homework is worth setting.\n\n**B** The case against homework is strongest for young children. Research suggests that for pupils in the first years of primary school, homework has little effect on how well they do. For these children, time spent playing, reading for pleasure or simply talking with their families is probably more valuable.\n\n**C** For older students, however, the picture is different. Practising new skills at home helps them remember what they have learned, and learning to plan their own work prepares them for university and employment. I would be worried about a secondary school that set no homework at all.\n\n**D** The problem is that much homework is poorly designed. Worksheets that repeat what was done in class, or projects that depend mainly on how much help parents can give, waste time and can be unfair. Students from busy or poorer homes may not have the same support.\n\n**E** Instead of banning homework, schools should set less of it and make it better. A short task that asks students to think, rather than copy, is worth more than an hour of busywork. Teachers should also explain why each piece of homework matters.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p2",
+   "title": "Lichens: Partners in Survival",
+   "text": "**A** Lichens are among the most widespread living things on Earth, yet few people notice them. They grow as crusty patches on rocks, leafy growths on tree bark and tufts hanging from branches, and they can be found everywhere from tropical forests to the frozen deserts of Antarctica.\n\n**B** For a long time, scientists believed that a lichen was a single organism. In the nineteenth century, however, the Swiss botanist Simon Schwendener proposed that each lichen is in fact a partnership between a fungus and an alga or a type of bacterium that can photosynthesise. His idea was strongly opposed at first, but it is now accepted.\n\n**C** In this partnership, the fungus provides a protective structure and absorbs water and minerals, while its partner uses sunlight to produce sugars that feed both. This cooperation allows lichens to survive in places where neither partner could live alone, such as bare rock or extremely cold mountain tops.\n\n**D** Lichens grow very slowly, sometimes only a millimetre a year. Because some species grow at a known, steady rate, geologists have used them to estimate how long ago rock surfaces were exposed, for example after a glacier retreated. This method, called lichenometry, works best for surfaces that are a few hundred years old.\n\n**E** Lichens are also sensitive to air pollution, especially sulphur dioxide. In the industrial cities of the nineteenth century, many species disappeared. Today, scientists survey lichens to monitor air quality, and the return of sensitive species to some cities has been taken as a sign that the air has become cleaner.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p3",
+   "title": "Farming Upwards",
+   "text": "**A** In a former warehouse on the edge of a city, rows of lettuce grow on shelves stacked ten levels high. There is no soil and no sunlight; instead, the plants' roots sit in water enriched with nutrients, and pink-purple LED lights shine on the leaves for up to eighteen hours a day. This is a vertical farm.\n\n**B** Supporters say vertical farms offer several advantages. Because the plants grow indoors, they are protected from storms, droughts and pests, so few or no pesticides are needed. Water is recycled through the system, and many farms report using up to 95 percent less water than conventional fields.\n\n**C** Growing food close to where people live also reduces the distance it must travel. Lettuce grown in another country may spend days in trucks before reaching a supermarket, losing freshness along the way. A vertical farm in the city can deliver the same produce within hours of harvest.\n\n**D** The main problem is energy. Replacing the sun with electric lights is expensive, and in regions where electricity comes mainly from fossil fuels, the carbon emissions of indoor farming can be higher than those of traditional agriculture. Several well-funded vertical farming companies have closed in recent years because they could not make a profit.\n\n**E** For now, vertical farms grow mostly leafy greens and herbs, which are light, grow quickly and sell at high prices. Staple crops such as wheat and rice need far more space and light, and experts doubt that they will be grown this way on a large scale in the near future.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p5",
+   "title": "Tourism and Fragile Places",
+   "text": "**A** Every summer, crowds of visitors arrive in historic towns, mountain villages and coral islands, attracted by photographs they have seen online. Tourism brings money and jobs, but I believe that in some places it has reached a level that threatens the very things visitors come to see.\n\n**B** Consider the small coastal villages whose streets are now lined with souvenir shops and holiday flats. As property is bought for short-term rentals, rents rise and local families are forced to move away. A village without residents may look charming, but it has lost its life.\n\n**C** Some governments have responded by charging visitors an entry fee or limiting the number of tourists allowed each day. Critics argue that such measures turn heritage into a luxury for the wealthy. I understand this concern, but I think a modest fee, if the money is spent on protecting the site, is a reasonable price to pay.\n\n**D** Tourists themselves can also help. Visiting in the quieter months, staying longer in one place rather than rushing between several, and spending money in locally owned businesses all reduce pressure on popular destinations while supporting their communities.\n\n**E** I do not want to discourage travel, which can broaden the mind and build understanding between cultures. My argument is simply that some places are too fragile to absorb unlimited numbers, and that protecting them now is the only way to ensure that future visitors can still enjoy them.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p2",
+   "title": "How Animals Sleep",
+   "text": "**A** Almost every animal that has been carefully studied shows some form of sleep, a state of reduced activity and responsiveness from which it can be woken. Yet the amount and pattern of sleep vary enormously. Some bats sleep for around twenty hours a day, while adult elephants in the wild have been recorded sleeping for only about two hours.\n\n**B** Many marine mammals face a particular challenge: they must surface to breathe. Dolphins solve this problem by resting one half of the brain at a time. During this 'unihemispheric' sleep, one eye remains open and the animal continues to swim slowly, apparently keeping watch for predators and staying close to its group.\n\n**C** Some birds do something similar. Studies of frigatebirds, which can stay at sea for weeks without landing, found that they sleep while flying, often with one half of the brain at a time and for only a few seconds at once. In total, they slept less than an hour a day in flight, far less than they did on land.\n\n**D** Why sleep exists at all remains a puzzle. A sleeping animal cannot feed, mate or easily escape danger, so sleep must provide important benefits to have survived in so many species. Leading theories suggest that sleep helps to save energy, to repair tissues, and to strengthen memories by reorganising connections in the brain.\n\n**E** Evidence that sleep is essential comes from experiments in which animals are deprived of it. Even fruit flies that are kept awake show reduced learning, and when finally allowed to rest, they sleep longer and more deeply than usual, as if paying back a debt. Such findings suggest that sleep serves functions that cannot simply be postponed.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p3",
+   "title": "The Urban Heat Island",
+   "text": "**A** On a summer evening, the centre of a large city can be several degrees warmer than the countryside just a few kilometres away. This phenomenon, known as the urban heat island, was first described in the early nineteenth century by Luke Howard, an amateur scientist who recorded temperatures in and around London.\n\n**B** Several factors combine to produce the effect. Dark surfaces such as asphalt and roofing absorb much of the sunlight that falls on them and release the heat slowly after sunset. Tall buildings trap this heat by reducing the flow of air and by blocking the escape of heat radiation to the sky. Engines, air conditioners and industry add further heat.\n\n**C** The lack of vegetation also plays a role. Plants cool their surroundings through evapotranspiration, releasing water vapour that absorbs heat as it evaporates. In heavily built-up areas, where soil is sealed beneath concrete, this natural cooling is largely absent.\n\n**D** The consequences can be serious. During heat waves, high night-time temperatures prevent people's bodies from recovering from the heat of the day, and death rates rise, particularly among the elderly. Higher temperatures also increase demand for air conditioning, which in turn releases more heat and can strain electricity networks.\n\n**E** Cities are experimenting with a range of responses, from planting trees and creating parks to painting roofs in reflective colours. Such measures are not equally effective everywhere: a reflective roof that cools a building in a hot climate may increase heating costs in a cold one. Planners are therefore increasingly using detailed temperature maps to target the neighbourhoods that would benefit most.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p5",
+   "title": "Is Growth Enough?",
+   "text": "**A** For much of the twentieth century, governments measured their success largely by the growth of gross domestic product, or GDP, the total value of goods and services an economy produces. The assumption was simple: a growing economy meant rising living standards. I believe this assumption, while not entirely wrong, has become dangerously incomplete.\n\n**B** GDP was never designed to measure well-being. Its creators warned that it says nothing about how income is distributed, and it counts some activities that make life worse. A traffic accident, for instance, raises GDP through spending on repairs and medical care, while unpaid work such as caring for children or elderly relatives is not counted at all.\n\n**C** It would be foolish to dismiss growth entirely. In poorer countries, economic growth has lifted hundreds of millions of people out of extreme poverty, providing better food, housing and healthcare. The question is not whether growth matters but whether, beyond a certain level of wealth, it should remain the main goal of policy.\n\n**D** Several countries have begun to publish alternative measures alongside GDP, tracking indicators such as life expectancy, levels of trust and access to green space. Critics complain that such measures are subjective and difficult to compare. They have a point, but an imperfect measure of what matters may be more useful than a precise measure of something that matters less.\n\n**E** What I am proposing, then, is not abandoning GDP but putting it in its place: as one indicator among several, rather than the single number by which a nation judges itself. A society can become richer without becoming better off, and our statistics should be able to tell the difference.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a description of how otters open shellfish?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: выдра бьёт моллюска о камень на груди."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains the reason sea otters need to eat so much?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: холодная вода быстро забирает тепло, поэтому они едят много."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reference to an international agreement?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: соглашение 1911 года защитило выдр."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains the effect of otters on fish habitats?",
+   "choices": [
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: выдры помогают лесам ламинарии, где укрываются рыбы."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains the area of the world where sea otters live?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: побережья северной части Тихого океана от Японии до Калифорнии."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains the name of the scientist who built the first pendulum clock?",
+   "choices": [
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: Christiaan Huygens, 1656."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a description of clocks that rang bells instead of showing the time with hands?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: многие ранние часы не имели стрелок и отбивали часы колоколом."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains how people counted months before clocks existed?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: по изменению формы луны."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains an example of modern technology that needs very accurate clocks?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: спутниковая навигация GPS."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains an advantage of one type of ancient clock?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: водяные часы работали ночью и в пасмурные дни."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains the writer's view of why the debate keeps returning?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: каждые несколько лет газеты пишут об отмене домашки, и спор начинается снова."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains examples of badly designed homework?",
+   "choices": [
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: рабочие листы, повторяющие урок, и проекты, зависящие от помощи родителей."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains how homework can prepare students for later life?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: умение планировать работу готовит к университету и работе."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains a suggestion that teachers explain the purpose of homework?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: учителя должны объяснять, зачем нужно каждое задание."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reference to research on young pupils?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: исследования о детях первых лет начальной школы."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains the name of a scientist?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: Simon Schwendener."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reason lichens can live in harsh places?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: сотрудничество позволяет жить там, где ни один партнёр не выжил бы."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a mention of a particular gas?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: sulphur dioxide."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a limit on a dating method?",
+   "choices": [
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: lichenometry works best for surfaces a few hundred years old."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains examples of the different forms lichens take?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: корки на камнях, листоватые на коре, кисти на ветках."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reference to businesses that failed?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: several companies have closed because they could not make a profit."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a comparison of travel times for food?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: дни в грузовиках против часов после сбора."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a description of the conditions inside a farm?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: полки в десять ярусов, вода с питательными веществами, LED-свет."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains crops that are unlikely to be grown indoors soon?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: пшеница и рис."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a figure for water savings?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: up to 95 percent less water."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains practical advice for travellers?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 3,
+   "explanation": "Абзац D: ездить вне сезона, дольше оставаться, тратить в местных заведениях."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains an objection to entry fees?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: critics argue that such measures turn heritage into a luxury for the wealthy."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains an effect of short-term rentals on residents?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: аренда дорожает, местные семьи уезжают."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains a positive effect of travel on people?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: travel can broaden the mind and build understanding between cultures."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reason why many visitors choose certain places?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: attracted by photographs they have seen online."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains an example of an animal that sleeps very little in the wild?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: взрослые слоны в дикой природе спят около двух часов."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a suggestion that sleep may help memory?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: to strengthen memories by reorganising connections in the brain."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a comparison with repaying something owed?",
+   "choices": [
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: as if paying back a debt."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reason one group of animals cannot simply sleep deeply?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: морским млекопитающим нужно всплывать, чтобы дышать."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Which paragraph contains a description of sleep lasting only seconds at a time?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: for only a few seconds at once."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a reference to a historical observer?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: Luke Howard в начале XIX века."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains an explanation of how plants lower temperatures?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: evapotranspiration."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a cycle in which a response to heat produces more heat?",
+   "choices": [
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: кондиционеры выделяют больше тепла и нагружают сети."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a tool that helps planners choose where to act?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: detailed temperature maps."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Which paragraph contains a list of human sources of heat?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: engines, air conditioners and industry."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains an example of work that GDP does not count?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: unpaid care for children or elderly relatives."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains an acknowledgment of what growth has achieved?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C: lifted hundreds of millions out of extreme poverty."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains examples of alternative indicators?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph D"
+   ],
+   "answer": 3,
+   "explanation": "Абзац D: life expectancy, levels of trust, access to green space."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains the writer's proposal summarised?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph C",
+    "Paragraph D",
+    "Paragraph E"
+   ],
+   "answer": 3,
+   "explanation": "Абзац E: GDP as one indicator among several."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Which paragraph contains a definition of GDP?",
+   "choices": [
+    "Paragraph A",
+    "Paragraph B",
+    "Paragraph C",
+    "Paragraph E"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: the total value of goods and services an economy produces."
+  }
+ ]
+}

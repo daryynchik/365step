@@ -1,0 +1,452 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "speaking",
+  "domain": "speaking",
+  "skill": "part2",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a place in your city that you like to visit.",
+    "Would you recommend this place to visitors?"
+   ],
+   "cueCard": {
+    "topic": "Describe a place in your city that you like to visit.",
+    "points": [
+     "where it is",
+     "how often you go there",
+     "what you do there",
+     "and explain why you like it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a person who has helped you.",
+    "Do you still keep in touch with this person?"
+   ],
+   "cueCard": {
+    "topic": "Describe a person who has helped you.",
+    "points": [
+     "who the person is",
+     "how you know them",
+     "what they did to help you",
+     "and explain how you felt about it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a gift you gave to someone.",
+    "Do you enjoy choosing gifts for other people?"
+   ],
+   "cueCard": {
+    "topic": "Describe a gift you gave to someone.",
+    "points": [
+     "what the gift was",
+     "who you gave it to",
+     "why you chose it",
+     "and explain how the person reacted"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a book or film you enjoyed.",
+    "Would you read or watch it again?"
+   ],
+   "cueCard": {
+    "topic": "Describe a book or film you enjoyed.",
+    "points": [
+     "what it was",
+     "when you read or watched it",
+     "what it was about",
+     "and explain why you enjoyed it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a hobby you enjoy.",
+    "Do you think you will continue this hobby in the future?"
+   ],
+   "cueCard": {
+    "topic": "Describe a hobby you enjoy.",
+    "points": [
+     "what the hobby is",
+     "when you started it",
+     "how often you do it",
+     "and explain why you enjoy it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a meal you remember well.",
+    "Do you often eat meals like this?"
+   ],
+   "cueCard": {
+    "topic": "Describe a meal you remember well.",
+    "points": [
+     "what you ate",
+     "where you had it",
+     "who you were with",
+     "and explain why you remember it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a trip you took that you enjoyed.",
+    "Would you like to go there again?"
+   ],
+   "cueCard": {
+    "topic": "Describe a trip you took that you enjoyed.",
+    "points": [
+     "where you went",
+     "who you went with",
+     "what you did there",
+     "and explain why you enjoyed it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a time when you had to make an important decision.",
+    "Do you usually make decisions quickly?"
+   ],
+   "cueCard": {
+    "topic": "Describe a time when you had to make an important decision.",
+    "points": [
+     "what the decision was",
+     "when you made it",
+     "what choices you had",
+     "and explain how you feel about it now"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a skill you would like to learn.",
+    "Is it easier to learn new skills when you are young?"
+   ],
+   "cueCard": {
+    "topic": "Describe a skill you would like to learn.",
+    "points": [
+     "what the skill is",
+     "why you want to learn it",
+     "how you would learn it",
+     "and explain how it would help you"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a teacher who influenced you.",
+    "Do you think you would make a good teacher?"
+   ],
+   "cueCard": {
+    "topic": "Describe a teacher who influenced you.",
+    "points": [
+     "who the teacher was",
+     "what subject they taught",
+     "what they did that was special",
+     "and explain how they influenced you"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a time when you were very busy.",
+    "Do you prefer being busy or having free time?"
+   ],
+   "cueCard": {
+    "topic": "Describe a time when you were very busy.",
+    "points": [
+     "when it was",
+     "what you had to do",
+     "how you managed your time",
+     "and explain how you felt"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a piece of technology that you find useful.",
+    "Do you think you rely on it too much?"
+   ],
+   "cueCard": {
+    "topic": "Describe a piece of technology that you find useful.",
+    "points": [
+     "what it is",
+     "how long you have had it",
+     "what you use it for",
+     "and explain why it is useful to you"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a festival or celebration in your country.",
+    "Has the way people celebrate it changed?"
+   ],
+   "cueCard": {
+    "topic": "Describe a festival or celebration in your country.",
+    "points": [
+     "what it is called",
+     "when it takes place",
+     "what people do",
+     "and explain why it is important"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a time you helped someone.",
+    "Do people in your country often help strangers?"
+   ],
+   "cueCard": {
+    "topic": "Describe a time you helped someone.",
+    "points": [
+     "who you helped",
+     "what the situation was",
+     "what you did",
+     "and explain how you felt afterwards"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a time when you changed your opinion about something.",
+    "Is it a strength or a weakness to change your mind?"
+   ],
+   "cueCard": {
+    "topic": "Describe a time when you changed your opinion about something.",
+    "points": [
+     "what your original opinion was",
+     "what made you change it",
+     "what you think now",
+     "and explain how the change affected you"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a law or rule that you think is important.",
+    "Are there any rules you would like to change?"
+   ],
+   "cueCard": {
+    "topic": "Describe a law or rule that you think is important.",
+    "points": [
+     "what the law or rule is",
+     "who it applies to",
+     "how it is enforced",
+     "and explain why you think it is important"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a challenge you have faced in learning something.",
+    "Do you think challenges make learning more effective?"
+   ],
+   "cueCard": {
+    "topic": "Describe a challenge you have faced in learning something.",
+    "points": [
+     "what you were learning",
+     "what the challenge was",
+     "how you dealt with it",
+     "and explain what you learned from the experience"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe an achievement that you are proud of.",
+    "Do you share your achievements with others?"
+   ],
+   "cueCard": {
+    "topic": "Describe an achievement that you are proud of.",
+    "points": [
+     "what you achieved",
+     "when it happened",
+     "what you had to do to achieve it",
+     "and explain why you are proud of it"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe a place that has changed a lot.",
+    "Are changes like this usually positive?"
+   ],
+   "cueCard": {
+    "topic": "Describe a place that has changed a lot.",
+    "points": [
+     "where it is",
+     "how it used to be",
+     "how it has changed",
+     "and explain how you feel about these changes"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "speaking-prompt",
+   "part": 2,
+   "stem": "Now I'm going to give you a topic, and I'd like you to talk about it for one to two minutes. You have one minute to think about what you're going to say. You can make some notes if you wish.",
+   "questions": [
+    "Please describe an idea you had that you think could improve your school or workplace.",
+    "Have you shared this idea with anyone?"
+   ],
+   "cueCard": {
+    "topic": "Describe an idea you had that you think could improve your school or workplace.",
+    "points": [
+     "what the idea is",
+     "how you thought of it",
+     "how it would work",
+     "and explain why it would be an improvement"
+    ]
+   },
+   "answer": "A 1–2 minute talk that covers every point on the card in order, with specific details (names, times, feelings), a clear opening sentence and a short conclusion.",
+   "explanation": "Часть 2 — монолог 1–2 минуты по карточке. За минуту подготовки запишите 2–3 слова на каждый пункт. Говорите до конца отведённого времени, используйте прошедшие времена для историй. Оценивают четыре критерия: Fluency and Coherence (говорить без долгих пауз, связно), Lexical Resource (точные слова по теме, перефразирование), Grammatical Range and Accuracy (разные конструкции без грубых ошибок), Pronunciation (понятность, ударение и интонация)."
+  }
+ ]
+}

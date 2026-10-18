@@ -1,0 +1,707 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "true-false",
+  "skill": "ynng",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p4",
+   "title": "Why Schools Should Teach Cooking",
+   "text": "**A** In many countries, cooking has quietly disappeared from the school timetable. I believe this is a mistake. Knowing how to prepare a simple, healthy meal is as useful as any skill a young person can learn, and schools are the best place to teach it.\n\n**B** Some people argue that cooking should be taught at home. In an ideal world, perhaps it would be. But many parents work long hours and rely on ready meals, and children who never see food being prepared cannot be expected to learn by themselves.\n\n**C** Cooking lessons also support other subjects. Measuring ingredients involves maths, and understanding why bread rises is a lesson in science. In my experience, students who struggle in a normal classroom often concentrate better when they can work with their hands.\n\n**D** Critics point to the cost of kitchens and ingredients. These costs are real, but they are small compared with the long-term costs of poor diets, which are linked to illnesses that are expensive to treat. A basic kitchen classroom is a sensible investment.\n\n**E** I am not suggesting that every student should become a chef. The aim is more modest: to make sure that no one leaves school unable to boil an egg or cook a pan of vegetables. That, surely, is not too much to ask.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p5",
+   "title": "Should Homework Be Banned?",
+   "text": "**A** Every few years, a newspaper reports that a school somewhere has abolished homework, and the debate begins again. Some parents are delighted; others are horrified. In my view, both sides are partly right, because the real question is not whether homework should exist but what kind of homework is worth setting.\n\n**B** The case against homework is strongest for young children. Research suggests that for pupils in the first years of primary school, homework has little effect on how well they do. For these children, time spent playing, reading for pleasure or simply talking with their families is probably more valuable.\n\n**C** For older students, however, the picture is different. Practising new skills at home helps them remember what they have learned, and learning to plan their own work prepares them for university and employment. I would be worried about a secondary school that set no homework at all.\n\n**D** The problem is that much homework is poorly designed. Worksheets that repeat what was done in class, or projects that depend mainly on how much help parents can give, waste time and can be unfair. Students from busy or poorer homes may not have the same support.\n\n**E** Instead of banning homework, schools should set less of it and make it better. A short task that asks students to think, rather than copy, is worth more than an hour of busywork. Teachers should also explain why each piece of homework matters.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p6",
+   "title": "In Praise of Boredom",
+   "text": "**A** Most of us now carry a device that can end boredom in seconds. Waiting for a bus or standing in a queue, we reach for our phones without thinking. I want to suggest that this habit costs us something important.\n\n**B** Boredom is uncomfortable, but it is not useless. When the mind has nothing to focus on, it begins to wander, and this wandering is often where new ideas come from. Many people say their best ideas arrive in the shower or on a long walk, when they are not trying to think at all.\n\n**C** Some psychologists have tested this idea. In one well-known experiment, people who first did a dull task, such as copying numbers from a phone book, later came up with more creative uses for everyday objects than people who had not been bored. One study does not prove a rule, but the result is interesting.\n\n**D** I am not against technology. Phones help us stay in touch and find information, and I use mine every day. My concern is simply that we no longer allow ourselves even a few minutes with nothing to do.\n\n**E** So the next time you are waiting for a train, try leaving your phone in your pocket. You may feel restless at first. But you might also notice something you would have missed, or have a thought that surprises you.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p4",
+   "title": "The Case for Learning Latin",
+   "text": "**A** When I tell people that I teach Latin, they often ask why anyone should learn a language that nobody speaks. It is a fair question. My answer is that Latin is useful not because students will speak it, but because of what learning it does to the way they think about language.\n\n**B** Latin is a highly inflected language: the endings of words change to show their role in a sentence. To read even a simple sentence, students must analyse each word carefully. I have found that this habit of close attention carries over to their reading and writing in English.\n\n**C** Supporters of Latin often claim that it improves students' vocabulary, since many English words come from Latin roots. This is true, but I think the claim is overstated. Students can learn these roots in a few lessons; they do not need years of study to discover that 'aqua' means water.\n\n**D** A stronger argument is that Latin opens a door to a long literary tradition. Reading Virgil or Ovid in the original is a different experience from reading a translation, and students who manage it gain a confidence that few other achievements provide.\n\n**E** None of this means that Latin should be compulsory. Many students will gain more from studying a modern language that allows them to talk to people in other countries. But for those who enjoy puzzles and patterns, Latin deserves a place in the curriculum.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p5",
+   "title": "Tourism and Fragile Places",
+   "text": "**A** Every summer, crowds of visitors arrive in historic towns, mountain villages and coral islands, attracted by photographs they have seen online. Tourism brings money and jobs, but I believe that in some places it has reached a level that threatens the very things visitors come to see.\n\n**B** Consider the small coastal villages whose streets are now lined with souvenir shops and holiday flats. As property is bought for short-term rentals, rents rise and local families are forced to move away. A village without residents may look charming, but it has lost its life.\n\n**C** Some governments have responded by charging visitors an entry fee or limiting the number of tourists allowed each day. Critics argue that such measures turn heritage into a luxury for the wealthy. I understand this concern, but I think a modest fee, if the money is spent on protecting the site, is a reasonable price to pay.\n\n**D** Tourists themselves can also help. Visiting in the quieter months, staying longer in one place rather than rushing between several, and spending money in locally owned businesses all reduce pressure on popular destinations while supporting their communities.\n\n**E** I do not want to discourage travel, which can broaden the mind and build understanding between cultures. My argument is simply that some places are too fragile to absorb unlimited numbers, and that protecting them now is the only way to ensure that future visitors can still enjoy them.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p6",
+   "title": "Should Museums Return Objects?",
+   "text": "**A** Many of the great museums of Europe and North America hold objects taken from other countries during periods of colonial rule. In recent years, demands for their return have grown louder. In my view, museums should treat these requests far more seriously than they have done in the past.\n\n**B** Museums often argue that they are best placed to protect valuable objects, which might be damaged if returned. This argument may once have been convincing, but many countries now have modern museums with excellent conservation facilities. It also assumes that the people who made the objects cannot be trusted to care for them, an assumption I find uncomfortable.\n\n**C** Another common argument is that large museums allow millions of visitors from around the world to see objects from many cultures in one place. This is a genuine benefit. Yet it does not explain why the objects must stay permanently in one city; long-term loans and travelling exhibitions could serve the same purpose.\n\n**D** Not every case is simple. Some objects were bought legally, and in some cases it is unclear which modern community has the strongest claim. Each request should therefore be examined carefully, with evidence about how the object left its country of origin.\n\n**E** What matters most is a change in attitude. Rather than defending their collections at all costs, museums should begin from the question of how each object came to be there. Where the answer reveals injustice, returning it is not a loss but a way of telling the truth about the past.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p4",
+   "title": "The Myth of Multitasking",
+   "text": "**A** We like to believe that we can do several things at once: answer emails during a meeting, listen to a podcast while studying, check messages while driving. I want to argue that, for most tasks that require thought, multitasking is largely an illusion, and an expensive one.\n\n**B** What feels like doing two things simultaneously is usually rapid switching between them. Each switch carries a small cost, as the brain disengages from one set of rules and loads another. Individually these costs are tiny, but they accumulate, and studies consistently find that people who switch frequently take longer and make more errors than those who complete tasks one at a time.\n\n**C** Defenders of multitasking point out that some combinations work well. Walking while talking, or listening to music while washing dishes, seems to cause few problems. This is true, but it does not contradict my argument. These examples pair an automatic activity with one that requires attention; the difficulty arises when both tasks demand conscious thought.\n\n**D** Perhaps the most troubling finding is that people who multitask heavily are often the most confident in their ability to do so, even though their performance is no better, and sometimes worse, than that of others. Our sense of being productive, in other words, is a poor guide to whether we actually are.\n\n**E** I am not suggesting that we can always avoid interruptions; modern work rarely allows that. But we can choose to protect periods of uninterrupted concentration for our most demanding tasks. The evidence suggests that doing so is not a luxury but one of the simplest ways to work better.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p5",
+   "title": "Is Growth Enough?",
+   "text": "**A** For much of the twentieth century, governments measured their success largely by the growth of gross domestic product, or GDP, the total value of goods and services an economy produces. The assumption was simple: a growing economy meant rising living standards. I believe this assumption, while not entirely wrong, has become dangerously incomplete.\n\n**B** GDP was never designed to measure well-being. Its creators warned that it says nothing about how income is distributed, and it counts some activities that make life worse. A traffic accident, for instance, raises GDP through spending on repairs and medical care, while unpaid work such as caring for children or elderly relatives is not counted at all.\n\n**C** It would be foolish to dismiss growth entirely. In poorer countries, economic growth has lifted hundreds of millions of people out of extreme poverty, providing better food, housing and healthcare. The question is not whether growth matters but whether, beyond a certain level of wealth, it should remain the main goal of policy.\n\n**D** Several countries have begun to publish alternative measures alongside GDP, tracking indicators such as life expectancy, levels of trust and access to green space. Critics complain that such measures are subjective and difficult to compare. They have a point, but an imperfect measure of what matters may be more useful than a precise measure of something that matters less.\n\n**E** What I am proposing, then, is not abandoning GDP but putting it in its place: as one indicator among several, rather than the single number by which a nation judges itself. A society can become richer without becoming better off, and our statistics should be able to tell the difference.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p6",
+   "title": "Lost in Translation?",
+   "text": "**A** Lists of 'untranslatable words' are popular online. We are told that the Portuguese saudade, a longing for something absent, or the Danish hygge, a sense of cosy contentment, have no equivalent in English and therefore reveal something unique about the cultures that use them. I find these lists charming but misleading.\n\n**B** The claim that a word is untranslatable usually means only that English lacks a single word with the same meaning. But languages routinely express ideas with phrases rather than single words, and a skilled translator can convey the sense of saudade in a sentence. To say that a concept cannot be expressed in another language confuses the size of a vocabulary with the limits of thought.\n\n**C** This does not mean that translation is easy or that nothing is lost. Words carry associations, rhythms and histories that rarely survive the move from one language to another. A poem that depends on the sound of its words may lose much of its effect even in an excellent translation, and translators of poetry often describe their work as choosing which losses to accept.\n\n**D** The popularity of untranslatable words also reflects a tendency to treat other cultures as exotic. It is flattering to imagine that a particular people possess a special feeling that the rest of us cannot share. In my experience, however, speakers of different languages recognise one another's emotions far more readily than such lists suggest.\n\n**E** I would rather celebrate translation than its supposed impossibility. Every successful translation is evidence that human experience is broadly shared, even when the words we use to describe it differ. That seems to me a more hopeful lesson than the idea that each language is a locked room.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nSchools are the most suitable place to teach young people to cook.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: schools are the best place to teach it — YES."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nAll parents are able to teach their children to cook at home.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: многие родители работают допоздна, дети не видят готовки — автор с этим не согласен, NO."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nCooking lessons can help students with other school subjects.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: cooking lessons also support other subjects (maths, science) — YES."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nThe cost of a kitchen classroom is too high to justify.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: costs are small compared with poor diets, a sensible investment — NO."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nCooking should be a compulsory subject in universities.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Об университетах автор не говорит — NOT GIVEN."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nHomework should be banned in all schools.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: instead of banning homework, set less and better — NO."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nYoung children may benefit more from play than from homework.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: for young children playing and reading for pleasure are probably more valuable — YES."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nSecondary schools should set some homework.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: I would be worried about a secondary school that set no homework — YES."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nHomework that depends on parents' help can be unfair.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: projects that depend on parents' help can be unfair — YES."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nTeachers spend too long marking homework.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "О проверке домашних заданий учителями автор ничего не говорит — NOT GIVEN."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nUsing phones to avoid boredom may have a hidden cost.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: this habit costs us something important — YES."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nBoredom has no value at all.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: Boredom is uncomfortable, but it is not useless — NO."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nA single study is enough to prove that boredom makes people creative.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: One study does not prove a rule — NO."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nPeople should stop using phones completely.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: I am not against technology; I use mine every day — NO."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nMost new ideas come to people while they are working at a desk.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Автор говорит о душе и прогулках, но не утверждает ничего про большинство идей за столом — NOT GIVEN."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nIt is reasonable to ask why people should study Latin.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: It is a fair question — YES."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nStudying Latin helps students pay close attention when they read English.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: the habit of close attention carries over to their reading and writing in English — YES."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nThe vocabulary benefits of Latin are the main reason to study it.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: the claim is overstated; абзац D: a stronger argument is literature — NO."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nLatin should be a compulsory subject for all students.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: None of this means that Latin should be compulsory — NO."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nLatin teachers are paid less than teachers of modern languages.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "О зарплатах автор ничего не говорит — NOT GIVEN."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nTourism has reached a harmful level in some places.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: in some places it threatens the very things visitors come to see — YES."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nA village can lose something important even if it still looks attractive.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: A village without residents may look charming, but it has lost its life — YES."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nEntry fees are acceptable if the money is used to protect the site.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: a modest fee, if spent on protecting the site, is a reasonable price — YES."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nPeople should travel as little as possible.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: I do not want to discourage travel — NO."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nCoral islands suffer more from tourism than mountain villages do.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Автор перечисляет оба типа мест, но не сравнивает ущерб — NOT GIVEN."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nMuseums have taken requests for the return of objects seriously enough in the past.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: museums should treat these requests far more seriously than in the past — NO."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nThe argument that objects are safer in large museums is less convincing than it once was.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: may once have been convincing, but many countries now have modern museums — YES."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nDisplaying objects from many cultures in one place has no benefit.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: This is a genuine benefit — NO."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nEvery request for the return of an object should be granted automatically.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: not every case is simple, each request should be examined carefully — NO."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nMost visitors to large museums support returning objects.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Мнение посетителей автор не приводит — NOT GIVEN."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nMultitasking on tasks that require thought is more costly than people assume.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: multitasking is largely an illusion, and an expensive one — YES."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nCombining an automatic activity with a thinking task undermines the writer's argument.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: This is true, but it does not contradict my argument — NO."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nPeople who multitask a great deal tend to judge their own abilities accurately.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: они самые уверенные, хотя результаты не лучше — их самооценка неточна, NO."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nModern workplaces should ban all interruptions.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: we cannot always avoid interruptions; автор предлагает защищать периоды концентрации, а не запрещать всё — NO."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p4",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nYounger people are better at multitasking than older people.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Возраст автор не обсуждает — NOT GIVEN."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nThe belief that economic growth raises living standards is entirely mistaken.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: while not entirely wrong, has become dangerously incomplete — NO."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nGDP can increase as a result of events that harm people.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: a traffic accident raises GDP — YES."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nEconomic growth has been of little benefit to poorer countries.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: growth lifted hundreds of millions out of extreme poverty — NO."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nCritics of alternative measures make a valid point.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: They have a point — YES."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p5",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nGDP should no longer be published by governments.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: not abandoning GDP but putting it in its place — NO."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nLists of untranslatable words give an accurate picture of how languages work.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: charming but misleading — NO."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nThe meaning of saudade can be expressed in English.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: a skilled translator can convey the sense of saudade in a sentence — YES."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nSome meaning is inevitably lost when poetry is translated.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: a poem may lose much of its effect; translators choose which losses to accept — YES."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nDanish has more words for emotions than English does.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Количество слов в языках автор не сравнивает — NOT GIVEN."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p6",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the views of the writer? Choose YES, NO or NOT GIVEN.\n\nSpeakers of different languages find it very difficult to understand each other's emotions.",
+   "choices": [
+    "YES",
+    "NO",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: они узнают эмоции друг друга far more readily than such lists suggest — NO."
+  }
+ ]
+}

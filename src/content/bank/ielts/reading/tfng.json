@@ -1,0 +1,707 @@
+{
+ "defaults": {
+  "exam": "ielts",
+  "section": "reading",
+  "domain": "true-false",
+  "skill": "tfng",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "passages": [
+  {
+   "id": "e-p1",
+   "title": "Bees in the City",
+   "text": "**A** Beekeeping is no longer only a country hobby. In cities such as London, Paris and New York, people keep beehives on rooftops, balconies and even in small back gardens. Some city halls and hotels have their own hives, and the honey is sold in their shops or served at breakfast.\n\n**B** City bees may seem out of place, but in some ways cities suit them well. Parks, gardens and tree-lined streets offer a wide variety of flowers that bloom at different times of year. In the countryside, by contrast, large fields often contain just one crop, which flowers for only a few weeks.\n\n**C** Cities are also warmer than the surrounding countryside, especially at night, because buildings and roads store heat. This means that the season when flowers are open can begin earlier in spring and last longer into autumn. Bees can therefore collect food for more weeks each year.\n\n**D** However, experts warn that too many hives in one area can cause problems. Honeybees compete with wild bees, such as bumblebees, for the same flowers. If there are not enough flowers for all of them, wild bees may suffer, and some of these species are already rare.\n\n**E** For this reason, some cities now encourage residents to plant more flowers rather than add more hives. A single window box of lavender or a corner of a garden left to grow wild can provide food for many kinds of insects. As one beekeeper put it, 'Bees need flowers first, and honey comes later.'",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p2",
+   "title": "The Sea Otter",
+   "text": "**A** Sea otters live along the coasts of the northern Pacific Ocean, from Japan to California. Unlike most sea mammals, they have no thick layer of fat to keep them warm. Instead, they rely on their fur, which is the densest of any animal, with up to one million hairs in a single square inch.\n\n**B** Because cold water quickly takes heat from the body, sea otters must eat a great deal. An adult may eat food equal to about a quarter of its body weight every day. Its diet includes sea urchins, crabs, clams and other animals that live on the sea floor.\n\n**C** Sea otters are one of the few animals known to use tools. Floating on its back, an otter places a flat stone on its chest and strikes a shellfish against it until the shell breaks. Some otters keep a favourite stone in a loose pocket of skin under the arm.\n\n**D** In the 1700s and 1800s, sea otters were hunted for their valuable fur, and by the early 1900s only a few thousand remained. An international agreement in 1911 protected them, and their numbers slowly began to recover in many areas.\n\n**E** Scientists now know that sea otters play an important role in their environment. By eating sea urchins, which feed on kelp, otters help underwater kelp forests to grow. These forests provide shelter for many species of fish.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "e-p3",
+   "title": "Keeping Time",
+   "text": "**A** For most of human history, people measured time by watching the sky. The position of the sun told them roughly whether it was morning, midday or evening, and the changing shape of the moon helped them count the months.\n\n**B** The ancient Egyptians were among the first to build tools for measuring time. They used shadow clocks, which showed the hour by the length and direction of a shadow, and water clocks, in which water dripped slowly from one container into another. Water clocks had one great advantage: they worked at night and on cloudy days.\n\n**C** Mechanical clocks appeared in Europe in the late thirteenth century. These early clocks were large, heavy machines placed in church towers, and many of them had no hands at all; instead, they rang a bell to mark the hours. They were not very accurate and could lose or gain many minutes in a day.\n\n**D** A great improvement came in 1656, when the Dutch scientist Christiaan Huygens built the first pendulum clock. A swinging pendulum keeps a very regular rhythm, and Huygens's clock was accurate to within about a minute a day. Pendulum clocks soon spread across Europe.\n\n**E** Today, the most accurate clocks in the world are atomic clocks, which measure the vibrations of atoms. The best of them would lose less than one second in millions of years. Without them, satellite navigation systems such as GPS could not tell people where they are.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p1",
+   "title": "Drinking Water from the Sea",
+   "text": "**A** About 97 percent of the water on Earth is salty, and most of the remaining fresh water is locked in ice or underground. As populations grow and droughts become more frequent, many countries are turning to the sea itself as a source of drinking water through a process called desalination.\n\n**B** The oldest method of removing salt from water is distillation: seawater is heated until it turns to steam, and the steam is cooled and collected as fresh water, leaving the salt behind. Sailors used simple versions of this technique for centuries. However, boiling large amounts of water requires enormous quantities of energy.\n\n**C** Most modern plants instead use a method called reverse osmosis. Seawater is pushed at high pressure through membranes with pores so small that water molecules can pass through but salt cannot. Improvements in membranes and pumps have greatly reduced the energy needed, although desalinated water is still usually more expensive than water from rivers or underground sources.\n\n**D** Desalination also raises environmental concerns. For every litre of fresh water produced, plants discharge roughly one and a half litres of brine, a liquid far saltier than seawater. If this brine is released carelessly, it can sink to the sea floor and harm the organisms that live there. Some plants now dilute the brine or spread it through many small outlets.\n\n**E** Despite these challenges, desalination is expanding rapidly, particularly in the Middle East, where some countries obtain most of their drinking water from the sea. Researchers are also experimenting with plants powered by solar energy, which could make the process cleaner and cheaper in sunny, dry regions.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p2",
+   "title": "Lichens: Partners in Survival",
+   "text": "**A** Lichens are among the most widespread living things on Earth, yet few people notice them. They grow as crusty patches on rocks, leafy growths on tree bark and tufts hanging from branches, and they can be found everywhere from tropical forests to the frozen deserts of Antarctica.\n\n**B** For a long time, scientists believed that a lichen was a single organism. In the nineteenth century, however, the Swiss botanist Simon Schwendener proposed that each lichen is in fact a partnership between a fungus and an alga or a type of bacterium that can photosynthesise. His idea was strongly opposed at first, but it is now accepted.\n\n**C** In this partnership, the fungus provides a protective structure and absorbs water and minerals, while its partner uses sunlight to produce sugars that feed both. This cooperation allows lichens to survive in places where neither partner could live alone, such as bare rock or extremely cold mountain tops.\n\n**D** Lichens grow very slowly, sometimes only a millimetre a year. Because some species grow at a known, steady rate, geologists have used them to estimate how long ago rock surfaces were exposed, for example after a glacier retreated. This method, called lichenometry, works best for surfaces that are a few hundred years old.\n\n**E** Lichens are also sensitive to air pollution, especially sulphur dioxide. In the industrial cities of the nineteenth century, many species disappeared. Today, scientists survey lichens to monitor air quality, and the return of sensitive species to some cities has been taken as a sign that the air has become cleaner.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "m-p3",
+   "title": "Farming Upwards",
+   "text": "**A** In a former warehouse on the edge of a city, rows of lettuce grow on shelves stacked ten levels high. There is no soil and no sunlight; instead, the plants' roots sit in water enriched with nutrients, and pink-purple LED lights shine on the leaves for up to eighteen hours a day. This is a vertical farm.\n\n**B** Supporters say vertical farms offer several advantages. Because the plants grow indoors, they are protected from storms, droughts and pests, so few or no pesticides are needed. Water is recycled through the system, and many farms report using up to 95 percent less water than conventional fields.\n\n**C** Growing food close to where people live also reduces the distance it must travel. Lettuce grown in another country may spend days in trucks before reaching a supermarket, losing freshness along the way. A vertical farm in the city can deliver the same produce within hours of harvest.\n\n**D** The main problem is energy. Replacing the sun with electric lights is expensive, and in regions where electricity comes mainly from fossil fuels, the carbon emissions of indoor farming can be higher than those of traditional agriculture. Several well-funded vertical farming companies have closed in recent years because they could not make a profit.\n\n**E** For now, vertical farms grow mostly leafy greens and herbs, which are light, grow quickly and sell at high prices. Staple crops such as wheat and rice need far more space and light, and experts doubt that they will be grown this way on a large scale in the near future.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p1",
+   "title": "Radiocarbon Dating and Its Limits",
+   "text": "**A** Living things constantly take in carbon from the atmosphere, including a small proportion of carbon-14, a radioactive form of the element. When an organism dies, it stops absorbing carbon, and the carbon-14 it contains begins to decay at a steady rate, halving roughly every 5,730 years. By measuring how much carbon-14 remains in a sample of bone, wood or cloth, scientists can estimate how long ago the organism died.\n\n**B** The technique, developed by the American chemist Willard Libby in the late 1940s, transformed archaeology. For the first time, researchers could assign dates to objects from prehistoric sites that had left no written records. Libby received the Nobel Prize in Chemistry in 1960 for the work.\n\n**C** Early users of the method assumed that the amount of carbon-14 in the atmosphere had always been constant. It soon became clear that this was not the case: levels have varied over time because of changes in the sun's activity and in Earth's magnetic field. Raw radiocarbon ages must therefore be 'calibrated' against records from objects of known age, such as tree rings, which can be counted year by year.\n\n**D** Human activity has complicated matters further. Since the Industrial Revolution, the burning of fossil fuels, which contain no carbon-14, has diluted the proportion of carbon-14 in the air, while nuclear weapons tests in the 1950s and 1960s temporarily almost doubled it. Samples from these periods therefore require special treatment.\n\n**E** The method also has a natural limit. After about 50,000 years, so little carbon-14 remains that it can no longer be measured reliably. For older materials, scientists must turn to other techniques, such as those based on the decay of potassium or uranium, which can date rocks millions or even billions of years old.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p2",
+   "title": "How Animals Sleep",
+   "text": "**A** Almost every animal that has been carefully studied shows some form of sleep, a state of reduced activity and responsiveness from which it can be woken. Yet the amount and pattern of sleep vary enormously. Some bats sleep for around twenty hours a day, while adult elephants in the wild have been recorded sleeping for only about two hours.\n\n**B** Many marine mammals face a particular challenge: they must surface to breathe. Dolphins solve this problem by resting one half of the brain at a time. During this 'unihemispheric' sleep, one eye remains open and the animal continues to swim slowly, apparently keeping watch for predators and staying close to its group.\n\n**C** Some birds do something similar. Studies of frigatebirds, which can stay at sea for weeks without landing, found that they sleep while flying, often with one half of the brain at a time and for only a few seconds at once. In total, they slept less than an hour a day in flight, far less than they did on land.\n\n**D** Why sleep exists at all remains a puzzle. A sleeping animal cannot feed, mate or easily escape danger, so sleep must provide important benefits to have survived in so many species. Leading theories suggest that sleep helps to save energy, to repair tissues, and to strengthen memories by reorganising connections in the brain.\n\n**E** Evidence that sleep is essential comes from experiments in which animals are deprived of it. Even fruit flies that are kept awake show reduced learning, and when finally allowed to rest, they sleep longer and more deeply than usual, as if paying back a debt. Such findings suggest that sleep serves functions that cannot simply be postponed.",
+   "source": "original",
+   "license": "original — © 365step"
+  },
+  {
+   "id": "h-p3",
+   "title": "The Urban Heat Island",
+   "text": "**A** On a summer evening, the centre of a large city can be several degrees warmer than the countryside just a few kilometres away. This phenomenon, known as the urban heat island, was first described in the early nineteenth century by Luke Howard, an amateur scientist who recorded temperatures in and around London.\n\n**B** Several factors combine to produce the effect. Dark surfaces such as asphalt and roofing absorb much of the sunlight that falls on them and release the heat slowly after sunset. Tall buildings trap this heat by reducing the flow of air and by blocking the escape of heat radiation to the sky. Engines, air conditioners and industry add further heat.\n\n**C** The lack of vegetation also plays a role. Plants cool their surroundings through evapotranspiration, releasing water vapour that absorbs heat as it evaporates. In heavily built-up areas, where soil is sealed beneath concrete, this natural cooling is largely absent.\n\n**D** The consequences can be serious. During heat waves, high night-time temperatures prevent people's bodies from recovering from the heat of the day, and death rates rise, particularly among the elderly. Higher temperatures also increase demand for air conditioning, which in turn releases more heat and can strain electricity networks.\n\n**E** Cities are experimenting with a range of responses, from planting trees and creating parks to painting roofs in reflective colours. Such measures are not equally effective everywhere: a reflective roof that cools a building in a hot climate may increase heating costs in a cold one. Planners are therefore increasingly using detailed temperature maps to target the neighbourhoods that would benefit most.",
+   "source": "original",
+   "license": "original — © 365step"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nSome hotels sell honey produced by their own bees.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: у некоторых отелей свои ульи, мёд продают в их магазинах — TRUE."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nFlowers in the countryside bloom for longer than flowers in cities.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B/C: в городе цветы разнообразнее и сезон длиннее, а поле с одной культурой цветёт лишь несколько недель — FALSE."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nCity bees produce more honey than country bees.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Текст объясняет, почему городу подходят пчёлы, но не сравнивает количество мёда — NOT GIVEN."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nCities stay warmer at night because buildings and roads hold heat.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C прямо: buildings and roads store heat, особенно ночью — TRUE."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "passageRef": "e-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nExperts believe that honeybees and wild bees never compete for food.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: honeybees compete with wild bees for the same flowers — FALSE."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nSea otters have a thick layer of fat under their skin.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: в отличие от большинства морских млекопитающих, у них нет толстого слоя жира — FALSE."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nAn adult sea otter eats about a quarter of its body weight each day.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: food equal to about a quarter of its body weight every day — TRUE."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nSea otters are the only animals that use tools.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: one of the few animals known to use tools — не единственные, FALSE."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nSea otters live longer in captivity than in the wild.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "О продолжительности жизни в неволе текст ничего не говорит — NOT GIVEN."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "passageRef": "e-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nThe number of sea otters began to grow again after they were protected.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: after 1911 their numbers slowly began to recover — TRUE."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nWater clocks could be used when the sky was cloudy.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: water clocks worked at night and on cloudy days — TRUE."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nAll early mechanical clocks in Europe had hands.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: many of them had no hands at all — FALSE."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nHuygens's pendulum clock was more accurate than earlier mechanical clocks.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "C: ранние часы ошибались на много минут в день; D: часы Гюйгенса — около минуты в день. TRUE."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nHuygens sold his first pendulum clock to a church.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "О продаже часов и покупателях текст молчит — NOT GIVEN."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "passageRef": "e-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nGPS depends on atomic clocks to work.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац E: without them GPS could not tell people where they are — TRUE."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLess than a twentieth of the water on Earth is fresh.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: 97% воды солёная, значит пресной около 3% — меньше двадцатой части (5%). TRUE."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nDistillation was first developed by sailors.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Абзац B: моряки веками пользовались простыми версиями метода, но кто его изобрёл, не сказано — NOT GIVEN."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nReverse osmosis uses heat to separate salt from water.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: при обратном осмосе воду продавливают под давлением через мембраны; нагрев — это дистилляция. FALSE."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nDesalinated water now costs less than water from rivers.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: still usually more expensive than water from rivers — FALSE."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "passageRef": "m-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nBrine released into the sea can damage life on the sea floor.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац D: it can sink to the sea floor and harm the organisms there — TRUE."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLichens grow only in warm climates.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: от тропиков до ледяных пустынь Антарктиды — FALSE."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nSchwendener's theory about lichens was immediately accepted by other scientists.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: strongly opposed at first — FALSE."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nNeither partner in a lichen could survive on bare rock without the other.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: lichens survive where neither partner could live alone, such as bare rock — TRUE."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLichenometry can accurately date surfaces that are millions of years old.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: works best for surfaces a few hundred years old — FALSE."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "passageRef": "m-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLichens are more sensitive to sulphur dioxide than to any other pollutant.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Абзац E: «especially sulphur dioxide», но сравнения со всеми другими загрязнителями нет — NOT GIVEN."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nThe plants in the vertical farm described receive natural light.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: no soil and no sunlight; LED lights — FALSE."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nVertical farms usually need fewer pesticides than outdoor farms.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: protected from pests, so few or no pesticides are needed — TRUE."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLettuce from vertical farms tastes better than lettuce grown outdoors.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Абзац C говорит о свежести и сроках доставки, но не о вкусе — NOT GIVEN."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nIndoor farming always produces lower carbon emissions than traditional agriculture.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: при электричестве из ископаемого топлива выбросы могут быть выше — FALSE."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "passageRef": "m-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nExperts expect wheat to be grown in vertical farms on a large scale soon.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: experts doubt it will happen in the near future — FALSE."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nAn organism continues to absorb carbon for some time after it dies.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: When an organism dies, it stops absorbing carbon — FALSE."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nAfter about 11,500 years, roughly a quarter of the original carbon-14 in a sample would remain.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац A: период полураспада около 5730 лет; два периода (≈11 460 лет) оставляют четверть — TRUE (вывод из данных текста)."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLibby's work was initially rejected by most archaeologists.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Абзац B: метод «transformed archaeology», но о первоначальном отношении археологов не сказано — NOT GIVEN."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nAtmospheric levels of carbon-14 have remained unchanged throughout history.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: levels have varied over time — FALSE."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "passageRef": "h-p1",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nRadiocarbon dating can be used directly to date rocks that are millions of years old.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: после ~50 000 лет метод не работает; для древних пород нужны другие методы — FALSE."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nAll animals that have been studied in detail show some kind of sleep.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: «Almost every animal» — почти каждое, а не все; утверждение «All» сильнее текста — FALSE."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nDuring unihemispheric sleep, dolphins stop swimming completely.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац B: the animal continues to swim slowly — FALSE."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nFrigatebirds sleep for shorter periods in the air than they do on land.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац C: less than an hour a day in flight, far less than on land — TRUE."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nScientists have agreed on a single explanation for why sleep exists.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац D: Why sleep exists remains a puzzle; приводятся несколько теорий — FALSE."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "passageRef": "h-p2",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nFruit flies deprived of sleep later sleep more than usual.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац E: they sleep longer and more deeply than usual — TRUE."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nLuke Howard was a professional meteorologist.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац A: an amateur scientist — FALSE."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nTall buildings contribute to the heat island effect partly by reducing air movement.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 0,
+   "explanation": "Абзац B: Tall buildings trap this heat by reducing the flow of air — TRUE."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nEvapotranspiration warms the air around plants.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац C: plants cool their surroundings through evapotranspiration — FALSE."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nHeat waves cause more deaths in cities than in rural areas.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 2,
+   "explanation": "Абзац D: смертность растёт, особенно среди пожилых, но сравнения города и села нет — NOT GIVEN."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "passageRef": "h-p3",
+   "type": "mcq",
+   "stem": "Does the following statement agree with the information in the passage? Choose TRUE, FALSE or NOT GIVEN.\n\nReflective roofs are beneficial in every type of climate.",
+   "choices": [
+    "TRUE",
+    "FALSE",
+    "NOT GIVEN"
+   ],
+   "answer": 1,
+   "explanation": "Абзац E: в холодном климате такая крыша может увеличить затраты на отопление — FALSE."
+  }
+ ]
+}
