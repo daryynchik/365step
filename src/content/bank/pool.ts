@@ -1,15 +1,17 @@
 /**
  * The pool of tasks practice lessons draw from, by skill and difficulty.
  *
- * Until the task bank is filled, the pool is made of the questions of the
- * authored lessons for each skill. Those have no difficulty tag and count as
- * "medium", so practice at other levels falls back to the neighbouring
- * difficulty (see draw.ts).
+ * A skill with tasks in the bank uses the bank. A skill without them (IELTS
+ * Listening for now) uses the questions of its authored lessons, which have
+ * no difficulty tag and count as "medium"; practice at other levels then
+ * falls back to the neighbouring difficulty (see draw.ts).
  */
 
 import { findByKey } from "../index";
 import type { Level } from "../exams";
 import type { Listening, Question, Speaking, WritingTask } from "../types";
+import type { Task } from "./schema";
+import { bankTasksOf, LEVEL_OF, toQuestion, toSpeaking, toWriting } from "./tasks";
 import { SKILLS, type Skill } from "./taxonomy";
 
 export type PoolTask =
@@ -56,11 +58,19 @@ function authoredTasks(skill: Skill): PoolTask[] {
 
 let pools: Map<string, SkillPool> | null = null;
 
+function fromBank(t: Task): PoolTask {
+  const base = { id: t.id, skill: t.skill, difficulty: LEVEL_OF[t.difficulty] };
+  if (t.type === "essay-prompt") return { ...base, kind: "writing", title: t.stem.slice(0, 80), writing: toWriting(t) };
+  if (t.type === "speaking-prompt") return { ...base, kind: "speaking", title: t.stem.slice(0, 80), speaking: toSpeaking(t) };
+  return { ...base, kind: "question", question: toQuestion(t) };
+}
+
 function build(): Map<string, SkillPool> {
   const map = new Map<string, SkillPool>();
   for (const skill of SKILLS) {
     const pool: SkillPool = { easy: [], medium: [], hard: [] };
-    for (const t of authoredTasks(skill)) pool[t.difficulty].push(t);
+    const bank = bankTasksOf(skill.id);
+    for (const t of bank.length > 0 ? bank.map(fromBank) : authoredTasks(skill)) pool[t.difficulty].push(t);
     map.set(skill.id, pool);
   }
   return map;

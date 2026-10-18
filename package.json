@@ -14,7 +14,8 @@
     "verify": "NODE_OPTIONS=--conditions=react-server tsx scripts/verify.ts",
     "lint": "eslint .",
     "test": "tsx --test \"src/**/*.test.ts\"",
-    "validate:content": "tsx scripts/validate-content.ts"
+    "validate:content": "tsx scripts/validate-content.ts",
+    "bank:index": "tsx scripts/bank-index.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
