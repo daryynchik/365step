@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "information-and-ideas",
+  "skill": "textual-evidence",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A teacher hypothesizes that students who eat breakfast perform better on morning quizzes than students who skip breakfast.",
+   "stem": "Which finding, if true, would most directly support the teacher's hypothesis?",
+   "choices": [
+    "Students who ate breakfast also usually ate lunch.",
+    "Morning quizzes were shorter than afternoon quizzes.",
+    "Some students who skipped breakfast scored well on afternoon quizzes.",
+    "Students who ate breakfast scored higher on morning quizzes, on average, than students who skipped breakfast."
+   ],
+   "answer": 3,
+   "explanation": "Гипотеза о связи завтрака и утренних результатов — её прямо подтверждает сравнение баллов двух групп (D). Обед, длина тестов и дневные результаты не касаются утренних квизов."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A city official claims that a new protected bike lane on Elm Street has made cycling on that street safer.",
+   "stem": "Which finding, if true, would most directly support the official's claim?",
+   "choices": [
+    "The bike lane on Elm Street was painted green.",
+    "Cyclists in other cities ride more often than cyclists in this city.",
+    "The number of cycling accidents on Elm Street fell after the bike lane opened.",
+    "More cars used Elm Street after the bike lane opened."
+   ],
+   "answer": 2,
+   "explanation": "Безопасность измеряется авариями — их стало меньше (C). Число машин, цвет полосы и другие города не говорят о безопасности на Elm Street."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "An ornithologist hypothesizes that a certain bird species prefers to build its nests in tall trees.",
+   "stem": "Which finding, if true, would most directly support the ornithologist's hypothesis?",
+   "choices": [
+    "The species eats both seeds and insects.",
+    "The species sings most often early in the morning.",
+    "Tall trees are common throughout the species' range.",
+    "Most of the species' nests were found in trees taller than 20 meters, even in areas where shorter trees were more common."
+   ],
+   "answer": 3,
+   "explanation": "Предпочтение видно, если высокие деревья выбирают даже там, где чаще низкие (D). Питание и пение не о гнёздах; распространённость высоких деревьев не показывает выбора."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A student claims that playing music for plants helps them grow taller.",
+   "stem": "Which finding, if true, would most directly support the student's claim?",
+   "choices": [
+    "The student enjoys listening to music while gardening.",
+    "Plants need water and sunlight to grow.",
+    "Plants exposed to music grew taller than identical plants kept in silence under the same conditions.",
+    "Some plants grow taller than others."
+   ],
+   "answer": 2,
+   "explanation": "Нужно сравнение одинаковых растений с музыкой и без неё в равных условиях (C). Остальные варианты не связывают музыку с ростом."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Researchers claim that reading aloud to toddlers helps them develop larger vocabularies.",
+   "stem": "Which finding, if true, would most directly support the researchers' claim?",
+   "choices": [
+    "Many parents enjoy reading to their children at bedtime.",
+    "Picture books are popular gifts for toddlers.",
+    "Some toddlers learn to walk before they learn to talk.",
+    "Toddlers whose parents read aloud to them daily knew more words at age three than toddlers whose parents rarely read aloud."
+   ],
+   "answer": 3,
+   "explanation": "Подтверждает сравнение словаря у детей, которым читали часто и редко (D). Любовь родителей к чтению, подарки и ходьба не касаются словаря."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A farmer hypothesizes that a new fertilizer makes tomatoes ripen sooner.",
+   "stem": "Which finding, if true, would most directly support the farmer's hypothesis?",
+   "choices": [
+    "The fertilizer costs less than other brands.",
+    "Tomatoes are the farmer's most profitable crop.",
+    "Ripe tomatoes are usually red.",
+    "Tomatoes treated with the fertilizer ripened about a week earlier than untreated tomatoes grown in the same field."
+   ],
+   "answer": 3,
+   "explanation": "Сравнение сроков созревания с удобрением и без, в одном поле (D). Цена, прибыльность и цвет не говорят о скорости созревания."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A town council member claims that the town's new recycling program has reduced the amount of trash the town sends to the landfill.",
+   "stem": "Which finding, if true, would most directly support the council member's claim?",
+   "choices": [
+    "The town sent 25 percent less trash to the landfill in the year after the program began than in the year before.",
+    "Residents receive a new recycling bin every five years.",
+    "The landfill is located outside the town.",
+    "Recycling programs exist in many other towns."
+   ],
+   "answer": 0,
+   "explanation": "Утверждение о снижении объёма — его подтверждает сравнение «до» и «после» (A). Остальное не говорит об объёме мусора."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Animal researchers hypothesize that dogs can tell the difference between their owners' voices and the voices of strangers.",
+   "stem": "Which finding, if true, would most directly support the researchers' hypothesis?",
+   "choices": [
+    "Dogs turned toward a speaker more often when it played their owners' voices than when it played strangers' voices.",
+    "Dogs bark at unfamiliar sounds.",
+    "Most dog owners talk to their dogs every day.",
+    "Dogs can hear higher-pitched sounds than humans can."
+   ],
+   "answer": 0,
+   "explanation": "Разная реакция на голоса хозяев и чужих показывает различение (A). Лай на незнакомые звуки, привычки хозяев и диапазон слуха не о различении голосов."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "An energy expert claims that planting shade trees near houses can reduce summer air-conditioning costs.",
+   "stem": "Which finding, if true, would most directly support the expert's claim?",
+   "choices": [
+    "Homes with large trees on their sunny sides had lower summer electricity bills than similar homes without such trees.",
+    "Trees lose their leaves in autumn.",
+    "Air conditioners use electricity.",
+    "Many homeowners plant trees for their beauty."
+   ],
+   "answer": 0,
+   "explanation": "Сравнение счетов похожих домов с деревьями и без (A). Листопад, сам факт расхода энергии и эстетика не показывают экономии."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Biologists hypothesize that a certain species of frog is active mainly at night.",
+   "stem": "Which finding, if true, would most directly support the biologists' hypothesis?",
+   "choices": [
+    "The frogs are bright green.",
+    "The frogs live near streams.",
+    "The frogs lay their eggs in water.",
+    "Researchers recorded the frogs' calls almost entirely between sunset and sunrise."
+   ],
+   "answer": 3,
+   "explanation": "Крики почти только ночью — признак ночной активности (D). Цвет, место обитания и кладка икры не говорят о времени активности."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A science teacher claims that students learn more when they conduct experiments themselves than when they only read about them.",
+   "stem": "Which finding, if true, would most directly support the teacher's claim?",
+   "choices": [
+    "Experiments require more equipment than reading.",
+    "Some textbooks include pictures of experiments.",
+    "Students who conducted experiments scored higher on a later test than students who read about the same experiments.",
+    "Students enjoy science classes more than math classes."
+   ],
+   "answer": 2,
+   "explanation": "Сравнение результатов тех, кто делал опыты, и тех, кто читал (C). Удовольствие, оборудование и картинки не измеряют, сколько выучено."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "City planners claim that a new downtown parking fee has reduced the number of cars entering downtown.",
+   "stem": "Which finding, if true, would most directly support the planners' claim?",
+   "choices": [
+    "Downtown has several new restaurants.",
+    "Traffic counts downtown dropped by 15 percent after the fee began, while counts in nearby areas stayed the same.",
+    "The parking fee is higher on weekends.",
+    "Many people drive to work."
+   ],
+   "answer": 1,
+   "explanation": "Падение потока в центре при неизменном вокруг связывает снижение с платой (B). Остальные варианты не говорят о числе машин."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A researcher hypothesizes that honeybees prefer blue flowers to yellow flowers.",
+   "stem": "Which finding, if true, would most directly support the researcher's hypothesis?",
+   "choices": [
+    "Honeybees live in colonies with a single queen.",
+    "When offered equal numbers of blue and yellow artificial flowers containing the same sugar water, bees visited the blue flowers more often.",
+    "Honeybees can see some colors that humans cannot.",
+    "Many yellow flowers produce a lot of nectar."
+   ],
+   "answer": 1,
+   "explanation": "Равные условия и разница только в цвете — пчёлы выбирают синие (B). Цветовое зрение и нектар жёлтых цветов не показывают предпочтения; строение колонии не по теме."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A transportation engineer hypothesizes that brighter streetlights reduce nighttime car accidents.",
+   "stem": "Which finding, if true, would most directly support the engineer's hypothesis?",
+   "choices": [
+    "Most accidents happen during rush hour.",
+    "Drivers prefer well-lit streets.",
+    "Streets that received brighter lights had fewer nighttime accidents than before, while similar streets that kept their old lights showed no change.",
+    "Brighter streetlights use more electricity."
+   ],
+   "answer": 2,
+   "explanation": "Снижение аварий только там, где поставили яркие фонари, — прямое подтверждение (C). Расход энергии и предпочтения водителей не об авариях; время пиковых аварий не о ночи."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A museum director claims that the museum's monthly free-admission day attracts families who would not otherwise visit.",
+   "stem": "Which finding, if true, would most directly support the director's claim?",
+   "choices": [
+    "The museum's gift shop sells more items on free days.",
+    "Admission on other days costs $15 per person.",
+    "Surveys found that most families visiting on free days had not visited the museum in the previous year.",
+    "The museum is crowded on free days."
+   ],
+   "answer": 2,
+   "explanation": "Утверждение о «новых» семьях подтверждает то, что большинство не приходило за год (C). Толпы и продажи могут быть и от постоянных посетителей; цена билета ничего не доказывает."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, Victor Frankenstein is at first thrilled by the idea of creating life and imagines the gratitude that the beings he creates will feel toward him.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"I am malicious because I am miserable.\"",
+    "\"A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me.\"",
+    "\"I beheld the wretch—the miserable monster whom I had created.\"",
+    "\"Nothing is so painful to the human mind as a great and sudden change.\""
+   ],
+   "answer": 1,
+   "explanation": "Цитата о новом виде, который будет благословлять создателя, передаёт восторг и ожидание благодарности (B). «I beheld the wretch» — ужас после создания; «Nothing is so painful» — о перемене после трагедии; «I am malicious» — слова существа."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, Victor's feelings about his project change dramatically at the moment he completes it.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"I ought to be thy Adam, but I am rather the fallen angel, whom thou drivest from joy for no misdeed.\"",
+    "\"Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge\"",
+    "\"I had desired it with an ardour that far exceeded moderation; but now that I had finished, the beauty of the dream vanished, and breathless horror and disgust filled my heart.\"",
+    "\"Life and death appeared to me ideal bounds, which I should first break through, and pour a torrent of light into our dark world.\""
+   ],
+   "answer": 2,
+   "explanation": "В одной фразе — страстное желание до и ужас после завершения (C). «Life and death» — мечты до работы, без перемены; «I ought to be thy Adam» — слова существа; «Learn from me» — позднее предостережение, а не момент завершения."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, Victor describes working on his project in secret, late at night, with an almost obsessive intensity.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"Everywhere I see bliss, from which I alone am irrevocably excluded.\"",
+    "\"the moon gazed on my midnight labours, while, with unrelaxed and breathless eagerness, I pursued nature to her hiding-places.\"",
+    "\"Nothing is so painful to the human mind as a great and sudden change.\"",
+    "\"I was benevolent and good; misery made me a fiend.\""
+   ],
+   "answer": 1,
+   "explanation": "«midnight labours» и «unrelaxed and breathless eagerness» — ночная работа и одержимость (B). Остальные цитаты о перемене после трагедии и о страданиях существа."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, after a tragedy, Victor finds that the world no longer looks to him as it did before.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"The sun might shine or the clouds might lower, but nothing could appear to me as it had done the day before.\"",
+    "\"the moon gazed on my midnight labours, while, with unrelaxed and breathless eagerness, I pursued nature to her hiding-places.\"",
+    "\"I ought to be thy Adam, but I am rather the fallen angel, whom thou drivest from joy for no misdeed.\"",
+    "\"Life and death appeared to me ideal bounds, which I should first break through, and pour a torrent of light into our dark world.\""
+   ],
+   "answer": 0,
+   "explanation": "«nothing could appear to me as it had done the day before» — мир выглядит иначе после трагедии (A). Ночная работа и мечты о прорыве — до трагедии; «thy Adam» — слова существа."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A biologist hypothesizes that ravens can plan for future events rather than simply reacting to what is in front of them.",
+   "stem": "Which finding, if true, would most directly support the biologist's hypothesis?",
+   "choices": [
+    "Ravens can solve puzzles quickly when food is visible.",
+    "Ravens live in large social groups.",
+    "Ravens prefer some foods to others.",
+    "Ravens that were given a tool kept it for hours and used it when a box that could be opened only with that tool was later presented."
+   ],
+   "answer": 3,
+   "explanation": "Сохранить инструмент на будущее и применить позже — признак планирования (D). Решение задачи при видимой еде — реакция «здесь и сейчас»; социальность и вкусы не о планировании."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A company claims that its new sports drink improves athletes' endurance.",
+   "stem": "Which finding, if true, would most directly weaken the company's claim?",
+   "choices": [
+    "The drink is sold in many countries.",
+    "Athletes who drank the sports drink ran for the same length of time as athletes who drank flavored water.",
+    "The sports drink contains sugar and salt.",
+    "Some athletes dislike the drink's taste."
+   ],
+   "answer": 1,
+   "explanation": "Если результат такой же, как с ароматизированной водой, напиток не улучшает выносливость (B). Состав, вкус и география продаж не говорят об эффекте."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers hypothesize that birds living in cities are bolder around people than birds of the same species living in rural areas.",
+   "stem": "Which finding, if true, would most directly support the researchers' hypothesis?",
+   "choices": [
+    "Rural areas have more trees than cities.",
+    "Birds of this species are found on several continents.",
+    "When approached by a person, city birds allowed the person to come closer before flying away than rural birds did.",
+    "City birds eat more human food than rural birds do."
+   ],
+   "answer": 2,
+   "explanation": "Смелость измеряется дистанцией бегства — у городских она меньше (C). Питание, деревья и ареал не показывают смелости."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A public health researcher claims that cities with more park space have lower rates of childhood obesity, and that this pattern is not simply explained by differences in income.",
+   "stem": "Which finding, if true, would most directly support the researcher's claim?",
+   "choices": [
+    "Children in all cities enjoy playing outside.",
+    "Even among cities with similar average incomes, those with more park space had lower rates of childhood obesity.",
+    "Wealthier cities tend to have more parks.",
+    "Parks are expensive for cities to maintain."
+   ],
+   "answer": 1,
+   "explanation": "Связь сохраняется при равном доходе — именно это утверждает исследователь (B). «Богатые города — больше парков» скорее подрывает вывод; цена содержания и любовь к играм не по теме."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Marine biologists hypothesize that corals of a certain species can survive warmer water if they host a particular type of algae.",
+   "stem": "Which finding, if true, would most directly support the biologists' hypothesis?",
+   "choices": [
+    "The algae are found in many parts of the ocean.",
+    "Corals of the species are brightly colored.",
+    "Ocean temperatures vary from season to season.",
+    "During a marine heat wave, corals of the species that hosted the algae survived at much higher rates than corals of the same species without it."
+   ],
+   "answer": 3,
+   "explanation": "Разная выживаемость в жару с водорослями и без (D). Распространённость водорослей, цвет кораллов и сезонность не связывают водоросли с выживанием."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "An education company claims that its new math app improves students' test scores.",
+   "stem": "Which finding, if true, would most directly weaken the company's claim?",
+   "choices": [
+    "Some students used the app at home.",
+    "Students who used the app improved no more than students who spent the same amount of time practicing with paper worksheets.",
+    "The app includes colorful animations.",
+    "Many schools have purchased the app."
+   ],
+   "answer": 1,
+   "explanation": "Если прирост такой же, как от обычной практики, приложение само по себе не помогает (B). Анимации, продажи и место использования не показывают эффективности."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A historian hypothesizes that a medieval town's prosperity came mainly from the wool trade.",
+   "stem": "Which finding, if true, would most directly support the historian's hypothesis?",
+   "choices": [
+    "The town's market was held every Thursday.",
+    "Tax records show that wool merchants paid more than half of the town's taxes during the period.",
+    "The town had a large church built during the period.",
+    "Sheep were raised in many parts of the region."
+   ],
+   "answer": 1,
+   "explanation": "Больше половины налогов от торговцев шерстью — шерсть была главным источником богатства (B). Собор, овцы в регионе и день рынка не показывают, откуда процветание."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A researcher hypothesizes that elephants respond in a special way to the remains of members of their own family.",
+   "stem": "Which finding, if true, would most directly support the researcher's hypothesis?",
+   "choices": [
+    "Elephants repeatedly returned to the bones of family members and touched them with their trunks, but rarely did so with the bones of unrelated elephants.",
+    "Elephants live in groups led by an older female.",
+    "Elephants can recognize themselves in mirrors.",
+    "Elephants communicate with low-frequency sounds."
+   ],
+   "answer": 0,
+   "explanation": "Особое поведение только с останками родственников (A). Устройство стада, зеркальный тест и инфразвук не касаются реакции на останки."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Ecologists hypothesize that a decline in a lake's fish population was caused by an invasive species of mussel that filters plankton—the fish's main food—from the water.",
+   "stem": "Which finding, if true, would most directly support the ecologists' hypothesis?",
+   "choices": [
+    "Some fish species eat mussels.",
+    "The lake is popular with tourists.",
+    "Plankton levels in the lake dropped sharply after the mussels arrived, and fish populations declined in the years that followed.",
+    "The mussels attach themselves to rocks and boats."
+   ],
+   "answer": 2,
+   "explanation": "Цепочка «мидии — меньше планктона — меньше рыбы» во времени подтверждает гипотезу (C). Прикрепление к камням, рыбы-моллюскоеды и туристы её не проверяют."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A literary critic claims that a poet's later work shows the influence of the years she spent living by the sea.",
+   "stem": "Which finding, if true, would most directly support the critic's claim?",
+   "choices": [
+    "The poet's later collections are longer than her early ones.",
+    "The poet often gave readings in coastal towns.",
+    "The poet's later collections contain far more images of tides, salt, and shorelines than her early collections do.",
+    "The poet published her first collection at age twenty-five."
+   ],
+   "answer": 2,
+   "explanation": "Морские образы появляются именно в поздних сборниках (C). Возраст дебюта и объём сборников не говорят о влиянии моря; чтения в прибрежных городах не меняют текстов."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Entomologists hypothesize that a certain species of desert ant uses the position of the sun to navigate back to its nest.",
+   "stem": "Which finding, if true, would most directly support the entomologists' hypothesis?",
+   "choices": [
+    "The ants carry food back to the nest.",
+    "The ants' nests have a single entrance.",
+    "When researchers used a mirror to make the sun appear on the opposite side of the sky, ants walking home reversed direction.",
+    "The ants are most active during the hottest part of the day."
+   ],
+   "answer": 2,
+   "explanation": "Если «перенос» солнца зеркалом разворачивает муравьёв, они ориентируются по солнцу (C). Время активности, перенос еды и устройство гнезда не о навигации."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, the creature argues that his cruelty is a result of the way he has been treated rather than part of his original nature.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"I beheld the wretch—the miserable monster whom I had created.\"",
+    "\"A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me.\"",
+    "\"I was benevolent and good; misery made me a fiend.\"",
+    "\"Hateful day when I received life!\""
+   ],
+   "answer": 2,
+   "explanation": "«Был добр — несчастье сделало меня злодеем»: зло — следствие обращения, не природа (C). «Hateful day» — отчаяние без объяснения причины; «I beheld the wretch» и «A new species» — слова Виктора."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, Victor warns the explorer Walton about the dangers of ambition.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge and how much happier that man is who believes his native town to be the world, than he who aspires to become greater than his nature will allow.\"",
+    "\"I had worked hard for nearly two years, for the sole purpose of infusing life into an inanimate body.\"",
+    "\"Nothing is so painful to the human mind as a great and sudden change.\"",
+    "\"I am malicious because I am miserable.\""
+   ],
+   "answer": 0,
+   "explanation": "Прямое предостережение: опасно стремиться стать больше, чем позволяет природа (A). «Worked hard» — описание работы без предупреждения; «Nothing is so painful» — о горе; «I am malicious» — слова существа."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, the creature sees himself as shut out from the happiness that others enjoy.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"I had worked hard for nearly two years, for the sole purpose of infusing life into an inanimate body.\"",
+    "\"the moon gazed on my midnight labours, while, with unrelaxed and breathless eagerness, I pursued nature to her hiding-places.\"",
+    "\"Everywhere I see bliss, from which I alone am irrevocably excluded.\"",
+    "\"Life and death appeared to me ideal bounds, which I should first break through, and pour a torrent of light into our dark world.\""
+   ],
+   "answer": 2,
+   "explanation": "«Повсюду вижу блаженство, от которого я один навсегда отлучён» — точная иллюстрация (C). Остальные три цитаты — слова Виктора о его замысле и работе."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In Mary Shelley's 1818 novel Frankenstein, the creature compares his situation unfavorably with that of the first human in a familiar religious story.",
+   "stem": "Which quotation from Frankenstein most effectively illustrates the claim?",
+   "choices": [
+    "\"A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me.\"",
+    "\"I ought to be thy Adam, but I am rather the fallen angel, whom thou drivest from joy for no misdeed.\"",
+    "\"I am malicious because I am miserable.\"",
+    "\"Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge\""
+   ],
+   "answer": 1,
+   "explanation": "Существо сравнивает себя с Адамом и падшим ангелом — неблагоприятное сравнение с первым человеком (B). «I am malicious» — без сравнения; «Learn from me» и «A new species» — слова Виктора."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some archaeologists hypothesize that Neanderthals created symbolic art in Europe before modern humans arrived there.",
+   "stem": "Which finding, if true, would most directly support the archaeologists' hypothesis?",
+   "choices": [
+    "Neanderthals lived in cold climates.",
+    "Paintings in caves in Spain were dated to more than 64,000 years ago, at least 20,000 years before modern humans are known to have reached Europe.",
+    "Neanderthals made stone tools for hunting.",
+    "Modern humans painted many caves in France about 30,000 years ago."
+   ],
+   "answer": 1,
+   "explanation": "Искусство старше прихода людей в Европу могли создать только неандертальцы (B). Орудия не символическое искусство; более поздние росписи людей ничего не говорят о неандертальцах; климат не по теме."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Conservationists claim that the decline of a migratory songbird population was caused mainly by the loss of habitat in its northern breeding grounds.",
+   "stem": "Which finding, if true, would most directly weaken the conservationists' claim?",
+   "choices": [
+    "The songbirds migrate thousands of kilometers each year.",
+    "Several other bird species also breed in the same region.",
+    "The songbirds feed mainly on insects.",
+    "The birds' breeding habitat remained largely unchanged during the decline, while forests in their wintering range were heavily logged."
+   ],
+   "answer": 3,
+   "explanation": "Если места гнездования не изменились, а зимовки вырубили, причина, вероятно, не в гнездовьях (D). Дальность миграции, соседние виды и рацион утверждение не проверяют."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Behavioral economists hypothesize that people tend to value an item more once they own it.",
+   "stem": "Which finding, if true, would most directly support the economists' hypothesis?",
+   "choices": [
+    "Prices of mugs vary widely between stores.",
+    "Participants who were given a mug asked for about twice as much money to sell it as other participants were willing to pay to buy the same mug.",
+    "Mugs are among the most common gifts.",
+    "Participants preferred mugs with their names printed on them."
+   ],
+   "answer": 1,
+   "explanation": "Владельцы ценят ту же кружку вдвое выше, чем покупатели, — эффект владения (B). Популярность подарка, именные кружки и разброс цен в магазинах этого не показывают."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Archaeologists hypothesize that a long drought caused the abandonment of an ancient city.",
+   "stem": "Which finding, if true, would most directly support the archaeologists' hypothesis?",
+   "choices": [
+    "The city traded with several distant regions.",
+    "Many ancient cities were built near rivers.",
+    "Sediment cores from a nearby lake show a sharp drop in rainfall in the decades just before the city was abandoned.",
+    "The city's buildings were made of stone."
+   ],
+   "answer": 2,
+   "explanation": "Засуха перед уходом жителей — совпадение во времени с предполагаемой причиной (C). Материал зданий, торговля и расположение других городов не о засухе."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Psychologists hypothesize that children learn new words more effectively when they encounter the words in a variety of contexts.",
+   "stem": "Which finding, if true, would most directly support the psychologists' hypothesis?",
+   "choices": [
+    "Children learn many words from their siblings.",
+    "Children who heard a new word in three different stories recognized it more often a week later than children who heard it three times in the same story.",
+    "Children enjoy hearing the same story many times.",
+    "Some new words are easier to pronounce than others."
+   ],
+   "answer": 1,
+   "explanation": "Одинаковое число повторений, разное разнообразие контекстов — лучше помнят разнообразие (B). Любовь к повторам, произношение и братья-сёстры гипотезу не проверяют."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A city transportation department claims that a rise in the number of bicycle commuters was caused by its new bike-sharing program.",
+   "stem": "Which finding, if true, would most directly weaken the department's claim?",
+   "choices": [
+    "Some commuters use the shared bicycles only on weekends.",
+    "The program was launched in the spring.",
+    "The number of bicycle commuters rose by the same amount in a similar neighboring city that had no bike-sharing program.",
+    "The bike-sharing program offers bicycles at more than fifty stations."
+   ],
+   "answer": 2,
+   "explanation": "Такой же рост без программы указывает на другую причину (C). Число станций, выходные поездки и сезон запуска причинности не опровергают."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A literary scholar hypothesizes that a novelist rewrote the final chapter of her book to make its ending more hopeful after readers objected to the original version.",
+   "stem": "Which finding, if true, would most directly support the scholar's hypothesis?",
+   "choices": [
+    "The book was translated into several languages.",
+    "Reviewers praised the book's descriptions of the countryside.",
+    "Letters show that the novelist received many complaints about the original ending and rewrote the chapter shortly afterward, adding a reunion scene.",
+    "The novelist wrote most of the book in the mornings."
+   ],
+   "answer": 2,
+   "explanation": "Жалобы на финал и последовавшая переделка с более светлой сценой — прямое подтверждение (C). Режим работы, переводы и похвала пейзажам не касаются финала."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Plant biologists hypothesize that some plants release airborne chemicals that warn nearby plants of insect attacks.",
+   "stem": "Which finding, if true, would most directly support the biologists' hypothesis?",
+   "choices": [
+    "Insects damage plants most often in summer.",
+    "Some plants produce chemicals with strong smells.",
+    "Plants absorb carbon dioxide from the air.",
+    "Undamaged plants placed near insect-damaged plants produced more insect-repelling compounds than undamaged plants placed near other undamaged plants."
+   ],
+   "answer": 3,
+   "explanation": "Неповреждённые соседи повреждённых растений усиливают защиту — значит, получили сигнал (D). Сезон атак, запахи сами по себе и фотосинтез гипотезу не проверяют."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Paleontologists hypothesize that the large beak of an extinct bird was an adaptation for cracking hard seeds.",
+   "stem": "Which finding, if true, would most directly support the paleontologists' hypothesis?",
+   "choices": [
+    "The bird laid one egg at a time.",
+    "Fossilized seeds found with the bird's remains had extremely hard shells, and the wear on the birds' beaks matches the pattern produced by cracking such seeds.",
+    "The bird lived on an island with few predators.",
+    "The bird's beak was larger than that of its closest living relatives."
+   ],
+   "answer": 1,
+   "explanation": "Твёрдые семена рядом и характерный износ клюва — прямое подтверждение функции (B). Отсутствие хищников и кладка не о клюве; размер клюва не показывает, для чего он."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Researchers claim that students score lower on tests taken in the afternoon than on tests taken in the morning mainly because they are more tired later in the day.",
+   "stem": "Which finding, if true, would most directly weaken the researchers' claim?",
+   "choices": [
+    "Afternoon tests are sometimes given in larger classrooms.",
+    "Some students prefer to study in the evening.",
+    "Students who reported feeling equally alert in the morning and the afternoon still scored lower on afternoon tests.",
+    "Most students eat lunch before afternoon tests."
+   ],
+   "answer": 2,
+   "explanation": "Если при одинаковой бодрости баллы всё равно ниже, усталость не главная причина (C). Обед, размер класса и вечерние занятия не проверяют объяснение через усталость."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A historian hypothesizes that a map long believed to date from the 1700s was actually made in the 1500s.",
+   "stem": "Which finding, if true, would most directly support the historian's hypothesis?",
+   "choices": [
+    "The map shows several coastal towns.",
+    "The map was found in a library in the 1800s.",
+    "Mapmakers in the 1700s often used colored inks.",
+    "Analysis of the map's paper revealed a watermark used only by a mill that operated between 1540 and 1570."
+   ],
+   "answer": 3,
+   "explanation": "Водяной знак фабрики 1540–1570 годов датирует бумагу XVI веком (D). Города на карте и находка в XIX веке не указывают век создания; цветные чернила XVIII века скорее противоречат гипотезе, чем подтверждают."
+  }
+ ]
+}

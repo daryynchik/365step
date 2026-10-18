@@ -1,0 +1,1880 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "information-and-ideas",
+  "skill": "quantitative-evidence",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A school surveyed students about how they get to school. The most common way students traveled to school was ______",
+   "table": {
+    "caption": "How students travel to school",
+    "head": [
+     "Method",
+     "Number of students"
+    ],
+    "rows": [
+     [
+      "Walk",
+      "120"
+     ],
+     [
+      "Bus",
+      "210"
+     ],
+     [
+      "Car",
+      "150"
+     ],
+     [
+      "Bicycle",
+      "45"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "by bus.",
+    "by walking.",
+    "by car.",
+    "by bicycle."
+   ],
+   "answer": 0,
+   "explanation": "Больше всего учеников (210) ездят на автобусе (A). Пешком 120, на машине 150, на велосипеде 45 — меньше."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A bakery tracked its sales of four kinds of bread on a Saturday. The bakery sold more loaves of sourdough than ______",
+   "table": {
+    "caption": "Loaves sold on Saturday",
+    "head": [
+     "Bread",
+     "Loaves sold"
+    ],
+    "rows": [
+     [
+      "Sourdough",
+      "64"
+     ],
+     [
+      "Rye",
+      "38"
+     ],
+     [
+      "Whole wheat",
+      "71"
+     ],
+     [
+      "Baguette",
+      "90"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "baguettes.",
+    "any other kind of bread.",
+    "rye.",
+    "whole wheat."
+   ],
+   "answer": 2,
+   "explanation": "Закваски продано 64, ржаного — 38: закваски больше, чем ржаного (C). Цельнозернового (71) и багетов (90) продано больше; «больше всех» неверно."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Students measured the height of a bean plant each week. The plant grew the most between ______",
+   "table": {
+    "caption": "Height of a bean plant",
+    "head": [
+     "Week",
+     "Height (cm)"
+    ],
+    "rows": [
+     [
+      "1",
+      "3"
+     ],
+     [
+      "2",
+      "8"
+     ],
+     [
+      "3",
+      "16"
+     ],
+     [
+      "4",
+      "19"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "week 3 and week 4.",
+    "week 1 and week 4, when it grew 3 centimeters.",
+    "week 2 and week 3.",
+    "week 1 and week 2."
+   ],
+   "answer": 2,
+   "explanation": "Приросты: 5, 8 и 3 см; наибольший — между неделями 2 и 3 (C). Между 1 и 2 — 5 см, между 3 и 4 — 3 см; с 1 по 4 неделю растение выросло на 16 см, а не на 3."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A town recorded the number of visitors to its public pool each month. The pool had the fewest visitors in ______",
+   "table": {
+    "caption": "Pool visitors by month",
+    "head": [
+     "Month",
+     "Visitors"
+    ],
+    "rows": [
+     [
+      "June",
+      "2,400"
+     ],
+     [
+      "July",
+      "3,900"
+     ],
+     [
+      "August",
+      "3,100"
+     ],
+     [
+      "September",
+      "900"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "June.",
+    "July.",
+    "August.",
+    "September."
+   ],
+   "answer": 3,
+   "explanation": "Меньше всего — 900 в сентябре (D). В июне, июле и августе посетителей больше."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A student claims that more people in her class prefer cats to dogs.",
+   "table": {
+    "caption": "Favorite pet of students in one class",
+    "head": [
+     "Pet",
+     "Number of students"
+    ],
+    "rows": [
+     [
+      "Dog",
+      "9"
+     ],
+     [
+      "Cat",
+      "13"
+     ],
+     [
+      "Fish",
+      "4"
+     ],
+     [
+      "Bird",
+      "2"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the student's claim?",
+   "choices": [
+    "Thirteen students prefer cats, while nine prefer dogs.",
+    "Nine students prefer dogs, while four prefer fish.",
+    "Four students prefer fish, while two prefer birds.",
+    "Twenty-eight students answered the survey."
+   ],
+   "answer": 0,
+   "explanation": "Утверждение сравнивает кошек и собак: 13 против 9 (A). Остальные варианты не сравнивают кошек с собаками."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A farmer recorded the amount of rain that fell each month. The month with the most rainfall was ______",
+   "table": {
+    "caption": "Monthly rainfall",
+    "head": [
+     "Month",
+     "Rainfall (mm)"
+    ],
+    "rows": [
+     [
+      "March",
+      "62"
+     ],
+     [
+      "April",
+      "88"
+     ],
+     [
+      "May",
+      "75"
+     ],
+     [
+      "June",
+      "41"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "June, with 41 millimeters.",
+    "April, with 88 millimeters.",
+    "March, with 62 millimeters.",
+    "May, with 75 millimeters."
+   ],
+   "answer": 1,
+   "explanation": "Максимум — 88 мм в апреле (B). В марте, мае и июне дождей меньше."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A library counted the books checked out in each section during one week. More books were checked out from the mystery section than from ______",
+   "table": {
+    "caption": "Books checked out in one week",
+    "head": [
+     "Section",
+     "Books"
+    ],
+    "rows": [
+     [
+      "Mystery",
+      "142"
+     ],
+     [
+      "Science fiction",
+      "98"
+     ],
+     [
+      "History",
+      "165"
+     ],
+     [
+      "Poetry",
+      "31"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "the science fiction section.",
+    "the history section.",
+    "any other section.",
+    "the history and poetry sections combined."
+   ],
+   "answer": 0,
+   "explanation": "Детективов 142, фантастики 98 — детективов больше (A). Истории выдано больше (165); «больше всех» неверно; история + поэзия = 196 > 142."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A runner recorded her times for a 5-kilometer race over several months. She ran her fastest race in ______",
+   "table": {
+    "caption": "5-kilometer race times",
+    "head": [
+     "Month",
+     "Time (minutes)"
+    ],
+    "rows": [
+     [
+      "January",
+      "31"
+     ],
+     [
+      "March",
+      "29"
+     ],
+     [
+      "May",
+      "27"
+     ],
+     [
+      "July",
+      "28"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "July.",
+    "May.",
+    "January.",
+    "March."
+   ],
+   "answer": 1,
+   "explanation": "Самое быстрое время — наименьшее: 27 минут в мае (B). Январь — самый медленный; март и июль медленнее мая."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A class recorded the high temperature each day for a week. The temperature was the same on ______",
+   "table": {
+    "caption": "Daily high temperature",
+    "head": [
+     "Day",
+     "Temperature (°C)"
+    ],
+    "rows": [
+     [
+      "Monday",
+      "18"
+     ],
+     [
+      "Tuesday",
+      "21"
+     ],
+     [
+      "Wednesday",
+      "18"
+     ],
+     [
+      "Thursday",
+      "24"
+     ],
+     [
+      "Friday",
+      "20"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "Monday and Friday.",
+    "Monday and Wednesday.",
+    "Tuesday and Thursday.",
+    "Wednesday and Friday."
+   ],
+   "answer": 1,
+   "explanation": "18 °C в понедельник и среду (B). Вторник 21 и четверг 24; среда 18 и пятница 20; понедельник 18 и пятница 20 — различаются."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A store owner claims that sales of umbrellas increase in rainy months.",
+   "table": {
+    "caption": "Umbrellas sold and rainy days",
+    "head": [
+     "Month",
+     "Rainy days",
+     "Umbrellas sold"
+    ],
+    "rows": [
+     [
+      "May",
+      "4",
+      "12"
+     ],
+     [
+      "June",
+      "9",
+      "30"
+     ],
+     [
+      "July",
+      "14",
+      "51"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the store owner's claim?",
+   "choices": [
+    "As the number of rainy days rose from 4 to 14, umbrella sales rose from 12 to 51.",
+    "Twelve umbrellas were sold in May.",
+    "June had 9 rainy days.",
+    "The store sold umbrellas in three months."
+   ],
+   "answer": 0,
+   "explanation": "Нужна связь дождливых дней и продаж: оба растут вместе (A). Отдельные числа без сравнения утверждения не подтверждают."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A group of students counted the birds they saw at a feeder. The students saw twice as many sparrows as ______",
+   "table": {
+    "caption": "Birds seen at a feeder",
+    "head": [
+     "Bird",
+     "Number seen"
+    ],
+    "rows": [
+     [
+      "Sparrow",
+      "24"
+     ],
+     [
+      "Cardinal",
+      "12"
+     ],
+     [
+      "Blue jay",
+      "8"
+     ],
+     [
+      "Finch",
+      "18"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "finches.",
+    "all other birds combined.",
+    "cardinals.",
+    "blue jays."
+   ],
+   "answer": 2,
+   "explanation": "24 воробья — вдвое больше 12 кардиналов (C). Сойки — 8 (втрое меньше), вьюрки — 18; все остальные вместе — 38."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A company recorded how many employees used each type of transportation to get to work. More employees biked to work than ______",
+   "table": {
+    "caption": "How employees get to work",
+    "head": [
+     "Transportation",
+     "Employees"
+    ],
+    "rows": [
+     [
+      "Car",
+      "54"
+     ],
+     [
+      "Train",
+      "31"
+     ],
+     [
+      "Bike",
+      "22"
+     ],
+     [
+      "Walk",
+      "15"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "drove.",
+    "took the train and walked combined.",
+    "walked.",
+    "took the train."
+   ],
+   "answer": 2,
+   "explanation": "На велосипеде 22, пешком 15 — велосипедистов больше (C). Поездом (31) и на машине (54) больше; поезд + пешком = 46."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A gardener measured how many tomatoes grew on plants given different amounts of water. Plants given 2 liters of water per day produced ______",
+   "table": {
+    "caption": "Tomatoes per plant",
+    "head": [
+     "Water per day (liters)",
+     "Tomatoes"
+    ],
+    "rows": [
+     [
+      "1",
+      "11"
+     ],
+     [
+      "2",
+      "19"
+     ],
+     [
+      "3",
+      "17"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "the fewest tomatoes.",
+    "the same number of tomatoes as plants given 3 liters.",
+    "fewer tomatoes than plants given 1 liter.",
+    "the most tomatoes."
+   ],
+   "answer": 3,
+   "explanation": "19 — больше всего (D). Меньше всего — при 1 литре; с 3 литрами — 17, не столько же; с 1 литром — 11, меньше."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A survey asked residents how often they visit the town park. The largest group of residents visits the park ______",
+   "table": {
+    "caption": "How often residents visit the park",
+    "head": [
+     "Frequency",
+     "Percent of residents"
+    ],
+    "rows": [
+     [
+      "Every day",
+      "12%"
+     ],
+     [
+      "Every week",
+      "41%"
+     ],
+     [
+      "Every month",
+      "29%"
+     ],
+     [
+      "Rarely or never",
+      "18%"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "rarely or never.",
+    "every week.",
+    "every day.",
+    "every month."
+   ],
+   "answer": 1,
+   "explanation": "41% — самая большая группа, «каждую неделю» (B). Остальные доли меньше."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A researcher claims that the number of students in the school's coding club has grown each year since 2021.",
+   "table": {
+    "caption": "Coding club members",
+    "head": [
+     "Year",
+     "Members"
+    ],
+    "rows": [
+     [
+      "2021",
+      "14"
+     ],
+     [
+      "2022",
+      "22"
+     ],
+     [
+      "2023",
+      "31"
+     ],
+     [
+      "2024",
+      "40"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the researcher's claim?",
+   "choices": [
+    "The club was founded before 2021.",
+    "Membership rose every year, from 14 in 2021 to 40 in 2024.",
+    "The club had 22 members in 2022.",
+    "The club had more members in 2024 than in 2023."
+   ],
+   "answer": 1,
+   "explanation": "Утверждение о росте каждый год: 14, 22, 31, 40 (B). Одно число или одна пара лет не показывают ежегодный рост; дата основания не следует из таблицы."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers tested how long three types of batteries lasted in the same flashlight. A student concludes that the lithium battery is the best choice for long hikes, since it ______",
+   "table": {
+    "caption": "Battery life in a flashlight",
+    "head": [
+     "Battery type",
+     "Hours of use",
+     "Cost ($)"
+    ],
+    "rows": [
+     [
+      "Alkaline",
+      "9",
+      "1.50"
+     ],
+     [
+      "Lithium",
+      "21",
+      "4.00"
+     ],
+     [
+      "Rechargeable",
+      "7",
+      "6.00"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "cost $4.00, less than the rechargeable battery.",
+    "cost more than the alkaline battery.",
+    "lasted 9 hours, longer than the rechargeable battery.",
+    "lasted 21 hours, more than twice as long as either of the other batteries."
+   ],
+   "answer": 3,
+   "explanation": "Для походов важна длительность: литиевая работает 21 час — больше чем вдвое дольше других (D). Цена не объясняет пригодность для долгого похода; 9 часов — у щелочной."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A city compared the number of trees planted in four neighborhoods in 2023. The table shows that Riverside received more new trees than Oak Park but fewer than ______",
+   "table": {
+    "caption": "Trees planted in 2023",
+    "head": [
+     "Neighborhood",
+     "Trees planted"
+    ],
+    "rows": [
+     [
+      "Riverside",
+      "340"
+     ],
+     [
+      "Oak Park",
+      "210"
+     ],
+     [
+      "Hillcrest",
+      "480"
+     ],
+     [
+      "Lakeview",
+      "295"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "any other neighborhood.",
+    "Hillcrest.",
+    "Lakeview.",
+    "Oak Park."
+   ],
+   "answer": 1,
+   "explanation": "Riverside (340) больше Oak Park (210), но меньше Hillcrest (480) (B). Lakeview — 295, меньше Riverside; Oak Park — уже упомянут как меньший; «меньше всех» неверно."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "An ecologist hypothesizes that frogs in the study area are more common near streams than far from them.",
+   "table": {
+    "caption": "Frogs counted in survey plots",
+    "head": [
+     "Distance from nearest stream",
+     "Average frogs per plot"
+    ],
+    "rows": [
+     [
+      "0–50 m",
+      "17"
+     ],
+     [
+      "51–200 m",
+      "9"
+     ],
+     [
+      "201–500 m",
+      "4"
+     ],
+     [
+      "More than 500 m",
+      "1"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the ecologist's hypothesis?",
+   "choices": [
+    "The average number of frogs per plot fell from 17 in plots within 50 meters of a stream to 1 in plots more than 500 meters away.",
+    "Plots 51 to 200 meters from a stream had an average of 9 frogs.",
+    "Plots more than 500 meters from a stream had at least one frog.",
+    "The survey included plots at four distances from streams."
+   ],
+   "answer": 0,
+   "explanation": "Гипотеза о том, что лягушек больше у ручьёв: число падает с 17 до 1 при удалении (A). Отдельные значения и описание выборки не показывают тенденцию."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A survey asked teenagers and adults how many hours per day they spend reading for pleasure. Compared with adults, teenagers in the survey ______",
+   "table": {
+    "caption": "Daily reading for pleasure",
+    "head": [
+     "Group",
+     "Average hours per day"
+    ],
+    "rows": [
+     [
+      "Ages 13–17",
+      "0.6"
+     ],
+     [
+      "Ages 18–34",
+      "0.4"
+     ],
+     [
+      "Ages 35–54",
+      "0.5"
+     ],
+     [
+      "Ages 55 and older",
+      "0.9"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "read the same amount as adults ages 35 to 54.",
+    "read more than adults ages 18 to 54 but less than adults 55 and older.",
+    "read more than every group of adults.",
+    "read less than every group of adults."
+   ],
+   "answer": 1,
+   "explanation": "Подростки 0.6: больше, чем 18–34 (0.4) и 35–54 (0.5), но меньше, чем 55+ (0.9) (B). Больше или меньше всех взрослых — неверно; с 35–54 значения различаются."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers compared the energy used by three types of light bulbs that give off the same amount of light. The LED bulb uses ______",
+   "table": {
+    "caption": "Energy use of light bulbs",
+    "head": [
+     "Bulb type",
+     "Watts",
+     "Average life (hours)"
+    ],
+    "rows": [
+     [
+      "Incandescent",
+      "60",
+      "1,200"
+     ],
+     [
+      "CFL",
+      "14",
+      "8,000"
+     ],
+     [
+      "LED",
+      "9",
+      "25,000"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "less energy and lasts longer than either of the other bulbs.",
+    "more energy than the CFL bulb but lasts longer.",
+    "less energy than the incandescent bulb but has a shorter life.",
+    "the same amount of energy as the CFL bulb."
+   ],
+   "answer": 0,
+   "explanation": "LED: 9 Вт (меньше всех) и 25 000 часов (дольше всех) (A). Он потребляет меньше, чем CFL (14 Вт); служит дольше, а не меньше; мощность у CFL другая."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A student claims that the school's new reading program improved students' reading scores more in grade 6 than in grade 8.",
+   "table": {
+    "caption": "Average reading scores",
+    "head": [
+     "Grade",
+     "Before program",
+     "After program"
+    ],
+    "rows": [
+     [
+      "6",
+      "62",
+      "74"
+     ],
+     [
+      "7",
+      "65",
+      "71"
+     ],
+     [
+      "8",
+      "70",
+      "73"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the student's claim?",
+   "choices": [
+    "Grade 8 had the highest scores both before and after the program.",
+    "Grade 7 scores rose by 6 points.",
+    "All three grades had higher scores after the program.",
+    "Grade 6 scores rose by 12 points, while grade 8 scores rose by only 3 points."
+   ],
+   "answer": 3,
+   "explanation": "Сравнение прироста 6-го (+12) и 8-го (+3) классов (D). Уровень баллов 8-го класса не о приросте; 7-й класс не сравнивается; общий рост не показывает разницы между 6 и 8."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A city tracked how many people used three public parks on weekdays and weekends. Unlike the other two parks, Central Park ______",
+   "table": {
+    "caption": "Average daily visitors",
+    "head": [
+     "Park",
+     "Weekdays",
+     "Weekends"
+    ],
+    "rows": [
+     [
+      "Central Park",
+      "850",
+      "720"
+     ],
+     [
+      "River Park",
+      "300",
+      "910"
+     ],
+     [
+      "Hill Park",
+      "180",
+      "460"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "had more visitors on weekends than on weekdays.",
+    "had fewer than 500 weekday visitors.",
+    "had more than 900 weekend visitors.",
+    "had more visitors on weekdays than on weekends."
+   ],
+   "answer": 3,
+   "explanation": "Только у Central Park будни (850) больше выходных (720) (D). У остальных двух больше в выходные; меньше 500 в будни — у Hill и River; больше 900 в выходные — только River Park."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A nutritionist claims that, among the cereals tested, the cereal with the most fiber also has the least sugar.",
+   "table": {
+    "caption": "Nutrition per serving",
+    "head": [
+     "Cereal",
+     "Fiber (g)",
+     "Sugar (g)"
+    ],
+    "rows": [
+     [
+      "Oat Crunch",
+      "6",
+      "4"
+     ],
+     [
+      "Honey Flakes",
+      "2",
+      "12"
+     ],
+     [
+      "Berry Puffs",
+      "3",
+      "9"
+     ],
+     [
+      "Wheat Squares",
+      "5",
+      "6"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the nutritionist's claim?",
+   "choices": [
+    "Wheat Squares has 5 grams of fiber and 6 grams of sugar.",
+    "Berry Puffs has more sugar than Oat Crunch.",
+    "Oat Crunch has 6 grams of fiber, more than any other cereal, and 4 grams of sugar, less than any other cereal.",
+    "Honey Flakes has 12 grams of sugar, more than any other cereal."
+   ],
+   "answer": 2,
+   "explanation": "Нужно показать, что лидер по клетчатке — Oat Crunch (6 г) — ещё и с наименьшим сахаром (4 г) (C). Остальные варианты описывают другие хлопья или только одну величину."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers recorded the average weight of a species of fish caught in a lake over several decades. The data show that the fish's average weight ______",
+   "table": {
+    "caption": "Average weight of fish caught",
+    "head": [
+     "Decade",
+     "Average weight (kg)"
+    ],
+    "rows": [
+     [
+      "1980s",
+      "2.4"
+     ],
+     [
+      "1990s",
+      "2.1"
+     ],
+     [
+      "2000s",
+      "1.7"
+     ],
+     [
+      "2010s",
+      "1.5"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "stayed about the same over the four decades.",
+    "was highest in the 2000s.",
+    "declined in each decade, from 2.4 kilograms in the 1980s to 1.5 kilograms in the 2010s.",
+    "increased steadily from the 1980s to the 2010s."
+   ],
+   "answer": 2,
+   "explanation": "Каждое десятилетие вес падал: 2.4 → 2.1 → 1.7 → 1.5 (C). Роста и стабильности нет; максимум — в 1980-х."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A student surveyed classmates about their favorite subjects and compared the results with a survey from five years earlier. The subject that gained the most popularity was ______",
+   "table": {
+    "caption": "Students naming each subject as their favorite (%)",
+    "head": [
+     "Subject",
+     "Five years ago",
+     "This year"
+    ],
+    "rows": [
+     [
+      "Math",
+      "22",
+      "25"
+     ],
+     [
+      "Science",
+      "18",
+      "29"
+     ],
+     [
+      "English",
+      "26",
+      "20"
+     ],
+     [
+      "Art",
+      "15",
+      "14"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "art, which changed by only 1 percentage point.",
+    "science, which rose from 18 percent to 29 percent.",
+    "math, which rose from 22 percent to 25 percent.",
+    "English, which was the most popular subject five years ago."
+   ],
+   "answer": 1,
+   "explanation": "Рост: математика +3, естествознание +11 — наибольший (B). Английский и искусство потеряли популярность."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A researcher hypothesizes that taller sunflower plants produce larger flower heads.",
+   "table": {
+    "caption": "Sunflower measurements",
+    "head": [
+     "Plant",
+     "Height (cm)",
+     "Flower head diameter (cm)"
+    ],
+    "rows": [
+     [
+      "A",
+      "120",
+      "14"
+     ],
+     [
+      "B",
+      "155",
+      "19"
+     ],
+     [
+      "C",
+      "180",
+      "24"
+     ],
+     [
+      "D",
+      "210",
+      "28"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the researcher's hypothesis?",
+   "choices": [
+    "Plant D had a flower head 28 centimeters across.",
+    "The researcher measured four sunflower plants.",
+    "As plant height increased from 120 to 210 centimeters, flower head diameter increased from 14 to 28 centimeters.",
+    "Plant B was 155 centimeters tall."
+   ],
+   "answer": 2,
+   "explanation": "Показать, что высота и диаметр растут вместе (C). Отдельные измерения и число растений связь не демонстрируют."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A city compared electricity use in homes with and without solar panels. Homes with solar panels used ______",
+   "table": {
+    "caption": "Average monthly electricity bought from the grid (kWh)",
+    "head": [
+     "Season",
+     "Homes without panels",
+     "Homes with panels"
+    ],
+    "rows": [
+     [
+      "Winter",
+      "920",
+      "610"
+     ],
+     [
+      "Spring",
+      "740",
+      "280"
+     ],
+     [
+      "Summer",
+      "1,050",
+      "330"
+     ],
+     [
+      "Fall",
+      "780",
+      "350"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "the same amount of electricity from the grid in every season.",
+    "more electricity from the grid than homes without panels in winter.",
+    "less electricity from the grid than homes without panels in every season.",
+    "more electricity from the grid in summer than in winter."
+   ],
+   "answer": 2,
+   "explanation": "С панелями меньше в каждом сезоне: 610 < 920, 280 < 740, 330 < 1050, 350 < 780 (C). Летом им нужно меньше, чем зимой (330 < 610); значения по сезонам разные; зимой 610 < 920."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A teacher claims that students who completed more practice quizzes tended to earn higher final exam scores.",
+   "table": {
+    "caption": "Practice quizzes and final exam scores",
+    "head": [
+     "Practice quizzes completed",
+     "Average final exam score"
+    ],
+    "rows": [
+     [
+      "0–2",
+      "68"
+     ],
+     [
+      "3–5",
+      "75"
+     ],
+     [
+      "6–8",
+      "83"
+     ],
+     [
+      "9–10",
+      "88"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the teacher's claim?",
+   "choices": [
+    "Students who completed 0–2 quizzes averaged 68, while those who completed 9–10 quizzes averaged 88.",
+    "Students who completed 3–5 quizzes averaged 75.",
+    "Some students completed all 10 practice quizzes.",
+    "The final exam was given at the end of the course."
+   ],
+   "answer": 0,
+   "explanation": "Сравнение групп с малым и большим числом тестов показывает связь (A). Одна группа, факт выполнения всех тестов и время экзамена связь не показывают."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A museum tracked attendance after introducing evening hours on Thursdays. On Thursdays after the change, attendance ______",
+   "table": {
+    "caption": "Average attendance",
+    "head": [
+     "Day",
+     "Before evening hours",
+     "After evening hours"
+    ],
+    "rows": [
+     [
+      "Tuesday",
+      "410",
+      "405"
+     ],
+     [
+      "Thursday",
+      "430",
+      "690"
+     ],
+     [
+      "Saturday",
+      "1,250",
+      "1,230"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "stayed about the same as before the change.",
+    "rose by 260 visitors, while attendance on the other days stayed about the same.",
+    "fell slightly, as it did on Tuesdays and Saturdays.",
+    "became higher than Saturday attendance."
+   ],
+   "answer": 1,
+   "explanation": "Четверг: 430 → 690 (+260), остальные дни почти без изменений (B). Посещаемость выросла, не упала; суббота (1230) всё равно больше; «осталась прежней» противоречит таблице."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A study recorded how many hours of sleep high school students got on school nights. A student concludes that most students in the study slept less than the recommended 8 hours.",
+   "table": {
+    "caption": "Hours of sleep on school nights",
+    "head": [
+     "Hours of sleep",
+     "Percent of students"
+    ],
+    "rows": [
+     [
+      "Less than 6",
+      "18%"
+     ],
+     [
+      "6 to less than 7",
+      "29%"
+     ],
+     [
+      "7 to less than 8",
+      "31%"
+     ],
+     [
+      "8 or more",
+      "22%"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the student's conclusion?",
+   "choices": [
+    "Twenty-two percent of students slept 8 hours or more.",
+    "Thirty-one percent of students slept 7 to less than 8 hours.",
+    "Eighteen percent of students slept less than 6 hours.",
+    "A total of 78 percent of students slept less than 8 hours."
+   ],
+   "answer": 3,
+   "explanation": "«Большинство спит меньше 8 часов»: 18 + 29 + 31 = 78% (D). Каждая отдельная доля меньше половины и вывод не доказывает."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Researchers studying urban heat measured afternoon surface temperatures on different materials. They argue that replacing dark asphalt with lighter materials could substantially cool city streets. The data in the table support this argument, since ______",
+   "table": {
+    "caption": "Afternoon surface temperature in summer",
+    "head": [
+     "Surface",
+     "Reflectivity (%)",
+     "Temperature (°C)"
+    ],
+    "rows": [
+     [
+      "Dark asphalt",
+      "5",
+      "63"
+     ],
+     [
+      "Concrete",
+      "35",
+      "46"
+     ],
+     [
+      "Light-colored coating",
+      "60",
+      "38"
+     ],
+     [
+      "Grass",
+      "25",
+      "33"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "the light-colored coating, which reflected 60 percent of sunlight, was 25 degrees cooler than dark asphalt.",
+    "grass was cooler than every other surface.",
+    "concrete reflected more sunlight than grass.",
+    "dark asphalt reflected only 5 percent of sunlight."
+   ],
+   "answer": 0,
+   "explanation": "Аргумент — о замене асфальта светлыми материалами: светлое покрытие на 25 °C холоднее асфальта (A). Трава — не материал покрытия улиц; отражательная способность бетона против травы не о замене асфальта; одна цифра асфальта не показывает охлаждения."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A historian argues that the town's population growth in the late 1800s was driven mainly by people moving from elsewhere rather than by births exceeding deaths.",
+   "table": {
+    "caption": "Sources of population change, 1880–1900",
+    "head": [
+     "Period",
+     "Births minus deaths",
+     "People moving in minus people moving out"
+    ],
+    "rows": [
+     [
+      "1880–1885",
+      "+320",
+      "+1,450"
+     ],
+     [
+      "1885–1890",
+      "+290",
+      "+2,100"
+     ],
+     [
+      "1890–1895",
+      "+340",
+      "+1,780"
+     ],
+     [
+      "1895–1900",
+      "+310",
+      "+1,960"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to support the historian's argument?",
+   "choices": [
+    "The town's natural increase was largest from 1890 to 1895.",
+    "In every period, net migration added at least four times as many people as natural increase did.",
+    "Births exceeded deaths in every period shown.",
+    "Net migration was highest from 1885 to 1890."
+   ],
+   "answer": 1,
+   "explanation": "Аргумент сравнивает два источника роста: миграция в каждом периоде минимум вчетверо больше естественного прироста (B). Положительный естественный прирост сам по себе не доказывает главенство миграции; максимумы отдельных периодов не сравнивают источники."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A team tested whether a new drought-resistant variety of wheat would perform better than a standard variety. The researchers concluded that the new variety's advantage was greatest under the driest conditions, since ______",
+   "table": {
+    "caption": "Wheat yield (tons per hectare)",
+    "head": [
+     "Annual rainfall",
+     "Standard variety",
+     "New variety"
+    ],
+    "rows": [
+     [
+      "600 mm",
+      "6.1",
+      "6.3"
+     ],
+     [
+      "400 mm",
+      "4.2",
+      "5.0"
+     ],
+     [
+      "250 mm",
+      "1.8",
+      "3.4"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "both varieties produced less wheat as rainfall decreased.",
+    "the new variety produced 6.3 tons per hectare at 600 millimeters of rain.",
+    "the standard variety produced only 1.8 tons per hectare at 250 millimeters of rain.",
+    "the new variety produced 1.6 more tons per hectare than the standard variety at 250 millimeters of rain, compared with only 0.2 more at 600 millimeters."
+   ],
+   "answer": 3,
+   "explanation": "Вывод — о величине преимущества при засухе: +1.6 т при 250 мм против +0.2 т при 600 мм (D). Общее падение урожая не сравнивает сорта; отдельные значения не показывают разницу преимущества."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "An economist claims that, between 2010 and 2020, the share of household spending on housing grew while the share spent on food declined.",
+   "table": {
+    "caption": "Share of household spending (%)",
+    "head": [
+     "Category",
+     "2010",
+     "2015",
+     "2020"
+    ],
+    "rows": [
+     [
+      "Housing",
+      "31",
+      "33",
+      "36"
+     ],
+     [
+      "Food",
+      "15",
+      "14",
+      "12"
+     ],
+     [
+      "Transportation",
+      "17",
+      "16",
+      "16"
+     ],
+     [
+      "Health care",
+      "7",
+      "8",
+      "9"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the economist's claim?",
+   "choices": [
+    "The housing share rose from 31 percent to 36 percent, while the food share fell from 15 percent to 12 percent.",
+    "Housing was the largest category of spending in every year.",
+    "The transportation share stayed between 16 and 17 percent.",
+    "The health care share rose from 7 percent to 9 percent."
+   ],
+   "answer": 0,
+   "explanation": "Утверждение о двух категориях: жильё растёт (31 → 36), еда падает (15 → 12) (A). «Жильё крупнейшее» не о динамике еды; транспорт и медицина не входят в утверждение."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Researchers hypothesized that a bird species would begin nesting earlier in the spring as average temperatures rose. The data are consistent with this hypothesis because ______",
+   "table": {
+    "caption": "Average spring temperature and first nesting date",
+    "head": [
+     "Decade",
+     "Average March–April temperature (°C)",
+     "Average first nesting date"
+    ],
+    "rows": [
+     [
+      "1970s",
+      "8.1",
+      "April 28"
+     ],
+     [
+      "1990s",
+      "8.9",
+      "April 21"
+     ],
+     [
+      "2010s",
+      "9.8",
+      "April 12"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "the 2010s were the warmest decade in the table.",
+    "the birds nested in April in every decade.",
+    "average spring temperatures rose by 1.7 °C over four decades.",
+    "as average spring temperatures rose from 8.1 °C to 9.8 °C, the average first nesting date moved from April 28 to April 12."
+   ],
+   "answer": 3,
+   "explanation": "Гипотеза связывает тепло и сроки: температура растёт, гнездование сдвигается раньше (D). Самое тёплое десятилетие, апрель в каждом случае и рост температуры сами по себе не показывают связь."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A transit agency claims that its new express bus route attracted riders who had previously driven to work, rather than simply drawing riders away from existing bus routes.",
+   "table": {
+    "caption": "Commuters' previous travel method (survey of express route riders)",
+    "head": [
+     "Previous method",
+     "Percent of riders"
+    ],
+    "rows": [
+     [
+      "Drove alone",
+      "54%"
+     ],
+     [
+      "Carpooled",
+      "11%"
+     ],
+     [
+      "Took another bus route",
+      "23%"
+     ],
+     [
+      "Walked or biked",
+      "12%"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the agency's claim?",
+   "choices": [
+    "Some riders had previously carpooled.",
+    "The survey asked riders about their previous travel method.",
+    "More than half of the express route's riders had previously driven alone, while fewer than a quarter had used another bus route.",
+    "Twelve percent of riders had previously walked or biked."
+   ],
+   "answer": 2,
+   "explanation": "Утверждение сравнивает бывших водителей и пассажиров других маршрутов: 54% против 23% (C). Пешеходы, каршеринг и описание опроса это сравнение не делают."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "An agricultural scientist argues that the benefit of adding compost to soil depends on the soil type, with the greatest benefit in sandy soil.",
+   "table": {
+    "caption": "Corn yield with and without compost (bushels per acre)",
+    "head": [
+     "Soil type",
+     "No compost",
+     "With compost"
+    ],
+    "rows": [
+     [
+      "Sandy",
+      "92",
+      "131"
+     ],
+     [
+      "Loam",
+      "158",
+      "171"
+     ],
+     [
+      "Clay",
+      "120",
+      "138"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the scientist's argument?",
+   "choices": [
+    "Compost increased yields in all three soil types.",
+    "Sandy soil without compost produced the lowest yield.",
+    "Compost increased yield by 39 bushels per acre in sandy soil but by only 13 in loam and 18 in clay.",
+    "Loam produced the highest yields both with and without compost."
+   ],
+   "answer": 2,
+   "explanation": "Аргумент о различии пользы: в песке +39, в суглинке +13, в глине +18 (C). Высокие урожаи суглинка не о приросте; рост везде не показывает разницы; низкий урожай без компоста — не о пользе компоста."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A sociologist studying volunteer work found that participation varies by age. The sociologist claims that the group most likely to volunteer is not the youngest or the oldest but people in middle age.",
+   "table": {
+    "caption": "Percent of people who volunteered in the past year",
+    "head": [
+     "Age group",
+     "Percent"
+    ],
+    "rows": [
+     [
+      "16–24",
+      "21%"
+     ],
+     [
+      "25–34",
+      "22%"
+     ],
+     [
+      "35–44",
+      "29%"
+     ],
+     [
+      "45–54",
+      "28%"
+     ],
+     [
+      "55–64",
+      "26%"
+     ],
+     [
+      "65 and older",
+      "24%"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the sociologist's claim?",
+   "choices": [
+    "People 65 and older volunteered more often than people 16 to 24.",
+    "Volunteer rates were above 20 percent in every age group.",
+    "People ages 55 to 64 volunteered at a rate of 26 percent.",
+    "The highest rates were among people ages 35 to 54, at 28 to 29 percent, compared with 21 percent for the youngest group and 24 percent for the oldest."
+   ],
+   "answer": 3,
+   "explanation": "Нужно показать пик в среднем возрасте при более низких крайних группах (D). Сравнение только двух крайних групп, общий порог 20% и одно значение не показывают пика в середине."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A team of engineers claims that a new bridge design reduces vibration more effectively at high wind speeds than at low wind speeds.",
+   "table": {
+    "caption": "Peak vibration (mm)",
+    "head": [
+     "Wind speed (km/h)",
+     "Old design",
+     "New design"
+    ],
+    "rows": [
+     [
+      "20",
+      "4",
+      "3"
+     ],
+     [
+      "50",
+      "11",
+      "6"
+     ],
+     [
+      "80",
+      "26",
+      "9"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the engineers' claim?",
+   "choices": [
+    "The old design vibrated 26 millimeters at 80 kilometers per hour.",
+    "At 80 kilometers per hour, the new design cut peak vibration by 17 millimeters, compared with a reduction of only 1 millimeter at 20 kilometers per hour.",
+    "The new design vibrated less than the old design at every wind speed.",
+    "Both designs vibrated more as wind speed increased."
+   ],
+   "answer": 1,
+   "explanation": "Утверждение о размере эффекта: −17 мм при сильном ветре против −1 мм при слабом (B). «Меньше везде» не сравнивает силу эффекта; общий рост вибрации и одно значение тоже."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A public library surveyed patrons about why they visited. Library staff concluded that the library's role as a workspace has become more important than its role as a source of books, since ______",
+   "table": {
+    "caption": "Main reason for visiting the library (% of patrons)",
+    "head": [
+     "Reason",
+     "2014",
+     "2024"
+    ],
+    "rows": [
+     [
+      "Borrow books",
+      "58",
+      "37"
+     ],
+     [
+      "Use computers or Wi-Fi",
+      "17",
+      "24"
+     ],
+     [
+      "Study or work",
+      "14",
+      "29"
+     ],
+     [
+      "Attend events",
+      "11",
+      "10"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "the share who came for events barely changed.",
+    "the share who used computers or Wi-Fi rose by 7 percentage points.",
+    "the share of patrons who came mainly to study or work rose from 14 percent to 29 percent, while the share who came mainly to borrow books fell from 58 percent to 37 percent.",
+    "borrowing books was still the most common reason in 2024."
+   ],
+   "answer": 2,
+   "explanation": "Вывод о росте роли «рабочего места» относительно книг: учёба/работа 14 → 29, книги 58 → 37 (C). То, что книги всё ещё на первом месте, вывод скорее ослабляет; события и компьютеры не сравнивают рабочую роль с книжной."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A medical researcher hypothesizes that a new medication lowers blood pressure more in patients with higher starting blood pressure.",
+   "table": {
+    "caption": "Average reduction in systolic blood pressure after 8 weeks (mm Hg)",
+    "head": [
+     "Starting blood pressure",
+     "Medication",
+     "Placebo"
+    ],
+    "rows": [
+     [
+      "130–139",
+      "6",
+      "2"
+     ],
+     [
+      "140–159",
+      "12",
+      "3"
+     ],
+     [
+      "160 and above",
+      "19",
+      "3"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the researcher's hypothesis?",
+   "choices": [
+    "Patients taking the placebo also had small reductions in blood pressure.",
+    "The medication reduced blood pressure in every group.",
+    "The highest group had a reduction of 19 mm Hg.",
+    "The medication's reduction exceeded the placebo's by 4 mm Hg in the lowest group but by 16 mm Hg in the highest group."
+   ],
+   "answer": 3,
+   "explanation": "Сравнение эффекта сверх плацебо: +4 в низшей группе против +16 в высшей (D). Эффект плацебо, снижение во всех группах и одно число не показывают зависимость от исходного давления."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Researchers compared the reading habits of students in schools with and without school libraries. They concluded that the difference between the two groups was largest among the youngest students, since ______",
+   "table": {
+    "caption": "Books read per month (average)",
+    "head": [
+     "Grade",
+     "Schools with libraries",
+     "Schools without libraries"
+    ],
+    "rows": [
+     [
+      "3",
+      "6.2",
+      "3.1"
+     ],
+     [
+      "6",
+      "4.8",
+      "3.3"
+     ],
+     [
+      "9",
+      "3.1",
+      "2.7"
+     ]
+    ]
+   },
+   "stem": "Which choice most effectively uses data from the table to complete the statement?",
+   "choices": [
+    "students in grade 3 at schools with libraries read 3.1 more books per month than grade 3 students at schools without them, a larger gap than in grade 6 or grade 9.",
+    "students at schools with libraries read more books in every grade.",
+    "students in grade 9 read fewer books than students in grade 3.",
+    "grade 6 students at schools without libraries read 3.3 books per month."
+   ],
+   "answer": 0,
+   "explanation": "Вывод о величине разрыва: в 3-м классе 3.1, в 6-м 1.5, в 9-м 0.4 (A). «Больше в каждом классе» не говорит о том, где разрыв наибольший; сравнение 9-го и 3-го классов и одно значение тоже."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A climate scientist argues that a glacier's retreat accelerated after 1990.",
+   "table": {
+    "caption": "Glacier length change",
+    "head": [
+     "Period",
+     "Total retreat (m)",
+     "Years in period"
+    ],
+    "rows": [
+     [
+      "1950–1970",
+      "120",
+      "20"
+     ],
+     [
+      "1970–1990",
+      "140",
+      "20"
+     ],
+     [
+      "1990–2010",
+      "410",
+      "20"
+     ],
+     [
+      "2010–2020",
+      "290",
+      "10"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the scientist's argument?",
+   "choices": [
+    "The period from 2010 to 2020 was only ten years long.",
+    "The glacier retreated 410 meters from 1990 to 2010 and 290 meters in the following ten years, compared with 120 to 140 meters in each twenty-year period before 1990.",
+    "The glacier retreated a total of 960 meters between 1950 and 2020.",
+    "The glacier retreated more from 1970 to 1990 than from 1950 to 1970."
+   ],
+   "answer": 1,
+   "explanation": "Ускорение после 1990: 410 м за 20 лет и 290 м за 10 лет против 120–140 м за 20 лет раньше (B). Общая сумма не показывает ускорения; рост между двумя периодами до 1990 не о периоде после; длина периода — не данные об отступлении."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A city planner claims that the neighborhoods that gained the most new housing units also experienced the smallest increases in rent.",
+   "table": {
+    "caption": "Change from 2015 to 2023",
+    "head": [
+     "Neighborhood",
+     "New housing units",
+     "Change in median rent"
+    ],
+    "rows": [
+     [
+      "North End",
+      "2,400",
+      "+8%"
+     ],
+     [
+      "Westgate",
+      "1,600",
+      "+14%"
+     ],
+     [
+      "Midtown",
+      "900",
+      "+22%"
+     ],
+     [
+      "Eastside",
+      "300",
+      "+31%"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the planner's claim?",
+   "choices": [
+    "Rents rose in every neighborhood.",
+    "Midtown added 900 new housing units.",
+    "Westgate's rent increased by 14 percent.",
+    "North End added the most units, 2,400, and had the smallest rent increase, 8 percent, while Eastside added the fewest units and had the largest increase, 31 percent."
+   ],
+   "answer": 3,
+   "explanation": "Показано, что больше жилья — меньше рост аренды, на крайних точках (D). Рост везде и отдельные значения не связывают объём строительства и аренду."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Researchers studied how quickly four species of trees grew after a forest fire. They argue that species that grow fastest in the first years after a fire tend to be overtaken later by slower-growing species.",
+   "table": {
+    "caption": "Average height after a fire (m)",
+    "head": [
+     "Species",
+     "After 5 years",
+     "After 30 years"
+    ],
+    "rows": [
+     [
+      "Aspen",
+      "4.1",
+      "14"
+     ],
+     [
+      "Birch",
+      "3.5",
+      "16"
+     ],
+     [
+      "Spruce",
+      "1.2",
+      "22"
+     ],
+     [
+      "Fir",
+      "0.9",
+      "24"
+     ]
+    ]
+   },
+   "stem": "Which choice best describes data from the table that support the researchers' argument?",
+   "choices": [
+    "All four species grew taller between year 5 and year 30.",
+    "Birch was 3.5 meters tall after 5 years.",
+    "Aspen was the tallest species after 5 years but was shorter than spruce and fir after 30 years.",
+    "Fir was the tallest species after 30 years."
+   ],
+   "answer": 2,
+   "explanation": "Аргумент о «перегоне»: осина лидирует через 5 лет, но через 30 ниже ели и пихты (C). Лидер через 30 лет без раннего сравнения, общий рост и одно значение аргумент не доказывают."
+  }
+ ]
+}

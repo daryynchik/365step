@@ -1,0 +1,732 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "craft-and-structure",
+  "skill": "cross-text",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Homework helps students practice what they learn in class. Without regular practice at home, many students forget new skills before the next lesson.",
+   "passage2": "Too much homework can backfire. When students spend hours on assignments every night, they may become exhausted and lose interest in learning.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Students forget everything they learn in class.",
+    "Homework always makes students lose interest.",
+    "Homework can affect how well students learn.",
+    "Students should never be given homework."
+   ],
+   "answer": 2,
+   "explanation": "Первый автор говорит о пользе домашней работы, второй — о вреде перегрузки: оба считают, что она влияет на обучение (C). Отказ от домашки и «всегда» — слишком сильно; «забывают всё» не утверждает никто."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "City buses are the best way to reduce traffic downtown. One bus can carry as many people as forty cars.",
+   "passage2": "Buses help, but they are not enough on their own. Many people will keep driving unless buses come often and arrive on time.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that buses are the best way to reduce traffic?",
+   "choices": [
+    "By claiming that forty cars carry more people than one bus",
+    "By arguing that buses reduce traffic only if they are frequent and reliable",
+    "By arguing that buses make traffic worse",
+    "By agreeing that buses alone will solve the traffic problem"
+   ],
+   "answer": 1,
+   "explanation": "Автор Text 2 согласен, что автобусы помогают, но при условии частоты и пунктуальности (B). Он не говорит, что автобусы ухудшают ситуацию, и прямо отрицает «сами по себе»; D противоречит Text 1."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Reading paper books is better for understanding long stories. Readers can flip back easily and remember where events happened on the page.",
+   "passage2": "E-readers let readers search for a character's name instantly, which can make it easier to keep track of events in a long story.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Long stories should be avoided.",
+    "Keeping track of events matters when reading long stories.",
+    "Paper books are always better than e-readers.",
+    "E-readers make it impossible to flip back."
+   ],
+   "answer": 1,
+   "explanation": "Оба обсуждают, как удобнее следить за событиями длинной истории (B). Ни один не говорит «всегда лучше», о невозможности листать или отказе от длинных историй."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Zoos protect endangered animals by breeding them in safe conditions. Some species that disappeared from the wild survive today only because of zoos.",
+   "passage2": "Zoo breeding is helpful, but protecting wild habitats matters more. Animals bred in zoos have nowhere to return to if their forests and grasslands are destroyed.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to Text 1's view of zoos?",
+   "choices": [
+    "By agreeing that zoo breeding helps but arguing that habitat protection is more important",
+    "By arguing that zoos harm all animals",
+    "By claiming that no species has been saved by zoos",
+    "By agreeing that zoos are the only way to protect animals"
+   ],
+   "answer": 0,
+   "explanation": "Text 2 признаёт пользу («helpful»), но ставит выше защиту среды обитания (A). Вреда «всем» и отрицания спасённых видов нет; «единственный способ» противоречит Text 2."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Learning a musical instrument teaches children discipline. They must practice regularly to improve.",
+   "passage2": "Children who play instruments also learn to work with others, especially when they play in bands or orchestras.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Learning an instrument is too difficult for children.",
+    "Learning an instrument can teach children useful skills.",
+    "Children should practice music only alone.",
+    "Bands are more important than practice."
+   ],
+   "answer": 1,
+   "explanation": "Один называет дисциплину, другой — умение работать вместе: оба видят полезные навыки (B). «Только в одиночку» противоречит Text 2; сравнения важности нет; трудность не утверждается."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Electric cars are better for the environment because they produce no exhaust.",
+   "passage2": "Electric cars produce no exhaust, but the electricity that charges them sometimes comes from power plants that burn coal.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By arguing that electric cars produce more exhaust than gas cars",
+    "By agreeing completely and adding nothing",
+    "By claiming that coal does not affect the environment",
+    "By noting that the environmental benefit depends partly on how the electricity is produced"
+   ],
+   "answer": 3,
+   "explanation": "Text 2 соглашается насчёт выхлопа, но уточняет, что польза зависит от источника электричества (D). Больше выхлопа у электромобилей Text 2 не утверждает; он добавляет оговорку; о безвредности угля не говорит."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "School uniforms help students focus on learning instead of clothes.",
+   "passage2": "Uniforms may reduce distractions, but they also take away a way for students to express themselves.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By agreeing that uniforms have no disadvantages",
+    "By accepting that uniforms may reduce distractions but pointing out a drawback",
+    "By arguing that uniforms increase distractions",
+    "By claiming that clothes are unrelated to self-expression"
+   ],
+   "answer": 1,
+   "explanation": "«may reduce distractions» — частичное согласие, «but» — недостаток (B). Рост отвлечения и отсутствие связи одежды с самовыражением не утверждаются; недостаток прямо назван."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Gardens in cities give people fresh vegetables that they might not be able to buy nearby.",
+   "passage2": "Community gardens also bring neighbors together. People who garden side by side often become friends.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Neighbors rarely talk to one another.",
+    "Fresh vegetables are easy to buy in every city.",
+    "City gardens can benefit the people who use them.",
+    "City gardens are too expensive to maintain."
+   ],
+   "answer": 2,
+   "explanation": "Свежие овощи и дружба соседей — оба автора видят пользу садов (C). О цене, редком общении и доступности овощей авторы такого не говорят — Text 1 даже утверждает обратное."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Video games can improve problem-solving skills, since many games require players to solve puzzles.",
+   "passage2": "Some video games build problem-solving skills, but others involve little thinking at all.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to Text 1's claim about video games?",
+   "choices": [
+    "By agreeing that every video game improves problem solving",
+    "By suggesting that the claim is true only for certain games",
+    "By arguing that no video game requires thinking",
+    "By claiming that puzzles harm problem-solving skills"
+   ],
+   "answer": 1,
+   "explanation": "Text 2 уточняет: верно для одних игр, не для всех (B). «Никакая игра» и вред головоломок не утверждаются; «каждая игра» противоречит Text 2."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Early birds get more done. People who wake up early have quiet time to plan their day.",
+   "passage2": "Not everyone works best in the morning. Some people think more clearly late at night.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view in Text 1?",
+   "choices": [
+    "By arguing that mornings are always noisy",
+    "By claiming that planning is unimportant",
+    "By pointing out that the best time to work differs from person to person",
+    "By agreeing that everyone should wake up early"
+   ],
+   "answer": 2,
+   "explanation": "Text 2 возражает: кому-то лучше думается ночью — время зависит от человека (C). Согласие со всеми ранними подъёмами противоречит Text 2; о шуме и неважности планирования он не говорит."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Public libraries should stay open later in the evening so that people who work during the day can use them.",
+   "passage2": "Longer hours would help working people, but libraries would need more staff, which costs money.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the proposal in Text 1?",
+   "choices": [
+    "By rejecting the idea that libraries need staff",
+    "By agreeing that it would help but noting a cost",
+    "By arguing that working people do not use libraries",
+    "By claiming that libraries already stay open all night"
+   ],
+   "answer": 1,
+   "explanation": "«would help» — согласие, «but… costs money» — оговорка (B). Остальные утверждения в Text 2 отсутствуют или противоречат ему."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Dogs make the best pets because they are loyal and friendly.",
+   "passage2": "Cats can be just as affectionate as dogs, and they need less space and attention.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By arguing that dogs are unfriendly",
+    "By claiming that cats need more attention than dogs",
+    "By disagreeing that dogs are clearly the best pets",
+    "By agreeing that dogs are the best pets"
+   ],
+   "answer": 2,
+   "explanation": "Text 2 оспаривает превосходство собак, приводя достоинства кошек (C). Согласия нет; что собаки недружелюбны, не сказано; D противоположно Text 2."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Walking to school is healthy for children and good for the environment.",
+   "passage2": "Walking to school is a great habit, but children need safe sidewalks and crosswalks along their routes.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Children should never walk to school.",
+    "Sidewalks are bad for the environment.",
+    "Driving to school is healthier than walking.",
+    "Walking to school can be a good habit for children."
+   ],
+   "answer": 3,
+   "explanation": "Оба называют ходьбу полезной привычкой (D). Запрет, вред тротуаров и польза езды не утверждаются."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Learning history helps people understand why the world is the way it is today.",
+   "passage2": "History also helps people avoid repeating past mistakes by showing how earlier decisions turned out.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "The world has not changed over time.",
+    "Studying history has practical value.",
+    "History is less useful than science.",
+    "People always repeat past mistakes."
+   ],
+   "answer": 1,
+   "explanation": "Понимание настоящего и уроки прошлого — оба видят практическую пользу истории (B). Сравнения с наукой нет; «всегда повторяют» противоречит идее Text 2; D абсурдно."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Ten minutes of exercise each morning can make people feel more energetic all day.",
+   "passage2": "Short workouts are helpful, but people also need enough sleep to feel energetic.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By arguing that exercise makes people tired",
+    "By claiming that sleep is unimportant",
+    "By rejecting the idea that energy matters",
+    "By agreeing that short workouts help but adding that sleep also matters"
+   ],
+   "answer": 3,
+   "explanation": "«helpful» — согласие, «but» — добавляет сон как фактор (D). Утомление от упражнений и неважность сна или энергии Text 2 не утверждает."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Many historians credit the printing press with sparking the Protestant Reformation. Pamphlets criticizing the church could be printed in large numbers and spread quickly, reaching readers who would never have encountered such ideas otherwise.",
+   "passage2": "The printing press certainly helped spread reformist ideas, but it did not create them. Calls for church reform had circulated for over a century before printing, and those ideas gained followers because of widespread frustration with church practices.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim that the printing press sparked the Reformation?",
+   "choices": [
+    "By agreeing that reform ideas did not exist before printing",
+    "By claiming that pamphlets were rarely read",
+    "By arguing that printing helped spread reformist ideas but that the movement's causes existed earlier",
+    "By arguing that the printing press slowed the spread of reformist ideas"
+   ],
+   "answer": 2,
+   "explanation": "Text 2 признаёт роль печати в распространении, но причины видит в более раннем недовольстве (C). Замедление и редкое чтение памфлетов не утверждаются; C прямо противоречит Text 2."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers found that people who spent two hours a week in nature reported better health and well-being than those who spent less time. This suggests that time outdoors directly improves health.",
+   "passage2": "Studies linking time in nature to health often cannot separate cause from effect. Healthier people may simply be more able to go hiking or visit parks in the first place.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion in Text 1?",
+   "choices": [
+    "By cautioning that the link might reflect healthier people spending more time outdoors",
+    "By arguing that time in nature harms health",
+    "By agreeing that time outdoors directly improves health",
+    "By claiming that the researchers measured the wrong number of hours"
+   ],
+   "answer": 0,
+   "explanation": "Text 2 указывает на возможную обратную причинность (A). Вреда природы, согласия и претензий к числу часов в Text 2 нет."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The novelist's decision to tell the story through letters makes the characters feel intimate and real. Readers see each character's private thoughts in his or her own words.",
+   "passage2": "The letters create intimacy, but they also limit the story. Because readers learn only what characters choose to write, important events happen offstage and are reported secondhand.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to Text 1's view of the novel's structure?",
+   "choices": [
+    "By agreeing that the structure has no drawbacks",
+    "By acknowledging the intimacy the letters create while pointing out a limitation",
+    "By arguing that the letters make the characters feel distant",
+    "By claiming that the novel contains no letters"
+   ],
+   "answer": 1,
+   "explanation": "«create intimacy» — согласие, «but they also limit» — ограничение (B). Отчуждения, отсутствия писем и полного одобрения в Text 2 нет."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Bilingual children sometimes mix two languages in a single sentence. Some parents worry that this shows confusion and will slow the child's language development.",
+   "passage2": "Linguists who study bilingual children find that mixing languages follows rules: children switch languages at predictable points in a sentence. This suggests that mixing reflects skill with both languages rather than confusion.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the parents' worry described in Text 1?",
+   "choices": [
+    "By arguing that bilingual children should speak only one language",
+    "By claiming that children never mix languages",
+    "By suggesting that the worry is unfounded because language mixing follows rules",
+    "By agreeing that mixing languages shows confusion"
+   ],
+   "answer": 2,
+   "explanation": "По Text 2 смешение подчиняется правилам и говорит о навыке, а не о путанице — тревога напрасна (C). Согласия, совета говорить на одном языке и отрицания смешения нет."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Rewilding projects that reintroduce large predators, such as wolves, can restore balance to ecosystems by controlling populations of grazing animals.",
+   "passage2": "Reintroducing predators can restore ecosystems, but the results vary. In some regions, wolves have had little effect on grazers because other factors, such as human hunting, already limit their numbers.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By arguing that wolves always harm ecosystems",
+    "By claiming that grazing animals do not affect ecosystems",
+    "By agreeing that predators produce the same results everywhere",
+    "By noting that the effect of predators depends on local conditions"
+   ],
+   "answer": 3,
+   "explanation": "Text 2 согласен, что это «can restore», но подчёркивает зависимость от условий (D). Вреда «всегда», неважности травоядных и одинаковости результатов Text 2 не утверждает."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The architect's new museum is a triumph. Its glass walls flood the galleries with natural light, making the artworks glow.",
+   "passage2": "The museum's glass walls are beautiful, but direct sunlight can fade paintings and textiles. Curators have had to install blinds, which partly defeat the building's design.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to Text 1's praise of the museum's glass walls?",
+   "choices": [
+    "By agreeing that the walls have no drawbacks",
+    "By acknowledging their beauty while raising a practical problem they cause",
+    "By arguing that the walls are ugly",
+    "By claiming that sunlight improves paintings"
+   ],
+   "answer": 1,
+   "explanation": "«beautiful» — признание, «but… fade paintings» — практическая проблема (B). Уродства, пользы солнца для картин и «без недостатков» в Text 2 нет."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Standardized tests give colleges a common measure for comparing students from very different schools.",
+   "passage2": "Standardized tests offer a common measure, but scores also reflect access to test preparation, which wealthier students are more likely to have.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Standardized test scores are unaffected by test preparation.",
+    "Colleges should stop considering grades.",
+    "Wealthier students always earn lower scores.",
+    "Standardized tests provide a common basis for comparing students."
+   ],
+   "answer": 3,
+   "explanation": "Оба говорят, что тесты дают общую мерку (D). B противоречит Text 2; об отказе от оценок и «богатые хуже» не говорит никто."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some economists argue that cities should eliminate rent control, since limiting rents discourages developers from building new housing.",
+   "passage2": "Rent control may discourage some new construction, but eliminating it suddenly could force long-time residents out of neighborhoods where they have lived for decades.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the argument described in Text 1?",
+   "choices": [
+    "By agreeing that rent control should be eliminated immediately",
+    "By claiming that long-time residents prefer to move",
+    "By accepting a possible drawback of rent control while warning about a harm of eliminating it",
+    "By arguing that rent control encourages construction"
+   ],
+   "answer": 2,
+   "explanation": "«may discourage» — признание довода, затем вред от внезапной отмены (C). Стимулирования стройки, согласия на немедленную отмену и желания жильцов уехать нет."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The discovery of water ice on the Moon's poles makes a permanent lunar base practical. Astronauts could use the ice for drinking water and to produce fuel.",
+   "passage2": "Lunar ice is promising, but extracting it will be difficult. The ice sits in permanently shadowed craters where temperatures fall below −200 °C, and no machine has yet mined it.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By suggesting that using the ice will be harder than Text 1 implies",
+    "By arguing that there is no ice on the Moon",
+    "By claiming that astronauts do not need water",
+    "By agreeing that extracting the ice will be easy"
+   ],
+   "answer": 0,
+   "explanation": "«promising, but… difficult» — Text 2 считает, что всё сложнее, чем звучит в Text 1 (A). Наличие льда Text 2 признаёт; о ненужности воды и лёгкости добычи не говорит."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Social media helps people stay connected with friends and family who live far away.",
+   "passage2": "Social media can keep distant friends in touch, but it can also replace face-to-face conversations with people nearby.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "People should stop using social media entirely.",
+    "Face-to-face conversations are always unpleasant.",
+    "Social media can help people stay in touch with distant friends.",
+    "Social media has no effect on relationships."
+   ],
+   "answer": 2,
+   "explanation": "Оба признают пользу для связи с далёкими друзьями (C). Отсутствие влияния, полный отказ и неприятность живого общения не утверждаются."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The poet's spare, plain language makes her poems accessible to readers who might find more ornate poetry intimidating.",
+   "passage2": "The poet's plain language is deceptive: beneath simple words lie layers of allusion that reward careful rereading.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to Text 1's description of the poet's language?",
+   "choices": [
+    "By suggesting that the poems are more complex than their plain language might indicate",
+    "By arguing that the poet uses ornate language",
+    "By claiming that the poems are not worth rereading",
+    "By agreeing that the poems contain no allusions"
+   ],
+   "answer": 0,
+   "explanation": "Text 2: простота обманчива, за ней аллюзии — стихи сложнее, чем кажутся (A). Пышного языка, ненужности перечитывать и отсутствия аллюзий Text 2 не утверждает."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Remote work increases productivity. Without long commutes and office distractions, employees can focus on their tasks.",
+   "passage2": "Productivity at home varies widely. Workers with quiet home offices often thrive, but those caring for children or sharing small apartments may face more distractions than in an office.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By agreeing that remote work increases everyone's productivity",
+    "By claiming that offices have no distractions",
+    "By arguing that commutes improve productivity",
+    "By arguing that the effect of remote work on productivity depends on workers' home situations"
+   ],
+   "answer": 3,
+   "explanation": "Text 2: эффект зависит от домашних условий (D). Согласия «для всех», отсутствия отвлечений в офисе и пользы поездок нет."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The town should build a new parking garage downtown to help local shops attract customers who drive.",
+   "passage2": "A garage might help some shops, but a more frequent bus service would bring customers without adding traffic.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the proposal in Text 1?",
+   "choices": [
+    "By claiming that buses increase traffic",
+    "By suggesting an alternative that could achieve a similar goal",
+    "By arguing that local shops do not need customers",
+    "By agreeing that a garage is the only solution"
+   ],
+   "answer": 1,
+   "explanation": "Text 2 предлагает альтернативу — автобусы — для той же цели (B). Ненужности покупателей, «единственного решения» и роста пробок от автобусов в Text 2 нет."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Ancient Roman concrete was remarkably durable; many Roman structures still stand after two thousand years.",
+   "passage2": "Roman concrete was durable, but modern concrete is stronger under heavy loads. Roman builders could not have constructed today's skyscrapers.",
+   "stem": "Based on the texts, both authors would most likely agree with which statement?",
+   "choices": [
+    "Roman structures have all collapsed.",
+    "Modern concrete lasts longer than Roman concrete.",
+    "Roman concrete was durable.",
+    "Roman concrete was stronger than modern concrete under heavy loads."
+   ],
+   "answer": 2,
+   "explanation": "Оба называют римский бетон долговечным (C). B противоречит Text 2; обрушение всех построек противоречит Text 1; сравнения долговечности нет."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Studying with background music helps students stay relaxed and focused.",
+   "passage2": "Instrumental music may help some students, but songs with lyrics often compete with reading for attention and lower comprehension.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By suggesting that the effect of music depends on the type of music",
+    "By agreeing that all music improves focus",
+    "By arguing that silence makes students anxious",
+    "By claiming that lyrics improve reading comprehension"
+   ],
+   "answer": 0,
+   "explanation": "Инструментальная — может помочь, со словами — мешает: эффект зависит от типа (A). «Любая музыка» и D противоречат Text 2; о тревоге в тишине нет."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some anthropologists argue that the spread of farming about 10,000 years ago was a clear improvement in human life, since it allowed people to produce more food and build permanent settlements.",
+   "passage2": "Skeletal remains from early farming villages tell a more complicated story. Compared with earlier hunter-gatherers, early farmers were often shorter, showed more signs of nutritional deficiency, and suffered more infectious disease, likely because they relied on a few crops and lived in crowded conditions.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the anthropologists' view described in Text 1?",
+   "choices": [
+    "By agreeing that farming improved every aspect of human life",
+    "By arguing that hunter-gatherers never built settlements",
+    "By claiming that early farmers produced less food than hunter-gatherers",
+    "By presenting evidence that early farming also brought significant costs to health"
+   ],
+   "answer": 3,
+   "explanation": "Скелеты показывают ухудшение здоровья — у земледелия были серьёзные издержки (D). «Улучшило всё» противоречит Text 2; о поселениях охотников и объёме еды Text 2 не говорит."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Critics have praised the director's decision to film the entire movie in a single continuous shot, arguing that it immerses viewers in the characters' experience.",
+   "passage2": "The single-shot technique is technically impressive, but it forces the story into real time. Moments that would benefit from a pause or a jump forward must instead be filled with walking and waiting, which drains some scenes of tension.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the critics' praise described in Text 1?",
+   "choices": [
+    "By claiming that viewers prefer movies with many cuts",
+    "By granting that the technique is impressive while arguing that it weakens parts of the story",
+    "By arguing that the movie was not filmed in a single shot",
+    "By agreeing that the technique has no effect on pacing"
+   ],
+   "answer": 1,
+   "explanation": "Text 2 признаёт техническое достижение, но считает, что реальное время ослабляет сцены (B). Отрицания съёмки одним кадром, «нет влияния» и предпочтений зрителей нет."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Many economists have assumed that people save too little for retirement because they lack information about how much they will need.",
+   "passage2": "Studies show that giving people detailed retirement information has only small effects on saving. In contrast, automatically enrolling workers in savings plans, while letting them opt out, sharply increases participation. This suggests that inertia, not a lack of information, is the main obstacle.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the assumption described in Text 1?",
+   "choices": [
+    "By arguing that inertia matters more than a lack of information",
+    "By agreeing that information is the main obstacle to saving",
+    "By claiming that automatic enrollment reduces saving",
+    "By arguing that people save too much for retirement"
+   ],
+   "answer": 0,
+   "explanation": "Информирование мало помогает, автозапись — сильно: главное препятствие — инерция (A). B противоречит Text 2; автозапись, наоборот, повышает участие; о чрезмерных сбережениях нет."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some beekeepers argue that the decline of honeybee colonies in recent decades is caused mainly by a single parasite, the varroa mite, which weakens bees and spreads viruses.",
+   "passage2": "Varroa mites are a serious threat, but researchers increasingly see colony losses as the result of several stresses acting together: mites, pesticides, poor nutrition from monoculture farming, and harsh winters. Colonies exposed to several of these at once are far more likely to collapse than those facing any one alone.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view in Text 1?",
+   "choices": [
+    "By arguing that colony losses result from several interacting stresses rather than one main cause",
+    "By claiming that varroa mites pose no threat to honeybees",
+    "By agreeing that varroa mites alone explain colony losses",
+    "By arguing that pesticides have no effect on bees"
+   ],
+   "answer": 0,
+   "explanation": "Text 2: клещи опасны, но потери — от сочетания факторов (A). Безопасность клещей и безвредность пестицидов Text 2 не утверждает; «только клещи» противоречит ему."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The historian argues that the medieval manuscript was copied by a single scribe, pointing to the consistent shape of the letters throughout the text.",
+   "passage2": "Consistent letter shapes do not prove a single scribe. Monastic workshops trained their scribes to imitate a house style so closely that different hands are often indistinguishable. Analysis of ink composition, which varies between batches, may offer stronger evidence.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the historian's argument in Text 1?",
+   "choices": [
+    "By agreeing that letter shapes prove a single scribe",
+    "By arguing that the manuscript was printed rather than copied",
+    "By claiming that ink composition never varies",
+    "By suggesting that the historian's evidence is not conclusive and proposing another kind of evidence"
+   ],
+   "answer": 3,
+   "explanation": "Text 2: единообразие почерка не доказывает одного писца, предлагает анализ чернил (D). Согласия, печати и неизменности чернил в Text 2 нет — состав, наоборот, меняется."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Studies of birdsong in cities show that many birds sing at higher pitches than their rural relatives. Some researchers view this as a rapid evolutionary adaptation to urban noise.",
+   "passage2": "Higher-pitched urban songs need not be an evolutionary change. Individual birds can adjust their songs within a single season in response to noise, a flexible behavior that requires no genetic change.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view of some researchers described in Text 1?",
+   "choices": [
+    "By agreeing that the change must be genetic",
+    "By arguing that rural areas are noisier than cities",
+    "By offering an alternative explanation that does not involve evolution",
+    "By denying that urban birds sing at higher pitches"
+   ],
+   "answer": 2,
+   "explanation": "Text 2 объясняет сдвиг гибким поведением особей, без генетики (C). Факт более высокого пения Text 2 не отрицает; генетическую природу оспаривает; о шуме в сельской местности не говорит."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The novelist's final book abandons the realism of her earlier work for a dreamlike, fragmented style. Some readers see this as a decline, a sign that she had lost control of her craft.",
+   "passage2": "The fragmented style of the final book is deliberate. Her letters from the period describe careful revisions intended to mirror the disorientation of her narrator, who is losing her memory.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the readers' view described in Text 1?",
+   "choices": [
+    "By presenting evidence that the style was a deliberate choice rather than a loss of control",
+    "By agreeing that the final book shows a decline in skill",
+    "By arguing that the final book is written in a realistic style",
+    "By claiming that the novelist never revised her work"
+   ],
+   "answer": 0,
+   "explanation": "Письма о тщательных правках показывают намеренность стиля (A). Согласия с «упадком», реализма и отсутствия правок нет."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Supporters of a four-day work week point to trials in which companies reported higher productivity and happier employees.",
+   "passage2": "Many of these trials involved companies that volunteered to participate, likely because their leaders expected success. Such companies may differ from typical firms, so the results may not apply broadly.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the evidence described in Text 1?",
+   "choices": [
+    "By arguing that the trials showed lower productivity",
+    "By agreeing that all companies would benefit from a four-day week",
+    "By claiming that employees were unhappy during the trials",
+    "By questioning whether the results can be generalized because the participating companies were self-selected"
+   ],
+   "answer": 3,
+   "explanation": "Text 2: компании вызвались сами, поэтому результаты могут не обобщаться (D). Снижения производительности и недовольства сотрудников Text 2 не утверждает; «все выиграют» противоречит ему."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some linguists claim that the language people speak strongly shapes how they think. Speakers of languages without words for certain colors, for example, supposedly cannot distinguish those colors.",
+   "passage2": "Experiments show that speakers of languages with fewer color words can still tell colors apart; they may be somewhat slower or less consistent in naming them. Language seems to influence thought in subtle ways rather than setting strict limits on it.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the linguists' claim described in Text 1?",
+   "choices": [
+    "By arguing that language influences thought only in subtle ways rather than limiting perception",
+    "By agreeing that people cannot distinguish colors they have no words for",
+    "By arguing that language has no influence on thought at all",
+    "By claiming that all languages have the same color words"
+   ],
+   "answer": 0,
+   "explanation": "Text 2: влияние есть, но тонкое, без жёстких границ (A). B противоречит экспериментам; C слишком сильно — влияние признаётся; о равенстве цветовых слов нет."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Archaeologists have long believed that Stonehenge's large stones were dragged from nearby quarries, while its smaller bluestones came from Wales, 200 kilometers away.",
+   "passage2": "Recent chemical analysis supports the Welsh origin of the bluestones and has even pinpointed specific outcrops. It also suggests that one large stone, long thought local, came from much farther away, in northern Scotland.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the long-held belief described in Text 1?",
+   "choices": [
+    "By confirming part of the belief while challenging another part",
+    "By rejecting every part of the belief",
+    "By agreeing with the belief in every respect",
+    "By arguing that the bluestones came from nearby quarries"
+   ],
+   "answer": 0,
+   "explanation": "Text 2 подтверждает валлийское происхождение голубых камней, но опровергает «местность» одного большого (A). Полного отказа и полного согласия нет; D противоречит Text 2."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "City officials argue that converting traffic lanes into bike lanes will hurt local businesses, since customers who drive will find it harder to reach shops.",
+   "passage2": "In several cities, sales at shops along new bike lanes rose after the lanes were installed. Shop owners often overestimate how many of their customers arrive by car; cyclists and pedestrians tend to visit more often, even if they spend less per visit.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the officials' argument in Text 1?",
+   "choices": [
+    "By citing evidence that bike lanes have not hurt, and have sometimes helped, nearby businesses",
+    "By agreeing that bike lanes always hurt businesses",
+    "By arguing that cyclists never shop at local stores",
+    "By claiming that most customers arrive by car"
+   ],
+   "answer": 0,
+   "explanation": "Продажи вдоль велодорожек росли — довод чиновников не подтверждается (A). B противоречит; велосипедисты, наоборот, приходят чаще; D — то, что Text 2 называет переоценкой."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Ancient Greek theaters are often said to have near-perfect acoustics: a whisper on stage, according to legend, can be heard in the back rows.",
+   "passage2": "Measurements at one well-preserved theater found that loud speech carries clearly to the top rows, but whispers do not. The theater's acoustics are excellent for the actors' trained, projected voices, though not quite as miraculous as legend suggests.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
+   "choices": [
+    "By agreeing that whispers could be heard everywhere",
+    "By claiming that actors in ancient Greece did not project their voices",
+    "By agreeing that the acoustics were very good but disputing that a whisper could be heard in the back rows",
+    "By arguing that the theaters had poor acoustics"
+   ],
+   "answer": 2,
+   "explanation": "Text 2: акустика отличная для поставленного голоса, но шёпот не долетает (C). «Плохая акустика» и «шёпот слышен» противоречат измерениям; о том, что актёры не форсировали голос, нет."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some economists argue that raising taxes on sugary drinks is an effective way to reduce obesity, since higher prices lead people to buy fewer such drinks.",
+   "passage2": "Sugary drink taxes do reduce purchases, but evidence that they reduce obesity is weaker. Some consumers may replace the taxed drinks with other high-calorie foods, offsetting part of the benefit.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the economists' argument in Text 1?",
+   "choices": [
+    "By accepting that the taxes reduce purchases while questioning whether they reduce obesity",
+    "By denying that the taxes reduce purchases",
+    "By agreeing that the taxes clearly reduce obesity",
+    "By arguing that sugary drinks contain few calories"
+   ],
+   "answer": 0,
+   "explanation": "Text 2 соглашается с падением покупок, но сомневается в эффекте на ожирение (A). Отрицания падения покупок нет; «явно снижают» противоречит; о калорийности напитков нет."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The biographer portrays the inventor as a lone genius who developed his ideas in isolation.",
+   "passage2": "The inventor's notebooks are filled with references to conversations with colleagues, letters from other experimenters, and borrowed designs. His achievements look less like solitary inspiration than the product of a busy network of collaborators.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the biographer's portrayal in Text 1?",
+   "choices": [
+    "By arguing that the inventor's notebooks were lost",
+    "By claiming that the inventor had no achievements",
+    "By using the inventor's notebooks to show that his work depended on collaboration",
+    "By agreeing that the inventor worked entirely alone"
+   ],
+   "answer": 2,
+   "explanation": "Записные книжки показывают сеть соавторов — портрет одинокого гения неточен (C). Согласия, утраты тетрадей и отрицания достижений нет."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "National parks should limit the number of daily visitors. Crowds trample vegetation, erode trails, and disturb wildlife in fragile landscapes.",
+   "passage2": "Visitor limits can protect landscapes, but they risk making parks accessible mainly to people who can plan far ahead or travel on short notice. Timed-entry systems with some spots reserved for same-day visitors could reduce crowding while keeping access fair.",
+   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the proposal in Text 1?",
+   "choices": [
+    "By rejecting the idea that parks can become overcrowded",
+    "By arguing that visitor limits harm landscapes",
+    "By claiming that same-day visitors should be banned",
+    "By supporting the goal of limiting crowds while proposing a way to address a fairness concern"
+   ],
+   "answer": 3,
+   "explanation": "Text 2 поддерживает цель, но предлагает справедливую систему с местами на день посещения (D). Отрицания переполненности и вреда ограничений нет; запрет посетителей того же дня противоположен предложению."
+  }
+ ]
+}

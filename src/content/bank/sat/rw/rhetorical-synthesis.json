@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "expression-of-ideas",
+  "skill": "rhetorical-synthesis",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Great Barrier Reef is located off the coast of Australia.\n• It is the largest coral reef system in the world.\n• It is home to thousands of species of fish.",
+   "stem": "The student wants to emphasize the size of the Great Barrier Reef. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Great Barrier Reef is home to thousands of species of fish.",
+    "Many fish live in coral reefs off the coast of Australia.",
+    "Australia has a long coastline.",
+    "The Great Barrier Reef, off the coast of Australia, is the largest coral reef system in the world."
+   ],
+   "answer": 3,
+   "explanation": "Цель — размер: «largest coral reef system in the world» (D). Число видов и длина побережья не о размере рифа."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Marie Curie was born in Poland in 1867.\n• She studied radioactivity.\n• She won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.",
+   "stem": "The student wants to highlight Marie Curie's scientific achievements. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Marie Curie was born in Poland in 1867.",
+    "Marie Curie was born in the nineteenth century.",
+    "Poland was Marie Curie's birthplace.",
+    "Marie Curie, who studied radioactivity, won Nobel Prizes in both physics and chemistry."
+   ],
+   "answer": 3,
+   "explanation": "Достижения — две Нобелевские премии в разных науках (D). Место и год рождения — биография, а не достижения."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Bamboo is a type of grass.\n• Some species of bamboo can grow almost a meter in a single day.\n• Bamboo is used to build houses and furniture.",
+   "stem": "The student wants to describe how quickly bamboo can grow. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "People use bamboo to make furniture.",
+    "Bamboo is a type of grass that people use in building.",
+    "Some species of bamboo can grow almost a meter in a single day.",
+    "Bamboo, a type of grass, is used to build houses."
+   ],
+   "answer": 2,
+   "explanation": "Скорость роста — «almost a meter in a single day» (C). Остальные варианты о применении и классификации, не о скорости."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Sahara is the largest hot desert in the world.\n• It covers much of North Africa.\n• Temperatures there can exceed 50 °C.",
+   "stem": "The student wants to explain where the Sahara is located. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Sahara covers much of North Africa.",
+    "The Sahara is the largest hot desert in the world.",
+    "Temperatures in the Sahara can exceed 50 °C.",
+    "The Sahara is very hot."
+   ],
+   "answer": 0,
+   "explanation": "Расположение — «much of North Africa» (A). Размер и температура не говорят, где пустыня."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The town library opened a new reading room.\n• The reading room has 40 comfortable chairs.\n• It is open from 8 a.m. to 9 p.m. every day.",
+   "stem": "The student wants to tell readers when they can visit the new reading room. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The library's new reading room is open from 8 a.m. to 9 p.m. every day.",
+    "The library's new reading room has 40 comfortable chairs.",
+    "The town library recently opened a new reading room.",
+    "Comfortable chairs fill the new reading room."
+   ],
+   "answer": 0,
+   "explanation": "Когда можно прийти — часы работы (A). Число кресел и сам факт открытия не отвечают на «когда»."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Penguins are birds that cannot fly.\n• Emperor penguins can dive more than 500 meters deep.\n• They live in Antarctica.",
+   "stem": "The student wants to emphasize the diving ability of emperor penguins. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Emperor penguins live in Antarctica.",
+    "Penguins are birds that cannot fly.",
+    "Emperor penguins are birds that live in Antarctica.",
+    "Emperor penguins can dive more than 500 meters deep."
+   ],
+   "answer": 3,
+   "explanation": "Ныряние — «more than 500 meters deep» (D). Место обитания и неспособность летать не о нырянии."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Hiking is a popular outdoor activity.\n• It strengthens leg muscles.\n• It can improve heart health.",
+   "stem": "The student wants to explain the health benefits of hiking. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Hiking can strengthen leg muscles and improve heart health.",
+    "Hiking is a popular outdoor activity.",
+    "Many people enjoy hiking outdoors.",
+    "Hiking takes place outdoors."
+   ],
+   "answer": 0,
+   "explanation": "Польза для здоровья — мышцы и сердце (A). Популярность и «на улице» — не польза для здоровья."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Eiffel Tower is in Paris, France.\n• It was completed in 1889.\n• It is about 330 meters tall.",
+   "stem": "The student wants to state when the Eiffel Tower was completed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Eiffel Tower is about 330 meters tall.",
+    "The Eiffel Tower stands in Paris, France.",
+    "The Eiffel Tower is a tall structure in France.",
+    "The Eiffel Tower in Paris was completed in 1889."
+   ],
+   "answer": 3,
+   "explanation": "Год завершения — 1889 (D). Высота и местоположение не отвечают на вопрос «когда»."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Honeybees live in colonies.\n• A colony can contain up to 60,000 bees.\n• Bees in a colony have different jobs, such as gathering food or caring for young.",
+   "stem": "The student wants to describe how work is divided in a honeybee colony. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Bees in a honeybee colony have different jobs, such as gathering food or caring for young.",
+    "A honeybee colony can contain up to 60,000 bees.",
+    "Honeybees live in colonies.",
+    "Honeybee colonies can be very large."
+   ],
+   "answer": 0,
+   "explanation": "Разделение труда — «different jobs» (A). Размер колонии и сам факт жизни колониями не о распределении работы."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Recycling one aluminum can saves energy.\n• Aluminum can be recycled again and again.\n• Many cities collect cans for recycling.",
+   "stem": "The student wants to explain why aluminum is well suited to recycling. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Many cities collect cans for recycling.",
+    "Cities often run recycling programs.",
+    "Aluminum cans are collected in many cities.",
+    "Aluminum can be recycled again and again, and recycling it saves energy."
+   ],
+   "answer": 3,
+   "explanation": "Почему алюминий подходит — перерабатывается многократно и экономит энергию (D). Сбор банок городами не объясняет свойств алюминия."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Jupiter is the largest planet in our solar system.\n• It is made mostly of hydrogen and helium.\n• It has a giant storm called the Great Red Spot.",
+   "stem": "The student wants to describe what Jupiter is made of. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Jupiter is a giant planet with a large storm.",
+    "Jupiter is made mostly of hydrogen and helium.",
+    "Jupiter is the largest planet in our solar system.",
+    "Jupiter has a giant storm called the Great Red Spot."
+   ],
+   "answer": 1,
+   "explanation": "Состав — водород и гелий (B). Размер и шторм не о составе."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Maya Angelou was an American writer.\n• She wrote the memoir I Know Why the Caged Bird Sings.\n• The memoir was published in 1969.",
+   "stem": "The student wants to identify the title of Maya Angelou's memoir. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Maya Angelou published a memoir in 1969.",
+    "An American writer published a memoir in 1969.",
+    "Maya Angelou wrote the memoir I Know Why the Caged Bird Sings.",
+    "Maya Angelou was an American writer."
+   ],
+   "answer": 2,
+   "explanation": "Название — «I Know Why the Caged Bird Sings» (C). В остальных вариантах названия нет."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Owls are mostly active at night.\n• They have excellent hearing.\n• Some owls can turn their heads about 270 degrees.",
+   "stem": "The student wants to emphasize how far some owls can turn their heads. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Owls are night birds with excellent hearing.",
+    "Some owls can turn their heads about 270 degrees.",
+    "Owls are mostly active at night.",
+    "Owls have excellent hearing."
+   ],
+   "answer": 1,
+   "explanation": "Поворот головы — 270 градусов (B). Ночная активность и слух не о повороте головы."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The school's robotics team built a robot that sorts recycling.\n• The team practiced for six months.\n• The robot won first place at a state competition.",
+   "stem": "The student wants to highlight the team's success. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The school's robotics team won first place at a state competition with a robot that sorts recycling.",
+    "The robotics team practiced for six months.",
+    "The robotics team built a robot.",
+    "The robot sorts recycling."
+   ],
+   "answer": 0,
+   "explanation": "Успех — первое место на соревновании штата (A). Тренировки и сам робот не говорят об успехе."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Rainforests cover about 6 percent of Earth's land.\n• They are home to more than half of the world's plant and animal species.",
+   "stem": "The student wants to emphasize the importance of rainforests to biodiversity. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Although rainforests cover only about 6 percent of Earth's land, they are home to more than half of the world's plant and animal species.",
+    "Rainforests cover about 6 percent of Earth's land.",
+    "Rainforests are found on Earth.",
+    "About 6 percent of Earth's land is rainforest."
+   ],
+   "answer": 0,
+   "explanation": "Значение для биоразнообразия — больше половины видов на малой площади (A). Только площадь не говорит о биоразнообразии."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Hubble Space Telescope was launched in 1990.\n• The James Webb Space Telescope was launched in 2021.\n• Hubble observes mainly visible and ultraviolet light.\n• Webb observes mainly infrared light, which allows it to see through clouds of dust.",
+   "stem": "The student wants to contrast the types of light the two telescopes observe. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Webb can see through clouds of dust.",
+    "Both Hubble and Webb are space telescopes.",
+    "While Hubble observes mainly visible and ultraviolet light, Webb observes mainly infrared light.",
+    "Hubble was launched in 1990, and Webb was launched in 2021."
+   ],
+   "answer": 2,
+   "explanation": "Нужен контраст по типу света — видимый и УФ против инфракрасного (C). Даты запуска не о свете; одна деталь о Webb не контраст; D подчёркивает сходство."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Octavia Butler was an American science fiction writer.\n• She published her first novel, Patternmaster, in 1976.\n• In 1995, she became the first science fiction writer to receive a MacArthur Fellowship.",
+   "stem": "The student wants to emphasize a historic recognition that Butler received. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Octavia Butler's first novel was published in the 1970s.",
+    "In 1995, Octavia Butler became the first science fiction writer to receive a MacArthur Fellowship.",
+    "Octavia Butler published her first novel, Patternmaster, in 1976.",
+    "Octavia Butler was an American science fiction writer."
+   ],
+   "answer": 1,
+   "explanation": "Историческое признание — первая среди фантастов стипендия Макартура (B). Первый роман и описание профессии — не признание."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Mangrove forests grow along tropical coastlines.\n• Their roots slow waves and trap sediment.\n• Coastal areas with mangroves often suffer less storm damage.\n• Many mangrove forests have been cleared for shrimp farms.",
+   "stem": "The student wants to explain how mangroves protect coastlines. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Mangrove roots slow waves and trap sediment, so coastal areas with mangroves often suffer less storm damage.",
+    "Many mangrove forests have been cleared for shrimp farms.",
+    "Mangrove forests grow along tropical coastlines.",
+    "Shrimp farms are often built along tropical coastlines."
+   ],
+   "answer": 0,
+   "explanation": "Механизм защиты — корни гасят волны и держат грунт (A). Вырубка под фермы и расположение лесов не объясняют защиту."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Silk Road was a network of trade routes.\n• It connected China with the Mediterranean world.\n• Silk, spices, and paper traveled along it.\n• Ideas and religions also spread along the routes.",
+   "stem": "The student wants to emphasize that the Silk Road spread more than goods. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Silk Road was a network of trade routes.",
+    "Along with goods such as silk, spices, and paper, ideas and religions spread along the Silk Road.",
+    "The Silk Road connected China with the Mediterranean world.",
+    "Silk, spices, and paper traveled along the Silk Road."
+   ],
+   "answer": 1,
+   "explanation": "«Больше, чем товары» — идеи и религии наряду с товарами (B). Остальные варианты говорят только о маршрутах или товарах."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• A study compared two groups of students.\n• One group took handwritten notes; the other typed notes on laptops.\n• The typing group recorded more words.\n• The handwriting group scored higher on questions about concepts.",
+   "stem": "The student wants to present the study's main finding. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The study compared two groups of students.",
+    "Students who typed recorded more words in the study.",
+    "In the study, students who took handwritten notes scored higher on conceptual questions than students who typed notes, even though the typists recorded more words.",
+    "In the study, one group of students typed notes on laptops."
+   ],
+   "answer": 2,
+   "explanation": "Главный вывод — рукописные конспекты дали лучшие результаты по понятиям (C). Описание групп и число слов без сравнения результатов — не вывод."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Atacama Desert in Chile is one of the driest places on Earth.\n• Some weather stations there have never recorded rain.\n• Astronomers build telescopes there because the dry, clear air is ideal for observing the sky.",
+   "stem": "The student wants to explain why the Atacama Desert attracts astronomers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Atacama Desert is one of the driest places on Earth.",
+    "Because its dry, clear air is ideal for observing the sky, the Atacama Desert attracts astronomers who build telescopes there.",
+    "Some weather stations in the Atacama Desert have never recorded rain.",
+    "The Atacama Desert is in Chile."
+   ],
+   "answer": 1,
+   "explanation": "Причина для астрономов — сухой прозрачный воздух (B). Сухость без связи с наблюдениями и расположение не объясняют, почему туда едут астрономы."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The ukulele originated in Hawaii in the 1880s.\n• It was adapted from small guitars brought by Portuguese immigrants.\n• It has four strings.",
+   "stem": "The student wants to explain the origins of the ukulele. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Portuguese immigrants came to Hawaii.",
+    "The ukulele is a small instrument with four strings.",
+    "The ukulele originated in Hawaii in the 1880s, adapted from small guitars brought by Portuguese immigrants.",
+    "The ukulele has four strings."
+   ],
+   "answer": 2,
+   "explanation": "Происхождение — Гавайи 1880-х, от португальских гитар (C). Число струн и сам факт иммиграции не объясняют происхождение инструмента."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Tardigrades are tiny animals less than a millimeter long.\n• They can survive being dried out for years.\n• They can survive temperatures near absolute zero.\n• They have survived exposure to outer space in experiments.",
+   "stem": "The student wants to emphasize how hardy tardigrades are. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Tardigrades can survive being dried out for years, temperatures near absolute zero, and even exposure to outer space.",
+    "Tardigrades are less than a millimeter long.",
+    "Tardigrades are tiny animals.",
+    "Scientists have studied tardigrades in experiments."
+   ],
+   "answer": 0,
+   "explanation": "Выносливость — три экстремальных условия вместе (A). Размер и сам факт экспериментов не о выносливости."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Wind turbines generate electricity from moving air.\n• Offshore turbines are built in the ocean.\n• Winds over the ocean are often stronger and steadier than winds over land.\n• Offshore turbines are more expensive to build.",
+   "stem": "The student wants to present an advantage of offshore wind turbines. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Offshore wind turbines are more expensive to build.",
+    "Wind turbines generate electricity from moving air.",
+    "Offshore turbines are built in the ocean.",
+    "Offshore wind turbines take advantage of ocean winds, which are often stronger and steadier than winds over land."
+   ],
+   "answer": 3,
+   "explanation": "Преимущество — более сильный и ровный ветер (D). Дороговизна — недостаток; общие сведения о турбинах не преимущество."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Frida Kahlo was a Mexican painter.\n• She painted many self-portraits.\n• Her work often drew on Mexican folk art.\n• She was injured in a bus accident at age eighteen.",
+   "stem": "The student wants to describe an influence on Kahlo's work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Frida Kahlo painted many self-portraits.",
+    "Frida Kahlo was injured in a bus accident at age eighteen.",
+    "Frida Kahlo was a Mexican painter.",
+    "Frida Kahlo's paintings often drew on Mexican folk art."
+   ],
+   "answer": 3,
+   "explanation": "Влияние — народное мексиканское искусство (D). Автопортреты — жанр, а не влияние; авария — факт биографии без связи с работами в заметках."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• A city planted 10,000 trees in neighborhoods with little shade.\n• Summer temperatures in those neighborhoods fell by an average of 1.5 °C over five years.\n• Residents reported spending more time outdoors.",
+   "stem": "The student wants to present the results of the tree-planting program. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Residents of the city's neighborhoods spend time outdoors.",
+    "After the city planted 10,000 trees in shadeless neighborhoods, summer temperatures there fell by 1.5 °C on average, and residents reported spending more time outdoors.",
+    "The city planted 10,000 trees.",
+    "The neighborhoods had little shade."
+   ],
+   "answer": 1,
+   "explanation": "Результаты — снижение температуры и больше времени на улице (B). Сама посадка и отсутствие тени — не результаты."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The novel Things Fall Apart was written by Chinua Achebe.\n• It was published in 1958.\n• It tells the story of Okonkwo, a leader in an Igbo village.\n• It has been translated into more than fifty languages.",
+   "stem": "The student wants to emphasize the novel's international reach. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Things Fall Apart was published in 1958.",
+    "Things Fall Apart tells the story of Okonkwo.",
+    "Things Fall Apart is set in an Igbo village.",
+    "Chinua Achebe's Things Fall Apart has been translated into more than fifty languages."
+   ],
+   "answer": 3,
+   "explanation": "Международный охват — переводы более чем на пятьдесят языков (D). Год, сюжет и место действия не о распространении в мире."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Electric cars produce no tailpipe emissions.\n• Their batteries require minerals such as lithium.\n• Mining lithium can harm local water supplies.",
+   "stem": "The student wants to present an environmental drawback associated with electric cars. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Although electric cars produce no tailpipe emissions, mining the lithium for their batteries can harm local water supplies.",
+    "Electric cars produce no tailpipe emissions.",
+    "Electric car batteries require minerals.",
+    "Lithium is a mineral."
+   ],
+   "answer": 0,
+   "explanation": "Недостаток для среды — вред воде от добычи лития (A). Отсутствие выхлопа — преимущество; минералы без последствий — не недостаток."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Inca built roads stretching about 40,000 kilometers.\n• They had no wheeled vehicles or horses.\n• Runners called chasquis carried messages along the roads in relays.",
+   "stem": "The student wants to explain how the Inca communicated across long distances. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Without wheeled vehicles or horses, the Inca relied on relay runners called chasquis to carry messages along their roads.",
+    "The Inca built roads stretching about 40,000 kilometers.",
+    "The Inca had no wheeled vehicles.",
+    "The Inca built a long road network."
+   ],
+   "answer": 0,
+   "explanation": "Способ связи — бегуны-часки по эстафете (A). Длина дорог и отсутствие транспорта сами по себе не объясняют связь."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Some frogs freeze solid in winter.\n• Their hearts stop beating while they are frozen.\n• In spring they thaw and resume normal activity.\n• Sugar in their cells helps prevent damage from ice.",
+   "stem": "The student wants to explain how some frogs survive being frozen. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Some frogs thaw in spring.",
+    "Sugar in their cells helps prevent ice damage, allowing some frogs to freeze solid in winter and resume normal activity in spring.",
+    "Some frogs freeze solid in winter.",
+    "The hearts of some frogs stop beating in winter."
+   ],
+   "answer": 1,
+   "explanation": "Как выживают — сахар защищает клетки от льда (B). Отдельные факты о заморозке, сердце и оттаивании не объясняют механизм."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Researchers studied lizards on two small Caribbean islands.\n• Two hurricanes struck the islands in 2017.\n• Lizards measured after the storms had larger toe pads and shorter back legs than lizards measured before.\n• Larger toe pads help lizards cling to branches in strong wind.",
+   "stem": "The student wants to present the study's findings to an audience unfamiliar with the research. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Larger toe pads help lizards cling to branches in strong wind.",
+    "The lizards measured after the storms had shorter back legs.",
+    "Researchers studied lizards on two islands after hurricanes in 2017.",
+    "After two hurricanes struck two Caribbean islands in 2017, researchers found that the surviving lizards had larger toe pads—which help them cling to branches in strong wind—and shorter back legs than lizards measured before the storms."
+   ],
+   "answer": 3,
+   "explanation": "Для незнакомой аудитории нужны и контекст (ураганы, острова), и находка (подушечки, ноги), и объяснение (D). Остальные дают только часть: объяснение без находки, одну деталь или контекст без результата."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Ada Lovelace worked with Charles Babbage on his Analytical Engine in the 1840s.\n• The machine was never built.\n• Lovelace wrote notes describing how it could calculate a sequence of numbers.\n• Many historians consider these notes the first published computer program.",
+   "stem": "The student wants to emphasize the significance of Lovelace's work despite the fact that the machine was never built. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Although Babbage's Analytical Engine was never built, Ada Lovelace's notes describing how it could calculate a sequence of numbers are considered by many historians to be the first published computer program.",
+    "Ada Lovelace worked with Charles Babbage in the 1840s.",
+    "Babbage's Analytical Engine was never built.",
+    "Lovelace wrote notes about Babbage's Analytical Engine."
+   ],
+   "answer": 0,
+   "explanation": "Нужно соединить «машину не построили» и значимость заметок как первой программы (A). Остальные варианты — отдельные факты без значимости."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Coral reefs cover less than 1 percent of the ocean floor.\n• They support about 25 percent of known marine species.\n• Rising ocean temperatures cause coral bleaching.\n• Bleached corals may die if high temperatures persist.",
+   "stem": "The student wants to argue that the threat to coral reefs is a threat to marine biodiversity. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Rising ocean temperatures cause coral bleaching, and bleached corals may die.",
+    "Coral reefs support many species, and they cover a small area.",
+    "Because coral reefs support about a quarter of known marine species, the bleaching caused by rising ocean temperatures threatens far more than the reefs themselves.",
+    "Coral reefs cover less than 1 percent of the ocean floor."
+   ],
+   "answer": 2,
+   "explanation": "Аргумент связывает угрозу рифам с четвертью морских видов (C). Только площадь, только обесцвечивание или только биоразнообразие без угрозы аргумент не строят."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Hokusai was a Japanese artist who lived from 1760 to 1849.\n• His print The Great Wave off Kanagawa was made around 1831.\n• European artists such as Claude Monet collected Japanese prints.\n• Japanese prints influenced the composition and use of color in some European paintings.",
+   "stem": "The student wants to explain Hokusai's influence beyond Japan. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Japanese prints like Hokusai's, which European artists such as Monet collected, influenced the composition and use of color in some European paintings.",
+    "Hokusai made The Great Wave off Kanagawa around 1831.",
+    "Hokusai was a Japanese artist who lived from 1760 to 1849.",
+    "Claude Monet was a European artist."
+   ],
+   "answer": 0,
+   "explanation": "Влияние за пределами Японии — европейцы собирали гравюры, и это отразилось на их живописи (A). Дата гравюры и биографические сведения не объясняют влияние."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• In 2009, a city removed cars from part of a busy street and created a pedestrian plaza.\n• Pedestrian injuries in the area fell by 35 percent.\n• Nearby shops reported higher sales.\n• Some drivers complained about longer travel times.",
+   "stem": "The student wants to make a balanced presentation of the plaza's effects. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Some drivers complained that the plaza made their trips longer.",
+    "After the plaza opened, pedestrian injuries fell by 35 percent and nearby shops reported higher sales, though some drivers complained about longer travel times.",
+    "After the plaza opened, pedestrian injuries fell by 35 percent.",
+    "Nearby shops reported higher sales after the plaza opened."
+   ],
+   "answer": 1,
+   "explanation": "Сбалансированно — и плюсы (безопасность, продажи), и минус (жалобы водителей) (B). Остальные дают только одну сторону."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Neanderthals lived in Europe and western Asia until about 40,000 years ago.\n• Many people today carry a small percentage of Neanderthal DNA.\n• This DNA shows that Neanderthals and modern humans had children together.",
+   "stem": "The student wants to explain what modern DNA reveals about Neanderthals and early modern humans. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Neanderthals lived in Europe and western Asia.",
+    "Neanderthals disappeared about 40,000 years ago.",
+    "Many people carry a small percentage of Neanderthal DNA.",
+    "The Neanderthal DNA that many people carry today shows that Neanderthals and modern humans had children together."
+   ],
+   "answer": 3,
+   "explanation": "Что показывает ДНК — общих детей двух групп (D). Ареал и время исчезновения не о ДНК; D называет факт без того, что он раскрывает."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Researchers placed cameras in 100 homes.\n• Families with a dog spent an average of 40 more minutes per day walking than families without a dog.\n• The study did not track the families' health.",
+   "stem": "The student wants to describe the study's finding while noting a limitation. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Families with a dog walked an average of 40 more minutes per day than families without one.",
+    "The study did not track the families' health.",
+    "Researchers placed cameras in 100 homes to study walking.",
+    "Families with a dog walked an average of 40 more minutes per day than families without one, though the study did not track whether this affected their health."
+   ],
+   "answer": 3,
+   "explanation": "И находка (+40 минут ходьбы), и ограничение (здоровье не отслеживалось) (D). Остальные дают либо только находку, либо только ограничение, либо метод."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Rosetta Stone was carved in 196 BCE.\n• It contains the same text in three scripts: hieroglyphic, Demotic, and Greek.\n• Scholars could already read ancient Greek.\n• Using the Greek text, Jean-François Champollion deciphered hieroglyphs in 1822.",
+   "stem": "The student wants to explain why the Rosetta Stone was key to deciphering hieroglyphs. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The Rosetta Stone was carved in 196 BCE.",
+    "The Rosetta Stone contains text in three scripts.",
+    "Champollion deciphered hieroglyphs in 1822.",
+    "Because the Rosetta Stone repeats the same text in hieroglyphs and in Greek, which scholars could already read, Champollion was able to use it to decipher hieroglyphs in 1822."
+   ],
+   "answer": 3,
+   "explanation": "Ключ — один текст на читаемом греческом и на иероглифах (D). Дата, число письменностей без объяснения и сам факт дешифровки не объясняют, почему камень стал ключом."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Some economists support a tax on carbon emissions.\n• They argue it would encourage companies to pollute less.\n• Critics worry that it would raise energy prices for low-income households.\n• Some proposals return the tax revenue to households as rebates.",
+   "stem": "The student wants to present a proposal that responds to critics' concerns. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Some economists argue that a carbon tax would encourage companies to pollute less.",
+    "Critics worry that a carbon tax would raise energy prices.",
+    "Some economists support taxing carbon emissions.",
+    "To address concerns that a carbon tax would raise energy costs for low-income households, some proposals would return the tax revenue to households as rebates."
+   ],
+   "answer": 3,
+   "explanation": "Предложение, отвечающее критикам, — возврат доходов семьям (D). Аргумент сторонников и сама критика без ответа цели не достигают."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Wangari Maathai founded the Green Belt Movement in Kenya in 1977.\n• The movement organized women to plant trees.\n• More than 30 million trees have been planted.\n• Maathai received the Nobel Peace Prize in 2004.",
+   "stem": "The student wants to emphasize the scale of the Green Belt Movement's work. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Wangari Maathai received the Nobel Peace Prize in 2004.",
+    "Wangari Maathai founded the Green Belt Movement in Kenya.",
+    "The Green Belt Movement organized women to plant trees.",
+    "The Green Belt Movement, founded by Wangari Maathai in 1977, has planted more than 30 million trees."
+   ],
+   "answer": 3,
+   "explanation": "Масштаб — более 30 миллионов деревьев (D). Премия, основание и способ работы не говорят о масштабе."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Glass frogs have translucent skin on their undersides.\n• Researchers wondered how the frogs hide their red blood.\n• While sleeping, the frogs store most of their red blood cells in their livers.\n• The liver is covered with a reflective layer.",
+   "stem": "The student wants to explain how glass frogs become more transparent while they sleep. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Researchers wondered how glass frogs hide their red blood.",
+    "The liver of a glass frog is covered with a reflective layer.",
+    "While glass frogs sleep, they store most of their red blood cells in their livers, which are covered with a reflective layer, making the frogs more transparent.",
+    "Glass frogs have translucent skin on their undersides."
+   ],
+   "answer": 2,
+   "explanation": "Механизм — кровь в печени под отражающим слоем (C). Кожа, вопрос учёных и слой без крови не объясняют, как лягушка становится прозрачнее."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• In the 1920s, Bessie Coleman became the first African American woman to earn a pilot's license.\n• Flight schools in the United States refused to admit her.\n• She learned French and earned her license in France in 1921.\n• She performed in air shows across the United States.",
+   "stem": "The student wants to emphasize the obstacles Coleman overcame to become a pilot. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Bessie Coleman became a pilot in the 1920s.",
+    "Bessie Coleman earned her pilot's license in 1921.",
+    "Refused by flight schools in the United States, Bessie Coleman learned French and earned her pilot's license in France in 1921.",
+    "Bessie Coleman performed in air shows across the United States."
+   ],
+   "answer": 2,
+   "explanation": "Препятствия — отказы школ в США и путь через Францию (C). Авиашоу и даты без препятствий цель не раскрывают."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• A survey asked 2,000 adults in one city about their reading habits.\n• Thirty-eight percent said they read print books only.\n• Seven percent said they read digital books only.\n• Twenty-nine percent said they read both print and digital books.",
+   "stem": "The student wants to compare the popularity of print-only and digital-only reading. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "A survey asked 2,000 adults in one city about their reading habits.",
+    "Seven percent of adults in the survey read digital books only.",
+    "In the survey, 38 percent of adults read print books only, compared with just 7 percent who read digital books only.",
+    "In the survey, 29 percent of adults read both print and digital books."
+   ],
+   "answer": 2,
+   "explanation": "Сравнение «только бумажные» и «только цифровые»: 38% против 7% (C). Доля читающих оба формата и описание опроса не сравнивают эти группы; одна цифра — не сравнение."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• The Svalbard Global Seed Vault is in Norway, inside a mountain.\n• It stores seeds from crops around the world.\n• It is designed to protect seeds from natural disasters and war.\n• In 2015, seeds were withdrawn to replace collections damaged by the war in Syria.",
+   "stem": "The student wants to provide an example showing that the seed vault serves its intended purpose. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "The vault is designed to protect seeds from natural disasters and war.",
+    "In 2015, seeds were withdrawn from the Svalbard Global Seed Vault to replace collections damaged by the war in Syria.",
+    "The Svalbard Global Seed Vault is inside a mountain in Norway.",
+    "The vault stores seeds from crops around the world."
+   ],
+   "answer": 1,
+   "explanation": "Пример того, что хранилище работает по назначению, — восстановление коллекций после войны в Сирии (B). Остальные описывают хранилище и его цель, но не пример её выполнения."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "While researching a topic, a student has taken the following notes:\n\n• Some cities have tested a four-day school week.\n• Supporters say it lowers transportation and building costs.\n• A study found that test scores in some districts fell slightly after the change.\n• Families sometimes struggle to find childcare on the fifth day.",
+   "stem": "The student wants to present the drawbacks of a four-day school week. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+   "choices": [
+    "Supporters of a four-day school week say it lowers transportation and building costs.",
+    "Some cities have tested a four-day school week.",
+    "A four-day school week can lower costs for transportation and buildings.",
+    "A four-day school week has been linked to slightly lower test scores in some districts, and families sometimes struggle to find childcare on the fifth day."
+   ],
+   "answer": 3,
+   "explanation": "Недостатки — снижение баллов и проблема с присмотром за детьми (D). Экономия — довод сторонников; факт испытаний не недостаток."
+  }
+ ]
+}

@@ -109,6 +109,27 @@ for (const t of tasks) {
   }
 }
 
+// ---------------------------------------------------- quoted literature --
+
+// Quotations from Frankenstein (public domain, embedded in the repo) must be verbatim.
+const bookText = (JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/frankenstein.json"), "utf8")) as { paragraphs: string[] }[])
+  .map((s) => s.paragraphs.join(" "))
+  .join(" ")
+  .replace(/[“”]/g, '"')
+  .replace(/[‘’]/g, "'")
+  .replace(/\s+/g, " ");
+let quotesChecked = 0;
+for (const t of tasks) {
+  if (!/Frankenstein/.test(`${t.passage ?? ""} ${t.stem}`)) continue;
+  for (const c of t.choices ?? []) {
+    const m = c.match(/^"(.+)"$/s);
+    if (!m) continue;
+    const quote = m[1].replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, " ");
+    if (!bookText.includes(quote)) errors.push(`${t.id}: quotation not found in Frankenstein — ${quote.slice(0, 60)}`);
+    quotesChecked++;
+  }
+}
+
 // ------------------------------------------------------- SAT Math check --
 
 const SUPERSCRIPT: Record<string, string> = { "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9", "⁻": "-" };
@@ -332,7 +353,7 @@ if (!QUIET) {
 for (const w of warnings) console.warn(`warning: ${w}`);
 console.log(
   `Bank: ${tasks.length} tasks in ${files.length} files; ${checked} SAT Math answers recomputed (${conceptual} conceptual); ${duplicatePairs} duplicate pairs; ` +
-    `${fullCells}/${cells} question cells at ≥${MIN_PER_CELL}; ${under.length} skills under the minimum.`,
+    `${quotesChecked} quotations checked against the novel; ${fullCells}/${cells} question cells at ≥${MIN_PER_CELL}; ${under.length} skills under the minimum.`,
 );
 if (errors.length) {
   console.error(`\n${errors.length} error(s):\n- ${errors.slice(0, 200).join("\n- ")}`);
