@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "expression-of-ideas",
+  "skill": "transitions",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Maria practiced the piano every day for a year. ______ she was able to play the entire sonata at the spring recital.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "As a result,",
+    "However,",
+    "For example,",
+    "Instead,"
+   ],
+   "answer": 0,
+   "explanation": "Второе предложение — следствие ежедневных занятий: As a result (A). However задаёт противопоставление, которого нет; For example и Instead не подходят — это не пример и не замена."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Most cats dislike water. ______ the Turkish Van breed is known for enjoying swimming.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Therefore,",
+    "Similarly,",
+    "In addition,",
+    "However,"
+   ],
+   "answer": 3,
+   "explanation": "Порода, любящая плавать, — исключение из общего правила: нужен контраст, However (D). Therefore и Similarly предполагают следствие или сходство; In addition — просто добавление."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The recipe calls for several kinds of fruit. ______ it uses apples, pears, and blueberries.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Nevertheless,",
+    "Specifically,",
+    "However,",
+    "Therefore,"
+   ],
+   "answer": 1,
+   "explanation": "Второе предложение уточняет, какие именно фрукты: Specifically (B). However и Nevertheless — противопоставление; Therefore — следствие, а не уточнение."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "First, the students collected water samples from the pond. ______ they tested each sample for pollutants in the lab.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In contrast,",
+    "Then,",
+    "However,",
+    "For instance,"
+   ],
+   "answer": 1,
+   "explanation": "Последовательность действий после «First»: Then (B). However и In contrast противопоставляют; For instance вводит пример."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The museum is free on Sundays. ______ it is usually very crowded on that day.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Nevertheless,",
+    "For example,",
+    "In contrast,",
+    "Consequently,"
+   ],
+   "answer": 3,
+   "explanation": "Бесплатный вход — причина толпы: Consequently (D). Nevertheless и In contrast означают противоречие; For example не вводит пример."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Bicycles produce no exhaust. ______ they take up much less space on the road than cars do.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In addition,",
+    "However,",
+    "For example,",
+    "Therefore,"
+   ],
+   "answer": 0,
+   "explanation": "Второе — ещё одно преимущество велосипеда: In addition (A). However — противопоставление; For example — пример (а это новое преимущество); Therefore — меньше места не следует из отсутствия выхлопа."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Sam wanted to spend the weekend at the beach. ______ it rained all weekend, so he stayed home.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For example,",
+    "Therefore,",
+    "Unfortunately,",
+    "Similarly,"
+   ],
+   "answer": 2,
+   "explanation": "Дождь помешал планам: Unfortunately вводит неприятный поворот (C). Similarly и For example не подходят; дождь не следствие желания Сэма (Therefore)."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Many birds migrate south for the winter. Robins in some areas, ______ stay all year if they can find enough food.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "however,",
+    "therefore,",
+    "for example,",
+    "likewise,"
+   ],
+   "answer": 0,
+   "explanation": "Зимующие малиновки — исключение из правила о миграции: however (A). Therefore и likewise предполагают следствие или сходство; for example — пример мигрирующих птиц, а малиновки как раз не мигрируют."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The team lost its first three games. ______ it won the next ten in a row and reached the finals.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For instance,",
+    "However,",
+    "Similarly,",
+    "Therefore,"
+   ],
+   "answer": 1,
+   "explanation": "Победы после поражений — контраст: However (B). Similarly и For instance не отражают поворот; Therefore — поражения не причина побед."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Plants need sunlight to make food. ______ a plant kept in a dark closet will eventually die.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Similarly,",
+    "Therefore,",
+    "However,",
+    "Meanwhile,"
+   ],
+   "answer": 1,
+   "explanation": "Вывод из первого предложения: без света нет пищи, значит растение погибнет — Therefore (B). However — противоречие; Meanwhile — одновременность; Similarly — сходство."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Some students prefer to study in silence. ______ others like to listen to quiet music while they work.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In contrast,",
+    "As a result,",
+    "For example,",
+    "Thus,"
+   ],
+   "answer": 0,
+   "explanation": "Две противоположные привычки: In contrast (A). As a result и Thus — следствие; For example — пример тех, кто учится в тишине, а речь о других."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The village had no electricity until 1985. ______ residents used oil lamps and wood stoves.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Before then,",
+    "Afterward,",
+    "In addition,",
+    "Similarly,"
+   ],
+   "answer": 0,
+   "explanation": "Лампы и печи использовали до 1985 года: Before then (A). Afterward указывает на время после электрификации — противоречие; In addition и Similarly не задают нужного времени."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The trail is steep and rocky. ______ hikers should wear sturdy boots.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In contrast,",
+    "For example,",
+    "Therefore,",
+    "However,"
+   ],
+   "answer": 2,
+   "explanation": "Совет следует из описания тропы: Therefore (C). However и In contrast противопоставляют; For example — не пример крутой тропы."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Lena wrote her essay in one evening. Her friend Tom, ______ spent two weeks revising his.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "by contrast,",
+    "as a result,",
+    "for example,",
+    "therefore,"
+   ],
+   "answer": 0,
+   "explanation": "Один вечер против двух недель — контраст: by contrast (A). As a result и therefore — привычки Лены не причина привычек Тома; for example не подходит."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The store sells many kinds of fresh vegetables. ______ it sells carrots, spinach, and peppers grown on local farms.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "However,",
+    "Nevertheless,",
+    "Instead,",
+    "For instance,"
+   ],
+   "answer": 3,
+   "explanation": "Морковь, шпинат и перец — примеры овощей: For instance (D). However и Nevertheless — противопоставление; Instead — замена."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "For centuries, sailors relied on the stars to find their way at sea. ______ the invention of the magnetic compass gave navigators a tool they could use even on cloudy nights.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Similarly,",
+    "For example,",
+    "Consequently,",
+    "Later,"
+   ],
+   "answer": 3,
+   "explanation": "Компас — следующий этап во времени после навигации по звёздам: Later (D). Similarly — сходство, но компас отличается; For example — компас не пример навигации по звёздам; Consequently — опора на звёзды не причина изобретения."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Electric cars produce no tailpipe emissions. ______ the electricity used to charge them may come from power plants that burn coal, so their overall environmental impact depends on the local energy supply.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For example,",
+    "Likewise,",
+    "However,",
+    "Therefore,"
+   ],
+   "answer": 2,
+   "explanation": "Оговорка, ограничивающая преимущество: However (C). Therefore — уголь не следует из отсутствия выхлопа; For example и Likewise не вводят ограничение."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The novelist wrote her first three books in Spanish. ______ she wrote her fourth in English, the language of the country where she had lived for a decade.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Similarly,",
+    "For instance,",
+    "In other words,",
+    "By contrast,"
+   ],
+   "answer": 3,
+   "explanation": "Четвёртая книга на другом языке — контраст: By contrast (D). Similarly противоречит смене языка; For instance и In other words — пример или перефразирование, которых нет."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Octopuses have about 500 million neurons. ______ about two-thirds of these neurons are located in the animal's arms rather than in its brain.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Similarly,",
+    "Remarkably,",
+    "Therefore,",
+    "In contrast,"
+   ],
+   "answer": 1,
+   "explanation": "Второе предложение добавляет неожиданную подробность о тех же нейронах: Remarkably (B). Therefore — расположение не следует из числа; In contrast и Similarly предполагают сравнение с чем-то другим."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The city's population doubled between 1990 and 2010. ______ the number of public schools stayed almost the same, leading to crowded classrooms.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "However,",
+    "Therefore,",
+    "For example,",
+    "Similarly,"
+   ],
+   "answer": 0,
+   "explanation": "Население выросло, а школ не прибавилось — контраст: However (A). Therefore — рост населения не причина неизменного числа школ; Similarly — противоположно; For example не подходит."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Ancient Egyptians used papyrus, a plant that grew along the Nile, to make paper. ______ they wove its stems into baskets, mats, and even small boats.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Consequently,",
+    "Nevertheless,",
+    "In addition,",
+    "In contrast,"
+   ],
+   "answer": 2,
+   "explanation": "Ещё одно применение папируса: In addition (C). In contrast и Nevertheless противопоставляют; Consequently — плетение корзин не следует из изготовления бумаги."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some economists argue that raising the minimum wage reduces employment. ______ several recent studies have found little or no effect on the number of jobs.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "However,",
+    "Therefore,",
+    "Similarly,",
+    "Furthermore,"
+   ],
+   "answer": 0,
+   "explanation": "Исследования противоречат мнению экономистов: However (A). Therefore, Similarly и Furthermore предполагают согласие или продолжение мысли."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The ancient city of Petra was carved directly into sandstone cliffs. ______ many of its buildings have survived for more than two thousand years.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "As a result,",
+    "Nevertheless,",
+    "Similarly,",
+    "For instance,"
+   ],
+   "answer": 0,
+   "explanation": "Высеченные в скале здания долговечны — следствие: As a result (A). Nevertheless предполагает противоречие; Similarly и For instance не отражают причинную связь."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Most volcanoes form where tectonic plates meet. Hawaii's volcanoes, ______ sit in the middle of the Pacific Plate, far from any plate boundary.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "for example,",
+    "however,",
+    "therefore,",
+    "similarly,"
+   ],
+   "answer": 1,
+   "explanation": "Гавайские вулканы — исключение: however (B). Therefore и similarly предполагают следствие или сходство; for example сделал бы их примером вулканов на границах плит, что неверно."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "To reduce food waste, the school began weighing the leftovers from each lunch period. ______ it started offering smaller portions to students who requested them.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Instead,",
+    "In contrast,",
+    "Additionally,",
+    "However,"
+   ],
+   "answer": 2,
+   "explanation": "Вторая мера в той же кампании: Additionally (C). However и In contrast противопоставляют; Instead означал бы, что взвешивание прекратили."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The first telephones required an operator to connect each call by hand. ______ automatic switching systems allowed callers to dial numbers themselves.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Eventually,",
+    "Similarly,",
+    "For example,",
+    "Therefore,"
+   ],
+   "answer": 0,
+   "explanation": "Автоматика появилась позже — развитие во времени: Eventually (A). Similarly — противоположно; For example не подходит; Therefore — ручное соединение не причина автоматики само по себе."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Bamboo can grow almost a meter in a single day. ______ it is one of the fastest-growing plants on Earth.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For example,",
+    "Instead,",
+    "Thus,",
+    "However,"
+   ],
+   "answer": 2,
+   "explanation": "Вывод из скорости роста: Thus (C). However — противоречие; For example — вывод не является примером; Instead — замена."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers expected that students who studied with music would perform worse on the test. ______ those students scored about the same as students who studied in silence.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Therefore,",
+    "Similarly,",
+    "For instance,",
+    "Surprisingly,"
+   ],
+   "answer": 3,
+   "explanation": "Результат не совпал с ожиданием: Surprisingly (D). Therefore означало бы, что результат следует из ожидания; Similarly и For instance не отражают неожиданность."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Coffee plants grow best at high elevations in tropical regions. ______ much of the world's coffee comes from mountainous areas of Ethiopia, Colombia, and Vietnam.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Instead,",
+    "Nonetheless,",
+    "Accordingly,",
+    "However,"
+   ],
+   "answer": 2,
+   "explanation": "Горные районы — следствие условий, нужных кофе: Accordingly («соответственно») (C). However и Nonetheless противопоставляют; Instead — замена."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The library's collection was damaged in a flood in 2019. ______ volunteers spent months drying and repairing thousands of books.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Afterward,",
+    "Previously,",
+    "Similarly,",
+    "In contrast,"
+   ],
+   "answer": 0,
+   "explanation": "Ремонт книг — после наводнения: Afterward (A). Previously указывает на время до; Similarly и In contrast не задают последовательность."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Many people assume that the Great Wall of China is visible from space with the naked eye. ______ astronauts have reported that the wall, though long, is too narrow to see from orbit without aid.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Likewise,",
+    "For this reason,",
+    "In reality,",
+    "Consequently,"
+   ],
+   "answer": 2,
+   "explanation": "Слова астронавтов опровергают распространённое мнение: In reality (C). Consequently и For this reason предполагают следствие из ошибочного мнения; Likewise — сходство."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The author's first novel was praised for its intricate plot. Her second, ______ was criticized as confusing, even by readers who had admired her debut.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "by contrast,",
+    "consequently,",
+    "likewise,",
+    "in other words,"
+   ],
+   "answer": 0,
+   "explanation": "Похвала первому и критика второму — контраст: by contrast (A). Consequently — похвала не причина критики; likewise — противоположно; in other words — не перефразирование."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Glass appears solid, and it behaves like a solid in everyday life. ______ its atoms are not arranged in the orderly, repeating pattern found in crystals such as quartz.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "As a result,",
+    "For example,",
+    "Similarly,",
+    "At the atomic level, however,"
+   ],
+   "answer": 3,
+   "explanation": "Переход от бытового впечатления к строению с противопоставлением: At the atomic level, however (D). As a result — беспорядок атомов не следует из твёрдости; For example и Similarly не передают контраст."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Early critics dismissed photography as a mechanical process that required no artistic skill. ______ by the early twentieth century, museums had begun to collect photographs and exhibit them alongside paintings.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Nevertheless,",
+    "Accordingly,",
+    "For example,",
+    "Likewise,"
+   ],
+   "answer": 0,
+   "explanation": "Музеи признали фотографию вопреки мнению критиков: Nevertheless (A). Accordingly — признание не следует из пренебрежения; For example и Likewise не передают «вопреки»."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The team's model accurately predicted rainfall in coastal areas. ______ its predictions for mountainous regions were often off by more than 50 percent, suggesting that the model does not adequately account for elevation.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In other words,",
+    "In contrast,",
+    "Consequently,",
+    "Similarly,"
+   ],
+   "answer": 1,
+   "explanation": "Точно у побережья и неточно в горах — противопоставление: In contrast (B). Consequently — точность у моря не причина ошибок в горах; Similarly — противоположно; In other words — не пересказ."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Monarch butterflies travel up to 4,000 kilometers to spend the winter in central Mexico. ______ no individual butterfly makes the round trip: the butterflies that return north in spring are the children or grandchildren of those that left.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For example,",
+    "Yet",
+    "Therefore",
+    "Similarly,"
+   ],
+   "answer": 1,
+   "explanation": "Неожиданное уточнение к сказанному: Yet («и всё же») (B). Therefore — «никто не делает круг» не следует из длины пути; Similarly и For example не передают противопоставление."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The poet rarely used rhyme in her early work. ______ her later poems, written after she moved to the coast, are full of rhyme and regular meter.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "By contrast,",
+    "As a result,",
+    "Likewise,",
+    "In summary,"
+   ],
+   "answer": 0,
+   "explanation": "Ранние без рифмы, поздние с рифмой — контраст: By contrast (A). As a result — отсутствие рифмы раньше не причина рифм потом; Likewise — противоположно; In summary — не итог."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some historians attribute the fall of the empire to invasions from the north. Others, ______ point to decades of crop failures that weakened the economy long before the invasions began.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "likewise,",
+    "that is,",
+    "however,",
+    "therefore,"
+   ],
+   "answer": 2,
+   "explanation": "Другая группа историков с другим объяснением: however (C). Therefore — мнение одних не причина мнения других; likewise — сходство, а объяснения разные; that is — пересказ."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The new vaccine was effective in laboratory tests on mice. ______ researchers caution that results in mice do not always predict how a vaccine will work in humans.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Likewise,",
+    "For instance,",
+    "Nonetheless,",
+    "Therefore,"
+   ],
+   "answer": 2,
+   "explanation": "Оговорка, ограничивающая успех: Nonetheless («тем не менее») (C). Therefore — осторожность не следует из успеха; Likewise и For instance не вводят ограничение."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The sculpture appears to be carved from a single block of marble. ______ it was assembled from seven separate pieces joined so precisely that the seams are almost invisible.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "For example,",
+    "In fact,",
+    "Therefore,",
+    "Similarly,"
+   ],
+   "answer": 1,
+   "explanation": "Второе предложение раскрывает, как на самом деле: In fact (B). Therefore — сборка не следует из видимости монолита; Similarly и For example не подходят к опровержению впечатления."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "City planners widened a highway to reduce traffic. ______ within a few years, congestion was as bad as before, because the wider road attracted more drivers.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In addition,",
+    "Ironically,",
+    "Accordingly,",
+    "Similarly,"
+   ],
+   "answer": 1,
+   "explanation": "Мера дала обратный цели эффект — Ironically (B). Accordingly означал бы ожидаемый результат; Similarly и In addition не передают противоречие цели и итога."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Neanderthals were once portrayed as brutish and simple. ______ archaeological evidence shows that they made jewelry, buried their dead, and controlled fire.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Similarly,",
+    "However,",
+    "Consequently,",
+    "For instance,"
+   ],
+   "answer": 1,
+   "explanation": "Находки опровергают старое представление: However (B). Consequently — находки не следуют из представления; For instance сделал бы украшения примером «примитивности»; Similarly — противоположно."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Spider silk is, by weight, stronger than steel. ______ it is far more elastic, stretching up to several times its original length before breaking.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Therefore,",
+    "Moreover,",
+    "However,",
+    "Instead,"
+   ],
+   "answer": 1,
+   "explanation": "Ещё одно достоинство шёлка: Moreover (B). However и Instead предполагают противопоставление или замену; Therefore — эластичность не следует из прочности."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The ancient Greeks knew that Earth was round. ______ around 240 BCE, Eratosthenes estimated its circumference with remarkable accuracy by comparing the angles of shadows in two cities.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "Instead,",
+    "Conversely,",
+    "Indeed,",
+    "However,"
+   ],
+   "answer": 2,
+   "explanation": "Второе предложение подкрепляет первое ярким примером: Indeed (C). However, Instead и Conversely вводят противоположность, которой нет."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The startup's first product sold poorly. ______ the company used customer feedback to redesign it, and the second version became a best seller.",
+   "stem": "Which choice completes the text with the most logical transition?",
+   "choices": [
+    "In other words,",
+    "Undeterred,",
+    "Accordingly,",
+    "Similarly,"
+   ],
+   "answer": 1,
+   "explanation": "Компания не сдалась после неудачи: Undeterred («не отступив») (B). Accordingly означал бы, что редизайн — ожидаемое следствие провала, но смысл текста — в настойчивости; Similarly и In other words не подходят."
+  }
+ ]
+}

@@ -22,6 +22,10 @@ import satMathSampleStatistics from "./sat/math/sample-statistics.json";
 import satMathStatisticalClaims from "./sat/math/statistical-claims.json";
 import satMathSystems from "./sat/math/systems.json";
 import satMathTwoVariableData from "./sat/math/two-variable-data.json";
+import satRwBoundaries from "./sat/rw/boundaries.json";
+import satRwFormStructureSense from "./sat/rw/form-structure-sense.json";
+import satRwTransitions from "./sat/rw/transitions.json";
+import satRwWordsInContext from "./sat/rw/words-in-context.json";
 
 export const BANK_FILES: Record<string, unknown> = {
   "sat/math/area-volume.json": satMathAreaVolume,
@@ -43,4 +47,8 @@ export const BANK_FILES: Record<string, unknown> = {
   "sat/math/statistical-claims.json": satMathStatisticalClaims,
   "sat/math/systems.json": satMathSystems,
   "sat/math/two-variable-data.json": satMathTwoVariableData,
+  "sat/rw/boundaries.json": satRwBoundaries,
+  "sat/rw/form-structure-sense.json": satRwFormStructureSense,
+  "sat/rw/transitions.json": satRwTransitions,
+  "sat/rw/words-in-context.json": satRwWordsInContext,
 };

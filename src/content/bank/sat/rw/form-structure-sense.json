@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "standard-english-conventions",
+  "skill": "form-structure-sense",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The box of old photographs ______ on the top shelf of the closet.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "have sat",
+    "sits",
+    "sit",
+    "are sitting"
+   ],
+   "answer": 1,
+   "explanation": "Подлежащее — box (единственное число), «of old photographs» лишь уточняет. Нужен глагол в единственном числе: sits (B). sit, are sitting и have sat — формы множественного числа."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Each of the students ______ a different topic for the report.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "were choosing",
+    "has chosen",
+    "have chosen",
+    "are choosing"
+   ],
+   "answer": 1,
+   "explanation": "«Each» — единственное число, поэтому has chosen (B). Остальные варианты согласованы с students во множественном числе."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Yesterday, the class ______ a trip to the science museum.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "will take",
+    "taking",
+    "took",
+    "takes"
+   ],
+   "answer": 2,
+   "explanation": "«Yesterday» требует прошедшего времени: took (C). takes и will take — настоящее и будущее; taking — не личная форма, предложение остаётся без сказуемого."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The ______ tails were wagging as their owner came through the door.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "dogs'",
+    "dog's",
+    "dogs",
+    "dogs's"
+   ],
+   "answer": 0,
+   "explanation": "Хвосты (tails) у нескольких собак — притяжательная форма множественного числа: dogs' (A). dog's — одна собака, но хвостов несколько; dogs без апострофа — не притяжательная форма; dogs's — неверное написание."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Neither the coach nor the players ______ satisfied with the result.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "were",
+    "was",
+    "is",
+    "has been"
+   ],
+   "answer": 0,
+   "explanation": "При «neither… nor» глагол согласуется с ближайшим подлежащим — players: were (A). was, is и has been — единственное число."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Sofia and her brother ______ to school together every morning.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "walk",
+    "walks",
+    "is walking",
+    "has walked"
+   ],
+   "answer": 0,
+   "explanation": "Два подлежащих через and — множественное число: walk (A). walks, is walking и has walked — единственное число."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The museum displays a collection of ancient coins, some of ______ are more than two thousand years old.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "it",
+    "which",
+    "who",
+    "them"
+   ],
+   "answer": 1,
+   "explanation": "«some of which» вводит придаточное о монетах (B). who — только о людях; «some of them» даёт comma splice; it — единственное число и тоже comma splice."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Every morning, my father ______ coffee and reads the newspaper.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "drink",
+    "drinking",
+    "have drunk",
+    "drinks"
+   ],
+   "answer": 3,
+   "explanation": "Подлежащее father — единственное число, и глагол параллелен reads: drinks (D). drink и have drunk не согласованы; drinking — не личная форма."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A ______ wings are covered with tiny scales that give them their color.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "butterflies'",
+    "butterfly's",
+    "butterflies",
+    "butterflys'"
+   ],
+   "answer": 1,
+   "explanation": "Артикль «A» указывает на одну бабочку — притяжательная форма единственного числа: butterfly's (B). butterflies' — множественное, не сочетается с «A»; butterflies — не притяжательная; butterflys' — неверное написание."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "By the time we arrived, the movie ______ already started.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "having",
+    "had",
+    "has",
+    "have"
+   ],
+   "answer": 1,
+   "explanation": "Действие произошло раньше другого прошедшего действия (arrived) — past perfect: had started (B). has — настоящее время; have не согласовано с movie; having не образует сказуемого."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Last Friday, the team ______ its new uniforms for the first game of the season.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "wore",
+    "wears",
+    "wearing",
+    "have worn"
+   ],
+   "answer": 0,
+   "explanation": "«Last Friday» — прошедшее время, team — единственное число: wore (A). wears — настоящее; wearing — не личная форма; have worn — множественное число и не то время."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "My cousin, along with her two friends, ______ planning a trip to the mountains.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are",
+    "were",
+    "have been",
+    "is"
+   ],
+   "answer": 3,
+   "explanation": "Оборот «along with her two friends» не делает подлежащее множественным: cousin — is (D). are, were и have been — формы множественного числа."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "When Lucia finished the race, ______ felt proud of her time.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "them",
+    "she",
+    "they",
+    "it"
+   ],
+   "answer": 1,
+   "explanation": "Местоимение заменяет Lucia и стоит в роли подлежащего: she (B). they — множественное; it — не о человеке; them — объектная форма."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The cookies ______ on the counter smell delicious.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "sat",
+    "they sit",
+    "sitting",
+    "sits"
+   ],
+   "answer": 2,
+   "explanation": "«sitting on the counter» — определение к cookies, а сказуемое предложения — smell: sitting (C). sits и sat создают второе сказуемое без союза; «they sit» — лишнее подлежащее."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "There ______ many reasons to visit the national park in autumn.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are",
+    "is",
+    "was",
+    "has been"
+   ],
+   "answer": 0,
+   "explanation": "В обороте there + be глагол согласуется с тем, что после него: reasons — множественное, are (A). is, was и has been — единственное число."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The results of the survey, which was conducted in three cities, ______ that most residents support the new park.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "has suggested",
+    "suggest",
+    "suggests",
+    "is suggesting"
+   ],
+   "answer": 1,
+   "explanation": "Подлежащее — results (множественное число); survey и вставка его не меняют: suggest (B). suggests, is suggesting и has suggested — единственное число."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Founded in 1636, ______",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "people regard Harvard University as the oldest institution of higher education in the United States.",
+    "there are no American universities older than Harvard University.",
+    "many students apply to Harvard University each year.",
+    "Harvard University is the oldest institution of higher education in the United States."
+   ],
+   "answer": 3,
+   "explanation": "Оборот «Founded in 1636» должен относиться к тому, что основано, — к университету, стоящему сразу после запятой (D). В остальных вариантах после запятой идут people, there и students — получается, что основаны они."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Neither of the two proposals ______ the committee's full support.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "have",
+    "are having",
+    "were having",
+    "has"
+   ],
+   "answer": 3,
+   "explanation": "«Neither of» — единственное число: has (D). have, are having и were having — множественное."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The flock of geese ______ south every autumn, stopping at the same lakes along the way.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are flying",
+    "have flown",
+    "flies",
+    "fly"
+   ],
+   "answer": 2,
+   "explanation": "Подлежащее flock — единственное число, и «every autumn» требует простого настоящего: flies (C). fly, are flying и have flown — множественное число."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The chemist carefully measured each substance, ______ the results in a notebook.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "recording",
+    "records",
+    "she records",
+    "recorded"
+   ],
+   "answer": 0,
+   "explanation": "Причастный оборот «recording the results» присоединяется к главному предложению запятой (A). records и recorded создают второе сказуемое без союза; «she records» — comma splice."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Our neighbors, the Garcias, invited us to ______ anniversary party.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "they're",
+    "its",
+    "their",
+    "there"
+   ],
+   "answer": 2,
+   "explanation": "Притяжательное местоимение для neighbors: their (C). there — «там»; they're — «they are»; its — единственное число."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "If the bridge ______ built a few years earlier, the town's economy might have grown faster.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "would be",
+    "had been",
+    "was",
+    "has been"
+   ],
+   "answer": 1,
+   "explanation": "Нереальное условие в прошлом: if + past perfect, затем might have grown — had been (B). was — реальное прошедшее; has been — настоящее совершенное; would be не употребляется в if-части."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The number of electric cars on the road ______ grown rapidly over the past decade.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "were",
+    "has",
+    "have",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "«The number of» — единственное число: has (B). have — множественное; are и were не образуют present perfect с grown."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The professor gave the students ______ instructions before the exam began.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "clear",
+    "clearly",
+    "clearer than",
+    "clearness"
+   ],
+   "answer": 0,
+   "explanation": "Слово определяет существительное instructions — нужно прилагательное clear (A). clearly — наречие; «clearer than» требует продолжения сравнения; clearness — существительное."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Walking along the beach at sunset, ______",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "there was a pod of dolphins leaping offshore.",
+    "Mia spotted a pod of dolphins leaping offshore.",
+    "a pod of dolphins was spotted leaping offshore.",
+    "the dolphins leaped offshore as Mia watched."
+   ],
+   "answer": 1,
+   "explanation": "Тот, кто шёл по пляжу, должен стоять сразу после оборота — Mia (B). В остальных вариантах выходит, что по пляжу шли дельфины или «there»."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Among the items found in the ancient tomb ______ a bronze mirror and a set of carved dice.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "were",
+    "was",
+    "is",
+    "has been"
+   ],
+   "answer": 0,
+   "explanation": "Инверсия: подлежащее идёт после глагола — «a bronze mirror and a set of carved dice», множественное число, а рассказ в прошедшем: were (A). was, is и has been — единственное число."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The novel's main characters, a detective and her assistant, travel across Europe as ______ search for a stolen painting.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "it",
+    "he",
+    "they",
+    "she"
+   ],
+   "answer": 2,
+   "explanation": "Местоимение заменяет characters (двое): they (C). she и he указывают на одного; it — не о людях."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The city council voted to approve the budget, ______ includes funding for two new libraries.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "which",
+    "who",
+    "that it",
+    "and it which"
+   ],
+   "answer": 0,
+   "explanation": "Придаточное о budget после запятой вводится which (A). who — только о людях; «that it includes» и «and it which» — неграмматичны."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Scientists believe that the ______ ability to navigate long distances depends partly on Earth's magnetic field, which they can sense.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "sea turtles'",
+    "sea turtle's",
+    "sea turtles",
+    "sea turtle"
+   ],
+   "answer": 0,
+   "explanation": "Местоимение they в конце указывает на множественное число — притяжательная форма sea turtles' (A). sea turtle's — единственное, не согласуется с they; формы без апострофа не притяжательные."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Last spring, the students ______ tomatoes in the school garden; this year, they are growing peppers.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are planting",
+    "will plant",
+    "planted",
+    "plant"
+   ],
+   "answer": 2,
+   "explanation": "«Last spring» — прошедшее время: planted (C). plant и are planting — настоящее; will plant — будущее, противоречит «last spring»."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The collection of essays, along with several unpublished letters, ______ to the university library after the author's death.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "have been donated",
+    "are donated",
+    "was donated",
+    "were donated"
+   ],
+   "answer": 2,
+   "explanation": "Подлежащее collection — единственное число; «along with…» его не меняет; события в прошлом: was donated (C). were и have been — множественное; are — настоящее время."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Each of the three bridges that cross the river ______ designed by a different engineer.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are",
+    "have been",
+    "was",
+    "were"
+   ],
+   "answer": 2,
+   "explanation": "«Each of» — единственное число, мосты построены в прошлом: was (C). were, are и have been — множественное число."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "To reduce costs, ______",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "costs were reduced by switching suppliers.",
+    "switching to a cheaper supplier was the company's decision.",
+    "the company switched to a cheaper supplier.",
+    "a cheaper supplier was chosen by the company."
+   ],
+   "answer": 2,
+   "explanation": "Цель «To reduce costs» относится к тому, кто действует, — к компании, стоящей сразу после запятой (C). Иначе выходит, что сокращать расходы хотел поставщик, сами расходы или «switching»."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The findings that the researchers published last year ______ that the river's temperature has risen.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "indicate",
+    "indicates",
+    "is indicating",
+    "has indicated"
+   ],
+   "answer": 0,
+   "explanation": "Подлежащее findings — множественное число; придаточное «that the researchers published» его не меняет: indicate (A). Остальные формы — единственное число."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Unlike the novels of her contemporaries, ______",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Austen's novels focus closely on the daily lives of a few families.",
+    "Austen focused closely on the daily lives of a few families.",
+    "there is a close focus in Austen's novels on the daily lives of a few families.",
+    "readers find that Austen focused closely on the daily lives of a few families."
+   ],
+   "answer": 0,
+   "explanation": "Сравнивать нужно романы с романами: «Unlike the novels…, Austen's novels…» (A). В остальных вариантах романы современников сравниваются с самой Остин, с «there» или с читателями."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The committee ______ unable to agree on a date, so the meeting was postponed.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "are",
+    "have been",
+    "was",
+    "were"
+   ],
+   "answer": 2,
+   "explanation": "Собирательное committee в американском английском — единственное число, события в прошлом: was (C). were и have been — множественное; are — настоящее время."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The pottery shards, ______ were discovered beneath the old market square, date back to the eleventh century.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "who",
+    "that they",
+    "it",
+    "which"
+   ],
+   "answer": 3,
+   "explanation": "Придаточное-вставка о предметах вводится which (D). who — о людях; «that they» и it — неграмматичны во вставке."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Having studied the migration patterns of whales for decades, ______",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "the findings of the marine biologist were summarized in a book.",
+    "publishing a book was the marine biologist's next step.",
+    "the marine biologist published a book summarizing her findings.",
+    "a book summarizing the marine biologist's findings was published."
+   ],
+   "answer": 2,
+   "explanation": "Изучал китов биолог — он должен стоять сразу после оборота (C). Иначе выходит, что китов изучали книга, выводы или «publishing»."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "One of the reasons that the town's population declined ______ the closure of its largest factory.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "have been",
+    "was",
+    "were",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "Подлежащее one — единственное число; reasons внутри оборота его не меняет: was (B). were, are и have been — множественное."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The scientists hoped that the new telescope ______ them to observe galaxies that formed shortly after the Big Bang.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "allows",
+    "allowing",
+    "to allow",
+    "would allow"
+   ],
+   "answer": 3,
+   "explanation": "После прошедшего hoped ожидание выражается через would: would allow (D). allows — настоящее время; allowing и to allow не образуют сказуемого."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Not only the teacher but also the students ______ excited about the field trip.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "was",
+    "is",
+    "has been",
+    "were"
+   ],
+   "answer": 3,
+   "explanation": "В «not only… but also» глагол согласуется с ближайшим подлежащим — students: were (D). was, is и has been — единственное число."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Like ______ of many desert animals, the fennec fox's large ears help it release body heat.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "those",
+    "that",
+    "it",
+    "them"
+   ],
+   "answer": 0,
+   "explanation": "Сравниваются уши с ушами; those заменяет «the ears» во множественном числе (A). that — единственное число; it и them сравнивали бы уши лисы с самими животными."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The author argues that a city's parks, more than ______ museums or monuments, shape residents' sense of community.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "its",
+    "their",
+    "it's",
+    "there"
+   ],
+   "answer": 0,
+   "explanation": "Музеи принадлежат городу (a city's) — единственное число: its (A). their указывало бы на parks; it's — «it is»; there — «там»."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Rarely ______ such a complete fossil of an early bird been found.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "was",
+    "has",
+    "have",
+    "is"
+   ],
+   "answer": 1,
+   "explanation": "После «Rarely» в начале — инверсия, подлежащее fossil единственного числа, и с «been found» нужно has (B). have — множественное; is и was не образуют форму с been."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The orchestra performed works by three composers: a symphony by Brahms, a concerto by Grieg, and ______",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "a set of songs by Schubert.",
+    "Schubert's songs were also played.",
+    "songs, which Schubert wrote.",
+    "they also played Schubert."
+   ],
+   "answer": 0,
+   "explanation": "Элементы списка должны быть параллельны: «a symphony by…, a concerto by…, and a set of songs by…» (A). Остальные варианты ломают параллелизм — появляются новые предложения или придаточные."
+  }
+ ]
+}

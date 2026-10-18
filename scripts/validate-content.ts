@@ -100,7 +100,9 @@ for (const t of tasks.filter((x) => x.type === "mcq")) {
 
 // Traces of a draft left in an explanation ("…", "нет:", "?" in the middle of a sentence).
 for (const t of tasks) {
-  if (/\.\.\.|…|\bнет[:,]|\?\s/.test(t.explanation)) errors.push(`${t.id}: explanation looks unfinished — ${t.explanation.slice(0, 80)}`);
+  // Quotations («…») may abbreviate the text they quote.
+  const prose = t.explanation.replace(/«[^»]*»/g, "«»").replace(/\([^)]*…[^)]*\)/g, "()");
+  if (/\.\.\.|…|\bнет[:,]|\?\s/.test(prose)) errors.push(`${t.id}: explanation looks unfinished — ${t.explanation.slice(0, 80)}`);
   if (t.type === "mcq" && !/[A-D]\)/.test(t.explanation) && !/\([A-D]\)/.test(t.explanation)) {
     const letter = "ABCD"[t.answer as number];
     if (letter && !t.explanation.includes(letter) && !FIXED_CHOICES[t.skill.split(".")[1]]) warnings.push(`${t.id}: explanation does not name the right choice (${letter})`);

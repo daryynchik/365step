@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "craft-and-structure",
+  "skill": "words-in-context",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Honeybees use a series of movements, often called a waggle dance, to ______ the location of food to other bees in the hive. The direction and length of the dance tell the other bees where to fly.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "forget",
+    "question",
+    "communicate",
+    "conceal"
+   ],
+   "answer": 2,
+   "explanation": "Танец сообщает другим пчёлам, где еда: communicate — «передавать» (C). Conceal («скрывать») противоречит второму предложению; forget и question не описывают передачу информации."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "After weeks of heavy rain, the river rose so high that it ______ its banks and covered the nearby fields with water.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "narrowed",
+    "protected",
+    "overflowed",
+    "dried"
+   ],
+   "answer": 2,
+   "explanation": "Вода вышла из берегов и залила поля — overflowed (C). Dried и narrowed означают обратное; protected не сочетается с затоплением полей."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The new library was designed to be ______: ramps, wide doors, and elevators allow visitors who use wheelchairs to reach every floor.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "crowded",
+    "temporary",
+    "accessible",
+    "expensive"
+   ],
+   "answer": 2,
+   "explanation": "Пандусы и лифты делают здание доступным — accessible (C). Текст ничего не говорит о цене, толпах или временности здания."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Many desert plants store water in thick leaves or stems. This adaptation helps them ______ long periods without rain.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "avoid",
+    "celebrate",
+    "measure",
+    "survive"
+   ],
+   "answer": 3,
+   "explanation": "Запас воды помогает пережить засуху — survive (D). Растения не могут «избежать» засуху (avoid), а celebrate и measure бессмысленны в контексте."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The chef's soup was so ______ that customers often asked for a second bowl, praising its rich and balanced flavor.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "salty",
+    "expensive",
+    "delicious",
+    "bland"
+   ],
+   "answer": 2,
+   "explanation": "Просят добавки и хвалят вкус — суп вкусный, delicious (C). Bland («пресный») и salty («пересоленный») противоречат похвале «balanced flavor»; цена не объясняет просьбу о второй тарелке."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Because the instructions were ______, every student in the class was able to complete the experiment without asking the teacher for help.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "missing",
+    "long",
+    "clear",
+    "confusing"
+   ],
+   "answer": 2,
+   "explanation": "Все справились без помощи, потому что инструкции были понятными — clear (C). Confusing и missing дали бы обратный результат; длина сама по себе не объясняет успех."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Scientists ______ the age of the ancient tree by counting the rings in a sample taken from its trunk.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "ignored",
+    "planted",
+    "doubled",
+    "estimated"
+   ],
+   "answer": 3,
+   "explanation": "Подсчёт колец позволяет определить, оценить возраст — estimated (D). Ignored противоречит действию; planted и doubled не относятся к возрасту."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The town's population has grown ______ over the past decade, rising from 8,000 residents to more than 15,000.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "quietly",
+    "rapidly",
+    "slightly",
+    "backward"
+   ],
+   "answer": 1,
+   "explanation": "Население почти удвоилось — рост быстрый, rapidly (B). Slightly («слегка») противоречит цифрам; backward и quietly не описывают скорость роста."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Although the hike was long and steep, Marta remained ______ and kept encouraging the others in her group.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "silent",
+    "lost",
+    "cheerful",
+    "exhausted"
+   ],
+   "answer": 2,
+   "explanation": "«Although» задаёт контраст с трудным походом, а «encouraging» показывает бодрость — cheerful (C). Exhausted и silent противоречат подбадриванию; lost не связано с её настроем."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Recycling aluminum cans requires far less energy than making new cans from raw materials, so recycling helps ______ energy.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "heat",
+    "conserve",
+    "waste",
+    "create"
+   ],
+   "answer": 1,
+   "explanation": "Меньше затрат — значит энергию экономят, conserve (B). Waste — противоположное; create и heat не следуют из сравнения затрат."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The museum's newest exhibit is ______; it will be on display for only three weeks before moving to another city.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "temporary",
+    "permanent",
+    "enormous",
+    "ancient"
+   ],
+   "answer": 0,
+   "explanation": "Всего три недели — выставка временная, temporary (A). Permanent прямо противоречит; размер и возраст экспонатов текст не обсуждает."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The coach praised the team for its ______: players arrived early, practiced hard, and never missed a session.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "dedication",
+    "carelessness",
+    "luck",
+    "height"
+   ],
+   "answer": 0,
+   "explanation": "Перечисленное — признаки преданности делу, dedication (A). Carelessness противоположно; luck и height не объясняются приходом вовремя и тренировками."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "When the power went out, the students used flashlights to ______ the dark hallway.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "decorate",
+    "block",
+    "measure",
+    "illuminate"
+   ],
+   "answer": 3,
+   "explanation": "Фонарики освещают тёмный коридор — illuminate (D). Decorate, block и measure не связаны с назначением фонарика в темноте."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The two reports ______ on almost every point, so the editor had to decide which version of events to publish.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "agreed",
+    "rested",
+    "ended",
+    "differed"
+   ],
+   "answer": 3,
+   "explanation": "Редактору пришлось выбирать, значит отчёты расходились — differed (D). Если бы они совпадали (agreed), выбирать было бы не из чего; rested и ended не подходят по смыслу."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Octopuses can change the color of their skin in less than a second, an ability that helps them ______ themselves from predators.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "warm",
+    "hide",
+    "show",
+    "feed"
+   ],
+   "answer": 1,
+   "explanation": "Смена цвета помогает спрятаться от хищников — hide (B). Show противоположно; feed и warm не связаны с защитой от хищников."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The historian argued that the merchants' letters, long ignored by scholars, were ______ to understanding the city's early economy, since they recorded prices and trade routes found in no other source.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "harmful",
+    "decorative",
+    "essential",
+    "irrelevant"
+   ],
+   "answer": 2,
+   "explanation": "Письма содержат сведения, которых нет больше нигде, — они необходимы, essential (C). Irrelevant противоречит аргументу историка; harmful и decorative не объясняются «found in no other source»."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Although many critics initially dismissed the novel as a minor work, later readers found its portrait of village life so ______ that the book is now taught in universities.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "compelling",
+    "forgettable",
+    "brief",
+    "inaccurate"
+   ],
+   "answer": 0,
+   "explanation": "Контраст «although» с «dismissed» и итог «taught in universities» требуют положительной оценки — compelling («захватывающий, убедительный») (A). Forgettable и inaccurate — отрицательные; brief не объясняет, почему книгу изучают."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Tardigrades, tiny animals less than a millimeter long, are remarkably ______: some can survive being dried out for years and then revive when placed in water.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "resilient",
+    "fragile",
+    "colorful",
+    "social"
+   ],
+   "answer": 0,
+   "explanation": "Пережить высыхание на годы — признак живучести, resilient (A). Fragile («хрупкий») противоречит; цвет и социальность к выживанию отношения не имеют."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The committee's report was ______: rather than recommending a single plan, it described the strengths and weaknesses of all four proposals without favoring any of them.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "biased",
+    "incomplete",
+    "enthusiastic",
+    "impartial"
+   ],
+   "answer": 3,
+   "explanation": "Описать все варианты, не отдавая предпочтения, — беспристрастно, impartial (D). Biased противоречит «without favoring»; incomplete неверно — описаны все четыре; enthusiastic не связано с нейтральностью."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Early maps of the coastline were often ______, showing harbors in the wrong places and leaving out entire islands.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "detailed",
+    "modern",
+    "valuable",
+    "inaccurate"
+   ],
+   "answer": 3,
+   "explanation": "Гавани не там, острова пропущены — карты неточные, inaccurate (D). Detailed и valuable противоречат описанным ошибкам; modern не согласуется с «early»."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In her speech, the senator tried to ______ the concerns of farmers, promising that the new law would not raise the cost of water for irrigation.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "create",
+    "celebrate",
+    "address",
+    "ignore"
+   ],
+   "answer": 2,
+   "explanation": "Обещание отвечает на тревогу фермеров — она пытается address («ответить на, разобраться с») их опасения (C). Ignore противоречит обещанию; create и celebrate не подходят к «concerns»."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Because the chemical is highly ______, it must be stored in sealed containers away from heat and open flames.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "soluble",
+    "flammable",
+    "harmless",
+    "heavy"
+   ],
+   "answer": 1,
+   "explanation": "Хранить подальше от огня нужно легковоспламеняющееся вещество — flammable (B). Harmless противоречит мерам предосторожности; heavy и soluble («растворимый») не объясняют опасность огня."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The architect's design was praised for being ______: it used natural light, recycled materials, and a roof garden to reduce the building's energy needs.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "ornate",
+    "conventional",
+    "fragile",
+    "sustainable"
+   ],
+   "answer": 3,
+   "explanation": "Естественный свет, вторичные материалы и экономия энергии — экологичный, устойчивый проект, sustainable (D). Ornate («вычурный») и conventional не связаны с перечисленным; fragile не похвала."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Rather than focusing on a single dramatic event, the documentary shows how the city changed ______, through thousands of small decisions made over many decades.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "accidentally",
+    "gradually",
+    "suddenly",
+    "reluctantly"
+   ],
+   "answer": 1,
+   "explanation": "Тысячи мелких решений за десятилетия — постепенные изменения, gradually (B). Suddenly противоречит «rather than a single dramatic event»; reluctantly и accidentally не следуют из текста — решения принимались, а не случались."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The researcher's conclusion was ______ by later studies, which found the same effect in larger and more diverse groups of participants.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "concealed",
+    "supported",
+    "contradicted",
+    "delayed"
+   ],
+   "answer": 1,
+   "explanation": "Тот же эффект в новых исследованиях подтверждает вывод — supported (B). Contradicted — противоположное; delayed и concealed не описывают роль новых данных."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The poet's early work was marked by ______ language: short sentences, plain words, and almost no description.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "foreign",
+    "humorous",
+    "spare",
+    "elaborate"
+   ],
+   "answer": 2,
+   "explanation": "Короткие фразы, простые слова, почти без описаний — скупой, лаконичный язык, spare (C). Elaborate («витиеватый») — противоположность; foreign и humorous не следуют из перечисления."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some economists view the policy as a ______ measure, useful for easing a short-term crisis but not a lasting solution.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "popular",
+    "stopgap",
+    "permanent",
+    "dangerous"
+   ],
+   "answer": 1,
+   "explanation": "Полезна на короткий срок, но не надолго — временная мера, stopgap (B). Permanent противоречит «not a lasting solution»; dangerous и popular не связаны с описанием."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "To make the study's findings ______ to other schools, the researchers included students from rural, suburban, and urban districts.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "applicable",
+    "unfamiliar",
+    "opposed",
+    "invisible"
+   ],
+   "answer": 0,
+   "explanation": "Разные типы районов нужны, чтобы выводы можно было применить к другим школам — applicable (A). Unfamiliar, opposed и invisible не объясняют цель разнообразной выборки."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The candidate's answers were so ______ that, after the debate, voters still could not tell what she planned to do about housing.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "lengthy",
+    "rude",
+    "vague",
+    "precise"
+   ],
+   "answer": 2,
+   "explanation": "Избиратели не поняли её план — ответы были расплывчатыми, vague (C). Precise противоречит; длинный (lengthy) ответ может быть и ясным; rude не объясняет непонимание."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Coral reefs cover less than one percent of the ocean floor, yet they are ______ with life, supporting roughly a quarter of all known marine species.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "teeming",
+    "empty",
+    "bored",
+    "mixed"
+   ],
+   "answer": 0,
+   "explanation": "Четверть морских видов на малой площади — рифы кишат жизнью, teeming with (A). Empty противоречит «yet» и «supporting»; bored и mixed не образуют нужного смысла с «with life»."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Although the composer was celebrated for her lush orchestral works, her final string quartet is strikingly ______, built from a few repeated notes and long silences.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "extravagant",
+    "derivative",
+    "jubilant",
+    "austere"
+   ],
+   "answer": 3,
+   "explanation": "Контраст с «lush» и описание (немного нот, долгие паузы) — строгий, аскетичный, austere (D). Extravagant повторяет «lush», а не противопоставляет; derivative («подражательный») о заимствовании, а не о скупости; jubilant («ликующий») не следует из описания."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The biologist cautioned that the link between the gene and the trait was ______: it had been observed in only one population and might not hold elsewhere.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "tentative",
+    "definitive",
+    "obsolete",
+    "trivial"
+   ],
+   "answer": 0,
+   "explanation": "Наблюдалось в одной популяции и может не подтвердиться — связь предварительная, tentative (A). Definitive противоречит осторожности; obsolete («устаревший») и trivial («незначительный») не о степени доказанности."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Critics have called the novelist's style ______, noting that her sentences, crowded with clauses and allusions, demand slow and careful reading.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "sparse",
+    "casual",
+    "monotonous",
+    "dense"
+   ],
+   "answer": 3,
+   "explanation": "Предложения, переполненные оборотами и отсылками, — плотный, насыщенный стиль, dense (D). Sparse — противоположное; casual не требует медленного чтения; monotonous говорит об однообразии, а не о сложности."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Rather than ______ the earlier theory, the scientist proposed only a small modification to account for the new measurements, arguing that the theory remained largely sound.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "publishing",
+    "memorizing",
+    "discarding",
+    "endorsing"
+   ],
+   "answer": 2,
+   "explanation": "Учёный считает теорию в целом верной и лишь слегка правит её — вместо того чтобы отбросить, discarding (C). Endorsing («одобрять») противоречит «rather than»: он как раз её поддерживает; publishing и memorizing не противопоставляются модификации."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The treaty's language was deliberately ______, allowing each nation to interpret its obligations in the way that best suited its own interests.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "concise",
+    "ambiguous",
+    "explicit",
+    "archaic"
+   ],
+   "answer": 1,
+   "explanation": "Каждая страна толкует обязательства по-своему — формулировки неоднозначные, ambiguous (B). Explicit противоречит свободе толкования; archaic и concise не объясняют, почему смысл можно трактовать по-разному."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The archaeologists were careful not to ______ the purpose of the carved stones; with no written records, they noted, any explanation would be speculation.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "examine",
+    "photograph",
+    "preserve",
+    "assert"
+   ],
+   "answer": 3,
+   "explanation": "Без записей любое объяснение — догадка, поэтому они не утверждают назначение камней, assert (D). Examine, photograph и preserve — обычная работа археологов, отказываться от неё причин нет."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In contrast to his ______ public persona, the actor was, according to friends, shy and reluctant to speak at gatherings.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "mysterious",
+    "modest",
+    "gregarious",
+    "reserved"
+   ],
+   "answer": 2,
+   "explanation": "«In contrast» к застенчивости требует противоположного — общительный, gregarious (C). Reserved и modest совпадают со «shy», контраста нет; mysterious не противопоставлено застенчивости."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The data were ______ enough that the researchers could not rule out chance as an explanation for the pattern they observed.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "abundant",
+    "recent",
+    "striking",
+    "sparse"
+   ],
+   "answer": 3,
+   "explanation": "Нельзя исключить случайность, когда данных мало — sparse (D). Abundant как раз позволил бы исключить случайность; recent и striking не связаны с надёжностью вывода."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The essay's argument is ______: each claim rests on the one before it, so that rejecting any single premise undermines the whole conclusion.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "incidental",
+    "whimsical",
+    "cumulative",
+    "contradictory"
+   ],
+   "answer": 2,
+   "explanation": "Каждое утверждение опирается на предыдущее — аргумент строится по нарастающей, cumulative (C). Contradictory противоречит связности; incidental («случайный») и whimsical («причудливый») не описывают цепочку посылок."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Lichens are often described as ______ organisms because they consist of a fungus and an alga living together, each providing something the other lacks.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "solitary",
+    "dormant",
+    "symbiotic",
+    "parasitic"
+   ],
+   "answer": 2,
+   "explanation": "Совместная жизнь с взаимной выгодой — симбиоз, symbiotic (C). Parasitic означает пользу одному за счёт другого; solitary противоречит «living together»; dormant («спящий») не по теме."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The mayor's response to the flooding was widely criticized as ______; officials waited nearly a week before sending crews to the hardest-hit neighborhoods.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "transparent",
+    "dilatory",
+    "prompt",
+    "lavish"
+   ],
+   "answer": 1,
+   "explanation": "Ждали почти неделю — реакция медлительная, dilatory (B). Prompt противоположно; lavish («щедрый») и transparent («открытый») не объясняют критику за задержку."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Far from being ______, the island's ecosystem is shaped by species that arrived from many different places, carried by wind, waves, and birds.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "diverse",
+    "ancient",
+    "fragile",
+    "insular"
+   ],
+   "answer": 3,
+   "explanation": "«Far from» требует противоположного «видам со всего света» — замкнутая, изолированная, insular (D). Diverse совпадает с описанием, а не противопоставлен ему; ancient и fragile не противоречат приходу видов извне."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The translator sought to ______ the poem's rhythm as well as its meaning, choosing words in the new language that echoed the original's sounds.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "preserve",
+    "simplify",
+    "reverse",
+    "obscure"
+   ],
+   "answer": 0,
+   "explanation": "Слова, повторяющие звучание оригинала, нужны, чтобы сохранить ритм — preserve (A). Simplify, reverse и obscure противоречат стремлению передать звучание оригинала."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Because the evidence was largely ______, coming from a few travelers' accounts rather than systematic records, historians treat the population estimate with caution.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "statistical",
+    "contemporary",
+    "official",
+    "anecdotal"
+   ],
+   "answer": 3,
+   "explanation": "Рассказы нескольких путешественников вместо систематических данных — свидетельства отрывочные, anecdotal (D). Statistical и official противоречат «rather than systematic records»; contemporary («современный событиям») не объясняет осторожность."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Although the two species look nearly identical, genetic analysis shows that they diverged millions of years ago, a finding that ______ the long-held assumption that they were closely related.",
+   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+   "choices": [
+    "undermines",
+    "confirms",
+    "restates",
+    "inspires"
+   ],
+   "answer": 0,
+   "explanation": "Расхождение миллионы лет назад опровергает мнение о близком родстве — undermines (A). Confirms и restates противоположны выводу; inspires не описывает отношение находки к старому предположению."
+  }
+ ]
+}

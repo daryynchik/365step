@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "standard-english-conventions",
+  "skill": "boundaries",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The library opens at nine o'clock on ______ on weekends, it opens at ten.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "weekdays,",
+    "weekdays",
+    "weekdays and",
+    "weekdays;"
+   ],
+   "answer": 3,
+   "explanation": "Это два независимых предложения, их соединяет точка с запятой (D). Одна запятая даёт comma splice; без знака — слитное предложение (run-on); «and» без запятой и с запятой после weekends ломает структуру."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "My grandmother grows three kinds of herbs in her garden: ______ and mint.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "basil; thyme;",
+    "basil, thyme;",
+    "basil, thyme,",
+    "basil thyme"
+   ],
+   "answer": 2,
+   "explanation": "Элементы простого перечисления разделяются запятыми (C). Без запятых слова сливаются; точка с запятой нужна только для перечислений, где сами элементы содержат запятые, и знаки не должны смешиваться."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The storm knocked down power lines across the ______ thousands of homes were without electricity for two days.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "county,",
+    "county",
+    "county, and",
+    "county and"
+   ],
+   "answer": 2,
+   "explanation": "Два независимых предложения соединяются запятой с союзом and (C). Без запятой перед and — ошибка соединения; одна запятая — comma splice; без знака — run-on."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Mount Everest, which lies on the border between Nepal and ______ is the highest mountain above sea level.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "China",
+    "China;",
+    "China:",
+    "China,"
+   ],
+   "answer": 3,
+   "explanation": "Придаточное «which lies…» — вставка, открытая запятой, поэтому закрывается тоже запятой (D). Без запятой вставка не закрыта; точка с запятой и двоеточие отрывают подлежащее от сказуемого."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The students needed three things for the field ______ a notebook, a pencil, and a water bottle.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "trip",
+    "trip:",
+    "trip;",
+    "trip,"
+   ],
+   "answer": 1,
+   "explanation": "После законченного предложения список вводится двоеточием (B). Точка с запятой требует, чтобы после неё стояло полное предложение; запятая и отсутствие знака не вводят список ясно."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Kenji finished his homework ______ then he went outside to play soccer.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "early, and",
+    "early and,",
+    "early,",
+    "early"
+   ],
+   "answer": 0,
+   "explanation": "Два независимых предложения: запятая + and (A). «and,» ставит запятую не туда; одна запятая — comma splice; без знака — run-on."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The bakery's best-selling item, a loaf of sourdough ______ sells out every morning.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "bread",
+    "bread;",
+    "bread:",
+    "bread,"
+   ],
+   "answer": 3,
+   "explanation": "Приложение «a loaf of sourdough bread» выделяется запятыми с двух сторон (D). Без закрывающей запятой вставка не закрыта; точка с запятой и двоеточие отрывают сказуемое sells от подлежащего."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Penguins cannot ______ they are excellent swimmers.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "fly however",
+    "fly; however",
+    "fly; however,",
+    "fly, however,"
+   ],
+   "answer": 2,
+   "explanation": "however соединяет два предложения: перед ним точка с запятой, после — запятая (C). Запятая перед however — comma splice; без знаков — run-on; без запятой после however — ошибка оформления вводного слова."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Our teacher, Ms. ______ has taught at the school for twenty years.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Ortiz;",
+    "Ortiz:",
+    "Ortiz,",
+    "Ortiz"
+   ],
+   "answer": 2,
+   "explanation": "Имя — уточнение, открытое запятой, его нужно закрыть запятой (C). Без запятой вставка не закрыта; точка с запятой и двоеточие отделяют подлежащее от сказуемого."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The concert was ______ the band played for more than three hours.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "amazing,",
+    "amazing",
+    "amazing and,",
+    "amazing:"
+   ],
+   "answer": 3,
+   "explanation": "Второе предложение поясняет первое — двоеточие (D). Запятая между двумя полными предложениями — comma splice; без знака — run-on; «and,» — неверное место запятой."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Sea otters often float on their backs while ______ they use rocks to crack open shellfish.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "eating",
+    "eating, and",
+    "eating and,",
+    "eating,"
+   ],
+   "answer": 1,
+   "explanation": "Два независимых предложения — запятая + and (B). Одна запятая — comma splice; без знака — run-on; запятая после and — неверно."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "When the bell ______ the students quickly packed their bags.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "rang;",
+    "rang",
+    "rang:",
+    "rang,"
+   ],
+   "answer": 3,
+   "explanation": "Вводное придаточное «When the bell rang» отделяется запятой (D). Точка с запятой и двоеточие требуют полного предложения слева; без знака придаточное сливается с главным."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The city has two official ______ English and French.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "languages;",
+    "languages, they are",
+    "languages",
+    "languages:"
+   ],
+   "answer": 3,
+   "explanation": "Двоеточие вводит пояснение-перечень после полного предложения (D). Точка с запятой требует полного предложения справа; «languages, they are» — comma splice; без знака конструкция нарушена."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "I wanted to see the new ______ my brother wanted to see the old one.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "movie but,",
+    "movie,",
+    "movie",
+    "movie, but"
+   ],
+   "answer": 3,
+   "explanation": "Два противопоставленных предложения — запятая + but (D). «but,» — запятая не там; одна запятая — comma splice; без знака — run-on."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The chef, who trained in ______ opened a small restaurant in our town.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Paris —",
+    "Paris,",
+    "Paris",
+    "Paris;"
+   ],
+   "answer": 1,
+   "explanation": "Вставка «who trained in Paris» открыта запятой и закрывается запятой (B). Тире не может закрыть вставку, открытую запятой; без знака вставка не закрыта; точка с запятой разрывает подлежащее и сказуемое."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some of the world's oldest trees are bristlecone ______ which grow in the mountains of the western United States and can live for more than four thousand years.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "pines:",
+    "pines,",
+    "pines",
+    "pines;"
+   ],
+   "answer": 1,
+   "explanation": "Придаточное «which grow…» добавляет сведения — перед ним запятая (B). Без запятой which-придаточное звучит как ограничивающее; точка с запятой и двоеточие требуют полного предложения после знака."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The researchers tested three ______ copper, aluminum, and an alloy of the two.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "materials;",
+    "materials,",
+    "materials",
+    "materials:"
+   ],
+   "answer": 3,
+   "explanation": "Список после законченного предложения — двоеточие (D). Точка с запятой не вводит список; запятая делает «copper» частью ряда с «materials»; без знака структура нарушена."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The ancient library at Alexandria held thousands of ______ unfortunately, much of its collection was lost over the centuries.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "scrolls;",
+    "scrolls,",
+    "scrolls",
+    "scrolls that"
+   ],
+   "answer": 0,
+   "explanation": "Два независимых предложения, второе начинается с вводного unfortunately — точка с запятой (A). Запятая — comma splice; без знака — run-on; «that» делает второе предложение неграмматичным придаточным."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Marie Curie, the first person to win Nobel Prizes in two different ______ was born in Warsaw in 1867.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "sciences;",
+    "sciences—",
+    "sciences,",
+    "sciences"
+   ],
+   "answer": 2,
+   "explanation": "Приложение, открытое запятой, закрывается запятой (C). Тире не сочетается с открывающей запятой; без знака вставка не закрыта; точка с запятой отрывает сказуемое."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The novel's narrator is ______ she misremembers dates, confuses names, and contradicts herself.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "unreliable, because:",
+    "unreliable:",
+    "unreliable",
+    "unreliable,"
+   ],
+   "answer": 1,
+   "explanation": "Второе предложение поясняет, почему рассказчик ненадёжен, — двоеточие (B). Без знака — run-on; одна запятая — comma splice; двоеточие после because не ставится."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Photosynthesis takes place in ______ tiny structures found in the cells of plants and algae.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "chloroplasts,",
+    "chloroplasts;",
+    "chloroplasts",
+    "chloroplasts, which"
+   ],
+   "answer": 0,
+   "explanation": "«tiny structures…» — приложение к chloroplasts, оно отделяется запятой (A). Точка с запятой требует полного предложения после неё; без знака слова сливаются; «which tiny structures found» — неграмматично."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The festival attracts visitors from around the ______ last year, more than 50,000 people attended.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "world",
+    "world, and,",
+    "world;",
+    "world,"
+   ],
+   "answer": 2,
+   "explanation": "Два независимых предложения — точка с запятой (C). Запятая — comma splice; без знака — run-on; «and,» с лишней запятой ломает вводное «last year»."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In 1871, Margaret ______ an American inventor, received a patent for a machine that made flat-bottomed paper bags.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Knight,",
+    "Knight",
+    "Knight;",
+    "Knight:"
+   ],
+   "answer": 0,
+   "explanation": "Приложение «an American inventor» выделяется запятыми; первая запятая стоит после имени (A). Без неё приложение не открыто; точка с запятой и двоеточие разрывают предложение."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The hikers reached the summit just after ______ the view of the valley below was breathtaking.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "sunrise,",
+    "sunrise",
+    "sunrise, and",
+    "sunrise and,"
+   ],
+   "answer": 2,
+   "explanation": "Два независимых предложения — запятая + and (C). Запятая после and — не на месте; одна запятая — comma splice; без знака — run-on."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The museum's collection includes paintings, sculptures, and ______ some of which are more than two thousand years old.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "coins,",
+    "coins;",
+    "coins",
+    "coins:"
+   ],
+   "answer": 0,
+   "explanation": "«some of which…» — придаточное-добавление, перед ним запятая (A). Точка с запятой и двоеточие требуют полного предложения после знака; без запятой придаточное неверно присоединено."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The school's robotics team practiced for ______ its hard work paid off when it won the regional championship.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "months",
+    "months, then",
+    "months;",
+    "months,"
+   ],
+   "answer": 2,
+   "explanation": "Два независимых предложения — точка с запятой (C). Запятая — comma splice; без знака — run-on; «then» не союз и не спасает от comma splice."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The English word robot comes from robota, a Czech word for forced ______ the term was introduced in a 1920 play by the writer Karel Čapek.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "labor, and,",
+    "labor;",
+    "labor,",
+    "labor"
+   ],
+   "answer": 1,
+   "explanation": "Два независимых предложения — точка с запятой (B). Запятая — comma splice; без знака — run-on; лишняя запятая после and ошибочна."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Ella's favorite subjects are ______ biology, which she plans to study in college; and art.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "chemistry,",
+    "chemistry:",
+    "chemistry",
+    "chemistry;"
+   ],
+   "answer": 3,
+   "explanation": "Внутри перечисления есть запятые (biology, which…), поэтому элементы разделяются точками с запятой — как и перед «and art» (D). Запятая смешала бы уровни; двоеточие и отсутствие знака нарушают ряд."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Before the invention of ______ people preserved food by drying, salting, or smoking it.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "refrigeration;",
+    "refrigeration",
+    "refrigeration:",
+    "refrigeration,"
+   ],
+   "answer": 3,
+   "explanation": "Вводный оборот «Before the invention of refrigeration» отделяется запятой (D). Точка с запятой и двоеточие требуют полного предложения слева; без знака оборот сливается с подлежащим."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The bridge, completed in ______ was the longest suspension bridge in the world for more than a decade.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "1937,",
+    "1937",
+    "1937;",
+    "1937—"
+   ],
+   "answer": 0,
+   "explanation": "Вставка «completed in 1937» открыта запятой — закрывается запятой (A). Тире не закрывает вставку, открытую запятой; точка с запятой разрывает предложение; без знака вставка не закрыта."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The mathematician's proof was elegant and ______ it ran to only two pages, yet it settled a question that had puzzled scholars for decades.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "brief, and,",
+    "brief:",
+    "brief,",
+    "brief"
+   ],
+   "answer": 1,
+   "explanation": "Вторая часть поясняет, почему доказательство краткое, — двоеточие (B). Запятая — comma splice; без знака — run-on; лишняя запятая после and неверна."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Many species of ______ including the familiar honeybee, live in large colonies with a single queen.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "bees;",
+    "bees—",
+    "bees,",
+    "bees"
+   ],
+   "answer": 2,
+   "explanation": "Оборот «including the familiar honeybee» — вставка, закрытая запятой, значит и открывается запятой (C). Тире не сочетается с закрывающей запятой; точка с запятой разрывает подлежащее и сказуемое; без знака вставка не открыта."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The expedition's goals were ambitious: to map the river's ______ to collect samples of plants unknown to science; and to record the languages of the communities along its banks.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "source:",
+    "source",
+    "source;",
+    "source,"
+   ],
+   "answer": 2,
+   "explanation": "Последний элемент отделён «; and», поэтому и остальные элементы ряда разделяются точкой с запятой (C). Запятая нарушает единообразие; второе двоеточие в одном предложении неуместно; без знака элементы сливаются."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Pando ______ a group of quaking aspen trees in Utah that share a single root system—is considered one of the heaviest known organisms on Earth.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Pando,",
+    "Pando:",
+    "Pando",
+    "Pando—"
+   ],
+   "answer": 3,
+   "explanation": "Вставка закрыта тире, значит и открывается тире (D). Запятая не сочетается с закрывающим тире; двоеточие разрывает подлежащее; без знака вставка не открыта. (Здесь слово Pando в вариантах заменяет пропуск.)"
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In 1903, the Wright brothers made the first successful powered airplane ______ the flight lasted only twelve seconds.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "flight;",
+    "flight,",
+    "flight",
+    "flight, it"
+   ],
+   "answer": 0,
+   "explanation": "Два независимых предложения — точка с запятой (A). Запятая — comma splice; без знака — run-on; «flight, it the flight» — неграмматично."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The author's latest book, a collection of ______ explores how memory shapes our sense of home.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "essays;",
+    "essays—",
+    "essays,",
+    "essays"
+   ],
+   "answer": 2,
+   "explanation": "Приложение «a collection of essays» открыто запятой — закрывается запятой (C). Тире не сочетается с открывающей запятой; точка с запятой отрывает сказуемое explores; без знака вставка не закрыта."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The new policy has two main ______ it lowers costs for small businesses, and it simplifies the application process.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "advantages:",
+    "advantages,",
+    "advantages",
+    "advantages, and"
+   ],
+   "answer": 0,
+   "explanation": "Вторая часть раскрывает два преимущества — двоеточие (A). Запятая — comma splice; без знака — run-on; «and it lowers… and it simplifies» ломает смысл «two main advantages»."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The scientists who studied the Alpine ______ found that it had retreated more than a kilometer since 1950.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "glacier",
+    "glacier,",
+    "glacier;",
+    "glacier:"
+   ],
+   "answer": 0,
+   "explanation": "«who studied the Alpine glacier» — ограничительное придаточное, без него неясно, о каких учёных речь, поэтому запятые не нужны, и между подлежащим и сказуемым found знак не ставится (A). Любой знак здесь разрывает подлежащее и сказуемое."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some animals hibernate through the ______ others, like many birds, migrate to warmer places.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "winter: and",
+    "winter;",
+    "winter,",
+    "winter"
+   ],
+   "answer": 1,
+   "explanation": "Два независимых предложения — точка с запятой (B). Запятая — comma splice; без знака — run-on; «: and» — неверное сочетание."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The orchestra's longtime conductor, Ana ______ announced her retirement after thirty years.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "Ruiz—",
+    "Ruiz,",
+    "Ruiz",
+    "Ruiz;"
+   ],
+   "answer": 1,
+   "explanation": "Имя — приложение, открытое запятой, и закрывается запятой (B). Тире не сочетается с открывающей запятой; точка с запятой отрывает сказуемое; без знака вставка не закрыта."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A palindrome is a word that reads the same backward as ______ examples include level, radar, and noon.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "forward;",
+    "forward,",
+    "forward",
+    "forward, for"
+   ],
+   "answer": 0,
+   "explanation": "Два независимых предложения — точка с запятой (A). Запятая — comma splice; без знака — run-on; «for examples include» — неграмматичная конструкция."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Only two of the planets in our solar system have no ______ Mercury and Venus.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "moons,",
+    "moons",
+    "moons:",
+    "moons;"
+   ],
+   "answer": 2,
+   "explanation": "Двоеточие вводит уточнение «Mercury and Venus» после полного предложения (C). Точка с запятой требует полного предложения справа; запятая и отсутствие знака не связывают уточнение ясно."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The garden's most popular feature is its rose ______ a winding path lined with more than two hundred varieties of roses.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "walk:",
+    "walk;",
+    "walk",
+    "walk, it is"
+   ],
+   "answer": 0,
+   "explanation": "Двоеточие вводит пояснение того, что такое «rose walk» (A). Точка с запятой требует полного предложения; без знака слова сливаются; «walk, it is a winding path» — comma splice."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Although the experiment failed to produce the expected ______ it revealed a flaw in the equipment that had affected earlier studies.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "results:",
+    "results",
+    "results,",
+    "results;"
+   ],
+   "answer": 2,
+   "explanation": "Придаточное с although в начале отделяется запятой (C). Точка с запятой и двоеточие требуют полного предложения слева, а «Although…» — придаточное; без знака граница теряется."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The town's oldest building—a stone mill constructed in ______ now houses a museum of local history.",
+   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "choices": [
+    "1792,",
+    "1792",
+    "1792;",
+    "1792—"
+   ],
+   "answer": 3,
+   "explanation": "Вставка открыта тире — закрывается тире (D). Запятая не сочетается с открывающим тире; без знака вставка не закрыта; точка с запятой разрывает предложение."
+  }
+ ]
+}
