@@ -96,7 +96,20 @@ for (const t of tasks.filter((x) => x.type === "mcq")) {
   if (typeof t.answer !== "number" || t.answer < 0 || t.answer >= choices.length) errors.push(`${t.id}: answer is not one choice`);
 }
 
+// --------------------------------------------------------- explanations --
+
+// Traces of a draft left in an explanation ("…", "нет:", "?" in the middle of a sentence).
+for (const t of tasks) {
+  if (/\.\.\.|…|\bнет[:,]|\?\s/.test(t.explanation)) errors.push(`${t.id}: explanation looks unfinished — ${t.explanation.slice(0, 80)}`);
+  if (t.type === "mcq" && !/[A-D]\)/.test(t.explanation) && !/\([A-D]\)/.test(t.explanation)) {
+    const letter = "ABCD"[t.answer as number];
+    if (letter && !t.explanation.includes(letter) && !FIXED_CHOICES[t.skill.split(".")[1]]) warnings.push(`${t.id}: explanation does not name the right choice (${letter})`);
+  }
+}
+
 // ------------------------------------------------------- SAT Math check --
+
+const SUPERSCRIPT: Record<string, string> = { "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9", "⁻": "-" };
 
 /** Displayed math → mathjs syntax. */
 function toMathjs(s: string): string {
@@ -104,10 +117,9 @@ function toMathjs(s: string): string {
     .replace(/[−–]/g, "-")
     .replace(/×/g, "*")
     .replace(/÷/g, "/")
-    .replace(/²/g, "^2")
-    .replace(/³/g, "^3")
-    .replace(/√\(/g, "sqrt(")
-    .replace(/√(\d+)/g, "sqrt($1)")
+    .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+/g, (m) => `^(${[...m].map((c) => SUPERSCRIPT[c]).join("")})`)
+    .replace(/√\(/g, " sqrt(")
+    .replace(/√(\d+)/g, " sqrt($1)")
     .replace(/π/g, "pi")
     .replace(/,(?=\d{3}\b)/g, "")
     .replace(/^\$/, "")
@@ -147,6 +159,8 @@ function variablesIn(expr: string): string[] {
 function formulaOf(choice: string): string | null {
   // Inequalities ("x < 9", "12 ≤ t < 20") are relations to reason about, not values.
   if (/[<>≤≥≠]/.test(choice)) return null;
+  // Words ("2 and −5", "Zero") make it a worded choice; sqrt, log and pi are math.
+  if (/[A-Za-z]{2,}/.test(choice.replace(/sqrt|log|pi/g, ""))) return null;
   const parts = choice.split("=");
   if (parts.length === 1) return choice;
   if (parts.length !== 2) return null;
@@ -191,7 +205,10 @@ for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
       continue;
     }
     if (t.type === "mcq") {
-      const matches = (t.choices ?? []).map((c) => evaluate(c)).filter((v) => v !== null && close(v, value)).length;
+      const matches = (t.choices ?? [])
+        .map(formulaOf)
+        .map((c) => (c === null ? null : evaluate(c)))
+        .filter((v) => v !== null && close(v, value)).length;
       if (!close(numeric!, value)) errors.push(`${t.id}: check gives ${value}, the marked choice is ${answerText}`);
       else if (matches !== 1) errors.push(`${t.id}: ${matches} choices equal the computed answer ${value}`);
     } else {

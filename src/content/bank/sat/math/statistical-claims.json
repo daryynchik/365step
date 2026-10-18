@@ -1,0 +1,642 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "math",
+  "domain": "problem-solving-data",
+  "skill": "statistical-claims",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "A researcher randomly assigns 100 volunteers to drink either green tea or water every day for a month and then measures their energy levels. Which of the following best describes this study?",
+   "choices": [
+    "An experiment",
+    "An observational study",
+    "A survey of a random sample",
+    "A census"
+   ],
+   "answer": 0,
+   "explanation": "Исследователь сам назначает напиток случайным образом — это эксперимент (A). В наблюдательном исследовании участники ничего не получают от исследователя; опрос и перепись только собирают ответы."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "A study records the usual diets of 500 people and, ten years later, compares their heart health. The researchers do not tell anyone what to eat. Which of the following best describes this study?",
+   "choices": [
+    "An experiment",
+    "A randomized controlled trial",
+    "A simulation",
+    "An observational study"
+   ],
+   "answer": 3,
+   "explanation": "Исследователи только наблюдают, ничего не назначая, — это наблюдательное исследование (D). В эксперименте и рандомизированном испытании лечение назначают; симуляция не изучает реальных людей."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "Why do researchers use random assignment in an experiment?",
+   "choices": [
+    "To increase the number of participants",
+    "To let participants choose the group they prefer",
+    "To make the groups similar, so that differences in results can be attributed to the treatment",
+    "To make sure every person in the country is included"
+   ],
+   "answer": 2,
+   "explanation": "Случайное распределение делает группы похожими по всему остальному, и разницу можно приписать воздействию (C). Оно не охватывает всю страну и не увеличивает число участников; выбор группы самими участниками как раз портит сравнение."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "An observational study finds that people who exercise more tend to sleep better. Which conclusion is supported by the study?",
+   "choices": [
+    "Exercise causes better sleep.",
+    "Better sleep causes people to exercise more.",
+    "Everyone who exercises sleeps well.",
+    "Exercise is associated with better sleep among the people studied."
+   ],
+   "answer": 3,
+   "explanation": "Наблюдение показывает связь, но не причину (D). Утверждения о причине в любую сторону требуют эксперимента; «каждый» — слишком сильное обобщение тенденции."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "In an experiment testing a new fertilizer, one group of plants receives no fertilizer so that it can be compared with the plants that do. What is this group called?",
+   "choices": [
+    "The treatment group",
+    "The control group",
+    "The sample",
+    "The population"
+   ],
+   "answer": 1,
+   "explanation": "Группа без воздействия для сравнения — контрольная (B). Выборка — все участники; генеральная совокупность — те, о ком делают вывод; группа воздействия получает удобрение."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "The results of a study can be generalized to a larger population only if which of the following is true?",
+   "choices": [
+    "The participants were volunteers.",
+    "The results were surprising.",
+    "The participants were randomly selected from that population.",
+    "The study included a control group."
+   ],
+   "answer": 2,
+   "explanation": "Обобщать на совокупность позволяет случайный отбор из неё (C). Контрольная группа нужна для вывода о причине, а не об обобщении; добровольцы — как раз проблема; «удивительность» не важна."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "A teacher wants to find out whether listening to music while studying helps students focus. Which study design would allow a conclusion about cause and effect?",
+   "choices": [
+    "Ask students whether they like studying with music.",
+    "Compare the grades of students who say they listen to music with the grades of those who do not.",
+    "Survey parents about their children's study habits.",
+    "Randomly assign students to study with or without music and compare their test scores."
+   ],
+   "answer": 3,
+   "explanation": "Причинный вывод даёт эксперимент со случайным распределением (D). Сравнение тех, кто сам слушает музыку, — наблюдение с возможными скрытыми факторами; мнения учеников и родителей не измеряют эффект."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "An online survey was answered by 50 people who visited a museum's website, and 90% of them said they enjoyed their visit to the museum. Which is the main problem with generalizing this result to all museum visitors?",
+   "choices": [
+    "90% is too high to be correct.",
+    "The survey asked about the museum.",
+    "People who visit the museum's website may not represent all visitors.",
+    "The 50 people were chosen at random."
+   ],
+   "answer": 2,
+   "explanation": "Посетители сайта и те, кто ответил, — не случайная выборка всех посетителей (C). Случайности здесь как раз нет; высокий процент сам по себе не ошибка; тема опроса не проблема."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "In a well-designed experiment with random assignment, the group that received a treatment improved more than the control group. Which conclusion is most appropriate?",
+   "choices": [
+    "Nothing can be concluded from an experiment.",
+    "The treatment likely caused the improvement for subjects like those in the study.",
+    "The treatment works for every person in the world.",
+    "The control group was chosen badly."
+   ],
+   "answer": 1,
+   "explanation": "Случайное распределение позволяет говорить о причине — для таких же участников (B). Обобщать на всех людей без случайного отбора нельзя; плохой контрольной группы в условии нет; эксперименты как раз дают выводы."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "Which of the following best describes a confounding variable in a study?",
+   "choices": [
+    "The number of participants in the study",
+    "The result that the study measures",
+    "A variable other than the one being studied that may affect the outcome",
+    "The variable that the researcher changes on purpose"
+   ],
+   "answer": 2,
+   "explanation": "Мешающая переменная — посторонний фактор, который тоже влияет на результат и путает выводы (C). То, что меняет исследователь, — фактор воздействия; результат — отклик; размер выборки — не переменная."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "A study finds that cities with more public libraries tend to have lower crime rates. Which of the following is most likely a confounding variable?",
+   "choices": [
+    "The names of the cities",
+    "The colors of the library buildings",
+    "The average income in each city",
+    "The number of books in each library"
+   ],
+   "answer": 2,
+   "explanation": "Доход может влиять и на число библиотек, и на преступность — это возможная мешающая переменная (C). Число книг, названия и цвета зданий не объясняют связь."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "A company randomly selects 300 of its 6,000 employees for a survey and finds that 40% of them want a four-day work week. To which group can this result most reasonably be generalized?",
+   "choices": [
+    "Only the 300 employees who were surveyed",
+    "Employees of other companies",
+    "All 6,000 employees of the company",
+    "All workers in the country"
+   ],
+   "answer": 2,
+   "explanation": "Случайная выборка из сотрудников компании позволяет судить обо всех её сотрудниках (C). Работники страны и других компаний в выборку не попадали; вывод только о 300 опрошенных слишком узок."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "In a study of a new medicine, some participants receive a pill that looks like the medicine but contains no active ingredient. What is this pill called?",
+   "choices": [
+    "A placebo",
+    "The treatment",
+    "A sample",
+    "A confounding variable"
+   ],
+   "answer": 0,
+   "explanation": "Пустышка, похожая на лекарство, — плацебо (A). Лечение — само лекарство; выборка — участники; мешающая переменная — посторонний фактор."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "Adults chose whether to join a running club, and a year later the club members had lower average blood pressure than the adults who did not join. Why can't this study show that running lowers blood pressure?",
+   "choices": [
+    "The study had too many participants.",
+    "Running cannot affect blood pressure.",
+    "The study measured blood pressure.",
+    "People who chose to run may differ in other ways, such as diet."
+   ],
+   "answer": 3,
+   "explanation": "Люди сами выбирали клуб, поэтому могут отличаться и питанием, и здоровьем — мешающие факторы (D). Число участников не мешает; бег вполне может влиять; измерение давления — суть исследования."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "stem": "A researcher wants survey results that apply to all high school students in a state. Which sample would be best?",
+   "choices": [
+    "Students in honors classes across the state",
+    "Students chosen at random from a list of all high school students in the state",
+    "Students at the researcher's own school",
+    "Students who volunteer to take an online survey"
+   ],
+   "answer": 1,
+   "explanation": "Случайный выбор из всех старшеклассников штата делает выборку представительной (B). Одна школа, добровольцы и только сильные классы дают смещённые выборки."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "Researchers selected 200 adults at random from a city and then randomly assigned half of them to take a vitamin and half to take a placebo. The adults who took the vitamin had fewer colds. Which conclusion is most appropriate?",
+   "choices": [
+    "The results apply only to the 200 adults in the study.",
+    "The vitamin likely reduces colds for adults in the city.",
+    "The vitamin reduces colds for all people everywhere.",
+    "The vitamin is associated with fewer colds, but no conclusion about cause is possible."
+   ],
+   "answer": 1,
+   "explanation": "Случайный отбор позволяет обобщить на взрослых города, случайное распределение — говорить о причине (B). На всех людей мира обобщать нельзя; вывод о причине как раз возможен; ограничиваться 200 участниками не нужно."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "Volunteers at one gym were randomly assigned to one of two workout programs, and program A led to greater average strength gains. Which statement is most appropriate?",
+   "choices": [
+    "Program A likely causes greater gains for people like these volunteers, but the results may not apply to all adults.",
+    "Program A causes greater gains for all adults.",
+    "No conclusion about cause and effect is possible.",
+    "The results apply to everyone who uses the gym."
+   ],
+   "answer": 0,
+   "explanation": "Случайное распределение даёт право на причинный вывод, но участники — добровольцы одного зала, поэтому обобщать осторожно (A). На всех взрослых и всех посетителей зала обобщать нельзя; причинный вывод возможен."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "A random sample of 1,000 adults in a country shows that adults who drink coffee report having more energy than those who do not. Which conclusion is appropriate?",
+   "choices": [
+    "Coffee causes adults in the country to have more energy.",
+    "Having more energy causes people to drink coffee.",
+    "The result applies only to the 1,000 adults in the sample.",
+    "Among adults in the country, drinking coffee is associated with higher reported energy."
+   ],
+   "answer": 3,
+   "explanation": "Случайная выборка позволяет обобщить связь на взрослых страны, но без эксперимента — только связь (D). Причинные выводы в обе стороны не обоснованы; ограничиваться выборкой не нужно."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "In a study, students who chose to use a tutoring app scored higher on a test than students who chose not to use it. Which change to the study would allow a conclusion about whether the app causes higher scores?",
+   "choices": [
+    "Randomly assign students to use or not use the app.",
+    "Survey more students.",
+    "Include only students with high grades.",
+    "Ask students how much they liked the app."
+   ],
+   "answer": 0,
+   "explanation": "Причину позволяет установить случайное распределение (A). Больше участников не убирает самоотбор; только сильные ученики добавляют смещение; мнение об удобстве не измеряет эффект."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "In a study, 30 volunteers were randomly assigned to a new diet or a control diet, and the new diet lowered cholesterol more. Why should the result be generalized to a larger population with caution?",
+   "choices": [
+    "Cholesterol was measured in all participants.",
+    "The participants were volunteers rather than a random sample of a population.",
+    "The participants were randomly assigned to the diets.",
+    "The study included a control group."
+   ],
+   "answer": 1,
+   "explanation": "Обобщение требует случайного отбора, а здесь добровольцы (B). Случайное распределение и контрольная группа — сильные стороны исследования, а измерение у всех — норма."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "Which of the following describes a double-blind experiment?",
+   "choices": [
+    "Both groups receive the treatment.",
+    "Two different researchers run the study.",
+    "Neither the participants nor the researchers who measure the outcomes know who receives the treatment.",
+    "The participants know their group, but the researchers do not."
+   ],
+   "answer": 2,
+   "explanation": "Двойное слепое — не знают ни участники, ни те, кто оценивает результат (C). Когда не знает только одна сторона, это простое слепое; если обе группы получают лечение, сравнения нет."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "A news report says that students who eat breakfast earn higher grades, based on the school records of 5,000 students. A reader concludes that eating breakfast raises grades. Why is the reader's conclusion not justified?",
+   "choices": [
+    "School records cannot be used in research.",
+    "Grades cannot be measured.",
+    "The study is observational, so other factors could explain the difference.",
+    "5,000 students is too small a sample."
+   ],
+   "answer": 2,
+   "explanation": "Данные наблюдательные: у тех, кто завтракает, могут отличаться режим, семья, сон (C). 5000 — большая выборка; записи школы и оценки — нормальные данные."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "In an experiment on plant growth, a researcher grows plants that receive a growth spray in a sunny window and plants that receive no spray in a shaded room. What is the main flaw in this design?",
+   "choices": [
+    "Only one group received the spray.",
+    "The amount of sunlight differs between the groups, so it is confounded with the spray.",
+    "There are two groups of plants.",
+    "The plants' growth was measured."
+   ],
+   "answer": 1,
+   "explanation": "Свет различается вместе со спреем, и эффект нельзя разделить (B). Две группы и одна обработанная — так и должно быть; измерение роста — суть эксперимента."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "A town council surveys the residents who attend a public meeting about a new park, and 80% of them support the park. Which of the following best describes this sample?",
+   "choices": [
+    "A simple random sample",
+    "A census of all residents",
+    "A stratified random sample",
+    "A convenience sample that may be biased"
+   ],
+   "answer": 3,
+   "explanation": "Опрошены те, кто пришёл, — удобная выборка; на собрание чаще приходят заинтересованные (D). Случайного отбора и стратификации нет, и опрошены не все жители."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "Researchers want to test whether a new teaching method improves math scores. Four classes are available. Which is the best way to decide which classes use the new method?",
+   "choices": [
+    "Let the teachers who like the new method use it.",
+    "Use the new method in the 2 strongest classes.",
+    "Use the new method in all 4 classes and compare the scores with last year's scores.",
+    "Randomly select 2 classes to use the new method and 2 to use the usual method."
+   ],
+   "answer": 3,
+   "explanation": "Случайный выбор классов делает группы сопоставимыми (D). Выбор учителей или сильных классов вносит смещение; сравнение с прошлым годом путает метод с другими изменениями."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "At one hospital, patients who received treatment X recovered faster than other patients. The patients' doctors decided who received treatment X. Which statement is true?",
+   "choices": [
+    "The study is a randomized experiment.",
+    "Doctors may have given X to patients who were already healthier, so the effect of X is unclear.",
+    "Treatment X definitely speeds recovery.",
+    "Treatment X slows recovery."
+   ],
+   "answer": 1,
+   "explanation": "Врачи выбирали, кому давать X, — возможен отбор более здоровых пациентов (B). Делать вывод о пользе или вреде X нельзя; распределение не было случайным."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "A random sample of 500 students at a university found that students who live on campus have higher average GPAs than students who live off campus. Which conclusion is appropriate?",
+   "choices": [
+    "Living on campus causes higher GPAs at all universities.",
+    "Living on campus causes higher GPAs at this university.",
+    "No conclusion about the university's students can be made.",
+    "At the university, living on campus is associated with higher GPAs."
+   ],
+   "answer": 3,
+   "explanation": "Случайная выборка — вывод про университет, но без эксперимента — только связь (D). Причину установить нельзя ни здесь, ни тем более в других вузах; вывод о студентах университета сделать можно."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "In an experiment, 60 participants were randomly assigned to three groups of 20, and each group received a different dose of a supplement. What is the main purpose of the random assignment?",
+   "choices": [
+    "To make the groups comparable, so that differences in results can be attributed to the dose",
+    "To make the experiment shorter",
+    "To make sure every participant gets the highest dose",
+    "To avoid having to measure the results"
+   ],
+   "answer": 0,
+   "explanation": "Случайность выравнивает группы, и различия можно связать с дозой (A). На длительность, дозы и необходимость измерений она не влияет."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "Which of the following survey questions is most likely to produce biased responses?",
+   "choices": [
+    "How many people live in your household?",
+    "Don't you agree that the new, expensive stadium is a waste of money?",
+    "How many hours do you sleep on a typical night?",
+    "On which day of the week do you usually shop?"
+   ],
+   "answer": 1,
+   "explanation": "Вопрос подсказывает ответ («разве вы не согласны», «дорогой») — наводящая формулировка (B). Остальные вопросы нейтральные и фактические."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "stem": "A random sample of teenagers with acne was selected from a state, and the teenagers were randomly assigned to use a new cream or a placebo cream. The new cream reduced acne more. To which group do the results most reasonably apply?",
+   "choices": [
+    "Adults in the state",
+    "Teenagers with acne in that state",
+    "All people with acne",
+    "Only the teenagers in the study"
+   ],
+   "answer": 1,
+   "explanation": "Выборка — случайная из подростков с акне этого штата, поэтому вывод — о них (B). Взрослых и людей в других местах в выборке не было; ограничиваться участниками не нужно."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Researchers selected 400 people at random from a country and recorded each person's average number of daily steps and weight. People who walked more weighed less, on average. Which conclusion is best supported?",
+   "choices": [
+    "Walking more causes people in the country to weigh less.",
+    "Walking more causes weight loss, but only for the people in the study.",
+    "There is no relationship, because the study did not use random assignment.",
+    "In the country, more daily steps are associated with lower weight, but the study cannot show that walking causes weight loss."
+   ],
+   "answer": 3,
+   "explanation": "Случайный отбор — вывод о стране, отсутствие эксперимента — только связь (D). Причинные утверждения не обоснованы; отсутствие случайного распределения не отменяет наблюдаемую связь."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Volunteers from a single college were randomly assigned to sleep either 8 hours or 5 hours before taking a memory test, and the 8-hour group scored higher on average. Which statement is most appropriate?",
+   "choices": [
+    "More sleep improves memory for all adults.",
+    "The results show only an association between sleep and memory.",
+    "The results cannot be trusted because the volunteers were randomly assigned.",
+    "More sleep likely improves memory test scores for people similar to the volunteers."
+   ],
+   "answer": 3,
+   "explanation": "Эксперимент со случайным распределением даёт причинный вывод для похожих людей (D). Обобщать на всех взрослых нельзя — участники добровольцы одного колледжа; случайное распределение — достоинство, а не недостаток."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Schools could choose to use teaching method A; the other schools used method B. Schools that used method A had higher average scores. A critic points out that the schools that chose method A also had more funding. The critic is describing which of the following?",
+   "choices": [
+    "A sampling error that disappears in large samples",
+    "Confounding",
+    "Random assignment",
+    "A placebo effect"
+   ],
+   "answer": 1,
+   "explanation": "Финансирование связано и с выбором метода, и с результатами — это смешение факторов (B). Случайного распределения не было; плацебо здесь ни при чём; смещение не исчезает от роста выборки."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Which study would best support the claim that reading for 20 minutes a day improves vocabulary scores among the 5th graders in a city?",
+   "choices": [
+    "Compare the vocabulary scores of 5th graders in two different cities.",
+    "Randomly select 5th graders in the city, randomly assign them to read 20 minutes a day or not, and compare their scores.",
+    "Survey 5th graders about how much they read and compare their vocabulary scores.",
+    "Ask volunteers to read daily and record their scores."
+   ],
+   "answer": 1,
+   "explanation": "Нужны и случайный отбор (вывод о пятиклассниках города), и случайное распределение (вывод о причине) (B). Опрос — наблюдение; добровольцы без контрольной группы ничего не доказывают; другие города различаются многим."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "In a randomized experiment, the treatment group's mean score was 4 points higher than the control group's. When the same results were randomly reassigned to two groups many times, a difference of 4 points or more occurred in 40% of the reassignments. What does this suggest?",
+   "choices": [
+    "The treatment definitely works.",
+    "The experiment was not randomized.",
+    "The sample must have been biased.",
+    "The difference could easily be due to chance, so the evidence of a treatment effect is weak."
+   ],
+   "answer": 3,
+   "explanation": "Если такая разница возникает случайно в 40% перестановок, она вполне объяснима случайностью (D). Это не доказывает эффект и не говорит о плохой рандомизации или смещении."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "A random sample of 1,500 voters is surveyed by calling only landline telephone numbers. Which is the most likely source of bias?",
+   "choices": [
+    "Telephone surveys have no bias.",
+    "The voters were chosen at random.",
+    "Voters without landlines, who are often younger, are left out.",
+    "The sample is too large."
+   ],
+   "answer": 2,
+   "explanation": "Без стационарных телефонов выпадает часть избирателей, чаще молодых, — выборка смещена (C). Большой размер не вредит; телефонные опросы тоже бывают смещены; случайность среди владельцев телефонов не спасает."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "In an experiment, tomato plants were randomly assigned to receive a fertilizer or no fertilizer, and the fertilized plants produced more tomatoes. All of the plants were of one variety. Which is the most appropriate scope for the conclusion?",
+   "choices": [
+    "The fertilizer increases yield for all plants.",
+    "The fertilizer increases yield for all varieties of tomato.",
+    "No conclusion about cause is possible.",
+    "The fertilizer likely increases yield for that variety of tomato under similar conditions."
+   ],
+   "answer": 3,
+   "explanation": "Причинный вывод возможен, но только для изученного сорта и условий (D). На все растения и все сорта распространять нельзя; случайное распределение как раз позволяет говорить о причине."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Which of the following situations is an example of response bias?",
+   "choices": [
+    "Students underreport the time they spend playing video games because they think their parents will see the answers.",
+    "A sample is chosen at random from a complete list.",
+    "A researcher uses a large sample.",
+    "A study includes a control group."
+   ],
+   "answer": 0,
+   "explanation": "Смещение ответов — когда люди отвечают неточно, например из-за давления (A). Остальные варианты описывают хорошие практики исследования."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Researchers observed that hospitals with more nurses per patient had lower patient death rates. Which is the most reasonable next step to investigate whether more nurses cause lower death rates?",
+   "choices": [
+    "Survey nurses about their workload and nothing else.",
+    "Conduct a study that assigns staffing levels at random where ethical and practical, or control for factors such as hospital size and patients' health.",
+    "Conclude that hiring more nurses will lower death rates at every hospital.",
+    "Ignore the data because they come from an observational study."
+   ],
+   "answer": 1,
+   "explanation": "Чтобы проверить причину, нужен эксперимент или хотя бы учёт мешающих факторов (B). Делать причинный вывод сразу нельзя, но и выбрасывать наблюдение незачем; опрос о нагрузке не проверяет связь."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "In a study, 80 patients were randomly assigned to drug A or drug B. Patients who took drug A recovered in 6.1 days on average, and patients who took drug B recovered in 6.3 days on average. Without further analysis, which conclusion is most appropriate?",
+   "choices": [
+    "Neither drug has any effect on recovery.",
+    "The difference is small and might be due to random variation, so neither drug can yet be declared better.",
+    "Drug A is clearly better.",
+    "Drug B is better because 6.3 is greater than 6.1."
+   ],
+   "answer": 1,
+   "explanation": "Разница 0.2 дня при 80 пациентах может быть случайной — без проверки значимости вывода нет (B). «Явно лучше» не обосновано; большее время выздоровления — хуже, а не лучше; об отсутствии эффекта тоже судить нельзя."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "On a website, 2,000 visitors chose to answer a poll, and 70% of them favored a policy. Which statement is correct?",
+   "choices": [
+    "Voluntary samples always underestimate support for a policy.",
+    "Because the respondents chose themselves, the 70% may not represent any larger population.",
+    "Because 2,000 is a large number, the result represents the whole country.",
+    "The margin of error makes the result exact."
+   ],
+   "answer": 1,
+   "explanation": "Добровольная выборка смещена: отвечают те, кому тема важна (B). Большой размер не исправляет смещение; погрешность не делает оценку точной; направление смещения заранее неизвестно."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "A random sample of 100 students at a school was divided by random assignment into two groups to test a new study app. If the group that used the app scores higher, which conclusion is justified?",
+   "choices": [
+    "The app has no effect on students at the school.",
+    "The app likely causes higher scores among students at the school.",
+    "The app causes higher scores among all students in the country.",
+    "The app is only associated with higher scores."
+   ],
+   "answer": 1,
+   "explanation": "Случайный отбор из школы и случайное распределение — причинный вывод об учениках этой школы (B). На страну обобщать нельзя; вывод сильнее простой связи."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "A researcher wants to compare two fertilizers using 20 plots of land that differ in soil quality. Which design best reduces the effect of soil quality on the comparison?",
+   "choices": [
+    "Use only one of the fertilizers.",
+    "Pair plots with similar soil and randomly assign one fertilizer to each plot in a pair.",
+    "Use fertilizer 1 on the 10 plots with the best soil.",
+    "Let a farmer choose which plots get each fertilizer."
+   ],
+   "answer": 1,
+   "explanation": "Пары с похожей почвой и случайный выбор внутри пары уравновешивают почву (B). Лучшие участки для одного удобрения и выбор фермера смешивают почву с удобрением; одно удобрение не даёт сравнения."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "A study based on 10,000 medical records claims that people who own pets live longer. Which of the following is a possible confounding explanation?",
+   "choices": [
+    "The study included 10,000 people.",
+    "People who own pets may be wealthier or more active, and these factors also affect lifespan.",
+    "Pets cause people to live longer.",
+    "The records came from medical files."
+   ],
+   "answer": 1,
+   "explanation": "Достаток и активность могут влиять и на владение питомцем, и на продолжительность жизни (B). «Питомцы продлевают жизнь» — та самая причинная гипотеза, а не объяснение через мешающий фактор; источник и размер данных этим не являются."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "stem": "Which statement about sample size is correct?",
+   "choices": [
+    "A small random sample is always unbiased and precise.",
+    "Sample size does not affect the margin of error.",
+    "A larger random sample reduces random error but does not fix bias in how the sample was chosen.",
+    "A larger sample always removes bias."
+   ],
+   "answer": 2,
+   "explanation": "Размер выборки уменьшает случайную ошибку, но не исправляет смещение отбора (C). Большая смещённая выборка остаётся смещённой; малая случайная выборка неточна; размер влияет на погрешность."
+  }
+ ]
+}
