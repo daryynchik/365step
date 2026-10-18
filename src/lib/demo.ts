@@ -11,6 +11,8 @@ import { randomUUID } from "node:crypto";
 
 import { COURSES, findByKey, flatten } from "@/content";
 import type { FieldId } from "@/content/fields/ids";
+import { bankLesson } from "@/content/bank/lessons";
+import type { ExamEntry } from "@/content/exams";
 import { planFor, reviewLesson, type CountryId } from "@/content/plan";
 import type { Lesson } from "@/content/types";
 import { DEFAULT_SHIELD, DEFAULT_WEAPON, item, simulate, type Fighter, type FighterColor } from "./arena-rules";
@@ -37,6 +39,8 @@ interface Persona {
   days: number;
   color: FighterColor;
   gear: string[];
+  /** Reported exam scores; exam dates are given in days from today. */
+  scores?: (Omit<ExamEntry, "examDate"> & { examInDays: number | null })[];
 }
 
 const DEMO: Persona = {
@@ -50,6 +54,17 @@ const DEMO: Persona = {
   days: 18,
   color: "blue",
   gear: ["bronze-dagger", "leather-buckler"],
+  scores: [
+    { exam: "sat", current: { total: 1150, sections: { rw: 620, math: 530 } }, takenDate: null, source: "bluebook", target: 1400, examInDays: 120 },
+    {
+      exam: "ielts",
+      current: { total: 6, sections: { listening: 6.5, reading: 6, writing: 5.5, speaking: 6 } },
+      takenDate: null,
+      source: null,
+      target: 7,
+      examInDays: 170,
+    },
+  ],
 };
 
 const FRIENDS: Persona[] = [
@@ -58,6 +73,7 @@ const FRIENDS: Persona[] = [
     name: "Данияр",
     goal: { country: "uk", field: "engineering", grade: 11, graduationMonthsAhead: 8 },
     trackDays: 9,
+    scores: [{ exam: "ielts", current: { total: 7, sections: { listening: 7.5, reading: 7, writing: 6.5, speaking: 7 } }, takenDate: null, source: null, target: 7.5, examInDays: null }],
     streak: 12,
     days: 20,
     color: "green",
@@ -149,7 +165,22 @@ async function createPersona(p: Persona, passwordHash: string): Promise<{ id: st
     "INSERT INTO student_profiles (user_id, country, field, grade, graduation, start_date, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
     [id, p.goal.country, p.goal.field, p.goal.grade, graduation, startDate, nowIso()],
   );
-  const plan = planFor({ country: p.goal.country, field: p.goal.field, grade: p.goal.grade, graduation, startDate });
+  const entries: ExamEntry[] = (p.scores ?? []).map(({ examInDays, ...e }) => ({
+    ...e,
+    takenDate: e.current ? addDays(startDate, -14) : null,
+    examDate: examInDays === null ? null : addDays(today, examInDays),
+  }));
+  if (p.scores) {
+    await run("INSERT INTO student_scores (user_id, payload, updated_at) VALUES (?, ?, ?)", [id, JSON.stringify({ entries }), nowIso()]);
+    for (const e of entries) {
+      await run(
+        `INSERT INTO score_history (id, user_id, exam, total, sections, taken_date, source, target, exam_date, recorded_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [randomUUID(), id, e.exam, e.current?.total ?? null, JSON.stringify(e.current?.sections ?? {}), e.takenDate, e.source, e.target, e.examDate, `${startDate}T09:00:00.000Z`],
+      );
+    }
+  }
+  const plan = planFor({ country: p.goal.country, field: p.goal.field, grade: p.goal.grade, graduation, startDate }, { entries, diagnostic: {} });
 
   // Finished steps: each on the date of its plan day; seminar lessons spread over the same days.
   const finished: { key: string; lesson: Lesson; day: string }[] = [];
@@ -158,7 +189,11 @@ async function createPersona(p: Persona, passwordHash: string): Promise<{ id: st
     ...(plan.days[p.trackDays]?.steps.slice(0, p.partial ?? 0).map((s) => ({ key: s.key, day: today })) ?? []),
   ];
   for (const { key, day } of planSteps) {
-    const lesson = key.startsWith("review/") ? reviewLesson(plan, key)?.lesson : findByKey(key)?.lesson;
+    const lesson = key.startsWith("review/")
+      ? reviewLesson(plan, key)?.lesson
+      : key.startsWith("bank/")
+        ? bankLesson(plan, key)?.lesson
+        : findByKey(key)?.lesson;
     if (lesson) finished.push({ key, lesson, day });
   }
   flatten(COURSES.seminar)

@@ -268,13 +268,19 @@ export function PlanMap({ plan, done, today, openWeek }: { plan: Plan; done: Set
 }
 
 function phaseNote(week: PlanDay[]): string {
+  const steps = week.flatMap((d) => d.steps);
+  if (steps.some((s) => s.key.startsWith("bank/mock~") || s.key.startsWith("bank/weak~"))) return "перед экзаменом: пробные секции и слабые места";
   const phases = new Set(week.map((d) => d.phase));
   if (phases.has("final")) return "финальная подготовка, пробные секции";
   if (phases.has("after") && !phases.has("prep")) return "после подачи: чтение и повторение";
-  const lessons = week.flatMap((d) => d.steps).filter((s) => s.kind === "lesson").length;
-  if (lessons === 0) return "повторение";
-  const n10 = lessons % 10;
-  const n100 = lessons % 100;
-  const word = n10 === 1 && n100 !== 11 ? "новый урок" : n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14) ? "новых урока" : "новых уроков";
-  return `${lessons} ${word}`;
+  const lessons = steps.filter((s) => s.kind === "lesson").length;
+  const practice = steps.filter((s) => s.kind === "practice").length;
+  const parts: string[] = [];
+  if (lessons > 0) {
+    const n10 = lessons % 10;
+    const n100 = lessons % 100;
+    parts.push(`${lessons} ${n10 === 1 && n100 !== 11 ? "новый урок" : n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14) ? "новых урока" : "новых уроков"}`);
+  }
+  if (practice > 0) parts.push(`практика: ${practice}`);
+  return parts.length ? parts.join(" · ") : "повторение";
 }

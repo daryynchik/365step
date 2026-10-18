@@ -2,12 +2,11 @@
 
 import { revalidatePath } from "next/cache";
 
-import { findLesson } from "@/content";
 import type { Response } from "@/lib/answers";
 import { requireUser } from "@/lib/auth";
 import { examinerFollowUp, speakingAssessment, writingFeedback, type FeedbackResult } from "@/lib/ai-feedback";
 import { getOrCreatePractice, getPracticeSet, type PracticeOutcome } from "@/lib/content-engine";
-import { completeLesson, completePractice, saveDraft, submitSpeaking, submitWriting, type CompletionResult } from "@/lib/game";
+import { completeLesson, completePractice, findTask, saveDraft, submitSpeaking, submitWriting, type CompletionResult } from "@/lib/game";
 
 function revalidateProgress(): void {
   // Points and streaks show in the header of every page.
@@ -38,8 +37,8 @@ export async function submitWritingAction(courseId: string, lessonId: string, bo
 }
 
 export async function writingFeedbackAction(courseId: string, lessonId: string, body: string): Promise<FeedbackResult> {
-  await requireUser();
-  const task = findLesson(courseId, lessonId)?.lesson.writing;
+  const user = await requireUser();
+  const task = (await findTask(user.id, courseId, lessonId))?.lesson.writing;
   if (!task) return { ok: false, error: "Задание не найдено." };
   if (body.trim().split(/\s+/).length < 40) return { ok: false, error: "Напиши хотя бы 40 слов — тогда будет что обсуждать." };
   return writingFeedback(task, body.slice(0, 12_000));
@@ -56,15 +55,15 @@ function cleanTurns(turns: Turn[]): Turn[] {
 }
 
 export async function examinerFollowUpAction(courseId: string, lessonId: string, turns: Turn[]): Promise<string | null> {
-  await requireUser();
-  const spec = findLesson(courseId, lessonId)?.lesson.speaking;
+  const user = await requireUser();
+  const spec = (await findTask(user.id, courseId, lessonId))?.lesson.speaking;
   if (!spec) return null;
   return examinerFollowUp(spec, cleanTurns(turns));
 }
 
 export async function speakingAssessmentAction(courseId: string, lessonId: string, turns: Turn[], mode: "voice" | "text"): Promise<FeedbackResult> {
-  await requireUser();
-  const spec = findLesson(courseId, lessonId)?.lesson.speaking;
+  const user = await requireUser();
+  const spec = (await findTask(user.id, courseId, lessonId))?.lesson.speaking;
   if (!spec) return { ok: false, error: "Задание не найдено." };
   return speakingAssessment(spec, cleanTurns(turns), mode === "voice" ? "voice" : "text");
 }

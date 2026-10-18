@@ -176,6 +176,19 @@ CREATE TABLE IF NOT EXISTS score_history (
 );
 CREATE INDEX IF NOT EXISTS idx_score_history_user ON score_history(user_id, exam, recorded_at);
 
+-- Adaptive level per skill (content/skill-level.ts updateSkill): every 10
+-- first-try answers on a skill, the level moves up (>80%) or down (<50%).
+CREATE TABLE IF NOT EXISTS skill_stats (
+  user_id        TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  skill          TEXT NOT NULL,
+  level          TEXT NOT NULL,
+  window_correct INTEGER NOT NULL DEFAULT 0,
+  window_total   INTEGER NOT NULL DEFAULT 0,
+  answered       INTEGER NOT NULL DEFAULT 0,
+  updated_at     TEXT NOT NULL,
+  PRIMARY KEY (user_id, skill)
+);
+
 -- Diagnostic results, one row per section per attempt. level: easy | medium | hard.
 CREATE TABLE IF NOT EXISTS diagnostic_results (
   id       TEXT PRIMARY KEY,

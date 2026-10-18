@@ -4,9 +4,10 @@
  */
 
 import { isFieldId } from "@/content/fields";
-import { isCountryId, MIN_PLAN_DAYS, planFor, type Plan, type StudentProfile } from "@/content/plan";
+import { isCountryId, MIN_PLAN_DAYS, planFor, type Plan, type PlanInputs, type StudentProfile } from "@/content/plan";
 import { one, run, str, num } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
+import { getDiagnosticLevels, getScores } from "./scores";
 
 export async function getProfile(userId: string): Promise<StudentProfile | null> {
   const row = await one("SELECT country, field, grade, graduation, start_date FROM student_profiles WHERE user_id = ?", [userId]);
@@ -22,9 +23,15 @@ export async function getProfile(userId: string): Promise<StudentProfile | null>
   };
 }
 
+/** What the plan needs besides the goal: the scores and the diagnostic. */
+export async function getPlanInputs(userId: string): Promise<PlanInputs> {
+  const [scores, diagnostic] = await Promise.all([getScores(userId), getDiagnosticLevels(userId)]);
+  return { entries: scores?.entries ?? [], diagnostic };
+}
+
 export async function getPlan(userId: string): Promise<Plan | null> {
   const profile = await getProfile(userId);
-  return profile ? planFor(profile) : null;
+  return profile ? planFor(profile, await getPlanInputs(userId)) : null;
 }
 
 export interface ProfileInput {

@@ -13,7 +13,9 @@ import path from "node:path";
 
 import { COURSES, flatten } from "../src/content";
 import { FIELD_OPTIONS } from "../src/content/fields/ids";
-import { buildPlan, COUNTRIES, reviewLesson } from "../src/content/plan";
+import { bankLesson } from "../src/content/bank/lessons";
+import type { ExamEntry } from "../src/content/exams";
+import { buildPlan, COUNTRIES, reviewLesson, type Plan } from "../src/content/plan";
 import { parseNumber } from "../src/lib/answers";
 
 const book = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/frankenstein.json"), "utf8")) as {
@@ -84,6 +86,15 @@ for (const course of Object.values(COURSES)) {
   }
 }
 
+function checkBank(plan: Plan, where: string, keys: string[]): void {
+  for (const k of keys) {
+    const b = bankLesson(plan, k);
+    const l = b?.lesson;
+    if (!b || !l || (l.questions.length === 0 && !l.writing && !l.speaking)) problems.push(`${where}: ${k} builds empty`);
+    else if (b.taskSkills.length !== l.questions.length) problems.push(`${where}: ${k} questions without a skill`);
+  }
+}
+
 // Personal plans: every country × field × a range of timelines.
 const start = "2026-09-01";
 const durations = [21, 45, 90, 180, 300, 420, 600, 900];
@@ -123,9 +134,38 @@ for (const country of COUNTRIES) {
         const r = reviewLesson(plan, k);
         if (!r || r.lesson.questions.length < 3) problems.push(`${where}: review ${k} has too few questions`);
       }
+      // Practice from the bank builds (a sample per plan: building is a scan of the plan).
+      checkBank(plan, where, keys.filter((x) => x.startsWith("bank/")).filter((_, i) => i < 25 || i % 50 === 0));
     }
   }
 }
+// Plans built from scores: one exam only, an exam date, a weak and a strong student.
+const scored: { name: string; entries: ExamEntry[] }[] = [
+  { name: "SAT only", entries: [{ exam: "sat", current: { total: 1150, sections: { rw: 620, math: 530 } }, takenDate: null, source: "bluebook", target: 1400, examDate: "2027-03-13" }] },
+  { name: "IELTS only", entries: [{ exam: "ielts", current: { total: 6, sections: { listening: null, reading: null, writing: 5.5, speaking: null } }, takenDate: null, source: null, target: 7, examDate: "2027-01-20" }] },
+  { name: "TOEFL + ACT", entries: [
+    { exam: "toefl", current: { total: 80, sections: { reading: null, listening: null, speaking: null, writing: null } }, takenDate: null, source: null, target: 100, examDate: null },
+    { exam: "act", current: { total: 22, sections: { english: null, math: null, reading: null, science: null } }, takenDate: null, source: null, target: 30, examDate: "2027-04-10" },
+  ] },
+];
+for (const { name, entries } of scored) {
+  for (const days of [45, 300, 900]) {
+    const graduation = new Date(Date.parse(start) + days * 86_400_000).toISOString().slice(0, 10);
+    const plan = buildPlan({ country: "usa", field: "cs", grade: 11, graduation, startDate: start }, { entries, diagnostic: {} });
+    const where = `plan ${name}/${days}d`;
+    plans++;
+    const keys = plan.days.flatMap((d) => d.steps.map((x) => x.key));
+    if (new Set(keys).size !== keys.length) problems.push(`${where}: a step appears twice`);
+    if (plan.days.some((d) => d.steps.length === 0)) problems.push(`${where}: an empty day`);
+    const sections = new Set(plan.sections.map((x) => x.section));
+    for (const k of keys.filter((x) => x.startsWith("bank/"))) {
+      const sec = k.startsWith("bank/mock~") || k.startsWith("bank/weak~") ? k.split("~")[1] : k.slice("bank/".length).split(".")[0];
+      if (!sections.has(sec as never)) problems.push(`${where}: ${k} outside the chosen exams`);
+    }
+    checkBank(plan, where, keys.filter((x) => x.startsWith("bank/")).filter((_, i) => i < 40 || i % 25 === 0));
+  }
+}
+
 console.log(`Plans: ${plans} checked (up to ${longest} days).`);
 
 console.log(`${Object.keys(COURSES).length} courses, ${questions} questions, ${quotes} quoted fragments checked.`);

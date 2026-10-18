@@ -8,6 +8,7 @@ import { COUNTRIES, currentPlanDay, nextPlanStep, todayPlanDay } from "@/content
 import { DesmosPath } from "@/components/desmos-path";
 import { DeadlinesCard } from "@/components/deadlines-card";
 import { PlanMap } from "@/components/plan-map";
+import { SectionsCard } from "@/components/sections-card";
 import { DailyGoalCard, FriendsMini, OfficialPractice } from "@/components/sidebar";
 import { COURSE_TONE, REVIEW_TONE } from "@/components/tones";
 import { ButtonLink, ProgressBar } from "@/components/ui";
@@ -128,6 +129,8 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
             <p className="font-semibold">≈ {plan.load} задания в день</p>
           </div>
         </div>
+
+        <SectionsCard plan={plan} today={today} />
 
         <DesmosPath lessons={plan.tutorials} done={done} />
 

@@ -12,7 +12,7 @@ import { randomUUID } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
-import { findByKey, findLesson } from "../src/content";
+import { findByKey } from "../src/content";
 import { diagnosticQuestions } from "../src/content/diagnostic";
 import { currentPlanDay, isPlanUnlocked, nextPlanStep, reviewLesson, type Plan, type PlanStep } from "../src/content/plan";
 import { registerUser } from "../src/lib/accounts";
@@ -23,7 +23,9 @@ import { addDeadline, getDeadlines, removeDeadline, toggleDeadline } from "../sr
 import { ensureDemo } from "../src/lib/demo";
 import { getLeaderboard, getRequests, respondToRequest, sendFriendRequest } from "../src/lib/friends";
 import { canOpen, completeLesson, completePractice, getDoneKeys, getStats, submitSpeaking, submitWriting } from "../src/lib/game";
+import { resolveLesson } from "../src/lib/lesson-access";
 import { getPlan, getProfile, saveProfile } from "../src/lib/profile";
+import { getSkillStats } from "../src/lib/skill-stats";
 import { getDiagnosticLevels, getScoreHistory, getScores, saveScores } from "../src/lib/scores";
 
 // A fresh database for every run. The db module connects lazily on first query.
@@ -45,16 +47,17 @@ function monthFromNow(months: number): string {
   return d.toISOString().slice(0, 7);
 }
 
+function addDaysIso(iso: string, days: number): string {
+  return new Date(Date.parse(`${iso}T00:00:00Z`) + days * 86_400_000).toISOString().slice(0, 10);
+}
+
 const ESSAY = (n: number) => Array.from({ length: n }, (_, i) => (i % 12 === 11 ? "word." : "word")).join(" ");
 
 async function doStep(userId: string, plan: Plan, step: PlanStep) {
   const [courseId, lessonId] = step.key.split("/");
-  if (courseId === "review") {
-    const review = reviewLesson(plan, step.key)!;
-    const answers = review.lesson.questions.map((q) => (q.kind === "choice" ? q.answer : q.answers[0]));
-    return completeLesson(userId, "review", lessonId, answers);
-  }
-  const lesson = findLesson(courseId, lessonId)!.lesson;
+  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  if (!found) return { ok: false as const, error: `cannot resolve ${step.key}` };
+  const lesson = found.lesson;
   if (lesson.writing) {
     const w = lesson.writing;
     const body =
@@ -126,6 +129,8 @@ async function main() {
   ok(!(await completeLesson(A, "diagnostic", "chemistry", [])).ok, "unknown diagnostic section rejected");
 
   // ------------------------------------------------------------- gating --
+  // The scores and the diagnostic changed the plan.
+  plan = (await getPlan(A))!;
   const day2 = plan.days[1].steps[0];
   ok(!isPlanUnlocked(plan, day2.key, new Set()), "day 2 locked before day 1");
   ok(!(await doStep(A, plan, day2)).ok, "server refuses a locked step");
@@ -165,8 +170,9 @@ async function main() {
       ok(isPlanUnlocked(plan, step.key, done), `unlocked ${step.key}`);
       const r = await doStep(A, plan, step);
       ok(r.ok, `complete ${step.key}${r.ok ? "" : ` — ${(r as { error: string }).error}`}`);
-      if (r.ok && step.kind === "lesson") {
-        const lesson = findByKey(step.key)!.lesson;
+      if (r.ok && (step.kind === "lesson" || step.kind === "practice")) {
+        const [c, l] = step.key.split("/");
+        const lesson = (await resolveLesson(A, c, l, await getDoneKeys(A)))!.lesson;
         if (lesson.writing) writing += r.result.points;
         if (lesson.speaking) speaking += r.result.points;
       }
@@ -175,8 +181,41 @@ async function main() {
   }
   let done = await getDoneKeys(A);
   ok(currentPlanDay(plan, done) === null && nextPlanStep(plan, done) === null, `whole plan finished (${steps} steps)`);
-  ok(speaking === 30 * 4, `4 speaking parts × 30: ${speaking}`);
+  ok(speaking >= 30 * 4 && speaking % 30 === 0, `speaking paid 30 each: ${speaking}`);
   ok(writing > 0 && writing % 40 === 0, `writing tasks paid 40 each: ${writing}`);
+
+  // ------------------------------------------------- personalised plan --
+  // A: SAT R&W 640, Math 570, target 1400; IELTS with no result (diagnostic: medium), target 7.
+  ok(plan.sections.length === 6, "SAT and IELTS sections active");
+  ok(Math.abs(Object.values(plan.shares).reduce((a, b) => a + b, 0) - 1) < 1e-9, "shares sum to 1");
+  const practiceOf = (p: Plan, section: string) => p.days.flatMap((d) => d.steps).filter((x) => x.kind === "practice" && x.section === section).length;
+  ok(plan.practiceSteps > 0 && practiceOf(plan, "sat-math") > practiceOf(plan, "sat-rw"), `Math gets more practice than R&W: ${practiceOf(plan, "sat-math")} vs ${practiceOf(plan, "sat-rw")}`);
+  const skillStats = await getSkillStats(A);
+  ok(Object.values(skillStats).some((x) => x.level === "hard"), "all-correct answers raised some skills to hard");
+  ok(Object.values(skillStats).every((x) => x.windowTotal < 10), "adaptation windows reset every 10 answers");
+  const anyPractice = plan.days.flatMap((d) => d.steps).find((x) => x.kind === "practice" && x.section === "sat-math")!;
+  const [pc, pl] = anyPractice.key.split("/");
+  ok((await resolveLesson(A, pc, pl, done))!.lesson.questions.length === 8, "practice lesson has 8 tasks even when the bank is short");
+
+  // An exam date: the last three weeks before it hold mock sections and the weakest skills.
+  const B2 = (await registerUser("exam@test.kz", "password1", "Экзамен")).userId!;
+  await saveProfile(B2, { country: "usa", field: "cs", grade: 11, graduationMonth: monthFromNow(10) });
+  const examDate = addDaysIso(new Date().toISOString().slice(0, 10), 90);
+  await saveScores(B2, {
+    entries: [{ exam: "sat", current: { total: 1000, sections: { rw: 560, math: 440 } }, takenDate: null, source: "other", target: 1300, examDate }],
+  });
+  const examPlan = (await getPlan(B2))!;
+  ok(examPlan.sections.length === 2 && !examPlan.days.flatMap((d) => d.steps).some((x) => x.key.startsWith("ielts/")), "SAT only: no IELTS lessons");
+  const w = examPlan.windows[0];
+  ok(w && w.day === 90 && w.start === 69, `exam window: days ${w?.start}–${w?.day}`);
+  const inWindow = examPlan.days.slice(w.start, w.day).flatMap((d) => d.steps);
+  ok(inWindow.some((x) => x.key.startsWith("bank/mock~sat-math")) && inWindow.some((x) => x.key.startsWith("bank/weak~sat-math")), "mocks and weak skills before the exam");
+  ok(!inWindow.some((x) => x.kind === "lesson" && (x.key.startsWith("sat-math/") || x.key.startsWith("sat-rw/"))), "no new SAT lessons in the last weeks");
+  ok(examPlan.sections.find((x) => x.section === "sat-math")!.level === "easy", "Math 440 starts easy");
+  const weakKey = inWindow.find((x) => x.key.startsWith("bank/weak~"))!.key.split("/");
+  ok((await resolveLesson(B2, weakKey[0], weakKey[1], new Set()))!.lesson.questions.length >= 4, "weak-skill set builds");
+  const mockKey = inWindow.find((x) => x.key.startsWith("bank/mock~"))!.key.split("/");
+  ok((await resolveLesson(B2, mockKey[0], mockKey[1], new Set()))!.lesson.questions.length >= 8, "mock section builds");
 
   // --------------------------------------------------- change the goal --
   const profileBefore = (await getProfile(A))!;

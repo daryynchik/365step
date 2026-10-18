@@ -5,6 +5,11 @@ import { SAT_MATH } from "./sat-math";
 import { SAT_RW } from "./sat-rw";
 import type { Course, CourseId, Lesson, Question } from "./types";
 import { VOCAB } from "./vocab";
+import { drawTasks, type Shortage } from "./bank/draw";
+import { poolSize } from "./bank/pool";
+import { skillById, skillSequence, skillsOf, type Skill } from "./bank/taxonomy";
+import { LEVEL_TITLES, SECTION_TITLES, type DiagnosticSection, type ExamEntry, type Level, type SectionId } from "./exams";
+import { difficultiesFor, lessonShares, sectionStates, type SectionState } from "./skill-level";
 
 /**
  * The personal plan.
@@ -43,7 +48,7 @@ export { COUNTRIES, isCountryId, applicationDeadline, MIN_PLAN_DAYS, MAX_PLAN_DA
 
 // ------------------------------------------------------------- plan --
 
-export type StepKind = "lesson" | "review" | "mock";
+export type StepKind = "lesson" | "practice" | "review" | "mock";
 export type ReviewStrand = "english" | "math" | "field";
 
 export interface PlanStep {
@@ -56,6 +61,10 @@ export interface PlanStep {
   label: string;
   minutes: number;
   icon: "lesson" | "listening" | "speaking" | "writing" | "reading" | "admissions" | "math" | "review" | "mock";
+  /** Practice from the task bank: the section, its skill and the level planned for it. */
+  section?: SectionId;
+  skill?: string;
+  level?: Level;
 }
 
 export interface PlanDay {
@@ -64,6 +73,16 @@ export interface PlanDay {
   date: string;
   phase: "prep" | "final" | "after";
   steps: PlanStep[];
+}
+
+/** The last weeks before a planned exam: mock sections and the weakest skills. */
+export interface ExamWindow {
+  date: string;
+  /** 0-based plan day of the exam (may lie past the end of the plan). */
+  day: number;
+  /** First 0-based day of the window. */
+  start: number;
+  sections: SectionId[];
 }
 
 export interface Plan {
@@ -77,10 +96,27 @@ export interface Plan {
   /** Optional guided tool lessons; do not move or gate the existing daily plan. */
   tutorials: PlanStep[];
   newLessons: number;
+  /** Practice lessons from the task bank. */
+  practiceSteps: number;
   reviewSteps: number;
   /** Average steps per day before the deadline. */
   load: number;
+  /** Level, gap and exam date per active section (skill-level.ts). */
+  sections: SectionState[];
+  /** Share of practice lessons per section. */
+  shares: Record<string, number>;
+  windows: ExamWindow[];
+  /** Skills and levels the bank has too few tasks for, as planned. */
+  shortages: Shortage[];
 }
+
+/** What the plan is built from besides the goal: exam scores and diagnostic levels. */
+export interface PlanInputs {
+  entries: ExamEntry[];
+  diagnostic: Partial<Record<DiagnosticSection, Level>>;
+}
+
+export const NO_INPUTS: PlanInputs = { entries: [], diagnostic: {} };
 
 interface Entry {
   course: Course;
@@ -96,13 +132,25 @@ function entriesOf(course: Course, filter?: (lesson: Lesson, unitId: string) => 
   );
 }
 
-function englishEntries(): Entry[] {
-  const ielts = IELTS_ORDER.map((id) => entriesOf(IELTS).find((e) => e.lesson.id === id)!);
-  const sat = entriesOf(SAT_RW);
+/** Which section an IELTS lesson belongs to; vocabulary counts as reading. */
+function ieltsSection(lessonId: string): SectionId {
+  const id = lessonId.replace(/^p-/, "");
+  if (id.startsWith("listening")) return "ielts-listening";
+  if (id.startsWith("writing")) return "ielts-writing";
+  if (id.startsWith("speaking")) return "ielts-speaking";
+  return "ielts-reading";
+}
+
+function ieltsEntries(active: Set<SectionId>): Entry[] {
+  return IELTS_ORDER.map((id) => entriesOf(IELTS).find((e) => e.lesson.id === id)!).filter((e) => active.has(ieltsSection(e.lesson.id)));
+}
+
+/** IELTS and SAT Reading & Writing alternate, one each in turn. */
+function alternate(a: Entry[], b: Entry[]): Entry[] {
   const out: Entry[] = [];
-  for (let i = 0; i < Math.max(ielts.length, sat.length); i++) {
-    if (ielts[i]) out.push(ielts[i]);
-    if (sat[i]) out.push(sat[i]);
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    if (a[i]) out.push(a[i]);
+    if (b[i]) out.push(b[i]);
   }
   return out;
 }
@@ -217,7 +265,114 @@ function reviewStep(strand: ReviewStrand, day: number, mock: boolean): PlanStep 
   };
 }
 
-export function buildPlan(profile: StudentProfile): Plan {
+// ------------------------------------------------- practice from the bank --
+
+/** Tasks in one practice lesson of a question skill. */
+export const PRACTICE_SIZE = 8;
+export const MOCK_SIZE = 10;
+
+export const SECTION_COURSE: Record<SectionId, CourseId> = {
+  "sat-rw": "sat-rw",
+  "sat-math": "sat-math",
+  "ielts-reading": "ielts",
+  "ielts-listening": "ielts",
+  "ielts-writing": "ielts",
+  "ielts-speaking": "ielts",
+};
+
+const SECTION_ICON: Record<SectionId, PlanStep["icon"]> = {
+  "sat-rw": "lesson",
+  "sat-math": "math",
+  "ielts-reading": "reading",
+  "ielts-listening": "listening",
+  "ielts-writing": "writing",
+  "ielts-speaking": "speaking",
+};
+
+/** Sections whose mock is a set of auto-graded questions. */
+const MOCK_SECTIONS: SectionId[] = ["sat-rw", "sat-math", "ielts-reading"];
+
+function practiceMinutes(skill: Skill): number {
+  if (skill.kind === "writing") return skill.id.endsWith("task1") ? 20 : 40;
+  return 12;
+}
+
+export function practiceKey(skillId: string, round: number): string {
+  return `bank/${skillId}~${round}`;
+}
+
+function practiceStep(skill: Skill, round: number, level: Level): PlanStep {
+  return {
+    key: practiceKey(skill.id, round),
+    kind: "practice",
+    courseId: SECTION_COURSE[skill.section],
+    title: `Практика: ${skill.title}`,
+    label: `${SECTION_TITLES[skill.section]} · ${LEVEL_TITLES[level]}`,
+    minutes: practiceMinutes(skill),
+    icon: SECTION_ICON[skill.section],
+    section: skill.section,
+    skill: skill.id,
+    level,
+  };
+}
+
+function bankMockStep(section: SectionId, day: number, level: Level): PlanStep {
+  return {
+    key: `bank/mock~${section}~${day}`,
+    kind: "mock",
+    courseId: SECTION_COURSE[section],
+    title: `Пробная секция: ${SECTION_TITLES[section]}`,
+    label: `Пробная секция · ${LEVEL_TITLES[level]}`,
+    minutes: 20,
+    icon: "mock",
+    section,
+    level,
+  };
+}
+
+function weakStep(section: SectionId, day: number, level: Level): PlanStep {
+  return {
+    key: `bank/weak~${section}~${day}`,
+    kind: "practice",
+    courseId: SECTION_COURSE[section],
+    title: `Слабые места: ${SECTION_TITLES[section]}`,
+    label: `Перед экзаменом · ${LEVEL_TITLES[level]}`,
+    minutes: 12,
+    icon: "review",
+    section,
+    level,
+  };
+}
+
+const WINDOW_DAYS = 21;
+
+const skipped = new Set<string>();
+
+/** A skill with no tasks at any level is left out of practice (and logged once). */
+function hasTasks(skill: Skill): boolean {
+  if (poolSize(skill.id) > 0) return true;
+  if (!skipped.has(skill.id)) {
+    skipped.add(skill.id);
+    console.warn(`[bank] no tasks for ${skill.id} at any level — skipped in practice`);
+  }
+  return false;
+}
+
+function examWindows(states: SectionState[], startDate: string, total: number): ExamWindow[] {
+  const byDate = new Map<string, SectionId[]>();
+  for (const s of states) if (s.examDate) byDate.set(s.examDate, [...(byDate.get(s.examDate) ?? []), s.section]);
+  return [...byDate.entries()]
+    .map(([date, sections]) => {
+      const day = daysBetween(startDate, date);
+      // Three weeks before the exam, shorter when the exam is close.
+      const length = day >= 2 * WINDOW_DAYS ? WINDOW_DAYS : Math.max(7, Math.floor(day / 3));
+      return { date, day, start: Math.max(0, day - length), sections };
+    })
+    .filter((w) => w.day > 0 && w.start < total)
+    .sort((a, b) => a.day - b.day);
+}
+
+export function buildPlan(profile: StudentProfile, inputs: PlanInputs = NO_INPUTS): Plan {
   const deadline = applicationDeadline(profile);
   const total = Math.min(MAX_PLAN_DAYS, Math.max(MIN_PLAN_DAYS, daysBetween(profile.startDate, profile.graduation)));
   const untilDeadline = daysBetween(profile.startDate, deadline);
@@ -227,17 +382,42 @@ export function buildPlan(profile: StudentProfile): Plan {
   const prep = deadlinePassed ? total : Math.min(total, untilDeadline);
   const finalFrom = Math.max(1, Math.floor(prep * 0.88));
 
+  const states = sectionStates(inputs.entries, inputs.diagnostic);
+  const active = new Set(states.map((s) => s.section));
+  const stateOf = new Map(states.map((s) => [s.section, s]));
+  const shares = lessonShares(states);
+  const windows = examWindows(states, profile.startDate, total);
+
+  /** Authored lessons of a section finish before its exam window, or before the final stretch. */
+  const endFor = (section: SectionId) => {
+    const w = windows.find((x) => x.sections.includes(section));
+    return w ? Math.max(7, Math.min(total, w.start)) : finalFrom;
+  };
+
   const slots: PlanStep[][] = Array.from({ length: total }, () => []);
   const place = (day: number, step: PlanStep) => slots[Math.min(total - 1, Math.max(0, day))].push(step);
 
-  const english = englishEntries();
-  const math = entriesOf(SAT_MATH, (lesson) => !lesson.tutorial);
-  const tutorials = entriesOf(SAT_MATH, (lesson) => !!lesson.tutorial).map(lessonStep);
-  const vocab = entriesOf(VOCAB);
+  const ielts = ieltsEntries(active);
+  const satRw = active.has("sat-rw") ? entriesOf(SAT_RW) : [];
+  const math = active.has("sat-math") ? entriesOf(SAT_MATH, (lesson) => !lesson.tutorial) : [];
+  const tutorials = active.has("sat-math") ? entriesOf(SAT_MATH, (lesson) => !!lesson.tutorial).map(lessonStep) : [];
+  const englishActive = ielts.length > 0 || satRw.length > 0;
+  const vocab = englishActive ? entriesOf(VOCAB) : [];
   const field = fieldEntries(profile.field);
 
-  spread(english.length, 0, finalFrom).forEach((d, i) => place(d, lessonStep(english[i])));
-  spread(math.length, 0, finalFrom).forEach((d, i) => place(d, lessonStep(math[i])));
+  // English: IELTS and SAT Reading & Writing alternate when they share an end
+  // date; with different exam dates each runs to its own window.
+  // The four IELTS sections always come together (exams.ts sectionsOfExam).
+  const ieltsEnd = endFor("ielts-reading");
+  const satRwEnd = endFor("sat-rw");
+  if (ielts.length && satRw.length && ieltsEnd === satRwEnd) {
+    const english = alternate(ielts, satRw);
+    spread(english.length, 0, ieltsEnd).forEach((d, i) => place(d, lessonStep(english[i])));
+  } else {
+    spread(ielts.length, 0, ieltsEnd).forEach((d, i) => place(d, lessonStep(ielts[i])));
+    spread(satRw.length, 0, satRwEnd).forEach((d, i) => place(d, lessonStep(satRw[i])));
+  }
+  spread(math.length, 0, endFor("sat-math")).forEach((d, i) => place(d, lessonStep(math[i])));
   // Vocabulary sits between the other lessons rather than on top of them.
   spread(vocab.length, 1, Math.max(2, Math.floor(prep * 0.75))).forEach((d, i) => place(d, lessonStep(vocab[i])));
   spread(field.length, 1, total).forEach((d, i) => place(d, lessonStep(field[i])));
@@ -249,17 +429,80 @@ export function buildPlan(profile: StudentProfile): Plan {
     place(lastAdmissions, lessonStep(entry));
   }
 
-  // Fill: every day before the deadline has at least two steps, every day after
-  // it at least one. Reviews rotate between strands; the final stretch before
-  // the deadline gets mock sections.
-  // On a long timeline one step a day is plenty; on a short one, two.
+  // Practice from the bank, in proportion to each section's share. Each pick
+  // goes to the section furthest below its share among those still to be
+  // examined; within a section, skills follow the domain weights.
+  const picked = new Map<SectionId, number>();
+  const rounds = new Map<string, number>();
+  let pickedTotal = 0;
+  const sequences = new Map<SectionId, Skill[]>();
+  const nextPractice = (candidates: SectionId[]): PlanStep | null => {
+    const usable = candidates.filter((s) => skillsOf(s).some(hasTasks));
+    if (usable.length === 0) return null;
+    const section = usable.reduce((best, s) => {
+      const deficit = (x: SectionId) => (shares[x] ?? 0) * (pickedTotal + 1) - (picked.get(x) ?? 0);
+      return deficit(s) > deficit(best) ? s : best;
+    });
+    const n = picked.get(section) ?? 0;
+    if (!sequences.has(section) || sequences.get(section)!.length <= n) {
+      sequences.set(section, skillSequence(section, (n + 256) * 2).filter(hasTasks));
+    }
+    const skill = sequences.get(section)![n];
+    picked.set(section, n + 1);
+    pickedTotal++;
+    const round = (rounds.get(skill.id) ?? 0) + 1;
+    rounds.set(skill.id, round);
+    return practiceStep(skill, round, stateOf.get(section)!.level);
+  };
+  /** Sections not yet past their exam on day d. */
+  const openSections = (d: number) => states.filter((s) => !windows.some((w) => w.sections.includes(s.section) && w.day <= d)).map((s) => s.section);
+
+  // Fill: every day before the deadline has at least two steps (one on a long
+  // timeline), every day after it at least one. Before an exam: mock sections
+  // every third day and the weakest skills; otherwise mostly practice, with a
+  // review of past lessons every fifth step.
   const relaxed = prep > 200;
   let rotation = 0;
   let reviews = 0;
+  let practice = 0;
+  let fills = 0;
+  const mockTurn = new Map<string, number>();
   for (let d = 0; d < total; d++) {
     const phase = d < finalFrom ? "prep" : d < prep ? "final" : "after";
     const want = phase === "after" || (phase === "prep" && relaxed) ? 1 : 2;
+    const window = windows.find((w) => d >= w.start && d < w.day);
     while (slots[d].length < want) {
+      let step: PlanStep | null = null;
+      if (window) {
+        const mockable = window.sections.filter((s) => MOCK_SECTIONS.includes(s));
+        if ((d - window.start) % 3 === 0 && mockable.length && !slots[d].some((s) => s.kind === "mock")) {
+          const turn = mockTurn.get(window.date) ?? 0;
+          mockTurn.set(window.date, turn + 1);
+          const section = mockable[turn % mockable.length];
+          step = bankMockStep(section, d + 1, stateOf.get(section)!.level);
+        } else {
+          // The weakest sections of this exam first.
+          const weakest = [...window.sections].sort((a, b) => stateOf.get(b)!.normGap - stateOf.get(a)!.normGap);
+          const section = weakest[(fills + d) % Math.min(2, weakest.length)];
+          const candidate = weakStep(section, d + 1, stateOf.get(section)!.level);
+          step = slots[d].some((s) => s.key === candidate.key) ? nextPractice(window.sections) : candidate;
+        }
+      } else if (phase === "after") {
+        const open = openSections(d);
+        step = open.length > 0 && fills % 2 === 0 ? nextPractice(open) : null;
+      } else if (phase === "final") {
+        step = d % 3 === 0 ? null : nextPractice(openSections(d));
+      } else {
+        step = fills % 5 === 4 ? null : nextPractice(openSections(d));
+      }
+      fills++;
+
+      if (step) {
+        if (step.kind === "practice") practice++;
+        slots[d].push(step);
+        continue;
+      }
+      // A review of past lessons, as before the bank existed.
       const strands: ReviewStrand[] =
         phase === "after" ? ["field", "english"] : phase === "final" ? ["english", "math"] : ["english", "math", "english", "math", "field"];
       const strand = strands[rotation++ % strands.length];
@@ -277,7 +520,7 @@ export function buildPlan(profile: StudentProfile): Plan {
     steps,
   }));
 
-  const newLessons = english.length + math.length + vocab.length + field.length + admissionsEntries(profile.country).length;
+  const newLessons = ielts.length + satRw.length + math.length + vocab.length + field.length + admissionsEntries(profile.country).length;
   const prepSteps = days.slice(0, prep).reduce((n, d) => n + d.steps.length, 0);
 
   return {
@@ -287,10 +530,34 @@ export function buildPlan(profile: StudentProfile): Plan {
     deadlinePassed,
     prepDays: prep,
     newLessons,
+    practiceSteps: practice,
     tutorials,
     reviewSteps: reviews,
     load: Math.round((prepSteps / Math.max(1, prep)) * 10) / 10,
+    sections: states,
+    shares,
+    windows,
+    shortages: planShortages(days, profile.startDate),
   };
+}
+
+/** Checks every practice step against the pool, as planned; the bank logs each shortage once. */
+function planShortages(days: PlanDay[], seed: string): Shortage[] {
+  const out = new Map<string, Shortage>();
+  for (const d of days) {
+    for (const s of d.steps) {
+      if (s.kind !== "practice" || !s.skill || !s.level) continue;
+      const skill = skillById(s.skill)!;
+      const n = skill.kind === "questions" ? PRACTICE_SIZE : 1;
+      const round = Number(s.key.split("~")[1]) - 1;
+      for (const sh of drawTasks(skill.id, difficultiesFor(s.level, n), round, seed).shortages) {
+        const k = `${sh.skill}|${sh.difficulty}`;
+        const prev = out.get(k);
+        out.set(k, prev ? { ...prev, need: Math.max(prev.need, sh.need) } : sh);
+      }
+    }
+  }
+  return [...out.values()];
 }
 
 // --------------------------------------------------------- queries --
@@ -298,11 +565,11 @@ export function buildPlan(profile: StudentProfile): Plan {
 const cache = new Map<string, Plan>();
 
 /** buildPlan, memoised: the plan is a pure function of the profile. */
-export function planFor(profile: StudentProfile): Plan {
-  const key = `${profile.country}|${profile.field}|${profile.grade}|${profile.graduation}|${profile.startDate}`;
+export function planFor(profile: StudentProfile, inputs: PlanInputs = NO_INPUTS): Plan {
+  const key = `${profile.country}|${profile.field}|${profile.grade}|${profile.graduation}|${profile.startDate}|${JSON.stringify(inputs)}`;
   let plan = cache.get(key);
   if (!plan) {
-    plan = buildPlan(profile);
+    plan = buildPlan(profile, inputs);
     if (cache.size > 500) cache.clear();
     cache.set(key, plan);
   }

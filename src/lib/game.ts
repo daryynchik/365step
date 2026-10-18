@@ -9,8 +9,8 @@
 
 import { randomUUID } from "node:crypto";
 
-import { COURSES, findByKey, findLesson, flatten, isSequentiallyUnlocked, lessonKey, PLAN_COURSES, type PathEntry } from "@/content";
-import { isPlanUnlocked, nextPlanStep, reviewLesson } from "@/content/plan";
+import { COURSES, findByKey, findLesson, flatten, isSequentiallyUnlocked, PLAN_COURSES, type PathEntry } from "@/content";
+import { isPlanUnlocked, nextPlanStep } from "@/content/plan";
 import { isDiagnosticSection } from "@/content/diagnostic";
 import type { AnyCourseId, CourseId, Question } from "@/content/types";
 import { isCorrect, type Response } from "./answers";
@@ -18,7 +18,9 @@ import { all, one, run, scalar, str, num, transaction } from "./db";
 import { addDays, lastNDays, nowIso, todayIso, weekStart } from "./date";
 import { getPlan } from "./profile";
 import { DAILY_GOAL, lessonPoints, levelFor, POINTS, type LevelInfo } from "./rules";
+import { resolveLesson, startLevelOf } from "./lesson-access";
 import { recordDiagnostic } from "./scores";
+import { recordSkillAnswers } from "./skill-stats";
 import { countWords } from "./writing";
 
 // ---------------------------------------------------------------- points --
@@ -283,28 +285,26 @@ export async function completeLesson(
     return { ok: true, result };
   }
 
-  // Review and mock sections are built from the student's own plan.
-  if (courseId === "review") {
-    const plan = await getPlan(userId);
-    const key = `review/${lessonId}`;
-    const review = plan ? reviewLesson(plan, key) : null;
-    if (!plan || !review) return { ok: false, error: "Повторение не найдено." };
-    if (!isPlanUnlocked(plan, key, await getDoneKeys(userId))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
-    const questions = review.lesson.questions;
-    const correct = questions.filter((q, i) => isCorrect(q, responses[i])).length;
-    const result = await recordCompletion(userId, { key, courseId: "review" }, correct, questions.length, lessonPoints(correct, questions.length));
-    return { ok: true, result };
+  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  if (!found) return { ok: false, error: courseId === "review" ? "Повторение не найдено." : "Урок не найден." };
+  if (found.lesson.writing) return { ok: false, error: "Этот урок завершается сдачей работы." };
+  if (found.lesson.speaking) return { ok: false, error: "Этот урок завершается разговором с экзаменатором." };
+  if (!found.open) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+
+  const questions = found.lesson.questions;
+  const results = questions.map((q, i) => isCorrect(q, responses[i]));
+  const correct = results.filter(Boolean).length;
+  const result = await recordCompletion(userId, { key: found.key, courseId: found.courseId }, correct, questions.length, lessonPoints(correct, questions.length));
+
+  // First-try answers move the adaptive level of each skill.
+  if (found.taskSkills) {
+    const plan = found.plan;
+    await recordSkillAnswers(
+      userId,
+      found.taskSkills.map((skill, i) => ({ skill, correct: results[i] })),
+      (skill) => startLevelOf(plan, skill),
+    );
   }
-
-  const entry = findLesson(courseId, lessonId);
-  if (!entry) return { ok: false, error: "Урок не найден." };
-  if (entry.lesson.writing) return { ok: false, error: "Этот урок завершается сдачей работы." };
-  if (entry.lesson.speaking) return { ok: false, error: "Этот урок завершается разговором с экзаменатором." };
-  if (!(await canOpen(userId, entry))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
-
-  const questions = entry.lesson.questions;
-  const correct = questions.filter((q, i) => isCorrect(q, responses[i])).length;
-  const result = await recordCompletion(userId, { key: entry.key, courseId: entry.course.id }, correct, questions.length, lessonPoints(correct, questions.length));
   return { ok: true, result };
 }
 
@@ -340,11 +340,22 @@ export async function getWritings(userId: string): Promise<Map<string, Writing>>
 
 const MAX_BODY = 20_000;
 
-export async function saveDraft(userId: string, courseId: string, lessonId: string, body: string): Promise<{ ok: boolean; error?: string }> {
+/** A writing or speaking task by its URL parts, from authored lessons or the task bank. */
+export async function findTask(userId: string, courseId: string, lessonId: string) {
+  if (courseId === "bank") {
+    const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+    return found && (found.lesson.writing || found.lesson.speaking) ? found : null;
+  }
   const entry = findLesson(courseId, lessonId);
-  if (!entry || !(entry.lesson.writing || entry.lesson.speaking)) return { ok: false, error: "Задание не найдено." };
+  if (!entry || !(entry.lesson.writing || entry.lesson.speaking)) return null;
+  return { key: entry.key, courseId: entry.course.id as AnyCourseId, lesson: entry.lesson, entry };
+}
+
+export async function saveDraft(userId: string, courseId: string, lessonId: string, body: string): Promise<{ ok: boolean; error?: string }> {
+  const task = await findTask(userId, courseId, lessonId);
+  if (!task) return { ok: false, error: "Задание не найдено." };
   const text = body.slice(0, MAX_BODY);
-  const key = lessonKey(entry.course.id, entry.lesson.id);
+  const key = task.key;
 
   await transaction(async () => {
     const existing = await one("SELECT lesson_key FROM writings WHERE user_id = ? AND lesson_key = ?", [userId, key]);
@@ -370,19 +381,19 @@ export async function saveDraft(userId: string, courseId: string, lessonId: stri
 }
 
 export async function submitWriting(userId: string, courseId: string, lessonId: string, body: string): Promise<CompletionResult> {
-  const entry = findLesson(courseId, lessonId);
-  const task = entry?.lesson.writing;
-  if (!entry || !task) return { ok: false, error: "Задание не найдено." };
+  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  const task = found?.lesson.writing;
+  if (!found || !task) return { ok: false, error: "Задание не найдено." };
 
-  if (!(await canOpen(userId, entry))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+  if (!found.open) return { ok: false, error: "Сначала пройди предыдущие уроки." };
 
   const words = countWords(body);
   if (words < task.minWords) return { ok: false, error: `Нужно хотя бы ${task.minWords} слов — сейчас ${words}.` };
 
   await saveDraft(userId, courseId, lessonId, body);
-  await run("UPDATE writings SET submitted_at = ? WHERE user_id = ? AND lesson_key = ?", [nowIso(), userId, entry.key]);
+  await run("UPDATE writings SET submitted_at = ? WHERE user_id = ? AND lesson_key = ?", [nowIso(), userId, found.key]);
 
-  const result = await recordCompletion(userId, { key: entry.key, courseId: entry.course.id }, 0, 0, POINTS.writing);
+  const result = await recordCompletion(userId, { key: found.key, courseId: found.courseId }, 0, 0, POINTS.writing);
   return { ok: true, result };
 }
 
@@ -399,11 +410,11 @@ export async function submitSpeaking(
   lessonId: string,
   submission: SpeakingSubmission,
 ): Promise<CompletionResult> {
-  const entry = findLesson(courseId, lessonId);
-  const spec = entry?.lesson.speaking;
-  if (!entry || !spec) return { ok: false, error: "Задание не найдено." };
+  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  const spec = found?.lesson.speaking;
+  if (!found || !spec) return { ok: false, error: "Задание не найдено." };
 
-  if (!(await canOpen(userId, entry))) return { ok: false, error: "Сначала пройди предыдущие уроки." };
+  if (!found.open) return { ok: false, error: "Сначала пройди предыдущие уроки." };
 
   const answers = submission.turns.filter((t) => t.role === "student").map((t) => t.text.trim()).filter(Boolean);
   const words = countWords(answers.join(" "));
@@ -415,9 +426,9 @@ export async function submitSpeaking(
     .join("\n\n")
     .slice(0, MAX_BODY);
   await saveDraft(userId, courseId, lessonId, transcript);
-  await run("UPDATE writings SET submitted_at = ?, words = ? WHERE user_id = ? AND lesson_key = ?", [nowIso(), words, userId, entry.key]);
+  await run("UPDATE writings SET submitted_at = ?, words = ? WHERE user_id = ? AND lesson_key = ?", [nowIso(), words, userId, found.key]);
 
-  const result = await recordCompletion(userId, { key: entry.key, courseId: entry.course.id }, 0, 0, POINTS.speaking);
+  const result = await recordCompletion(userId, { key: found.key, courseId: found.courseId }, 0, 0, POINTS.speaking);
   return { ok: true, result };
 }
 
