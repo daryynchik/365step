@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "information-and-ideas",
+  "skill": "central-ideas",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "On hot summer days, streets lined with trees can be several degrees cooler than streets without them. Trees shade the pavement, which would otherwise absorb sunlight and release heat, and they release water vapor through their leaves, which cools the surrounding air. For these reasons, many cities now plant trees as a way to make neighborhoods more comfortable during heat waves.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Cities plant trees mainly to make streets more attractive.",
+    "Trees can help keep city streets cooler in hot weather.",
+    "Pavement absorbs more sunlight than any other material.",
+    "Heat waves have become more common in recent years."
+   ],
+   "answer": 1,
+   "explanation": "Весь текст объясняет, как деревья охлаждают улицы и почему города их сажают (B). Про асфальт — лишь деталь; о частоте жары текст не говорит; цель посадок в тексте — комфорт в жару, а не красота."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Every spring, my grandmother knelt in her small garden and pressed seeds into the soil one by one. She never measured the rows or read the instructions on the packets. \"The ground will tell you what it needs,\" she said. By July, her garden overflowed with tomatoes, beans, and sunflowers taller than I was.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The narrator's grandmother disliked reading instructions of any kind.",
+    "Sunflowers grow taller than most other garden plants.",
+    "The narrator helped plant the seeds every spring.",
+    "The narrator's grandmother gardened by instinct and grew plants successfully."
+   ],
+   "answer": 3,
+   "explanation": "Бабушка сажает «на ощупь», не измеряя, — и сад богатый (D). Что она не любит любые инструкции, текст не утверждает; про подсолнухи — деталь; что рассказчик сажал семена, не сказано."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Female sea turtles often return to lay their eggs on the same beach where they themselves hatched, sometimes after traveling thousands of kilometers across the ocean. Scientists think the turtles may use Earth's magnetic field, which varies slightly from place to place, to find their way back to their home beaches.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Sea turtles travel farther than any other ocean animal.",
+    "Earth's magnetic field is the same everywhere on the planet.",
+    "Scientists have proven exactly how sea turtles navigate.",
+    "Female sea turtles often return to the beaches where they hatched, possibly guided by Earth's magnetic field."
+   ],
+   "answer": 3,
+   "explanation": "Текст о возвращении черепах на родной пляж и возможной роли магнитного поля (D). Сравнения с другими животными нет; поле, по тексту, различается от места к месту; учёные лишь предполагают («may»), а не доказали."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Public libraries today offer much more than books. Many lend laptops and internet hotspots, host classes on job searching and computer skills, and provide quiet spaces where students can study after school. For people without these resources at home, libraries have become important community centers.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Public libraries now provide many services beyond lending books.",
+    "Most people no longer read printed books.",
+    "Students study better in libraries than at home.",
+    "Libraries should stop lending books and focus on technology."
+   ],
+   "answer": 0,
+   "explanation": "Перечислены услуги помимо книг, а вывод — библиотеки стали центрами сообщества (A). Что люди не читают бумажные книги и что книги пора убрать — текст не утверждает; сравнения учёбы дома и в библиотеке нет."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "For decades, residents of Millbrook crossed the river on a narrow wooden bridge. When a spring flood damaged the bridge in 2018, the town decided to replace it with a wider concrete bridge that could carry trucks and withstand future floods.",
+   "stem": "According to the text, why did Millbrook build a new bridge?",
+   "choices": [
+    "The old bridge was damaged by a flood.",
+    "Residents wanted a more attractive bridge.",
+    "The old bridge was too far from the town center.",
+    "Trucks had stopped using the old bridge."
+   ],
+   "answer": 0,
+   "explanation": "Прямо сказано: мост пострадал от наводнения в 2018 году, и город решил его заменить (A). О красоте и расположении моста текст не говорит; грузовики — требование к новому мосту, а не причина замены."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Sleep does more than help people feel rested. While we sleep, the brain replays and strengthens memories formed during the day. In several studies, people who slept after learning a list of words remembered more of them the next day than people who stayed awake for the same amount of time.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "People need at least eight hours of sleep each night.",
+    "Learning lists of words is the best way to study.",
+    "People who stay awake remember nothing they learn.",
+    "Sleep plays a role in strengthening memories."
+   ],
+   "answer": 3,
+   "explanation": "Главная мысль — сон помогает закреплять память; опыт со словами её подтверждает (D). О норме сна и лучшем способе учёбы текст не говорит; бодрствовавшие помнили меньше, но не «ничего»."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Before the printing press, books in Europe were copied by hand, a slow process that made them rare and expensive. After Johannes Gutenberg introduced movable-type printing in the mid-1400s, books could be produced far more quickly and cheaply. As books became more available, more people learned to read.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Books copied by hand were more beautiful than printed books.",
+    "Gutenberg invented the first written language.",
+    "Few people wanted to read before the 1400s.",
+    "The printing press made books more available, which helped spread reading."
+   ],
+   "answer": 3,
+   "explanation": "Текст прослеживает цепочку: печать — дешёвые книги — больше читающих (D). Красоту рукописей текст не сравнивает; письменность Гутенберг не изобретал; редкость книг объяснялась ценой, а не нежеланием читать."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "On my first day at the new school, I stood at the edge of the cafeteria holding my tray, sure that everyone was staring at me. Then a girl from my math class waved and pointed to the empty seat beside her. By the end of lunch, I had learned the names of everyone at the table and forgotten that I had ever been nervous.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The narrator's nervousness disappeared after a classmate welcomed her.",
+    "The narrator disliked the food in the new school's cafeteria.",
+    "The narrator had difficulty learning her classmates' names.",
+    "Everyone in the cafeteria was staring at the narrator."
+   ],
+   "answer": 0,
+   "explanation": "Сюжет — от тревоги к облегчению благодаря однокласснице (A). О еде ничего не сказано; имена она как раз быстро узнала; что все смотрят — лишь её первое ощущение."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "About three-quarters of the world's major food crops depend at least partly on pollinators such as bees, butterflies, and birds. These animals carry pollen from flower to flower, allowing plants to produce fruits and seeds. Declines in pollinator populations could therefore reduce the harvests of many crops that people rely on.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Many food crops depend on pollinators, so declines in pollinators could threaten harvests.",
+    "Bees are the only animals that pollinate crops.",
+    "Most crops grow without any help from animals.",
+    "Birds are more important pollinators than bees."
+   ],
+   "answer": 0,
+   "explanation": "Текст: большинство культур зависят от опылителей, и их сокращение грозит урожаям (A). Опылителей названо несколько; «большинство без помощи» противоречит тексту; сравнения птиц и пчёл нет."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "After a storm left the beach covered in plastic bottles, fishing nets, and other trash, more than two hundred volunteers gathered on Saturday morning. Working in small teams, they filled over five hundred bags with debris and sorted the plastic for recycling.",
+   "stem": "According to the text, what did the volunteers do?",
+   "choices": [
+    "They repaired the fishing nets damaged by the storm.",
+    "They built a fence to keep trash off the beach.",
+    "They asked the town to install more trash cans along the beach.",
+    "They collected trash from the beach and sorted the plastic for recycling."
+   ],
+   "answer": 3,
+   "explanation": "Прямо сказано: волонтёры собрали более пятисот мешков мусора и рассортировали пластик (D). О ремонте сетей, заборе и обращениях к городу в тексте нет ни слова."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Many people assume that any plastic item placed in a recycling bin will be recycled. In fact, many recycling centers accept only certain types of plastic, usually marked with the numbers 1 or 2. Other plastics are often sent to landfills because there is little demand for the materials made from them.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Most people do not use recycling bins.",
+    "Not all plastics placed in recycling bins are actually recycled.",
+    "Recycling centers should accept every type of plastic.",
+    "Plastics marked 1 or 2 are harmful to the environment."
+   ],
+   "answer": 1,
+   "explanation": "Текст опровергает распространённое мнение: перерабатывается не любой пластик (B). Рекомендации «принимать всё» нет; о вреде пластика 1 и 2 текст не говорит; привычки людей не обсуждаются."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The game of chess developed from chaturanga, a game played in India around the sixth century CE. Chaturanga spread to Persia, where its rules changed, and later to Europe, where further changes produced the game played today. Several modern chess pieces still reflect the game's origins: the bishop, for example, was once an elephant.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Chess was invented in Europe in the sixth century.",
+    "Chess developed from an Indian game and changed as it spread to other regions.",
+    "Chaturanga was more difficult to play than modern chess.",
+    "The bishop is the most important piece in chess."
+   ],
+   "answer": 1,
+   "explanation": "Текст об истоках шахмат в Индии и их изменении по пути в Персию и Европу (B). Сложность игр не сравнивается; важность слона не обсуждается; в Европе игра изменилась, но не была изобретена."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Mangrove forests grow along tropical coastlines, where their tangled roots rise out of the shallow water. These roots slow down waves and hold sediment in place, so coastal areas protected by mangroves often suffer less damage from storms than areas where the forests have been cleared.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Storms are stronger in tropical regions than elsewhere.",
+    "Coastal areas should be cleared to prevent storm damage.",
+    "Mangrove forests help protect coastlines from storm damage.",
+    "Mangroves can grow only in deep ocean water."
+   ],
+   "answer": 2,
+   "explanation": "Корни мангров гасят волны и держат грунт, поэтому берег страдает меньше (C). Мангры растут на мелководье, а не на глубине; силу штормов текст не сравнивает; вырубка, наоборот, усиливает ущерб."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The history museum's newest exhibit focuses on daily life in the city during the 1920s. Visitors can see clothing, kitchen tools, and letters donated by local families, as well as a recreated grocery store stocked with products from the period.",
+   "stem": "According to the text, what does the museum's newest exhibit include?",
+   "choices": [
+    "Interviews with people who lived in the 1920s",
+    "Items donated by local families and a recreated grocery store",
+    "Paintings by famous artists from the 1920s",
+    "A collection of cars from the early twentieth century"
+   ],
+   "answer": 1,
+   "explanation": "Перечислены одежда, кухонная утварь и письма от местных семей, а также воссозданный магазин (B). Картин, автомобилей и интервью в описании нет."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "When Ana's family moved to a farm, she was unhappy at first. She missed her friends and the busy streets of the city. But after a few weeks of caring for the goats and chickens, she began to look forward to each morning, when the animals would rush to greet her at the gate.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Ana wanted to return to the city as soon as possible.",
+    "Ana grew to enjoy her new life on the farm.",
+    "Ana preferred chickens to goats.",
+    "Ana's friends visited her on the farm."
+   ],
+   "answer": 1,
+   "explanation": "Сначала Ана грустит, но постепенно начинает радоваться утрам с животными (B). Предпочтения между козами и курами нет; о визитах друзей не сказано; желание вернуться противоречит концу текста."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "For many years, scientists believed that the giant panda's diet of bamboo was a recent adaptation. However, fossil skulls and teeth found in China, dating back about two million years, show features like those that allow modern pandas to crush tough bamboo stalks. The finding suggests that pandas have depended on bamboo for far longer than previously thought.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Giant pandas recently began eating foods other than bamboo.",
+    "Panda teeth have changed dramatically over two million years.",
+    "Scientists have found the oldest panda fossils in the world.",
+    "Fossil evidence suggests that pandas have eaten bamboo for much longer than scientists once believed."
+   ],
+   "answer": 3,
+   "explanation": "Окаменелые черепа и зубы опровергают мнение о «недавней» адаптации — пандам давно нужен бамбук (D). Об изменении рациона в наши дни текст не говорит; строение зубов как раз похоже на современное; что окаменелости самые древние, не утверждается."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Translators of poetry face a difficult choice. A word-for-word translation may preserve the literal meaning of a poem but lose its rhythm and rhyme, while a freer translation may capture the poem's music but stray from what the poet actually said. Many translators therefore see their work less as copying a poem than as re-creating it in a new language.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Poems cannot be translated from one language into another.",
+    "Because poetry translation involves trade-offs, many translators view their task as re-creating a poem.",
+    "Word-for-word translations are always more accurate than free translations.",
+    "Rhythm and rhyme are the most important features of any poem."
+   ],
+   "answer": 1,
+   "explanation": "Текст описывает компромисс между точностью и музыкой стиха и вывод переводчиков — это воссоздание (B). «Всегда точнее» и «важнее всего» — слишком категорично; невозможность перевода текст не утверждает."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Coral reefs are often called the rainforests of the sea because of the enormous variety of life they support. Yet reefs are vulnerable to rising ocean temperatures. When the water becomes too warm, corals expel the algae that live in their tissues and provide them with food, turning white in a process called bleaching. If high temperatures persist, the corals may die.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Although coral reefs support many species, they are threatened by rising ocean temperatures.",
+    "Coral reefs contain more species than rainforests do.",
+    "Algae are harmful to coral reefs.",
+    "Bleached corals always recover when temperatures fall."
+   ],
+   "answer": 0,
+   "explanation": "Текст противопоставляет богатство рифов и их уязвимость к потеплению (A). Сравнение с лесами — образ, а не подсчёт видов; водоросли кормят кораллы, а не вредят; при долгой жаре кораллы погибают, а не всегда восстанавливаются."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In the early twentieth century, many American cities built streetcar lines that let residents travel quickly and cheaply. As automobiles became more common in the 1930s and 1940s, cities removed most of these lines. Today, several cities are building new light-rail systems along some of the same routes, partly to reduce traffic congestion.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Automobiles were more expensive than streetcars in the 1930s.",
+    "Light-rail systems have eliminated traffic congestion.",
+    "Streetcar lines were removed because they were unsafe.",
+    "Many cities that once removed streetcar lines are now building rail systems along similar routes."
+   ],
+   "answer": 3,
+   "explanation": "Сюжет — от трамваев к их сносу и возвращению рельсового транспорта (D). Цены не сравниваются; что пробки исчезли, не сказано («partly to reduce»); безопасность как причина сноса не названа."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The novelist rarely describes her characters' appearance. Instead, she reveals who they are through what they notice: one character counts the cracks in a ceiling, another remembers every price on a menu. Readers come to know these people not by how they look but by how they see the world around them.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The novelist reveals her characters mainly through what they notice rather than how they look.",
+    "The novelist's characters are mostly people who work in restaurants.",
+    "The novelist believes that appearance is unimportant in real life.",
+    "Readers find the novelist's characters difficult to understand."
+   ],
+   "answer": 0,
+   "explanation": "Писательница раскрывает героев через то, что они замечают (A). Профессии героев не обсуждаются; взгляды писательницы на реальную жизнь не указаны; трудности читателей текст не упоминает."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "When scientists examined ice cores drilled from Antarctica, they found tiny bubbles of ancient air trapped in the ice. By measuring the gases in these bubbles, researchers can determine what Earth's atmosphere was like hundreds of thousands of years ago, including how much carbon dioxide it contained.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Carbon dioxide levels have never changed over Earth's history.",
+    "Ice cores can be drilled only in Antarctica.",
+    "Air bubbles trapped in ice cores allow scientists to study Earth's past atmosphere.",
+    "Antarctica's ice is melting faster than scientists expected."
+   ],
+   "answer": 2,
+   "explanation": "Пузырьки воздуха во льду позволяют узнать состав древней атмосферы (C). О таянии льда текст не говорит; неизменность CO₂ не утверждается — наоборот, её можно измерить; что бурить можно только там, не сказано."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some economists argue that cities should replace parking requirements—rules that force new buildings to include a minimum number of parking spaces—with flexible policies. Parking spaces are expensive to build, they say, and requiring them raises the cost of housing even for residents who do not own cars.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Some economists believe parking requirements raise housing costs and should be replaced.",
+    "Most city residents do not own cars.",
+    "Parking spaces are cheaper to build than housing.",
+    "Cities have already eliminated parking requirements."
+   ],
+   "answer": 0,
+   "explanation": "Текст излагает позицию экономистов: требования к парковке удорожают жильё (A). Что большинство без машин — не сказано; парковка, по тексту, дорогая; отмена требований — предложение, а не свершившийся факт."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Historians once assumed that medieval peasants rarely traveled far from their villages. Recent studies of court records, pilgrimage accounts, and market documents, however, show that many peasants regularly journeyed to distant towns to trade goods, settle legal disputes, or visit religious sites.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Court records are the most reliable historical sources.",
+    "Few medieval villages had markets.",
+    "New evidence shows that medieval peasants traveled more than historians once thought.",
+    "Medieval peasants traveled mainly to visit relatives."
+   ],
+   "answer": 2,
+   "explanation": "Новые источники опровергают старое представление о неподвижности крестьян (C). Цели поездок названы другие; надёжность судебных записей не оценивается; о рынках в деревнях текст не говорит."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Tomás had practiced the speech for weeks, but when he stepped onto the stage, the words seemed to dissolve. He looked out at the audience and found his younger sister in the third row, mouthing the first line along with him. He took a breath, began again, and finished without a single pause.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Tomás's sister wanted to give the speech herself.",
+    "The audience did not notice that Tomás had forgotten his words.",
+    "With his sister's help, Tomás overcame a moment of panic and delivered his speech.",
+    "Tomás had not prepared for his speech."
+   ],
+   "answer": 2,
+   "explanation": "Тома теряется, но сестра подсказывает первую строку, и он справляется (C). Он готовился неделями; желание сестры выступить не описано; реакция зала не упоминается."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The Inca built an extensive network of roads across the Andes, stretching roughly 40,000 kilometers. Without horses or wheeled vehicles, they relied on runners called chasquis, who passed messages from one relay station to the next and could carry news hundreds of kilometers in a single day.",
+   "stem": "According to the text, how did the Inca send messages across their road network?",
+   "choices": [
+    "Messengers rode horses from town to town.",
+    "Messages were sent in wheeled carts.",
+    "Signal fires were lit on mountaintops.",
+    "Relay runners carried messages between stations."
+   ],
+   "answer": 3,
+   "explanation": "Прямо сказано: бегуны-часки передавали сообщения от станции к станции (D). Лошадей и колёсного транспорта, по тексту, не было; сигнальные огни не упоминаются."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Many people believe that creativity is a rare gift possessed by only a few. Psychologists who study creativity, however, find that most people can become more creative with practice—for example, by regularly brainstorming many possible solutions before choosing one, or by combining ideas from unrelated fields.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Psychologists disagree about whether creativity exists.",
+    "Research suggests that creativity can be developed through practice.",
+    "Only a few people are capable of creative thinking.",
+    "Brainstorming is the only way to become more creative."
+   ],
+   "answer": 1,
+   "explanation": "Исследования опровергают «редкий дар»: креативность развивается практикой (B). B — мнение, которое текст опровергает; мозговой штурм — лишь пример; споров о существовании креативности нет."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Although the city's public gardens attract thousands of tourists each year, they were originally created for a practical purpose. In the 1800s, the gardens served as a testing ground where botanists grew crops from around the world to see which could thrive in the local climate and might be useful to farmers.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Botanists in the 1800s were not interested in flowers.",
+    "The city's popular gardens were first created to test crops for local farming.",
+    "The gardens attract more tourists than any other site in the city.",
+    "Most crops from around the world grew well in the local climate."
+   ],
+   "answer": 1,
+   "explanation": "Главное — сады, ныне туристические, создавались как опытное поле (B). Сравнения с другими местами нет; какие культуры прижились, не сказано; интересы ботаников к цветам не обсуждаются."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Octopuses are known for their intelligence. In laboratory studies, they have learned to open jars, find their way through mazes, and even recognize individual human caretakers. Remarkably, octopuses accomplish these feats with a nervous system very different from that of mammals: much of it is located in their arms rather than in a central brain.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Octopuses are more intelligent than all mammals.",
+    "Octopuses prefer some human caretakers to others.",
+    "Octopuses have no brain at all.",
+    "Octopuses show impressive intelligence even though their nervous systems differ greatly from those of mammals."
+   ],
+   "answer": 3,
+   "explanation": "Текст о способностях осьминогов при совсем иной нервной системе (D). Сравнения «умнее всех млекопитающих» нет; узнавать ухаживающих — не значит предпочитать; мозг есть, просто большая часть нейронов в щупальцах."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In the 1950s, the composer John Cage presented a piece in which a pianist sat at the piano for about four and a half minutes without playing a note. Cage wanted listeners to notice the sounds already around them—coughs, rustling programs, rain on the roof—and to consider whether these, too, could be heard as music.",
+   "stem": "Based on the text, what was Cage's purpose in presenting the piece?",
+   "choices": [
+    "To show that pianists can perform without practicing",
+    "To protest the poor quality of concert pianos",
+    "To prove that silence is impossible to achieve",
+    "To encourage listeners to pay attention to everyday sounds as possible music"
+   ],
+   "answer": 3,
+   "explanation": "Кейдж хотел, чтобы слушатели заметили окружающие звуки и задумались, музыка ли это (D). О подготовке пианистов, качестве роялей и доказательстве невозможности тишины текст не говорит."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Many desert animals avoid the heat of the day by being active mainly at night. The fennec fox, for example, spends daylight hours in a cool underground den and hunts after sunset. Its enormous ears also help it release body heat and locate insects moving beneath the sand.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The fennec fox has several behaviors and features that help it live in the desert.",
+    "Fennec foxes eat only insects.",
+    "Desert animals are active only during the day.",
+    "Fennec foxes dig the deepest dens of any desert animal."
+   ],
+   "answer": 0,
+   "explanation": "Ночная активность, нора и большие уши — приспособления к пустыне (A). Что она ест только насекомых, не сказано; C противоречит тексту; глубину нор не сравнивают."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "For much of the twentieth century, linguists treated sign languages as simplified versions of spoken languages or as systems of gestures with no grammar of their own. Research beginning in the 1960s overturned this view. Studies of American Sign Language showed that it has its own rules for word order, word formation, and even regional accents, and that children who learn it from birth pass through the same developmental stages as children learning spoken languages.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Most linguists in the twentieth century studied only spoken languages.",
+    "Children learn sign languages faster than spoken languages.",
+    "Research has shown that sign languages are complete languages with their own grammar.",
+    "American Sign Language is easier to learn than spoken languages."
+   ],
+   "answer": 2,
+   "explanation": "Исследования опровергли взгляд на жестовые языки как упрощённые: у них своя грамматика (C). Лёгкость и скорость освоения не сравниваются — дети проходят те же этапы; что лингвисты изучали только устные языки, не утверждается."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The narrator's father kept every letter he received, sorting them into boxes by year. After his death, she began reading them, expecting to learn about his work. Instead she found that most were from strangers who had written to thank him for small kindnesses—a ride in the rain, a loan never repaid, an hour spent listening. The man she had known as quiet and private, she realized, had been known to others for his generosity.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The narrator's father wrote many letters to strangers.",
+    "Reading her father's letters, the narrator discovers a side of him she had not known.",
+    "The narrator's father was disappointed that his work was forgotten.",
+    "The narrator regrets not reading the letters while her father was alive."
+   ],
+   "answer": 1,
+   "explanation": "Письма открывают дочери щедрость отца, которого она знала замкнутым (B). О разочаровании отца и сожалении рассказчицы текст не говорит; письма писали ему, а не он."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Ecologists once viewed forests as collections of individual trees competing for light and water. Studies of forest soils, however, have revealed that the roots of many trees are linked by networks of fungi. Through these networks, trees can exchange water, nutrients, and chemical signals, and older trees may even supply resources to seedlings growing in deep shade. Such findings have led some researchers to describe forests as communities rather than collections of competitors.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Older trees always sacrifice their own growth to help seedlings.",
+    "Fungi harm trees by taking water and nutrients from their roots.",
+    "Trees in forests no longer compete for light and water.",
+    "Discoveries about fungal networks have led some researchers to see forests as interconnected communities."
+   ],
+   "answer": 3,
+   "explanation": "Грибные сети меняют взгляд на лес: не соперники, а сообщество (D). «Всегда жертвуют» — слишком сильно («may»); грибы, по тексту, помогают обмену, а не вредят; о прекращении конкуренции не сказано."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In her studies of nineteenth-century factory towns, the historian argues that the arrival of railroads transformed not only how goods moved but also how people understood time. Before railroads, each town set its clocks by the local position of the sun, so noon in one town might differ by several minutes from noon in the next. Railroad companies, needing reliable schedules, pushed for standardized time zones, and gradually the public came to organize daily life around the same clock.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Local solar time was more accurate than standardized time.",
+    "Factory workers resisted the introduction of time zones.",
+    "Railroads changed how people measured and organized time, not just how goods were transported.",
+    "Railroad companies built most of the nineteenth-century factory towns."
+   ],
+   "answer": 2,
+   "explanation": "Тезис историка: железные дороги изменили отношение ко времени (C). Кто строил города, не обсуждается; точность солнечного времени не сравнивается; сопротивление рабочих не упоминается."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Many birds learn their songs by listening to adults, much as human infants learn language. Young zebra finches, for instance, memorize a tutor's song and then spend weeks practicing, gradually refining their own version until it closely matches the model. Because of these parallels, neuroscientists study songbirds to understand how brains learn complex sequences of sounds—research that may shed light on human speech disorders.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Neuroscientists have found a cure for human speech disorders.",
+    "Similarities between birdsong learning and human language learning make songbirds useful for brain research.",
+    "Zebra finches can learn human language.",
+    "Young birds are born knowing their species' songs."
+   ],
+   "answer": 1,
+   "explanation": "Сходство обучения пению и речи делает птиц моделью для нейронауки (B). Человеческому языку зяблики не учатся; песни, по тексту, выучиваются, а не врождённые; лечение не найдено — исследования лишь «may shed light»."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "When the architect designed the new public library, she placed the children's section not in a basement or a back corner, as many older libraries had done, but on the ground floor beside the main entrance, behind a wall of glass. Passersby could see children reading and playing inside. The design, she explained, was meant to signal that the library valued its youngest visitors as much as any others.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The architect placed the children's section prominently to show that young visitors were valued.",
+    "Older libraries had no space for children.",
+    "Children prefer to read in rooms with glass walls.",
+    "The architect wanted to save money on the library's construction."
+   ],
+   "answer": 0,
+   "explanation": "Детский отдел у входа за стеклом — знак того, что дети важны (A). Что раньше места не было, не сказано — его прятали в подвал; предпочтения детей и экономия не обсуждаются."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Economists have long debated why some regions grow wealthy while others do not. One influential argument holds that geography matters most: regions with fertile soil, navigable rivers, and mild climates enjoyed early advantages. Critics respond that institutions—legal systems that protect property and enforce contracts—explain more, pointing to neighboring regions with similar geography but very different economic outcomes.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Regions with fertile soil are always wealthier than other regions.",
+    "Legal systems have no effect on economic growth.",
+    "Most economists now agree that geography is irrelevant.",
+    "Economists disagree about whether geography or institutions better explain regional wealth."
+   ],
+   "answer": 3,
+   "explanation": "Текст излагает спор двух объяснений — география или институты (D). «Всегда богаче» — слишком категорично; о том, что право не влияет, или о согласии экономистов текст не говорит."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Amara had always measured her grandfather's farm by its fences: the long wire line along the road, the wooden rails around the orchard, the low stone wall that marked where his land ended and the neighbor's began. The summer she turned sixteen, he walked her along that wall and pointed out the places where it had crumbled and been rebuilt, each repair made by a different generation. \"A fence,\" he told her, \"is a promise you keep making.\"",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Amara's grandfather plans to sell the farm to the neighbor.",
+    "Amara dislikes the fences on her grandfather's farm.",
+    "The stone wall was built by Amara's grandfather.",
+    "Amara's grandfather teaches her that maintaining the farm is an ongoing commitment shared across generations."
+   ],
+   "answer": 3,
+   "explanation": "Ремонт стены разными поколениями и фраза деда — о продолжающемся обязательстве (D). Продажа фермы не упоминается; неприязни Амары нет; стену чинили многие поколения, а не построил дед."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Early studies of the placebo effect focused on patients who improved after receiving pills with no active ingredients. More recent research has found that the effect can occur even when patients are told openly that they are taking a placebo. In several trials, people with chronic pain reported less discomfort after taking pills labeled as inert, suggesting that the ritual of treatment itself may contribute to the effect.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Patients in early studies were always told about the placebos.",
+    "Chronic pain cannot be treated with medication.",
+    "Research suggests the placebo effect can occur even when patients know they are taking a placebo.",
+    "Placebos are more effective than real medicines."
+   ],
+   "answer": 2,
+   "explanation": "Новое — эффект плацебо возникает и при открытом плацебо (C). Сравнения с лекарствами нет; в ранних исследованиях, наоборот, пациенты не знали; о невозможности лечения боли не сказано."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The ancient city of Pompeii is famous for having been buried by the eruption of Mount Vesuvius in 79 CE. Less well known is that the city was still recovering from a major earthquake that had struck about seventeen years earlier. Excavations show that many buildings were under repair at the time of the eruption, giving archaeologists a rare view of a community in the midst of rebuilding.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Mount Vesuvius erupted twice in the first century CE.",
+    "Archaeologists have finished excavating all of Pompeii.",
+    "Pompeii's ruins reveal a city that was still rebuilding from an earlier earthquake when it was buried.",
+    "The earthquake caused more damage to Pompeii than the eruption did."
+   ],
+   "answer": 2,
+   "explanation": "Главное — город застигнут в разгар восстановления после землетрясения (C). Ущерб не сравнивается; второго извержения нет — было землетрясение; о завершении раскопок не сказано."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "For centuries, mapmakers drew the interior of Africa with imaginary mountain ranges and rivers, filling spaces they knew nothing about. In the eighteenth century, the cartographer Jean Baptiste Bourguignon d'Anville took the opposite approach, leaving unknown regions blank. His maps looked emptier than those of his rivals, but they were praised by scholars for distinguishing what was known from what was guessed.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "D'Anville's maps were valued for showing only what was actually known.",
+    "D'Anville explored more of Africa than any other cartographer.",
+    "Earlier mapmakers had accurate information about Africa's interior.",
+    "D'Anville's rivals copied his blank maps."
+   ],
+   "answer": 0,
+   "explanation": "Пустые места на картах д'Анвиля отделяли известное от догадок, за что их ценили (A). Он не путешественник; ранние карты заполнены выдумками; копирование соперниками не упоминается."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Monarch butterflies that hatch in late summer differ from those that hatch earlier in the year. Instead of living only a few weeks, these late-season monarchs can survive for up to eight months. They delay reproduction, store fat, and fly thousands of kilometers to overwintering sites, where they cluster in trees until spring. Researchers think changes in day length and temperature trigger the shift.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Monarchs that hatch in late summer live much longer and behave differently from earlier generations.",
+    "All monarch butterflies live for about eight months.",
+    "Monarchs reproduce during their migration.",
+    "Day length has no effect on monarch butterflies."
+   ],
+   "answer": 0,
+   "explanation": "Текст противопоставляет позднелетних монархов (долгая жизнь, миграция) более ранним (A). Восемь месяцев — только у поздних; размножение они как раз откладывают; длина дня, по мнению учёных, играет роль."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In a series of experiments, participants were asked to estimate the number of jellybeans in a jar. Individual guesses varied widely, and many were far off. Yet when researchers averaged all the guesses, the result was remarkably close to the true number—often closer than any single participant's estimate. The researchers concluded that groups can sometimes be wiser than their individual members, provided that each person judges independently.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Group discussions always lead to better decisions.",
+    "Jellybean jars are the best tool for studying decision making.",
+    "Averaging many independent estimates can produce a more accurate result than most individual guesses.",
+    "Most people are skilled at estimating quantities."
+   ],
+   "answer": 2,
+   "explanation": "Среднее независимых оценок оказалось точнее отдельных (C). Отдельные догадки, по тексту, часто далеки от истины; обсуждения в группе не изучались — важна независимость; «лучший инструмент» не утверждается."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The poet grew up speaking Spanish at home and English at school, and for years she felt she had to choose one language for her writing. Her later collections abandon that choice. Lines shift between the two languages mid-sentence, sometimes without translation, and readers who know only one language are invited to sit with the parts they cannot fully understand—an experience, she has said, that mirrors her own childhood.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "Readers dislike poems that use more than one language.",
+    "The poet always provides translations for readers.",
+    "The poet's later work mixes Spanish and English to reflect her bilingual experience.",
+    "The poet stopped writing in Spanish later in her career."
+   ],
+   "answer": 2,
+   "explanation": "Поздние сборники смешивают языки, повторяя опыт двуязычного детства (C). Она не отказалась от испанского; реакция читателей не описана как неприязнь; переводы она, наоборот, иногда опускает."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Most people imagine deserts as lifeless, but the Atacama Desert in Chile, one of the driest places on Earth, bursts into color in some years. After rare heavy rains, seeds that have lain dormant in the soil for years germinate almost at once, covering the ground with flowers. The event, called a desierto florido, may last only a few weeks before the desert returns to its usual dry state.",
+   "stem": "Which choice best states the main idea of the text?",
+   "choices": [
+    "The Atacama Desert receives heavy rain every spring.",
+    "Seeds in the Atacama Desert die after a few weeks in the soil.",
+    "The Atacama Desert is covered with flowers all year.",
+    "After rare heavy rains, dormant seeds can briefly transform the Atacama Desert with flowers."
+   ],
+   "answer": 3,
+   "explanation": "Редкие ливни будят семена, и пустыня ненадолго цветёт (D). Дожди редкие, не ежегодные; семена лежат годами, а не гибнут; цветение длится недели, а не круглый год."
+  }
+ ]
+}

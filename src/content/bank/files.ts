@@ -23,7 +23,10 @@ import satMathStatisticalClaims from "./sat/math/statistical-claims.json";
 import satMathSystems from "./sat/math/systems.json";
 import satMathTwoVariableData from "./sat/math/two-variable-data.json";
 import satRwBoundaries from "./sat/rw/boundaries.json";
+import satRwCentralIdeas from "./sat/rw/central-ideas.json";
 import satRwFormStructureSense from "./sat/rw/form-structure-sense.json";
+import satRwInferences from "./sat/rw/inferences.json";
+import satRwTextStructure from "./sat/rw/text-structure.json";
 import satRwTransitions from "./sat/rw/transitions.json";
 import satRwWordsInContext from "./sat/rw/words-in-context.json";
 
@@ -48,7 +51,10 @@ export const BANK_FILES: Record<string, unknown> = {
   "sat/math/systems.json": satMathSystems,
   "sat/math/two-variable-data.json": satMathTwoVariableData,
   "sat/rw/boundaries.json": satRwBoundaries,
+  "sat/rw/central-ideas.json": satRwCentralIdeas,
   "sat/rw/form-structure-sense.json": satRwFormStructureSense,
+  "sat/rw/inferences.json": satRwInferences,
+  "sat/rw/text-structure.json": satRwTextStructure,
   "sat/rw/transitions.json": satRwTransitions,
   "sat/rw/words-in-context.json": satRwWordsInContext,
 };

@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "craft-and-structure",
+  "skill": "text-structure",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Many people think of bats as blind. __In fact, most bats can see quite well, and some species see better in dim light than humans do.__ Bats also use echolocation, producing high-pitched sounds and listening to the echoes to find insects in the dark.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It describes how echolocation works.",
+    "It explains why bats hunt insects.",
+    "It compares bats with other nocturnal animals.",
+    "It corrects a common misunderstanding mentioned in the previous sentence."
+   ],
+   "answer": 3,
+   "explanation": "Предложение опровергает мнение «bats are blind» из первой фразы (D). Эхолокацию описывает следующее предложение; почему летучие мыши едят насекомых и сравнение с другими животными в тексте не обсуждаются."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The school garden began as a small project run by three students. __Within two years, it had grown to include twenty raised beds, a greenhouse, and a weekly farm stand.__ Today, vegetables from the garden are served in the school cafeteria.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It introduces the people who run the garden today.",
+    "It shows how much the garden expanded after it began.",
+    "It explains why the students started the garden.",
+    "It describes the problems the garden faced."
+   ],
+   "answer": 1,
+   "explanation": "Двадцать грядок, теплица и лоток — рост проекта за два года (B). Причин создания, проблем и нынешних организаторов в предложении нет."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Penguins are birds, but they cannot fly. Instead, their wings have evolved into stiff flippers that allow them to \"fly\" underwater. Some species can swim faster than 30 kilometers per hour, chasing fish and squid deep below the surface.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To explain how penguins use their wings even though they cannot fly",
+    "To argue that penguins should not be classified as birds",
+    "To compare penguins with other flightless birds",
+    "To describe where penguins build their nests"
+   ],
+   "answer": 0,
+   "explanation": "Текст рассказывает, как крылья пингвинов стали ластами для плавания (A). Спора о классификации, сравнения с другими нелетающими птицами и описания гнёзд нет."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Some people prefer paper books because they enjoy the feel of turning pages. Others prefer e-readers, which can hold thousands of books and fit in a pocket. Both formats have advantages, and many readers use each one for different purposes.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It describes a problem and then proposes a solution.",
+    "It tells a story in chronological order.",
+    "It makes a claim and then rejects it.",
+    "It presents two preferences and then notes that both have value."
+   ],
+   "answer": 3,
+   "explanation": "Две позиции, затем вывод: у обоих форматов есть плюсы (D). Проблемы и решения, хронологического рассказа и опровержения тезиса в тексте нет."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Before the 1880s, most American towns set their clocks by the sun, so noon came at slightly different times in different places. __This system created confusion for railroads, whose schedules had to list dozens of local times.__ In 1883, the railroads adopted standard time zones, which the government later made official.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It explains how sundials measured time.",
+    "It describes the government's role in creating railroads.",
+    "It argues that local times were more accurate than time zones.",
+    "It identifies a problem that led to the adoption of time zones."
+   ],
+   "answer": 3,
+   "explanation": "Путаница для железных дорог — проблема, которая привела к часовым поясам (D). Солнечные часы не описываются; роль правительства — в создании поясов, а не дорог; точность не сравнивается."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The hummingbird's heart can beat more than 1,000 times per minute when the bird is active. To fuel this pace, hummingbirds feed every few minutes, drinking nectar and eating small insects. At night, however, many hummingbirds enter a sleep-like state called torpor, in which their heart rate and body temperature drop sharply to save energy.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It describes the hummingbird's high energy use and then explains how the bird conserves energy at night.",
+    "It compares hummingbirds with other birds and then describes their nests.",
+    "It presents a theory about hummingbirds and then disproves it.",
+    "It describes the hummingbird's migration route from start to finish."
+   ],
+   "answer": 0,
+   "explanation": "Сначала высокий расход энергии днём, потом экономия ночью (A). Сравнения с другими птицами, опровергаемой теории и маршрута миграции нет."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Our town's annual cleanup day is next Saturday. Volunteers will meet at the library at 9 a.m., and gloves and bags will be provided. Last year, eighty people collected more than two tons of trash from parks and streams. This year, organizers hope to double that number.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To criticize residents who litter in town parks",
+    "To explain how trash is recycled",
+    "To describe the history of the town library",
+    "To inform readers about an upcoming event and encourage participation"
+   ],
+   "answer": 3,
+   "explanation": "Дата, место сбора, прошлые результаты и цель — объявление с призывом участвовать (D). Критики, переработки и истории библиотеки нет."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Ana thought the old map was useless. The roads it showed had been renamed, and half the buildings no longer existed. __But when she noticed a small symbol marking a spring behind the hill, she grabbed her water bottle and set out to find it.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It confirms that the map was useless.",
+    "It shows a shift in Ana's attitude toward the map.",
+    "It explains why the roads on the map were renamed.",
+    "It describes the history of the spring."
+   ],
+   "answer": 1,
+   "explanation": "«But» отмечает перемену: карта всё-таки оказалась полезной (B). Почему переименовали улицы и история родника не описаны; D противоположно смыслу предложения."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Many cities have begun painting rooftops white. Dark roofs absorb sunlight and heat the buildings below, while white roofs reflect much of that sunlight. As a result, buildings with white roofs can stay cooler and use less energy for air conditioning.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It tells the story of one building's construction.",
+    "It describes a practice and then explains why it is beneficial.",
+    "It lists several unrelated facts about cities.",
+    "It argues against painting roofs white."
+   ],
+   "answer": 1,
+   "explanation": "Практика (белые крыши) и объяснение пользы (B). Факты связаны; аргумента против нет; истории одного здания нет."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Volcanoes can be destructive, but they also create new land. __The Hawaiian Islands, for example, were formed by volcanic eruptions over millions of years.__ Lava that cools at the ocean's edge still adds new land to the island of Hawaii today.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It describes the plants that grow on volcanic soil.",
+    "It challenges the idea that volcanoes create land.",
+    "It gives an example supporting the claim that volcanoes create new land.",
+    "It explains why volcanoes are destructive."
+   ],
+   "answer": 2,
+   "explanation": "«For example» — пример к утверждению о создании суши (C). Разрушения, растения и опровержение в предложении отсутствуют."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Pablo had never baked bread before. His first loaf came out flat and hard. His second rose a little but burned on top. By the fifth try, he finally pulled a golden, airy loaf from the oven and called his family into the kitchen to taste it.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It traces a character's repeated attempts that end in success.",
+    "It compares two characters' baking methods.",
+    "It explains the science of how bread rises.",
+    "It describes a family's argument about cooking."
+   ],
+   "answer": 0,
+   "explanation": "Попытки по порядку — первая, вторая, пятая — и успех (A). Второго пекаря, научного объяснения и ссоры нет."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Some students worry that asking questions in class makes them look unprepared. Teachers, however, often see questions as a sign of engagement. A question shows that a student is thinking about the material and wants to understand it more deeply.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To argue that students should never feel worried in class",
+    "To suggest that asking questions in class reflects engagement rather than a lack of preparation",
+    "To criticize teachers who discourage questions",
+    "To explain how to write good test questions"
+   ],
+   "answer": 1,
+   "explanation": "Текст переосмысляет вопросы на уроке как признак вовлечённости (B). Критики учителей нет; о составлении тестов не говорится; «никогда не волноваться» — слишком сильно."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Lightning heats the air around it to temperatures hotter than the surface of the sun. __This sudden heating makes the air expand rapidly, creating the sound wave we hear as thunder.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It warns people to stay indoors during storms.",
+    "It compares lightning with other kinds of light.",
+    "It explains how lightning produces thunder.",
+    "It describes the temperature of the sun's surface."
+   ],
+   "answer": 2,
+   "explanation": "Предложение объясняет механизм грома через расширение нагретого воздуха (C). Солнце — лишь сравнение в первом предложении; предупреждения и сравнения со светом нет."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The town's first library opened in 1902 in a single room above the post office. In 1950, it moved into its own brick building on Main Street. In 2015, a modern addition doubled its size and added a children's wing and computer lab.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It explains how libraries choose which books to buy.",
+    "It describes the library's history in chronological order.",
+    "It compares the library with other libraries in the region.",
+    "It argues that the library needs more funding."
+   ],
+   "answer": 1,
+   "explanation": "1902, 1950, 2015 — история по порядку (B). Сравнения, просьбы о деньгах и закупок книг нет."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Hiking with a dog can be fun, but owners should prepare carefully. Dogs need plenty of water, especially on hot days, and their paws can be injured by sharp rocks or hot pavement. Owners should also check whether dogs are allowed on a trail before setting out.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To describe the best trails for hiking with dogs",
+    "To explain why dogs enjoy hiking",
+    "To give advice to dog owners who plan to go hiking",
+    "To argue that dogs should not be allowed on trails"
+   ],
+   "answer": 2,
+   "explanation": "Советы владельцам: вода, лапы, правила троп (C). Запрета не предлагается; конкретные тропы не названы; почему собакам нравится, не объясняется."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "For decades, the textbook explanation for why the dinosaurs died out was simple: an asteroid struck Earth about 66 million years ago. __Some researchers, however, argue that massive volcanic eruptions in what is now India had already stressed ecosystems before the impact.__ Many scientists now think both events may have played a role.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It provides evidence that the asteroid never struck Earth.",
+    "It describes how the asteroid impact caused volcanic eruptions.",
+    "It states the conclusion that most scientists accept.",
+    "It introduces an alternative view that complicates the standard explanation."
+   ],
+   "answer": 3,
+   "explanation": "«However» вводит альтернативу, которая усложняет привычное объяснение (D). Удар астероида не отрицается; причинной связи удара и вулканов в тексте нет; вывод о двух причинах — в последнем предложении."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "When the composer was a child, her family could not afford a piano, so she practiced on a keyboard drawn in chalk on the kitchen table. She pressed the painted keys and imagined the sounds. Years later, critics would praise her music for its unusual, inward quality—melodies that seem to be heard more in the mind than in the air.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It argues that every composer should practice without an instrument.",
+    "It describes an unusual childhood experience and then suggests a connection to the composer's later music.",
+    "It lists the composer's major works in order of composition.",
+    "It compares the composer's music with that of her teachers."
+   ],
+   "answer": 1,
+   "explanation": "Детство с нарисованной клавиатурой связывается с «внутренним» характером её музыки (B). Списка произведений, сравнения с учителями и общей рекомендации нет."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Most maps place north at the top, but this convention is not natural or inevitable. Medieval European maps often placed east at the top, toward the direction of sunrise, and some early Arab maps placed south at the top. The modern standard became widespread largely because of the influence of European navigators and printers.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To criticize medieval mapmakers for inaccuracy",
+    "To show that placing north at the top of maps is a convention with a particular history",
+    "To argue that maps should place south at the top",
+    "To explain how navigators used maps at sea"
+   ],
+   "answer": 1,
+   "explanation": "Текст показывает, что «север сверху» — исторически сложившаяся условность (B). Призыва менять карты нет; навигация не описывается; точность средневековых карт не оценивается."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Many people assume that the ancient Greeks' statues were always the plain white of bare marble. __Traces of pigment found on many statues, however, show that they were often painted in bright colors.__ Researchers using ultraviolet light have even reconstructed some of the original designs.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It presents evidence that challenges a common assumption.",
+    "It explains why marble was the Greeks' preferred material.",
+    "It describes how researchers use ultraviolet light.",
+    "It suggests that the statues were never painted."
+   ],
+   "answer": 0,
+   "explanation": "Следы краски опровергают представление о белых статуях (A). Выбор мрамора не объясняется; ультрафиолет — в следующем предложении; D противоположно."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The essayist begins by describing her daily walk to the train station: the same bakery, the same crosswalk, the same tree. She then recalls a morning when construction blocked her usual route, forcing her down an unfamiliar street. She ends by reflecting that routines can make us efficient but can also make us stop noticing the world around us.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It presents an argument and then lists counterarguments.",
+    "It explains the history of a neighborhood from its founding to the present.",
+    "It describes a routine, recounts a disruption to it, and then draws a broader lesson.",
+    "It compares two cities and concludes that one is more beautiful."
+   ],
+   "answer": 2,
+   "explanation": "Рутина, нарушение, общий вывод (C). Двух городов, контраргументов и истории района нет."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Electric scooters have become common in many cities, offering a quick way to travel short distances. Yet they have also raised concerns. Scooters left on sidewalks can block pedestrians, and riders without helmets face a risk of serious injury. Some cities have responded by creating designated parking areas and lowering speed limits.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It describes one person's experience riding a scooter.",
+    "It introduces a trend, describes problems associated with it, and notes some responses.",
+    "It argues that scooters should be banned in all cities.",
+    "It explains how electric scooters are manufactured."
+   ],
+   "answer": 1,
+   "explanation": "Тренд — проблемы — меры городов (B). Призыва запретить нет; производство и личный опыт не описываются."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The artist's early paintings are dense with detail: crowded streets, every window lit, every face distinct. __Her late works, by contrast, often consist of a single figure in an empty landscape.__ Critics have debated whether this change reflects her failing eyesight or a deliberate artistic choice.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It establishes a contrast between the artist's early and late work.",
+    "It explains why the artist's eyesight declined.",
+    "It describes the reactions of viewers to her early paintings.",
+    "It provides evidence that the change was deliberate."
+   ],
+   "answer": 0,
+   "explanation": "«By contrast» противопоставляет поздние работы ранним (A). Причина ухудшения зрения не объясняется; реакции зрителей нет; вопрос о намеренности остаётся открытым."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In 1928, Alexander Fleming returned from vacation to find that mold had contaminated one of his bacterial cultures. Around the mold, the bacteria had died. Rather than discarding the dish, Fleming investigated, and his work led to the discovery of penicillin, one of the first antibiotics.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To argue that scientists should take more vacations",
+    "To explain how antibiotics are manufactured today",
+    "To compare penicillin with other medicines",
+    "To describe how an accidental observation led to an important discovery"
+   ],
+   "answer": 3,
+   "explanation": "Случайная плесень и любопытство Флеминга — путь к открытию (D). Совета об отпусках, производства и сравнения лекарств нет."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Most dictionaries describe how words are actually used rather than dictating how they should be used. When enough people adopt a new meaning for a word, dictionary editors eventually add it. __The word \"literally,\" for instance, is now often used for emphasis, and several major dictionaries list this sense.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It provides an example of the practice described earlier in the text.",
+    "It argues that the new use of \"literally\" is incorrect.",
+    "It explains how dictionaries were first created.",
+    "It contradicts the claim that dictionaries describe actual usage."
+   ],
+   "answer": 0,
+   "explanation": "«For instance» — пример того, как словари фиксируют фактическое употребление (A). Оценки «неправильно» нет; история словарей не описана; D противоположно."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some ecologists propose reintroducing wolves to regions where they were eliminated decades ago. Supporters argue that wolves help control populations of deer and elk, which can overgraze vegetation. Opponents worry about threats to livestock. A few regions have tried compromise programs that compensate ranchers for animals lost to wolves.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It tells the history of wolves from prehistoric times to today.",
+    "It describes a proposal, presents arguments on both sides, and mentions an attempt to address concerns.",
+    "It describes a scientific experiment and its results in order.",
+    "It argues strongly that wolves should never be reintroduced."
+   ],
+   "answer": 1,
+   "explanation": "Предложение — доводы за и против — компромиссная мера (B). Эксперимента, однозначной позиции и долгой истории нет."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "At first glance, the tiny desert town seems empty: shuttered shops, a dusty main street, a single gas station. __But every October, thousands of visitors arrive for a three-day festival of stargazing, drawn by some of the darkest night skies in the country.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It reveals that the town has an unexpected attraction that draws many visitors.",
+    "It explains why the town's shops are shuttered.",
+    "It describes the history of the town's gas station.",
+    "It confirms the impression that the town is always empty."
+   ],
+   "answer": 0,
+   "explanation": "«But» переворачивает первое впечатление: у городка есть неожиданная притягательность (A). Закрытые магазины не объясняются; история заправки не упоминается; D противоположно."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Honeybees communicate the location of food through a \"waggle dance.\" The angle of the dance relative to vertical indicates the direction of the food relative to the sun, and the length of the waggle indicates the distance. Researchers who decoded the dance in the twentieth century were able to predict where bees would fly simply by watching it.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To argue that bees are smarter than other insects",
+    "To describe how honey is produced",
+    "To criticize early researchers who studied bees",
+    "To explain how honeybees convey information about food through movement"
+   ],
+   "answer": 3,
+   "explanation": "Текст объясняет, как танец передаёт направление и расстояние (D). Сравнения интеллекта, производства мёда и критики учёных нет."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "When the poet translated her own early poems into English, she did not simply reproduce them. She cut lines, changed images, and in one case added an entirely new stanza. She explained that the poems had continued to grow in her mind long after she first wrote them, and translation gave her a chance to finish them.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It lists the awards the poet has received.",
+    "It describes how a poet changed her poems while translating them and then gives her explanation for doing so.",
+    "It compares the poet's work with that of other translators.",
+    "It argues that translations should always be literal."
+   ],
+   "answer": 1,
+   "explanation": "Сначала что она меняла, затем её объяснение (B). Сравнения с другими, требования буквальности и наград нет."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Cities often plant trees along streets to provide shade and beauty. __Researchers have found that these trees can also lower drivers' speeds, perhaps because a tree-lined street feels narrower.__ Slower speeds in turn reduce the severity of accidents.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It argues that trees make streets more dangerous.",
+    "It describes how trees are chosen for planting.",
+    "It introduces an additional, less obvious benefit of street trees.",
+    "It explains why cities plant trees for shade."
+   ],
+   "answer": 2,
+   "explanation": "К тени и красоте добавляется неочевидная польза — снижение скорости (C). Тень упомянута в первом предложении; опасности нет — наоборот; выбор деревьев не обсуждается."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "The museum's new exhibit on ancient Egypt avoids the familiar focus on pharaohs and tombs. Instead, it presents the lives of ordinary workers: the bakers, brewers, and builders whose labor made the monuments possible. Visitors can examine tools, read translated letters, and see reconstructed homes.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To criticize other museums for their exhibits",
+    "To describe an exhibit that highlights the everyday lives of ordinary ancient Egyptians",
+    "To argue that pharaohs were unimportant in ancient Egypt",
+    "To explain how the pyramids were built"
+   ],
+   "answer": 1,
+   "explanation": "Текст описывает выставку о жизни простых египтян (B). Что фараоны неважны, не утверждается; технология пирамид не объясняется; критики других музеев нет."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Scholars long assumed that the Silk Road was a single route along which merchants carried goods from China to Rome. Recent research paints a different picture. __Few traders traveled the whole distance; instead, goods passed through many hands, moving in short stages between regional markets.__ The \"road\" was less a highway than a web of overlapping local exchanges.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It explains why merchants preferred long journeys.",
+    "It introduces a counterargument that the text later rejects.",
+    "It provides specific details that support the text's revised view of the Silk Road.",
+    "It restates the assumption that scholars once held."
+   ],
+   "answer": 2,
+   "explanation": "Короткие этапы между рынками — конкретика нового взгляда на Шёлковый путь (C). Старое представление изложено в первом предложении; длинные путешествия, наоборот, были редкостью; контраргумента нет."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The narrator spends the first pages of the story describing her grandfather's workshop in meticulous detail: the smell of cedar shavings, the rows of chisels arranged by size, the radio tuned permanently to a station that played only old songs. Only after this does she reveal that the workshop has been empty for ten years. The delayed revelation gives the earlier description a new meaning, transforming it from a portrait of a place into an act of memory.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It presents a series of events in the order in which they happened to the grandfather.",
+    "It compares two workshops owned by different family members.",
+    "It describes the narrator's career as a woodworker.",
+    "It offers a detailed description of a setting and then explains how a later revelation changes its significance."
+   ],
+   "answer": 3,
+   "explanation": "Подробное описание мастерской, затем объяснение, как позднее признание меняет её смысл (D). Хронологии событий деда, двух мастерских и карьеры рассказчицы нет."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Economists have traditionally assumed that people make choices that maximize their own benefit. __Yet experiments repeatedly show that people will reject a small but free sum of money if they believe it was offered unfairly, accepting a loss rather than an insult.__ Such findings have led some economists to incorporate fairness and emotion into their models of decision making.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It describes the emotions people feel when receiving money.",
+    "It presents evidence that conflicts with a traditional economic assumption.",
+    "It explains how economists design their experiments.",
+    "It supports the assumption that people always maximize their benefit."
+   ],
+   "answer": 1,
+   "explanation": "Отказ от бесплатных денег противоречит допущению о максимизации выгоды (B). Дизайн экспериментов не описан; C противоположно; эмоции упомянуты лишь как следствие, не описаны."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The critic begins her review by praising the novel's ambition: its sprawling cast, its century-long timeline, its shifts among five narrators. In the second half of the review, however, she argues that this ambition undermines the book, since none of the characters is developed fully enough for readers to care about their fates. She concludes that the novel would have been stronger had it attempted less.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It compares the novel unfavorably with the author's earlier books.",
+    "It praises the novel without reservation.",
+    "It acknowledges a strength of the novel and then explains why that same quality weakens it.",
+    "It summarizes the novel's plot from beginning to end."
+   ],
+   "answer": 2,
+   "explanation": "Масштаб сначала хвалится, потом оказывается слабостью (C). Пересказа сюжета и сравнения с другими книгами нет; похвала с оговорками."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Nearly every culture has stories about floods. Some scholars once took this similarity as evidence of a single ancient catastrophe remembered around the world. Most researchers now offer a simpler explanation: because people have long settled near rivers and coasts, floods have been a common experience in many places, and stories about them arose independently.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To describe the plot of a particular flood story",
+    "To present a widely accepted explanation for the prevalence of flood stories across cultures",
+    "To prove that a single flood once covered the entire world",
+    "To argue that flood stories are the oldest stories in existence"
+   ],
+   "answer": 1,
+   "explanation": "Текст объясняет распространённость историй о потопе их независимым возникновением (B). Единую катастрофу текст как раз отвергает; «древнейшие истории» не утверждается; конкретного сюжета нет."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Octavia Butler wrote her early science fiction novels while working a series of low-paying jobs, often waking at two in the morning to write before her shifts began. __She later said that these years taught her a discipline that mattered more than inspiration: the habit of writing every day, whether or not she felt like it.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It argues that writers should avoid working other jobs.",
+    "It suggests that Butler disliked writing early in the morning.",
+    "It explains what Butler believed she gained from a difficult period in her life.",
+    "It describes the plot of Butler's early novels."
+   ],
+   "answer": 2,
+   "explanation": "Предложение объясняет, что Батлер вынесла из тех лет — дисциплину (C). Сюжетов нет; совета писателям не работать нет; что ей не нравилось писать рано утром, не сказано."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Glass frogs, found in Central and South American rainforests, have translucent skin on their undersides through which their organs are visible. For years, researchers wondered how the frogs hide their red blood, which would seem to make them conspicuous. A recent study found that when the frogs sleep, they store most of their red blood cells in their livers, which are covered by a reflective layer, making the frogs far more transparent.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It describes an unusual trait, poses a question it raised, and reports a finding that answers the question.",
+    "It compares glass frogs with other frogs in the same habitat.",
+    "It describes a theory and then explains why it was rejected.",
+    "It lists several species of frogs found in rainforests."
+   ],
+   "answer": 0,
+   "explanation": "Особенность — загадка — ответ из исследования (A). Сравнения видов, отвергнутой теории и списка лягушек нет."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Many people picture glaciers as unchanging masses of ice. In reality, glaciers are constantly in motion, flowing downhill under their own weight, sometimes advancing many meters in a single day. __The ice at a glacier's front may be centuries younger than the ice that fell as snow at its head, having traveled the length of the valley over hundreds of years.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It contradicts the claim that glaciers move.",
+    "It explains why glaciers form in valleys.",
+    "It describes how scientists measure the age of ice.",
+    "It elaborates on the idea that glaciers are always moving by describing a consequence of that motion."
+   ],
+   "answer": 3,
+   "explanation": "Предложение раскрывает идею движения ледника, описывая его следствие (D). B противоположно; почему ледники образуются в долинах и как измеряют возраст льда, не объясняется."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In her memoir, the scientist describes her childhood fascination with tide pools, then her years of training, during which she rarely saw the ocean, and finally her return to the coast as a researcher studying the same pools she had explored as a girl. The book thus ends where it began, though the narrator now sees the pools with a scientist's eyes.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It follows the scientist's life in a sequence that returns to its starting point with a new perspective.",
+    "It presents a scientific argument and supports it with data.",
+    "It compares the scientist's career with those of her colleagues.",
+    "It describes the tide pools as they changed over centuries."
+   ],
+   "answer": 0,
+   "explanation": "Детство — учёба вдали от моря — возвращение к тем же лужам с новым взглядом (A). Научного аргумента с данными, сравнения с коллегами и вековой истории луж нет."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "City planners once believed that adding lanes to congested highways would reduce traffic. __Decades of data, however, show that new lanes tend to fill up within a few years, as the added capacity encourages more people to drive.__ This phenomenon, called induced demand, has led some cities to invest in public transit instead.",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It supports the belief that more lanes reduce traffic.",
+    "It presents evidence that undermines a belief described in the first sentence.",
+    "It explains why public transit is cheaper than highways.",
+    "It describes how highways are designed."
+   ],
+   "answer": 1,
+   "explanation": "Данные опровергают прежнее убеждение планировщиков (B). Стоимость транспорта и проектирование дорог не обсуждаются; D противоположно."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The essay opens with a list of objects found in the author's late mother's kitchen drawer: twist ties, birthday candles, a single earring, coupons long expired. The author does not explain the list at first. Only in the final paragraph does she describe her mother as someone who \"could not throw away a possibility,\" and the list suddenly becomes a portrait.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To show how ordinary objects can reveal a person's character",
+    "To criticize people who keep unnecessary items",
+    "To give advice on organizing a kitchen",
+    "To describe the history of household objects"
+   ],
+   "answer": 0,
+   "explanation": "Предметы из ящика оказываются портретом матери (A). Критики, советов по хранению и истории вещей нет."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Monarch butterflies that migrate to Mexico each fall cannot have learned the route from their parents, because the butterflies that make the journey are several generations removed from those that made it the previous year. __Researchers have found that the butterflies navigate using a sun compass in their brains, corrected for the time of day by an internal clock in their antennae.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It offers an explanation for a puzzle raised in the preceding sentence.",
+    "It proves that monarchs learn the route from their parents.",
+    "It describes the plants monarchs feed on during migration.",
+    "It explains why monarchs migrate only in the fall."
+   ],
+   "answer": 0,
+   "explanation": "Предыдущее предложение ставит загадку — как они находят путь без обучения; это предложение отвечает (A). B противоположно; кормовые растения и причина осенней миграции не обсуждаются."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Advocates of a four-day school week argue that it reduces costs and gives teachers more time to plan. Critics counter that longer school days can exhaust younger students and that families may struggle to find childcare on the fifth day. Studies of districts that have adopted the schedule have produced mixed results, and the debate remains unresolved.",
+   "stem": "Which choice best describes the overall structure of the text?",
+   "choices": [
+    "It tells the story of one district that changed its schedule.",
+    "It explains the history of the five-day school week.",
+    "It presents arguments for and against a policy and notes that evidence is inconclusive.",
+    "It describes a policy and argues that all districts should adopt it."
+   ],
+   "answer": 2,
+   "explanation": "Доводы за и против, затем неоднозначные данные (C). Однозначного призыва нет; одного района и истории пятидневки нет."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "When the photographer began documenting her hometown's closing factories, she expected to produce a record of loss. Instead, she found herself photographing the people who had stayed: a former machinist who now repaired bicycles, a group of women who had turned a warehouse into a community kitchen. __Her book, she says, became less an elegy than a portrait of reinvention.__",
+   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+   "choices": [
+    "It criticizes the people who left the town.",
+    "It summarizes how the photographer's project changed from her original intention.",
+    "It describes the history of the town's factories.",
+    "It explains the photographer's technical methods."
+   ],
+   "answer": 1,
+   "explanation": "Предложение подытоживает сдвиг: от элегии к портрету перемен (B). История заводов, техника съёмки и критика уехавших не обсуждаются."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Linguists have documented that some languages have no separate words for \"left\" and \"right.\" Speakers of these languages describe locations using cardinal directions—north, south, east, west—even for objects on a table. Researchers have found that these speakers maintain a remarkably accurate sense of direction at all times, suggesting that the structure of a language may shape aspects of how its speakers perceive space.",
+   "stem": "Which choice best states the main purpose of the text?",
+   "choices": [
+    "To criticize linguists for studying unusual languages",
+    "To describe a linguistic feature and what it may suggest about language and perception",
+    "To argue that all languages should use cardinal directions",
+    "To explain how maps are drawn in different cultures"
+   ],
+   "answer": 1,
+   "explanation": "Особенность языка и возможная связь языка с восприятием пространства (B). Призыва ко всем языкам, картографии и критики лингвистов нет."
+  }
+ ]
+}

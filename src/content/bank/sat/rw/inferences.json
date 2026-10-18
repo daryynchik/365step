@@ -1,0 +1,687 @@
+{
+ "defaults": {
+  "exam": "sat",
+  "section": "rw",
+  "domain": "information-and-ideas",
+  "skill": "inferences",
+  "source": "original",
+  "license": "original — © 365step"
+ },
+ "items": [
+  {
+   "id": "e01",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Maya's plants on a sunny windowsill grew tall and green, while identical plants she kept in a dark closet turned pale and weak. Since all the plants received the same water and the same soil, the difference most likely resulted from ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the type of soil in each pot.",
+    "the amount of water each plant was given.",
+    "the age of the seeds Maya planted.",
+    "the amount of light the plants received."
+   ],
+   "answer": 3,
+   "explanation": "Вода и почва одинаковые, различалось только освещение — значит, дело в свете (D). Почву и воду текст прямо исключает; о возрасте семян ничего не сказано, растения названы одинаковыми."
+  },
+  {
+   "id": "e02",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A bakery noticed that its blueberry muffins sold out every Saturday by 9 a.m., while plenty remained unsold on weekdays. To avoid running out on Saturdays, the bakery should most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "bake fewer muffins on Saturdays.",
+    "close the shop earlier on weekdays.",
+    "bake more blueberry muffins on Saturdays.",
+    "stop selling blueberry muffins."
+   ],
+   "answer": 2,
+   "explanation": "Кексы заканчиваются именно в субботу — по субботам нужно печь больше (C). Прекратить продажу или печь меньше — противоположно цели; время закрытия в будни не решает субботнюю нехватку."
+  },
+  {
+   "id": "e03",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Every student in the class who completed all of the extra practice problems scored above 80 on the test. Rafael, a student in the class, scored 65 on the test. Based on this information, ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "Rafael completed exactly half of the extra practice problems.",
+    "the test was too difficult for most students.",
+    "every student who skipped the problems scored below 70.",
+    "Rafael did not complete all of the extra practice problems."
+   ],
+   "answer": 3,
+   "explanation": "Все, кто решил все задачи, набрали больше 80; у Рафаэля 65 — значит, он решил не все (D). Сколько именно он решил, неизвестно; о трудности теста и баллах остальных выводов сделать нельзя."
+  },
+  {
+   "id": "e04",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Snow leopards live in the high mountains of Central Asia, where temperatures often fall far below freezing. Their thick fur, wide paws that act like snowshoes, and long tails, which they wrap around their bodies while resting, suggest that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "these animals migrate south every winter.",
+    "these animals hunt only during the summer.",
+    "these animals are well adapted to cold, snowy environments.",
+    "these animals spend most of their time in warm valleys."
+   ],
+   "answer": 2,
+   "explanation": "Мех, широкие лапы и хвост-«шарф» — приспособления к холоду и снегу (C). Тёплые долины, миграция и летняя охота противоречат описанию жизни в морозных горах."
+  },
+  {
+   "id": "e05",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The town's only grocery store closed in March. Since then, the nearest store has been forty minutes away by car. Residents who do not have cars have therefore likely found it ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "cheaper to eat at restaurants.",
+    "more difficult to buy groceries.",
+    "easier to buy fresh food.",
+    "unnecessary to shop for food."
+   ],
+   "answer": 1,
+   "explanation": "Ближайший магазин в сорока минутах на машине — без машины покупать продукты труднее (B). «Легче» противоречит тексту; без еды не обойтись; цены ресторанов не обсуждаются."
+  },
+  {
+   "id": "e06",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "In a survey, most students who walked or biked to school said they felt more awake in their first class than students who rode in cars or buses. One possible explanation is that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "car rides to school take longer than walks.",
+    "students who walk to school live farther away.",
+    "buses arrive at school later than cars do.",
+    "physical activity before school helps students feel more alert."
+   ],
+   "answer": 3,
+   "explanation": "Отличие ходящих и едущих — физическая активность; она может бодрить (D). Длительность поездок и расстояние текст не сравнивает; время прибытия автобусов не объясняет бодрость."
+  },
+  {
+   "id": "e07",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Lena's family visited the beach in January and found it nearly empty. In July, the same beach was so crowded that they could barely find a place to sit. This suggests that the beach ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "is closed to visitors in January.",
+    "has become less popular over time.",
+    "is crowded throughout the year.",
+    "is much more popular in summer than in winter."
+   ],
+   "answer": 3,
+   "explanation": "Пусто зимой, битком летом — пляж популярнее летом (D). Он не закрыт — семья там была; о падении популярности или постоянной толпе текст не говорит."
+  },
+  {
+   "id": "e08",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Fossils of sea creatures have been found near the tops of some mountains far from any ocean. This evidence suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "oceans are higher today than they were in the past.",
+    "the rock that forms these mountains was once under the sea.",
+    "sea creatures once lived on mountaintops.",
+    "the fossils were carried there by birds."
+   ],
+   "answer": 1,
+   "explanation": "Морские окаменелости в горах говорят, что эти породы когда-то были морским дном (B). Морские животные не жили на вершинах; птицы не переносят окаменелости; высоту океанов текст не обсуждает."
+  },
+  {
+   "id": "e09",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "The library extended its hours until 10 p.m. on weeknights. In the first month, the number of evening visitors doubled, and many of them were high school students. The library's decision most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "was unpopular with students.",
+    "caused the library to close on weekends.",
+    "met a need among students who wanted a place to study at night.",
+    "reduced the number of daytime visitors."
+   ],
+   "answer": 2,
+   "explanation": "Вечерних посетителей вдвое больше, многие — школьники: решение отвечало их потребности (C). О дневных посетителях и выходных нет данных; рост числа школьников противоречит «unpopular»."
+  },
+  {
+   "id": "e10",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Owls have large eyes that collect a great deal of light, and many species also have extremely sensitive hearing. These features most likely help owls ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "migrate long distances.",
+    "build nests in tall trees.",
+    "survive in hot deserts.",
+    "hunt in dim light or darkness."
+   ],
+   "answer": 3,
+   "explanation": "Глаза, собирающие свет, и острый слух полезны при охоте в сумерках и темноте (D). Миграция, гнёзда и жара с этими признаками не связаны."
+  },
+  {
+   "id": "e11",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A factory installed new machines that produce the same number of parts while using half as much electricity. As a result, the factory's electricity bills will most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "decrease.",
+    "double.",
+    "stay exactly the same.",
+    "become impossible to predict."
+   ],
+   "answer": 0,
+   "explanation": "Тот же выпуск при вдвое меньшем расходе — счета уменьшатся (A). Удвоение и неизменность противоречат данным; прогноз как раз возможен."
+  },
+  {
+   "id": "e12",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Marco checked the weather forecast before leaving home: heavy rain was expected all afternoon. Even so, he left his umbrella by the door and walked to the park. When the rain began that afternoon, Marco most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "stayed dry under his umbrella.",
+    "was surprised that it did not rain.",
+    "decided the forecast had been wrong.",
+    "got wet."
+   ],
+   "answer": 3,
+   "explanation": "Зонт остался дома, а дождь пошёл — Марко, скорее всего, промок (D). Зонта у него нет; дождь пошёл, значит прогноз верен и удивляться нечему."
+  },
+  {
+   "id": "e13",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "Ancient Romans built many of their roads with layers of crushed stone, gravel, and tightly fitted paving stones. Some of these roads are still in use today, which suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the Romans' road-building methods were very durable.",
+    "modern roads are built with exactly the same materials.",
+    "the Romans rarely traveled on their roads.",
+    "the roads have never needed any repair."
+   ],
+   "answer": 0,
+   "explanation": "Дороги служат две тысячи лет — методы были долговечными (A). О современных материалах текст не говорит; что римляне редко ездили, не следует; «никогда не ремонтировали» — слишком сильно."
+  },
+  {
+   "id": "e14",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "In an experiment, plants that received fertilizer grew 30 percent taller than plants that did not, even though all of the plants were watered equally. This result suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "all types of fertilizer work equally well.",
+    "the fertilizer helped the plants grow.",
+    "water had no effect on the plants' growth.",
+    "the plants without fertilizer received less sunlight."
+   ],
+   "answer": 1,
+   "explanation": "Поливали одинаково, различалось удобрение — оно и помогло росту (B). Что вода не влияет — не следует; о солнце данных нет; другие удобрения не испытывали."
+  },
+  {
+   "id": "e15",
+   "difficulty": "easy",
+   "type": "mcq",
+   "passage": "A new phone model sold out within hours of its release, and online stores reported waiting lists of several weeks. This suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the phone received poor reviews.",
+    "few people knew about the phone.",
+    "the company produced too many phones.",
+    "demand for the phone was greater than the supply."
+   ],
+   "answer": 3,
+   "explanation": "Распродан за часы, очереди на недели — спрос превысил предложение (D). Плохие отзывы и неизвестность противоречат ажиотажу; «слишком много телефонов» — противоположно."
+  },
+  {
+   "id": "m01",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Researchers found that birds living near busy roads sing at higher pitches than birds of the same species living in quiet forests. Traffic noise is mostly low-pitched. The researchers hypothesize that singing at a higher pitch allows the birds near roads to ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "save energy while singing.",
+    "be heard more easily over the traffic noise.",
+    "attract fewer mates than forest birds.",
+    "avoid predators that live in forests."
+   ],
+   "answer": 1,
+   "explanation": "Шум транспорта низкий, а высокая песня не тонет в нём — птиц лучше слышно (B). Меньше партнёров — не цель; лесные хищники и экономия энергии не связаны с шумом дороги."
+  },
+  {
+   "id": "m02",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In the 1850s, a cholera outbreak struck a London neighborhood. The physician John Snow noticed that the cases clustered around a single public water pump, and that new cases dropped after the pump's handle was removed. Snow's observations suggested that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "cholera was spread mainly through the air.",
+    "the neighborhood's residents were unusually healthy.",
+    "removing the pump handle caused new outbreaks elsewhere.",
+    "cholera was spread through contaminated water."
+   ],
+   "answer": 3,
+   "explanation": "Случаи вокруг насоса и спад после снятия ручки указывают на воду (D). Воздушный путь не объяснял бы связь с насосом; о здоровье жителей и вспышках в других местах текст не говорит."
+  },
+  {
+   "id": "m03",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Archaeologists found grains of cultivated wheat and barley, along with stone tools used for grinding, at a site occupied about 9,000 years ago. The wild ancestors of these grains did not grow in the region. This evidence suggests that the people who lived at the site ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "grew or traded for crops that had originated elsewhere.",
+    "did not eat grain of any kind.",
+    "lived at the site for only a few days.",
+    "used the grinding tools mainly to build houses."
+   ],
+   "answer": 0,
+   "explanation": "Дикие предки злаков здесь не росли, значит культуры пришли извне — их выращивали или выменивали (A). Найденные зёрна и тёрки противоречат «не ели зерна»; кратковременность стоянки и строительство из находок не следуют."
+  },
+  {
+   "id": "m04",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "When a city replaced its streetlights with brighter LED lamps, residents of some neighborhoods complained that light shining into their windows made it harder to sleep. In response, the city installed shields on the lamps that direct light downward. The city most likely expected the shields to ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "make the lamps shine more brightly into homes.",
+    "reduce the light reaching residents' windows while still lighting the streets.",
+    "make the streets darker than they were before the new lamps.",
+    "increase the cost of the city's electricity."
+   ],
+   "answer": 1,
+   "explanation": "Козырьки направляют свет вниз — он освещает улицу и не бьёт в окна (B). Цель не в том, чтобы улицы стали темнее, и не в расходах; D противоположно цели."
+  },
+  {
+   "id": "m05",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "In a study of 500 students, those who took handwritten notes during lectures performed better on later tests of conceptual understanding than those who typed notes on laptops, even though the typists recorded more words. The researchers suggested that because handwriting is slower, students who write by hand ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "pay less attention to the lecture.",
+    "spend more time studying after class.",
+    "must summarize ideas in their own words, which deepens their understanding.",
+    "remember more of the exact words used in the lecture."
+   ],
+   "answer": 2,
+   "explanation": "Медленнее писать — приходится пересказывать своими словами, а это углубляет понимание (C). Больше слов записывали как раз печатавшие; рассеянность противоречит лучшим результатам; время учёбы после занятий не изучалось."
+  },
+  {
+   "id": "m06",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Desert tortoises can go a year or more without drinking. They obtain most of their water from the plants they eat and can store water in their bladders. During a drought, when few plants grow, desert tortoises would therefore most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "face a greater risk of dehydration.",
+    "drink more water from rivers.",
+    "grow faster than usual.",
+    "stop needing water entirely."
+   ],
+   "answer": 0,
+   "explanation": "Воду черепахи получают из растений; в засуху растений мало — растёт риск обезвоживания (A). Реки в пустыне в засуху не выход; быстрый рост и «вода больше не нужна» противоречат логике."
+  },
+  {
+   "id": "m07",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "A city introduced a fee on plastic shopping bags. Within a year, the number of plastic bags handed out at stores fell by 80 percent, while sales of reusable bags rose sharply. These results suggest that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "plastic bags became more popular.",
+    "the fee had no effect on shoppers' behavior.",
+    "the fee encouraged many shoppers to switch to reusable bags.",
+    "shoppers stopped buying groceries."
+   ],
+   "answer": 2,
+   "explanation": "Пакетов на 80% меньше, многоразовых сумок продано больше — покупатели перешли на сумки (C). Покупки не прекратились; B и D противоречат цифрам."
+  },
+  {
+   "id": "m08",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Some species of fish change color to match their surroundings. In an experiment, fish placed in tanks with dark gravel became darker within days, while identical fish placed in tanks with light gravel became paler. If the fish from the dark tanks were then moved to tanks with light gravel, they would most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "become paler.",
+    "remain dark permanently.",
+    "become darker still.",
+    "lose all of their color."
+   ],
+   "answer": 0,
+   "explanation": "Рыбы подстраиваются под фон: на светлом гравии они светлеют (A). Оставаться тёмными или темнеть дальше — противоречит опыту; полная потеря цвета из него не следует."
+  },
+  {
+   "id": "m09",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Although a certain American novel attracted little notice when it was published in 1851, it is now considered a classic. Its reputation grew in the twentieth century, when critics began to praise its ambitious style. This history suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "critics in 1851 praised the novel's style.",
+    "most classic novels are ignored by modern critics.",
+    "a book's reputation can change significantly over time.",
+    "the novel sold extremely well when it was first published."
+   ],
+   "answer": 2,
+   "explanation": "Незамеченная книга стала классикой — репутация может сильно меняться со временем (C). Успех при выходе и похвала в 1851 году противоречат «little notice»; D — необоснованное обобщение."
+  },
+  {
+   "id": "m10",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Bees can see ultraviolet light, which humans cannot. Many flowers that look plain to human eyes have ultraviolet patterns that point toward the flower's nectar. These patterns most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "make the flowers invisible to bees.",
+    "attract humans to the flowers.",
+    "help guide bees to the nectar.",
+    "protect the flowers from sunlight."
+   ],
+   "answer": 2,
+   "explanation": "Узоры видны пчёлам и ведут к нектару — они направляют пчёл (C). Защита от солнца не следует из направления узоров; пчёлы их как раз видят; люди ультрафиолета не видят."
+  },
+  {
+   "id": "m11",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "When a company allowed employees to work from home two days a week, the number of employees who quit their jobs that year fell by a third compared with the previous year. One reasonable conclusion is that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "working from home doubled employees' productivity.",
+    "the flexible schedule may have made employees more satisfied with their jobs.",
+    "employees disliked working from home.",
+    "the company hired fewer employees that year."
+   ],
+   "answer": 1,
+   "explanation": "Увольнений меньше после введения гибкого графика — возможно, люди стали довольнее работой (B). B противоречит данным; о найме и производительности сведений нет."
+  },
+  {
+   "id": "m12",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Scientists studying lizards on a small island found that after a hurricane, the surviving lizards had larger toe pads, on average, than the lizards measured before the storm. Larger toe pads help lizards grip branches. The finding suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "toe pad size has no effect on a lizard's survival.",
+    "lizards with larger toe pads were more likely to survive the strong winds.",
+    "the hurricane caused the lizards' toe pads to grow.",
+    "lizards with small toe pads left the island before the storm."
+   ],
+   "answer": 1,
+   "explanation": "Большие подушечки держат ветки крепче — такие ящерицы чаще выживали в ураган (B). Подушечки не выросли за время шторма; об уходе с острова данных нет; D противоречит находке."
+  },
+  {
+   "id": "m13",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Historical records show that the price of salt in a coastal region rose sharply in years when heavy rains flooded the shallow salt pans where seawater was evaporated to produce salt. This pattern suggests that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the floods reduced the region's supply of salt.",
+    "people used less salt in rainy years.",
+    "the region's salt was produced mainly in the mountains.",
+    "rain increased the demand for salt."
+   ],
+   "answer": 0,
+   "explanation": "Затопленные бассейны дают меньше соли — предложение падает, цена растёт (A). Меньший спрос снизил бы цену; соль добывали на побережье; связь дождя со спросом не указана."
+  },
+  {
+   "id": "m14",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Two groups of volunteers memorized a list of words. One group then took a short nap, while the other watched a video. When tested later that day, the nap group recalled more words. However, both groups had recalled the same number of words when tested immediately after studying. This suggests that the nap ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "made the words easier to learn in the first place.",
+    "had no effect on the volunteers' memory.",
+    "caused the volunteers to forget the video.",
+    "helped volunteers retain the words over time rather than learn them initially."
+   ],
+   "answer": 3,
+   "explanation": "Сразу после заучивания результаты равны, позже лучше у спавших — сон помог удержать слова (D). Лёгкость заучивания опровергается равенством сразу после учёбы; C противоречит результату; про видео не проверяли."
+  },
+  {
+   "id": "m15",
+   "difficulty": "medium",
+   "type": "mcq",
+   "passage": "Ice cream sales and the number of people who go swimming both increase in summer. A student concludes that eating ice cream causes people to go swimming. A better explanation is that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "swimming makes people hungry for ice cream.",
+    "ice cream sales cause the weather to become warmer.",
+    "people who swim never eat ice cream.",
+    "warm weather increases both ice cream sales and swimming."
+   ],
+   "answer": 3,
+   "explanation": "Обе величины растут из-за общей причины — тёплой погоды (D). B предлагает другую прямую причину без оснований; C абсурдно; D противоречит наблюдению."
+  },
+  {
+   "id": "h01",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Linguists have observed that languages spoken by small, isolated communities often have more complex grammatical systems than languages spoken by large populations that frequently interact with outsiders. One explanation is that adults learning a second language tend to simplify its grammar. If this explanation is correct, then a language that is learned by many adult newcomers would be expected to ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "stop changing entirely.",
+    "lose all of its vocabulary.",
+    "become grammatically simpler over time.",
+    "become more grammatically complex over time."
+   ],
+   "answer": 2,
+   "explanation": "Если взрослые упрощают грамматику, язык, который осваивают многие взрослые, со временем упрощается (C). Усложнение противоречит объяснению; полная неизменность и потеря словаря из него не следуют."
+  },
+  {
+   "id": "h02",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In a long-term study, researchers compared two fenced plots of grassland: one that deer could enter and one that kept deer out. After ten years, grasses in the plot without deer were taller, but several flowering plants that thrive in short grass had disappeared from that plot. These results suggest that deer ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "have no effect on how tall the grasses grow.",
+    "help maintain conditions that some flowering plants need.",
+    "harm every kind of plant in the grassland.",
+    "prefer to eat flowering plants rather than grasses."
+   ],
+   "answer": 1,
+   "explanation": "Без оленей трава выше, и исчезли цветы, любящие низкую траву, — олени поддерживают нужные им условия (B). Вред «всем растениям» противоречит исчезновению цветов без оленей; предпочтения в еде не изучались; D противоречит росту травы."
+  },
+  {
+   "id": "h03",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "The author's earliest novels were written in the first person, narrated by characters who openly addressed the reader. Her later novels abandon this approach, using an impersonal narrator who never reveals an opinion. Critics who prefer her earlier work often describe the later novels as cold, which suggests that these critics ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "believe the later novels are more original.",
+    "have not read the author's earlier novels.",
+    "value a sense of personal connection between narrator and reader.",
+    "dislike first-person narration."
+   ],
+   "answer": 2,
+   "explanation": "«Холодными» называют поздние романы с безличным рассказчиком — критики ценят личную связь с читателем (C). Неприязнь к первому лицу противоречит их предпочтению ранних книг; оригинальность не обсуждается; ранние романы они как раз предпочитают, значит читали."
+  },
+  {
+   "id": "h04",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Most of the world's chocolate comes from cacao trees grown within about 20 degrees of the equator. Cacao trees need consistent warmth, high humidity, and protection from strong winds. Climate models predict that some current growing regions will become hotter and drier over the coming decades. If these predictions are accurate, cacao farmers in those regions will most likely need to ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "adapt their growing methods or shift production to areas with more suitable conditions.",
+    "stop protecting their trees from strong winds.",
+    "expect larger harvests than in the past.",
+    "remove the shade that keeps humidity high."
+   ],
+   "answer": 0,
+   "explanation": "Деревьям нужна влажность, а регионы станут суше — фермерам придётся адаптироваться или переносить посадки (A). Отказ от защиты от ветра и снятие тени ухудшат условия; рост урожаев противоречит прогнозу."
+  },
+  {
+   "id": "h05",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In the early twentieth century, a city required all new buildings above a certain height to step back from the street as they rose, so that sunlight could reach the sidewalks below. As a result, many skyscrapers built during that period have a distinctive stepped shape. A skyscraper constructed after the requirement was removed would most likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "not need a stepped shape in order to comply with the law.",
+    "be required to have even more setbacks.",
+    "be shorter than the earlier skyscrapers.",
+    "block less sunlight than the earlier skyscrapers."
+   ],
+   "answer": 0,
+   "explanation": "Ступенчатая форма была требованием закона; после отмены она уже не обязательна (A). Требование отменено, а не ужесточено; высота и затенение новых зданий из текста не следуют."
+  },
+  {
+   "id": "h06",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Some researchers have suggested that the large ears of African elephants evolved mainly to help them hear distant sounds. Others point out that the ears contain a dense network of blood vessels and that elephants flap their ears more often on hot days. These observations support the view that the ears ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "evolved only to detect predators.",
+    "cool elephants by producing sweat.",
+    "help elephants regulate their body temperature.",
+    "are used mainly for communication."
+   ],
+   "answer": 2,
+   "explanation": "Сосуды в ушах и взмахи в жару указывают на охлаждение — терморегуляцию (C). Общение и хищники не связаны с жарой; о поте текст не говорит — охлаждение идёт через кровь."
+  },
+  {
+   "id": "h07",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "In a well-known experiment, children were offered one marshmallow immediately or two if they waited fifteen minutes. In a later version, before the test, an adult either kept or broke a promise to bring the children new art supplies. Children who had experienced the broken promise waited much less time, on average. This result suggests that a child's decision to wait ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "is determined entirely by the child's personality.",
+    "is unaffected by the child's recent experiences.",
+    "depends mainly on how much the child likes marshmallows.",
+    "depends partly on whether the child expects adults to keep their promises."
+   ],
+   "answer": 3,
+   "explanation": "Нарушенное обещание сократило ожидание — решение зависит от доверия к взрослым (D). Характер «полностью» и «не зависит от опыта» опровергаются опытом; любовь к зефиру не менялась между группами."
+  },
+  {
+   "id": "h08",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Ocean water absorbs about a quarter of the carbon dioxide that humans release into the atmosphere. When carbon dioxide dissolves in seawater, it forms an acid that reduces the amount of carbonate available in the water. Many shell-building organisms, such as oysters and some plankton, need carbonate to build their shells. As atmospheric carbon dioxide continues to increase, these organisms will likely ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "take carbonate directly from the air.",
+    "stop needing shells.",
+    "find it harder to build and maintain their shells.",
+    "build thicker shells than before."
+   ],
+   "answer": 2,
+   "explanation": "Больше CO₂ — меньше карбоната в воде — раковины строить труднее (C). Толстые раковины противоречат нехватке карбоната; из воздуха организмы его не берут; потребность в раковинах не исчезнет."
+  },
+  {
+   "id": "h09",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A historian studying letters written by soldiers during a nineteenth-century war found that letters from the first year of the war often expressed excitement and confidence, while letters from later years more often described exhaustion and doubt. The historian should be cautious about concluding that soldiers' attitudes changed, however, because ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "letters are a common source for historians.",
+    "the letters that survived from different years may not represent all soldiers' views equally.",
+    "the war lasted for several years.",
+    "soldiers wrote letters to their families."
+   ],
+   "answer": 1,
+   "explanation": "Осторожность оправдана, если сохранившиеся письма могут быть нерепрезентативны (B). Длительность войны, адресаты и популярность писем как источника не ставят вывод под сомнение."
+  },
+  {
+   "id": "h10",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Engineers designing a bridge in an earthquake-prone region chose to mount the bridge deck on bearings that allow it to slide slightly during ground motion, rather than attaching it rigidly to its supports. The engineers most likely made this choice because ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "earthquakes rarely affect bridges.",
+    "allowing some movement can reduce the stress that shaking places on the structure.",
+    "rigid connections are always cheaper to build.",
+    "the bridge will carry very little traffic."
+   ],
+   "answer": 1,
+   "explanation": "Возможность сдвигаться снижает нагрузку при толчках (B). Цена жёстких креплений не объясняет выбор; трафик не связан с землетрясениями; D противоречит «earthquake-prone region»."
+  },
+  {
+   "id": "h11",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Archaeologists found that pottery from a site in one valley was decorated with patterns nearly identical to those on pottery from a site 300 kilometers away, while pottery from the sites in between showed different styles. One possible explanation is that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "the sites in between were occupied after the two distant sites.",
+    "people at the two distant sites were in direct contact, perhaps through trade or migration.",
+    "the same people lived at every site in the region.",
+    "pottery was never traded in the region."
+   ],
+   "answer": 1,
+   "explanation": "Одинаковые узоры у далёких поселений при других стилях между ними — вероятен прямой контакт (B). Одни и те же люди везде сделали бы стиль одинаковым; «никогда не торговали» противоречит объяснению; время заселения ничего не объясняет."
+  },
+  {
+   "id": "h12",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Economists noticed that when a city raised its minimum wage, employment at fast-food restaurants did not fall, but the prices of meals rose slightly. One explanation consistent with these observations is that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "restaurants covered higher labor costs partly by charging customers more.",
+    "restaurants hired many more workers after the increase.",
+    "customers stopped buying fast food.",
+    "the higher wage reduced the restaurants' costs."
+   ],
+   "answer": 0,
+   "explanation": "Занятость не упала, а цены выросли — рост затрат на труд переложили на покупателей (A). «Наняли намного больше» не следует (занятость лишь не упала); отказ покупателей и снижение затрат противоречат данным."
+  },
+  {
+   "id": "h13",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Glaciers flow slowly downhill under their own weight. Scientists have found that some glaciers speed up in summer, when meltwater drains through cracks in the ice to the glacier's base. The meltwater most likely causes this acceleration by ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "reducing friction between the glacier and the ground beneath it.",
+    "adding weight to the top of the glacier.",
+    "freezing the glacier to the rock below it.",
+    "making the ice harder and more rigid."
+   ],
+   "answer": 0,
+   "explanation": "Вода у основания служит смазкой и уменьшает трение (A). Вода стекает вниз, а не нагружает верх; примерзание и твёрдость льда замедлили бы движение."
+  },
+  {
+   "id": "h14",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "A playwright set every scene of her new play in a single kitchen. All the major events—a wedding, a funeral, a family quarrel—happen offstage and are reported by characters who rush in to describe them. By keeping these events offstage, the playwright most likely intended to ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "prevent the audience from learning what happened.",
+    "focus the audience's attention on how the characters react to events rather than on the events themselves.",
+    "make the events of the play seem unimportant.",
+    "reduce the number of characters in the play."
+   ],
+   "answer": 1,
+   "explanation": "Зрители видят не события, а реакции героев на кухне (B). События важные (свадьба, похороны); число персонажей не меняется; о событиях зрителям как раз рассказывают."
+  },
+  {
+   "id": "h15",
+   "difficulty": "hard",
+   "type": "mcq",
+   "passage": "Researchers compared two groups of patients recovering from the same type of surgery. Patients whose hospital windows faced trees needed less pain medication and left the hospital sooner, on average, than patients whose windows faced a brick wall. Because patients were assigned to rooms based only on availability, the results suggest that ______",
+   "stem": "Which choice most logically completes the text?",
+   "choices": [
+    "views of nature may aid recovery from surgery.",
+    "brick walls cause infections in patients.",
+    "patients chose rooms with views of trees.",
+    "pain medication slows recovery from surgery."
+   ],
+   "answer": 0,
+   "explanation": "Комнаты распределялись случайно по свободным местам, разница — в виде из окна: природа, возможно, помогает выздоровлению (A). Об инфекциях нет данных; пациенты не выбирали комнаты; D переворачивает связь."
+  }
+ ]
+}
