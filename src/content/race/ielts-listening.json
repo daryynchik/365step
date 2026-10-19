@@ -1,0 +1,408 @@
+{
+  "source": "original",
+  "license": "original — © 365step",
+  "voices": {
+    "cori": "Piper TTS, en_GB-cori-high (trained on public-domain LibriVox recordings)",
+    "ljspeech": "Piper TTS, en_US-ljspeech-high (trained on the public-domain LJ Speech dataset)"
+  },
+  "topics": {
+    "details": "Детали: числа, даты, цены",
+    "spelling": "Имена и написание по буквам",
+    "directions": "Маршрут и расположение",
+    "main-idea": "Основная мысль",
+    "attitude": "Мнение и отношение говорящего"
+  },
+  "items": [
+    {
+      "id": "l-e01", "difficulty": "easy", "topic": "details",
+      "context": "You will hear a receptionist at a sports centre.",
+      "lines": [{ "voice": "cori", "text": "Thanks for calling Riverside Sports Centre. The swimming pool is open every day. On weekdays it opens at seven in the morning, but on Saturdays and Sundays it opens a little later, at half past eight." }],
+      "question": "When does the pool open on Saturdays?",
+      "choices": ["7:00 a.m.", "7:30 a.m.", "8:00 a.m.", "8:30 a.m."], "answer": 3,
+      "explanation": "Семь утра — это время для будних дней. Про выходные сказано «a little later, at half past eight», то есть 8:30. Варианты 7:30 и 8:00 в записи не звучат."
+    },
+    {
+      "id": "l-e02", "difficulty": "easy", "topic": "spelling",
+      "context": "You will hear a man booking a hotel room.",
+      "lines": [
+        { "voice": "ljspeech", "text": "Could I have your surname, please?" },
+        { "voice": "cori", "text": "Yes, it's Dalton. That's D for David, A, L, T, O, N." }
+      ],
+      "question": "How is the surname spelled?",
+      "choices": ["Dalton", "Dolton", "Daltan", "Dawton"], "answer": 0,
+      "explanation": "Фамилию продиктовали по буквам: D (for David), A, L, T, O, N — Dalton. В остальных вариантах заменена одна буква (O вместо A, A вместо O, W вместо L)."
+    },
+    {
+      "id": "l-e03", "difficulty": "easy", "topic": "details",
+      "context": "You will hear a recorded message at a museum.",
+      "lines": [{ "voice": "cori", "text": "Welcome to the City Museum. Adult tickets cost twelve pounds. Students pay eight pounds, and children under five go in free." }],
+      "question": "How much does a student ticket cost?",
+      "choices": ["£5", "£8", "£12", "Nothing"], "answer": 1,
+      "explanation": "«Students pay eight pounds». 12 фунтов — цена для взрослых, бесплатно — для детей до пяти лет, а число 5 относится к возрасту, а не к цене."
+    },
+    {
+      "id": "l-e04", "difficulty": "easy", "topic": "directions",
+      "context": "You will hear a student asking for directions.",
+      "lines": [{ "voice": "ljspeech", "text": "The library is on the second floor. Take the lift, turn left, and it's the first door on your right." }],
+      "question": "Where is the library?",
+      "choices": ["On the ground floor, next to the lift", "On the second floor, first door on the right", "On the second floor, first door on the left", "On the third floor, at the end of the corridor"], "answer": 1,
+      "explanation": "Второй этаж, после лифта налево, и там «first door on your right» — первая дверь справа. Слово left относится к повороту, а не к двери."
+    },
+    {
+      "id": "l-e05", "difficulty": "easy", "topic": "main-idea",
+      "context": "You will hear an announcement at a school.",
+      "lines": [{ "voice": "cori", "text": "Attention, please. Because of the heavy rain, today's outdoor football match has been cancelled. All players should go to the main hall for an indoor training session instead." }],
+      "question": "What is the main message of the announcement?",
+      "choices": ["The match has been moved to tomorrow", "The football match is cancelled because of the rain", "The main hall is closed today", "Players should go home early"], "answer": 1,
+      "explanation": "Главное: матч отменён из-за сильного дождя, вместо него тренировка в зале. О переносе на завтра и об уходе домой ничего не сказано, а зал, наоборот, открыт."
+    },
+    {
+      "id": "l-e06", "difficulty": "easy", "topic": "details",
+      "context": "You will hear a message from a dental clinic.",
+      "lines": [{ "voice": "ljspeech", "text": "Hello, this is a reminder from Green Lane Dental. Your appointment is on Tuesday the fourteenth of March, at a quarter past ten." }],
+      "question": "When is the appointment?",
+      "choices": ["Thursday 14 March", "Tuesday 4 March", "Tuesday 14 March", "Tuesday 14 May"], "answer": 2,
+      "explanation": "Названы вторник (Tuesday), четырнадцатое (the fourteenth) и март (March). Thursday, четвёртое число и май — частые ловушки на похожие слова."
+    },
+    {
+      "id": "l-e07", "difficulty": "easy", "topic": "details",
+      "context": "You will hear a woman giving her phone number.",
+      "lines": [{ "voice": "cori", "text": "My mobile number is zero seven nine four six, two three eight, one five zero." }],
+      "question": "What is her phone number?",
+      "choices": ["07946 238 150", "07964 238 150", "07946 283 150", "07946 238 105"], "answer": 0,
+      "explanation": "Цифры звучат группами: 0-7-9-4-6, 2-3-8, 1-5-0. В остальных вариантах две соседние цифры переставлены местами."
+    },
+    {
+      "id": "l-e08", "difficulty": "easy", "topic": "attitude",
+      "context": "You will hear a student talking about a café.",
+      "lines": [{ "voice": "ljspeech", "text": "I tried the new café on Park Street yesterday. The coffee was excellent, and the staff were really friendly. I'll definitely go back." }],
+      "question": "How does the speaker feel about the café?",
+      "choices": ["Disappointed", "Positive", "Unsure", "Annoyed about the prices"], "answer": 1,
+      "explanation": "Отличный кофе, дружелюбный персонал и «I'll definitely go back» — отношение явно положительное. О ценах ничего не сказано."
+    },
+    {
+      "id": "l-e09", "difficulty": "easy", "topic": "details",
+      "context": "You will hear information about an airport bus.",
+      "lines": [{ "voice": "cori", "text": "The bus to the airport leaves from stop C every twenty minutes. The journey takes about forty minutes." }],
+      "question": "How long does the journey take?",
+      "choices": ["20 minutes", "30 minutes", "40 minutes", "60 minutes"], "answer": 2,
+      "explanation": "Двадцать минут — это интервал между автобусами («every twenty minutes»), а сама поездка — «about forty minutes»."
+    },
+    {
+      "id": "l-e10", "difficulty": "easy", "topic": "spelling",
+      "context": "You will hear a course administrator.",
+      "lines": [{ "voice": "ljspeech", "text": "The course is taught by Doctor Pryce. That's P, R, Y, C, E." }],
+      "question": "What is the tutor's name?",
+      "choices": ["Doctor Price", "Doctor Pryce", "Doctor Prise", "Doctor Bryce"], "answer": 1,
+      "explanation": "По буквам: P, R, Y, C, E — Pryce. Price звучит так же, но пишется через I, поэтому в IELTS важно слушать, как слово диктуют."
+    },
+    {
+      "id": "l-e11", "difficulty": "easy", "topic": "main-idea",
+      "context": "You will hear a guide speaking to a group.",
+      "lines": [{ "voice": "cori", "text": "Welcome to Hillford Castle. Today's tour will last about one hour. We'll start in the great hall and finish in the gardens, where you can buy something to eat and drink." }],
+      "question": "What is the speaker doing?",
+      "choices": ["Selling tickets for the castle", "Introducing a tour", "Explaining the history of the castle", "Announcing a garden competition"], "answer": 1,
+      "explanation": "Гид приветствует группу и описывает экскурсию: длительность, начало и конец маршрута. Истории замка, продажи билетов и конкурса в записи нет."
+    },
+    {
+      "id": "l-e12", "difficulty": "easy", "topic": "details",
+      "context": "You will hear two colleagues planning a meeting.",
+      "lines": [
+        { "voice": "ljspeech", "text": "How many chairs do we need for the meeting?" },
+        { "voice": "cori", "text": "There will be thirty-five people, so let's order forty chairs to be safe." }
+      ],
+      "question": "How many chairs will they order?",
+      "choices": ["30", "35", "40", "45"], "answer": 2,
+      "explanation": "Людей будет 35, но стульев заказывают с запасом — «let's order forty chairs». Вопрос именно о стульях."
+    },
+    {
+      "id": "l-e13", "difficulty": "easy", "topic": "directions",
+      "context": "You will hear someone giving directions in a town.",
+      "lines": [{ "voice": "ljspeech", "text": "To get to the post office, go straight along High Street and take the second turning on the left. It's opposite the bank." }],
+      "question": "Where is the post office?",
+      "choices": ["Next to the bank", "Opposite the bank", "Behind the bank", "At the start of High Street"], "answer": 1,
+      "explanation": "Ключевое слово — opposite: почта напротив банка, а не рядом (next to) и не за ним (behind)."
+    },
+    {
+      "id": "l-e14", "difficulty": "easy", "topic": "attitude",
+      "context": "You will hear a teenager talking about a film.",
+      "lines": [{ "voice": "cori", "text": "Honestly, the film was far too long. The story was interesting at first, but I got bored after an hour." }],
+      "question": "What does the speaker think of the film?",
+      "choices": ["It was too short", "It became boring", "The story was confusing", "It was the best film of the year"], "answer": 1,
+      "explanation": "«Far too long» и «I got bored after an hour» — фильм стал скучным. Сюжет сначала был интересным, а не запутанным."
+    },
+    {
+      "id": "l-e15", "difficulty": "easy", "topic": "details",
+      "context": "You will hear information about an evening class.",
+      "lines": [{ "voice": "ljspeech", "text": "The photography class starts on Monday the third of October and runs for ten weeks." }],
+      "question": "How long does the class run?",
+      "choices": ["3 weeks", "8 weeks", "10 weeks", "12 weeks"], "answer": 2,
+      "explanation": "«Runs for ten weeks». Число три относится к дате начала (the third of October), а не к длительности."
+    },
+
+    {
+      "id": "l-m01", "difficulty": "medium", "topic": "details",
+      "context": "You will hear a tutor talking about a workshop.",
+      "lines": [{ "voice": "cori", "text": "The writing workshop was planned for Wednesday, but the room isn't free then, so we've moved it to Thursday. It still starts at two o'clock." }],
+      "question": "When is the workshop now?",
+      "choices": ["Wednesday at 2:00", "Thursday at 2:00", "Thursday at 3:00", "Wednesday at 3:00"], "answer": 1,
+      "explanation": "Среда — старый план; занятие перенесли на четверг. Время не изменилось: «it still starts at two o'clock»."
+    },
+    {
+      "id": "l-m02", "difficulty": "medium", "topic": "spelling",
+      "context": "You will hear a phone call to a library.",
+      "lines": [
+        { "voice": "ljspeech", "text": "And your surname, is that Morgen, with an E?" },
+        { "voice": "cori", "text": "No, with an A. M, O, R, G, A, N. People often write it wrong." }
+      ],
+      "question": "How is the surname spelled?",
+      "choices": ["Morgan", "Morgen", "Morgon", "Morrgan"], "answer": 0,
+      "explanation": "Сотрудник предлагает вариант с E, но говорящая исправляет: «No, with an A» и диктует M-O-R-G-A-N. Первое предположение — ловушка."
+    },
+    {
+      "id": "l-m03", "difficulty": "medium", "topic": "details",
+      "context": "You will hear information about a guided walk.",
+      "lines": [{ "voice": "ljspeech", "text": "The full price of the guided walk is eighteen pounds, but members of the walking club get a third off." }],
+      "question": "How much do club members pay?",
+      "choices": ["£6", "£12", "£15", "£18"], "answer": 1,
+      "explanation": "Скидка в треть: 18 / 3 = 6, значит члены клуба платят 18 − 6 = 12 фунтов. Шесть — это размер скидки, а не цена."
+    },
+    {
+      "id": "l-m04", "difficulty": "medium", "topic": "details",
+      "context": "You will hear a customer service call.",
+      "lines": [{ "voice": "cori", "text": "Your reference number is A, four, seven, two... sorry, let me read that again. A, four, two, seven, nine." }],
+      "question": "What is the reference number?",
+      "choices": ["A4729", "A4279", "A4297", "A2479"], "answer": 1,
+      "explanation": "Говорящая ошибается, извиняется и читает номер заново: A-4-2-7-9. В IELTS правильным считается то, что сказано после исправления."
+    },
+    {
+      "id": "l-m05", "difficulty": "medium", "topic": "main-idea",
+      "context": "You will hear part of a talk about bees.",
+      "lines": [{ "voice": "ljspeech", "text": "Many people think bees are important only because they make honey. But their most important job is pollination. Without bees, farmers would struggle to grow many kinds of fruit and vegetables." }],
+      "question": "What point is the speaker making?",
+      "choices": ["Honey production is falling", "Bees matter most because they pollinate crops", "Every farmer should keep bees", "Most fruit does not need pollination"], "answer": 1,
+      "explanation": "Говорящий противопоставляет распространённое мнение (мёд) и главную мысль: «their most important job is pollination». Остальные утверждения в записи не звучат."
+    },
+    {
+      "id": "l-m06", "difficulty": "medium", "topic": "attitude",
+      "context": "You will hear two colleagues discussing travel to a conference.",
+      "lines": [
+        { "voice": "cori", "text": "Shall we take the train to the conference?" },
+        { "voice": "ljspeech", "text": "It's quicker, I agree, but the tickets are so expensive at that time of day. I'd rather drive, even if it takes longer." }
+      ],
+      "question": "Why does the second speaker prefer to drive?",
+      "choices": ["Driving is quicker", "The train is too expensive", "There is no train that day", "She enjoys driving"], "answer": 1,
+      "explanation": "Она признаёт, что поезд быстрее, но билеты слишком дорогие — поэтому предпочитает машину, «even if it takes longer». Вариант «driving is quicker» противоречит записи."
+    },
+    {
+      "id": "l-m07", "difficulty": "medium", "topic": "directions",
+      "context": "You will hear a park guide describing the layout.",
+      "lines": [{ "voice": "cori", "text": "From the main entrance, walk past the café. The children's playground is just behind the café, between the lake and the car park." }],
+      "question": "Where is the playground?",
+      "choices": ["In front of the café", "Behind the café, between the lake and the car park", "Next to the main entrance", "On the far side of the lake"], "answer": 1,
+      "explanation": "«Just behind the café, between the lake and the car park». Вход — точка отсчёта маршрута, а не место площадки."
+    },
+    {
+      "id": "l-m08", "difficulty": "medium", "topic": "details",
+      "context": "You will hear a manager describing a hall.",
+      "lines": [{ "voice": "ljspeech", "text": "The hall can hold two hundred people standing, but only one hundred and twenty if everyone is seated." }],
+      "question": "How many people can the hall hold if everyone is seated?",
+      "choices": ["100", "120", "200", "220"], "answer": 1,
+      "explanation": "Двести — для стоящих гостей, а сидячих мест «only one hundred and twenty». Вопрос о сидячих."
+    },
+    {
+      "id": "l-m09", "difficulty": "medium", "topic": "main-idea",
+      "context": "You will hear the start of a radio programme.",
+      "lines": [{ "voice": "cori", "text": "This week's programme isn't about where to travel. It's about how to travel more cheaply, with tips on booking early and using local transport." }],
+      "question": "What is the programme mainly about?",
+      "choices": ["The best places to visit", "Saving money when travelling", "The history of local transport", "Getting free hotel rooms"], "answer": 1,
+      "explanation": "Ведущая прямо отрицает тему «куда поехать» и называет настоящую: «how to travel more cheaply». Местный транспорт — один из советов, а не тема программы."
+    },
+    {
+      "id": "l-m10", "difficulty": "medium", "topic": "attitude",
+      "context": "You will hear two students talking about a club.",
+      "lines": [
+        { "voice": "ljspeech", "text": "Why did you leave the drama club?" },
+        { "voice": "cori", "text": "It wasn't the people. They were great. I just couldn't fit the evening rehearsals around my part-time job." }
+      ],
+      "question": "Why did she leave the club?",
+      "choices": ["She didn't like the other members", "The rehearsals clashed with her job", "The club closed down", "She lost interest in acting"], "answer": 1,
+      "explanation": "Причину она называет сама: вечерние репетиции не совпадали с подработкой. Людей она, наоборот, хвалит — «they were great»."
+    },
+    {
+      "id": "l-m11", "difficulty": "medium", "topic": "details",
+      "context": "You will hear a tutor talking about an essay.",
+      "lines": [{ "voice": "ljspeech", "text": "The deadline for the essay was the twentieth, but I've decided to give everyone an extra week." }],
+      "question": "What is the new deadline?",
+      "choices": ["The 13th", "The 20th", "The 27th", "The 30th"], "answer": 2,
+      "explanation": "Старый срок — двадцатое, плюс неделя (семь дней): новый срок — двадцать седьмое."
+    },
+    {
+      "id": "l-m12", "difficulty": "medium", "topic": "attitude",
+      "context": "You will hear a commuter talking about a new bus timetable.",
+      "lines": [{ "voice": "cori", "text": "The new timetable looks good on paper, but I doubt it will work in practice. The buses are already late most mornings." }],
+      "question": "What is the speaker's attitude to the new timetable?",
+      "choices": ["Enthusiastic", "Doubtful", "Angry with the drivers", "Completely neutral"], "answer": 1,
+      "explanation": "«Looks good on paper, but I doubt it will work» — говорящая сомневается. Восторга нет, а на водителей она не злится, просто отмечает опоздания."
+    },
+    {
+      "id": "l-m13", "difficulty": "medium", "topic": "details",
+      "context": "You will hear a hotel receptionist.",
+      "lines": [{ "voice": "ljspeech", "text": "Breakfast is served from seven until half past nine, except on Sundays, when it continues until half past ten." }],
+      "question": "When does breakfast end on Sundays?",
+      "choices": ["9:00", "9:30", "10:00", "10:30"], "answer": 3,
+      "explanation": "Обычно завтрак до 9:30, но для воскресенья сделано исключение: «until half past ten», то есть 10:30."
+    },
+    {
+      "id": "l-m14", "difficulty": "medium", "topic": "directions",
+      "context": "You will hear an announcement about a seminar.",
+      "lines": [{ "voice": "cori", "text": "Please note that this afternoon's seminar was going to be in room two B, but it's been changed to room three D because of a problem with the projector." }],
+      "question": "Which room is the seminar in?",
+      "choices": ["2B", "2D", "3B", "3D"], "answer": 3,
+      "explanation": "2B — прежняя аудитория. Из-за проектора семинар перенесли в 3D. Варианты 2D и 3B смешивают буквы и цифры двух аудиторий."
+    },
+    {
+      "id": "l-m15", "difficulty": "medium", "topic": "main-idea",
+      "context": "You will hear an organiser talking about volunteers.",
+      "lines": [{ "voice": "ljspeech", "text": "Volunteers don't need any previous experience. What we really need is people who can commit to at least two hours every weekend." }],
+      "question": "What does the organiser need most from volunteers?",
+      "choices": ["Previous experience", "Regular time at weekends", "Their own transport", "A teaching qualification"], "answer": 1,
+      "explanation": "Опыт прямо назван ненужным. Главное — «commit to at least two hours every weekend», то есть регулярное время по выходным."
+    },
+
+    {
+      "id": "l-h01", "difficulty": "hard", "topic": "main-idea",
+      "context": "You will hear part of a lecture about sleep and work.",
+      "lines": [{ "voice": "cori", "text": "Early studies suggested that sleeping less made people more productive, simply because they had more hours to work. However, later research looked at the quality of that work, and found that mistakes increased sharply after just a few nights of short sleep." }],
+      "question": "What did the later research show?",
+      "choices": ["People who slept less worked more hours", "Extra working hours came with lower-quality work", "Sleep had no effect on mistakes", "Mistakes decreased with practice"], "answer": 1,
+      "explanation": "Слово however отделяет ранние выводы от поздних: новые исследования смотрели на качество работы и нашли резкий рост ошибок. Первый вариант описывает ранние исследования, а не поздние."
+    },
+    {
+      "id": "l-h02", "difficulty": "hard", "topic": "details",
+      "context": "You will hear two friends arranging to meet.",
+      "lines": [
+        { "voice": "ljspeech", "text": "Let's meet at the station at nine." },
+        { "voice": "cori", "text": "I can't make nine. How about ten?" },
+        { "voice": "ljspeech", "text": "Ten is too late for the museum tour. Let's say half past nine, and we'll go straight there." },
+        { "voice": "cori", "text": "Fine, see you then." }
+      ],
+      "question": "What time will they meet?",
+      "choices": ["9:00", "9:30", "10:00", "10:30"], "answer": 1,
+      "explanation": "Девять не подходит одной, десять — другой. Компромисс — «half past nine», и вторая соглашается: «Fine». В IELTS ответом обычно становится последняя договорённость."
+    },
+    {
+      "id": "l-h03", "difficulty": "hard", "topic": "attitude",
+      "context": "You will hear a researcher talking about the results of a study.",
+      "lines": [{ "voice": "ljspeech", "text": "I wouldn't say the results were disappointing, exactly. They just weren't what we'd hoped for, and the sample was too small to draw any firm conclusions." }],
+      "question": "How does the researcher view the results?",
+      "choices": ["As very disappointing", "As encouraging", "As inconclusive", "As completely wrong"], "answer": 2,
+      "explanation": "Она отказывается называть результаты разочаровывающими, но и не радуется. Главное — выборка слишком мала, чтобы делать твёрдые выводы: результаты неубедительны (inconclusive)."
+    },
+    {
+      "id": "l-h04", "difficulty": "hard", "topic": "details",
+      "context": "You will hear a report about visitors to a park.",
+      "lines": [{ "voice": "cori", "text": "Last year, forty per cent of visitors arrived by car. This year that figure fell by a quarter, mainly because of the new tram line." }],
+      "question": "What percentage of visitors arrived by car this year?",
+      "choices": ["10%", "25%", "30%", "40%"], "answer": 2,
+      "explanation": "Доля упала на четверть от 40%: 40 × 1/4 = 10, значит 40 − 10 = 30%. «A quarter» — величина падения, а не новая доля."
+    },
+    {
+      "id": "l-h05", "difficulty": "hard", "topic": "main-idea",
+      "context": "You will hear part of a talk about a town's growth.",
+      "lines": [{ "voice": "ljspeech", "text": "The town's population grew, not because more people were born there, but because the new university attracted thousands of young people from other regions, and many of them stayed after graduating." }],
+      "question": "What was the main reason for the town's growth?",
+      "choices": ["A higher birth rate", "People moving there because of the university", "New factories opening", "Cheaper housing"], "answer": 1,
+      "explanation": "Конструкция «not because…, but because…» отбрасывает рождаемость и называет причину: университет привлёк молодёжь из других регионов. Заводы и жильё не упоминаются."
+    },
+    {
+      "id": "l-h06", "difficulty": "hard", "topic": "attitude",
+      "context": "You will hear two colleagues choosing a supplier.",
+      "lines": [
+        { "voice": "cori", "text": "Option one is cheaper, but delivery takes three weeks. Option two costs more, but it arrives in five days." },
+        { "voice": "ljspeech", "text": "Our event is in ten days, so the delivery time matters more than the price." }
+      ],
+      "question": "Which option will they probably choose, and why?",
+      "choices": ["Option one, because it is cheaper", "Option two, because it arrives in time", "Option one, because it arrives sooner", "Neither, because both are too slow"], "answer": 1,
+      "explanation": "Мероприятие через 10 дней: три недели — слишком долго, пять дней — успевают. Коллега прямо говорит, что срок важнее цены, значит выбор — второй вариант."
+    },
+    {
+      "id": "l-h07", "difficulty": "hard", "topic": "main-idea",
+      "context": "You will hear a teacher speaking at a conference.",
+      "lines": [{ "voice": "cori", "text": "Some of you will say that online classes can never replace a real classroom. I'm not going to argue with that today. My point is a narrower one. For practising vocabulary, short daily online exercises are surprisingly effective." }],
+      "question": "What is the speaker's main point?",
+      "choices": ["Online classes should replace classrooms", "Short daily online practice works well for vocabulary", "Vocabulary cannot be learned online", "Classrooms are not effective"], "answer": 1,
+      "explanation": "Она отказывается спорить о замене классов («I'm not going to argue») и сужает тему: короткие ежедневные онлайн-упражнения хорошо работают для словарного запаса."
+    },
+    {
+      "id": "l-h08", "difficulty": "hard", "topic": "details",
+      "context": "You will hear a conversation at a travel desk.",
+      "lines": [
+        { "voice": "ljspeech", "text": "So the coach leaves at a quarter past seven?" },
+        { "voice": "cori", "text": "That was the old time. It now leaves fifteen minutes earlier, and passengers need to be there ten minutes before that." }
+      ],
+      "question": "By what time must passengers arrive?",
+      "choices": ["6:50", "7:00", "7:05", "7:15"], "answer": 0,
+      "explanation": "Новое отправление на 15 минут раньше 7:15 — в 7:00. Прийти нужно ещё на 10 минут раньше: 6:50. Вариант 7:00 — время отправления, а не прибытия пассажиров."
+    },
+    {
+      "id": "l-h09", "difficulty": "hard", "topic": "main-idea",
+      "context": "You will hear a description of how coffee beans are prepared.",
+      "lines": [{ "voice": "ljspeech", "text": "First, the beans are dried for about two days. They are then sorted by size, and only after that are they roasted. Packaging comes last." }],
+      "question": "What happens immediately before roasting?",
+      "choices": ["Drying", "Sorting", "Packaging", "Washing"], "answer": 1,
+      "explanation": "Порядок: сушка → сортировка → обжарка → упаковка. «Only after that are they roasted» — обжарка идёт сразу после сортировки. Мойки в описании нет."
+    },
+    {
+      "id": "l-h10", "difficulty": "hard", "topic": "attitude",
+      "context": "You will hear a guest talking about a hotel.",
+      "lines": [{ "voice": "cori", "text": "Well, I suppose the hotel was fine, if you don't mind waiting forty minutes for a lift every morning." }],
+      "question": "What is the speaker suggesting?",
+      "choices": ["The hotel was excellent", "The lifts were a serious problem", "The hotel had no lift", "She didn't mind waiting"], "answer": 1,
+      "explanation": "Это ирония: «fine, if you don't mind waiting forty minutes» на деле означает, что сорок минут ожидания лифта — серьёзный недостаток."
+    },
+    {
+      "id": "l-h11", "difficulty": "hard", "topic": "details",
+      "context": "You will hear a project manager talking about a budget.",
+      "lines": [{ "voice": "ljspeech", "text": "The project was budgeted at fifty thousand pounds. We've spent thirty-two thousand so far, and we expect to spend another twelve thousand before the end." }],
+      "question": "How much money will be left at the end of the project?",
+      "choices": ["£6,000", "£12,000", "£18,000", "£32,000"], "answer": 0,
+      "explanation": "Всего потратят 32 000 + 12 000 = 44 000 из 50 000, останется 6 000. 18 000 — остаток на сегодня, без будущих трат."
+    },
+    {
+      "id": "l-h12", "difficulty": "hard", "topic": "main-idea",
+      "context": "You will hear part of a geography lecture.",
+      "lines": [{ "voice": "cori", "text": "Contrary to popular belief, the Great Wall of China cannot easily be seen from space with the naked eye. It is very long, but it is also very narrow, and its colour is similar to the land around it." }],
+      "question": "According to the speaker, why is the wall hard to see from space?",
+      "choices": ["It is too short", "It is narrow and similar in colour to the land", "It is usually covered by cloud", "Most of it is underground"], "answer": 1,
+      "explanation": "Названы две причины: стена узкая и по цвету сливается с окружающей землёй. Длина, наоборот, большая, а про облака и подземные части ничего не сказано."
+    },
+    {
+      "id": "l-h13", "difficulty": "hard", "topic": "details",
+      "context": "You will hear a student choosing a session.",
+      "lines": [
+        { "voice": "ljspeech", "text": "Would you prefer the morning or the afternoon session?" },
+        { "voice": "cori", "text": "Mornings are usually better for me, but on Friday I have a lab until twelve, so this week, the afternoon, please." }
+      ],
+      "question": "Which session will she attend this week, and why?",
+      "choices": ["The morning, because it usually suits her", "The afternoon, because of her lab", "The morning, because the lab is in the afternoon", "Neither, because she is busy all day"], "answer": 1,
+      "explanation": "Обычно ей удобнее утро, но на этой неделе в пятницу лабораторная до полудня, поэтому она выбирает дневную сессию. Слово «usually» — ловушка."
+    },
+    {
+      "id": "l-h14", "difficulty": "hard", "topic": "main-idea",
+      "context": "You will hear a researcher describing a study.",
+      "lines": [{ "voice": "ljspeech", "text": "The aim of the study was not to find out which diet was the healthiest, but to see whether people could actually stick to a diet for a whole year." }],
+      "question": "What was the aim of the study?",
+      "choices": ["To find the healthiest diet", "To see whether people keep to a diet for a year", "To compare the cost of different diets", "To measure weight loss over a month"], "answer": 1,
+      "explanation": "Снова «not…, but…»: цель — проверить, смогут ли люди придерживаться диеты целый год. Поиск самой здоровой диеты прямо отрицается."
+    },
+    {
+      "id": "l-h15", "difficulty": "hard", "topic": "details",
+      "context": "You will hear a librarian explaining borrowing rules.",
+      "lines": [{ "voice": "cori", "text": "Undergraduates can borrow six books for two weeks. Postgraduates can borrow ten books for four weeks. Reference books, however, can't be taken out of the library by anyone." }],
+      "question": "A postgraduate wants to borrow eight books, and two of them are reference books. How many can she take home?",
+      "choices": ["2", "6", "8", "10"], "answer": 1,
+      "explanation": "Лимит аспиранта — 10 книг, поэтому восемь допустимы, но справочные книги не выдаются никому. Значит, домой можно взять 8 − 2 = 6."
+    }
+  ]
+}

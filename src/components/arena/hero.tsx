@@ -3,21 +3,36 @@
 import { useId } from "react";
 import { clsx } from "clsx";
 
-import { speciesById, type Expression, type EyeStyle, type Gear, type Look, type Slot } from "@/lib/arena-rules";
-import { Armor, Helmet, Pauldron, Sword } from "./hero-gear";
+import { speciesById, type Expression, type EyeStyle, type Look } from "@/lib/arena-rules";
+import { shopItem, type Outfit, type ShopItem } from "@/lib/shop-items";
+import {
+  BackItem,
+  BackItemFront,
+  Background,
+  ChestItem,
+  ColorDefs,
+  colorway,
+  Frame,
+  Glasses,
+  HandItem,
+  Hat,
+  Neckwear,
+  PatternDefs,
+  VictoryEffect,
+} from "./hero-accessories";
 import { DRAW, type Rig } from "./hero-species";
 
 /**
- * One hero, the same everywhere: editor, opponent list and fights. Pure SVG
- * with CSS animation — idle breathing and blinking, and a reaction for each
- * moment of a fight.
+ * One hero, the same everywhere: wardrobe, shop, race track and results. Pure
+ * SVG with CSS animation — calm breathing and blinking while waiting, and a
+ * reaction for each moment of a race. Accessories are decorative only.
  */
 
-export type Mood = "idle" | "attack" | "hit" | "block" | "dodge" | "win" | "lose";
+export type Mood = "idle" | "run" | "think" | "correct" | "wrong" | "win" | "lose";
 
 const INK = "#2a2230";
-/** The sword leans outwards while resting. */
-const SWORD_ANGLE = 22;
+/** Held items lean outwards. */
+const HOLD_ANGLE = 22;
 
 type EyeShape = EyeStyle | "happy" | "sad" | "squeeze";
 type MouthShape = Expression | "frown" | "ouch";
@@ -25,16 +40,16 @@ type MouthShape = Expression | "frown" | "ouch";
 function faceFor(mood: Mood, look: Look): { eyes: EyeShape; mouth: MouthShape } {
   switch (mood) {
     case "win":
+    case "correct":
       return { eyes: "happy", mouth: "grin" };
     case "lose":
       return { eyes: "sad", mouth: "frown" };
-    case "hit":
+    case "wrong":
       return { eyes: "squeeze", mouth: "ouch" };
-    case "attack":
-    case "block":
-      return { eyes: look.eyes, mouth: "fierce" };
-    case "dodge":
-      return { eyes: look.eyes, mouth: "surprised" };
+    case "run":
+      return { eyes: look.eyes, mouth: "grin" };
+    case "think":
+      return { eyes: look.eyes, mouth: "calm" };
     default:
       return { eyes: look.eyes, mouth: look.expression };
   }
@@ -201,81 +216,81 @@ function Sparkles() {
   );
 }
 
-/** One gear item on its own, shaped for this hero, for the upgrade cards. */
-export function GearThumb({ slot, level, look, className }: { slot: Slot; level: number; look: Look; className?: string }) {
-  const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
-  const species = speciesById(look.species) ?? speciesById("cat")!;
-  const { rig } = DRAW[species.id](species.palettes[look.palette] ?? species.palettes[0], look.features);
-  if (slot === "sword") {
-    return (
-      <svg viewBox="-36 -100 112 124" className={className} aria-hidden>
-        <g transform="rotate(35)">
-          <Sword level={level} uid={uid} />
-        </g>
-      </svg>
-    );
-  }
-  if (slot === "helmet") {
-    const w = rig.rim[1] - rig.rim[0] + 36;
-    return (
-      <svg viewBox={`${rig.rim[0] - 18} ${rig.brow - w * 0.62} ${w} ${w * 0.7}`} className={className} aria-hidden>
-        <Helmet rig={rig} level={level} uid={uid} />
-      </svg>
-    );
-  }
-  const [x1, x2] = [rig.pauldrons[0][0] - 26, rig.pauldrons[1][0] + 26];
-  const [top, bottom] = [Math.min(rig.armor[0], rig.pauldrons[0][1]) - 18, rig.armor[1] + 4];
-  const size = Math.max(x2 - x1, bottom - top);
-  return (
-    <svg viewBox={`${(x1 + x2 - size) / 2} ${(top + bottom - size) / 2} ${size} ${size}`} className={className} aria-hidden>
-      <Armor rig={rig} level={level} uid={uid} />
-      <Pauldron at={rig.pauldrons[0]} level={level} side={-1} />
-      <Pauldron at={rig.pauldrons[1]} level={level} side={1} />
-    </svg>
-  );
-}
-
 export interface HeroProps {
   look: Look;
-  gear: Gear;
+  outfit?: Outfit;
   mood?: Mood;
-  /** "full" shows the whole hero; "bust" crops to head and shoulders for lists; "face" to the face. */
+  /** "full" shows the whole hero; "bust" crops to head and shoulders; "face" to the face. */
   crop?: "full" | "bust" | "face";
-  /** Faces left: used for the defending side of a fight. */
+  /** Draws the equipped background and frame (full view only). */
+  scene?: boolean;
+  /** Faces left: the second lane of a race. */
   flip?: boolean;
+  /** No idle animation, for long lists. */
+  still?: boolean;
   className?: string;
   label?: string;
 }
 
-export function Hero({ look, gear, mood = "idle", crop = "full", flip = false, className, label }: HeroProps) {
+export function Hero({ look, outfit = {}, mood = "idle", crop = "full", scene = false, flip = false, still = false, className, label }: HeroProps) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
   const species = speciesById(look.species) ?? speciesById("cat")!;
-  const pal = species.palettes[look.palette] ?? species.palettes[0];
+  const base = species.palettes[look.palette] ?? species.palettes[0];
+  const wear = (slot: keyof Outfit): ShopItem | undefined => {
+    const id = outfit[slot];
+    const it = id ? shopItem(id) : undefined;
+    return it && it.slot === slot ? it : undefined;
+  };
+  const color = wear("color");
+  const pattern = wear("pattern");
+  const pal = color ? { ...base, ...colorway(color, uid) } : base;
   const parts = DRAW[species.id](pal, look.features);
   const { rig } = parts;
   const face = faceFor(mood, look);
   const ink = rig.eyes.ink ?? INK;
+  const full = crop === "full";
   const viewBox =
     crop === "face" ? `38 ${rig.eyes.y - 56} 124 124` : crop === "bust" ? `10 ${rig.bustTop} 180 180` : "-16 -28 232 250";
+  const [head, glasses, neck, chest, back, hand, background, frame, effect] = (
+    ["head", "face", "neck", "chest", "back", "hand", "background", "frame", "effect"] as const
+  ).map(wear);
+  // One-piece heroes get the body pattern once; the robot's head is its screen-face, so it stays plain.
+  const patternHead = rig.head !== rig.body && species.id !== "robot";
 
   return (
     <svg
       viewBox={viewBox}
-      className={clsx("hero", className)}
+      className={clsx("hero", still && "hero-still", className)}
       data-mood={mood}
       data-crop={crop}
+      data-scene={full && scene && background ? "on" : undefined}
       role="img"
       aria-label={label ?? `${species.name}: ${pal.name.toLowerCase()} расцветка`}
     >
+      <defs>
+        {color && <ColorDefs it={color} uid={uid} />}
+        {pattern && <PatternDefs it={pattern} uid={uid} />}
+        <clipPath id={`${uid}-box`}>
+          <rect x={-16} y={-28} width={232} height={250} rx={18} />
+        </clipPath>
+      </defs>
+      {full && scene && background && (
+        <g clipPath={`url(#${uid}-box)`}>
+          <Background it={background} />
+        </g>
+      )}
+      {full && mood === "win" && effect?.art === "rainbow" && <VictoryEffect it={effect} />}
       <g style={flip ? { transform: "scaleX(-1)", transformOrigin: "100px 0px" } : undefined}>
-        {crop === "full" && <ellipse cx={100} cy={212} rx={58} ry={8} fill="#1d1c1a" opacity={0.12} className="hero-shadow" />}
+        {full && <ellipse cx={100} cy={212} rx={58} ry={8} fill="#1d1c1a" opacity={0.12} className="hero-shadow" />}
         <g className="hero-rig">
+          {back && <BackItem it={back} rig={rig} />}
           {parts.behind}
           {parts.body}
-          <Armor rig={rig} level={gear.armor} uid={uid} />
+          {pattern && <path d={rig.body} fill={`url(#${uid}-pat)`} opacity={0.45} pointerEvents="none" />}
           {parts.offArm}
-          <Pauldron at={rig.pauldrons[0]} level={gear.armor} side={-1} />
+          {back && <BackItemFront it={back} rig={rig} />}
           {parts.head}
+          {pattern && patternHead && <path d={rig.head} fill={`url(#${uid}-pat)`} opacity={0.45} pointerEvents="none" />}
           <g className="hero-face">
             {rig.eyes.base && (
               <g fill={rig.eyes.base}>
@@ -290,18 +305,23 @@ export function Hero({ look, gear, mood = "idle", crop = "full", flip = false, c
             <Brows rig={rig} mouth={face.mouth} eyes={face.eyes} color={rig.eyes.ink ?? pal.shade} />
             <Mouth rig={rig} shape={face.mouth} accent={pal.accent} />
           </g>
-          <Helmet rig={rig} level={gear.helmet} uid={uid} />
+          {neck && <Neckwear it={neck} rig={rig} />}
+          {chest && <ChestItem it={chest} rig={rig} />}
+          {glasses && <Glasses it={glasses} rig={rig} />}
+          {head && <Hat it={head} rig={rig} uid={uid} />}
           <g className="hero-arm" style={{ transformOrigin: `${rig.shoulder[0]}px ${rig.shoulder[1]}px` }}>
             {parts.arm}
-            <g transform={`translate(${rig.hand[0]} ${rig.hand[1]}) rotate(${SWORD_ANGLE})`}>
-              <Sword level={gear.sword} uid={uid} />
-            </g>
+            {hand && (
+              <g transform={`translate(${rig.hand[0]} ${rig.hand[1]}) rotate(${HOLD_ANGLE})`}>
+                <HandItem it={hand} />
+              </g>
+            )}
             {parts.hand}
           </g>
-          <Pauldron at={rig.pauldrons[1]} level={gear.armor} side={1} />
         </g>
-        {mood === "win" && crop === "full" && <Sparkles />}
       </g>
+      {full && mood === "win" && (effect ? effect.art !== "rainbow" && <VictoryEffect it={effect} /> : <Sparkles />)}
+      {full && scene && frame && <Frame it={frame} />}
     </svg>
   );
 }

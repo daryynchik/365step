@@ -130,6 +130,140 @@ CREATE TABLE IF NOT EXISTS arena_upgrades (
   UNIQUE (user_id, slot, to_level)
 );
 
+-- Study races (lib/race.ts). arena_heroes keeps each student's looks; the
+-- sword/helmet/armor columns and the duel tables above belong to the old
+-- fighting arena and are no longer written.
+
+-- One compensation per student for gear bought in the fighting arena.
+CREATE TABLE IF NOT EXISTS arena_refunds (
+  user_id    TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  amount     INTEGER NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+-- Accessories a student owns, and what they wear (JSON: slot -> item id).
+CREATE TABLE IF NOT EXISTS arena_wardrobe (
+  user_id   TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  item_id   TEXT NOT NULL,
+  price     INTEGER NOT NULL,
+  bought_at TEXT NOT NULL,
+  PRIMARY KEY (user_id, item_id)
+);
+CREATE TABLE IF NOT EXISTS arena_outfits (
+  user_id    TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  items      TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+-- Elo rating, separately for SAT and IELTS.
+CREATE TABLE IF NOT EXISTS race_ratings (
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  track      TEXT NOT NULL,
+  rating     INTEGER NOT NULL,
+  games      INTEGER NOT NULL DEFAULT 0,
+  wins       INTEGER NOT NULL DEFAULT 0,
+  calibrated INTEGER NOT NULL DEFAULT 0,
+  updated_at TEXT NOT NULL,
+  PRIMARY KEY (user_id, track)
+);
+
+-- Students looking for an opponent. Times are epoch milliseconds.
+CREATE TABLE IF NOT EXISTS race_queue (
+  user_id   TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  track     TEXT NOT NULL,
+  rating    INTEGER NOT NULL,
+  joined_ms BIGINT NOT NULL,
+  seen_ms   BIGINT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS races (
+  id          TEXT PRIMARY KEY,
+  track       TEXT NOT NULL,
+  mode        TEXT NOT NULL,
+  status      TEXT NOT NULL,
+  user_a      TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  user_b      TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  rating_a    INTEGER NOT NULL,
+  rating_b    INTEGER NOT NULL,
+  difficulty  REAL NOT NULL,
+  pos_a       INTEGER NOT NULL DEFAULT 0,
+  pos_b       INTEGER NOT NULL DEFAULT 0,
+  round_no    INTEGER NOT NULL DEFAULT 0,
+  winner      INTEGER,
+  reason      TEXT,
+  delta_a     INTEGER NOT NULL DEFAULT 0,
+  delta_b     INTEGER NOT NULL DEFAULT 0,
+  coins_a     INTEGER NOT NULL DEFAULT 0,
+  coins_b     INTEGER NOT NULL DEFAULT 0,
+  created_ms  BIGINT NOT NULL,
+  finished_ms BIGINT,
+  seen_a_ms   BIGINT NOT NULL,
+  seen_b_ms   BIGINT NOT NULL,
+  day         TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_races_a ON races(user_a, status);
+CREATE INDEX IF NOT EXISTS idx_races_b ON races(user_b, status);
+
+-- winner: 0 or 1 (side), -1 nobody, NULL not decided yet.
+CREATE TABLE IF NOT EXISTS race_rounds (
+  race_id     TEXT NOT NULL REFERENCES races(id) ON DELETE CASCADE,
+  round_no    INTEGER NOT NULL,
+  task_id     TEXT NOT NULL,
+  level       TEXT NOT NULL,
+  opens_ms    BIGINT NOT NULL,
+  duration_ms INTEGER NOT NULL,
+  start_a_ms  BIGINT,
+  start_b_ms  BIGINT,
+  winner      INTEGER,
+  resolved_ms BIGINT,
+  PRIMARY KEY (race_id, round_no)
+);
+
+-- One answer per side per round: a wrong answer cannot be retried.
+CREATE TABLE IF NOT EXISTS race_answers (
+  race_id   TEXT NOT NULL REFERENCES races(id) ON DELETE CASCADE,
+  round_no  INTEGER NOT NULL,
+  side      INTEGER NOT NULL,
+  response  TEXT NOT NULL,
+  correct   INTEGER NOT NULL,
+  at_ms     BIGINT NOT NULL,
+  PRIMARY KEY (race_id, round_no, side)
+);
+
+-- Questions a student has seen in races, so they are not repeated soon.
+CREATE TABLE IF NOT EXISTS race_seen (
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  task_id TEXT NOT NULL,
+  seen_ms BIGINT NOT NULL,
+  PRIMARY KEY (user_id, task_id)
+);
+
+-- Friendly races between friends: no rating change.
+CREATE TABLE IF NOT EXISTS race_invites (
+  id         TEXT PRIMARY KEY,
+  from_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  to_id      TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  pair_a     TEXT NOT NULL,
+  pair_b     TEXT NOT NULL,
+  track      TEXT NOT NULL,
+  status     TEXT NOT NULL,
+  race_id    TEXT,
+  created_ms BIGINT NOT NULL,
+  expires_ms BIGINT NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_race_invite_pending ON race_invites(pair_a, pair_b) WHERE status = 'pending';
+
+-- The starting calibration: six questions from easy to hard.
+CREATE TABLE IF NOT EXISTS race_calibrations (
+  id         TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  track      TEXT NOT NULL,
+  tasks      TEXT NOT NULL,
+  answers    TEXT NOT NULL,
+  status     TEXT NOT NULL,
+  created_ms BIGINT NOT NULL
+);
+
 -- A finished fight. Both loadouts are frozen at fight time so the replay never
 -- changes when someone buys new gear later.
 CREATE TABLE IF NOT EXISTS duels (

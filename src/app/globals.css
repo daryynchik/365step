@@ -363,7 +363,8 @@ body {
 }
 
 .hero[data-crop="bust"],
-.hero[data-crop="face"] {
+.hero[data-crop="face"],
+.hero[data-scene="on"] {
   overflow: hidden;
 }
 
@@ -404,23 +405,46 @@ body {
   animation: hero-twinkle 1.2s ease-in-out infinite;
 }
 
-.hero[data-mood="attack"] .hero-rig {
-  animation: hero-lunge calc(560ms / var(--speed, 1)) ease-out;
+.hero[data-mood="run"] .hero-rig {
+  animation: hero-hop 520ms ease-in-out infinite;
 }
-.hero[data-mood="attack"] .hero-arm {
-  animation: hero-swing calc(560ms / var(--speed, 1)) ease-out;
+.hero[data-mood="correct"] .hero-rig {
+  animation: hero-cheer 700ms ease-out;
 }
-.hero[data-mood="hit"] .hero-rig {
-  animation: hero-recoil calc(460ms / var(--speed, 1)) ease-out;
+.hero[data-mood="correct"] .hero-arm {
+  animation: none;
+  transform: rotate(-36deg);
 }
-.hero[data-mood="block"] .hero-rig {
-  animation: hero-brace calc(460ms / var(--speed, 1)) ease-out;
+.hero[data-mood="wrong"] .hero-rig {
+  animation: hero-flinch 460ms ease-out;
 }
-.hero[data-mood="block"] .hero-arm {
-  animation: hero-parry calc(460ms / var(--speed, 1)) ease-out;
+.hero[data-mood="think"] .hero-rig {
+  animation: hero-think 2.4s ease-in-out infinite;
 }
-.hero[data-mood="dodge"] .hero-rig {
-  animation: hero-dodge calc(560ms / var(--speed, 1)) ease-out;
+.hero-still .hero-rig,
+.hero-still .hero-arm,
+.hero-still .hero-tail,
+.hero-still .hero-eyes,
+.hero-still .hero-glow,
+.hero-still .hero-sparkle,
+.hero-still .hero-confetti,
+.hero-still .hero-burst,
+.hero-still .hero-bubble {
+  animation: none;
+}
+.hero-confetti {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hero-fall 1.6s ease-in infinite;
+}
+.hero-burst {
+  transform-box: view-box;
+  animation: hero-burst 1.4s ease-out infinite;
+}
+.hero-bubble {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hero-rise 2.2s ease-in-out infinite;
 }
 .hero[data-mood="win"] .hero-rig {
   animation: hero-jump 1s ease-in-out infinite;
@@ -502,79 +526,93 @@ body {
   }
 }
 
-@keyframes hero-lunge {
-  0% {
-    transform: translateX(0);
+@keyframes hero-hop {
+  0%,
+  100% {
+    transform: translateY(0) scale(1, 1);
   }
   40% {
-    transform: translateX(34px) rotate(4deg);
+    transform: translateY(-10px) scale(0.97, 1.04);
   }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes hero-swing {
-  0% {
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: rotate(-75deg);
-  }
-  55% {
-    transform: rotate(55deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  80% {
+    transform: translateY(0) scale(1.04, 0.95);
   }
 }
 
-@keyframes hero-recoil {
+@keyframes hero-cheer {
   0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-14px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-flinch {
+  0%,
+  100% {
     transform: translateX(0);
-    filter: none;
+  }
+  25% {
+    transform: translateX(-6px) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(5px) rotate(2deg);
+  }
+}
+
+@keyframes hero-think {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-3deg) translateY(-1px);
+  }
+}
+
+@keyframes hero-fall {
+  0% {
+    transform: translateY(-12px) rotate(0deg);
+    opacity: 0;
   }
   20% {
-    transform: translateX(-16px) rotate(-5deg);
-    filter: brightness(1.7) saturate(0.4);
-  }
-  45% {
-    transform: translateX(-8px);
-    filter: none;
+    opacity: 1;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(60px) rotate(220deg);
+    opacity: 0;
   }
 }
 
-@keyframes hero-brace {
-  0%,
-  100% {
-    transform: translateX(0);
+@keyframes hero-burst {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
   }
   30% {
-    transform: translateX(-6px) scale(0.98, 1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
   }
 }
 
-@keyframes hero-parry {
-  0%,
+@keyframes hero-rise {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.9;
+  }
   100% {
-    transform: rotate(0deg);
-  }
-  30%,
-  60% {
-    transform: rotate(-58deg);
-  }
-}
-
-@keyframes hero-dodge {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  40% {
-    transform: translate(-30px, -10px) rotate(-8deg);
+    transform: translateY(-30px);
+    opacity: 0;
   }
 }
 

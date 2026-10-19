@@ -53,7 +53,7 @@
     { "id": "m10", "difficulty": "medium", "type": "mcq", "stem": "A store sells rice in a 2-kilogram bag for $5.40 and in a 5-kilogram bag for $12.50. How much less per kilogram does the rice in the 5-kilogram bag cost?", "choices": ["$0.20", "$0.50", "$2.50", "$7.10"], "answer": 0, "check": "5.40/2-12.50/5",
       "explanation": "Маленькая упаковка: 5.40/2 = 2.70 доллара за кг, большая: 12.50/5 = 2.50. Разница 0.20 (A). 2.50 — цена кг большой упаковки; 7.10 — разность цен упаковок; 0.50 — ошибка." },
     { "id": "m11", "difficulty": "medium", "type": "grid-in", "stem": "If x/y = 3/8 and y = 56, what is the value of x?", "answer": ["21"], "check": "3/8*56",
-      "explanation": "x = (3/8) · 56 = 21." },
+      "explanation": "Из x/y = 3/8 следует x = (3/8) · y. Подставляем y = 56: x = 3 · 56 / 8 = 3 · 7 = 21." },
     { "id": "m12", "difficulty": "medium", "type": "mcq", "stem": "A cyclist rides 18 kilometers in 45 minutes at a constant speed. What is the cyclist's speed, in kilometers per hour?", "choices": ["13.5", "24", "27", "40"], "answer": 1, "check": "18/(45/60)",
       "explanation": "45 минут = 0.75 часа; 18/0.75 = 24 км/ч (B). 13.5 — 18 · 0.75; 40 — 18/45 · 100; 27 — ошибка." },
     { "id": "m13", "difficulty": "medium", "type": "mcq", "stem": "There are 12 inches in 1 foot and 3 feet in 1 yard. How many inches are in 2.5 yards?", "choices": ["30", "45", "90", "108"], "answer": 2, "check": "2.5*3*12",

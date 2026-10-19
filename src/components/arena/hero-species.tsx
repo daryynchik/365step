@@ -1,10 +1,10 @@
 /**
  * The fourteen heroes, drawn as layered SVG in one shared 200×212 frame (feet
- * on y = 212). Each species also describes its rig — where its head, brow,
- * body, shoulders and sword hand are — so gear and faces fit every shape:
- * a helmet is the head outline cut at the brow, armour is the body outline
- * cut into a band below the mouth, and the sword sits in a paw, wing, fin,
- * claw, branch or pseudopod.
+ * on y = 212). Each species also describes its rig — the top of its head,
+ * brow, eyes, neck line, shoulders and both hands — so accessories and faces
+ * fit every shape: hats sit on the crown, glasses on the eyes, scarves on the
+ * neck line below the mouth, and held items in a paw, wing, fin, claw,
+ * branch or pseudopod.
  */
 
 import type { ReactNode } from "react";
@@ -14,18 +14,24 @@ import type { Palette, SpeciesId } from "@/lib/arena-rules";
 type Pt = [number, number];
 
 export interface Rig {
-  /** Silhouette the helmet is cut from: the head, or the whole body for one-piece heroes. */
+  /** Head silhouette (the whole body for one-piece heroes): caps and beanies are cut from it. */
   head: string;
   headCenter: Pt;
-  /** Bottom edge of the helmet; always above the eyes. */
+  /** Highest point of the head, where hats sit. */
+  top: number;
+  /** Lowest line a hat may reach; always above the eyes. */
   brow: number;
-  /** Helmet rim from x to x, at the brow. */
+  /** Head width at the brow, from x to x. */
   rim: Pt;
-  /** Silhouette the armour is cut from. */
   body: string;
-  /** Armour band, top and bottom; the top is always below the mouth. */
+  /** Band of the body below the mouth (used for patterns and chest items). */
   armor: Pt;
+  /** Shoulder points: backpack straps, cape and wings start here. */
   pauldrons: [Pt, Pt];
+  /** Neck line below the mouth: scarves and bow ties. */
+  neck: { y: number; w: number };
+  /** The free hand, for a balloon string or nothing. */
+  offHand: Pt;
   eyes: { y: number; dx: number; r: number; lid: string; ink?: string; base?: string };
   mouth: { x: number; y: number; s: number; kind?: "beak" | "led"; teeth?: boolean };
   shoulder: Pt;
@@ -42,9 +48,9 @@ export interface Parts {
   offArm: ReactNode;
   /** Head outline and head details below the helmet (muzzle, patches, lop ears). */
   head: ReactNode;
-  /** The sword arm, without the hand. */
+  /** The arm that holds items, without the hand. */
   arm: ReactNode;
-  /** The hand drawn over the sword grip. */
+  /** The hand, drawn over a held item. */
   hand: ReactNode;
 }
 
@@ -95,6 +101,7 @@ function standardRig(pal: Palette, over: Partial<Rig> = {}): Rig {
   return {
     head: HEAD,
     headCenter: [100, 84],
+    top: 35,
     brow: 64,
     rim: [44, 156],
     body: BODY,
@@ -107,6 +114,8 @@ function standardRig(pal: Palette, over: Partial<Rig> = {}): Rig {
     mouth: { x: 100, y: 113, s: 1 },
     shoulder: [134, 148],
     hand: [156, 164],
+    neck: { y: 131, w: 62 },
+    offHand: [46, 170],
     bustTop: 6,
     ...over,
   };
@@ -388,6 +397,7 @@ function owl(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: OWL,
     headCenter: [100, 118],
+    top: 30,
     brow: 60,
     rim: [46, 154],
     body: OWL,
@@ -400,6 +410,8 @@ function owl(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 110, s: 1, kind: "beak" },
     shoulder: [150, 128],
     hand: [168, 156],
+    neck: { y: 128, w: 96 },
+    offHand: [40, 178],
     bustTop: 6,
   };
   const pattern =
@@ -475,6 +487,7 @@ function shark(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: SHARK,
     headCenter: [100, 116],
+    top: 28,
     brow: 58,
     rim: [46, 154],
     body: SHARK,
@@ -487,6 +500,8 @@ function shark(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 110, s: 1.35, teeth: true },
     shoulder: [152, 130],
     hand: [172, 154],
+    neck: { y: 140, w: 100 },
+    offHand: [24, 160],
     bustTop: 2,
   };
   const fin =
@@ -589,6 +604,7 @@ function slime(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: SLIME,
     headCenter: [100, 140],
+    top: 72,
     brow: 112,
     rim: [38, 162],
     body: SLIME,
@@ -601,6 +617,8 @@ function slime(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 161, s: 1.1 },
     shoulder: [160, 164],
     hand: [182, 152],
+    neck: { y: 186, w: 126 },
+    offHand: [24, 182],
     bustTop: 58,
   };
   const top =
@@ -681,6 +699,7 @@ function monster(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: MONSTER,
     headCenter: [100, 128],
+    top: 50,
     brow: 86,
     rim: [34, 166],
     body: MONSTER,
@@ -693,6 +712,8 @@ function monster(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 142, s: 1.45, teeth: true },
     shoulder: [166, 146],
     hand: [184, 164],
+    neck: { y: 172, w: 110 },
+    offHand: [18, 166],
     bustTop: 30,
   };
   const horn =
@@ -743,6 +764,7 @@ function alien(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: ALIEN_HEAD,
     headCenter: [100, 82],
+    top: 24,
     brow: 56,
     rim: [40, 160],
     body: ALIEN_BODY,
@@ -755,6 +777,8 @@ function alien(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 120, s: 0.9 },
     shoulder: [126, 152],
     hand: [150, 168],
+    neck: { y: 137, w: 44 },
+    offHand: [52, 172],
     bustTop: 2,
   };
   const antenna = (x1: number, x2: number, y2: number) => (
@@ -826,6 +850,7 @@ function robot(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: ROBOT_HEAD,
     headCenter: [100, 74],
+    top: 28,
     brow: 45,
     rim: [42, 158],
     body: ROBOT_BODY,
@@ -838,6 +863,8 @@ function robot(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 96, s: 1, kind: "led" },
     shoulder: [136, 142],
     hand: [158, 162],
+    neck: { y: 122, w: 34 },
+    offHand: [46, 164],
     bustTop: 0,
   };
   const antenna =
@@ -939,6 +966,7 @@ function cactus(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: CACTUS,
     headCenter: [100, 100],
+    top: 38,
     brow: 66,
     rim: [58, 142],
     body: CACTUS,
@@ -951,6 +979,8 @@ function cactus(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 110, s: 0.95 },
     shoulder: [140, 152],
     hand: [162, 132],
+    neck: { y: 131, w: 76 },
+    offHand: [38, 118],
     bustTop: 10,
   };
   const spots: Pt[] =
@@ -1014,10 +1044,11 @@ function cactus(pal: Palette, ft: Record<string, string>): Parts {
 
 // -------------------------------------------------------------- mushroom --
 
-const CAPS: Record<string, { d: string; center: Pt; brow: number; rim: Pt; spots: Pt[] }> = {
+const CAPS: Record<string, { d: string; center: Pt; top: number; brow: number; rim: Pt; spots: Pt[] }> = {
   round: {
     d: "M28 92 C28 46 62 20 100 20 C138 20 172 46 172 92 C172 104 158 108 100 108 C42 108 28 104 28 92 Z",
     center: [100, 64],
+    top: 20,
     brow: 58,
     rim: [32, 168],
     spots: [[50, 86], [78, 94], [124, 94], [152, 84], [100, 80]],
@@ -1025,6 +1056,7 @@ const CAPS: Record<string, { d: string; center: Pt; brow: number; rim: Pt; spots
   pointy: {
     d: "M30 98 C38 60 70 22 100 6 C130 22 162 60 170 98 C170 108 156 112 100 112 C44 112 30 108 30 98 Z",
     center: [100, 70],
+    top: 6,
     brow: 62,
     rim: [46, 154],
     spots: [[52, 94], [80, 98], [122, 98], [148, 92], [100, 84]],
@@ -1032,6 +1064,7 @@ const CAPS: Record<string, { d: string; center: Pt; brow: number; rim: Pt; spots
   flat: {
     d: "M18 92 C20 64 56 44 100 44 C144 44 180 64 182 92 C182 104 166 108 100 108 C34 108 18 104 18 92 Z",
     center: [100, 78],
+    top: 44,
     brow: 70,
     rim: [24, 176],
     spots: [[40, 90], [72, 96], [128, 96], [160, 90], [100, 86]],
@@ -1045,6 +1078,7 @@ function mushroom(pal: Palette, ft: Record<string, string>): Parts {
   const rig: Rig = {
     head: cap.d,
     headCenter: cap.center,
+    top: cap.top,
     brow: cap.brow,
     rim: cap.rim,
     body: STEM,
@@ -1057,6 +1091,8 @@ function mushroom(pal: Palette, ft: Record<string, string>): Parts {
     mouth: { x: 100, y: 146, s: 0.85 },
     shoulder: [132, 160],
     hand: [154, 172],
+    neck: { y: 164, w: 62 },
+    offHand: [48, 180],
     bustTop: 10,
   };
   const line = "#8d7458";

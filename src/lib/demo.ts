@@ -15,7 +15,10 @@ import { bankLesson } from "@/content/bank/lessons";
 import type { ExamEntry } from "@/content/exams";
 import { planFor, reviewLesson, type CountryId } from "@/content/plan";
 import type { Lesson } from "@/content/types";
-import { itemName, lookForSpecies, simulate, STARTER_GEAR, upgradeCost, validateLook, type Fighter, type Gear, type Look, type Slot, type SpeciesId } from "./arena-rules";
+import { lookForSpecies, validateLook, type Look, type SpeciesId } from "./arena-rules";
+import { applyDelta, CELLS, eloDelta, matchDifficulty, RACE_REWARD, START_RATING, type Track } from "./race-rules";
+import { raceTasksOf, TRACK_SECTIONS } from "./race-tasks";
+import { shopItem } from "./shop-items";
 import { one, run, transaction } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
 import { hashPassword } from "./password";
@@ -39,8 +42,10 @@ interface Persona {
   days: number;
   /** Arena hero: species, palette and a few looks. */
   hero: { species: SpeciesId; palette: number; eyes?: Look["eyes"]; expression?: Look["expression"]; features?: Record<string, string> };
-  /** Gear levels bought with earned points, in the order they were bought. */
-  gear: Partial<Gear>;
+  /** Accessories bought with earned coins, all worn. */
+  items: string[];
+  /** Race ratings the persona has reached. */
+  ratings: Partial<Record<Track, number>>;
   /** Reported exam scores; exam dates are given in days from today. */
   scores?: (Omit<ExamEntry, "examDate"> & { examInDays: number | null })[];
 }
@@ -55,7 +60,8 @@ const DEMO: Persona = {
   streak: 6,
   days: 18,
   hero: { species: "fox", palette: 0, eyes: "sparkle", expression: "smile" },
-  gear: { sword: 4, helmet: 3, armor: 3 },
+  items: ["cap-red", "glasses-round", "scarf-striped", "bg-library"],
+  ratings: { sat: START_RATING, ielts: START_RATING },
   scores: [
     { exam: "sat", current: { total: 1150, sections: { rw: 620, math: 530 } }, takenDate: null, source: "bluebook", target: 1400, examInDays: 120 },
     {
@@ -79,7 +85,8 @@ const FRIENDS: Persona[] = [
     streak: 12,
     days: 20,
     hero: { species: "bear", palette: 0, eyes: "round", expression: "fierce" },
-    gear: { sword: 6, helmet: 4, armor: 5 },
+    items: ["headphones-white", "bowtie-black", "backpack-blue", "bg-city"],
+    ratings: { sat: 1120, ielts: 1180 },
   },
   {
     email: "madina@365step.app",
@@ -91,7 +98,8 @@ const FRIENDS: Persona[] = [
     streak: 3,
     days: 25,
     hero: { species: "owl", palette: 2, eyes: "sharp", expression: "smirk" },
-    gear: { sword: 4, helmet: 5, armor: 5 },
+    items: ["beret-red", "glasses-heart", "wings-butterfly", "fx-hearts"],
+    ratings: { sat: 990, ielts: 1060 },
   },
   {
     email: "timur@365step.app",
@@ -101,7 +109,8 @@ const FRIENDS: Persona[] = [
     streak: 0,
     days: 10,
     hero: { species: "robot", palette: 1, eyes: "button", expression: "grin" },
-    gear: {},
+    items: [],
+    ratings: { sat: 900 },
   },
 ];
 
@@ -114,7 +123,8 @@ const STRANGER: Persona = {
   streak: 1,
   days: 4,
   hero: { species: "slime", palette: 1, eyes: "round", expression: "calm" },
-  gear: {},
+  items: [],
+  ratings: {},
 };
 
 const DEMO_WRITING = `Walton's letters suggest that ambition can make a person blind to danger. In Letter 1 he admits that his goals are "sufficient to conquer all fear of danger or death" (Letter 1). This shows that Walton treats fear as an obstacle to be defeated rather than a warning to be heard. Because he wants to be the first to "tread a land never before imprinted by the foot of man" (Letter 1), the danger to his crew hardly appears in his reasoning. By opening the novel this way, Shelley prepares the reader to see Victor's story as a mirror of Walton's own choices.
@@ -228,32 +238,32 @@ async function createPersona(p: Persona, passwordHash: string): Promise<{ id: st
     ]);
   }
 
-  // The hero, and gear upgraded along the way with earned points.
+  // The hero, accessories bought with earned coins, and race ratings.
   const checked = validateLook({ ...lookForSpecies(p.hero.species), ...p.hero, features: { ...lookForSpecies(p.hero.species).features, ...p.hero.features } });
   const look = checked.ok ? checked.look : lookForSpecies(p.hero.species);
-  const gear: Gear = { ...STARTER_GEAR };
+  await run("INSERT INTO arena_heroes (user_id, look, chosen, updated_at) VALUES (?, ?, 1, ?)", [id, JSON.stringify(look), nowIso()]);
+  await run("INSERT INTO arena_refunds (user_id, amount, created_at) VALUES (?, 0, ?)", [id, nowIso()]);
   let spendable = earned;
-  for (const slot of ["sword", "helmet", "armor"] as Slot[]) {
-    while (gear[slot] < (p.gear[slot] ?? 1) && upgradeCost(gear[slot]) <= spendable) {
-      const price = upgradeCost(gear[slot]);
-      spendable -= price;
-      gear[slot]++;
-      const upgradeId = randomUUID();
-      await run("INSERT INTO arena_upgrades (id, user_id, slot, to_level, price, created_at) VALUES (?, ?, ?, ?, ?, ?)", [
-        upgradeId,
-        id,
-        slot,
-        gear[slot],
-        price,
-        nowIso(),
-      ]);
-      await insertPoints(id, -price, `Улучшение: ${itemName(slot, gear[slot])}, ур. ${gear[slot]}`, upgradeId, addDays(today, -2));
-    }
+  const outfit: Record<string, string> = {};
+  for (const itemId of p.items) {
+    const it = shopItem(itemId);
+    if (!it || it.price > spendable) continue;
+    spendable -= it.price;
+    await run("INSERT INTO arena_wardrobe (user_id, item_id, price, bought_at) VALUES (?, ?, ?, ?)", [id, it.id, it.price, nowIso()]);
+    await insertPoints(id, -it.price, `Покупка: ${it.name}`, `shop:${it.id}`, addDays(today, -2));
+    outfit[it.slot] = it.id;
   }
-  await run(
-    "INSERT INTO arena_heroes (user_id, look, chosen, sword, helmet, armor, updated_at) VALUES (?, ?, 1, ?, ?, ?, ?)",
-    [id, JSON.stringify(look), gear.sword, gear.helmet, gear.armor, nowIso()],
-  );
+  await run("INSERT INTO arena_outfits (user_id, items, updated_at) VALUES (?, ?, ?)", [id, JSON.stringify(outfit), nowIso()]);
+  for (const [track, rating] of Object.entries(p.ratings)) {
+    await run("INSERT INTO race_ratings (user_id, track, rating, games, wins, calibrated, updated_at) VALUES (?, ?, ?, ?, ?, 1, ?)", [
+      id,
+      track,
+      rating,
+      rating === START_RATING ? 0 : 6,
+      rating > START_RATING ? 4 : 2,
+      nowIso(),
+    ]);
+  }
 
   return { id, level: levelFor(earned).level };
 }
@@ -266,42 +276,77 @@ async function befriend(a: string, b: string, status: "accepted" | "pending", re
   );
 }
 
-async function fighterOf(userId: string, name: string, level: number): Promise<Fighter> {
-  const row = await one<{ look: string; sword: number; helmet: number; armor: number }>(
-    "SELECT look, sword, helmet, armor FROM arena_heroes WHERE user_id = ?",
-    [userId],
-  );
-  const checked = validateLook(row ? JSON.parse(String(row.look)) : null);
-  return {
-    userId,
-    name,
-    level,
-    look: checked.ok ? checked.look : lookForSpecies("cat"),
-    gear: row ? { sword: Number(row.sword), helmet: Number(row.helmet), armor: Number(row.armor) } : { ...STARTER_GEAR },
-  };
-}
-
-async function recordDuel(attacker: Fighter, defender: Fighter, seed: number, daysAgo: number): Promise<void> {
-  const fight = simulate(attacker, defender, seed);
-  const winnerId = fight.winner === 0 ? attacker.userId : fight.winner === 1 ? defender.userId : null;
+/**
+ * A finished race for the history and its review: `winners` lists who took
+ * each round (0, 1, or null for nobody). Questions come from the race pool.
+ */
+async function recordRace(users: [string, string], track: Track, mode: "rated" | "friendly", winners: (0 | 1 | null)[], daysAgo: number): Promise<void> {
+  const id = randomUUID();
   const day = addDays(todayIso(), -daysAgo);
-  await run(
-    `INSERT INTO duels (id, attacker_id, defender_id, attacker_fighter, defender_fighter, seed, log, winner_id,
-                        attacker_points, defender_points, day, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 0, ?, ?)`,
-    [
-      randomUUID(),
-      attacker.userId,
-      defender.userId,
-      JSON.stringify(attacker),
-      JSON.stringify(defender),
-      seed,
-      JSON.stringify(fight),
-      winnerId,
-      day,
-      `${day}T16:30:00.000Z`,
-    ],
+  const startMs = Date.parse(`${day}T15:00:00.000Z`);
+  const ratings = await Promise.all(
+    users.map(async (u) => Number((await one("SELECT rating FROM race_ratings WHERE user_id = ? AND track = ?", [u, track]))?.rating ?? START_RATING)),
   );
+  const pos: [number, number] = [0, 0];
+  for (const w of winners) if (w !== null) pos[w]++;
+  const winner: 0 | 1 = pos[0] >= CELLS ? 0 : 1;
+  const endMs = startMs + 5000 + winners.length * 40_000;
+  const delta: [number, number] =
+    mode === "rated" ? [eloDelta(ratings[0], ratings[1], winner === 0 ? 1 : 0, 6), eloDelta(ratings[1], ratings[0], winner === 1 ? 1 : 0, 6)] : [0, 0];
+  const coins: [number, number] = [winner === 0 ? RACE_REWARD.win : RACE_REWARD.loss, winner === 1 ? RACE_REWARD.win : RACE_REWARD.loss];
+  await run(
+    `INSERT INTO races (id, track, mode, status, user_a, user_b, rating_a, rating_b, difficulty, pos_a, pos_b, round_no, winner, reason,
+                        delta_a, delta_b, coins_a, coins_b, created_ms, finished_ms, seen_a_ms, seen_b_ms, day)
+     VALUES (?, ?, ?, 'finished', ?, ?, ?, ?, ?, ?, ?, ?, ?, 'finish', ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [id, track, mode, users[0], users[1], ratings[0], ratings[1], matchDifficulty(ratings[0], ratings[1]), pos[0], pos[1], winners.length, winner, delta[0], delta[1], coins[0], coins[1], startMs, endMs, endMs, endMs, day],
+  );
+
+  let t = startMs + 5000;
+  for (const [i, w] of winners.entries()) {
+    const sections = TRACK_SECTIONS[track];
+    const pool = raceTasksOf(sections[i % sections.length], "medium");
+    const task = pool[(i * 7 + daysAgo) % pool.length];
+    await run("INSERT INTO race_rounds (race_id, round_no, task_id, level, opens_ms, duration_ms, start_a_ms, start_b_ms, winner, resolved_ms) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [
+      id,
+      i + 1,
+      task.id,
+      task.difficulty,
+      t,
+      task.timeMs,
+      t,
+      t + 300,
+      w ?? -1,
+      t + 30_000,
+    ]);
+    const q = task.question;
+    const right = q.kind === "choice" ? q.answer : q.answers[0];
+    const wrong = q.kind === "choice" ? (q.answer + 1) % q.options.length : "—";
+    for (const side of [0, 1] as const) {
+      const correct = w === side;
+      // The loser of a round either answered wrong or did not answer.
+      if (!correct && (i + side) % 3 === 0) continue;
+      await run("INSERT INTO race_answers (race_id, round_no, side, response, correct, at_ms) VALUES (?, ?, ?, ?, ?, ?)", [
+        id,
+        i + 1,
+        side,
+        JSON.stringify(correct ? right : wrong),
+        correct ? 1 : 0,
+        t + (correct ? 14_000 + i * 1500 : 9_000 + side * 2000),
+      ]);
+    }
+    t += 40_000;
+  }
+  for (const side of [0, 1] as const) {
+    await insertPoints(users[side], coins[side], `Соревнование: ${winner === side ? "победа" : "участие"}`, id, day);
+    if (mode === "rated") {
+      await run("UPDATE race_ratings SET rating = ?, games = games + 1, wins = wins + ? WHERE user_id = ? AND track = ?", [
+        applyDelta(ratings[side], delta[side]),
+        winner === side ? 1 : 0,
+        users[side],
+        track,
+      ]);
+    }
+  }
 }
 
 /** Returns the demo user's id, creating the demo world if it does not exist yet. */
@@ -356,11 +401,10 @@ export async function ensureDemo(): Promise<string> {
       ]);
     }
 
-    // A little arena history in both directions.
-    const aliya = await fighterOf(me.id, DEMO.name, me.level);
-    const [daniyar, madina] = await Promise.all(friends.slice(0, 2).map((f) => fighterOf(f.id, f.name, f.level)));
-    if (daniyar) await recordDuel(daniyar, aliya, 1234567, 1);
-    if (madina) await recordDuel(aliya, madina, 7654321, 3);
+    // A little race history: a rated SAT race lost to Daniyar, a friendly IELTS race won against Madina.
+    const [daniyar, madina] = friends;
+    if (daniyar) await recordRace([daniyar.id, me.id], "sat", "rated", [0, 1, 0, null, 1, 0, 1, 0, 0], 1);
+    if (madina) await recordRace([me.id, madina.id], "ielts", "friendly", [0, 0, 1, 0, null, 0, 1, 0], 3);
 
     return me.id;
   });

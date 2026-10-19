@@ -10,6 +10,11 @@ export function todayIso(now: Date = new Date()): IsoDate {
   return now.toISOString().slice(0, 10);
 }
 
+/** The current time in epoch milliseconds (race clocks). */
+export function nowMs(): number {
+  return Date.now();
+}
+
 export function nowIso(now: Date = new Date()): string {
   return now.toISOString();
 }

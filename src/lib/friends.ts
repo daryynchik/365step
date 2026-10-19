@@ -158,7 +158,7 @@ export async function getLeaderboard(userId: string): Promise<Standing[]> {
   const week = weekStart(todayIso());
   const yesterday = addDays(todayIso(), -1);
 
-  const [users, points, lessons, streaks, duels] = await Promise.all([
+  const [users, points, lessons, streaks, races] = await Promise.all([
     all(`SELECT id, name FROM users WHERE id IN (${ph})`, ids),
     all(
       `SELECT user_id,
@@ -170,8 +170,8 @@ export async function getLeaderboard(userId: string): Promise<Standing[]> {
     all(`SELECT user_id, COUNT(*) AS n FROM lesson_results WHERE user_id IN (${ph}) GROUP BY user_id`, ids),
     all(`SELECT user_id, current_days, last_active_date FROM streaks WHERE user_id IN (${ph})`, ids),
     all(
-      `SELECT attacker_id, defender_id, winner_id FROM duels
-        WHERE attacker_id IN (${ph}) OR defender_id IN (${ph})`,
+      `SELECT user_a, user_b, winner FROM races
+        WHERE status = 'finished' AND reason <> 'abandoned' AND (user_a IN (${ph}) OR user_b IN (${ph}))`,
       [...ids, ...ids],
     ),
   ]);
@@ -186,14 +186,16 @@ export async function getLeaderboard(userId: string): Promise<Standing[]> {
   );
 
   const record = new Map<string, { wins: number; losses: number }>();
-  for (const d of duels) {
-    for (const side of [str(d.attacker_id), str(d.defender_id)]) {
-      if (!ids.includes(side)) continue;
-      const r = record.get(side) ?? { wins: 0, losses: 0 };
-      if (d.winner_id === side) r.wins++;
-      else if (d.winner_id) r.losses++;
-      record.set(side, r);
-    }
+  // Study races: wins and losses (draws count as neither).
+  for (const race of races) {
+    const winner = race.winner === null || race.winner === undefined ? null : num(race.winner);
+    [str(race.user_a), str(race.user_b)].forEach((id, side) => {
+      if (!ids.includes(id) || winner === null) return;
+      const r = record.get(id) ?? { wins: 0, losses: 0 };
+      if (winner === side) r.wins++;
+      else r.losses++;
+      record.set(id, r);
+    });
   }
 
   return users

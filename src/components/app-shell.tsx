@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { BarChart3, BookOpenText, LogOut, Route, Swords, Target, Trophy, Users } from "lucide-react";
+import { BarChart3, BookOpenText, Flag, LogOut, Route, Target, Trophy, Users } from "lucide-react";
 import { clsx } from "clsx";
 
 import { signOutAction } from "@/actions/auth";
@@ -14,7 +14,7 @@ const NAV = [
   { href: "/seminar", label: "Проект", icon: BookOpenText },
   { href: "/opportunities", label: "Конкурсы", icon: Trophy },
   { href: "/friends", label: "Друзья", icon: Users },
-  { href: "/arena", label: "Арена", icon: Swords },
+  { href: "/arena", label: "Соревнования", icon: Flag },
 ] as const;
 
 export interface ShellUser {
@@ -25,7 +25,7 @@ export interface ShellUser {
   streak: number;
   activeToday: boolean;
   pendingRequests: number;
-  pendingFights: number;
+  pendingRaces: number;
 }
 
 function UserMenu({ user }: { user: ShellUser }) {
@@ -141,9 +141,9 @@ export function AppShell({ user, children }: { user: ShellUser; children: React.
               >
                 <Icon className="size-4" />
                 {label}
-                {((href === "/friends" && user.pendingRequests > 0) || (href === "/arena" && user.pendingFights > 0)) && (
+                {((href === "/friends" && user.pendingRequests > 0) || (href === "/arena" && user.pendingRaces > 0)) && (
                   <span className="grid size-4 place-items-center rounded-full bg-danger text-[10px] font-bold text-white">
-                    {href === "/arena" ? user.pendingFights : user.pendingRequests}
+                    {href === "/arena" ? user.pendingRaces : user.pendingRequests}
                   </span>
                 )}
               </Link>
@@ -175,7 +175,7 @@ export function AppShell({ user, children }: { user: ShellUser; children: React.
           >
             <Icon className="size-[22px]" strokeWidth={active === href ? 2.4 : 2} />
             {label}
-            {((href === "/friends" && user.pendingRequests > 0) || (href === "/arena" && user.pendingFights > 0)) && (
+            {((href === "/friends" && user.pendingRequests > 0) || (href === "/arena" && user.pendingRaces > 0)) && (
               <span className="absolute right-[calc(50%-18px)] top-1.5 size-2 rounded-full bg-danger" />
             )}
           </Link>

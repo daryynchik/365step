@@ -111,7 +111,8 @@ async function createPostgresDriver(url: string): Promise<Driver> {
   const local = url.includes("localhost") || url.includes("127.0.0.1");
   const pool = postgres(url, {
     // Pages read in parallel; a few more connections keep those reads from queueing.
-    max: 10,
+    // PG_POOL_MAX=1 serialises everything (tests against single-session servers such as PGlite).
+    max: Number(process.env.PG_POOL_MAX) || 10,
     idle_timeout: 20,
     prepare: false, // Supabase's transaction pooler cannot hold prepared statements
     ssl: local ? false : "require",

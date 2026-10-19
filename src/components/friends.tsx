@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useTransition } from "react";
-import { Check, Loader2, Swords, UserPlus, X } from "lucide-react";
+import { Check, Flag, Loader2, UserPlus, X } from "lucide-react";
 import { clsx } from "clsx";
 
 import { removeFriendAction, respondToRequestAction, sendFriendRequestAction } from "@/actions/friends";
@@ -131,7 +131,7 @@ export function Leaderboard({ standings }: { standings: Standing[] }) {
               <th className="px-2 py-2.5 text-right font-medium">Уровень</th>
               <th className="px-2 py-2.5 text-right font-medium">Уроки</th>
               <th className="px-2 py-2.5 text-right font-medium">Серия</th>
-              <th className="px-2 py-2.5 text-right font-medium">Арена</th>
+              <th className="px-2 py-2.5 text-right font-medium">Гонки</th>
               <th className="w-24 px-5 py-2.5" />
             </tr>
           </thead>
@@ -170,12 +170,12 @@ export function Leaderboard({ standings }: { standings: Standing[] }) {
                   {!s.isMe && (
                     <div className="flex justify-end gap-1">
                       <Link
-                        href={`/arena?opponent=${s.id}`}
+                        href={`/arena?friend=${s.id}`}
                         className="rounded-md p-1.5 text-subtle hover:bg-sunken hover:text-ink"
-                        aria-label={`Вызвать ${s.name} на бой`}
-                        title="Вызвать на бой"
+                        aria-label={`Пригласить ${s.name} на соревнование`}
+                        title="Пригласить на соревнование"
                       >
-                        <Swords className="size-4" />
+                        <Flag className="size-4" />
                       </Link>
                       <button
                         type="button"

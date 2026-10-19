@@ -2,7 +2,8 @@ import { redirect } from "next/navigation";
 
 import { AppShell } from "@/components/app-shell";
 import { currentUser } from "@/lib/auth";
-import { getFightRequests } from "@/lib/arena";
+import { nowMs } from "@/lib/date";
+import { getInvites } from "@/lib/race";
 import { getRequests } from "@/lib/friends";
 import { getStats } from "@/lib/game";
 import { getProfile } from "@/lib/profile";
@@ -13,11 +14,11 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   const user = await currentUser();
   if (!user) redirect("/signin");
 
-  const [profile, stats, requests, fights] = await Promise.all([
+  const [profile, stats, requests, invites] = await Promise.all([
     getProfile(user.id),
     getStats(user.id),
     getRequests(user.id),
-    getFightRequests(user.id),
+    getInvites(user.id, nowMs()),
   ]);
   // Everything inside the app is built around the student's goal.
   if (!profile) redirect("/start");
@@ -32,7 +33,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         streak: stats.streak.current,
         activeToday: stats.streak.activeToday,
         pendingRequests: requests.incoming.length,
-        pendingFights: fights.filter((r) => r.defenderId === user.id).length,
+        pendingRaces: invites.filter((i) => i.toId === user.id).length,
       }}
     >
       {children}

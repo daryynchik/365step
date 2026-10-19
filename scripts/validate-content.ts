@@ -357,10 +357,33 @@ if (!QUIET) {
   console.log(rows.join("\n"));
   console.log("");
 }
+// ------------------------------------------- race set: IELTS Listening --
+// Short recordings for study races: one right answer, four different choices,
+// an explanation, a topic and a level, and an audio file with a known length.
+const listening = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/race/ielts-listening.json"), "utf8")) as {
+  topics: Record<string, string>;
+  items: { id: string; difficulty: string; topic: string; lines: { voice: string; text: string }[]; choices: string[]; answer: number; explanation: string }[];
+};
+const audio = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/race/listening-audio.json"), "utf8")) as Record<string, { ms: number }>;
+const listeningLevels = { easy: 0, medium: 0, hard: 0 } as Record<string, number>;
+for (const it of listening.items) {
+  if (!["easy", "medium", "hard"].includes(it.difficulty)) errors.push(`${it.id}: unknown difficulty`);
+  else listeningLevels[it.difficulty]++;
+  if (!listening.topics[it.topic]) errors.push(`${it.id}: unknown topic ${it.topic}`);
+  if (it.choices.length !== 4 || new Set(it.choices.map(norm)).size !== 4) errors.push(`${it.id}: needs four different choices`);
+  if (!Number.isInteger(it.answer) || it.answer < 0 || it.answer >= it.choices.length) errors.push(`${it.id}: answer is not one choice`);
+  if (it.explanation.length < 60) errors.push(`${it.id}: explanation too short`);
+  if (!it.lines.length || it.lines.some((l) => !["cori", "ljspeech"].includes(l.voice) || l.text.length < 5)) errors.push(`${it.id}: bad transcript lines`);
+  if (!fs.existsSync(path.join(process.cwd(), "public/audio/listening", `${it.id}.mp3`))) errors.push(`${it.id}: audio file missing`);
+  if (!(audio[it.id]?.ms > 1000)) errors.push(`${it.id}: audio length unknown — run scripts/listening-audio.py`);
+}
+for (const [level, n] of Object.entries(listeningLevels)) if (n < MIN_PER_CELL) errors.push(`IELTS Listening race set: ${n} ${level} items, need ${MIN_PER_CELL}`);
+
 for (const w of warnings) console.warn(`warning: ${w}`);
 console.log(
   `Bank: ${tasks.length} tasks in ${files.length} files; ${checked} SAT Math answers recomputed (${conceptual} conceptual); ${duplicatePairs} duplicate pairs; ` +
-    `${quotesChecked} quotations checked against the novel; ${fullCells}/${cells} question cells at ≥${MIN_PER_CELL}; ${under.length} skills under the minimum.`,
+    `${quotesChecked} quotations checked against the novel; ${fullCells}/${cells} question cells at ≥${MIN_PER_CELL}; ${under.length} skills under the minimum; ` +
+    `race Listening: ${listening.items.length} items with audio (${listeningLevels.easy}/${listeningLevels.medium}/${listeningLevels.hard}).`,
 );
 if (errors.length) {
   console.error(`\n${errors.length} error(s):\n- ${errors.slice(0, 200).join("\n- ")}`);
