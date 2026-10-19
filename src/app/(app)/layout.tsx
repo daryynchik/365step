@@ -13,10 +13,14 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   const user = await currentUser();
   if (!user) redirect("/signin");
 
+  const [profile, stats, requests, fights] = await Promise.all([
+    getProfile(user.id),
+    getStats(user.id),
+    getRequests(user.id),
+    getFightRequests(user.id),
+  ]);
   // Everything inside the app is built around the student's goal.
-  if (!(await getProfile(user.id))) redirect("/start");
-
-  const [stats, requests, fights] = await Promise.all([getStats(user.id), getRequests(user.id), getFightRequests(user.id)]);
+  if (!profile) redirect("/start");
 
   return (
     <AppShell

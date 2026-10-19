@@ -3,13 +3,16 @@
  * plan built from it.
  */
 
+import { cache } from "react";
+
 import { isFieldId } from "@/content/fields";
 import { isCountryId, MIN_PLAN_DAYS, planFor, type Plan, type PlanInputs, type StudentProfile } from "@/content/plan";
 import { one, run, str, num } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
 import { getDiagnosticLevels, getScores } from "./scores";
 
-export async function getProfile(userId: string): Promise<StudentProfile | null> {
+/** Cached for the request: the app layout and the page both read it. */
+export const getProfile = cache(async (userId: string): Promise<StudentProfile | null> => {
   const row = await one("SELECT country, field, grade, graduation, start_date FROM student_profiles WHERE user_id = ?", [userId]);
   if (!row) return null;
   const country = str(row.country);
@@ -21,7 +24,7 @@ export async function getProfile(userId: string): Promise<StudentProfile | null>
     graduation: str(row.graduation),
     startDate: str(row.start_date),
   };
-}
+});
 
 /** What the plan needs besides the goal: the scores and the diagnostic. */
 export async function getPlanInputs(userId: string): Promise<PlanInputs> {
@@ -30,8 +33,8 @@ export async function getPlanInputs(userId: string): Promise<PlanInputs> {
 }
 
 export async function getPlan(userId: string): Promise<Plan | null> {
-  const profile = await getProfile(userId);
-  return profile ? planFor(profile, await getPlanInputs(userId)) : null;
+  const [profile, inputs] = await Promise.all([getProfile(userId), getPlanInputs(userId)]);
+  return profile ? planFor(profile, inputs) : null;
 }
 
 export interface ProfileInput {

@@ -39,7 +39,16 @@ export function startLevelOf(plan: Plan | null, skill: string): Level {
   return plan?.sections.find((s) => s.section === section)?.level ?? "medium";
 }
 
-export async function resolveLesson(userId: string, course: string, lessonId: string, done: Set<string>): Promise<ResolvedLesson | null> {
+/**
+ * `done` may be a pending query: it is awaited together with the plan and the
+ * skill levels, so the page waits for one database round trip, not several.
+ */
+export async function resolveLesson(
+  userId: string,
+  course: string,
+  lessonId: string,
+  done: Set<string> | Promise<Set<string>>,
+): Promise<ResolvedLesson | null> {
   if (course === "diagnostic") {
     if (!isDiagnosticSection(lessonId)) return null;
     return {
@@ -58,11 +67,19 @@ export async function resolveLesson(userId: string, course: string, lessonId: st
     };
   }
 
-  if (course === "review" || course === "bank") {
-    const plan = await getPlan(userId);
+  const virtual = course === "review" || course === "bank";
+  const entry = virtual ? null : findLesson(course, lessonId);
+  if (!virtual && !entry) return null;
+  const [finished, plan, stats] = await Promise.all([
+    done,
+    !entry || PLAN_COURSES.includes(entry.course.id) ? getPlan(userId) : null,
+    course === "bank" ? getSkillStats(userId) : null,
+  ]);
+
+  if (!entry) {
     if (!plan) return null;
     const key = `${course}/${lessonId}`;
-    const open = isPlanUnlocked(plan, key, done);
+    const open = isPlanUnlocked(plan, key, finished);
     if (course === "review") {
       const review = reviewLesson(plan, key);
       if (!review) return null;
@@ -81,7 +98,7 @@ export async function resolveLesson(userId: string, course: string, lessonId: st
         plan,
       };
     }
-    const practice = bankLesson(plan, key, await getSkillStats(userId));
+    const practice = bankLesson(plan, key, stats ?? {});
     if (!practice) return null;
     return {
       key,
@@ -99,15 +116,11 @@ export async function resolveLesson(userId: string, course: string, lessonId: st
     };
   }
 
-  const entry = findLesson(course, lessonId);
-  if (!entry) return null;
-  let open: boolean;
-  let plan: Plan | null = null;
-  if (!PLAN_COURSES.includes(entry.course.id)) open = isSequentiallyUnlocked(entry, done);
-  else {
-    plan = await getPlan(userId);
-    open = plan ? isPlanUnlocked(plan, entry.key, done) : false;
-  }
+  const open = !PLAN_COURSES.includes(entry.course.id)
+    ? isSequentiallyUnlocked(entry, finished)
+    : plan
+      ? isPlanUnlocked(plan, entry.key, finished)
+      : false;
   const skill = skillOfLesson(entry.key);
   return {
     key: entry.key,

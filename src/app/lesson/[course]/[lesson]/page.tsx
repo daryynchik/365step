@@ -29,7 +29,7 @@ export default async function LessonPage({ params }: { params: Params }) {
   if (!user) redirect("/signin");
   const { course, lesson } = await params;
 
-  const found = await resolveLesson(user.id, course, decodeURIComponent(lesson), await getDoneKeys(user.id));
+  const found = await resolveLesson(user.id, course, decodeURIComponent(lesson), getDoneKeys(user.id));
   if (!found) notFound();
   if (!found.open) redirect(found.backHref);
 

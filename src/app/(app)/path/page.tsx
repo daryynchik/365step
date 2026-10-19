@@ -35,17 +35,16 @@ function monthYear(iso: string): string {
 export default async function PathPage({ searchParams }: { searchParams: Promise<{ week?: string }> }) {
   const user = await currentUser();
   if (!user) redirect("/signin");
-  const plan = await getPlan(user.id);
-  if (!plan) redirect("/start");
-
   const { week } = await searchParams;
-  const [done, stats, activity, standings, deadlines] = await Promise.all([
+  const [plan, done, stats, activity, standings, deadlines] = await Promise.all([
+    getPlan(user.id),
     getDoneKeys(user.id),
     getStats(user.id),
     getActivity(user.id, 7),
     getLeaderboard(user.id),
     getDeadlines(user.id),
   ]);
+  if (!plan) redirect("/start");
 
   const today = todayIso();
   const steps = plan.days.flatMap((d) => d.steps);

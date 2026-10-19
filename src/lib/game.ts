@@ -8,6 +8,7 @@
  */
 
 import { randomUUID } from "node:crypto";
+import { cache } from "react";
 
 import { COURSES, findByKey, findLesson, flatten, isSequentiallyUnlocked, PLAN_COURSES, type PathEntry } from "@/content";
 import { isPlanUnlocked, nextPlanStep } from "@/content/plan";
@@ -110,7 +111,8 @@ export interface Stats {
   lessonsDone: number;
 }
 
-export async function getStats(userId: string): Promise<Stats> {
+/** Cached for the request: the app layout and the page both show it. */
+export const getStats = cache(async (userId: string): Promise<Stats> => {
   const today = todayIso();
   const [bal, total, week, day, streak, lessons] = await Promise.all([
     balance(userId),
@@ -129,7 +131,7 @@ export async function getStats(userId: string): Promise<Stats> {
     streak,
     lessonsDone: lessons,
   };
-}
+});
 
 /** Points earned on each of the last `days` days, oldest first. */
 export async function getActivity(userId: string, days = 7): Promise<{ day: string; points: number }[]> {
@@ -285,7 +287,7 @@ export async function completeLesson(
     return { ok: true, result };
   }
 
-  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  const found = await resolveLesson(userId, courseId, lessonId, getDoneKeys(userId));
   if (!found) return { ok: false, error: courseId === "review" ? "Повторение не найдено." : "Урок не найден." };
   if (found.lesson.writing) return { ok: false, error: "Этот урок завершается сдачей работы." };
   if (found.lesson.speaking) return { ok: false, error: "Этот урок завершается разговором с экзаменатором." };
@@ -343,7 +345,7 @@ const MAX_BODY = 20_000;
 /** A writing or speaking task by its URL parts, from authored lessons or the task bank. */
 export async function findTask(userId: string, courseId: string, lessonId: string) {
   if (courseId === "bank") {
-    const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+    const found = await resolveLesson(userId, courseId, lessonId, getDoneKeys(userId));
     return found && (found.lesson.writing || found.lesson.speaking) ? found : null;
   }
   const entry = findLesson(courseId, lessonId);
@@ -381,7 +383,7 @@ export async function saveDraft(userId: string, courseId: string, lessonId: stri
 }
 
 export async function submitWriting(userId: string, courseId: string, lessonId: string, body: string): Promise<CompletionResult> {
-  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  const found = await resolveLesson(userId, courseId, lessonId, getDoneKeys(userId));
   const task = found?.lesson.writing;
   if (!found || !task) return { ok: false, error: "Задание не найдено." };
 
@@ -410,7 +412,7 @@ export async function submitSpeaking(
   lessonId: string,
   submission: SpeakingSubmission,
 ): Promise<CompletionResult> {
-  const found = await resolveLesson(userId, courseId, lessonId, await getDoneKeys(userId));
+  const found = await resolveLesson(userId, courseId, lessonId, getDoneKeys(userId));
   const spec = found?.lesson.speaking;
   if (!found || !spec) return { ok: false, error: "Задание не найдено." };
 
