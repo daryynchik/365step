@@ -4,12 +4,12 @@ import { redirect } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { clsx } from "clsx";
 
-import { ArenaWorkshop } from "@/components/arena/arena-workshop";
+import { Hero } from "@/components/arena/hero";
+import { HeroEditor } from "@/components/arena/hero-editor";
 import { FightRequests } from "@/components/arena/fight-requests";
 import { FightButton } from "@/components/arena/fight-button";
-import { Avatar } from "@/components/ui";
-import { getFightRequests, getFighter, getOwnedItems, recentDuels, rewardedFightsToday } from "@/lib/arena";
-import { FIGHT_REWARD, item, powerRating, REWARDED_FIGHTS_PER_DAY } from "@/lib/arena-rules";
+import { getFightRequests, getFighter, getHero, recentDuels, rewardedFightsToday } from "@/lib/arena";
+import { FIGHT_REWARD, powerRating, REWARDED_FIGHTS_PER_DAY, speciesById } from "@/lib/arena-rules";
 import { currentUser } from "@/lib/auth";
 import { timeAgo } from "@/lib/date";
 import { getFriendIds } from "@/lib/friends";
@@ -23,9 +23,8 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
   if (!user) redirect("/signin");
   const { opponent } = await searchParams;
 
-  const [me, owned, points, friendIds, duels, rewarded, requests] = await Promise.all([
-    getFighter(user.id),
-    getOwnedItems(user.id),
+  const [hero, points, friendIds, duels, rewarded, requests] = await Promise.all([
+    getHero(user.id),
     balance(user.id),
     getFriendIds(user.id),
     recentDuels(user.id),
@@ -33,9 +32,10 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
     getFightRequests(user.id),
   ]);
   const opponents = (await Promise.all(friendIds.map((id) => getFighter(id)))).sort((a, b) =>
-    a.userId === opponent ? -1 : b.userId === opponent ? 1 : powerRating(b) - powerRating(a),
+    a.userId === opponent ? -1 : b.userId === opponent ? 1 : powerRating(b.gear) - powerRating(a.gear),
   );
-  const myPower = powerRating(me);
+  const me = hero.fighter;
+  const myPower = powerRating(me.gear);
   const left = Math.max(0, REWARDED_FIGHTS_PER_DAY - rewarded);
 
   return (
@@ -43,15 +43,16 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Арена</h1>
         <p className="max-w-2xl text-sm text-muted">
-          Очки за уроки превращаются в снаряжение. Отправь другу вызов и дождись согласия. После принятия вы увидите бой своих персонажей.
+          Выбери своего героя, улучшай меч, шлем и броню за очки с уроков. Отправь другу вызов и дождись согласия — после принятия вы увидите бой своих героев.
         </p>
       </div>
 
-      <ArenaWorkshop
+      <HeroEditor
         name={user.name}
-        level={me.level}
-        initial={{ color: me.color, weapon: me.weapon, shield: me.shield }}
-        owned={[...owned]}
+        studyLevel={me.level}
+        initialLook={me.look}
+        chosen={hero.chosen}
+        gear={me.gear}
         balance={points}
       />
 
@@ -79,15 +80,17 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
           ) : (
             <ul className="mt-3 divide-y divide-line">
               {opponents.map((o) => {
-                const power = powerRating(o);
+                const power = powerRating(o.gear);
                 const diff = power - myPower;
                 return (
                   <li key={o.userId} className={clsx("flex items-center gap-3 py-3", o.userId === opponent && "-mx-2 rounded-lg bg-accent-soft/60 px-2")}>
-                    <Avatar name={o.name} size={36} />
+                    <span className="grid size-12 flex-none place-items-center overflow-hidden rounded-xl bg-sunken">
+                      <Hero look={o.look} gear={o.gear} crop="bust" className="size-12" label={`Герой: ${speciesById(o.look.species)?.name ?? ""}`} />
+                    </span>
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-medium">{o.name}</p>
                       <p className="truncate text-xs text-muted">
-                        Ур. {o.level} · {item(o.weapon).name} · {item(o.shield).name}
+                        {speciesById(o.look.species)?.name} · меч {o.gear.sword} · шлем {o.gear.helmet} · броня {o.gear.armor}
                       </p>
                     </div>
                     <span
@@ -124,6 +127,9 @@ export default async function ArenaPage({ searchParams }: { searchParams: Promis
                         )}
                       >
                         {result === "win" ? "Победа" : result === "loss" ? "Поражение" : "Ничья"}
+                      </span>
+                      <span className="grid size-9 flex-none place-items-center overflow-hidden rounded-lg bg-sunken">
+                        <Hero look={other.look} gear={other.gear} crop="bust" className="size-9" />
                       </span>
                       <span className="min-w-0 flex-1 truncate text-sm">
                         {iAttacked ? "Ты против " : "Тебя вызвал(а) "}

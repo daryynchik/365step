@@ -356,6 +356,244 @@ body {
   line-height: 1.65;
 }
 
+/* ------------------------------------------------------------- heroes ---- */
+
+.hero {
+  overflow: visible;
+}
+
+.hero[data-crop="bust"],
+.hero[data-crop="face"] {
+  overflow: hidden;
+}
+
+.hero .hero-rig,
+.hero .hero-arm,
+.hero .hero-tail {
+  transform-box: view-box;
+}
+
+.hero .hero-rig {
+  transform-origin: 100px 212px;
+  animation: hero-breathe 3.6s ease-in-out infinite;
+  transition: transform 450ms ease, filter 450ms ease;
+}
+
+.hero .hero-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hero-blink 5.2s infinite;
+}
+
+.hero .hero-arm {
+  animation: hero-arm-idle 3.6s ease-in-out infinite;
+  transition: transform 300ms ease;
+}
+
+.hero .hero-tail {
+  animation: hero-sway 3s ease-in-out infinite;
+}
+
+.hero .hero-glow {
+  animation: hero-pulse 2.4s ease-in-out infinite;
+}
+
+.hero-sparkle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hero-twinkle 1.2s ease-in-out infinite;
+}
+
+.hero[data-mood="attack"] .hero-rig {
+  animation: hero-lunge calc(560ms / var(--speed, 1)) ease-out;
+}
+.hero[data-mood="attack"] .hero-arm {
+  animation: hero-swing calc(560ms / var(--speed, 1)) ease-out;
+}
+.hero[data-mood="hit"] .hero-rig {
+  animation: hero-recoil calc(460ms / var(--speed, 1)) ease-out;
+}
+.hero[data-mood="block"] .hero-rig {
+  animation: hero-brace calc(460ms / var(--speed, 1)) ease-out;
+}
+.hero[data-mood="block"] .hero-arm {
+  animation: hero-parry calc(460ms / var(--speed, 1)) ease-out;
+}
+.hero[data-mood="dodge"] .hero-rig {
+  animation: hero-dodge calc(560ms / var(--speed, 1)) ease-out;
+}
+.hero[data-mood="win"] .hero-rig {
+  animation: hero-jump 1s ease-in-out infinite;
+}
+.hero[data-mood="win"] .hero-arm {
+  animation: none;
+  transform: rotate(-42deg);
+}
+.hero[data-mood="lose"] .hero-rig {
+  animation: none;
+  transform: translateY(8px) rotate(-6deg) scaleY(0.95);
+  filter: saturate(0.55);
+}
+.hero[data-mood="lose"] .hero-arm {
+  animation: none;
+  transform: rotate(38deg);
+}
+
+@keyframes hero-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.012, 0.992);
+  }
+}
+
+@keyframes hero-blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes hero-arm-idle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes hero-sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes hero-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-twinkle {
+  0%,
+  100% {
+    transform: scale(0.4) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-lunge {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(34px) rotate(4deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-75deg);
+  }
+  55% {
+    transform: rotate(55deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hero-recoil {
+  0% {
+    transform: translateX(0);
+    filter: none;
+  }
+  20% {
+    transform: translateX(-16px) rotate(-5deg);
+    filter: brightness(1.7) saturate(0.4);
+  }
+  45% {
+    transform: translateX(-8px);
+    filter: none;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-brace {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-6px) scale(0.98, 1.02);
+  }
+}
+
+@keyframes hero-parry {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30%,
+  60% {
+    transform: rotate(-58deg);
+  }
+}
+
+@keyframes hero-dodge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-30px, -10px) rotate(-8deg);
+  }
+}
+
+@keyframes hero-jump {
+  0%,
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  15% {
+    transform: translateY(0) scale(1.05, 0.94);
+  }
+  45% {
+    transform: translateY(-22px) scale(0.97, 1.04);
+  }
+  75% {
+    transform: translateY(0) scale(1.03, 0.97);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

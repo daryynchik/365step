@@ -16,7 +16,8 @@ import { findByKey } from "../src/content";
 import { diagnosticQuestions } from "../src/content/diagnostic";
 import { currentPlanDay, isPlanUnlocked, nextPlanStep, reviewLesson, type Plan, type PlanStep } from "../src/content/plan";
 import { registerUser } from "../src/lib/accounts";
-import { buyItem, getDuel, getFightRequests, requestFight, respondToFightRequest } from "../src/lib/arena";
+import { getDuel, getFightRequests, getHero, requestFight, respondToFightRequest, saveLook, upgradeGear } from "../src/lib/arena";
+import { gearFromLegacy, lookForSpecies, statsFor, upgradeCost } from "../src/lib/arena-rules";
 import { getOrCreatePractice, getPracticeSet } from "../src/lib/content-engine";
 import { all, run, scalar } from "../src/lib/db";
 import { addDeadline, getDeadlines, removeDeadline, toggleDeadline } from "../src/lib/deadlines";
@@ -267,7 +268,55 @@ async function main() {
   // --------------------------------------------- friends, arena, ranking --
   ok((await sendFriendRequest(A, "b@test.kz")).ok, "friend request");
   ok((await respondToRequest(B, (await getRequests(B)).incoming[0].id, true)).ok, "accepted");
-  ok((await buyItem(A, "iron-sword")).ok, "buy gear");
+  // Heroes: looks are validated and saved per student; gear is upgraded once per click, never twice.
+  const balanceOf = (id: string) => scalar("SELECT COALESCE(SUM(amount), 0) FROM points WHERE user_id = ?", [id]);
+  const heroA = await getHero(A);
+  ok(!heroA.chosen && heroA.fighter.gear.sword === 1 && heroA.fighter.gear.helmet === 1 && heroA.fighter.gear.armor === 1, "new hero: not chosen yet, starter gear");
+  const owlLook = { ...lookForSpecies("owl"), palette: 2, eyes: "sharp" as const, expression: "fierce" as const, features: { tufts: "none", pattern: "dots" } };
+  ok(!(await saveLook(A, { ...owlLook, species: "human" })).ok, "unknown species rejected");
+  ok(!(await saveLook(A, { ...owlLook, palette: 9 })).ok, "unknown palette rejected");
+  ok(!(await saveLook(A, { ...owlLook, eyes: "laser" })).ok, "unknown eyes rejected");
+  ok((await saveLook(A, { ...owlLook, features: { tufts: "horns", horns: "big" } })).ok, "features of other species are ignored");
+  ok(!(await saveLook(A, { ...owlLook, features: { tufts: "antlers" } })).ok, "unknown feature option rejected");
+  ok((await saveLook(A, owlLook)).ok, "look saved");
+  const savedA = await getHero(A);
+  ok(savedA.chosen && JSON.stringify(savedA.fighter.look) === JSON.stringify(owlLook), "look read back exactly");
+  ok((await saveLook(B, { ...lookForSpecies("robot"), palette: 1 })).ok, "second student saves another hero");
+  ok((await getHero(A)).fighter.look.species === "owl" && (await getHero(B)).fighter.look.species === "robot", "looks are kept per student");
+
+  const before = await balanceOf(A);
+  ok(before >= upgradeCost(1) + upgradeCost(2) + upgradeCost(1), `enough points to test upgrades: ${before}`);
+  const up = await upgradeGear(A, "sword", 1);
+  ok(up.ok && up.level === 2 && up.price === upgradeCost(1), "sword upgraded to level 2");
+  ok((await balanceOf(A)) === before - upgradeCost(1), "upgrade charged exactly its price");
+  ok(!(await upgradeGear(A, "sword", 1)).ok && (await balanceOf(A)) === before - upgradeCost(1), "repeated request for the same level is refused and not charged");
+  const racing = await Promise.all([upgradeGear(A, "sword", 2), upgradeGear(A, "sword", 2), upgradeGear(A, "sword", 2)]);
+  ok(racing.filter((r) => r.ok).length === 1, "three simultaneous clicks raise the level once");
+  ok((await getHero(A)).fighter.gear.sword === 3 && (await balanceOf(A)) === before - upgradeCost(1) - upgradeCost(2), "and charge once");
+  ok(!(await upgradeGear(A, "shield", 1)).ok && !(await upgradeGear(A, "armor", 0)).ok && !(await upgradeGear(A, "armor", 20)).ok, "unknown slot and impossible levels refused");
+  ok(await scalar("SELECT COUNT(*) FROM arena_upgrades WHERE user_id = ?", [A]) === 2, "every paid upgrade logged once");
+
+  // Not enough points: nothing changes. Two upgrades that together cost more than the balance: only one goes through.
+  const poor = randomUUID();
+  await run("INSERT INTO users (id, email, name, password_hash, created_at) VALUES (?, ?, ?, ?, ?)", [poor, `${poor}@test.kz`, "Бедный", "x", new Date().toISOString()]);
+  await run("INSERT INTO points (id, user_id, amount, reason, ref, day, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)", [randomUUID(), poor, upgradeCost(1) + 5, "test", null, "2026-01-01", new Date().toISOString()]);
+  const both = await Promise.all([upgradeGear(poor, "helmet", 1), upgradeGear(poor, "armor", 1)]);
+  ok(both.filter((r) => r.ok).length === 1 && (await balanceOf(poor)) === 5, "two upgrades cannot spend the same points");
+  const broke = await upgradeGear(poor, "sword", 1);
+  ok(!broke.ok && /Не хватает/.test(broke.error) && (await getHero(poor)).fighter.gear.sword === 1 && (await balanceOf(poor)) === 5, "not enough points: refused, nothing changed");
+
+  // The first arena's purchases become gear levels; the balance is untouched.
+  const veteran = randomUUID();
+  await run("INSERT INTO users (id, email, name, password_hash, created_at) VALUES (?, ?, ?, ?, ?)", [veteran, `${veteran}@test.kz`, "Ветеран", "x", new Date().toISOString()]);
+  await run("INSERT INTO arena_fighters (user_id, color, weapon, shield, updated_at) VALUES (?, 'violet', 'iron-sword', 'kite-shield', ?)", [veteran, new Date().toISOString()]);
+  for (const [item, price] of [["iron-sword", 180], ["kite-shield", 300]] as const) {
+    await run("INSERT INTO arena_items (user_id, item_id, price, purchased_at) VALUES (?, ?, ?, ?)", [veteran, item, price, new Date().toISOString()]);
+  }
+  const veteranBalance = await balanceOf(veteran);
+  const migrated = await getHero(veteran);
+  const expected = gearFromLegacy(["iron-sword", "kite-shield"]);
+  ok(JSON.stringify(migrated.fighter.gear) === JSON.stringify(expected) && expected.sword >= 5, `old purchases became gear: ${JSON.stringify(expected)}`);
+  ok((await balanceOf(veteran)) === veteranBalance && JSON.stringify((await getHero(veteran)).fighter.gear) === JSON.stringify(expected), "migration keeps the balance and runs once");
   ok(!(await requestFight(A, A)).ok, "self invitation rejected");
   const pointsBefore = await scalar("SELECT COALESCE(SUM(amount), 0) FROM points WHERE user_id = ?", [A]);
   ok((await requestFight(A, B)).ok, "fight invitation created");
@@ -283,6 +332,11 @@ async function main() {
   ok(accepted.filter((r) => r.ok).length === 1, "concurrent acceptance creates exactly one fight");
   const fight = accepted.find((r) => r.ok)!;
   ok(fight.ok && !!fight.duelId && (await getDuel(B, fight.duelId)) !== null, "accepted fight visible to recipient");
+  const duelSnapshot = (await getDuel(A, fight.duelId!))!;
+  ok(duelSnapshot.attacker.look.species === "owl" && duelSnapshot.attacker.gear.sword === 3 && duelSnapshot.defender.look.species === "robot", "duel keeps both heroes and their gear");
+  ok(duelSnapshot.fight.maxHp[0] === statsFor(duelSnapshot.attacker.gear).hp, "fight stats come from the gear");
+  await saveLook(A, lookForSpecies("cat"));
+  ok((await getDuel(A, fight.duelId!))!.attacker.look.species === "owl", "changing the hero later does not change a past duel");
   ok(await scalar("SELECT COUNT(*) FROM duels") === 1 && (await getFightRequests(A)).length === 0, "one duel recorded and pending invitation removed");
   ok((await requestFight(A, B)).ok, "new invitation after completed fight");
   const declined = (await getFightRequests(B))[0];

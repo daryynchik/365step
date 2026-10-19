@@ -105,6 +105,31 @@ CREATE TABLE IF NOT EXISTS arena_items (
   PRIMARY KEY (user_id, item_id)
 );
 
+-- The hero a student plays in the arena: looks (JSON, lib/arena-rules.ts Look)
+-- and the level of each gear slot. arena_fighters and arena_items above belong
+-- to the first arena; they are only read once, to convert old purchases.
+CREATE TABLE IF NOT EXISTS arena_heroes (
+  user_id    TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  look       TEXT NOT NULL,
+  chosen     INTEGER NOT NULL DEFAULT 0,
+  sword      INTEGER NOT NULL DEFAULT 1,
+  helmet     INTEGER NOT NULL DEFAULT 1,
+  armor      INTEGER NOT NULL DEFAULT 1,
+  updated_at TEXT NOT NULL
+);
+
+-- Every paid upgrade. The unique key is a second guard against paying twice
+-- for the same level.
+CREATE TABLE IF NOT EXISTS arena_upgrades (
+  id         TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  slot       TEXT NOT NULL,
+  to_level   INTEGER NOT NULL,
+  price      INTEGER NOT NULL,
+  created_at TEXT NOT NULL,
+  UNIQUE (user_id, slot, to_level)
+);
+
 -- A finished fight. Both loadouts are frozen at fight time so the replay never
 -- changes when someone buys new gear later.
 CREATE TABLE IF NOT EXISTS duels (

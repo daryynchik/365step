@@ -1,28 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
-import * as THREE from "three";
+import { useEffect, useRef, useState } from "react";
 import { FastForward, RotateCcw, Shield, Swords, Zap } from "lucide-react";
 import { clsx } from "clsx";
 
-import type { Fighter, FightResult } from "@/lib/arena-rules";
-import { item } from "@/lib/arena-rules";
-import { Avatar, Button, buttonClass, Coin } from "../ui";
-import { buildFighter, createStage, type FighterRig } from "./fighter-model";
+import { itemName, speciesById, type Fighter, type FightResult } from "@/lib/arena-rules";
+import { Button, buttonClass, Coin } from "../ui";
+import { Hero, type Mood } from "./hero";
 
-const HIT_MS = 950;
-const START_DELAY_MS = 700;
-const FINISH_MS = 1100;
-
-const ease = (t: number) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
-const clamp01 = (t: number) => Math.max(0, Math.min(1, t));
+const HIT_MS = 1000;
+const START_DELAY_MS = 800;
+/** Share of a hit's time at which the blow lands. */
+const IMPACT = 0.42;
+const SETTLE = 0.85;
 
 interface Popup {
   id: number;
   side: 0 | 1;
   text: string;
   kind: "hit" | "crit" | "block" | "miss";
+}
+
+interface Frame {
+  /** Hits that have already landed. */
+  shown: number;
+  moods: [Mood, Mood];
+  finished: boolean;
+}
+
+function frameAt(elapsed: number, fight: FightResult): Frame {
+  const idle: [Mood, Mood] = ["idle", "idle"];
+  if (elapsed < 0) return { shown: 0, moods: idle, finished: false };
+  const index = Math.floor(elapsed / HIT_MS);
+  if (index >= fight.hits.length) {
+    const moods: [Mood, Mood] =
+      fight.winner === null ? ["idle", "idle"] : fight.winner === 0 ? ["win", "lose"] : ["lose", "win"];
+    return { shown: fight.hits.length, moods, finished: true };
+  }
+  const hit = fight.hits[index];
+  const p = (elapsed - index * HIT_MS) / HIT_MS;
+  const moods: [Mood, Mood] = ["idle", "idle"];
+  const target = hit.by === 0 ? 1 : 0;
+  if (p < SETTLE) moods[hit.by] = "attack";
+  if (p >= IMPACT && p < SETTLE) moods[target] = hit.miss ? "dodge" : hit.blocked ? "block" : "hit";
+  return { shown: p >= IMPACT ? index + 1 : index, moods, finished: false };
 }
 
 export function DuelReplay({
@@ -41,168 +63,56 @@ export function DuelReplay({
   myPoints: number;
   opponentId: string;
 }) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [shown, setShown] = useState(0); // hits already landed
-  const [finished, setFinished] = useState(false);
+  const [frame, setFrame] = useState<Frame>({ shown: 0, moods: ["idle", "idle"], finished: false });
   const [popups, setPopups] = useState<Popup[]>([]);
   const [speed, setSpeed] = useState(1);
   const [run, setRun] = useState(0); // bump to replay
-
   const speedRef = useRef(speed);
-  speedRef.current = speed;
-
-  const onImpact = useCallback(
-    (index: number) => {
-      const hit = fight.hits[index];
-      const side = hit.by === 0 ? 1 : 0;
-      setShown(index + 1);
-      setPopups((prev) => [
-        ...prev.slice(-4),
-        {
-          id: index + run * 1000,
-          side,
-          text: hit.miss ? "мимо" : hit.blocked ? `−${hit.damage} блок` : hit.crit ? `−${hit.damage}!` : `−${hit.damage}`,
-          kind: hit.miss ? "miss" : hit.blocked ? "block" : hit.crit ? "crit" : "hit",
-        },
-      ]);
-    },
-    [fight.hits, run],
-  );
-  const onImpactRef = useRef(onImpact);
-  onImpactRef.current = onImpact;
+  useEffect(() => {
+    speedRef.current = speed;
+  }, [speed]);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    setShown(0);
-    setFinished(false);
-    setPopups([]);
-
-    let stage: ReturnType<typeof createStage>;
-    try {
-      stage = createStage(canvas);
-    } catch {
-      setShown(fight.hits.length);
-      setFinished(true);
-      return;
-    }
-    const { renderer, scene } = stage;
-    const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 50);
-    camera.position.set(0, 2.3, 6.4);
-    camera.lookAt(0, 0.9, 0);
-
-    const rigs: [FighterRig, FighterRig] = [
-      buildFighter(attacker.color, attacker.weapon, attacker.shield),
-      buildFighter(defender.color, defender.weapon, defender.shield),
-    ];
-    const home = [-1.05, 1.05];
-    rigs.forEach((rig, i) => {
-      rig.root.position.x = home[i];
-      rig.root.scale.x = i === 0 ? -1 : 1;
-      scene.add(rig.root);
-    });
-
-    const resize = () => {
-      const { clientWidth: w, clientHeight: h } = canvas;
-      if (!w || !h) return;
-      renderer.setSize(w, h, false);
-      camera.aspect = w / h;
-      camera.position.z = w / h < 1 ? 8.6 : 6.4;
-      camera.updateProjectionMatrix();
-    };
-    const observer = new ResizeObserver(resize);
-    observer.observe(canvas);
-    resize();
-
     let elapsed = -START_DELAY_MS;
     let last = performance.now();
-    let landed = -1;
-    let done = false;
     let raf = 0;
-    const flashUntil = [0, 0];
-
-    const loop = (now: number) => {
-      const dt = now - last;
+    let shown = -1;
+    let key = "";
+    const tick = (now: number) => {
+      elapsed += (now - last) * speedRef.current;
       last = now;
-      elapsed += dt * speedRef.current;
-      const t = now / 1000;
-
-      // Idle sway for both.
-      rigs.forEach((rig) => {
-        rig.body.position.y = Math.sin(t * 2.4) * 0.015;
-      });
-
-      const index = Math.floor(Math.max(0, elapsed) / HIT_MS);
-      if (elapsed >= 0 && index < fight.hits.length) {
-        const hit = fight.hits[index];
-        const a = rigs[hit.by];
-        const d = rigs[hit.by === 0 ? 1 : 0];
-        const dir = hit.by === 0 ? 1 : -1;
-        const p = (elapsed - index * HIT_MS) / HIT_MS;
-
-        // Attacker: step in, wind up, swing, step back.
-        const step = p < 0.4 ? ease(p / 0.4) : p < 0.6 ? 1 : 1 - ease((p - 0.6) / 0.4);
-        a.root.position.x = home[hit.by] + dir * 0.55 * step;
-        a.body.rotation.z = -dir * 0.12 * step;
-        const windUp = p < 0.3 ? ease(p / 0.3) : p < 0.45 ? 1 - ease((p - 0.3) / 0.15) : 0;
-        a.rightArm.rotation.x = -0.35 - 2.1 * windUp + (p >= 0.45 && p < 0.65 ? 0.5 * Math.sin(((p - 0.45) / 0.2) * Math.PI) : 0);
-
-        // Defender: raise the shield when blocking, recoil on impact.
-        const guard = hit.blocked ? Math.sin(clamp01((p - 0.2) / 0.5) * Math.PI) : 0;
-        d.leftArm.rotation.x = -0.6 - 0.9 * guard;
-        // A miss is a dodge: the defender steps aside instead of recoiling.
-        const recoil = p > 0.45 && p < 0.8 ? Math.sin(((p - 0.45) / 0.35) * Math.PI) : 0;
-        const dodge = hit.miss ? Math.sin(clamp01((p - 0.25) / 0.55) * Math.PI) : 0;
-        d.root.position.x = home[hit.by === 0 ? 1 : 0] + dir * 0.18 * recoil * (hit.miss ? 0 : hit.blocked ? 0.4 : 1);
-        d.root.position.z = 0.45 * dodge;
-        d.body.rotation.z = dir * 0.1 * recoil;
-
-        if (p >= 0.45 && landed < index) {
-          landed = index;
-          if (!hit.miss) flashUntil[hit.by === 0 ? 1 : 0] = now + 160;
-          onImpactRef.current(index);
-        }
-      } else if (elapsed >= fight.hits.length * HIT_MS && !done) {
-        // Finale: the loser falls, the winner raises their weapon.
-        const p = clamp01((elapsed - fight.hits.length * HIT_MS) / FINISH_MS);
-        rigs.forEach((rig, i) => {
-          rig.root.position.x += (home[i] - rig.root.position.x) * 0.2;
-          rig.root.position.z *= 0.8;
-          rig.rightArm.rotation.x = -0.35;
-          rig.leftArm.rotation.x = -0.6;
-        });
-        if (fight.winner !== null) {
-          const loser = rigs[fight.winner === 0 ? 1 : 0];
-          const winner = rigs[fight.winner];
-          loser.body.rotation.z = (fight.winner === 0 ? -1 : 1) * (Math.PI / 2.1) * ease(p);
-          loser.body.position.y = -0.1 * ease(p);
-          winner.rightArm.rotation.x = -0.35 - 2.6 * ease(p);
-          winner.body.position.y = Math.abs(Math.sin(p * Math.PI * 2)) * 0.18;
-        }
-        if (p >= 1) {
-          done = true;
-          setFinished(true);
+      const next = frameAt(elapsed, fight);
+      const nextKey = `${next.shown}|${next.moods.join()}|${next.finished}`;
+      if (nextKey !== key) {
+        key = nextKey;
+        setFrame(next);
+      }
+      if (next.shown > shown && next.shown > 0 && !next.finished) {
+        for (let i = Math.max(shown, 0); i < next.shown; i++) {
+          const hit = fight.hits[i];
+          setPopups((prev) => [
+            ...prev.slice(-4),
+            {
+              id: i + run * 1000,
+              side: hit.by === 0 ? 1 : 0,
+              text: hit.miss ? "мимо" : hit.blocked ? `−${hit.damage} блок` : hit.crit ? `−${hit.damage}!` : `−${hit.damage}`,
+              kind: hit.miss ? "miss" : hit.blocked ? "block" : hit.crit ? "crit" : "hit",
+            },
+          ]);
         }
       }
-
-      rigs.forEach((rig, i) => {
-        const flashing = now < flashUntil[i];
-        rig.flashables.forEach((m) => m.emissive.set(flashing ? "#ff3b2f" : "#000000"));
-      });
-
-      renderer.render(scene, camera);
-      raf = requestAnimationFrame(loop);
+      shown = Math.max(shown, next.shown);
+      if (!next.finished) raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(loop);
+    raf = requestAnimationFrame((now) => {
+      last = now;
+      setPopups([]);
+      tick(now);
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [fight, run]);
 
-    return () => {
-      cancelAnimationFrame(raf);
-      observer.disconnect();
-      rigs.forEach((r) => r.dispose());
-      stage.dispose();
-    };
-  }, [attacker, defender, fight, run]);
-
+  const { shown, moods, finished } = frame;
   const lastHit = shown > 0 ? fight.hits[shown - 1] : null;
   const hp: [number, number] = lastHit ? lastHit.hp : [fight.maxHp[0], fight.maxHp[1]];
   const fighters = [attacker, defender] as const;
@@ -210,17 +120,16 @@ export function DuelReplay({
 
   return (
     <div className="space-y-4">
-      <div className="card relative overflow-hidden">
+      <div className="card relative overflow-hidden" style={{ "--speed": speed } as React.CSSProperties}>
         <div className="absolute inset-x-0 top-0 z-10 grid grid-cols-2 gap-4 p-4">
           {fighters.map((f, i) => (
             <div key={f.userId} className={clsx("min-w-0", i === 1 && "text-right")}>
               <div className={clsx("flex items-center gap-2", i === 1 && "flex-row-reverse")}>
-                <Avatar name={f.name} size={26} />
                 <span className="truncate text-sm font-semibold">
                   {f.name}
                   {i === meIndex ? " (ты)" : ""}
                 </span>
-                <span className="text-xs text-muted">ур. {f.level}</span>
+                <span className="flex-none text-xs text-muted">{speciesById(f.look.species)?.name}</span>
               </div>
               <div className="mt-2 h-3 overflow-hidden rounded-full bg-sunken ring-1 ring-line">
                 <div
@@ -238,14 +147,29 @@ export function DuelReplay({
           ))}
         </div>
 
-        <canvas ref={canvasRef} className="block h-[380px] w-full sm:h-[440px]" aria-label="Бой на арене" />
+        <div
+          className="arena-stage relative h-[300px] sm:h-[420px]"
+          aria-label={`Бой: ${attacker.name} против ${defender.name}`}
+          role="img"
+        >
+          <div className="absolute inset-x-0 bottom-0 h-[38%] bg-gradient-to-b from-[#ece6da] to-[#e0d8c8]" />
+          <div className="absolute inset-x-[8%] bottom-[22%] h-6 rounded-[50%] bg-[#d6cdbb]/70 blur-[2px]" />
+          {fighters.map((f, i) => (
+            <div
+              key={f.userId}
+              className={clsx("absolute bottom-[10%] w-[44%] max-w-[300px]", i === 0 ? "left-[4%] sm:left-[10%]" : "right-[4%] sm:right-[10%]")}
+            >
+              <Hero look={f.look} gear={f.gear} mood={moods[i]} flip={i === 1} className="h-auto w-full" label={`${f.name}: ${speciesById(f.look.species)?.name}`} />
+            </div>
+          ))}
+        </div>
 
         {popups.map((p) => (
           <span
             key={p.id}
             className={clsx(
-              "pointer-events-none absolute top-[38%] z-10 animate-[floatup_900ms_ease-out_forwards] text-2xl font-black",
-              p.side === 0 ? "left-[30%]" : "right-[30%]",
+              "pointer-events-none absolute top-[20%] z-10 animate-[floatup_900ms_ease-out_forwards] text-2xl font-black [text-shadow:0_2px_0_#fff,0_-2px_0_#fff,2px_0_0_#fff,-2px_0_0_#fff]",
+              p.side === 0 ? "left-[22%] sm:left-[26%]" : "right-[22%] sm:right-[26%]",
               p.kind === "crit" ? "text-danger" : p.kind === "block" ? "text-rw" : p.kind === "miss" ? "text-subtle" : "text-ink",
             )}
           >
@@ -296,7 +220,8 @@ export function DuelReplay({
         <div className="mt-2 grid gap-3 text-xs text-muted sm:grid-cols-2">
           {fighters.map((f) => (
             <p key={f.userId}>
-              <span className="font-medium text-ink">{f.name}:</span> {item(f.weapon).name}, {item(f.shield).name}
+              <span className="font-medium text-ink">{f.name}:</span> {itemName("sword", f.gear.sword)} (ур. {f.gear.sword}),{" "}
+              {itemName("helmet", f.gear.helmet).toLowerCase()} (ур. {f.gear.helmet}), {itemName("armor", f.gear.armor).toLowerCase()} (ур. {f.gear.armor})
             </p>
           ))}
         </div>
@@ -312,7 +237,7 @@ export function DuelReplay({
               ) : (
                 <span>
                   <span className="font-medium">{fighters[h.by].name}</span>{" "}
-                  {h.crit ? "наносит критический удар" : h.blocked ? "бьёт в щит" : "попадает"} —{" "}
+                  {h.crit ? "наносит критический удар" : h.blocked ? "попадает в блок" : "попадает"} —{" "}
                   <span className="font-semibold">{h.damage}</span>
                 </span>
               )}

@@ -15,7 +15,7 @@ import { bankLesson } from "@/content/bank/lessons";
 import type { ExamEntry } from "@/content/exams";
 import { planFor, reviewLesson, type CountryId } from "@/content/plan";
 import type { Lesson } from "@/content/types";
-import { DEFAULT_SHIELD, DEFAULT_WEAPON, item, simulate, type Fighter, type FighterColor } from "./arena-rules";
+import { itemName, lookForSpecies, simulate, STARTER_GEAR, upgradeCost, validateLook, type Fighter, type Gear, type Look, type Slot, type SpeciesId } from "./arena-rules";
 import { one, run, transaction } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
 import { hashPassword } from "./password";
@@ -37,8 +37,10 @@ interface Persona {
   streak: number;
   /** Days of history the finished lessons are spread across. */
   days: number;
-  color: FighterColor;
-  gear: string[];
+  /** Arena hero: species, palette and a few looks. */
+  hero: { species: SpeciesId; palette: number; eyes?: Look["eyes"]; expression?: Look["expression"]; features?: Record<string, string> };
+  /** Gear levels bought with earned points, in the order they were bought. */
+  gear: Partial<Gear>;
   /** Reported exam scores; exam dates are given in days from today. */
   scores?: (Omit<ExamEntry, "examDate"> & { examInDays: number | null })[];
 }
@@ -52,8 +54,8 @@ const DEMO: Persona = {
   seminar: 3,
   streak: 6,
   days: 18,
-  color: "blue",
-  gear: ["bronze-dagger", "leather-buckler"],
+  hero: { species: "fox", palette: 0, eyes: "sparkle", expression: "smile" },
+  gear: { sword: 4, helmet: 3, armor: 3 },
   scores: [
     { exam: "sat", current: { total: 1150, sections: { rw: 620, math: 530 } }, takenDate: null, source: "bluebook", target: 1400, examInDays: 120 },
     {
@@ -76,8 +78,8 @@ const FRIENDS: Persona[] = [
     scores: [{ exam: "ielts", current: { total: 7, sections: { listening: 7.5, reading: 7, writing: 6.5, speaking: 7 } }, takenDate: null, source: null, target: 7.5, examInDays: null }],
     streak: 12,
     days: 20,
-    color: "green",
-    gear: ["iron-sword", "iron-shield"],
+    hero: { species: "bear", palette: 0, eyes: "round", expression: "fierce" },
+    gear: { sword: 6, helmet: 4, armor: 5 },
   },
   {
     email: "madina@365step.app",
@@ -88,8 +90,8 @@ const FRIENDS: Persona[] = [
     seminar: 5,
     streak: 3,
     days: 25,
-    color: "violet",
-    gear: ["bronze-dagger", "kite-shield"],
+    hero: { species: "owl", palette: 2, eyes: "sharp", expression: "smirk" },
+    gear: { sword: 4, helmet: 5, armor: 5 },
   },
   {
     email: "timur@365step.app",
@@ -98,8 +100,8 @@ const FRIENDS: Persona[] = [
     trackDays: 2,
     streak: 0,
     days: 10,
-    color: "amber",
-    gear: [],
+    hero: { species: "robot", palette: 1, eyes: "button", expression: "grin" },
+    gear: {},
   },
 ];
 
@@ -111,8 +113,8 @@ const STRANGER: Persona = {
   trackDays: 1,
   streak: 1,
   days: 4,
-  color: "red",
-  gear: [],
+  hero: { species: "slime", palette: 1, eyes: "round", expression: "calm" },
+  gear: {},
 };
 
 const DEMO_WRITING = `Walton's letters suggest that ambition can make a person blind to danger. In Letter 1 he admits that his goals are "sufficient to conquer all fear of danger or death" (Letter 1). This shows that Walton treats fear as an obstacle to be defeated rather than a warning to be heard. Because he wants to be the first to "tread a land never before imprinted by the foot of man" (Letter 1), the danger to his crew hardly appears in his reasoning. By opening the novel this way, Shelley prepares the reader to see Victor's story as a mirror of Walton's own choices.
@@ -226,26 +228,32 @@ async function createPersona(p: Persona, passwordHash: string): Promise<{ id: st
     ]);
   }
 
-  // Gear bought along the way, equipped.
-  let weapon = DEFAULT_WEAPON;
-  let shield = DEFAULT_SHIELD;
+  // The hero, and gear upgraded along the way with earned points.
+  const checked = validateLook({ ...lookForSpecies(p.hero.species), ...p.hero, features: { ...lookForSpecies(p.hero.species).features, ...p.hero.features } });
+  const look = checked.ok ? checked.look : lookForSpecies(p.hero.species);
+  const gear: Gear = { ...STARTER_GEAR };
   let spendable = earned;
-  for (const gearId of p.gear) {
-    const g = item(gearId);
-    if (g.price > spendable) continue;
-    spendable -= g.price;
-    await run("INSERT INTO arena_items (user_id, item_id, price, purchased_at) VALUES (?, ?, ?, ?)", [id, g.id, g.price, nowIso()]);
-    await insertPoints(id, -g.price, `Покупка: ${g.name}`, g.id, addDays(today, -2));
-    if (g.kind === "weapon") weapon = g.id;
-    else shield = g.id;
+  for (const slot of ["sword", "helmet", "armor"] as Slot[]) {
+    while (gear[slot] < (p.gear[slot] ?? 1) && upgradeCost(gear[slot]) <= spendable) {
+      const price = upgradeCost(gear[slot]);
+      spendable -= price;
+      gear[slot]++;
+      const upgradeId = randomUUID();
+      await run("INSERT INTO arena_upgrades (id, user_id, slot, to_level, price, created_at) VALUES (?, ?, ?, ?, ?, ?)", [
+        upgradeId,
+        id,
+        slot,
+        gear[slot],
+        price,
+        nowIso(),
+      ]);
+      await insertPoints(id, -price, `Улучшение: ${itemName(slot, gear[slot])}, ур. ${gear[slot]}`, upgradeId, addDays(today, -2));
+    }
   }
-  await run("INSERT INTO arena_fighters (user_id, color, weapon, shield, updated_at) VALUES (?, ?, ?, ?, ?)", [
-    id,
-    p.color,
-    weapon,
-    shield,
-    nowIso(),
-  ]);
+  await run(
+    "INSERT INTO arena_heroes (user_id, look, chosen, sword, helmet, armor, updated_at) VALUES (?, ?, 1, ?, ?, ?, ?)",
+    [id, JSON.stringify(look), gear.sword, gear.helmet, gear.armor, nowIso()],
+  );
 
   return { id, level: levelFor(earned).level };
 }
@@ -259,11 +267,18 @@ async function befriend(a: string, b: string, status: "accepted" | "pending", re
 }
 
 async function fighterOf(userId: string, name: string, level: number): Promise<Fighter> {
-  const row = await one<{ color: FighterColor; weapon: string; shield: string }>(
-    "SELECT color, weapon, shield FROM arena_fighters WHERE user_id = ?",
+  const row = await one<{ look: string; sword: number; helmet: number; armor: number }>(
+    "SELECT look, sword, helmet, armor FROM arena_heroes WHERE user_id = ?",
     [userId],
   );
-  return { userId, name, level, color: row?.color ?? "blue", weapon: row?.weapon ?? DEFAULT_WEAPON, shield: row?.shield ?? DEFAULT_SHIELD };
+  const checked = validateLook(row ? JSON.parse(String(row.look)) : null);
+  return {
+    userId,
+    name,
+    level,
+    look: checked.ok ? checked.look : lookForSpecies("cat"),
+    gear: row ? { sword: Number(row.sword), helmet: Number(row.helmet), armor: Number(row.armor) } : { ...STARTER_GEAR },
+  };
 }
 
 async function recordDuel(attacker: Fighter, defender: Fighter, seed: number, daysAgo: number): Promise<void> {

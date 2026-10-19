@@ -1,26 +1,31 @@
 /**
- * The arena: each user's fighter, the gear they own, and fights between friends.
+ * The arena: each student's hero, their gear, and fights between friends.
  *
  * A friend must accept an invitation before a fight is simulated. Both
- * players can then replay the same saved result. Both loadouts are frozen into
- * the duel row, so a replay
- * never changes when someone buys new gear later.
+ * players can then replay the same saved result. Both heroes are frozen into
+ * the duel row, so a replay never changes when someone upgrades gear later.
  */
 
 import { randomInt, randomUUID } from "node:crypto";
 
 import {
-  COLORS,
-  DEFAULT_SHIELD,
-  DEFAULT_WEAPON,
+  defaultLook,
   FIGHT_REWARD,
-  isColor,
-  ITEMS,
+  gearFromLegacy,
+  isSlot,
+  itemName,
+  MAX_GEAR_LEVEL,
+  normalizeFighter,
   REWARDED_FIGHTS_PER_DAY,
   simulate,
+  speciesById,
+  upgradeCost,
+  validateLook,
   type Fighter,
-  type FighterColor,
   type FightResult,
+  type Gear,
+  type Look,
+  type Slot,
 } from "./arena-rules";
 import { all, json, num, one, run, scalar, str, transaction } from "./db";
 import { nowIso, todayIso } from "./date";
@@ -33,81 +38,121 @@ export interface Result {
   error?: string;
 }
 
-async function ensureFighterRow(userId: string): Promise<void> {
-  const row = await one("SELECT user_id FROM arena_fighters WHERE user_id = ?", [userId]);
-  if (!row) {
-    // Spread first-time colours across the palette so friends do not all look alike.
-    const palette = Object.keys(COLORS) as FighterColor[];
-    const color = palette[parseInt(userId.replace(/[^0-9a-f]/gi, "").slice(0, 6) || "0", 16) % palette.length];
-    await run(
-      "INSERT INTO arena_fighters (user_id, color, weapon, shield, updated_at) VALUES (?, ?, ?, ?, ?)",
-      [userId, color, DEFAULT_WEAPON, DEFAULT_SHIELD, nowIso()],
-    );
-  }
+const LEGACY_COLOR_PALETTE: Record<string, number> = { blue: 0, green: 1, red: 2, amber: 3, violet: 4, slate: 1 };
+
+/**
+ * Creates the hero row the first time a student opens the arena. Gear bought
+ * in the first arena becomes gear levels here; the balance is left untouched.
+ */
+async function ensureHero(userId: string): Promise<void> {
+  if (await one("SELECT user_id FROM arena_heroes WHERE user_id = ?", [userId])) return;
+  const [legacy, items] = await Promise.all([
+    one("SELECT color FROM arena_fighters WHERE user_id = ?", [userId]),
+    all("SELECT item_id FROM arena_items WHERE user_id = ?", [userId]),
+  ]);
+  const look = defaultLook(userId);
+  const color = legacy ? LEGACY_COLOR_PALETTE[str(legacy.color)] : undefined;
+  if (color !== undefined) look.palette = Math.min(color, speciesById(look.species)!.palettes.length - 1);
+  const gear = gearFromLegacy(items.map((r) => str(r.item_id)));
+  await run(
+    `INSERT INTO arena_heroes (user_id, look, chosen, sword, helmet, armor, updated_at)
+     VALUES (?, ?, 0, ?, ?, ?, ?) ON CONFLICT DO NOTHING`,
+    [userId, JSON.stringify(look), gear.sword, gear.helmet, gear.armor, nowIso()],
+  );
 }
 
-export async function getFighter(userId: string): Promise<Fighter> {
-  await ensureFighterRow(userId);
+export interface Hero {
+  fighter: Fighter;
+  /** False until the student picks a hero in the editor. */
+  chosen: boolean;
+}
+
+export async function getHero(userId: string): Promise<Hero> {
+  await ensureHero(userId);
   const [row, user, total] = await Promise.all([
-    one("SELECT color, weapon, shield FROM arena_fighters WHERE user_id = ?", [userId]),
+    one("SELECT look, chosen, sword, helmet, armor FROM arena_heroes WHERE user_id = ?", [userId]),
     one("SELECT name FROM users WHERE id = ?", [userId]),
     earned(userId),
   ]);
-  const color = str(row?.color, "blue");
+  const checked = validateLook(json<unknown>(row?.look, null));
   return {
-    userId,
-    name: str(user?.name, "Игрок"),
-    level: levelFor(total).level,
-    color: isColor(color) ? color : "blue",
-    weapon: str(row?.weapon, DEFAULT_WEAPON),
-    shield: str(row?.shield, DEFAULT_SHIELD),
+    chosen: num(row?.chosen) === 1,
+    fighter: {
+      userId,
+      name: str(user?.name, "Игрок"),
+      level: levelFor(total).level,
+      look: checked.ok ? checked.look : defaultLook(userId),
+      gear: { sword: num(row?.sword, 1), helmet: num(row?.helmet, 1), armor: num(row?.armor, 1) },
+    },
   };
 }
 
-export async function getOwnedItems(userId: string): Promise<Set<string>> {
-  const rows = await all("SELECT item_id FROM arena_items WHERE user_id = ?", [userId]);
-  // Starter gear is owned by everyone.
-  return new Set([DEFAULT_WEAPON, DEFAULT_SHIELD, ...rows.map((r) => str(r.item_id))]);
+export async function getFighter(userId: string): Promise<Fighter> {
+  return (await getHero(userId)).fighter;
 }
 
-export async function buyItem(userId: string, itemId: string): Promise<Result> {
-  const target = ITEMS.find((i) => i.id === itemId);
-  if (!target) return { ok: false, error: "Такого предмета нет." };
-
-  return transaction(async () => {
-    const owned = await getOwnedItems(userId);
-    if (owned.has(itemId)) return { ok: false, error: "Этот предмет уже твой." };
-    const points = await balance(userId);
-    if (points < target.price) return { ok: false, error: `Не хватает ${target.price - points} очков.` };
-
-    await run("INSERT INTO arena_items (user_id, item_id, price, purchased_at) VALUES (?, ?, ?, ?)", [
-      userId,
-      itemId,
-      target.price,
-      nowIso(),
-    ]);
-    await addPoints(userId, -target.price, `Покупка: ${target.name}`, itemId);
-    await equipItem(userId, itemId);
-    return { ok: true };
-  });
+export async function saveLook(userId: string, input: unknown): Promise<Result & { look?: Look }> {
+  const checked = validateLook(input);
+  if (!checked.ok) return { ok: false, error: checked.error };
+  await ensureHero(userId);
+  await run("UPDATE arena_heroes SET look = ?, chosen = 1, updated_at = ? WHERE user_id = ?", [
+    JSON.stringify(checked.look),
+    nowIso(),
+    userId,
+  ]);
+  return { ok: true, look: checked.look };
 }
 
-export async function equipItem(userId: string, itemId: string): Promise<Result> {
-  const target = ITEMS.find((i) => i.id === itemId);
-  if (!target) return { ok: false, error: "Такого предмета нет." };
-  if (!(await getOwnedItems(userId)).has(itemId)) return { ok: false, error: "Сначала купи этот предмет." };
+export type UpgradeResult = { ok: true; level: number; price: number; balance: number } | { ok: false; error: string };
 
-  await ensureFighterRow(userId);
-  const column = target.kind === "weapon" ? "weapon" : "shield";
-  await run(`UPDATE arena_fighters SET ${column} = ?, updated_at = ? WHERE user_id = ?`, [itemId, nowIso(), userId]);
-  return { ok: true };
+class UpgradeRefused extends Error {}
+
+/**
+ * Raises one gear slot by a level, paid with points earned on lessons.
+ *
+ * `fromLevel` is the level the student saw when pressing the button. The
+ * conditional UPDATE both claims the upgrade and locks the hero row, so a
+ * double click, a retried request or two tabs can raise a level — and charge
+ * for it — only once, and two different upgrades cannot both spend the same
+ * points. The balance is checked after the claim, inside the same transaction.
+ */
+export async function upgradeGear(userId: string, slot: string, fromLevel: number): Promise<UpgradeResult> {
+  if (!isSlot(slot)) return { ok: false, error: "Такого предмета нет." };
+  if (!Number.isInteger(fromLevel) || fromLevel < 1) return { ok: false, error: "Неверный уровень." };
+  if (fromLevel >= MAX_GEAR_LEVEL) return { ok: false, error: "Это уже максимальный уровень." };
+  await ensureHero(userId);
+
+  const price = upgradeCost(fromLevel);
+  const to = fromLevel + 1;
+  try {
+    return await transaction(async () => {
+      const claimed = await one(
+        `UPDATE arena_heroes SET ${slot} = ?, updated_at = ? WHERE user_id = ? AND ${slot} = ? RETURNING user_id`,
+        [to, nowIso(), userId, fromLevel],
+      );
+      if (!claimed) throw new UpgradeRefused("Уровень уже изменился. Обнови страницу.");
+      const points = await balance(userId);
+      if (points < price) throw new UpgradeRefused(`Не хватает ${price - points} очков.`);
+      const id = randomUUID();
+      await run("INSERT INTO arena_upgrades (id, user_id, slot, to_level, price, created_at) VALUES (?, ?, ?, ?, ?, ?)", [
+        id,
+        userId,
+        slot,
+        to,
+        price,
+        nowIso(),
+      ]);
+      await addPoints(userId, -price, `Улучшение: ${itemName(slot as Slot, to)}, ур. ${to}`, id);
+      return { ok: true as const, level: to, price, balance: points - price };
+    });
+  } catch (error) {
+    if (error instanceof UpgradeRefused) return { ok: false, error: error.message };
+    throw error;
+  }
 }
 
-export async function setColor(userId: string, color: string): Promise<Result> {
-  if (!isColor(color)) return { ok: false, error: "Такого цвета нет." };
-  await ensureFighterRow(userId);
-  await run("UPDATE arena_fighters SET color = ?, updated_at = ? WHERE user_id = ?", [color, nowIso(), userId]);
-  return { ok: true };
+export async function getGear(userId: string): Promise<Gear> {
+  return (await getFighter(userId)).gear;
 }
 
 // ----------------------------------------------------------------- fights --
@@ -251,8 +296,8 @@ export interface Duel {
 function toDuel(row: Record<string, unknown>): Duel {
   return {
     id: str(row.id),
-    attacker: json<Fighter>(row.attacker_fighter, {} as Fighter),
-    defender: json<Fighter>(row.defender_fighter, {} as Fighter),
+    attacker: normalizeFighter(json<unknown>(row.attacker_fighter, null)),
+    defender: normalizeFighter(json<unknown>(row.defender_fighter, null)),
     fight: json<FightResult>(row.log, { hits: [], winner: null, maxHp: [100, 100] }),
     winnerId: row.winner_id ? str(row.winner_id) : null,
     attackerPoints: num(row.attacker_points),
