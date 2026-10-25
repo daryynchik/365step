@@ -9,6 +9,10 @@
  * tasks. Difficulty follows the skill's current level (adapted as the student
  * answers), so the same key is rebuilt the same way until the level changes —
  * which only happens when a lesson is submitted.
+ *
+ * SAT Math goes by the finer ladder instead (math-lessons.ts, math-ladder.ts):
+ * given the student's ladder state, its lessons are drawn once and kept as a
+ * SavedDraw until they are graded.
  */
 
 import { LEVEL_TITLES, SECTION_TITLES, type Level, type SectionId } from "../exams";
@@ -16,6 +20,7 @@ import { MOCK_SIZE, PRACTICE_SIZE, type Plan } from "../plan";
 import { difficultiesFor, type SkillStat } from "../skill-level";
 import type { Lesson, Question } from "../types";
 import { drawTasks, type Shortage } from "./draw";
+import { drawOf, lessonFromDraw, mathMock, mathPractice, mathWeak, type LadderState, type MathLesson, type SavedDraw } from "./math-lessons";
 import { poolSize, type PoolTask } from "./pool";
 import { skillById, skillSequence, skillsOf, type Skill } from "./taxonomy";
 
@@ -42,6 +47,20 @@ export interface BankLesson {
   /** Skill of each question, for adaptation. */
   taskSkills: string[];
   shortages: Shortage[];
+  /** SAT Math on the ladder: the bank task, its step and its role in the lesson, per question. */
+  ladder?: {
+    taskIds: string[];
+    taskTiers: number[];
+    remediation: string[];
+    /** The draw to keep until grading (the same as the one passed in, when there was one). */
+    draw: SavedDraw;
+  };
+}
+
+/** The student's SAT Math ladder, and the draw already made for this lesson, if any. */
+export interface MathInput {
+  state: LadderState;
+  saved: SavedDraw | null;
 }
 
 const ORDER: Level[] = ["easy", "medium", "hard"];
@@ -97,13 +116,39 @@ function skillLesson(plan: Plan, id: string, skill: Skill, level: Level, round: 
   return { lesson, section: skill.section, mock: false, level, taskSkills: skills, shortages: draw.shortages };
 }
 
-export function bankLesson(plan: Plan, key: string, stats: Record<string, SkillStat> = {}): BankLesson | null {
+function fromMath(plan: Plan, id: string, title: string, m: MathLesson, mock: boolean, saved: SavedDraw | null): BankLesson {
+  return {
+    lesson: { id, title, summary: m.summary, minutes: mock ? 20 : 12, skill: "SAT Math", theory: m.theory, questions: m.questions },
+    section: "sat-math",
+    mock,
+    level: plan.sections.find((s) => s.section === "sat-math")?.level ?? "medium",
+    taskSkills: m.taskSkills,
+    shortages: [],
+    ladder: { taskIds: m.taskIds, taskTiers: m.taskTiers, remediation: m.remediation, draw: saved ?? drawOf(m) },
+  };
+}
+
+export function bankLesson(plan: Plan, key: string, stats: Record<string, SkillStat> = {}, math?: MathInput): BankLesson | null {
   const parsed = parseBankKey(key);
   if (!parsed) return null;
   const step = plan.days.flatMap((d) => d.steps).find((s) => s.key === key);
   if (!step) return null;
   const seed = plan.profile.startDate;
   const id = key.slice("bank/".length);
+
+  const isMath = parsed.type === "practice" ? skillById(parsed.skill)?.section === "sat-math" : parsed.section === "sat-math";
+  if (isMath && math) {
+    const kept = math.saved ? lessonFromDraw(math.saved) : null;
+    if (kept) return fromMath(plan, id, step.title, kept, parsed.type === "mock", math.saved);
+    const lessonSeed = `${seed}|${key}|${math.state.now.slice(0, 10)}`;
+    const m =
+      parsed.type === "practice"
+        ? mathPractice(parsed.skill, math.state, lessonSeed, PRACTICE_SIZE)
+        : parsed.type === "weak"
+          ? mathWeak(math.state, lessonSeed, PRACTICE_SIZE)
+          : mathMock(math.state, lessonSeed, parsed.day, MOCK_SIZE);
+    if (m.questions.length > 0) return fromMath(plan, id, step.title, m, parsed.type === "mock", null);
+  }
 
   if (parsed.type === "practice") {
     const skill = skillById(parsed.skill)!;

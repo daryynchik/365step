@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { examById } from "@/content/exams";
+import { examById, PRACTICE_SOURCE_TITLES, RESULT_KIND_TITLES, type PracticeSource } from "@/content/exams";
 import { ScoreForm } from "@/components/score-form";
 import { Logo } from "@/components/ui";
 import { currentUser } from "@/lib/auth";
 import { getProfile } from "@/lib/profile";
 import { getScoreHistory, getScores, type ScoreRecord } from "@/lib/scores";
 
-export const metadata: Metadata = { title: "Твои баллы" };
+export const metadata: Metadata = { title: "Твой текущий уровень" };
 export const dynamic = "force-dynamic";
 
 function formatDate(iso: string): string {
@@ -21,8 +21,15 @@ function describe(r: ScoreRecord): string {
   const parts: string[] = [];
   if (r.total !== null) parts.push(`${exam?.totalLabel ?? "Total"} ${r.total}`);
   for (const s of exam?.sections ?? []) if (r.sections[s.id] != null) parts.push(`${s.title} ${r.sections[s.id]}`);
-  if (parts.length === 0) parts.push("без результата");
+  if (parts.length === 0) parts.push("баллы пока неизвестны");
+  else {
+    const test = r.source ? (PRACTICE_SOURCE_TITLES[r.source as PracticeSource] ?? r.source) : null;
+    if (r.kind) parts.push(r.kind === "practice" && test ? `${RESULT_KIND_TITLES.practice.toLowerCase()}: ${test}` : RESULT_KIND_TITLES[r.kind].toLowerCase());
+    else if (test) parts.push(test);
+    if (r.takenDate) parts.push(`от ${formatDate(r.takenDate)}`);
+  }
   if (r.target !== null) parts.push(`цель ${r.target}`);
+  for (const s of exam?.sections ?? []) if (r.targetSections?.[s.id] != null) parts.push(`цель ${s.title} ${r.targetSections[s.id]}`);
   if (r.examDate) parts.push(`экзамен ${formatDate(r.examDate)}`);
   return parts.join(" · ");
 }
@@ -45,10 +52,10 @@ export default async function ScoresPage() {
       </header>
       <main className="mx-auto max-w-3xl px-4 pb-20 pt-4">
         {onboarding && <p className="text-sm font-semibold text-accent">Шаг 5 из 5</p>}
-        <h1 className="text-3xl font-bold tracking-tight">Твои текущие баллы</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Твой текущий уровень</h1>
         <p className="mb-10 mt-2 max-w-xl text-muted">
-          По баллам и цели план решит, каким секциям нужно больше уроков и какой сложности давать задания. Баллы можно поменять в любой момент — план
-          перестроится, а история сохранится.
+          Укажи результат официального экзамена или пробного теста — по секциям, если знаешь. Он задаст стартовую сложность задач, а желаемый балл —
+          направление подготовки. Дальше уровень уточняют твои ответы. Результат можно поменять в любой момент — план перестроится, а история сохранится.
         </p>
         <ScoreForm initial={scores} onboarding={onboarding} />
 

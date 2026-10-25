@@ -33,6 +33,8 @@ interface QuestionBase {
   prompt: string;
   /** Shown after answering, right or wrong. Explains why, not just what. */
   explanation: string;
+  /** A first step the student may open before answering (the answer then counts as helped). */
+  hint?: string;
 }
 
 export interface ChoiceQuestion extends QuestionBase {

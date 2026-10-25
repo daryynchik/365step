@@ -348,6 +348,58 @@ CREATE TABLE IF NOT EXISTS skill_stats (
   PRIMARY KEY (user_id, skill)
 );
 
+-- SAT Math ladder per skill (content/math-ladder.ts). recent: JSON list of
+-- {d, o} — answers at or above the step since it last changed.
+CREATE TABLE IF NOT EXISTS skill_mastery (
+  user_id     TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  skill       TEXT NOT NULL,
+  tier        INTEGER NOT NULL,
+  base_tier   INTEGER NOT NULL,
+  recent      TEXT NOT NULL DEFAULT '[]',
+  remediation INTEGER NOT NULL DEFAULT 0,
+  answered    INTEGER NOT NULL DEFAULT 0,
+  clean       INTEGER NOT NULL DEFAULT 0,
+  last_event  TEXT,
+  updated_at  TEXT NOT NULL,
+  PRIMARY KEY (user_id, skill)
+);
+
+-- Every graded answer on a bank task: what came back when (spaced review,
+-- no repeats). outcome: clean | hinted | wrong; retried: right on the second
+-- try, after the solution was shown (earns nothing).
+CREATE TABLE IF NOT EXISTS task_attempts (
+  id          TEXT PRIMARY KEY,
+  user_id     TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  task_id     TEXT NOT NULL,
+  skill       TEXT NOT NULL,
+  tier        INTEGER NOT NULL,
+  outcome     TEXT NOT NULL,
+  retried     INTEGER NOT NULL DEFAULT 0,
+  lesson_key  TEXT NOT NULL,
+  answered_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_task_attempts_user ON task_attempts(user_id, skill, answered_at);
+
+-- The tasks a practice lesson was given, fixed when it is first opened so the
+-- server grades what was shown; removed when the lesson is submitted.
+CREATE TABLE IF NOT EXISTS lesson_draws (
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  lesson_key TEXT NOT NULL,
+  payload    TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  PRIMARY KEY (user_id, lesson_key)
+);
+
+-- The SAT Math diagnostic's score estimate (200–800), next to its level.
+CREATE TABLE IF NOT EXISTS diagnostic_estimates (
+  id       TEXT PRIMARY KEY,
+  user_id  TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  section  TEXT NOT NULL,
+  estimate REAL NOT NULL,
+  taken_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_diagnostic_estimates_user ON diagnostic_estimates(user_id, section, taken_at);
+
 -- Diagnostic results, one row per section per attempt. level: easy | medium | hard.
 CREATE TABLE IF NOT EXISTS diagnostic_results (
   id       TEXT PRIMARY KEY,

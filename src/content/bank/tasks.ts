@@ -4,6 +4,7 @@
  */
 
 import type { Level } from "../exams";
+import { DEFAULT_TIER } from "../math-ladder";
 import type { Question, Speaking, WritingTask } from "../types";
 import { BANK_FILES } from "./files";
 import { loadFile, type BankPassage, type Task } from "./schema";
@@ -55,7 +56,7 @@ export function toQuestion(t: Task): Question {
           ]
         : [{ text: t.passage }]
       : undefined;
-  const base = { passages, table: t.table, prompt: t.stem, explanation: t.explanation };
+  const base = { passages, table: t.table, prompt: t.stem, explanation: t.explanation, ...(t.hint ? { hint: t.hint } : {}) };
   if (t.type === "mcq") return { ...base, kind: "choice", options: t.choices!, answer: t.answer as number };
   return { ...base, kind: "input", answers: t.answer as string[] };
 }
@@ -81,6 +82,11 @@ export function toSpeaking(t: Task): Speaking {
     cueCard: t.cueCard,
     targetWords: part === 2 ? [150, 260] : part === 3 ? [50, 110] : [25, 70],
   };
+}
+
+/** The task's step on the SAT Math ladder (math-ladder.ts): its own, or the default of its difficulty. */
+export function tierOf(t: Pick<Task, "tier" | "difficulty">): number {
+  return t.tier ?? DEFAULT_TIER[t.difficulty];
 }
 
 export const LEVEL_OF: Record<Task["difficulty"], Level> = { easy: "easy", medium: "medium", hard: "hard" };

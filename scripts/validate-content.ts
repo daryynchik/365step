@@ -7,9 +7,15 @@
  *   - SAT Math: every numeric answer is recomputed from "check" with mathjs,
  *     and no other choice evaluates to it; expression answers are compared
  *     with "check" at several points;
+ *   - SAT Math "verify": the condition holds with the marked answer substituted
+ *     for "ans" and fails for every other choice;
  *   - duplicates and near-duplicates by stem (normalised, trigram similarity);
+ *     SAT Math stems that differ only in their numbers (a template with the
+ *     numbers swapped) are errors too;
  *   - every file is registered in bank/files.ts;
- *   - coverage: skill × difficulty → count, cells under the minimum marked.
+ *   - coverage: skill × difficulty → count, cells under the minimum marked;
+ *     SAT Math also by ladder step (math-ladder.ts) against the bank's target
+ *     of 40 easy, 50 medium and 60 hard per skill.
  *
  *   pnpm validate:content            report; exit 1 on errors
  *   pnpm validate:content --strict   also exit 1 when coverage is under the minimum
@@ -22,6 +28,7 @@ import { all, create } from "mathjs";
 
 import { BANK_FILES } from "../src/content/bank/files";
 import { FIXED_CHOICES, loadFile, type Task } from "../src/content/bank/schema";
+import { tierOf } from "../src/content/bank/tasks";
 import { DOMAINS, skillById, SKILLS } from "../src/content/bank/taxonomy";
 
 const math = create(all, {});
@@ -144,6 +151,7 @@ function toMathjs(s: string): string {
     .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+/g, (m) => `^(${[...m].map((c) => SUPERSCRIPT[c]).join("")})`)
     .replace(/√\(/g, " sqrt(")
     .replace(/√(\d+)/g, " sqrt($1)")
+    .replace(/√([a-z])/g, " sqrt($1)")
     .replace(/π/g, "pi")
     // "sin 50°", "cos(40°)" are degrees
     .replace(/(sin|cos|tan)\s*\(?\s*(\d+(?:\.\d+)?)\s*°\s*\)?/g, "$1($2 deg)")
@@ -151,8 +159,18 @@ function toMathjs(s: string): string {
     .replace(/,(?=\d{3}\b)/g, "")
     .replace(/^\$/, "")
     .replace(/%$/, "")
+    // "4ab" is 4·a·b, not a variable named "ab"; function names and words of conditions stay.
+    .replace(/[a-z]{2,}/g, (w) => (WORDS.has(w) ? w : w.split("").join("*")))
+    // "2x(x + 3)" multiplies; f(x), g(x), h(x), p(x), q(x) are functions.
+    .replace(/(?<![A-Za-z])([abcdkmnrstuvwxyz])\(/g, "$1*(")
     .trim();
 }
+
+const WORDS = new Set([
+  "sqrt", "cbrt", "nthRoot", "sin", "cos", "tan", "asin", "acos", "atan", "log", "abs", "pi", "deg", "exp", "round", "floor", "ceil",
+  "max", "min", "mean", "median", "mode", "std", "variance", "sum", "prod", "combinations", "permutations", "factorial",
+  "and", "or", "not", "xor", "ans",
+]);
 
 function evaluate(expr: string, scope: Record<string, number> = {}): number | null {
   try {
@@ -194,14 +212,23 @@ function formulaOf(choice: string): string | null {
   return /^\s*([A-Za-z]|[A-Za-z]\([a-z]\))\s*$/.test(parts[0]) ? parts[1] : null;
 }
 
-const POINTS = [-2.3, -0.7, 0.45, 1.6, 3.2];
+const POINTS = [-2.3, -0.7, 0.45, 1.6, 3.2, 4.7, 6.1];
+/**
+ * Equal at every test point where both sides are real. Roots and fractional
+ * powers are not real for negative inputs, so those points are skipped; at
+ * least three points must remain.
+ */
 function sameExpression(a: string, b: string, vars: string[]): boolean {
-  return POINTS.every((p, i) => {
+  let valid = 0;
+  for (const [i, p] of POINTS.entries()) {
     const scope = Object.fromEntries(vars.map((v, j) => [v, p + j * 0.37 + i * 0.01]));
     const x = evaluate(a, scope);
     const y = evaluate(b, scope);
-    return x !== null && y !== null && Math.abs(x - y) <= 1e-6 * Math.max(1, Math.abs(x));
-  });
+    if (x === null && y === null) continue;
+    if (x === null || y === null || Math.abs(x - y) > 1e-6 * Math.max(1, Math.abs(x))) return false;
+    valid++;
+  }
+  return valid >= 3;
 }
 
 const close = (a: number, b: number, rel = 1e-9) => Math.abs(a - b) <= rel * Math.max(1, Math.abs(b));
@@ -241,8 +268,11 @@ for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
     } else {
       for (const a of t.answer as string[]) {
         const v = evaluate(a);
-        // Grid-ins accept rounded forms of a repeating decimal (.6666, .6667).
-        if (v === null || !close(v, value, 5e-4)) errors.push(`${t.id}: accepted answer ${a} ≠ computed ${value}`);
+        // Grid-ins accept rounded or truncated forms of a long decimal (.6666, .6667, 11.66):
+        // within one unit of the last digit written.
+        const digits = a.includes(".") ? a.split(".")[1].length : 0;
+        const ok = v !== null && (close(v, value, 5e-4) || (digits > 0 && Math.abs(v - value) < 10 ** -digits));
+        if (!ok) errors.push(`${t.id}: accepted answer ${a} ≠ computed ${value}`);
       }
     }
   } else {
@@ -255,6 +285,59 @@ for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
     }
   }
   checked++;
+}
+
+// ------------------------------------------------------ SAT Math verify --
+
+/** A comparison mathjs can evaluate: "3*ans + 7 == 22" → true / false. */
+function holds(expr: string, ans: number): boolean | null {
+  try {
+    const v = math.evaluate(toMathjs(expr).replace(/≤/g, "<=").replace(/≥/g, ">=").replace(/≠/g, "!="), { ans });
+    if (typeof v === "boolean") return v;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+let verified = 0;
+for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math" && x.verify)) {
+  const values =
+    t.type === "mcq"
+      ? (t.choices ?? []).map((c) => {
+          const f = formulaOf(c);
+          return f === null ? null : evaluate(f);
+        })
+      : (t.answer as string[]).map((a) => evaluate(a));
+  if (t.type === "mcq") {
+    const marked = values[t.answer as number];
+    if (marked === null) {
+      errors.push(`${t.id}: verify needs a numeric right choice`);
+      continue;
+    }
+    values.forEach((v, i) => {
+      if (v === null) return;
+      const ok = holds(t.verify!, v);
+      if (ok === null) errors.push(`${t.id}: verify "${t.verify}" does not evaluate`);
+      else if (i === t.answer && !ok) errors.push(`${t.id}: verify fails for the marked choice ${v}`);
+      else if (i !== t.answer && ok) errors.push(`${t.id}: verify also holds for choice ${"ABCD"[i]} (${v})`);
+    });
+  } else {
+    // The first accepted answer is the exact one; rounded forms are compared with "check" above.
+    const v = values[0];
+    if (v === null) errors.push(`${t.id}: accepted answer ${(t.answer as string[])[0]} is not a number`);
+    else if (holds(t.verify!, v) !== true) errors.push(`${t.id}: verify fails for the answer ${v}`);
+  }
+  verified++;
+}
+
+// Number-swap templates: SAT Math stems that differ only in their numbers.
+const skeletons = new Map<string, string>();
+for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
+  const skeleton = `${t.passage ?? ""} ${t.stem}`.toLowerCase().replace(/[−–]/g, "-").replace(/\d+(\.\d+)?/g, "#").replace(/\s+/g, " ").trim();
+  const other = skeletons.get(skeleton);
+  if (other) (skeleton.length >= 50 ? errors : warnings).push(`template with swapped numbers: ${other} ~ ${t.id}`);
+  else skeletons.set(skeleton, t.id);
 }
 
 // ---------------------------------------------------------- duplicates --
@@ -351,10 +434,28 @@ const questionSkills = SKILLS.filter((s) => s.kind === "questions");
 const cells = questionSkills.length * 3;
 const fullCells = questionSkills.reduce((n, s) => n + (["easy", "medium", "hard"] as const).filter((d) => coverage.get(s.id)![d] >= MIN_PER_CELL).length, 0);
 
+// SAT Math by ladder step, against the bank's target per skill.
+const MATH_TARGET = { easy: 40, medium: 50, hard: 60 };
+const mathRows: string[] = [];
+const mathUnder: string[] = [];
+for (const s of SKILLS.filter((x) => x.section === "sat-math")) {
+  const mine = tasks.filter((t) => t.skill === s.id);
+  const byTier = [1, 2, 3, 4, 5, 6].map((k) => mine.filter((t) => tierOf(t) === k).length);
+  const c = coverage.get(s.id)!;
+  const short = (["easy", "medium", "hard"] as const).filter((d) => c[d] < MATH_TARGET[d]);
+  if (short.length) mathUnder.push(`${s.id.split(".")[1]} (${short.map((d) => `${d} ${c[d]}/${MATH_TARGET[d]}`).join(", ")})`);
+  mathRows.push(`  ${s.id.split(".")[1].padEnd(24)} ${byTier.map((n) => String(n).padStart(4)).join("")}   ${String(mine.length).padStart(4)}${short.length ? " !" : ""}`);
+}
+const mathTotal = tasks.filter((t) => t.exam === "sat" && t.section === "math").length;
+
 if (!QUIET) {
   console.log(`Coverage (skill × difficulty; "!" — under ${MIN_PER_CELL} per cell, prompts under ${MIN_PROMPTS} per skill)`);
   console.log(`  ${"skill".padEnd(24)} easy  med  hard  total`);
   console.log(rows.join("\n"));
+  console.log("");
+  console.log(`SAT Math by ladder step (1–6; "!" — under ${MATH_TARGET.easy} easy / ${MATH_TARGET.medium} medium / ${MATH_TARGET.hard} hard)`);
+  console.log(`  ${"skill".padEnd(24)}    1   2   3   4   5   6   total`);
+  console.log(mathRows.join("\n"));
   console.log("");
 }
 // ------------------------------------------- race set: IELTS Listening --
@@ -381,7 +482,8 @@ for (const [level, n] of Object.entries(listeningLevels)) if (n < MIN_PER_CELL) 
 
 for (const w of warnings) console.warn(`warning: ${w}`);
 console.log(
-  `Bank: ${tasks.length} tasks in ${files.length} files; ${checked} SAT Math answers recomputed (${conceptual} conceptual); ${duplicatePairs} duplicate pairs; ` +
+  `Bank: ${tasks.length} tasks in ${files.length} files; SAT Math ${mathTotal} tasks, ${checked} answers recomputed (${conceptual} conceptual), ${verified} verified against the statement; ` +
+    `${mathUnder.length} SAT Math skills under the 40/50/60 target; ${duplicatePairs} duplicate pairs; ` +
     `${quotesChecked} quotations checked against the novel; ${fullCells}/${cells} question cells at ≥${MIN_PER_CELL}; ${under.length} skills under the minimum; ` +
     `race Listening: ${listening.items.length} items with audio (${listeningLevels.easy}/${listeningLevels.medium}/${listeningLevels.hard}).`,
 );
@@ -389,8 +491,8 @@ if (errors.length) {
   console.error(`\n${errors.length} error(s):\n- ${errors.slice(0, 200).join("\n- ")}`);
   process.exit(1);
 }
-if (STRICT && under.length) {
-  console.error(`Under the minimum: ${under.join(", ")}`);
+if (STRICT && (under.length || mathUnder.length)) {
+  console.error(`Under the minimum: ${[...under, ...mathUnder].join(", ")}`);
   process.exit(1);
 }
 console.log("Bank OK.");

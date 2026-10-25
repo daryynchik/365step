@@ -9,7 +9,7 @@ import { isFieldId } from "@/content/fields";
 import { isCountryId, MIN_PLAN_DAYS, planFor, type Plan, type PlanInputs, type StudentProfile } from "@/content/plan";
 import { one, run, str, num } from "./db";
 import { addDays, nowIso, todayIso } from "./date";
-import { getDiagnosticLevels, getScores } from "./scores";
+import { getDiagnosticEstimates, getDiagnosticLevels, getScores } from "./scores";
 
 /** Cached for the request: the app layout and the page both read it. */
 export const getProfile = cache(async (userId: string): Promise<StudentProfile | null> => {
@@ -28,8 +28,8 @@ export const getProfile = cache(async (userId: string): Promise<StudentProfile |
 
 /** What the plan needs besides the goal: the scores and the diagnostic. */
 export async function getPlanInputs(userId: string): Promise<PlanInputs> {
-  const [scores, diagnostic] = await Promise.all([getScores(userId), getDiagnosticLevels(userId)]);
-  return { entries: scores?.entries ?? [], diagnostic };
+  const [scores, diagnostic, estimates] = await Promise.all([getScores(userId), getDiagnosticLevels(userId), getDiagnosticEstimates(userId)]);
+  return { entries: scores?.entries ?? [], diagnostic, estimates };
 }
 
 export async function getPlan(userId: string): Promise<Plan | null> {

@@ -1,0 +1,1615 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "problem-solving-data",
+    "skill": "percentages",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A school has 240 students, and 15% of them play chess. How many students play chess?",
+      "answer": [
+        "36"
+      ],
+      "check": "0.15*240",
+      "hint": "15% = 0,15.",
+      "explanation": "0,15 · 240 = 36. Ошибка — 240 : 15 = 16."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which of the following is equal to 3/4?",
+      "choices": [
+        "34%",
+        "75%",
+        "0.34",
+        "7.5%"
+      ],
+      "answer": 1,
+      "check": "3/4*100",
+      "hint": "Раздели 3 на 4 и умножь на 100%.",
+      "explanation": "3/4 = 0,75 = 75% (B). 34% и 0,34 — цифры дроби, записанные подряд; 7,5% — ошибка в запятой."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "A $60 shirt is on sale for 10% off. What is the sale price?",
+      "choices": [
+        "$54",
+        "$50",
+        "$6",
+        "$66"
+      ],
+      "answer": 0,
+      "check": "60*0.9",
+      "hint": "Скидка 10% от 60 — это 6 долларов.",
+      "explanation": "60 − 6 = 54 (A). 6 — это скидка, а не цена; 66 — наценка; 50 — вычли 10 долларов."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A jar contains 50 marbles, and 12 of them are red. What percent of the marbles are red?",
+      "answer": [
+        "24"
+      ],
+      "check": "12/50*100",
+      "hint": "Часть раздели на целое и умножь на 100.",
+      "explanation": "12/50 = 0,24 = 24%. Ошибка — 12% (число красных, а не доля)."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "A recipe calls for 15 grams of yeast. Mia uses 200% of that amount. How many grams of yeast does she use?",
+      "choices": [
+        "17",
+        "30",
+        "45",
+        "300"
+      ],
+      "answer": 1,
+      "check": "2*15",
+      "hint": "200% — это 2.",
+      "explanation": "2 · 15 = 30 г (B). 17 — прибавили 2; 300 — умножили на 20; 45 — это 300%."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The price of a book rose from $25 to $30. What was the percent increase in the price?",
+      "answer": [
+        "20"
+      ],
+      "check": "5/25*100",
+      "hint": "Изменение раздели на исходную цену.",
+      "explanation": "Рост 5 долларов, 5/25 = 20%. Ошибка — 5/30 ≈ 16,7% (делили на новую цену)."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "An item costs $45, and an 8% sales tax is added. What is the total cost?",
+      "choices": [
+        "$3.60",
+        "$45.08",
+        "$48.60",
+        "$53.00"
+      ],
+      "answer": 2,
+      "check": "45*1.08",
+      "hint": "Налог: 0,08 · 45.",
+      "explanation": "45 + 3,60 = 48,60 (C). 3,60 — только налог; 45,08 — прибавили 8 центов; 53 — прибавили 8 долларов."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression represents the result of decreasing a quantity q by 15%?",
+      "choices": [
+        "0.15q",
+        "0.85q",
+        "q − 15",
+        "1.15q"
+      ],
+      "answer": 1,
+      "check": "0.85q",
+      "hint": "После уменьшения на 15% остаётся 85%.",
+      "explanation": "q − 0,15q = 0,85q (B). 0,15q — размер уменьшения; q − 15 вычитает 15 единиц; 1,15q — увеличение."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A team won 18 of its 24 games and lost the rest. What percent of its games did the team lose?",
+      "answer": [
+        "25"
+      ],
+      "check": "6/24*100",
+      "hint": "Проигрышей 24 − 18.",
+      "explanation": "6/24 = 25%. Ошибка — 75% (это доля побед)."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following lists the numbers 0.45, 4/9, and 44% in order from least to greatest?",
+      "choices": [
+        "44%, 4/9, 0.45",
+        "4/9, 44%, 0.45",
+        "0.45, 4/9, 44%",
+        "44%, 0.45, 4/9"
+      ],
+      "answer": 0,
+      "hint": "Переведи всё в десятичные дроби.",
+      "explanation": "44% = 0,44, 4/9 ≈ 0,444, 0,45. Порядок: 0,44 < 0,444 < 0,45 (A). Ошибка — считать 4/9 = 0,49 или 0,4."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A store buys an item for $80 and marks up the price by 35%. What is the marked price, in dollars?",
+      "answer": [
+        "108"
+      ],
+      "check": "80*1.35",
+      "hint": "Наценка 0,35 · 80.",
+      "explanation": "Наценка 0,35 · 80 = 28, цена 80 + 28 = 108 долларов (или сразу 80 · 1,35)."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "In a class of 30 students, 40% are boys. How many girls are in the class?",
+      "choices": [
+        "12",
+        "18",
+        "20",
+        "70"
+      ],
+      "answer": 1,
+      "check": "30*0.6",
+      "hint": "Девочек 100% − 40% = 60%.",
+      "explanation": "0,6 · 30 = 18 (B). 12 — это мальчики; 70 — 100 − 30."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A deposit of $2,500 earns 4% simple interest per year. How much interest, in dollars, does it earn in 3 years?",
+      "answer": [
+        "300"
+      ],
+      "check": "2500*0.04*3",
+      "hint": "Простой процент: каждый год одна и та же сумма.",
+      "explanation": "2500 · 0,04 = 100 в год, за 3 года 300. Ошибка — 100 (один год)."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The number 0.07 is equivalent to which percent?",
+      "choices": [
+        "0.07%",
+        "0.7%",
+        "7%",
+        "70%"
+      ],
+      "answer": 2,
+      "check": "7",
+      "hint": "Умножь на 100.",
+      "explanation": "0,07 · 100 = 7% (C). 0,07% в 100 раз меньше; 70% в 10 раз больше."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A bottle holds 750 milliliters of water, and 20% of the water has been used. How many milliliters are left?",
+      "answer": [
+        "600"
+      ],
+      "check": "750*0.8",
+      "hint": "Осталось 80%.",
+      "explanation": "0,8 · 750 = 600 мл. Ошибка — 150 (это использованная часть)."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A town's population of 5,000 decreases by 6%. What is the new population?",
+      "choices": [
+        "300",
+        "4,994",
+        "4,700",
+        "5,300"
+      ],
+      "answer": 2,
+      "check": "5000*0.94",
+      "hint": "6% от 5000 — это 300 человек.",
+      "explanation": "5000 − 300 = 4700 (C). 300 — уменьшение; 4994 — вычли 6 человек; 5300 — рост."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A town has 12,000 residents, and 4,200 of them are under 18 years old. What percent of the residents are under 18?",
+      "answer": [
+        "35"
+      ],
+      "check": "4200/12000*100",
+      "hint": "4200 : 12 000.",
+      "explanation": "Доля: 4200/12 000 = 0,35, то есть 35% жителей младше 18 лет."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A bank charges a fee of 0.5% of the amount transferred. What is the fee, in dollars, on a transfer of $400?",
+      "choices": [
+        "2",
+        "20",
+        "200",
+        "0.2"
+      ],
+      "answer": 0,
+      "check": "0.005*400",
+      "hint": "0,5% = 0,005.",
+      "explanation": "0,005 · 400 = 2 доллара (A). 200 — это 50%; 20 — 5%; 0,2 — 0,05%."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A recipe calls for 250 grams of sugar. Ana reduces the amount of sugar by 30%. How many grams of sugar does she use?",
+      "answer": [
+        "175"
+      ],
+      "check": "250*0.7",
+      "hint": "Остаётся 70%.",
+      "explanation": "0,7 · 250 = 175 г. Ошибка — 75 г (это уменьшение)."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A plant was 40 centimeters tall. It is now 130% of that height. How tall is the plant now, in centimeters?",
+      "choices": [
+        "13",
+        "48",
+        "52",
+        "92"
+      ],
+      "answer": 2,
+      "check": "1.3*40",
+      "hint": "130% = 1,3.",
+      "explanation": "1,3 · 40 = 52 см (C). 48 — увеличили на 8 (20%); 13 — 130 : 10; 92 — прибавили 52 к 40."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Of 80 people surveyed, 25% chose blue as their favorite color and 15% chose green. How many of the people surveyed chose neither blue nor green?",
+      "answer": [
+        "48"
+      ],
+      "check": "80*0.6",
+      "hint": "Вместе синий и зелёный — 40%.",
+      "explanation": "Остальные 60%: 0,6 · 80 = 48 человек."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A phone's battery charge dropped from 80% to 60%. By what percent did the amount of charge decrease?",
+      "choices": [
+        "20%",
+        "25%",
+        "33%",
+        "75%"
+      ],
+      "answer": 1,
+      "check": "25",
+      "hint": "Изменение 20 пунктов раздели на исходные 80.",
+      "explanation": "20/80 = 25% (B). 20% — это разница в процентных пунктах, а не относительное уменьшение; 33% — делили на 60."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A worker earns $15 per hour and receives a 4% raise. What is the worker's new hourly pay, in dollars?",
+      "answer": [
+        "15.6",
+        "15.60"
+      ],
+      "check": "15*1.04",
+      "hint": "Прибавка 0,04 · 15.",
+      "explanation": "15 + 0,60 = 15,60 доллара в час."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 25% of x is 30, what is 75% of x?",
+      "choices": [
+        "60",
+        "90",
+        "120",
+        "22.5"
+      ],
+      "answer": 1,
+      "check": "3*30",
+      "hint": "75% — это три раза по 25%.",
+      "explanation": "75% от x = 3 · 30 = 90 (B). 120 — это сам x; 22,5 — 75% от 30."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A 2-liter bottle of a drink is 35% juice. How many liters of juice are in the bottle?",
+      "answer": [
+        "0.7",
+        "7/10"
+      ],
+      "check": "2*0.35",
+      "hint": "0,35 · 2.",
+      "explanation": "0,35 · 2 = 0,7 литра сока. Ошибка — 0,35 л (забыли умножить на 2)."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A price is decreased by 10%, and then the new price is decreased by another 10%. By what percent has the original price decreased in all?",
+      "choices": [
+        "19%",
+        "20%",
+        "10%",
+        "21%"
+      ],
+      "answer": 0,
+      "check": "19",
+      "hint": "Два множителя 0,9 подряд.",
+      "explanation": "0,9 · 0,9 = 0,81 — осталось 81%, уменьшение 19% (A). 20% — проценты сложили, но второй раз 10% берутся от меньшей цены."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "After a 25% increase, the price of a ticket is $75. What was the price, in dollars, before the increase?",
+      "answer": [
+        "60"
+      ],
+      "check": "75/1.25",
+      "hint": "75 — это 125% старой цены.",
+      "explanation": "75 : 1,25 = 60. Ошибка — 75 · 0,75 = 56,25 (уменьшение на 25% от новой цены не возвращает старую)."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A store marks up its cost for an item by 40% and then sells the item at 25% off the marked price. The selling price is what percent of the store's cost?",
+      "choices": [
+        "105%",
+        "115%",
+        "140%",
+        "75%"
+      ],
+      "answer": 0,
+      "check": "105",
+      "hint": "Перемножь множители 1,4 и 0,75.",
+      "explanation": "1,4 · 0,75 = 1,05 — 105% стоимости (A). 115% — проценты сложили (+40 − 25); 140% — учли только наценку; 75% — учли только скидку."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The number of students at a school increased from 640 to 720. What was the percent increase?",
+      "answer": [
+        "12.5"
+      ],
+      "check": "80/640*100",
+      "hint": "Рост 80 раздели на 640.",
+      "explanation": "80/640 = 0,125 = 12,5%. Ошибка — 80/720 ≈ 11,1%."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The number x is 20% greater than the number y. The number y is approximately what percent of x?",
+      "choices": [
+        "80%",
+        "83.3%",
+        "120%",
+        "90%"
+      ],
+      "answer": 1,
+      "check": "83.3",
+      "verify": "abs(ans - 100/1.2) < 0.05",
+      "hint": "x = 1,2y, значит, y = x/1,2.",
+      "explanation": "y/x = 1/1,2 ≈ 0,833 = 83,3% (B). 80% — ошибка «вычесть те же 20%»: проценты берутся от разных чисел."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A student answered 75% of 60 questions correctly. She then answered 10 more questions, all correctly. To the nearest tenth of a percent, what percent of all 70 questions did she answer correctly?",
+      "answer": [
+        "78.6"
+      ],
+      "check": "55/70*100",
+      "hint": "Сначала найди число верных ответов.",
+      "explanation": "0,75 · 60 = 45, плюс 10 — 55 из 70: ≈ 78,6%. Ошибка — среднее процентов (75 + 100)/2 = 87,5."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The price of a laptop, including an 8% sales tax, is $1,296. What was the price of the laptop before tax?",
+      "choices": [
+        "$1,192.32",
+        "$1,200",
+        "$1,288",
+        "$1,399.68"
+      ],
+      "answer": 1,
+      "check": "1296/1.08",
+      "hint": "1296 — это 108% цены без налога.",
+      "explanation": "1296 : 1,08 = 1200 (B). 1192,32 — вычли 8% от 1296; 1399,68 — прибавили 8%; 1288 — вычли 8 долларов."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "In a lake, 30% of the fish are trout, and there are 84 trout. How many fish in the lake are NOT trout?",
+      "answer": [
+        "196"
+      ],
+      "check": "84/0.3*0.7",
+      "hint": "Сначала найди число всех рыб.",
+      "explanation": "84 : 0,3 = 280 рыб, не форели — 280 − 84 = 196."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "An account earns 5% interest compounded annually. If $800 is deposited, how much is in the account after 2 years?",
+      "choices": [
+        "$840",
+        "$880",
+        "$882",
+        "$900"
+      ],
+      "answer": 2,
+      "check": "800*1.05^2",
+      "hint": "Каждый год умножай на 1,05.",
+      "explanation": "800 · 1,05 = 840, 840 · 1,05 = 882 (C). 880 — простой процент (по 40 в год)."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If 35% of a number is 49, what is 20% of the number?",
+      "answer": [
+        "28"
+      ],
+      "check": "49/0.35*0.2",
+      "hint": "Сначала найди само число.",
+      "explanation": "49 : 0,35 = 140, 20% от 140 — 28."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A company's profit fell from $250,000 to $200,000 and then rose back to $250,000. By what percent did the profit increase in the second change?",
+      "choices": [
+        "20%",
+        "25%",
+        "50%",
+        "0%"
+      ],
+      "answer": 1,
+      "check": "25",
+      "hint": "Рост 50 000 считается от 200 000.",
+      "explanation": "50 000/200 000 = 25% (B). 20% — это падение (от 250 000); проценты падения и роста разные, потому что базы разные."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A shirt that originally cost $50 is on sale for $38. By what percent was the price discounted?",
+      "answer": [
+        "24"
+      ],
+      "check": "12/50*100",
+      "hint": "Скидка 12 долларов от исходных 50.",
+      "explanation": "Скидка 50 − 38 = 12 долларов, 12/50 = 24%. Ошибка — 12/38 (делили на новую цену)."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The ratio of boys to girls in a club is 2 to 3. What percent of the club members are boys?",
+      "choices": [
+        "40%",
+        "66.7%",
+        "60%",
+        "20%"
+      ],
+      "answer": 0,
+      "check": "40",
+      "hint": "Всего частей 2 + 3 = 5.",
+      "explanation": "2/5 = 40% (A). 66,7% — отношение 2/3 (мальчики к девочкам, а не ко всем); 60% — девочки."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A car bought for $24,000 loses 15% of its value each year. What is its value, in dollars, after 2 years?",
+      "answer": [
+        "17340"
+      ],
+      "check": "24000*0.85^2",
+      "hint": "Каждый год умножай на 0,85.",
+      "explanation": "24 000 · 0,85 = 20 400; 20 400 · 0,85 = 17 340. Ошибка — 24 000 · 0,7 = 16 800 (30% сразу)."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A 500-milliliter solution is 12% acid. If 100 milliliters of water are added, what percent of the new solution is acid?",
+      "choices": [
+        "10%",
+        "12%",
+        "14.4%",
+        "2%"
+      ],
+      "answer": 0,
+      "check": "60/600*100",
+      "hint": "Кислоты по-прежнему 60 мл.",
+      "explanation": "0,12 · 500 = 60 мл кислоты, раствор 600 мл: 60/600 = 10% (A). 14,4% — умножили на 1,2 вместо деления; 2% — вычли."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The price of an item was increased by 20%. Later, the new price was decreased by $18, which brought it back to the original price. What was the original price, in dollars?",
+      "answer": [
+        "90"
+      ],
+      "check": "18/0.2",
+      "verify": "1.2*ans - 18 == ans",
+      "hint": "1,2p − 18 = p.",
+      "explanation": "0,2p = 18 ⇒ p = 90. Проверка: 108 − 18 = 90."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In 2022, 45% of the 600 members of a club were juniors. In 2023, the club had 720 members, and the number of juniors had increased by 20%. What percent of the members in 2023 were juniors?",
+      "choices": [
+        "45%",
+        "54%",
+        "50%",
+        "37.5%"
+      ],
+      "answer": 0,
+      "check": "45",
+      "hint": "Сначала найди число юниоров в 2022 и в 2023.",
+      "explanation": "2022: 270 юниоров. 2023: 270 · 1,2 = 324 из 720 — 45% (A). 54% — 45 + 20% от 45; доля не изменилась, потому что обе величины выросли на 20%."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The price of a kilogram of coffee increased from $12.50 to $14.00 and then decreased by 10%. By what percent is the final price greater than $12.50?",
+      "answer": [
+        "0.8"
+      ],
+      "check": "(14*0.9-12.5)/12.5*100",
+      "hint": "Найди итоговую цену.",
+      "explanation": "14 · 0,9 = 12,60. (12,60 − 12,50)/12,50 = 0,008 = 0,8%."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A store offers \"buy 2, get the third at 50% off\" on items that cost $30 each. A customer buys 3 items. The total discount is approximately what percent of the regular price of the 3 items?",
+      "choices": [
+        "16.7%",
+        "50%",
+        "33.3%",
+        "25%"
+      ],
+      "answer": 0,
+      "check": "16.7",
+      "verify": "abs(ans - 15/90*100) < 0.05",
+      "hint": "Скидка 15 долларов от 90.",
+      "explanation": "Обычная цена 90, скидка 15: 15/90 ≈ 16,7% (A). 50% — скидка только на третий товар; 33,3% — третий товар бесплатно."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "At a school, 55% of the students are girls. Of the girls, 40% play a sport, and of the boys, 30% play a sport. What percent of all students play a sport?",
+      "answer": [
+        "35.5"
+      ],
+      "check": "(0.55*0.4+0.45*0.3)*100",
+      "hint": "Взвешенное среднее: доля девочек × 40% + доля мальчиков × 30%.",
+      "explanation": "0,55 · 0,4 + 0,45 · 0,3 = 0,22 + 0,135 = 0,355 = 35,5%. Ошибка — простое среднее 35%."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The number a is 150% of b, and b is 40% of c. The number a is what percent of c?",
+      "choices": [
+        "6%",
+        "60%",
+        "110%",
+        "190%"
+      ],
+      "answer": 1,
+      "check": "60",
+      "hint": "Перемножь: 1,5 · 0,4.",
+      "explanation": "a = 1,5 · 0,4c = 0,6c — 60% (B). 190% — сложили; 110% — вычли."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A 30-gram serving of cereal contains 6 grams of sugar. A new recipe reduces the sugar in each serving by 25% and increases the serving size to 40 grams. What percent of the new serving, by mass, is sugar?",
+      "answer": [
+        "11.25"
+      ],
+      "check": "4.5/40*100",
+      "hint": "Новый сахар: 0,75 · 6.",
+      "explanation": "4,5 г сахара в 40 г: 11,25%. Ошибка — 15% (4,5 от 30)."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The length of a rectangle is increased by 20%, and its width is decreased by 20%. How does the area of the rectangle change?",
+      "choices": [
+        "It does not change.",
+        "It decreases by 4%.",
+        "It increases by 4%.",
+        "It decreases by 20%."
+      ],
+      "answer": 1,
+      "hint": "Новая площадь: 1,2 · 0,8 = ?",
+      "explanation": "1,2 · 0,8 = 0,96 — площадь уменьшилась на 4% (B). «Не меняется» — частая ловушка: проценты берутся от разных величин."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A population grows by 2% each year. To the nearest tenth of a percent, by what percent does it grow over 5 years?",
+      "answer": [
+        "10.4"
+      ],
+      "check": "(1.02^5-1)*100",
+      "hint": "Пятилетний множитель 1,02⁵.",
+      "explanation": "1,02⁵ ≈ 1,104 — рост ≈ 10,4%. Ошибка — 10% (простое сложение)."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A salesperson earns a base salary of $1,500 per month plus a 6% commission on sales. What amount of sales in a month gives the salesperson a total of $3,000?",
+      "choices": [
+        "$9,000",
+        "$18,000",
+        "$25,000",
+        "$50,000"
+      ],
+      "answer": 2,
+      "check": "1500/0.06",
+      "verify": "1500 + 0.06*ans == 3000",
+      "hint": "Комиссия должна составить 1500.",
+      "explanation": "0,06s = 1500 ⇒ s = 25 000 (C). 50 000 — если считать комиссией все 3000; 9000 — 1500 · 6."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Of 400 survey respondents, 62% answered \"yes.\" Of the respondents who answered \"yes,\" 25% said \"strongly yes.\" How many respondents said \"strongly yes\"?",
+      "answer": [
+        "62"
+      ],
+      "check": "400*0.62*0.25",
+      "hint": "Сначала найди число ответивших «да».",
+      "explanation": "0,62 · 400 = 248; 25% от 248 = 62."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A price p is discounted by 30%, and then a 6% sales tax is added to the discounted price. Which expression represents the final price?",
+      "choices": [
+        "0.742p",
+        "0.76p",
+        "1.36p",
+        "0.64p"
+      ],
+      "answer": 0,
+      "check": "0.742p",
+      "hint": "Перемножь множители 0,7 и 1,06.",
+      "explanation": "0,7 · 1,06 = 0,742 (A). 0,76 — сложили проценты (−30 + 6); 0,64 — вычли 6% вместо прибавления."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Ticket sales increased from 1,250 to 1,600. What was the percent increase?",
+      "answer": [
+        "28"
+      ],
+      "check": "350/1250*100",
+      "hint": "Прирост 350 от 1250.",
+      "explanation": "Прирост 1600 − 1250 = 350; 350/1250 = 0,28, то есть рост на 28%. Делить нужно на исходное значение."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In an election with 2,500 votes, the winner received 54% of the votes and the other candidate received the rest. By how many votes did the winner win?",
+      "choices": [
+        "200",
+        "100",
+        "1,350",
+        "54"
+      ],
+      "answer": 0,
+      "check": "2500*0.08",
+      "hint": "Разница в долях: 54% − 46%.",
+      "explanation": "8% от 2500 = 200 (A). 1350 — голоса победителя; 100 — 4%."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "After a 12% raise followed by a 5% raise, a salary is $35,280. What was the salary, in dollars, before the two raises?",
+      "answer": [
+        "30000"
+      ],
+      "check": "35280/(1.12*1.05)",
+      "hint": "Общий множитель 1,12 · 1,05.",
+      "explanation": "1,12 · 1,05 = 1,176; 35 280 : 1,176 = 30 000. Ошибка — делить на 1,17."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A store sells 40% of its stock on the first day and then 25% of the remaining stock on the second day. What percent of the original stock remains after the second day?",
+      "choices": [
+        "35%",
+        "45%",
+        "55%",
+        "65%"
+      ],
+      "answer": 1,
+      "check": "45",
+      "hint": "После первого дня 60%; от них продали четверть.",
+      "explanation": "0,6 · 0,75 = 0,45 — осталось 45% (B). 35% — вычли 40% и 25% от исходного."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A 20-kilogram bag of fertilizer is 15% nitrogen. How many kilograms of a fertilizer that is 40% nitrogen must be mixed with it to make a mixture that is 25% nitrogen?",
+      "answer": [
+        "40/3",
+        "13.33"
+      ],
+      "check": "40/3",
+      "verify": "3 + 0.4*ans == 0.25*(20 + ans)",
+      "hint": "Азот: 3 + 0,4x = 0,25(20 + x).",
+      "explanation": "3 + 0,4x = 5 + 0,25x ⇒ 0,15x = 2 ⇒ x = 40/3 ≈ 13,33 кг."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "An investment loses 20% of its value in one year. By what percent must it increase the next year to return to its original value?",
+      "choices": [
+        "20%",
+        "25%",
+        "40%",
+        "80%"
+      ],
+      "answer": 1,
+      "check": "25",
+      "hint": "После потери осталось 80%. Во сколько раз нужно увеличить 0,8, чтобы получить 1?",
+      "explanation": "1/0,8 = 1,25 — рост на 25% (B). 20% — ловушка: рост считается от меньшей суммы."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A restaurant bill is $64 before tax. A 7.5% tax is added, and a tip of 18% of the pre-tax amount is also added. What is the total amount paid, in dollars?",
+      "answer": [
+        "80.32"
+      ],
+      "check": "64*1.255",
+      "hint": "Налог и чаевые считаются от 64.",
+      "explanation": "64 · (1 + 0,075 + 0,18) = 64 · 1,255 = 80,32."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In a survey of 1,200 adults, 35% said they prefer tea. Of the adults who prefer tea, 40% said they add milk. How many adults surveyed prefer tea and add milk?",
+      "choices": [
+        "168",
+        "252",
+        "420",
+        "480"
+      ],
+      "answer": 0,
+      "check": "1200*0.35*0.4",
+      "hint": "Сначала найди любителей чая.",
+      "explanation": "420 любителей чая, из них 40% — 168 (A). 420 — все любители чая; 252 — те, кто пьёт чай без молока; 480 — 40% от всех опрошенных."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A store increases the price of an item by p percent and later decreases the new price by p percent. The final price is 4% less than the original price. What is the value of p?",
+      "answer": [
+        "20"
+      ],
+      "check": "20",
+      "verify": "(1 + ans/100)*(1 - ans/100) == 0.96",
+      "hint": "(1 + p/100)(1 − p/100) = 1 − (p/100)².",
+      "explanation": "1 − (p/100)² = 0,96 ⇒ (p/100)² = 0,04 ⇒ p = 20. Проверка: 1,2 · 0,8 = 0,96."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A shop owner bought goods for $800. She sold 60% of the goods at a 25% profit and the rest at a 10% loss. What was her overall percent profit?",
+      "choices": [
+        "7.5%",
+        "11%",
+        "15%",
+        "35%"
+      ],
+      "answer": 1,
+      "check": "11",
+      "hint": "Посчитай выручку от каждой части.",
+      "explanation": "Товар на 480 продан за 600, на 320 — за 288. Выручка 888, прибыль 88 — 11% (B). 7,5% — среднее (25 − 10)/2; 15% — разность процентов без весов."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A gym has 2,400 members, and 35% of them are students. How many new members, all students, must join the gym (with no members leaving) so that students make up 40% of the members?",
+      "answer": [
+        "200"
+      ],
+      "check": "200",
+      "verify": "(840 + ans)/(2400 + ans) == 0.4",
+      "hint": "(840 + x)/(2400 + x) = 0,4.",
+      "explanation": "840 + x = 960 + 0,4x ⇒ 0,6x = 120 ⇒ x = 200. Ошибка — 120 (5% от 2400): новые участники увеличивают и общее число."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The price of an item was increased by 20% and then decreased by 15%. The final price was $102. What was the original price?",
+      "choices": [
+        "$100",
+        "$102",
+        "$85",
+        "$120"
+      ],
+      "answer": 0,
+      "check": "102/(1.2*0.85)",
+      "hint": "Общий множитель 1,2 · 0,85.",
+      "explanation": "1,2 · 0,85 = 1,02, исходная цена 102 : 1,02 = 100 (A). 120 — цена после повышения; 102 — итоговая, а не исходная цена; 85 — 0,85 · 100."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Town A has 50,000 residents and its population grows by 4% each year. Town B has 60,000 residents and its population decreases by 2% each year. After how many whole years will the population of town A first be greater than the population of town B?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "50000*1.04^ans > 60000*0.98^ans and not (50000*1.04^(ans - 1) > 60000*0.98^(ans - 1))",
+      "hint": "Сравни по годам: 50 000 · 1,04^t и 60 000 · 0,98^t.",
+      "explanation": "Через 3 года: A ≈ 56 243, B ≈ 56 472 — ещё меньше. Через 4 года: A ≈ 58 493, B ≈ 55 342. Ответ 4."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If x is 25% less than y, then y is what percent greater than x?",
+      "choices": [
+        "25%",
+        "33 1/3%",
+        "75%",
+        "133 1/3%"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "x = 0,75y, значит, y = x/0,75.",
+      "explanation": "y = (4/3)x — на 1/3, то есть на 33 1/3% больше x (B). 25% — ловушка: проценты берутся от разных чисел; 133 1/3% — это y в процентах от x, а не превышение."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "An account pays 6% annual interest compounded quarterly. What is the effective annual interest rate, as a percent rounded to the nearest hundredth?",
+      "answer": [
+        "6.14"
+      ],
+      "check": "(1.015^4-1)*100",
+      "hint": "Квартальная ставка 1,5%, четыре начисления в год.",
+      "explanation": "1,015⁴ ≈ 1,06136 — эффективная ставка ≈ 6,14%. Она выше 6% из-за начисления процентов на проценты."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "At a school, the number of students increased by 10% and the number of teachers increased by 25%. By what percent did the ratio of students to teachers change?",
+      "choices": [
+        "It decreased by 12%.",
+        "It decreased by 15%.",
+        "It increased by 12%.",
+        "It decreased by 13.6%."
+      ],
+      "answer": 0,
+      "hint": "Новое отношение = старое · 1,1/1,25.",
+      "explanation": "1,1/1,25 = 0,88 — отношение уменьшилось на 12% (A). 15% — разность процентов 25 − 10; 13,6% — 15/1,1."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A $40 item increases in price by 10% each month for 3 months. What is the price after 3 months, to the nearest cent?",
+      "answer": [
+        "53.24"
+      ],
+      "check": "40*1.1^3",
+      "hint": "Множитель 1,1³.",
+      "explanation": "40 · 1,331 = 53,24. Ошибка — 40 · 1,3 = 52 (простое сложение 30%)."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A 200-milliliter solution is 30% alcohol. How many milliliters of the solution must be removed and replaced with pure alcohol so that the solution becomes 51% alcohol?",
+      "choices": [
+        "21",
+        "42",
+        "60",
+        "102"
+      ],
+      "answer": 2,
+      "check": "60",
+      "verify": "0.3*(200 - ans) + ans == 0.51*200",
+      "hint": "Убранная часть уносит 30% спирта.",
+      "explanation": "0,3(200 − x) + x = 102 ⇒ 60 + 0,7x = 102 ⇒ x = 60 мл (C). 42 — если забыть, что убранная часть содержала спирт (60 + x = 102); 21 — разность процентов 51 − 30, принятая за миллилитры; 102 — итоговое количество спирта."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Two successive discounts of 20% and x% are equivalent to a single discount of 32%. What is the value of x?",
+      "answer": [
+        "15"
+      ],
+      "check": "15",
+      "verify": "0.8*(1 - ans/100) == 0.68",
+      "hint": "0,8 · (1 − x/100) = 0,68.",
+      "explanation": "1 − x/100 = 0,85 ⇒ x = 15. Ошибка — 12 (32 − 20)."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The population of a city was P in 2010. It increased by 10% from 2010 to 2015 and then decreased by 10% from 2015 to 2020. Which expression represents the population in 2020?",
+      "choices": [
+        "P",
+        "0.99P",
+        "1.01P",
+        "0.9P"
+      ],
+      "answer": 1,
+      "hint": "Перемножь множители 1,1 и 0,9.",
+      "explanation": "1,1 · 0,9 = 0,99: население 0,99P (B). P — ловушка «изменения взаимно гасятся»; 0,9P — учли только уменьшение."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "An item costs a retailer $60. She wants to earn a 25% profit on her cost even after offering a 20% discount off the list price. What should the list price be, in dollars?",
+      "answer": [
+        "93.75"
+      ],
+      "check": "75/0.8",
+      "hint": "Цена после скидки должна быть 1,25 · 60 = 75.",
+      "explanation": "0,8L = 75 ⇒ L = 93,75. Ошибка — 60 · 1,45 = 87 (проценты сложили)."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Three liters of a 20% salt solution are mixed with 2 liters of a 45% salt solution. What percent of the mixture is salt?",
+      "choices": [
+        "30%",
+        "32.5%",
+        "65%",
+        "25%"
+      ],
+      "answer": 0,
+      "check": "(0.6+0.9)/5*100",
+      "hint": "Найди количество соли в каждом растворе.",
+      "explanation": "0,6 + 0,9 = 1,5 л соли в 5 л — 30% (A). 32,5% — простое среднее 20% и 45%; 65% — их сумма."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A store's sales were $8,000 in January. Sales increased by 15% from January to February and then decreased by 20% from February to March. By what percent were March sales lower than January sales?",
+      "answer": [
+        "8"
+      ],
+      "check": "(1-1.15*0.8)*100",
+      "hint": "Общий множитель 1,15 · 0,8.",
+      "explanation": "1,15 · 0,8 = 0,92 — продажи в марте на 8% ниже январских. Ошибка — 5% (20 − 15)."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In 2019, a company had 200 employees, and 30% of them were women. In 2020, the company hired 40 new employees, all of whom were women, and no one left. To the nearest tenth of a percent, what percent of the employees in 2020 were women?",
+      "choices": [
+        "35%",
+        "40%",
+        "41.7%",
+        "50%"
+      ],
+      "answer": 2,
+      "check": "41.7",
+      "verify": "abs(ans - 100/240*100) < 0.05",
+      "hint": "Женщин было 60.",
+      "explanation": "(60 + 40)/240 ≈ 41,7% (C). 50% — 100 из 200 (забыли, что сотрудников стало 240); 35% — среднее 30% и 40%."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The length of a rectangle is increased by 25%, and its width is increased by 20%. By what percent does the area of the rectangle increase?",
+      "answer": [
+        "50"
+      ],
+      "check": "(1.25*1.2-1)*100",
+      "hint": "Перемножь множители сторон.",
+      "explanation": "1,25 · 1,2 = 1,5 — площадь выросла на 50%. Ошибка — 45% (проценты сложили)."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The value of a coin collection increases by 8% each year. After how many whole years will the value first be more than double its original value?",
+      "choices": [
+        "9",
+        "10",
+        "12",
+        "13"
+      ],
+      "answer": 1,
+      "check": "10",
+      "verify": "1.08^ans > 2 and not (1.08^(ans - 1) > 2)",
+      "hint": "Проверь 1,08⁹ и 1,08¹⁰.",
+      "explanation": "1,08⁹ ≈ 1,999 — ещё чуть меньше двух; 1,08¹⁰ ≈ 2,159. Ответ 10 (B). 13 — простой процент (100/8 = 12,5 → 13)."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A test has 40 questions, each worth 2.5 points. A student's score increased from 70% to 85% when the student retook the test. How many more questions did the student answer correctly on the retake?",
+      "answer": [
+        "6"
+      ],
+      "check": "0.15*40",
+      "hint": "Рост на 15 процентных пунктов от 40 вопросов.",
+      "explanation": "0,15 · 40 = 6 вопросов (это 15 баллов из 100). Ошибка — 15 (баллы вместо вопросов)."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The number of members of a club decreased by 20% from 2021 to 2022 and then increased by 20% from 2022 to 2023, when there were 576 members. How many members did the club have in 2021?",
+      "choices": [
+        "560",
+        "576",
+        "600",
+        "720"
+      ],
+      "answer": 2,
+      "check": "576/(0.8*1.2)",
+      "hint": "Общий множитель 0,8 · 1,2 = 0,96.",
+      "explanation": "576 : 0,96 = 600 (C). 576 — если считать, что изменения гасятся; 720 — 576 : 0,8."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A 1.5-liter drink is 4% sugar by volume. How many liters of water must evaporate so that the drink becomes 6% sugar?",
+      "answer": [
+        "0.5",
+        "1/2"
+      ],
+      "check": "1.5-0.06/0.06",
+      "hint": "Сахара 0,06 л — он не испаряется.",
+      "explanation": "0,06 л должны составить 6%: объём 1 л. Испариться должно 0,5 л."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A shop offers 15% off the price of an item and then an additional $10 off. The final price is $75. What was the original price?",
+      "choices": [
+        "$100",
+        "$85",
+        "$98.24",
+        "$110"
+      ],
+      "answer": 0,
+      "check": "85/0.85",
+      "verify": "0.85*ans - 10 == 75",
+      "hint": "0,85p − 10 = 75.",
+      "explanation": "0,85p = 85 ⇒ p = 100 (A). 98,24 — если применить скидку после вычета 10 долларов: 0,85(p − 10) = 75; 85 — цена после скидки; 110 — прибавили 10 после деления 85 на 0,85."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "After a water-saving campaign, a city's water use dropped by 18% to 41 million gallons per day. What was the city's water use, in millions of gallons per day, before the campaign?",
+      "answer": [
+        "50"
+      ],
+      "check": "41/0.82",
+      "hint": "41 — это 82% прежнего.",
+      "explanation": "41 : 0,82 = 50 млн галлонов. Ошибка — 41 · 1,18 ≈ 48,4."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The price of gas was $3.20 per gallon in January. In February the price was 5% higher than in January, and in March it was 5% lower than in February. To the nearest cent, what was the price in March?",
+      "choices": [
+        "$3.20",
+        "$3.19",
+        "$3.04",
+        "$3.36"
+      ],
+      "answer": 1,
+      "check": "3.19",
+      "verify": "abs(ans - 3.2*1.05*0.95) < 0.005",
+      "hint": "3,20 · 1,05 · 0,95.",
+      "explanation": "3,20 · 1,05 = 3,36; 3,36 · 0,95 = 3,192 ≈ 3,19 (B). 3,20 — «изменения гасятся»; 3,36 — февральская цена; 3,04 — только снижение."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A farmer's crop yield increased by 12% from year 1 to year 2 and by 15% from year 2 to year 3. By what percent did the yield increase from year 1 to year 3?",
+      "answer": [
+        "28.8"
+      ],
+      "check": "(1.12*1.15-1)*100",
+      "hint": "Перемножь множители.",
+      "explanation": "1,12 · 1,15 = 1,288 — рост на 28,8%. Ошибка — 27%."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A store raises all of its prices by x percent and then holds a sale with 25% off the new prices. The sale prices are exactly 10% less than the original prices. What is the value of x?",
+      "answer": [
+        "20"
+      ],
+      "check": "20",
+      "verify": "0.75*(1 + ans/100) == 0.9",
+      "hint": "0,75(1 + x/100) = 0,9.",
+      "explanation": "1 + x/100 = 1,2 ⇒ x = 20. Ошибка — 15 (25 − 10)."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Four liters of an a% salt solution are mixed with 6 liters of a 20% salt solution, and the result is 10 liters of a 26% salt solution. What is the value of a?",
+      "choices": [
+        "30",
+        "35",
+        "32",
+        "40"
+      ],
+      "answer": 1,
+      "check": "35",
+      "verify": "4*ans/100 + 6*0.2 == 10*0.26",
+      "hint": "Соль: 4 · a/100 + 6 · 0,2 = 10 · 0,26.",
+      "explanation": "0,04a + 1,2 = 2,6 ⇒ a = 35 (B). 32 — если считать объёмы равными: (a + 20)/2 = 26."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A town's population grows by 5% per year. To the nearest hundredth of a percent, by what percent does the population grow in 6 months?",
+      "answer": [
+        "2.47"
+      ],
+      "check": "(1.05^0.5-1)*100",
+      "hint": "Полугодовой множитель m: m² = 1,05.",
+      "explanation": "m = √1,05 ≈ 1,02470 — рост ≈ 2,47% за полгода. Ошибка — 2,5% (половина годового процента)."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "At a company, 60% of the employees work full-time and the rest part-time. Health insurance is held by 75% of the full-time employees and by 40% of the part-time employees. Approximately what percent of the employees with health insurance work part-time?",
+      "choices": [
+        "16%",
+        "26%",
+        "40%",
+        "74%"
+      ],
+      "answer": 1,
+      "check": "26",
+      "verify": "abs(ans - 16/61*100) < 0.5",
+      "hint": "Застрахованные: 0,6 · 0,75 + 0,4 · 0,4. Какую долю из них составляют частично занятые?",
+      "explanation": "Застрахованы 0,45 + 0,16 = 0,61 всех сотрудников. Доля частично занятых: 0,16/0,61 ≈ 26% (B). 16% — доля от всех сотрудников, а не от застрахованных; 74% — доля полностью занятых."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A shopkeeper marks the price of goods 40% above cost and then gives a discount of d percent off the marked price, making a profit of 12% on cost. What is the value of d?",
+      "answer": [
+        "20"
+      ],
+      "check": "20",
+      "verify": "1.4*(1 - ans/100) == 1.12",
+      "hint": "1,4(1 − d/100) = 1,12.",
+      "explanation": "1 − d/100 = 0,8 ⇒ d = 20. Ошибка — 28 (40 − 12)."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A water bill charges $2 per unit for the first 10 units and $3.50 per unit for each unit over 10. If a household's usage increases from 12 units to 15 units, by approximately what percent does its bill increase?",
+      "choices": [
+        "25%",
+        "38.9%",
+        "50%",
+        "28%"
+      ],
+      "answer": 1,
+      "check": "38.9",
+      "verify": "abs(ans - 10.5/27*100) < 0.05",
+      "hint": "Посчитай счёт за 12 и за 15 единиц.",
+      "explanation": "12 единиц: 20 + 7 = 27. 15 единиц: 20 + 17,5 = 37,5. Рост 10,5/27 ≈ 38,9% (B). 25% — рост потребления (3/12), а не счёта."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In a class, the average test score of the boys is 70 and the average test score of the girls is 85. The average score of the whole class is 79. What percent of the students in the class are girls?",
+      "answer": [
+        "60"
+      ],
+      "check": "9/15*100",
+      "hint": "Пусть доля девочек g: 70(1 − g) + 85g = 79.",
+      "explanation": "70 + 15g = 79 ⇒ g = 0,6 = 60%. Ошибка — 50% (простое среднее было бы 77,5)."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A car loses 12% of its value each year. After how many whole years will its value first be less than half of its original value?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "check": "6",
+      "verify": "0.88^ans < 0.5 and not (0.88^(ans - 1) < 0.5)",
+      "hint": "Проверь 0,88⁵ и 0,88⁶.",
+      "explanation": "0,88⁵ ≈ 0,528 — ещё больше половины; 0,88⁶ ≈ 0,464. Ответ 6 (C). 4 — линейная модель (50/12 ≈ 4,2); 5 — если принять 0,528 за меньше половины; 8 — линейная модель до нуля (100/12)."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A company's expenses were 70% of its revenue. The next year, its revenue increased by 20% and its expenses increased by 10%. By what percent did its profit increase? Round to the nearest hundredth.",
+      "answer": [
+        "43.33",
+        "130/3"
+      ],
+      "check": "(0.43/0.3-1)*100",
+      "hint": "Пусть выручка 100: прибыль была 30.",
+      "explanation": "Новая выручка 120, расходы 77, прибыль 43. Рост (43 − 30)/30 ≈ 43,33%."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Forty percent of x is equal to 30% of y, and y is 20 more than x. What is the value of x?",
+      "choices": [
+        "40",
+        "60",
+        "80",
+        "20"
+      ],
+      "answer": 1,
+      "check": "60",
+      "verify": "0.4*ans == 0.3*(ans + 20)",
+      "hint": "0,4x = 0,3(x + 20).",
+      "explanation": "0,1x = 6 ⇒ x = 60 (B), y = 80. 80 — это y."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A 340-gram salt solution is 15% salt by mass. How many grams of salt must be added to make the solution 32% salt by mass?",
+      "answer": [
+        "85"
+      ],
+      "check": "85",
+      "verify": "(51 + ans)/(340 + ans) == 0.32",
+      "hint": "(51 + s)/(340 + s) = 0,32.",
+      "explanation": "51 + s = 108,8 + 0,32s ⇒ 0,68s = 57,8 ⇒ s = 85 г. Ошибка — 57,8 (забыли, что масса раствора тоже растёт)."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A price is increased by 10% three times in a row. To the nearest tenth of a percent, by what percent has the original price increased?",
+      "choices": [
+        "30%",
+        "33.1%",
+        "33.3%",
+        "10%"
+      ],
+      "answer": 1,
+      "check": "33.1",
+      "verify": "abs(ans - (1.1^3 - 1)*100) < 0.05",
+      "hint": "1,1³ = ?",
+      "explanation": "1,1³ = 1,331 — рост 33,1% (B). 30% — простое сложение; 33,3% — неверное округление."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The prices of products A and B are in the ratio 5 to 4. The price of A increases by 20%, and the price of B increases by 50%. What is the new ratio of the price of A to the price of B, written as a decimal?",
+      "answer": [
+        "1"
+      ],
+      "check": "5*1.2/(4*1.5)",
+      "hint": "Возьми цены 5 и 4.",
+      "explanation": "Новые цены 6 и 6 — отношение 1. Ошибка — 5/4 · 20/50."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In a survey of 640 people, 40% were men. Of the men, 30% prefer brand A, and of the women, x% prefer brand A. Overall, 36% of the people surveyed prefer brand A. What is the value of x?",
+      "choices": [
+        "36",
+        "40",
+        "42",
+        "48"
+      ],
+      "answer": 1,
+      "check": "40",
+      "verify": "0.4*30 + 0.6*ans == 36",
+      "hint": "0,4 · 30 + 0,6 · x = 36.",
+      "explanation": "12 + 0,6x = 36 ⇒ x = 40 (B). 42 — если 36 = (30 + x)/2."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A population of bacteria triples every 4 hours. To the nearest tenth of a percent, by what percent does the population increase each hour?",
+      "answer": [
+        "31.6"
+      ],
+      "check": "(3^(1/4)-1)*100",
+      "hint": "Часовой множитель m: m⁴ = 3.",
+      "explanation": "m = 3^(1/4) ≈ 1,316 — рост ≈ 31,6% в час. Ошибка — 50% (200%/4)."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In a jar of marbles, 30% are red. After 20 red marbles are added, 44% of the marbles are red. How many marbles were in the jar before the red marbles were added?",
+      "choices": [
+        "50",
+        "80",
+        "100",
+        "120"
+      ],
+      "answer": 1,
+      "check": "80",
+      "verify": "(0.3*ans + 20)/(ans + 20) == 0.44",
+      "hint": "(0,3n + 20)/(n + 20) = 0,44.",
+      "explanation": "0,3n + 20 = 0,44n + 8,8 ⇒ 11,2 = 0,14n ⇒ n = 80 (B). Проверка: 24 + 20 = 44 красных из 100."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A loan of $5,000 accrues 8% interest compounded annually. At the end of the first year, after interest is added, a payment of $1,400 is made. What is the balance, in dollars, at the end of the second year after interest is added?",
+      "answer": [
+        "4320"
+      ],
+      "check": "(5000*1.08-1400)*1.08",
+      "hint": "Проценты второго года начисляются на остаток после платежа.",
+      "explanation": "5000 · 1,08 = 5400; после платежа 4000; 4000 · 1,08 = 4320."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The price of an item is reduced by 20%, and as a result the number of items sold increases by 30%. How does the revenue from the item change?",
+      "choices": [
+        "It decreases by 4%.",
+        "It increases by 4%.",
+        "It increases by 10%.",
+        "It does not change."
+      ],
+      "answer": 1,
+      "hint": "Выручка = цена × количество.",
+      "explanation": "0,8 · 1,3 = 1,04 — выручка выросла на 4% (B). 10% — сложили проценты (30 − 20)."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In a group of people, 25% are left-handed. Of the left-handed people, 40% wear glasses, and of the right-handed people, 20% wear glasses. What percent of the people who wear glasses are left-handed?",
+      "answer": [
+        "40"
+      ],
+      "check": "0.1/0.25*100",
+      "hint": "Очки: 0,25 · 0,4 + 0,75 · 0,2.",
+      "explanation": "Очки носят 0,10 + 0,15 = 0,25 всех людей. Левшей среди них 0,10/0,25 = 40%."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A quantity is increased by 60%, and then the new quantity is decreased by x%. The final quantity is 20% greater than the original quantity. What is the value of x?",
+      "choices": [
+        "25",
+        "37.5",
+        "40",
+        "62.5"
+      ],
+      "answer": 0,
+      "check": "25",
+      "verify": "1.6*(1 - ans/100) == 1.2",
+      "hint": "1,6(1 − x/100) = 1,2.",
+      "explanation": "1 − x/100 = 0,75 ⇒ x = 25 (A). 37,5 — уменьшение, которое вернуло бы к исходному значению; 40 — разность 60 − 20; 62,5 — 1/1,6 в процентах."
+    }
+  ]
+}

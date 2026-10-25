@@ -1,0 +1,1723 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "linear-functions",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 9 − x/3. What is the value of f(12)?",
+      "answer": [
+        "5"
+      ],
+      "check": "9-12/3",
+      "hint": "Подставь 12 вместо x и сначала выполни деление.",
+      "explanation": "f(12) = 9 − 12/3 = 9 − 4 = 5. Ошибка — вычесть до деления: (9 − 12)/3 = −1."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "A gym charges a one-time fee of $40 to join and $25 per month after that. Which function gives the total cost C(m), in dollars, of a membership for m months?",
+      "choices": [
+        "C(m) = 40m + 25",
+        "C(m) = 25m + 40",
+        "C(m) = 65m",
+        "C(m) = 40 − 25m"
+      ],
+      "answer": 1,
+      "check": "25m+40",
+      "hint": "Что умножается на число месяцев, а что платится один раз?",
+      "explanation": "Каждый месяц добавляет 25, а 40 платится один раз: C(m) = 25m + 40 (B). В A ставки перепутаны местами; C считает, что взнос платится каждый месяц; в D стоимость уменьшается со временем."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "The table shows four values of a linear function f.",
+      "table": {
+        "head": [
+          "x",
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "rows": [
+          [
+            "f(x)",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        ]
+      },
+      "choices": [
+        "f(x) = 7x + 3",
+        "f(x) = 3x + 7",
+        "f(x) = 10x",
+        "f(x) = x + 7"
+      ],
+      "answer": 1,
+      "check": "3x+7",
+      "hint": "Значение при x = 0 — свободный член, шаг между соседними значениями — угловой коэффициент.",
+      "explanation": "f(0) = 7, и с каждым шагом x значение растёт на 3, поэтому f(x) = 3x + 7 (B). Проверка: f(3) = 16. В A коэффициенты перепутаны; C верна только при x = 1; D растёт на 1, а не на 3."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 2x + 11. For what value of x is f(x) = 3?",
+      "choices": [
+        "−7",
+        "−4",
+        "4",
+        "17"
+      ],
+      "answer": 1,
+      "check": "(3-11)/2",
+      "verify": "2*ans + 11 == 3",
+      "hint": "Реши уравнение 2x + 11 = 3.",
+      "explanation": "2x = 3 − 11 = −8 ⇒ x = −4 (B). 17 — это f(3), а не x, при котором f(x) = 3; 4 — потерян знак; −7 — если не разделить на 2 и прибавить 1."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "The height, in centimeters, of a burning candle t hours after it is lit is given by h(t) = 24 − 1.5t. What is the height of the candle, in centimeters, 6 hours after it is lit?",
+      "answer": [
+        "15"
+      ],
+      "check": "24-1.5*6",
+      "hint": "Подставь t = 6.",
+      "explanation": "h(6) = 24 − 1,5 · 6 = 24 − 9 = 15 см."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The table shows three values of a linear function. What is the rate of change of y with respect to x?",
+      "table": {
+        "head": [
+          "x",
+          "2",
+          "5",
+          "11"
+        ],
+        "rows": [
+          [
+            "y",
+            "9",
+            "18",
+            "36"
+          ]
+        ]
+      },
+      "choices": [
+        "3",
+        "4.5",
+        "9",
+        "18"
+      ],
+      "answer": 0,
+      "check": "(18-9)/(5-2)",
+      "hint": "Скорость изменения — это изменение y, делённое на изменение x.",
+      "explanation": "(18 − 9)/(5 − 2) = 9/3 = 3; проверка по другой паре: (36 − 18)/(11 − 5) = 3. Ответ 3 (A). 9 — изменение y без деления на изменение x; 18 — изменение y между x = 5 и x = 11; 4,5 — отношение y/x в первой точке."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The value V, in dollars, of a laptop t years after it was purchased is modeled by V(t) = 1,200 − 150t. What does the number 150 represent in this model?",
+      "choices": [
+        "The value of the laptop when it was purchased",
+        "The decrease in the laptop's value each year",
+        "The number of years until the laptop has no value",
+        "The value of the laptop after 1 year"
+      ],
+      "answer": 1,
+      "hint": "150 умножается на t — число лет.",
+      "explanation": "Каждый год t увеличивается на 1, и V уменьшается на 150. Значит, 150 — ежегодное снижение стоимости (B). 1200 — цена при покупке; ноль стоимость достигнет через 8 лет; через год ноутбук стоит 1050."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 4x + k, where k is a constant. If f(2) = 13, what is the value of k?",
+      "answer": [
+        "5"
+      ],
+      "check": "13-8",
+      "verify": "4*2 + ans == 13",
+      "hint": "f(2) = 4 · 2 + k.",
+      "explanation": "8 + k = 13 ⇒ k = 5. Тогда f(x) = 4x + 5."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 5x − 1. Which of the following is equivalent to f(x + 2)?",
+      "choices": [
+        "5x + 1",
+        "5x + 9",
+        "5x + 10",
+        "7x − 1"
+      ],
+      "answer": 1,
+      "check": "5x+9",
+      "hint": "Замени x на (x + 2) везде и раскрой скобки.",
+      "explanation": "f(x + 2) = 5(x + 2) − 1 = 5x + 10 − 1 = 5x + 9 (B). 5x + 1 — это f(x) + 2; 5x + 10 — забыли −1; 7x − 1 — прибавили 2 к коэффициенту."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following functions has a graph in the xy-plane that falls from left to right?",
+      "choices": [
+        "f(x) = 3x + 2",
+        "f(x) = x − 9",
+        "f(x) = 4 − 2x",
+        "f(x) = (1/2)x"
+      ],
+      "answer": 2,
+      "check": "4-2x",
+      "hint": "График убывает, когда угловой коэффициент отрицательный.",
+      "explanation": "У f(x) = 4 − 2x коэффициент при x равен −2 < 0: при росте x значение уменьшается (C). У остальных коэффициенты 3, 1 и 1/2 положительны; отрицательный свободный член −9 на наклон не влияет."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = −2x + 6. For what value of x does f(x) = 0?",
+      "answer": [
+        "3"
+      ],
+      "check": "6/2",
+      "verify": "-2*ans + 6 == 0",
+      "hint": "Это точка пересечения графика с осью x.",
+      "explanation": "−2x + 6 = 0 ⇒ 2x = 6 ⇒ x = 3. Ошибка — назвать 6 (это значение f(0), пересечение с осью y)."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The cost, in dollars, of a plumbing job that takes h hours is given by P(h) = 65h + 40. How many more dollars does a 5-hour job cost than a 3-hour job?",
+      "answer": [
+        "130"
+      ],
+      "check": "65*2",
+      "hint": "Плата за вызов в разнице сокращается.",
+      "explanation": "P(5) − P(3) = (325 + 40) − (195 + 40) = 130, то есть 65 · 2: два лишних часа по 65 долларов."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function g is defined by g(x) = 3x − 4. What is the value of g(2) + g(−2)?",
+      "choices": [
+        "−16",
+        "−8",
+        "−4",
+        "0"
+      ],
+      "answer": 1,
+      "check": "(3*2-4)+(3*(-2)-4)",
+      "hint": "Посчитай каждое значение отдельно.",
+      "explanation": "g(2) = 2, g(−2) = −10, сумма −8 (B). 0 — если считать, что значения противоположны (это верно только без −4); −4 — это g(0); −16 — если дважды вычесть 8."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The graph of the linear function f passes through the points (0, 5) and (4, 13) in the xy-plane. Which of the following defines f?",
+      "choices": [
+        "f(x) = 5x + 4",
+        "f(x) = 2x + 5",
+        "f(x) = 4x + 5",
+        "f(x) = 8x + 5"
+      ],
+      "answer": 1,
+      "check": "2x+5",
+      "hint": "Точка (0, 5) даёт свободный член. Угловой коэффициент: (13 − 5)/(4 − 0).",
+      "explanation": "Наклон (13 − 5)/4 = 2, пересечение с осью y — 5: f(x) = 2x + 5 (B). Проверка: f(4) = 13. В D взято изменение y без деления на 4; C и A используют координату x = 4 как коэффициент."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The height, in centimeters, of a plant t weeks after it was first measured is modeled by h(t) = 2.5t + 30. According to the model, how many weeks after it was first measured will the plant be 45 centimeters tall?",
+      "answer": [
+        "6"
+      ],
+      "check": "(45-30)/2.5",
+      "verify": "2.5*ans + 30 == 45",
+      "hint": "Реши 2,5t + 30 = 45.",
+      "explanation": "2,5t = 15 ⇒ t = 6 недель. Ошибка — подставить 45 вместо t и получить h(45)."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 7 − 3x. Which of the following has the greatest value?",
+      "choices": [
+        "f(−2)",
+        "f(0)",
+        "f(2)",
+        "f(4)"
+      ],
+      "answer": 0,
+      "hint": "Коэффициент при x отрицательный: чем меньше x, тем больше f(x).",
+      "explanation": "f(−2) = 13, f(0) = 7, f(2) = 1, f(4) = −5. Наибольшее — f(−2) (A). Функция убывает, поэтому максимум даёт наименьший аргумент."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The table shows the cost C(n), in dollars, of printing n posters. The relationship is linear.",
+      "table": {
+        "head": [
+          "n",
+          "10",
+          "20",
+          "30"
+        ],
+        "rows": [
+          [
+            "C(n)",
+            "35",
+            "55",
+            "75"
+          ]
+        ]
+      },
+      "choices": [
+        "C(n) = 3.5n",
+        "C(n) = 2n + 15",
+        "C(n) = 20n + 15",
+        "C(n) = 2n + 35"
+      ],
+      "answer": 1,
+      "check": "2n+15",
+      "hint": "Найди, на сколько растёт цена за каждый плакат, затем свободный член.",
+      "explanation": "За 10 плакатов цена растёт на 20, то есть на 2 за плакат. 35 = 2 · 10 + b ⇒ b = 15: C(n) = 2n + 15 (B). A верна только при n = 10; в D свободный член взят из первой строки таблицы; C принимает 20 за цену плаката."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The graph of a linear function f has a slope of 4 and passes through the point (0, −3). What is the value of f(2.5)?",
+      "answer": [
+        "7"
+      ],
+      "check": "4*2.5-3",
+      "hint": "f(x) = 4x − 3.",
+      "explanation": "f(2,5) = 4 · 2,5 − 3 = 10 − 3 = 7."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A car starts a trip with 50 liters of fuel and uses 0.08 liter per kilometer. The amount of fuel left, in liters, after d kilometers is G(d) = 50 − 0.08d. After how many kilometers will 30 liters of fuel be left?",
+      "choices": [
+        "160",
+        "250",
+        "375",
+        "625"
+      ],
+      "answer": 1,
+      "check": "20/0.08",
+      "verify": "50 - 0.08*ans == 30",
+      "hint": "Сколько литров будет израсходовано? Подели на расход на километр.",
+      "explanation": "50 − 0,08d = 30 ⇒ 0,08d = 20 ⇒ d = 250 км (B). 625 — когда бак опустеет; 375 — это 30/0,08; 160 — 20 · 8."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following functions has a graph in the xy-plane with a slope of −1/2 and a y-intercept of 3?",
+      "choices": [
+        "f(x) = 3x − 1/2",
+        "f(x) = −(1/2)x + 3",
+        "f(x) = −2x + 3",
+        "f(x) = (1/2)x − 3"
+      ],
+      "answer": 1,
+      "check": "-(1/2)x+3",
+      "hint": "В виде f(x) = mx + b: m — наклон, b — пересечение с осью y.",
+      "explanation": "Нужно m = −1/2 и b = 3: f(x) = −(1/2)x + 3 (B). В A наклон и пересечение поменяны местами; C использует обратное число −2; в D перепутаны знаки."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = (x + 8)/4. What is the value of f(f(0))?",
+      "answer": [
+        "2.5",
+        "5/2"
+      ],
+      "check": "(2+8)/4",
+      "hint": "Сначала найди f(0), затем подставь результат в f.",
+      "explanation": "f(0) = 8/4 = 2. f(2) = 10/4 = 2,5. Ошибка — посчитать f(0) и остановиться (2)."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The number of pages P that Kemal has left to read in a book d days after he starts reading it is given by P(d) = 360 − 24d. What is the best interpretation of the number 360 in this context?",
+      "choices": [
+        "The number of pages in the book before Kemal starts reading",
+        "The number of pages Kemal reads each day",
+        "The number of days Kemal needs to finish the book",
+        "The number of pages Kemal has read after 24 days"
+      ],
+      "answer": 0,
+      "hint": "Подставь d = 0.",
+      "explanation": "P(0) = 360 — столько страниц осталось в день начала, то есть объём книги (A). 24 — страниц в день; книга будет прочитана за 15 дней; после 24 дней результат был бы отрицательным."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For a linear function f, f(1) = 4 and f(2) = 9. What is the value of f(3)?",
+      "answer": [
+        "14"
+      ],
+      "check": "9+5",
+      "hint": "У линейной функции значения меняются на одну и ту же величину при каждом шаге x.",
+      "explanation": "От x = 1 к x = 2 значение выросло на 5, поэтому f(3) = 9 + 5 = 14. Ошибка — умножать (9 · 9/4) как в показательной функции."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following tables shows a linear relationship between x and y?",
+      "choices": [
+        "x: 1, 2, 3; y: 2, 4, 8",
+        "x: 1, 2, 3; y: 5, 8, 11",
+        "x: 1, 2, 3; y: 1, 4, 9",
+        "x: 1, 2, 3; y: 3, 3.5, 5"
+      ],
+      "answer": 1,
+      "hint": "Линейная зависимость: при шаге x на 1 значение y меняется на одно и то же число.",
+      "explanation": "Во втором варианте y растёт на 3 и на 3 — постоянный шаг, связь линейная: y = 3x + 2 (B). В A y удваивается (показательная), в C это x², в D приращения 0,5 и 1,5 разные."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function C(f) = (5/9)(f − 32) converts a temperature of f degrees Fahrenheit to degrees Celsius. What is the value of C(212)?",
+      "answer": [
+        "100"
+      ],
+      "check": "5/9*(212-32)",
+      "hint": "Сначала вычти 32, затем умножь на 5/9.",
+      "explanation": "C(212) = (5/9) · 180 = 100 — температура кипения воды. Ошибка — умножить 212 на 5/9 и потом вычесть 32."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 3x + b, where b is a constant. If f(4) = 2f(1), what is the value of b?",
+      "choices": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "answer": 1,
+      "check": "6",
+      "verify": "3*4 + ans == 2*(3 + ans)",
+      "hint": "Запиши f(4) и f(1) через b.",
+      "explanation": "f(4) = 12 + b, f(1) = 3 + b. 12 + b = 6 + 2b ⇒ b = 6 (B). Проверка: f(4) = 18, f(1) = 9. 12 и 3 — значения без b; 9 — это f(1)."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For a linear function g, g(−2) = 11 and g(3) = −4. What is the value of g(1)?",
+      "answer": [
+        "2"
+      ],
+      "check": "11+(-3)*3",
+      "hint": "Найди наклон по двум точкам, затем шагни от x = −2 до x = 1.",
+      "explanation": "Наклон (−4 − 11)/(3 − (−2)) = −15/5 = −3. От x = −2 до x = 1 три шага: g(1) = 11 + 3 · (−3) = 2."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The graph of the linear function f has a slope of −2 and passes through the point (5, 12). Which of the following defines f?",
+      "choices": [
+        "f(x) = −2x + 12",
+        "f(x) = −2x + 2",
+        "f(x) = −2x + 22",
+        "f(x) = 12x − 2"
+      ],
+      "answer": 2,
+      "check": "-2x+22",
+      "hint": "f(x) = −2x + b. Подставь точку (5, 12), чтобы найти b.",
+      "explanation": "12 = −2 · 5 + b ⇒ b = 22: f(x) = −2x + 22 (C). A принимает 12 за пересечение с осью y; B получается при 12 − 10 вместо 12 + 10; D путает наклон и значение."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = 2x − 3 and g(x) = 5 − x. For what value of x is f(x) = g(x)?",
+      "choices": [
+        "2/3",
+        "5/3",
+        "8/3",
+        "8"
+      ],
+      "answer": 2,
+      "check": "8/3",
+      "verify": "2*ans - 3 == 5 - ans",
+      "hint": "Приравняй выражения и реши уравнение.",
+      "explanation": "2x − 3 = 5 − x ⇒ 3x = 8 ⇒ x = 8/3 (C). 8 — это 3x; 2/3 — если взять 5 − 3 вместо 5 + 3; 5/3 — если сложить 2x и x как 2x + 1."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The value of a machine decreases linearly from $18,000 when it is new to $3,000 after 12 years. By how many dollars does the machine's value decrease each year?",
+      "answer": [
+        "1250"
+      ],
+      "check": "(18000-3000)/12",
+      "hint": "Общее снижение раздели на число лет.",
+      "explanation": "(18 000 − 3000)/12 = 15 000/12 = 1250 долларов в год. Ошибка — делить 18 000 на 12 (1500): машина теряет не всю стоимость."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = −4x + 9. What is the value of f(a) − f(a + 3)?",
+      "choices": [
+        "−12",
+        "−3",
+        "12",
+        "9"
+      ],
+      "answer": 2,
+      "check": "12",
+      "hint": "Разность значений линейной функции зависит только от разности аргументов.",
+      "explanation": "f(a) − f(a + 3) = (−4a + 9) − (−4a − 12 + 9) = 12 (C). Наклон −4: при росте x на 3 значение падает на 12, поэтому «раньше минус позже» = +12. −12 — это f(a + 3) − f(a)."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A delivery company charges a base fee plus a fixed amount per kilogram. Shipping a 3-kilogram package costs $14.50, and shipping an 8-kilogram package costs $27.00. What is the base fee, in dollars?",
+      "choices": [
+        "2.50",
+        "4.50",
+        "7.00",
+        "9.50"
+      ],
+      "answer": 2,
+      "check": "14.5-3*2.5",
+      "hint": "Сначала найди цену одного килограмма по двум посылкам.",
+      "explanation": "За 5 лишних кг доплата 12,50, то есть 2,50 за кг. Базовая плата: 14,50 − 3 · 2,50 = 7,00 (C). 2,50 — цена кг; 9,50 — если вычесть 2 · 2,50; 4,50 — если взять 27 − 8 · 2,50 − 2,50."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The profit, in dollars, from selling n cups of lemonade is given by P(n) = 0.45n − 90. How many cups must be sold to make a profit of $54?",
+      "answer": [
+        "320"
+      ],
+      "check": "(54+90)/0.45",
+      "verify": "0.45*ans - 90 == 54",
+      "hint": "Реши 0,45n − 90 = 54.",
+      "explanation": "0,45n = 144 ⇒ n = 320 стаканов. Ошибка — забыть о −90: 54/0,45 = 120."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = ax + 5, where a is a constant. If f(2) = f(6) − 8, what is the value of a?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "check": "8/4",
+      "hint": "f(6) − f(2) зависит только от a.",
+      "explanation": "f(6) − f(2) = 6a − 2a = 4a = 8 ⇒ a = 2 (B). 8 — разность значений; 4 — разность аргументов."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The graph of the linear function f in the xy-plane has a slope of 3. Which of the following must be true?",
+      "choices": [
+        "f(4) − f(1) = 3",
+        "f(4) − f(1) = 9",
+        "f(4) = 3f(1)",
+        "f(4) + f(1) = 15"
+      ],
+      "answer": 1,
+      "hint": "Наклон 3: каждый шаг x на 1 добавляет 3.",
+      "explanation": "От x = 1 до x = 4 три шага: f(4) − f(1) = 3 · 3 = 9 (B). A — изменение за один шаг; C — пропорциональность, которая верна не всегда; D зависит от свободного члена."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 3x − 7. For what value of k is f(k) = 2k?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "3*ans - 7 == 2*ans",
+      "hint": "Запиши 3k − 7 = 2k.",
+      "explanation": "3k − 7 = 2k ⇒ k = 7. Проверка: f(7) = 14 = 2 · 7."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Tree A is 4 feet tall and grows 1.5 feet per year. Tree B is 10 feet tall and grows 0.75 foot per year. If both trees keep growing at these rates, after how many years will they be the same height?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "answer": 2,
+      "check": "6/0.75",
+      "verify": "4 + 1.5*ans == 10 + 0.75*ans",
+      "hint": "Разрыв 6 футов сокращается на разность скоростей роста.",
+      "explanation": "4 + 1,5t = 10 + 0,75t ⇒ 0,75t = 6 ⇒ t = 8 лет (C); обе будут высотой 16 футов. 4 — это 6/1,5; 12 — если сложить скорости неверно; 6 — сам разрыв."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The table shows three values of the linear function h.",
+      "table": {
+        "head": [
+          "x",
+          "−1",
+          "0",
+          "1"
+        ],
+        "rows": [
+          [
+            "h(x)",
+            "7",
+            "4",
+            "1"
+          ]
+        ]
+      },
+      "choices": [
+        "h(x) = 3x + 4",
+        "h(x) = −3x + 4",
+        "h(x) = 4x − 3",
+        "h(x) = −3x + 7"
+      ],
+      "answer": 1,
+      "check": "-3x+4",
+      "hint": "Что происходит со значением, когда x растёт на 1?",
+      "explanation": "h(0) = 4, и при росте x на 1 значение уменьшается на 3: h(x) = −3x + 4 (B). Проверка: h(−1) = 7. A — неверный знак наклона; D берёт значение при x = −1 за свободный член."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 6 − x/2. What is the value of f(−4) − f(4)?",
+      "answer": [
+        "4"
+      ],
+      "check": "(6+2)-(6-2)",
+      "hint": "Можно посчитать оба значения, а можно — через наклон −1/2.",
+      "explanation": "f(−4) = 8, f(4) = 4, разность 4. Через наклон: при уменьшении x на 8 значение растёт на 8 · 1/2 = 4."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Truck rental R costs $30 plus $0.60 per mile. Truck rental S costs $45 plus $0.40 per mile. Which statement is true for a 100-mile trip?",
+      "choices": [
+        "Rental R costs $5 less than rental S.",
+        "Rental S costs $5 less than rental R.",
+        "The two rentals cost the same.",
+        "Rental S costs $15 less than rental R."
+      ],
+      "answer": 1,
+      "hint": "Посчитай стоимость обеих аренд при 100 милях.",
+      "explanation": "R: 30 + 60 = 90. S: 45 + 40 = 85. S дешевле на 5 долларов (B). 15 — разница только фиксированных плат."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For a linear function f, f(3) = 5 and f(7) = 17. For what value of x is f(x) = 50?",
+      "choices": [
+        "16",
+        "18",
+        "19",
+        "146"
+      ],
+      "answer": 1,
+      "check": "18",
+      "verify": "3*ans - 4 == 50",
+      "hint": "Найди наклон и запиши формулу f(x).",
+      "explanation": "Наклон (17 − 5)/4 = 3, f(x) = 3x − 4. 3x − 4 = 50 ⇒ x = 18 (B). 146 — это f(50); 16 и 19 — ошибки в свободном члене."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "In the xy-plane, the graph of a linear function f has an x-intercept of −4 and passes through the point (2, 9). What is the value of f(10)?",
+      "answer": [
+        "21"
+      ],
+      "check": "1.5*14",
+      "hint": "x-intercept −4 означает точку (−4, 0).",
+      "explanation": "Наклон (9 − 0)/(2 − (−4)) = 9/6 = 1,5. f(10) = 0 + 1,5 · (10 − (−4)) = 21. Ошибка — взять точку (0, −4) вместо (−4, 0)."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = (2/3)x + 4. By how much does the value of f(x) increase when the value of x increases by 9?",
+      "choices": [
+        "6",
+        "9",
+        "10",
+        "13.5"
+      ],
+      "answer": 0,
+      "check": "2/3*9",
+      "hint": "Приращение функции = наклон × приращение аргумента.",
+      "explanation": "(2/3) · 9 = 6 (A). 10 — это f(9); 13,5 — деление на 2/3 вместо умножения; 9 — приращение x."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A bank converts D dollars to euros using the function E(D) = 0.92D − 3, where the 3 is a fee in euros. How many dollars must be converted to receive 181 euros?",
+      "choices": [
+        "163.52",
+        "184",
+        "196.74",
+        "200"
+      ],
+      "answer": 3,
+      "check": "184/0.92",
+      "verify": "0.92*ans - 3 == 181",
+      "hint": "Реши 0,92D − 3 = 181.",
+      "explanation": "0,92D = 184 ⇒ D = 200 (D). 196,74 — забыли про комиссию (181/0,92); 163,52 — применили формулу к 181, а не решили уравнение; 184 — нужная сумма в евро до деления."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The function f is linear, f(0) = 8, and f(f(0)) = −16. What is the value of f(1)?",
+      "answer": [
+        "5"
+      ],
+      "check": "-3+8",
+      "hint": "f(x) = mx + 8, а f(f(0)) = f(8).",
+      "explanation": "f(8) = 8m + 8 = −16 ⇒ m = −3. f(x) = −3x + 8, f(1) = 5."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Line ℓ passes through the points (1, 3) and (4, 12). Which of the following functions has a graph that is line ℓ shifted down 5 units?",
+      "choices": [
+        "f(x) = 3x + 5",
+        "f(x) = 3x − 5",
+        "f(x) = 3(x − 5)",
+        "f(x) = 3x − 2"
+      ],
+      "answer": 1,
+      "check": "3x-5",
+      "hint": "Найди уравнение ℓ, затем вычти 5 из всей функции.",
+      "explanation": "Наклон (12 − 3)/3 = 3, и 3 = 3 · 1 + b ⇒ b = 0: ℓ — это y = 3x. Сдвиг вниз на 5: f(x) = 3x − 5 (B). C — сдвиг вправо на 5; A — вверх; D получена из неверного b."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The function S(t) = 1,500 + 120t gives the amount S, in dollars, in a savings account t months after it was opened. Which of the following expresses t in terms of S?",
+      "choices": [
+        "t = (S − 1,500)/120",
+        "t = S/120 − 1,500",
+        "t = 120S + 1,500",
+        "t = (S + 1,500)/120"
+      ],
+      "answer": 0,
+      "hint": "Реши S = 1500 + 120t относительно t.",
+      "explanation": "S − 1500 = 120t ⇒ t = (S − 1500)/120 (A). В B 1500 вычитается после деления; C и D — неверные обратные действия."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A linear function g satisfies g(2x) = 6x − 5 for all values of x. What is the value of g(4)?",
+      "answer": [
+        "7"
+      ],
+      "check": "3*4-5",
+      "hint": "g(4) получится при 2x = 4.",
+      "explanation": "g(4) — это g(2 · 2) = 6 · 2 − 5 = 7. Общая формула: g(u) = 3u − 5. Ошибка — подставить x = 4 и получить g(8) = 19."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = 4x + 1 and g(x) = −2x + 13. For which values of x is f(x) > g(x)?",
+      "choices": [
+        "x < 2",
+        "x > 2",
+        "x > 6",
+        "x < 6"
+      ],
+      "answer": 1,
+      "hint": "Реши неравенство 4x + 1 > −2x + 13.",
+      "explanation": "6x > 12 ⇒ x > 2 (B). При x = 2 значения равны (9 = 9), правее f растёт, а g убывает. A — сторона, где f(x) < g(x); 6 в C и D — коэффициент при x после переноса, а не граница."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Taxi company A charges f(m) = 3 + 2.25m dollars for a ride of m miles, and taxi company B charges g(m) = 5.5 + 1.75m dollars. For a ride of how many miles do the two companies charge the same amount?",
+      "choices": [
+        "2.5",
+        "5",
+        "10",
+        "12.5"
+      ],
+      "answer": 1,
+      "check": "2.5/0.5",
+      "verify": "3 + 2.25*ans == 5.5 + 1.75*ans",
+      "hint": "Разница фиксированных плат 2,50, разница цен за милю 0,50.",
+      "explanation": "3 + 2,25m = 5,5 + 1,75m ⇒ 0,5m = 2,5 ⇒ m = 5 (B). Обе поездки стоят 14,25. 2,5 — разница плат; 10 и 12,5 — ошибки деления."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For a linear function f, f(1) = 5 and f(4) = 14. What is the value of f(1) + f(2) + f(3) + f(4)?",
+      "answer": [
+        "38"
+      ],
+      "check": "5+8+11+14",
+      "hint": "Найди шаг: от f(1) до f(4) три одинаковых шага.",
+      "explanation": "Шаг (14 − 5)/3 = 3: значения 5, 8, 11, 14, сумма 38. Короче: среднее значение (5 + 14)/2 = 9,5, умноженное на 4."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The amount of water W(t), in cubic meters, in a reservoir decreases linearly over time t, in days. If W(10) = 4,200 and W(25) = 3,300, after how many days will the reservoir be empty?",
+      "choices": [
+        "55",
+        "70",
+        "80",
+        "95"
+      ],
+      "answer": 2,
+      "check": "4800/60",
+      "hint": "Найди убыль в день и начальный запас W(0).",
+      "explanation": "Убыль (4200 − 3300)/15 = 60 в день. W(0) = 4200 + 10 · 60 = 4800, поэтому W(t) = 0 при t = 4800/60 = 80 (C). 70 — это 4200/60 (отсчёт от дня 10 без прибавления 10); 55 — 3300/60."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = kx + 3, where k is a constant. If the graph of y = f(x) passes through the point (k, 19), which of the following could be the value of k?",
+      "choices": [
+        "−4",
+        "3",
+        "8",
+        "16"
+      ],
+      "answer": 0,
+      "check": "-4",
+      "verify": "ans*ans + 3 == 19",
+      "hint": "Подставь x = k: f(k) = k · k + 3.",
+      "explanation": "k² + 3 = 19 ⇒ k² = 16 ⇒ k = 4 или k = −4. Среди вариантов есть только −4 (A). 16 — это k²; 8 — это 16/2."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The point (a, b) lies on the graph of y = 5x − 12 in the xy-plane, and b = 3a. What is the value of a?",
+      "answer": [
+        "6"
+      ],
+      "check": "12/2",
+      "verify": "5*ans - 12 == 3*ans",
+      "hint": "Точка на графике: b = 5a − 12. Приравняй к 3a.",
+      "explanation": "Точка на графике: b = 5a − 12. Вместе с b = 3a: 5a − 12 = 3a ⇒ a = 6, b = 18."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A gym offers two options: a monthly pass for $50 or $8 per visit. Which inequality gives all numbers of visits v in a month for which the monthly pass costs less than paying per visit?",
+      "choices": [
+        "v < 6.25",
+        "v > 6.25",
+        "v > 8",
+        "v > 50"
+      ],
+      "answer": 1,
+      "hint": "Абонемент дешевле, когда оплата за посещения больше 50.",
+      "explanation": "8v > 50 ⇒ v > 6,25 (B), то есть от 7 посещений. A описывает случай, когда дешевле платить за посещения."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The length, in centimeters, of a seedling t days after it was first measured is modeled by f(t) = 2.4t + 16.8. According to the model, what was the length of the seedling 3 days before it was first measured?",
+      "choices": [
+        "9.6",
+        "14.4",
+        "19.2",
+        "24"
+      ],
+      "answer": 0,
+      "check": "16.8-7.2",
+      "hint": "«За 3 дня до первого измерения» — это t = −3.",
+      "explanation": "f(−3) = −7,2 + 16,8 = 9,6 см (A). 24 — это f(3); 14,4 — 2,4 · 6; 19,2 — f(1)."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 3x + 2. If f(a) = 17, what is the value of f(2a)?",
+      "answer": [
+        "32"
+      ],
+      "check": "3*10+2",
+      "hint": "Найди a, затем подставь 2a.",
+      "explanation": "3a + 2 = 17 ⇒ a = 5. f(10) = 32. Ошибка — считать f(2a) = 2f(a) = 34: из-за свободного члена удвоение не переносится."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For a linear function f, f(0) = 6 and f(4) = −2. For what value of x does f(x) = −x?",
+      "choices": [
+        "−6",
+        "2",
+        "3",
+        "6"
+      ],
+      "answer": 3,
+      "check": "6",
+      "verify": "-2*ans + 6 == -ans",
+      "hint": "Найди формулу f, затем реши f(x) = −x.",
+      "explanation": "Наклон (−2 − 6)/4 = −2, f(x) = −2x + 6. −2x + 6 = −x ⇒ x = 6 (D). 3 — это корень f(x) = 0; 2 — решение f(x) = x."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The distance, in kilometers, of a train from a station t hours after noon is D(t) = 240 − 80t. Which of the following is the best interpretation of the t-intercept of the graph of D?",
+      "choices": [
+        "The train is 240 kilometers from the station at noon.",
+        "The train arrives at the station 3 hours after noon.",
+        "The train travels 80 kilometers each hour.",
+        "The train is 80 kilometers from the station after 3 hours."
+      ],
+      "answer": 1,
+      "hint": "t-intercept — это t, при котором D(t) = 0.",
+      "explanation": "240 − 80t = 0 ⇒ t = 3: через 3 часа расстояние до станции 0 — поезд прибыл (B). A описывает D-intercept; C — наклон; D неверно — через 3 часа расстояние 0."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 7x − 4. For what value of x is f(x) equal to f(3) + 14?",
+      "answer": [
+        "5"
+      ],
+      "check": "35/7",
+      "verify": "7*ans - 4 == 7*3 - 4 + 14",
+      "hint": "f(3) + 14 — это на 14 больше значения при x = 3; наклон 7.",
+      "explanation": "f(3) = 17, нужно f(x) = 31 ⇒ 7x = 35 ⇒ x = 5. Или: прибавка 14 при наклоне 7 — это шаг x на 2, от 3 до 5."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For the linear function f, f(1) = 3 and f(f(1)) = 11. What is the value of f(4)?",
+      "choices": [
+        "11",
+        "13",
+        "15",
+        "19"
+      ],
+      "answer": 2,
+      "check": "4*4-1",
+      "hint": "f(f(1)) = f(3). Теперь известны две точки: (1, 3) и (3, 11).",
+      "explanation": "f(3) = 11 и f(1) = 3, наклон (11 − 3)/2 = 4, f(x) = 4x − 1. f(4) = 15 (C). 11 — это f(3); 19 — если сделать от x = 3 два шага по 4; 13 — если найти наклон как 8/4 = 2 (делить на 4 вместо 2) и прибавить его к f(3)."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For a linear function f, f(2) + f(5) = 31 and f(5) − f(2) = 9. What is the value of f(10)?",
+      "answer": [
+        "35"
+      ],
+      "check": "20+5*3",
+      "hint": "Сложи и вычти равенства, чтобы найти f(5) и f(2).",
+      "explanation": "2f(5) = 40 ⇒ f(5) = 20, f(2) = 11. Наклон 9/3 = 3. f(10) = 20 + 5 · 3 = 35."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The total cost T, in dollars, of a service is a linear function of the number of hours h. When h increases from 20 to 26, T increases from $250 to $295. What is the fixed cost, in dollars, that is charged even when h = 0?",
+      "choices": [
+        "7.50",
+        "100",
+        "150",
+        "250"
+      ],
+      "answer": 1,
+      "check": "250-7.5*20",
+      "hint": "Найди цену часа, затем вычти стоимость 20 часов из 250.",
+      "explanation": "Цена часа 45/6 = 7,5. Фиксированная часть: 250 − 7,5 · 20 = 100 (B). 150 — переменная часть при 20 часах; 7,50 — цена часа; 250 — полная стоимость."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The function f is linear, f(x + 3) = f(x) + 12 for all values of x, and f(−1) = 2. Which of the following defines f?",
+      "choices": [
+        "f(x) = 12x + 14",
+        "f(x) = 3x + 5",
+        "f(x) = 4x + 6",
+        "f(x) = 4x + 2"
+      ],
+      "answer": 2,
+      "check": "4x+6",
+      "hint": "Рост на 12 при шаге 3 — какой это наклон?",
+      "explanation": "Наклон 12/3 = 4. f(−1) = −4 + b = 2 ⇒ b = 6: f(x) = 4x + 6 (C). A принимает 12 за наклон; D использует 2 как свободный член; B — шаг 3 как наклон."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A rental company charges $40 plus $0.35 per mile for a one-day rental, but the charge for any single day never exceeds $90. Ana paid $68 for a rental on Monday. On Tuesday she drove twice as many miles as on Monday. How much did she pay for Tuesday's rental?",
+      "choices": [
+        "$90",
+        "$96",
+        "$108",
+        "$136"
+      ],
+      "answer": 0,
+      "check": "90",
+      "hint": "Найди пробег в понедельник, посчитай вторник и сравни с потолком 90.",
+      "explanation": "Понедельник: 40 + 0,35m = 68 ⇒ m = 80 миль. Вторник: 160 миль, 40 + 0,35 · 160 = 96, но больше 90 не берут — оплата 90 (A). 96 — без учёта потолка; 136 — удвоенная оплата понедельника (фиксированная часть не удваивается); 108 — 68 + 40."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = 3x − 5 and g(x) = ax + 2, where a is a constant. If f(g(x)) = g(f(x)) for all values of x, what is the value of a?",
+      "choices": [
+        "−1/5",
+        "1/5",
+        "1",
+        "3"
+      ],
+      "answer": 1,
+      "check": "1/5",
+      "hint": "Распиши обе композиции и сравни свободные члены.",
+      "explanation": "f(g(x)) = 3(ax + 2) − 5 = 3ax + 1. g(f(x)) = a(3x − 5) + 2 = 3ax − 5a + 2. Коэффициенты при x равны всегда, нужно 1 = −5a + 2 ⇒ a = 1/5 (B). −1/5 — ошибка знака; a = 1 даёт 1 = −3, неверно."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For a linear function f, f(4) = 10 and f(10) = 4. For what value of x does f(x) = 2x?",
+      "answer": [
+        "14/3",
+        "4.666",
+        "4.667"
+      ],
+      "check": "14/3",
+      "verify": "-ans + 14 == 2*ans",
+      "hint": "Сначала найди формулу f: наклон и свободный член.",
+      "explanation": "Наклон (4 − 10)/6 = −1, f(x) = −x + 14. −x + 14 = 2x ⇒ x = 14/3 ≈ 4,667. Проверка: f(14/3) = 28/3 = 2 · 14/3."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The graph of the linear function f passes through the point (−2, 7) and has the same y-intercept as the graph of g(x) = 4 − 3x. What is the value of f(6)?",
+      "choices": [
+        "−14",
+        "−5",
+        "−2",
+        "13"
+      ],
+      "answer": 1,
+      "check": "4-1.5*6",
+      "hint": "Пересечение с осью y у f: (0, 4). Вторая точка: (−2, 7).",
+      "explanation": "Наклон f: (4 − 7)/(0 − (−2)) = −3/2. f(6) = 4 − 1,5 · 6 = −5 (B). −14 — это g(6) (взят наклон g); 13 — если взять наклон +3/2; −2 — ошибка в шаге."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A theater estimates that it sells N(p) = 1,200 − 40p tickets when the ticket price is p dollars. At what ticket price would the theater sell two-thirds as many tickets as it sells at a price of $6?",
+      "choices": [
+        "9",
+        "10",
+        "14",
+        "20"
+      ],
+      "answer": 2,
+      "check": "560/40",
+      "verify": "1200 - 40*ans == 2/3*(1200 - 40*6)",
+      "hint": "Сначала посчитай N(6), затем возьми две трети.",
+      "explanation": "N(6) = 960, две трети — 640. 1200 − 40p = 640 ⇒ p = 14 (C). 9 — если взять 2/3 от цены вместо количества; 20 — если брать 2/3 от 1200; 10 — ошибка в вычитании."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = mx + b, where m and b are constants. If f(2) = 3f(0) and f(6) = 20, what is the value of b?",
+      "answer": [
+        "20/7",
+        "2.857"
+      ],
+      "check": "20/7",
+      "verify": "6*ans + ans == 20",
+      "hint": "Из первого условия следует связь между m и b.",
+      "explanation": "f(2) = 2m + b, f(0) = b. 2m + b = 3b ⇒ m = b. Тогда f(6) = 6b + b = 7b = 20 ⇒ b = 20/7 ≈ 2,857."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The height, in feet, of a tree t years after it was planted is modeled by h(t) = 1.8t + 4.2. Which of the following statements is true according to the model?",
+      "choices": [
+        "The tree was 1.8 feet tall when it was planted.",
+        "The tree grows 18 feet every 10 years.",
+        "The height of the tree doubles every 1.8 years.",
+        "The tree is 6 feet tall 2 years after it was planted."
+      ],
+      "answer": 1,
+      "hint": "Проверь каждое утверждение подстановкой.",
+      "explanation": "Наклон 1,8 фута в год, за 10 лет — 18 футов (B). При посадке высота 4,2 (не 1,8); линейная модель не удваивается; через 2 года h(2) = 7,8, а не 6."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = (3 − k)x + k and g(x) = kx − 1, where k is a constant. For what value of k are the graphs of y = f(x) and y = g(x) parallel?",
+      "choices": [
+        "0",
+        "1",
+        "3/2",
+        "3"
+      ],
+      "answer": 2,
+      "check": "3/2",
+      "verify": "3 - ans == ans",
+      "hint": "Параллельные прямые: одинаковые наклоны и разные пересечения с осью y.",
+      "explanation": "3 − k = k ⇒ k = 3/2 (C). Тогда f(x) = 1,5x + 1,5 и g(x) = 1,5x − 1 — пересечения разные, прямые параллельны, а не совпадают. При k = 3 наклон f равен 0, а g — 3."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A store's daily profit P, in dollars, is a linear function of the number of customers c. With 120 customers, the profit is $360; with 200 customers, the profit is $1,000. For how many customers is the daily profit $0?",
+      "answer": [
+        "75"
+      ],
+      "check": "600/8",
+      "verify": "8*ans - 600 == 0",
+      "hint": "Найди прибыль с одного покупателя и прибыль при c = 0.",
+      "explanation": "Наклон (1000 − 360)/80 = 8. P(c) = 8c + b: 960 + b = 360 ⇒ b = −600. 8c − 600 = 0 ⇒ c = 75."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A phone plan costs f(m) = 0.12m + 15 dollars for m minutes of calls in a month. A new plan lowers the per-minute rate by 25% and raises the monthly fee by $6. For how many minutes of calls in a month do the two plans cost the same?",
+      "choices": [
+        "50",
+        "150",
+        "200",
+        "300"
+      ],
+      "answer": 2,
+      "check": "6/0.03",
+      "verify": "0.12*ans + 15 == 0.09*ans + 21",
+      "hint": "Новая цена минуты: 0,12 · 0,75.",
+      "explanation": "Новый план: 0,09m + 21. 0,12m + 15 = 0,09m + 21 ⇒ 0,03m = 6 ⇒ m = 200 (C). 150 — если снизить цену минуты на 0,04 вместо 25%; 300 — если взять новую цену 0,10; 50 — если решать 0,12m = 6, забыв, что старый план тоже дорожает с минутами."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The formula F = 1.8C + 32 converts a temperature C, in degrees Celsius, to F, in degrees Fahrenheit. During one afternoon, the temperature rose by 27 degrees Fahrenheit. By how many degrees Celsius did the temperature rise?",
+      "answer": [
+        "15"
+      ],
+      "check": "27/1.8",
+      "hint": "Изменение F зависит только от изменения C — константа 32 сокращается.",
+      "explanation": "ΔF = 1,8 · ΔC ⇒ 27 = 1,8ΔC ⇒ ΔC = 15. Ошибка — вычитать 32 из 27: это переводит температуру, а не её изменение."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The graph of the linear function f crosses the x-axis at x = 3, and f(5) = f(1) + 16. What is the value of f(0)?",
+      "choices": [
+        "−16",
+        "−12",
+        "3",
+        "12"
+      ],
+      "answer": 1,
+      "check": "-12",
+      "hint": "Из второго условия найди наклон; x-intercept даёт точку (3, 0).",
+      "explanation": "Наклон (f(5) − f(1))/4 = 16/4 = 4. f(x) = 4(x − 3), f(0) = −12 (B). 12 — ошибка знака; −16 — наклон 4, умноженный на 4; 3 — x-intercept."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For a linear function f, the average of f(1), f(2), and f(3) is 10, and f(5) = 22. What is the value of f(0)?",
+      "answer": [
+        "2"
+      ],
+      "check": "10-2*4",
+      "hint": "У линейной функции среднее значений в равноотстоящих точках — значение в средней точке.",
+      "explanation": "Среднее f(1), f(2), f(3) равно f(2) = 10. Наклон (22 − 10)/(5 − 2) = 4. f(0) = 10 − 2 · 4 = 2."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For a linear function g, g(a) = b and g(b) = a, where a and b are constants and a ≠ b. What is the slope of the graph of y = g(x)?",
+      "choices": [
+        "−1",
+        "0",
+        "1",
+        "(a − b)/2"
+      ],
+      "answer": 0,
+      "check": "-1",
+      "hint": "Наклон через точки (a, b) и (b, a).",
+      "explanation": "Наклон (a − b)/(b − a) = −1 (A). Точки (a, b) и (b, a) симметричны относительно прямой y = x, и соединяющая их прямая перпендикулярна ей."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Printer P charges $0.08 per page plus a $12 setup fee. Printer Q charges $0.11 per page with no setup fee. For a job of 1,000 pages, how many dollars less does the cheaper printer charge?",
+      "choices": [
+        "18",
+        "30",
+        "12",
+        "92"
+      ],
+      "answer": 0,
+      "check": "110-92",
+      "hint": "Посчитай стоимость у обоих.",
+      "explanation": "P: 80 + 12 = 92. Q: 110. P дешевле на 18 (A). 30 — разница только постраничной оплаты; 12 — только плата за настройку; 92 — сама стоимость P."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 4x − 7. The value of f(x) increases by 18 when x increases from a to b. What is the value of b − a?",
+      "answer": [
+        "4.5",
+        "9/2"
+      ],
+      "check": "18/4",
+      "hint": "f(b) − f(a) = 4(b − a).",
+      "explanation": "4(b − a) = 18 ⇒ b − a = 4,5. Константа −7 сокращается."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 2x + 3. The function g is defined by g(x) = f(x − 2) + 5. Which of the following defines g?",
+      "choices": [
+        "g(x) = 2x + 6",
+        "g(x) = 2x + 4",
+        "g(x) = 2x + 10",
+        "g(x) = 2x − 1"
+      ],
+      "answer": 1,
+      "check": "2x+4",
+      "hint": "Подставь x − 2 в f, затем прибавь 5.",
+      "explanation": "f(x − 2) = 2x − 4 + 3 = 2x − 1, g(x) = 2x − 1 + 5 = 2x + 4 (B). D — это f(x − 2) без +5; C — если сдвинуть x влево (+4); A — если вычесть 2 только из свободного члена."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The total cost, in dollars, of a club trip for n students is C(n) = 1.5n + 90, and the cost is split equally among the n students. What is the least number of students for which each student pays at most $6?",
+      "choices": [
+        "15",
+        "20",
+        "40",
+        "60"
+      ],
+      "answer": 1,
+      "check": "20",
+      "hint": "Доля одного: (1,5n + 90)/n ≤ 6.",
+      "explanation": "1,5n + 90 ≤ 6n ⇒ 90 ≤ 4,5n ⇒ n ≥ 20 (B). При 20 студентах каждый платит ровно 6. 60 — это 90/1,5; 15 — 90/6 без учёта 1,5n; при 40 доля меньше 6, но это не наименьшее число."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For the linear function f, f(3) = 2 and f(f(3)) = 5. What is the value of f(f(f(3)))?",
+      "answer": [
+        "-4"
+      ],
+      "check": "-3*5+11",
+      "hint": "f(f(3)) = f(2) = 5. Найди формулу по точкам (3, 2) и (2, 5).",
+      "explanation": "Наклон (5 − 2)/(2 − 3) = −3, f(x) = −3x + 11. f(f(f(3))) = f(5) = −15 + 11 = −4."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The graph of the linear function y = f(x) passes through the points (1, 4) and (5, 12). The graph of y = f(x − 2) passes through the point (a, 12). What is the value of a?",
+      "choices": [
+        "3",
+        "5",
+        "7",
+        "10"
+      ],
+      "answer": 2,
+      "check": "7",
+      "hint": "f(x − 2) = 12, когда x − 2 = 5.",
+      "explanation": "f(5) = 12, и линейная функция принимает значение 12 только один раз. Значит, a − 2 = 5 ⇒ a = 7 (C). График f(x − 2) — это график f, сдвинутый вправо на 2. 3 — сдвиг влево."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The length L, in centimeters, of a spring is a linear function of the mass m, in grams, hanging from it. With a 250-gram mass the spring is 22 centimeters long, and with a 400-gram mass it is 28 centimeters long. What is the length of the spring, in centimeters, with no mass hanging from it?",
+      "answer": [
+        "12"
+      ],
+      "check": "22-0.04*250",
+      "hint": "Найди удлинение на грамм и вычти удлинение от 250 г.",
+      "explanation": "Наклон 6/150 = 0,04 см/г. L(0) = 22 − 0,04 · 250 = 12 см."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Oven A starts at 20°C, heats at 20°C per minute until it reaches 180°C, and then stays at 180°C. Oven B starts at 60°C at the same time and heats at 12°C per minute. After how many minutes are the two ovens at the same temperature for the second time?",
+      "choices": [
+        "5",
+        "8",
+        "10",
+        "12.5"
+      ],
+      "answer": 2,
+      "check": "(180-60)/12",
+      "hint": "Найди первую встречу, потом учти, что после 8 минут печь A перестаёт нагреваться.",
+      "explanation": "Первая встреча: 20 + 20t = 60 + 12t ⇒ t = 5 (100°C). С 8-й минуты A держит 180°C, а B достигает 180°C при 60 + 12t = 180 ⇒ t = 10 (C). 8 — момент остановки A; 12,5 — если считать, что A продолжает греться."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "For a linear function f, f(1) = 4 and f(1) + f(2) + f(3) + ... + f(10) = 175. What is the value of f(10)?",
+      "answer": [
+        "31"
+      ],
+      "check": "175/5-4",
+      "hint": "Значения линейной функции в точках 1, 2, …, 10 образуют арифметическую прогрессию.",
+      "explanation": "Сумма 10 членов: 10 · (f(1) + f(10))/2 = 5(4 + f(10)) = 175 ⇒ f(10) = 31. Наклон (31 − 4)/9 = 3."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A linear function f satisfies f(2x + 1) = 6x + 7 for all values of x. Which of the following defines f?",
+      "choices": [
+        "f(x) = 6x + 7",
+        "f(x) = 3x + 4",
+        "f(x) = 3x + 7",
+        "f(x) = 6x + 1"
+      ],
+      "answer": 1,
+      "check": "3x+4",
+      "hint": "Обозначь u = 2x + 1 и вырази x через u.",
+      "explanation": "x = (u − 1)/2, поэтому f(u) = 6 · (u − 1)/2 + 7 = 3u + 4 (B). Проверка: f(2x + 1) = 6x + 3 + 4 = 6x + 7. A и D игнорируют замену; C — наклон верный, но свободный член потерян при подстановке."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Car A starts with 48 liters of fuel and uses 6 liters per hour. Car B starts with 33 liters of fuel and uses 3 liters per hour. Both cars drive without stopping. After how many hours will car B have exactly 1.5 times as much fuel as car A?",
+      "answer": [
+        "6.5",
+        "13/2"
+      ],
+      "check": "39/6",
+      "verify": "33 - 3*ans == 1.5*(48 - 6*ans)",
+      "hint": "Топливо: A — 48 − 6t, B — 33 − 3t. Не забудь проверить, что у A ещё есть топливо.",
+      "explanation": "33 − 3t = 1,5(48 − 6t) = 72 − 9t ⇒ 6t = 39 ⇒ t = 6,5 ч. У A останется 9 л, у B — 13,5 = 1,5 · 9. Бак A опустел бы только через 8 часов, так что ответ возможен."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The graph of the linear function f is perpendicular to the graph of y = 2x − 7, and f(1) = 5. What is the value of f(9)?",
+      "choices": [
+        "−3",
+        "1",
+        "9",
+        "21"
+      ],
+      "answer": 1,
+      "check": "5-0.5*8",
+      "hint": "Наклон перпендикулярной прямой — противоположный обратный: −1/2.",
+      "explanation": "Наклон f равен −1/2. f(9) = 5 + (−1/2) · 8 = 1 (B). 21 — наклон 2 (параллельно, а не перпендикулярно); 9 — наклон +1/2; −3 — наклон −1."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A tutoring company charges a flat fee plus a fixed rate per hour. A 2-hour session costs $90. For a 5-hour session, the average cost per hour is 30% less than the average cost per hour of the 2-hour session. What is the flat fee, in dollars?",
+      "answer": [
+        "45"
+      ],
+      "check": "90-2*22.5",
+      "hint": "Средняя цена часа за 2 часа — 45. За 5 часов — на 30% меньше; найди полную стоимость 5 часов.",
+      "explanation": "За 2 часа в среднем 45 в час, за 5 часов — 45 · 0,7 = 31,5 в час, итого 157,5. Ставка: (157,5 − 90)/3 = 22,5. Фиксированная плата: 90 − 2 · 22,5 = 45."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 3x + k, where k is a constant. The graph of y = g(x) is the reflection of the graph of y = f(x) across the x-axis. If the graphs of f and g intersect at the point where x = 2, what is the value of k?",
+      "choices": [
+        "−6",
+        "−2",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "check": "-6",
+      "verify": "3*2 + ans == 0",
+      "hint": "g(x) = −f(x). Где f(x) = −f(x)?",
+      "explanation": "f(x) = −f(x) только при f(x) = 0, то есть графики пересекаются на оси x. f(2) = 6 + k = 0 ⇒ k = −6 (A). 6 — ошибка знака; ±2 — если приравнять 3x + k к −3x + k."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A company's revenue from selling n bottles of juice is R(n) = 3n dollars, and its cost is C(n) = n + 300 dollars. For how many bottles is the profit equal to 50% of the cost?",
+      "answer": [
+        "300"
+      ],
+      "check": "450/1.5",
+      "verify": "3*ans - (ans + 300) == 0.5*(ans + 300)",
+      "hint": "Прибыль: R − C = 2n − 300. Приравняй к 0,5(n + 300).",
+      "explanation": "2n − 300 = 0,5n + 150 ⇒ 1,5n = 450 ⇒ n = 300. Проверка: затраты 600, выручка 900, прибыль 300 = 50% затрат."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is linear, and f(0) = 6. For every increase of 2 in the value of x, the value of f(x) decreases by 5. For what value of x does f(x) = −19?",
+      "choices": [
+        "5",
+        "10",
+        "12.5",
+        "−10"
+      ],
+      "answer": 1,
+      "check": "25/2.5",
+      "verify": "6 - 2.5*ans == -19",
+      "hint": "Наклон −5/2.",
+      "explanation": "f(x) = 6 − 2,5x. 6 − 2,5x = −19 ⇒ 2,5x = 25 ⇒ x = 10 (B). 5 — если взять наклон −5; 12,5 — наклон −2; −10 — ошибка знака."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The graph of f(x) = (3/4)x + 6 crosses the x-axis at point A and the y-axis at point B. What is the distance between A and B?",
+      "answer": [
+        "10"
+      ],
+      "check": "sqrt(8^2+6^2)",
+      "hint": "Найди обе точки пересечения и примени теорему Пифагора.",
+      "explanation": "A = (−8, 0), B = (0, 6). AB = √(8² + 6²) = √100 = 10."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For a linear function f, f(a) = 2a and f(2a) = a, where a is a nonzero constant. Which of the following is equal to f(0)?",
+      "choices": [
+        "a",
+        "2a",
+        "3a",
+        "−a"
+      ],
+      "answer": 2,
+      "check": "3a",
+      "hint": "Найди наклон по точкам (a, 2a) и (2a, a).",
+      "explanation": "Наклон (a − 2a)/(2a − a) = −1. f(0) = f(a) + a · 1 = 2a + a = 3a (C). Шаг от x = a к x = 0 — это −a, а при наклоне −1 значение растёт на a."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Water flows into a tank at 12 liters per minute while it drains at 4.5 liters per minute. At noon the tank held 30 liters. At 12:20 p.m. the drain was closed, and water kept flowing in at the same rate. How many liters did the tank hold at 12:35 p.m.?",
+      "answer": [
+        "360"
+      ],
+      "check": "30+7.5*20+12*15",
+      "hint": "Два участка: до 12:20 чистый приток 7,5 л/мин, после — 12 л/мин.",
+      "explanation": "К 12:20: 30 + 7,5 · 20 = 180 л. За следующие 15 минут: +12 · 15 = 180. Итого 360 л. Ошибка — считать сливом все 35 минут (292,5) или притоком 12 л/мин все 35 минут (450)."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = 5 − 2x and g(x) = f(x + h), where h is a constant. If g(3) = f(0), what is the value of h?",
+      "choices": [
+        "−3",
+        "−1.5",
+        "1.5",
+        "3"
+      ],
+      "answer": 0,
+      "check": "-3",
+      "verify": "5 - 2*(3 + ans) == 5",
+      "hint": "g(3) = f(3 + h). Когда f принимает значение f(0)?",
+      "explanation": "f(3 + h) = f(0); линейная функция с ненулевым наклоном принимает каждое значение один раз, поэтому 3 + h = 0 ⇒ h = −3 (A). 3 — ошибка знака; ±1,5 — если поделить на наклон."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The total cost, in dollars, of producing n items is C(n) = 4n + 600. The average cost per item is C(n)/n. For what value of n is the average cost per item $7.75?",
+      "answer": [
+        "160"
+      ],
+      "check": "600/3.75",
+      "verify": "(4*ans + 600)/ans == 7.75",
+      "hint": "(4n + 600)/n = 7,75 ⇒ умножь на n.",
+      "explanation": "4n + 600 = 7,75n ⇒ 3,75n = 600 ⇒ n = 160. Ошибка — приравнять C(n) к 7,75."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = mx + b, where m and b are constants and m ≠ 0. If f(b) = 0, which of the following must be true?",
+      "choices": [
+        "b = 0",
+        "m = −1",
+        "b = 0 or m = −1",
+        "m = 1"
+      ],
+      "answer": 2,
+      "hint": "f(b) = mb + b. Разложи на множители.",
+      "explanation": "mb + b = b(m + 1) = 0 ⇒ b = 0 или m = −1 (C). Ни одно из условий по отдельности не обязательно: f(x) = 3x даёт f(0) = 0 при m ≠ −1, а f(x) = −x + 4 даёт f(4) = 0 при b ≠ 0."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "For a linear function f, f(4) = 9. The graph of y = f(x) is shifted up 3 units and to the right 2 units, and the resulting graph passes through the point (8, 15). What is the value of f(0)?",
+      "answer": [
+        "3"
+      ],
+      "check": "9-4*1.5",
+      "hint": "Новая функция: g(x) = f(x − 2) + 3. Что говорит g(8) = 15 об f?",
+      "explanation": "g(8) = f(6) + 3 = 15 ⇒ f(6) = 12. Наклон (12 − 9)/(6 − 4) = 1,5. f(0) = 9 − 4 · 1,5 = 3."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A car rental costs r dollars per day plus s dollars per mile. A 3-day rental with 150 miles costs $195, and a 5-day rental with 150 miles costs $285. What is the cost of a 2-day rental with 300 miles?",
+      "choices": [
+        "195",
+        "210",
+        "240",
+        "255"
+      ],
+      "answer": 1,
+      "check": "2*45+300*0.4",
+      "hint": "Сравни две аренды с одинаковым пробегом — найдёшь r.",
+      "explanation": "Разница 2 дня = 90 ⇒ r = 45. 3 · 45 + 150s = 195 ⇒ s = 0,4. 2 · 45 + 300 · 0,4 = 90 + 120 = 210 (B). 195 — если считать, что 2 дня и 300 миль стоят как 3 дня и 150 миль; 240 — если s = 0,5."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The function f is linear with a positive slope, and f(f(x)) = 9x − 8 for all values of x. What is the value of f(2)?",
+      "answer": [
+        "4"
+      ],
+      "check": "3*2-2",
+      "hint": "Пусть f(x) = mx + b. Тогда f(f(x)) = m²x + mb + b.",
+      "explanation": "m² = 9 и m > 0 ⇒ m = 3. 3b + b = −8 ⇒ b = −2. f(x) = 3x − 2, f(2) = 4. Проверка: 3(3x − 2) − 2 = 9x − 8."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = x/3 + 7. The function g satisfies g(f(x)) = x for all values of x. What is the value of g(10)?",
+      "choices": [
+        "9",
+        "10/3",
+        "37/3",
+        "51"
+      ],
+      "answer": 0,
+      "check": "9",
+      "verify": "ans/3 + 7 == 10",
+      "hint": "g «отменяет» f: g(10) — это то x, для которого f(x) = 10.",
+      "explanation": "x/3 + 7 = 10 ⇒ x = 9, значит, g(10) = 9 (A). 37/3 — это f(10); 51 — если перевернуть действия в неверном порядке (10 + 7) · 3; 10/3 — деление без учёта 7."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Two linear functions f and g satisfy f(x) + g(x) = 5x + 3 and f(x) − g(x) = x − 9 for all values of x. What is the value of g(4)?",
+      "answer": [
+        "14"
+      ],
+      "check": "2*4+6",
+      "hint": "Вычти второе равенство из первого — останется 2g(x).",
+      "explanation": "2g(x) = (5x + 3) − (x − 9) = 4x + 12 ⇒ g(x) = 2x + 6, g(4) = 14. Тогда f(x) = 3x − 3."
+    }
+  ]
+}

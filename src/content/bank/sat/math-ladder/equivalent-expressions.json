@@ -1,0 +1,1649 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "advanced-math",
+    "skill": "equivalent-expressions",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 7x − 3x + 2?",
+      "choices": [
+        "4x + 2",
+        "10x + 2",
+        "4x − 2",
+        "6x"
+      ],
+      "answer": 0,
+      "check": "4x+2",
+      "hint": "Сложи только подобные слагаемые — с x.",
+      "explanation": "7x − 3x = 4x, свободный член 2 не меняется: 4x + 2 (A). 10x — сложили вместо вычитания; 6x — прибавили 2 к коэффициенту."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 5(3 − x)?",
+      "choices": [
+        "15 − x",
+        "15 − 5x",
+        "3 − 5x",
+        "5x − 15"
+      ],
+      "answer": 1,
+      "check": "15-5x",
+      "hint": "Умножь 5 на каждое слагаемое в скобках.",
+      "explanation": "5 · 3 − 5 · x = 15 − 5x (B). A — 5 умножили только на 3; C — только на x; D — знаки перевёрнуты."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to x · x · x · y · y?",
+      "choices": [
+        "x³y²",
+        "3x + 2y",
+        "x²y³",
+        "5xy"
+      ],
+      "answer": 0,
+      "check": "x^3*y^2",
+      "hint": "Одинаковые множители записываются степенью.",
+      "explanation": "Три множителя x дают x³, два множителя y — y²: x³y² (A). B складывает вместо умножения; C путает показатели."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 6a + 9b?",
+      "choices": [
+        "3(2a + 3b)",
+        "6(a + 9b)",
+        "3(2a + 9b)",
+        "15ab"
+      ],
+      "answer": 0,
+      "check": "3(2a+3b)",
+      "hint": "Вынеси общий множитель 3.",
+      "explanation": "6a = 3 · 2a, 9b = 3 · 3b, поэтому 6a + 9b = 3(2a + 3b) (A). Проверка раскрытием: в C получилось бы 6a + 27b; D складывает неподобные слагаемые."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (x²)³?",
+      "choices": [
+        "x⁵",
+        "x⁶",
+        "x⁸",
+        "3x²"
+      ],
+      "answer": 1,
+      "check": "x^6",
+      "hint": "При возведении степени в степень показатели перемножаются.",
+      "explanation": "(x²)³ = x² · x² · x² = x⁶ (B). x⁵ — сложили показатели; 3x² — умножили на 3 вместо возведения в степень."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 2x(3x − 4)?",
+      "choices": [
+        "6x² − 4",
+        "6x² − 8x",
+        "5x² − 8x",
+        "6x − 8x²"
+      ],
+      "answer": 1,
+      "check": "6x^2-8x",
+      "hint": "2x умножается и на 3x, и на −4.",
+      "explanation": "2x · 3x = 6x², 2x · (−4) = −8x: 6x² − 8x (B). A — забыли умножить −4 на 2x; C — сложили коэффициенты 2 и 3."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to x² − 5x − 14?",
+      "choices": [
+        "(x + 7)(x − 2)",
+        "(x − 7)(x + 2)",
+        "(x − 14)(x + 1)",
+        "(x − 5)(x − 14)"
+      ],
+      "answer": 1,
+      "check": "(x-7)*(x+2)",
+      "hint": "Нужны два числа с произведением −14 и суммой −5.",
+      "explanation": "−7 · 2 = −14 и −7 + 2 = −5: (x − 7)(x + 2) (B). A даёт +5x; C даёт −13x; D даёт +70 в свободном члене."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (3x + 1) − (x − 4)?",
+      "choices": [
+        "2x − 3",
+        "2x + 5",
+        "4x − 3",
+        "2x − 5"
+      ],
+      "answer": 1,
+      "check": "2x+5",
+      "hint": "Минус перед второй скобкой меняет знаки обоих слагаемых.",
+      "explanation": "3x + 1 − x + 4 = 2x + 5 (B). A — знак у −4 не поменяли; C — сложили 3x и x."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (4x²y)(3xy³)?",
+      "choices": [
+        "7x³y⁴",
+        "12x³y⁴",
+        "12x²y³",
+        "12x³y³"
+      ],
+      "answer": 1,
+      "check": "12x^3*y^4",
+      "hint": "Коэффициенты перемножаются, показатели одинаковых букв складываются.",
+      "explanation": "4 · 3 = 12, x² · x = x³, y · y³ = y⁴: 12x³y⁴ (B). A — коэффициенты сложили; C и D — ошибки в показателях."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 2(3x + k) = 6x + 14 for all values of x, where k is a constant, what is the value of k?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "2*ans == 14",
+      "hint": "Раскрой скобки и сравни свободные члены.",
+      "explanation": "6x + 2k = 6x + 14 ⇒ 2k = 14 ⇒ k = 7."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For x ≠ 0, which expression is equivalent to (10x³ − 5x)/(5x)?",
+      "choices": [
+        "2x² − 1",
+        "2x² − 5x",
+        "2x³ − 1",
+        "10x² − 1"
+      ],
+      "answer": 0,
+      "check": "2x^2-1",
+      "hint": "Раздели каждое слагаемое числителя на 5x.",
+      "explanation": "10x³/(5x) = 2x², 5x/(5x) = 1: 2x² − 1 (A). B — второе слагаемое не разделили; C — показатель не уменьшили."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 9x² − 4?",
+      "choices": [
+        "(9x − 2)(x + 2)",
+        "(3x − 2)(3x + 2)",
+        "(3x − 2)²",
+        "(3x − 4)(3x + 1)"
+      ],
+      "answer": 1,
+      "check": "(3x-2)*(3x+2)",
+      "hint": "Разность квадратов: a² − b² = (a − b)(a + b), где a = 3x, b = 2.",
+      "explanation": "9x² − 4 = (3x)² − 2² = (3x − 2)(3x + 2) (B). C даёт 9x² − 12x + 4; A — 9x² + 16x − 4."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (x − 4)(x + 4) + 16?",
+      "choices": [
+        "x²",
+        "x² + 32",
+        "x² − 32",
+        "2x"
+      ],
+      "answer": 0,
+      "check": "x^2",
+      "hint": "(x − 4)(x + 4) = x² − 16.",
+      "explanation": "x² − 16 + 16 = x² (A). B — если считать произведение x² + 16; C — если вычесть дважды."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For a ≠ 0, which expression is equivalent to a⁻³?",
+      "choices": [
+        "1/a³",
+        "−a³",
+        "−3a",
+        "a/3"
+      ],
+      "answer": 0,
+      "check": "1/a^3",
+      "hint": "Отрицательный показатель означает обратное число.",
+      "explanation": "a⁻³ = 1/a³ (A). Отрицательный показатель не делает число отрицательным (B) и не означает умножение на −3 (C)."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 5x + 2(x + 3) − 6?",
+      "choices": [
+        "7x",
+        "7x + 12",
+        "5x",
+        "7x + 6"
+      ],
+      "answer": 0,
+      "check": "7x",
+      "hint": "Раскрой скобку, затем собери подобные.",
+      "explanation": "5x + 2x + 6 − 6 = 7x (A). D — забыли −6; B — сложили 6 и 6."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (x + 3)² − 9?",
+      "choices": [
+        "x²",
+        "x² + 6x",
+        "x² + 3x",
+        "x² − 6x"
+      ],
+      "answer": 1,
+      "check": "x^2+6x",
+      "hint": "(x + 3)² = x² + 6x + 9.",
+      "explanation": "x² + 6x + 9 − 9 = x² + 6x (B). Ответ x² получается, если считать (x + 3)² = x² + 9; x² + 3x — если удвоенное произведение взять как 3x."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 3x + 2y = 7, what is the value of 6x + 4y − 5?",
+      "answer": [
+        "9"
+      ],
+      "check": "2*7-5",
+      "hint": "6x + 4y — это удвоенное 3x + 2y.",
+      "explanation": "6x + 4y = 2 · 7 = 14, и 14 − 5 = 9. Находить x и y не нужно."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For x > 0, which expression is equivalent to √(x⁶)?",
+      "choices": [
+        "x³",
+        "x⁴",
+        "3x",
+        "x^(1/6)"
+      ],
+      "answer": 0,
+      "check": "x^3",
+      "hint": "Корень — это показатель 1/2.",
+      "explanation": "(x⁶)^(1/2) = x³ (A), проверка: (x³)² = x⁶. x⁴ — вычли 2 из показателя; 3x — разделили показатель на 2 и поставили множителем; x^(1/6) — перепутали корень со степенью."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 2x² + 6x?",
+      "choices": [
+        "2x(x + 3)",
+        "2(x² + 6x)",
+        "x(2x + 3)",
+        "2x(x + 6)"
+      ],
+      "answer": 0,
+      "check": "2x(x+3)",
+      "hint": "Вынеси общий множитель 2x.",
+      "explanation": "2x² = 2x · x, 6x = 2x · 3: 2x(x + 3) (A). Раскрытие B даёт 2x² + 12x; C — 2x² + 3x; D — 2x² + 12x."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to x/3 + x/6?",
+      "choices": [
+        "2x/9",
+        "x/2",
+        "x/9",
+        "2x/3"
+      ],
+      "answer": 1,
+      "check": "x/2",
+      "hint": "Общий знаменатель 6.",
+      "explanation": "2x/6 + x/6 = 3x/6 = x/2 (B). A — сложили числители и знаменатели отдельно; D — потеряли деление на 6 во втором слагаемом."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The expression (2x + 5)(x − 3) − 2x² can be written in the form ax + b, where a and b are constants. What is the value of a + b?",
+      "answer": [
+        "-16"
+      ],
+      "check": "-1+(-15)",
+      "hint": "Раскрой скобки: 2x² сократится.",
+      "explanation": "(2x + 5)(x − 3) = 2x² − 6x + 5x − 15 = 2x² − x − 15. Минус 2x² даёт −x − 15, a = −1, b = −15, сумма −16."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (2a)³?",
+      "choices": [
+        "6a³",
+        "8a³",
+        "2a³",
+        "8a"
+      ],
+      "answer": 1,
+      "check": "8a^3",
+      "hint": "В куб возводятся оба множителя: и 2, и a.",
+      "explanation": "(2a)³ = 2³ · a³ = 8a³ (B). 6a³ — 2 умножили на 3; 2a³ — в куб возвели только a."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 3(x − 2) − 2(x − 3)?",
+      "choices": [
+        "x",
+        "x − 12",
+        "5x − 12",
+        "x + 12"
+      ],
+      "answer": 0,
+      "check": "x",
+      "hint": "Раскрой обе скобки, следя за знаками.",
+      "explanation": "3x − 6 − 2x + 6 = x (A). B — во второй скобке не поменяли знак у −3; C — сложили 3x и 2x."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For x ≠ 0, which expression is equivalent to x² · x⁻⁵?",
+      "choices": [
+        "x⁷",
+        "1/x³",
+        "x³",
+        "−x³"
+      ],
+      "answer": 1,
+      "check": "1/x^3",
+      "hint": "Показатели складываются: 2 + (−5).",
+      "explanation": "x^(2 − 5) = x⁻³ = 1/x³ (B). x⁷ — вычли показатели неверно; −x³ — «отрицательный показатель» прочитан как знак."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If x + 1/x = 4, what is the value of (x² + 1)/x?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "hint": "Раздели числитель на x почленно.",
+      "explanation": "(x² + 1)/x = x²/x + 1/x = x + 1/x = 4."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (x − 2)(x² + 2x + 4)?",
+      "choices": [
+        "x³ − 8",
+        "x³ + 8",
+        "x³ − 4x − 8",
+        "x³ − 2x² − 8"
+      ],
+      "answer": 0,
+      "check": "x^3-8",
+      "hint": "Перемножь x и −2 на каждый член второй скобки.",
+      "explanation": "x³ + 2x² + 4x − 2x² − 4x − 8 = x³ − 8 (A). Средние слагаемые взаимно уничтожаются. B — знак; D — забыли 2x² из второго произведения."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 4x² − 12x + 9?",
+      "choices": [
+        "(4x − 3)²",
+        "(2x − 3)²",
+        "(2x + 3)²",
+        "(2x − 9)(2x − 1)"
+      ],
+      "answer": 1,
+      "check": "(2x-3)^2",
+      "hint": "Первый и последний члены — квадраты 2x и 3.",
+      "explanation": "(2x − 3)² = 4x² − 12x + 9 (B). C даёт +12x; A — 16x²; D — 4x² − 20x + 9."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The expression 3x² + 13x − 10 can be written as (3x + a)(x + b), where a and b are integers. What is the value of ab?",
+      "answer": [
+        "-10"
+      ],
+      "check": "-2*5",
+      "hint": "Подбери: (3x − 2)(x + 5).",
+      "explanation": "(3x − 2)(x + 5) = 3x² + 15x − 2x − 10 = 3x² + 13x − 10, a = −2, b = 5, ab = −10. Это и есть свободный член."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For x ≠ −2, which expression is equivalent to (x² + 5x + 6)/(x + 2)?",
+      "choices": [
+        "x + 3",
+        "x + 2",
+        "x² + 3",
+        "x + 4"
+      ],
+      "answer": 0,
+      "check": "x+3",
+      "hint": "Разложи числитель на множители.",
+      "explanation": "x² + 5x + 6 = (x + 2)(x + 3); после сокращения x + 3 (A). C — разделили только x² + 6 на 2."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For x > 0, which expression is equivalent to x^(3/2)?",
+      "choices": [
+        "x√x",
+        "√x/x",
+        "x³/2",
+        "√(x³)/x"
+      ],
+      "answer": 0,
+      "check": "x^(3/2)",
+      "hint": "x^(3/2) = x^(1 + 1/2) = x · x^(1/2).",
+      "explanation": "x · √x = x√x (A). √x/x = x^(−1/2); x³/2 — деление, а не корень; √(x³)/x = x^(1/2)."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (a + 2b)² − 4b²?",
+      "choices": [
+        "a²",
+        "a² + 4ab",
+        "a² + 4ab + 8b²",
+        "a² − 4ab"
+      ],
+      "answer": 1,
+      "check": "a^2+4a*b",
+      "hint": "(a + 2b)² = a² + 4ab + 4b².",
+      "explanation": "a² + 4ab + 4b² − 4b² = a² + 4ab (B). A — забыли удвоенное произведение; C — прибавили 4b² вместо вычитания."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If a/b = 3/4, what is the value of (a + b)/b?",
+      "answer": [
+        "1.75",
+        "7/4"
+      ],
+      "check": "3/4+1",
+      "hint": "(a + b)/b = a/b + 1.",
+      "explanation": "(a + b)/b = 3/4 + 1 = 7/4 = 1,75. Ошибка — 7/3 (перевёрнутое отношение)."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For x ≠ 1 and x ≠ −1, which expression is equivalent to 1/(x − 1) + 1/(x + 1)?",
+      "choices": [
+        "2x/(x² − 1)",
+        "2/(x² − 1)",
+        "2/(2x)",
+        "x/(x² − 1)"
+      ],
+      "answer": 0,
+      "check": "2x/(x^2-1)",
+      "hint": "Общий знаменатель (x − 1)(x + 1) = x² − 1.",
+      "explanation": "(x + 1 + x − 1)/(x² − 1) = 2x/(x² − 1) (A). B — числитель 1 + 1 без x; C — сложили знаменатели."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The formula v = u + at gives the velocity v of an object with initial velocity u and constant acceleration a after time t. Which of the following expresses t in terms of v, u, and a?",
+      "choices": [
+        "t = (v − u)/a",
+        "t = v − u − a",
+        "t = (v + u)/a",
+        "t = a(v − u)"
+      ],
+      "answer": 0,
+      "check": "(v-u)/a",
+      "hint": "Сначала вычти u, потом раздели на a.",
+      "explanation": "v − u = at ⇒ t = (v − u)/a (A). B вычитает a вместо деления; C — неверный знак у u; D умножает вместо деления."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The expression 2x² + 12x + 5 can be written as 2(x + 3)² + k, where k is a constant. What is the value of k?",
+      "answer": [
+        "-13"
+      ],
+      "check": "5-18",
+      "hint": "2(x + 3)² = 2x² + 12x + 18.",
+      "explanation": "2x² + 12x + 5 = 2x² + 12x + 18 + k ⇒ k = 5 − 18 = −13. Ошибка — k = 5 − 9 = −4 (забыли множитель 2 при 9)."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (x + y)(x − y) + y²?",
+      "choices": [
+        "x²",
+        "x² + 2y²",
+        "x² − 2y²",
+        "x² + y²"
+      ],
+      "answer": 0,
+      "check": "x^2",
+      "hint": "(x + y)(x − y) = x² − y².",
+      "explanation": "x² − y² + y² = x² (A). D — если считать произведение x² + 0 и прибавить y²."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 3⁴ · 3^x?",
+      "choices": [
+        "3^(x + 4)",
+        "9^(x + 4)",
+        "3^(4x)",
+        "81x"
+      ],
+      "answer": 0,
+      "check": "3^(x+4)",
+      "hint": "При умножении степеней с одним основанием показатели складываются.",
+      "explanation": "3⁴ · 3^x = 3^(x + 4) (A). B — перемножили основания; C — перемножили показатели; D — превратили степень в произведение."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If (x − y)/(x + y) = 1/3 and y ≠ 0, what is the value of x/y?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "hint": "Перемножь крест-накрест и вырази x через y.",
+      "explanation": "3(x − y) = x + y ⇒ 2x = 4y ⇒ x/y = 2."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 6x² − 7x − 3?",
+      "choices": [
+        "(6x + 1)(x − 3)",
+        "(3x + 1)(2x − 3)",
+        "(3x − 1)(2x + 3)",
+        "(2x + 1)(3x − 3)"
+      ],
+      "answer": 1,
+      "check": "(3x+1)*(2x-3)",
+      "hint": "Проверь средний член каждого варианта.",
+      "explanation": "(3x + 1)(2x − 3) = 6x² − 9x + 2x − 3 = 6x² − 7x − 3 (B). A даёт −17x; C — +7x; D — 6x² − 3x − 3."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For x > 0, which expression is equivalent to √(12x³)?",
+      "choices": [
+        "2x√(3x)",
+        "4x√(3x)",
+        "2x²√3",
+        "6x√x"
+      ],
+      "answer": 0,
+      "check": "2x*sqrt(3x)",
+      "hint": "12x³ = 4x² · 3x.",
+      "explanation": "√(4x²) · √(3x) = 2x√(3x) (A). B — извлекли из 4 число 4; C = √(12x⁴); D = √(36x³)."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ −2, which expression is equivalent to (x² − 4)/(x² + 4x + 4)?",
+      "choices": [
+        "(x − 2)/(x + 2)",
+        "(x + 2)/(x − 2)",
+        "−1/(4x)",
+        "(x − 2)/(x + 4)"
+      ],
+      "answer": 0,
+      "check": "(x-2)/(x+2)",
+      "hint": "Разложи числитель и знаменатель.",
+      "explanation": "(x − 2)(x + 2)/(x + 2)² = (x − 2)/(x + 2) (A). C — «сократили» x² как слагаемое; B — дробь перевёрнута."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If (ax + 3)(2x − b) = 4x² + 4x − 3 for all values of x, where a and b are constants, what is the value of a + b?",
+      "answer": [
+        "3"
+      ],
+      "check": "2+1",
+      "hint": "Сравни коэффициенты при x² и свободные члены.",
+      "explanation": "2a = 4 ⇒ a = 2; −3b = −3 ⇒ b = 1. Проверка среднего члена: −ab + 6 = −2 + 6 = 4 — верно. a + b = 3."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ 3, which expression is equivalent to x/(x − 3) − 3/(x − 3)?",
+      "choices": [
+        "1",
+        "(x − 3)/(x + 3)",
+        "x − 1",
+        "0"
+      ],
+      "answer": 0,
+      "check": "1",
+      "hint": "Знаменатели одинаковые — вычти числители.",
+      "explanation": "(x − 3)/(x − 3) = 1 (A). 0 — если считать x и 3 «сокращающимися»; C — вычли знаменатели."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If x² + y² = 20 and xy = 8, what is the value of (x + y)²?",
+      "answer": [
+        "36"
+      ],
+      "check": "20+16",
+      "hint": "(x + y)² = x² + 2xy + y².",
+      "explanation": "(x + y)² = (x² + y²) + 2xy = 20 + 2 · 8 = 36. Ошибка — забыть удвоить xy (получится 28)."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (2x − 1)³?",
+      "choices": [
+        "8x³ − 1",
+        "8x³ − 12x² + 6x − 1",
+        "8x³ − 6x² + 6x − 1",
+        "2x³ − 1"
+      ],
+      "answer": 1,
+      "check": "(2x-1)^3",
+      "hint": "(a − b)³ = a³ − 3a²b + 3ab² − b³.",
+      "explanation": "a = 2x, b = 1: 8x³ − 3 · 4x² + 3 · 2x − 1 = 8x³ − 12x² + 6x − 1 (B). A и D забывают средние члены; C — ошибка в 3a²b."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The product (x² + 3x − 1)(2x + 4) can be written as ax³ + bx² + cx + d. What is the value of b?",
+      "answer": [
+        "10"
+      ],
+      "check": "4+6",
+      "hint": "x² получается из x² · 4 и 3x · 2x.",
+      "explanation": "4x² + 6x² = 10x², поэтому b = 10."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ 0, y ≠ 0, and x ≠ y, which expression is equivalent to (1/x − 1/y)/(x − y)?",
+      "choices": [
+        "−1/(xy)",
+        "1/(xy)",
+        "xy",
+        "−xy"
+      ],
+      "answer": 0,
+      "check": "-1/(x*y)",
+      "hint": "1/x − 1/y = (y − x)/(xy).",
+      "explanation": "(y − x)/(xy) : (x − y) = −(x − y)/(xy(x − y)) = −1/(xy) (A). B теряет знак: y − x = −(x − y)."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x > 0, which expression is equivalent to x^(2/3) · x^(1/2)?",
+      "choices": [
+        "x^(1/3)",
+        "x^(7/6)",
+        "x^(3/5)",
+        "x^(1/6)"
+      ],
+      "answer": 1,
+      "check": "x^(7/6)",
+      "hint": "Сложи показатели: 2/3 + 1/2.",
+      "explanation": "4/6 + 3/6 = 7/6, ответ x^(7/6) (B). x^(1/3) — перемножили показатели; x^(3/5) — сложили числители и знаменатели; x^(1/6) — вычли."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If 3^a = 5, what is the value of 9^a?",
+      "answer": [
+        "25"
+      ],
+      "check": "5^2",
+      "hint": "9^a = (3²)^a = (3^a)².",
+      "explanation": "9^a = (3^a)² = 5² = 25. Ошибка — 9 · 5 или 5 · 3."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The perimeter p of a rectangle with length l and width w is given by p = 2l + 2w. Which of the following expresses w in terms of p and l?",
+      "choices": [
+        "w = (p − 2l)/2",
+        "w = p − l",
+        "w = (p − l)/2",
+        "w = 2p − l"
+      ],
+      "answer": 0,
+      "check": "(p-2l)/2",
+      "hint": "Вычти 2l из обеих частей и раздели на 2.",
+      "explanation": "p − 2l = 2w ⇒ w = (p − 2l)/2 (A). C забывает удвоить l; B и D — неверные действия."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If (x + 2)² = 40, what is the value of x² + 4x?",
+      "answer": [
+        "36"
+      ],
+      "check": "40-4",
+      "hint": "(x + 2)² = x² + 4x + 4.",
+      "explanation": "x² + 4x = 40 − 4 = 36. Находить x не нужно."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ 2 and x ≠ −2, which expression is equivalent to (x² − 5x + 6)/(x² − 4)?",
+      "choices": [
+        "(x − 3)/(x + 2)",
+        "(x − 3)/(x − 2)",
+        "(x + 3)/(x + 2)",
+        "(−5x + 6)/(−4)"
+      ],
+      "answer": 0,
+      "check": "(x-3)/(x+2)",
+      "hint": "x² − 5x + 6 = (x − 2)(x − 3).",
+      "explanation": "(x − 2)(x − 3)/((x − 2)(x + 2)) = (x − 3)/(x + 2) (A). D — «сократили» x² как слагаемое; B — сократили не тот множитель."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The expression x³ + 3x² − 4x − 12 can be written as (x + a)(x² − b), where a and b are constants. What is the value of a + b?",
+      "answer": [
+        "7"
+      ],
+      "check": "3+4",
+      "hint": "Сгруппируй: x²(x + 3) − 4(x + 3).",
+      "explanation": "(x + 3)(x² − 4), a = 3, b = 4, сумма 7."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to 4^(x + 1) − 4^x?",
+      "choices": [
+        "4",
+        "3(4^x)",
+        "4^(2x + 1)",
+        "4^x"
+      ],
+      "answer": 1,
+      "check": "3*4^x",
+      "hint": "4^(x + 1) = 4 · 4^x.",
+      "explanation": "4 · 4^x − 4^x = 3 · 4^x (B). A — вычли показатели; C — сложили их."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If x/y = 2/5, what is the value of (3x + y)/(x + y)?",
+      "answer": [
+        "11/7",
+        "1.571",
+        "1.572"
+      ],
+      "check": "11/7",
+      "hint": "Возьми x = 2k, y = 5k.",
+      "explanation": "(6k + 5k)/(2k + 5k) = 11/7 ≈ 1,571."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≥ 0, which expression is equivalent to (√x + 3)(√x − 3)?",
+      "choices": [
+        "x − 9",
+        "x − 3",
+        "x + 9",
+        "√x − 9"
+      ],
+      "answer": 0,
+      "check": "x-9",
+      "hint": "Разность квадратов: (a + b)(a − b) = a² − b².",
+      "explanation": "(√x)² − 3² = x − 9 (A). B — 3 не возвели в квадрат; D — √x не возвели."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The product (x + 1)(x + 2)(x + 3) can be written as x³ + ax² + bx + c. What is the value of b?",
+      "answer": [
+        "11"
+      ],
+      "check": "1*2+1*3+2*3",
+      "hint": "Коэффициент при x — сумма попарных произведений 1, 2, 3.",
+      "explanation": "(x + 1)(x + 2) = x² + 3x + 2. Умножаем на (x + 3): x³ + 6x² + 11x + 6, b = 11."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ 0, which expression is equivalent to (3x⁻¹ + 2)/x⁻¹?",
+      "choices": [
+        "2x + 3",
+        "3x + 2",
+        "5",
+        "3 + 2/x"
+      ],
+      "answer": 0,
+      "check": "2x+3",
+      "hint": "Деление на x⁻¹ — это умножение на x.",
+      "explanation": "(3/x + 2) · x = 3 + 2x (A). B переставляет коэффициенты; D делит вместо умножения."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If x² − 6x + 9 = 16, what is the value of (x − 3)⁴?",
+      "answer": [
+        "256"
+      ],
+      "check": "16^2",
+      "hint": "x² − 6x + 9 = (x − 3)².",
+      "explanation": "(x − 3)² = 16, поэтому (x − 3)⁴ = 16² = 256."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (a − b)(a² + ab + b²)?",
+      "choices": [
+        "a³ − b³",
+        "a³ + b³",
+        "a³ − b³ − 2ab",
+        "(a − b)³"
+      ],
+      "answer": 0,
+      "check": "a^3-b^3",
+      "hint": "Перемножь и посмотри, какие слагаемые сокращаются.",
+      "explanation": "a³ + a²b + ab² − a²b − ab² − b³ = a³ − b³ (A). (a − b)³ содержит ещё −3a²b + 3ab²."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 0, which expression is equivalent to (x + 1/x)² − (x − 1/x)²?",
+      "choices": [
+        "4",
+        "2",
+        "4/x²",
+        "0"
+      ],
+      "answer": 0,
+      "check": "4",
+      "hint": "(a + b)² − (a − b)² = 4ab.",
+      "explanation": "Здесь a = x, b = 1/x: 4 · x · (1/x) = 4 (A). 2 — если взять 2ab; 0 — если считать, что квадраты равны."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If (x + a)² = x² + 10x + b for all values of x, where a and b are constants, what is the value of b − a?",
+      "answer": [
+        "20"
+      ],
+      "check": "25-5",
+      "hint": "(x + a)² = x² + 2ax + a².",
+      "explanation": "2a = 10 ⇒ a = 5, b = a² = 25. b − a = 20."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 1 and x ≠ −1, which expression is equivalent to (x⁴ − 1)/(x² − 1)?",
+      "choices": [
+        "x² + 1",
+        "x² − 1",
+        "x²",
+        "x + 1"
+      ],
+      "answer": 0,
+      "check": "x^2+1",
+      "hint": "x⁴ − 1 = (x² − 1)(x² + 1).",
+      "explanation": "После сокращения на x² − 1 остаётся x² + 1 (A). x² — если «сократить» единицы."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 2^x = 3, what is the value of 4^(x + 1)?",
+      "answer": [
+        "36"
+      ],
+      "check": "4*9",
+      "hint": "4^(x + 1) = 4 · 4^x = 4 · (2^x)².",
+      "explanation": "4^x = (2^x)² = 9, поэтому 4^(x + 1) = 4 · 9 = 36."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The expression 2/(x − 3) − 1/(x + 2) can be written as (ax + b)/((x − 3)(x + 2)), where a and b are constants. What is the value of a + b?",
+      "choices": [
+        "2",
+        "6",
+        "8",
+        "−7"
+      ],
+      "answer": 2,
+      "check": "8",
+      "hint": "Числитель: 2(x + 2) − (x − 3).",
+      "explanation": "2x + 4 − x + 3 = x + 7, a = 1, b = 7, a + b = 8 (C). 2 — если раскрыть −(x − 3) как −x − 3 (получится x + 1); 6 — если умножить на 2 только x (x + 5); −7 — если числители умножить не на те скобки (x − 8)."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x > 0, which expression is equivalent to √(x√x)?",
+      "choices": [
+        "x^(1/2)",
+        "x^(3/4)",
+        "x^(3/2)",
+        "x^(1/4)"
+      ],
+      "answer": 1,
+      "check": "x^(3/4)",
+      "hint": "x√x = x^(3/2). Корень — это показатель 1/2.",
+      "explanation": "(x^(3/2))^(1/2) = x^(3/4) (B). x^(3/2) — не извлекли внешний корень; x^(1/4) — корень из корня без множителя x."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "When the polynomial x³ − 2x² + kx − 4 is divided by x − 2, the remainder is 6. What is the value of k?",
+      "answer": [
+        "5"
+      ],
+      "check": "10/2",
+      "verify": "8 - 8 + 2*ans - 4 == 6",
+      "hint": "Остаток от деления на x − 2 равен значению многочлена при x = 2.",
+      "explanation": "p(2) = 8 − 8 + 2k − 4 = 2k − 4 = 6 ⇒ k = 5."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following is a factor of 2x³ − 3x² − 8x + 12?",
+      "choices": [
+        "x − 3",
+        "x + 2",
+        "2x + 3",
+        "x − 4"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "Сгруппируй первые два и последние два слагаемых.",
+      "explanation": "x²(2x − 3) − 4(2x − 3) = (2x − 3)(x² − 4) = (2x − 3)(x − 2)(x + 2). Множитель из вариантов — x + 2 (B). Проверка: при x = −2: −16 − 12 + 16 + 12 = 0."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If y = x − 2, then x² − 4x + 7 can be written as y² + c, where c is a constant. What is the value of c?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "hint": "Подставь x = y + 2.",
+      "explanation": "(y + 2)² − 4(y + 2) + 7 = y² + 4y + 4 − 4y − 8 + 7 = y² + 3, c = 3. Это и есть выделение полного квадрата: (x − 2)² + 3."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ −1, which expression is equivalent to (x³ + 2x² − 5x − 6)/(x + 1)?",
+      "choices": [
+        "x² + x − 6",
+        "x² + 3x − 2",
+        "x² − x − 6",
+        "x² + x + 6"
+      ],
+      "answer": 0,
+      "check": "x^2+x-6",
+      "hint": "Проверь: (x + 1)(x² + x − 6) раскрой и сравни.",
+      "explanation": "(x + 1)(x² + x − 6) = x³ + x² − 6x + x² + x − 6 = x³ + 2x² − 5x − 6 (A). Остальные при умножении на x + 1 дают другие коэффициенты."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If (2^x)(8^y) = 2^10 and x − y = 2, what is the value of y?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "2^(ans + 2) * 8^ans == 2^10",
+      "hint": "8^y = 2^(3y).",
+      "explanation": "x + 3y = 10 и x = y + 2 ⇒ 4y + 2 = 10 ⇒ y = 2, x = 4."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 1 and x ≠ −1, which expression is equivalent to (x − 1)/(x + 1) − (x + 1)/(x − 1)?",
+      "choices": [
+        "−4x/(x² − 1)",
+        "4x/(x² − 1)",
+        "−2/(x² − 1)",
+        "0"
+      ],
+      "answer": 0,
+      "check": "-4x/(x^2-1)",
+      "hint": "Общий знаменатель x² − 1, числитель (x − 1)² − (x + 1)².",
+      "explanation": "(x² − 2x + 1) − (x² + 2x + 1) = −4x, ответ −4x/(x² − 1) (A). B — знак; 0 — если считать дроби равными."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 9x² − 12x + 4 = (ax − b)² for all values of x, where a and b are positive constants, what is the value of ab?",
+      "answer": [
+        "6"
+      ],
+      "check": "3*2",
+      "hint": "a² = 9 и b² = 4; проверь средний член.",
+      "explanation": "a = 3, b = 2: (3x − 2)² = 9x² − 12x + 4. ab = 6 — и это половина модуля среднего коэффициента."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to x⁴ − 5x² + 4?",
+      "choices": [
+        "(x − 1)(x + 1)(x − 2)(x + 2)",
+        "(x² − 1)(x² + 4)",
+        "(x − 1)²(x − 2)²",
+        "(x² + 1)(x² − 4)"
+      ],
+      "answer": 0,
+      "check": "(x-1)*(x+1)*(x-2)*(x+2)",
+      "hint": "Обозначь u = x²: u² − 5u + 4.",
+      "explanation": "(u − 1)(u − 4) = (x² − 1)(x² − 4) = (x − 1)(x + 1)(x − 2)(x + 2) (A). B даёт +3x² − 4; D — −3x² − 4."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The balance of an account t years after it was opened is B = 2,000(1.06)^t dollars. The same model can be written as B = 2,000k^(12t), where t is still in years. What is the value of k, rounded to the nearest thousandth?",
+      "answer": [
+        "1.005"
+      ],
+      "check": "1.06^(1/12)",
+      "hint": "k^12 = 1,06.",
+      "explanation": "k¹² = 1,06 ⇒ k = 1,06^(1/12) ≈ 1,00487 ≈ 1,005. Ошибка — взять k = 1,06¹² или разделить 1,06 на 12."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 0 and x ≠ −1, which expression is equivalent to 1/(1 + 1/x)?",
+      "choices": [
+        "x/(x + 1)",
+        "(x + 1)/x",
+        "1/(x + 1)",
+        "x + 1"
+      ],
+      "answer": 0,
+      "check": "x/(x+1)",
+      "hint": "1 + 1/x = (x + 1)/x.",
+      "explanation": "1 : ((x + 1)/x) = x/(x + 1) (A). B — не перевернули дробь; C — потеряли x."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "When (3x − k)(x + 2) is expanded, the coefficient of x is 10. What is the value of k?",
+      "answer": [
+        "-4"
+      ],
+      "check": "-4",
+      "verify": "6 - ans == 10",
+      "hint": "x получается из 3x · 2 и −k · x.",
+      "explanation": "Слагаемые с x: 3x · 2 = 6x и −k · x. Сумма (6 − k)x = 10x ⇒ k = −4."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x > 0, which expression is equivalent to (x^(1/2) + x^(−1/2))²?",
+      "choices": [
+        "x + 2 + 1/x",
+        "x + 1/x",
+        "x² + 2 + 1/x²",
+        "x + 1"
+      ],
+      "answer": 0,
+      "check": "x+2+1/x",
+      "hint": "(a + b)² = a² + 2ab + b², где ab = x^(1/2) · x^(−1/2) = 1.",
+      "explanation": "x + 2 · 1 + 1/x = x + 2 + 1/x (A). B — забыли удвоенное произведение; C — возвели показатели неверно."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If a − b = 4 and a² + b² = 40, what is the value of ab?",
+      "answer": [
+        "12"
+      ],
+      "check": "(40-16)/2",
+      "hint": "(a − b)² = a² − 2ab + b².",
+      "explanation": "16 = 40 − 2ab ⇒ ab = 12 (например, 6 и 2)."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 2, the expression (x² + kx − 6)/(x − 2) is equivalent to x + 3, where k is a constant. What is the value of k?",
+      "choices": [
+        "−1",
+        "1",
+        "3",
+        "5"
+      ],
+      "answer": 1,
+      "check": "1",
+      "hint": "(x − 2)(x + 3) должно равняться x² + kx − 6.",
+      "explanation": "(x − 2)(x + 3) = x² + x − 6 ⇒ k = 1 (B). −1 — знак; 5 — сумма 2 + 3."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The product (x² + ax + 2)(x − 3), where a is a constant, has no x² term when expanded. What is the value of a?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "ans - 3 == 0",
+      "hint": "Найди коэффициент при x²: из x² · (−3) и ax · x.",
+      "explanation": "−3x² + ax² = (a − 3)x² = 0 ⇒ a = 3."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 3 and x ≠ −2, which expression is equivalent to (x + 2)/(x² − x − 6)?",
+      "choices": [
+        "1/(x − 3)",
+        "1/(x + 3)",
+        "(x + 2)/(x − 3)",
+        "−1/3"
+      ],
+      "answer": 0,
+      "check": "1/(x-3)",
+      "hint": "x² − x − 6 = (x − 3)(x + 2).",
+      "explanation": "(x + 2)/((x − 3)(x + 2)) = 1/(x − 3) (A). B — неверное разложение; D — «сократили» x как слагаемое."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 5^(2x) = 7, what is the value of 25^x + 5^(4x)?",
+      "answer": [
+        "56"
+      ],
+      "check": "7+49",
+      "hint": "25^x = 5^(2x), а 5^(4x) = (5^(2x))².",
+      "explanation": "25^x = 7, 5^(4x) = 49, сумма 56."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The expression 3x² − 12x + 5 can be written in the form a(x − h)² + k, where a, h, and k are constants. What is the value of k?",
+      "choices": [
+        "−7",
+        "5",
+        "−1",
+        "−12"
+      ],
+      "answer": 0,
+      "check": "-7",
+      "hint": "3(x² − 4x) + 5 = 3(x − 2)² − 12 + 5.",
+      "explanation": "3(x − 2)² = 3x² − 12x + 12, поэтому k = 5 − 12 = −7 (A). −1 — если вычесть 4 без множителя 3; −12 — не прибавили 5."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If x + y = 6 and xy = 4, what is the value of x³ + y³?",
+      "answer": [
+        "144"
+      ],
+      "check": "216-72",
+      "hint": "x³ + y³ = (x + y)³ − 3xy(x + y).",
+      "explanation": "6³ − 3 · 4 · 6 = 216 − 72 = 144."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For all x ≠ 0, (x³ + 4x² − 2x)/x² = x + a + b/x, where a and b are constants. What is the value of a + b?",
+      "choices": [
+        "−2",
+        "2",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "check": "2",
+      "hint": "Раздели каждое слагаемое на x².",
+      "explanation": "x + 4 − 2/x, значит, a = 4, b = −2, a + b = 2 (B). 6 — если b = 2; 4 — только a."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If x + 1/x = 3, what is the value of x³ + 1/x³?",
+      "answer": [
+        "18"
+      ],
+      "check": "27-9",
+      "hint": "(x + 1/x)³ = x³ + 3x + 3/x + 1/x³.",
+      "explanation": "x³ + 1/x³ = (x + 1/x)³ − 3(x + 1/x) = 27 − 9 = 18."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For a ≠ 0, a ≠ b, and a ≠ −b, which expression is equivalent to ((a² − b²)/(a² + ab)) ÷ ((a − b)/a)?",
+      "choices": [
+        "1",
+        "a − b",
+        "(a − b)/a",
+        "a/(a + b)"
+      ],
+      "answer": 0,
+      "check": "1",
+      "hint": "a² − b² = (a − b)(a + b), a² + ab = a(a + b).",
+      "explanation": "(a − b)(a + b)/(a(a + b)) = (a − b)/a; делённое на (a − b)/a даёт 1 (A). C — забыли выполнить деление."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The polynomial p(x) = x³ + ax² + bx − 6 has (x − 1) and (x + 2) as factors, where a and b are constants. What is the value of a + b?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "hint": "Множитель (x − 1) означает p(1) = 0.",
+      "explanation": "p(1) = 1 + a + b − 6 = 0 ⇒ a + b = 5. (Второй множитель нужен, чтобы найти a и b по отдельности: a = 2, b = 3.)"
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (2^(x + 2) + 2^(x + 1))/2^x?",
+      "choices": [
+        "6",
+        "8",
+        "2^(2x + 3)",
+        "3(2^x)"
+      ],
+      "answer": 0,
+      "check": "6",
+      "hint": "Вынеси 2^x в числителе.",
+      "explanation": "2^x(4 + 2)/2^x = 6 (A). 8 — сложили показатели 2 + 1; D — забыли разделить на 2^x."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "For x ≠ 1 and x ≠ −3, the expression (x² + 2x − 3)/(x − 1) + (x² − 9)/(x + 3) can be written as ax + b, where a and b are constants. What is the value of a + b?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "hint": "Каждую дробь можно сократить.",
+      "explanation": "(x − 1)(x + 3)/(x − 1) = x + 3; (x − 3)(x + 3)/(x + 3) = x − 3. Сумма 2x, a = 2, b = 0, a + b = 2."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to (x − y)³ + (x + y)³?",
+      "choices": [
+        "2x³ + 6xy²",
+        "2x³",
+        "2x³ + 6x²y",
+        "2x³ + 2y³"
+      ],
+      "answer": 0,
+      "check": "2x^3+6x*y^2",
+      "hint": "Распиши оба куба: члены с нечётной степенью y сократятся.",
+      "explanation": "(x³ − 3x²y + 3xy² − y³) + (x³ + 3x²y + 3xy² + y³) = 2x³ + 6xy² (A). C — сохранили не те члены; D — сложили кубы y."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If 3^(x + 1) + 3^x = 108, what is the value of x?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "3^(ans + 1) + 3^ans == 108",
+      "hint": "3^(x + 1) + 3^x = 4 · 3^x.",
+      "explanation": "4 · 3^x = 108 ⇒ 3^x = 27 ⇒ x = 3."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For x ≥ 0, which expression is equivalent to (√(x + 1) − √x)(√(x + 1) + √x)?",
+      "choices": [
+        "1",
+        "2x + 1",
+        "√(2x + 1)",
+        "x"
+      ],
+      "answer": 0,
+      "check": "1",
+      "hint": "Разность квадратов.",
+      "explanation": "(x + 1) − x = 1 (A). 2x + 1 — сложили квадраты вместо вычитания."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The expression (x + 2)⁴ can be written as x⁴ + ax³ + bx² + cx + 16, where a, b, and c are constants. What is the value of b?",
+      "answer": [
+        "24"
+      ],
+      "check": "6*4",
+      "hint": "Коэффициент при x² в (x + 2)⁴: C(4, 2) · 2².",
+      "explanation": "(x + 2)² = x² + 4x + 4; ((x + 2)²)² даёт при x²: 4 + 16 + 4 = 24. Через биномиальные коэффициенты: 6 · 4 = 24."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For all x ≠ 0, (ax + 3)/x − (2x − b)/x = 5, where a and b are constants. Which of the following must be true?",
+      "choices": [
+        "a = 7 and b = −3",
+        "a = 3 and b = 3",
+        "a = 7 and b = 3",
+        "a = 5 and b = −3"
+      ],
+      "answer": 0,
+      "hint": "Объедини дроби: ((a − 2)x + 3 + b)/x = 5.",
+      "explanation": "Нужно (a − 2)x + (3 + b) = 5x при всех x: a − 2 = 5 и 3 + b = 0 ⇒ a = 7, b = −3 (A). C — знак у b; D — забыли вычесть 2x."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If 4^x = a, then 2^(2x + 3) can be written as ka, where k is a constant. What is the value of k?",
+      "answer": [
+        "8"
+      ],
+      "check": "2^3",
+      "hint": "2^(2x + 3) = 2^(2x) · 2³.",
+      "explanation": "2^(2x) = 4^x = a, поэтому 2^(2x + 3) = 8a, k = 8."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For x > 0 and y > 0, which expression is equivalent to (x⁻¹ + y⁻¹)⁻¹?",
+      "choices": [
+        "xy/(x + y)",
+        "x + y",
+        "(x + y)/(xy)",
+        "1/(x + y)"
+      ],
+      "answer": 0,
+      "check": "x*y/(x+y)",
+      "hint": "x⁻¹ + y⁻¹ = (x + y)/(xy). Затем переверни.",
+      "explanation": "((x + y)/(xy))⁻¹ = xy/(x + y) (A). C — не перевернули; B — «отрицательные показатели сократились»."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The function p is defined by p(x) = 2x² − 3x + 1. For all values of a, p(a + 1) = 2a² + ka, where k is a constant. What is the value of k?",
+      "answer": [
+        "1"
+      ],
+      "check": "1",
+      "hint": "Подставь a + 1 и раскрой.",
+      "explanation": "2(a² + 2a + 1) − 3a − 3 + 1 = 2a² + 4a + 2 − 3a − 2 = 2a² + a, k = 1."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For x ≠ 3 and x ≠ −3, which expression is equivalent to (x² − 3x)/(x − 3) − (x² − 9)/(x + 3)?",
+      "choices": [
+        "3",
+        "−3",
+        "2x − 3",
+        "0"
+      ],
+      "answer": 0,
+      "check": "3",
+      "hint": "Сократи каждую дробь.",
+      "explanation": "(x² − 3x)/(x − 3) = x, (x² − 9)/(x + 3) = x − 3. x − (x − 3) = 3 (A). −3 — знак при вычитании скобки."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If (x − 2)(x + 2)(x² + 4) = x⁴ + k for all values of x, what is the value of k?",
+      "answer": [
+        "-16"
+      ],
+      "check": "-16",
+      "hint": "Перемножай по шагам: сначала (x − 2)(x + 2).",
+      "explanation": "(x² − 4)(x² + 4) = x⁴ − 16, k = −16."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The expression 5(1.08)^(2t) can be rewritten as 5k^t, where k is a constant. What is the value of k?",
+      "choices": [
+        "1.08",
+        "1.16",
+        "1.1664",
+        "2.16"
+      ],
+      "answer": 2,
+      "check": "1.08^2",
+      "hint": "(1,08)^(2t) = ((1,08)²)^t.",
+      "explanation": "k = 1,08² = 1,1664 (C). 1,16 — сложили 8% дважды; 2,16 — удвоили 1,08."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If x² − 3x + 1 = 0, what is the value of x² + 1/x²?",
+      "answer": [
+        "7"
+      ],
+      "check": "9-2",
+      "hint": "Раздели уравнение на x, чтобы найти x + 1/x.",
+      "explanation": "x − 3 + 1/x = 0 ⇒ x + 1/x = 3. x² + 1/x² = 3² − 2 = 7."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which expression is equivalent to x³ + 8?",
+      "choices": [
+        "(x + 2)³",
+        "(x + 2)(x² − 2x + 4)",
+        "(x + 2)(x² + 2x + 4)",
+        "(x − 2)(x² + 2x + 4)"
+      ],
+      "answer": 1,
+      "check": "(x+2)*(x^2-2x+4)",
+      "hint": "Сумма кубов: a³ + b³ = (a + b)(a² − ab + b²).",
+      "explanation": "a = x, b = 2: (x + 2)(x² − 2x + 4) (B). D — это x³ − 8; C при раскрытии даёт лишние 4x² и 8x."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If (x + y)² = 49 and (x − y)² = 9, what is the value of xy?",
+      "answer": [
+        "10"
+      ],
+      "check": "(49-9)/4",
+      "hint": "(x + y)² − (x − y)² = 4xy.",
+      "explanation": "(x + y)² − (x − y)² = 4xy, поэтому 4xy = 49 − 9 = 40 и xy = 10."
+    }
+  ]
+}
