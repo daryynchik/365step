@@ -4,10 +4,28 @@
  * safe to import on the client.
  */
 
+import type { Outcome } from "@/content/math-ladder";
 import type { Question } from "@/content/types";
+
+export type { Outcome };
 
 /** A response is an option index for choice questions, typed text for input ones. */
 export type Response = number | string;
+
+/**
+ * How each question was answered besides the first response: a hint opened
+ * before answering, and a right answer on the second try (after the solution
+ * was shown). Neither raises the student's level.
+ */
+export interface AttemptMeta {
+  hinted?: boolean[];
+  retried?: boolean[];
+}
+
+/** First try right without a hint — clean; with a hint — hinted; otherwise wrong. */
+export function outcomeOf(correct: boolean, hinted: boolean): Outcome {
+  return !correct ? "wrong" : hinted ? "hinted" : "clean";
+}
 
 /** "3,000" / "3 000" / " .50 " -> "3000" / "3000" / ".50"; unicode minus -> "-". */
 function normalise(text: string): string {

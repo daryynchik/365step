@@ -174,6 +174,16 @@ export function Celebration({
         </div>
       )}
 
+      {result.adaptation && result.adaptation.length > 0 && (
+        <ul className="rise mt-4 w-full max-w-md space-y-2" style={{ animationDelay: "550ms" }}>
+          {result.adaptation.map((m) => (
+            <li key={m} className="rounded-xl border border-line bg-surface px-4 py-3 text-sm">
+              {m}
+            </li>
+          ))}
+        </ul>
+      )}
+
       {!result.firstTime && result.points === 0 && (
         <p className="mt-4 max-w-md text-center text-sm text-muted">
           Очки за повторение начисляются один раз в день для каждого урока.

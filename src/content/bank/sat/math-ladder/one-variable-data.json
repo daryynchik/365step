@@ -1,0 +1,1117 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "problem-solving-data",
+    "skill": "one-variable-data",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "The daily high temperatures, in degrees Celsius, for five days were 18, 21, 19, 22, and 20. What was the mean daily high temperature?",
+      "answer": [
+        "20"
+      ],
+      "check": "mean([18,21,19,22,20])",
+      "hint": "Сложи значения и раздели на их количество.",
+      "explanation": "(18 + 21 + 19 + 22 + 20)/5 = 100/5 = 20."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "The numbers of goals a team scored in six games were 6, 2, 9, 2, 5, and 7. Which number of goals is the mode of these data?",
+      "choices": [
+        "2",
+        "5",
+        "5.5",
+        "7"
+      ],
+      "answer": 0,
+      "check": "mode([6,2,9,2,5,7])",
+      "hint": "Мода — значение, которое встречается чаще всего.",
+      "explanation": "Только 2 встречается дважды (A). 5,5 — медиана; 5 — среднее с ошибкой."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "The ages of five siblings are 3, 8, 11, 14, and 19 years. What is the range of their ages?",
+      "choices": [
+        "11",
+        "14",
+        "16",
+        "19"
+      ],
+      "answer": 2,
+      "check": "19-3",
+      "hint": "Размах — наибольшее минус наименьшее.",
+      "explanation": "19 − 3 = 16 (C). 11 — медиана; 19 — наибольший возраст."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A student's scores on three tests were 84, 90, and 78. What is the mean of the three scores?",
+      "answer": [
+        "84"
+      ],
+      "check": "mean([84,90,78])",
+      "hint": "(84 + 90 + 78)/3.",
+      "explanation": "Сумма 84 + 90 + 78 = 252, среднее 252/3 = 84."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Seven students scored 1, 3, 3, 6, 9, 10, and 12 points in a game. What is the median number of points?",
+      "choices": [
+        "3",
+        "6",
+        "7.7",
+        "9"
+      ],
+      "answer": 1,
+      "check": "median([1,3,3,6,9,10,12])",
+      "hint": "Значения уже упорядочены — найди среднее по порядку.",
+      "explanation": "Четвёртое из семи значений — 6 (B). 3 — мода; 6,3 — среднее (44/7), 7,7 — ошибка в сумме."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The table shows the number of siblings of each of 10 students. What is the mean number of siblings per student?",
+      "table": {
+        "head": [
+          "Number of siblings",
+          "Number of students"
+        ],
+        "rows": [
+          [
+            "0",
+            "3"
+          ],
+          [
+            "1",
+            "5"
+          ],
+          [
+            "2",
+            "2"
+          ]
+        ]
+      },
+      "answer": [
+        "0.9",
+        "9/10"
+      ],
+      "check": "(0*3+1*5+2*2)/10",
+      "hint": "Умножь каждое значение на его частоту и сложи.",
+      "explanation": "(0 · 3 + 1 · 5 + 2 · 2)/10 = 9/10 = 0,9. Ошибка — (0 + 1 + 2)/3 = 1 (без учёта частот)."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The numbers of points a player scored in five games were 4, 7, 7, 8, and 9. How does the mean number of points compare with the median number of points?",
+      "choices": [
+        "The mean and the median are equal.",
+        "The mean is greater than the median.",
+        "The median is greater than the mean.",
+        "There is not enough information to compare them."
+      ],
+      "answer": 0,
+      "hint": "Посчитай оба показателя.",
+      "explanation": "Среднее 35/5 = 7, медиана (третье значение) 7 — они равны (A)."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The sum of six numbers is 87. What is the mean of the six numbers?",
+      "answer": [
+        "14.5",
+        "29/2"
+      ],
+      "check": "87/6",
+      "hint": "Среднее = сумма / количество.",
+      "explanation": "Среднее равно сумме, делённой на количество: 87 : 6 = 14,5."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A student's test scores were 65, 72, 72, 80, 91, and 95. What is the median score?",
+      "choices": [
+        "72",
+        "76",
+        "79.2",
+        "80"
+      ],
+      "answer": 1,
+      "check": "median([65,72,72,80,91,95])",
+      "hint": "При чётном числе значений медиана — среднее двух средних.",
+      "explanation": "Средние значения 72 и 80, медиана 76 (B). 72 — мода; 79,2 — среднее; 80 — четвёртое значение."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The mean of four numbers is 12. Three of the numbers are 10, 15, and 9. What is the fourth number?",
+      "answer": [
+        "14"
+      ],
+      "check": "48-34",
+      "hint": "Сумма четырёх чисел 4 · 12.",
+      "explanation": "Сумма четырёх чисел 4 · 12 = 48, три известных дают 34, четвёртое 48 − 34 = 14."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following data sets has the smallest range?",
+      "choices": [
+        "3, 9, 15",
+        "20, 22, 25",
+        "1, 2, 30",
+        "8, 8, 20"
+      ],
+      "answer": 1,
+      "hint": "Посчитай размах каждого набора.",
+      "explanation": "Размахи: 12, 5, 29, 12. Наименьший у B. Размах не зависит от величины самих чисел — только от разброса."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "In the data set 5, 8, 8, 10, 14, the value 14 is changed to 24. What is the median of the new data set?",
+      "answer": [
+        "8"
+      ],
+      "check": "median([5,8,8,10,24])",
+      "hint": "Изменилось только наибольшее значение.",
+      "explanation": "Набор 5, 8, 8, 10, 24 — третье значение по-прежнему 8. Медиана не меняется при изменении крайнего значения."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For the data set 2, 4, 4, 5, 5, 5, 9, which of the following statements is true?",
+      "choices": [
+        "The mode is equal to the median.",
+        "The mean is equal to the mode.",
+        "The mean is greater than the median.",
+        "The range is 5."
+      ],
+      "answer": 0,
+      "hint": "Найди моду, медиану и среднее.",
+      "explanation": "Мода 5, медиана 5 (четвёртое из семи) — A верно. Среднее 34/7 ≈ 4,86 — меньше медианы; размах 7."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Four puppies weigh 2.5, 3.1, 2.8, and 3.6 kilograms. What is their mean weight, in kilograms?",
+      "answer": [
+        "3"
+      ],
+      "check": "mean([2.5,3.1,2.8,3.6])",
+      "hint": "Сумма 12 кг.",
+      "explanation": "Сумма масс 12 кг, среднее 12/4 = 3 кг."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The times, in minutes, that six students took to finish a puzzle were 21, 23, 24, 24, 26, and 61. Which time is most likely an outlier?",
+      "choices": [
+        "21",
+        "24",
+        "26",
+        "61"
+      ],
+      "answer": 3,
+      "check": "61",
+      "hint": "Выброс заметно отличается от остальных значений.",
+      "explanation": "Остальные времена от 21 до 26, а 61 намного больше (D)."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The mean of the numbers 3, 5, 9, 11, and x is 7. What is the value of x?",
+      "answer": [
+        "7"
+      ],
+      "check": "35-28",
+      "verify": "(3 + 5 + 9 + 11 + ans)/5 == 7",
+      "hint": "Сумма должна быть 5 · 7.",
+      "explanation": "Сумма пяти чисел 35, известные дают 28, поэтому x = 7."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The table shows the scores of 10 students on a quiz. What is the mode of the scores?",
+      "table": {
+        "head": [
+          "Score",
+          "Number of students"
+        ],
+        "rows": [
+          [
+            "70",
+            "2"
+          ],
+          [
+            "80",
+            "5"
+          ],
+          [
+            "90",
+            "3"
+          ]
+        ]
+      },
+      "choices": [
+        "70",
+        "80",
+        "82",
+        "90"
+      ],
+      "answer": 1,
+      "check": "80",
+      "hint": "Мода — значение с наибольшей частотой.",
+      "explanation": "80 набрали 5 учеников — больше всего (B). 82 — среднее; 90 — наибольший балл."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A sprinter's times, in seconds, in four races were 12.4, 12.1, 12.8, and 12.7. What is the median time, in seconds?",
+      "answer": [
+        "12.55"
+      ],
+      "check": "median([12.4,12.1,12.8,12.7])",
+      "hint": "Сначала упорядочь значения.",
+      "explanation": "12,1; 12,4; 12,7; 12,8 — медиана (12,4 + 12,7)/2 = 12,55. Ошибка — (12,1 + 12,8)/2 без упорядочивания."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If every value in a data set is doubled, what happens to the mean of the data set?",
+      "choices": [
+        "It does not change.",
+        "It is doubled.",
+        "It increases by 2.",
+        "It is halved."
+      ],
+      "answer": 1,
+      "hint": "Попробуй на примере: 1, 2, 3.",
+      "explanation": "Сумма удваивается при том же количестве значений, поэтому и среднее удваивается (B). Например, среднее 1, 2, 3 равно 2, а 2, 4, 6 — 4."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the range of the data set 4.5, 7.2, 3.8, 9.1, 6.0?",
+      "answer": [
+        "5.3"
+      ],
+      "check": "9.1-3.8",
+      "hint": "Найди наибольшее и наименьшее значения.",
+      "explanation": "Наибольшее 9,1, наименьшее 3,8, размах 9,1 − 3,8 = 5,3."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The table shows the number of books read by 10 students in a month. What is the median number of books read?",
+      "table": {
+        "head": [
+          "Number of books",
+          "Number of students"
+        ],
+        "rows": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "4"
+          ],
+          [
+            "3",
+            "1"
+          ],
+          [
+            "4",
+            "3"
+          ]
+        ]
+      },
+      "choices": [
+        "2",
+        "2.5",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "check": "median([1,1,2,2,2,2,3,4,4,4])",
+      "hint": "Выпиши значения по порядку: 10 значений — медиана между 5-м и 6-м.",
+      "explanation": "1, 1, 2, 2, 2, 2, 3, 4, 4, 4 — 5-е и 6-е значения равны 2, медиана 2 (A). 2,5 — середина между 1 и 4; 4 — частота."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The mean of five numbers is 8. A sixth number, 14, is added to the data set. What is the mean of the six numbers?",
+      "answer": [
+        "9"
+      ],
+      "check": "(40+14)/6",
+      "hint": "Новая сумма: 5 · 8 + 14.",
+      "explanation": "Новая сумма 40 + 14 = 54, среднее 54/6 = 9."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following measures is most affected by a single extreme value in a data set?",
+      "choices": [
+        "The mean",
+        "The median",
+        "The mode",
+        "The number of values"
+      ],
+      "answer": 0,
+      "hint": "Какой показатель использует величину каждого значения?",
+      "explanation": "Среднее учитывает величину каждого значения, поэтому один экстремальный элемент сильно его сдвигает (A). Медиана и мода зависят лишь от порядка и повторов."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The prices of five items are $3, $5, $5, $6, and $11. What is the mean price minus the median price, in dollars?",
+      "answer": [
+        "1"
+      ],
+      "check": "mean([3,5,5,6,11])-median([3,5,5,6,11])",
+      "hint": "Среднее 30/5, медиана — третье значение.",
+      "explanation": "Среднее 6, медиана 5, разность 1. Большое значение 11 тянет среднее вверх."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Data set A consists of 10, 10, 10, and data set B consists of 0, 10, 20. Which of the following is true?",
+      "choices": [
+        "The data sets have the same mean, and B has the greater standard deviation.",
+        "The data sets have the same standard deviation.",
+        "Data set A has the greater mean.",
+        "Data set B has the smaller range."
+      ],
+      "answer": 0,
+      "hint": "Найди средние и сравни разброс.",
+      "explanation": "Средние равны 10. В A разброса нет (стандартное отклонение 0), в B значения отстоят от 10 на 10 — отклонение больше (A)."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The table shows the number of hours of sleep reported by 20 students. What is the mean number of hours of sleep?",
+      "table": {
+        "head": [
+          "Hours of sleep",
+          "Number of students"
+        ],
+        "rows": [
+          [
+            "6",
+            "4"
+          ],
+          [
+            "7",
+            "10"
+          ],
+          [
+            "8",
+            "5"
+          ],
+          [
+            "9",
+            "1"
+          ]
+        ]
+      },
+      "answer": [
+        "7.15"
+      ],
+      "check": "(6*4+7*10+8*5+9*1)/20",
+      "hint": "Взвешенное среднее: сумма произведений значений на частоты.",
+      "explanation": "(24 + 70 + 40 + 9)/20 = 143/20 = 7,15. Ошибка — (6 + 7 + 8 + 9)/4 = 7,5."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The data set 4, 6, 9, 13, x has a median of 9 and a mean of 10. What is the value of x?",
+      "choices": [
+        "9",
+        "13",
+        "18",
+        "50"
+      ],
+      "answer": 2,
+      "check": "50-32",
+      "verify": "(4 + 6 + 9 + 13 + ans)/5 == 10 and median([4, 6, 9, 13, ans]) == 9",
+      "hint": "Сумма должна быть 50; проверь, что медиана останется 9.",
+      "explanation": "x = 50 − 32 = 18 (C). Набор 4, 6, 9, 13, 18 — медиана 9. 50 — сумма; 13 даёт среднее 9."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A data set of 20 values has a mean of 35. Each value is increased by 4. What is the mean of the new data set?",
+      "answer": [
+        "39"
+      ],
+      "check": "35+4",
+      "hint": "Прибавление одного числа к каждому значению сдвигает среднее на это число.",
+      "explanation": "35 + 4 = 39. Ошибка — прибавить к среднему всю добавку 20 · 4 = 80 (получится 115)."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A box plot of a data set shows a minimum of 5, a first quartile of 12, a median of 18, a third quartile of 26, and a maximum of 40. Approximately what percent of the data values are between 12 and 26?",
+      "choices": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "answer": 1,
+      "check": "50",
+      "hint": "Между первым и третьим квартилями лежит средняя половина данных.",
+      "explanation": "От Q1 до Q3 — примерно 50% значений (B). 25% — между соседними квартилями; 75% — от минимума до Q3."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The data set 2, 4, 6, 8, 10, 12 has a mean of m. When the value 12 is removed, by how much does the mean decrease?",
+      "answer": [
+        "1"
+      ],
+      "check": "mean([2,4,6,8,10,12])-mean([2,4,6,8,10])",
+      "hint": "Посчитай оба средних.",
+      "explanation": "Было 42/6 = 7, стало 30/5 = 6 — уменьшение на 1."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Data set A is 3, 5, 7, 9, 11, and data set B is 3, 7, 7, 7, 11. Which of the following is true?",
+      "choices": [
+        "Data set A has the greater standard deviation.",
+        "Data set B has the greater standard deviation.",
+        "The data sets have different means.",
+        "The data sets have different ranges."
+      ],
+      "answer": 0,
+      "hint": "Средние одинаковы. В каком наборе значения в среднем дальше от среднего?",
+      "explanation": "Оба набора имеют среднее 7 и размах 8. В B три значения совпадают со средним, в A значения разбросаны — стандартное отклонение больше у A."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The mean of the four numbers x, x + 4, x + 8, and x + 12 is 20. What is the value of x?",
+      "answer": [
+        "14"
+      ],
+      "check": "(80-24)/4",
+      "verify": "(4*ans + 24)/4 == 20",
+      "hint": "Сумма 4x + 24 = 80.",
+      "explanation": "4x = 56 ⇒ x = 14. Числа 14, 18, 22, 26."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The table shows the shoe sizes of 15 people. What is the median shoe size?",
+      "table": {
+        "head": [
+          "Shoe size",
+          "Number of people"
+        ],
+        "rows": [
+          [
+            "6",
+            "2"
+          ],
+          [
+            "7",
+            "4"
+          ],
+          [
+            "8",
+            "5"
+          ],
+          [
+            "9",
+            "3"
+          ],
+          [
+            "10",
+            "1"
+          ]
+        ]
+      },
+      "choices": [
+        "7",
+        "7.5",
+        "8",
+        "8.5"
+      ],
+      "answer": 2,
+      "check": "8",
+      "hint": "Медиана — 8-е значение из 15. Считай накопленные частоты.",
+      "explanation": "Размеры 6 занимают места 1–2, 7 — места 3–6, 8 — места 7–11. Восьмое значение — 8 (C)."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The mean score of 10 students on a test was calculated as 76. Later, the teacher found that one score of 94 had been recorded as 49. What is the correct mean score?",
+      "answer": [
+        "80.5"
+      ],
+      "check": "76+45/10",
+      "hint": "Сумма была занижена на 94 − 49.",
+      "explanation": "Сумма выросла на 45, среднее — на 4,5: 80,5."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following changes to the data set 5, 10, 15, 20, 25 would NOT change its median?",
+      "choices": [
+        "Increasing 25 to 50",
+        "Increasing 15 to 18",
+        "Removing 5",
+        "Adding the value 30"
+      ],
+      "answer": 0,
+      "hint": "Медиана — среднее по порядку значение.",
+      "explanation": "Изменение наибольшего значения не меняет середину: медиана остаётся 15 (A). B меняет само среднее значение; C и D меняют количество значений, медиана становится 17,5."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The table shows the ages of 20 people at a meeting. How many of the people are at least 20 years old?",
+      "table": {
+        "head": [
+          "Age (years)",
+          "Number of people"
+        ],
+        "rows": [
+          [
+            "10–19",
+            "6"
+          ],
+          [
+            "20–29",
+            "9"
+          ],
+          [
+            "30–39",
+            "5"
+          ]
+        ]
+      },
+      "answer": [
+        "14"
+      ],
+      "check": "9+5",
+      "hint": "«Не меньше 20» — группы 20–29 и 30–39.",
+      "explanation": "Группы 20–29 и 30–39: 9 + 5 = 14 человек."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The mean score of 25 students on a test is 80. A new student takes the test and scores 54. What is the mean score of all 26 students?",
+      "choices": [
+        "79",
+        "78",
+        "67",
+        "80"
+      ],
+      "answer": 0,
+      "check": "(25*80+54)/26",
+      "hint": "Новая сумма: 2000 + 54.",
+      "explanation": "2054/26 = 79 (A). 67 — среднее 80 и 54; 80 — если не учесть нового ученика."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The data set 7, 9, 10, 10, 14 has a sixth value added to it, and the mean of the six values is 11. What is the sixth value?",
+      "answer": [
+        "16"
+      ],
+      "check": "66-50",
+      "hint": "Нужная сумма 6 · 11.",
+      "explanation": "Нужная сумма 66, имеющиеся значения дают 50, шестое значение 16."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The standard deviation of a data set is 3. Each value in the data set is multiplied by 2, and then 5 is added to each result. What is the standard deviation of the new data set?",
+      "choices": [
+        "3",
+        "6",
+        "11",
+        "8"
+      ],
+      "answer": 1,
+      "check": "6",
+      "hint": "Прибавление числа разброс не меняет, умножение — умножает.",
+      "explanation": "Умножение на 2 удваивает отклонение: 6. Прибавление 5 сдвигает все значения одинаково и разброс не меняет (B). 11 — 2 · 3 + 5."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The table shows the number of goals a team scored in its games. The mean number of goals per game is 1.8. What is the value of x?",
+      "table": {
+        "head": [
+          "Goals",
+          "Number of games"
+        ],
+        "rows": [
+          [
+            "1",
+            "4"
+          ],
+          [
+            "2",
+            "x"
+          ],
+          [
+            "3",
+            "2"
+          ]
+        ]
+      },
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "(4 + 2*ans + 6)/(6 + ans) == 1.8",
+      "hint": "Среднее = (4 + 2x + 6)/(6 + x).",
+      "explanation": "10 + 2x = 1,8(6 + x) ⇒ 10 + 2x = 10,8 + 1,8x ⇒ 0,2x = 0,8 ⇒ x = 4."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A data set of 6 numbers has a mean of 10 and a median of 9. Each number is increased by 3, and then the largest number is increased by an additional 6. Which of the following gives the mean and median of the new data set?",
+      "choices": [
+        "Mean 14, median 12",
+        "Mean 13, median 12",
+        "Mean 14, median 13",
+        "Mean 16, median 12"
+      ],
+      "answer": 0,
+      "hint": "+3 к каждому сдвигает оба показателя на 3. Затем +6 к одному значению.",
+      "explanation": "После +3: среднее 13, медиана 12. +6 к наибольшему увеличивает сумму на 6 — среднее растёт на 1 (до 14), медиана не меняется (A)."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A data set of 5 values has a mean of 12 and a median of 10. The largest value is increased by 15. What is the mean of the new data set minus its median?",
+      "answer": [
+        "5"
+      ],
+      "check": "75/5-10",
+      "hint": "Сумма вырастет на 15, середина набора не изменится.",
+      "explanation": "Новое среднее (60 + 15)/5 = 15, медиана 10. Разность 5."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following data sets has a mean of 6 and a median of 5?",
+      "choices": [
+        "2, 4, 5, 9, 10",
+        "4, 5, 6, 7, 8",
+        "5, 5, 6, 7, 7",
+        "1, 5, 5, 9, 15"
+      ],
+      "answer": 0,
+      "hint": "Проверь сумму (должна быть 30) и среднее по порядку значение.",
+      "explanation": "A: сумма 30, медиана 5 (A). B и C имеют среднее 6, но медиану 6; D имеет медиану 5, но сумму 35 (среднее 7)."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A data set consists of the 7 values 2, 5, 7, 8, 8, 10, and x, where x is an integer greater than 10. The mean of the data set is 8. What is the value of x?",
+      "answer": [
+        "16"
+      ],
+      "check": "56-40",
+      "hint": "Сумма должна быть 7 · 8.",
+      "explanation": "56 − 40 = 16, и 16 > 10 — условие выполнено."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A data set of 50 values has a mean of 20 and a median of 18. The largest value, 60, is changed to 80. Which of the following is true?",
+      "choices": [
+        "The mean increases by 0.4, and the median does not change.",
+        "The mean and the median each increase by 20.",
+        "The mean increases by 20, and the median increases by 0.4.",
+        "The median increases by 0.4, and the mean does not change."
+      ],
+      "answer": 0,
+      "hint": "Сумма вырастает на 20 — на сколько растёт среднее 50 значений?",
+      "explanation": "Среднее растёт на 20/50 = 0,4; середина набора не меняется (A)."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the data set 3, 5, 7, 8, 12, 13, 14, 18, 21, the first quartile is the median of the four values below the median, and the third quartile is the median of the four values above the median. What is the interquartile range?",
+      "answer": [
+        "10"
+      ],
+      "check": "16-6",
+      "hint": "Медиана 12. Нижняя половина 3, 5, 7, 8; верхняя 13, 14, 18, 21.",
+      "explanation": "Q1 = (5 + 7)/2 = 6, Q3 = (14 + 18)/2 = 16, межквартильный размах 10."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A team's scores in seven games were 64, 70, 72, 75, 80, 81, and 115. If the score of 115 is removed, how do the mean and the median change?",
+      "choices": [
+        "Both decrease, and the mean decreases much more than the median.",
+        "Both decrease by the same amount.",
+        "The mean decreases, and the median does not change.",
+        "The mean increases, and the median decreases."
+      ],
+      "answer": 0,
+      "hint": "Посчитай оба показателя до и после.",
+      "explanation": "Было: среднее ≈ 79,6, медиана 75. Стало: среднее ≈ 73,7, медиана 73,5. Среднее упало примерно на 6, медиана — на 1,5 (A)."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The table shows the quiz scores of 30 students. To the nearest hundredth, what is the mean score?",
+      "table": {
+        "head": [
+          "Score",
+          "Number of students"
+        ],
+        "rows": [
+          [
+            "6",
+            "3"
+          ],
+          [
+            "7",
+            "6"
+          ],
+          [
+            "8",
+            "11"
+          ],
+          [
+            "9",
+            "7"
+          ],
+          [
+            "10",
+            "3"
+          ]
+        ]
+      },
+      "answer": [
+        "8.03"
+      ],
+      "check": "(6*3+7*6+8*11+9*7+10*3)/30",
+      "hint": "Сумма произведений, делённая на 30.",
+      "explanation": "(18 + 42 + 88 + 63 + 30)/30 = 241/30 ≈ 8,03."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A data set has a mean of 50 and a standard deviation of 10. The value 75 is how many standard deviations above the mean?",
+      "choices": [
+        "2",
+        "2.5",
+        "25",
+        "7.5"
+      ],
+      "answer": 1,
+      "check": "(75-50)/10",
+      "hint": "Раздели расстояние до среднего на стандартное отклонение.",
+      "explanation": "(75 − 50)/10 = 2,5 (B). 25 — само расстояние без деления."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The mean of four numbers is 15. A fifth number is added, and the five numbers have a median of 14 and a mean of 16. What is the fifth number?",
+      "answer": [
+        "20"
+      ],
+      "check": "80-60",
+      "hint": "Медиана здесь лишняя информация. Сравни суммы.",
+      "explanation": "Сумма стала 5 · 16 = 80, была 60. Пятое число 20."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A data set of 10 values has a mean of 25. The values 40 and 10 are removed from the data set. What is the mean of the remaining values?",
+      "choices": [
+        "25",
+        "20",
+        "28.75",
+        "22.5"
+      ],
+      "answer": 0,
+      "check": "(250-50)/8",
+      "hint": "Сумма удалённых значений равна 2 · 25.",
+      "explanation": "(250 − 50)/8 = 25 (A). Удалённые значения в среднем равны 25, поэтому среднее не меняется."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The mean score of a class of 24 students on a test is 70. The teacher adds 5 points to each of the 8 lowest scores only. What is the new mean score, rounded to the nearest hundredth?",
+      "answer": [
+        "71.67",
+        "215/3",
+        "71.66"
+      ],
+      "check": "70+40/24",
+      "hint": "Сумма растёт на 8 · 5.",
+      "explanation": "Сумма выросла на 40, среднее — на 40/24 ≈ 1,67: ≈ 71,67."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Every value in a data set is equal to 7. What is the standard deviation of the data set?",
+      "choices": [
+        "0",
+        "1",
+        "7",
+        "49"
+      ],
+      "answer": 0,
+      "check": "0",
+      "hint": "Стандартное отклонение измеряет разброс относительно среднего.",
+      "explanation": "Все значения равны среднему 7, разброса нет: отклонение 0 (A)."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The table shows the number of cars owned by each of 200 households. What is the mean number of cars per household?",
+      "table": {
+        "head": [
+          "Number of cars",
+          "Number of households"
+        ],
+        "rows": [
+          [
+            "0",
+            "20"
+          ],
+          [
+            "1",
+            "90"
+          ],
+          [
+            "2",
+            "70"
+          ],
+          [
+            "3",
+            "20"
+          ]
+        ]
+      },
+      "answer": [
+        "1.45"
+      ],
+      "check": "(0*20+1*90+2*70+3*20)/200",
+      "hint": "Взвешенное среднее.",
+      "explanation": "(0 + 90 + 140 + 60)/200 = 290/200 = 1,45."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A list of 9 integers has a median of 14 and a mean of 15. If the largest integer in the list is increased by 9, what is the mean of the new list?",
+      "choices": [
+        "15",
+        "16",
+        "24",
+        "14"
+      ],
+      "answer": 1,
+      "check": "15+9/9",
+      "hint": "Сумма растёт на 9.",
+      "explanation": "Новое среднее 15 + 9/9 = 16 (B). 24 — 15 + 9 (прибавка к среднему без деления)."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The heights, in centimeters, of seven plants are 12, 15, 15, 18, 20, 22, and 24. An eighth plant is added, and the median height of the eight plants is 17 centimeters. What is the height of the eighth plant, in centimeters?",
+      "answer": [
+        "16"
+      ],
+      "check": "16",
+      "verify": "median([12, 15, 15, 18, 20, 22, 24, ans]) == 17",
+      "hint": "Медиана восьми значений — среднее 4-го и 5-го.",
+      "explanation": "Если новое значение h между 15 и 18, то 4-е и 5-е — h и 18: (h + 18)/2 = 17 ⇒ h = 16. При h ≤ 15 медиана была бы 16,5, при h ≥ 18 — не меньше 18."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A student's five test scores are 70, 82, 88, 91, and x. The median of the five scores is 85. What is the value of x?",
+      "choices": [
+        "82",
+        "85",
+        "88",
+        "94"
+      ],
+      "answer": 1,
+      "check": "85",
+      "verify": "median([70, 82, 88, 91, ans]) == 85",
+      "hint": "Медиана пяти чисел — само среднее по порядку значение.",
+      "explanation": "85 должно стоять в середине: 70, 82, 85, 88, 91 — x = 85 (B). При других x медиана была бы 82 или 88."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The mean of a, b, and c is 12, and the mean of a and b is 9. What is the value of c?",
+      "answer": [
+        "18"
+      ],
+      "check": "36-18",
+      "hint": "a + b + c = 36, a + b = 18.",
+      "explanation": "a + b + c = 36 и a + b = 18, поэтому c = 36 − 18 = 18."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For the data set 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, which of the following measures is greatest?",
+      "choices": [
+        "The mean",
+        "The median",
+        "The mode",
+        "All three are equal."
+      ],
+      "answer": 2,
+      "hint": "Посчитай все три показателя.",
+      "explanation": "Среднее 30/10 = 3, медиана (3 + 3)/2 = 3, мода 4 — наибольшая (C)."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "An archer's six scores have a mean of 8.5. The highest score, 10, and the lowest score, 6, are dropped. What is the mean of the remaining four scores?",
+      "answer": [
+        "8.75"
+      ],
+      "check": "(51-16)/4",
+      "hint": "Сумма шести: 6 · 8,5.",
+      "explanation": "Сумма шести оценок 6 · 8,5 = 51; без 10 и 6 остаётся 35, среднее 35/4 = 8,75."
+    }
+  ]
+}

@@ -1,0 +1,1609 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "problem-solving-data",
+    "skill": "ratios-rates",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A recipe for 6 muffins uses 2 eggs. At this rate, how many eggs are needed for 18 muffins?",
+      "answer": [
+        "6"
+      ],
+      "check": "2*18/6",
+      "hint": "Во сколько раз больше маффинов?",
+      "explanation": "18 маффинов — в 3 раза больше, значит, и яиц в 3 раза больше: 6."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "A store sells 3 pens for $1.20. What is the price of one pen?",
+      "choices": [
+        "$0.30",
+        "$0.40",
+        "$0.60",
+        "$3.60"
+      ],
+      "answer": 1,
+      "check": "1.2/3",
+      "hint": "Раздели цену на число ручек.",
+      "explanation": "1,20 : 3 = 0,40 (B). 3,60 — умножили вместо деления; 0,60 — разделили на 2."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "One meter is equal to 100 centimeters. How many meters are in 350 centimeters?",
+      "choices": [
+        "0.35",
+        "3.5",
+        "35",
+        "35,000"
+      ],
+      "answer": 1,
+      "check": "350/100",
+      "hint": "Метр крупнее сантиметра — число станет меньше.",
+      "explanation": "350 : 100 = 3,5 м (B). 35 000 — умножили на 100; 0,35 — разделили на 1000."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A car travels 240 kilometers using 20 liters of fuel. How many kilometers does the car travel per liter of fuel?",
+      "answer": [
+        "12"
+      ],
+      "check": "240/20",
+      "hint": "Километры раздели на литры.",
+      "explanation": "Километры делим на литры: 240 : 20 = 12 км на литр."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "At a school, the ratio of students to teachers is 25 to 1. If there are 4 teachers, how many students are there?",
+      "choices": [
+        "29",
+        "100",
+        "25",
+        "104"
+      ],
+      "answer": 1,
+      "check": "25*4",
+      "hint": "На каждого учителя приходится 25 учеников.",
+      "explanation": "25 · 4 = 100 (B). 104 — сложили учеников с учителями; 29 — прибавили 4 к 25."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A machine fills 36 bottles in 4 minutes. At this rate, how many bottles does it fill in 15 minutes?",
+      "choices": [
+        "60",
+        "120",
+        "135",
+        "540"
+      ],
+      "answer": 2,
+      "check": "36/4*15",
+      "hint": "Сначала найди число бутылок в минуту.",
+      "explanation": "36 : 4 = 9 бутылок в минуту, за 15 минут — 135 (C). 540 — 36 · 15 (без деления на 4); 60 — 4 · 15."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "There are 1,000 grams in 1 kilogram. A box weighs 2.75 kilograms. What is its weight in grams?",
+      "answer": [
+        "2750"
+      ],
+      "check": "2.75*1000",
+      "hint": "Килограмм крупнее грамма — умножай.",
+      "explanation": "В килограмме 1000 граммов: 2,75 · 1000 = 2750 г."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Ana types 270 words in 6 minutes. At this rate, how many minutes will it take her to type 900 words?",
+      "choices": [
+        "15",
+        "20",
+        "30",
+        "45"
+      ],
+      "answer": 1,
+      "check": "900/(270/6)",
+      "verify": "270/6*ans == 900",
+      "hint": "Сколько слов она печатает за минуту?",
+      "explanation": "270 : 6 = 45 слов в минуту, 900 : 45 = 20 минут (B). 45 — скорость, а не время; 30 — 900 : 30."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A model car is built at a scale of 1:24. The model is 18 centimeters long. What is the length of the actual car, in meters?",
+      "answer": [
+        "4.32"
+      ],
+      "check": "18*24/100",
+      "hint": "Настоящая машина в 24 раза длиннее; затем переведи сантиметры в метры.",
+      "explanation": "18 · 24 = 432 см = 4,32 м. Ошибка — дать ответ в сантиметрах (432)."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following offers the lowest price per ounce?",
+      "choices": [
+        "12 ounces for $3.00",
+        "20 ounces for $4.40",
+        "8 ounces for $2.16",
+        "16 ounces for $3.84"
+      ],
+      "answer": 1,
+      "hint": "Посчитай цену одной унции в каждом варианте.",
+      "explanation": "3,00/12 = 0,25; 4,40/20 = 0,22; 2,16/8 = 0,27; 3,84/16 = 0,24. Дешевле всего B. Самая низкая общая цена (D для 8 унций) не означает самую низкую цену за унцию."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A faucet fills a 15-liter bucket in 2.5 minutes. At what rate, in liters per minute, does the faucet fill the bucket?",
+      "answer": [
+        "6"
+      ],
+      "check": "15/2.5",
+      "hint": "Литры раздели на минуты.",
+      "explanation": "15 : 2,5 = 6 литров в минуту. Ошибка — умножить 15 на 2,5."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The ratio of boys to girls in a class of 40 students is 2 to 3. How many girls are in the class?",
+      "choices": [
+        "16",
+        "24",
+        "26",
+        "27"
+      ],
+      "answer": 1,
+      "check": "40*3/5",
+      "hint": "Всего частей 2 + 3 = 5.",
+      "explanation": "Одна часть 40 : 5 = 8 учеников, девочек 3 · 8 = 24 (B). 16 — мальчики; 26 и 27 — неверное деление."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A cyclist rides at a constant speed of 15 kilometers per hour for 40 minutes. How many kilometers does the cyclist ride?",
+      "answer": [
+        "10"
+      ],
+      "check": "15*40/60",
+      "hint": "40 минут — это 2/3 часа.",
+      "explanation": "15 · 2/3 = 10 км. Ошибка — умножить 15 на 40 (600)."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "There are 12 inches in 1 foot. A board is 78 inches long. How long is the board, in feet?",
+      "choices": [
+        "6",
+        "6.5",
+        "7.8",
+        "936"
+      ],
+      "answer": 1,
+      "check": "78/12",
+      "hint": "Раздели на 12.",
+      "explanation": "78 : 12 = 6,5 фута (B). 936 — умножили; 7,8 — разделили на 10."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Gasoline costs $3.50 per gallon. How many gallons can be bought with $28?",
+      "answer": [
+        "8"
+      ],
+      "check": "28/3.5",
+      "hint": "Деньги раздели на цену галлона.",
+      "explanation": "Деньги делим на цену галлона: 28 : 3,5 = 8 галлонов."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A person's heart beats 72 times per minute. At this rate, how many times does it beat in 15 seconds?",
+      "choices": [
+        "18",
+        "24",
+        "4.8",
+        "1,080"
+      ],
+      "answer": 0,
+      "check": "72/4",
+      "hint": "15 секунд — это четверть минуты.",
+      "explanation": "72 : 4 = 18 (A). 1080 — 72 · 15 (секунды приняты за минуты); 4,8 — 72 : 15."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A train travels 360 kilometers in 4.5 hours. What is its average speed, in kilometers per hour?",
+      "answer": [
+        "80"
+      ],
+      "check": "360/4.5",
+      "hint": "Скорость = расстояние / время.",
+      "explanation": "Скорость равна пути, делённому на время: 360 : 4,5 = 80 км/ч."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A punch is made by mixing juice and soda in the ratio 3 to 2. How many liters of soda are needed to make 10 liters of punch?",
+      "choices": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 1,
+      "check": "10*2/5",
+      "hint": "10 литров — это 5 частей.",
+      "explanation": "Одна часть 2 л, газировки 2 части — 4 л (B). 6 — сок; 5 — половина."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A plant grows 1.2 centimeters per week. At this rate, how many weeks will it take the plant to grow 9 centimeters?",
+      "answer": [
+        "7.5",
+        "15/2"
+      ],
+      "check": "9/1.2",
+      "hint": "Раздели нужный рост на рост за неделю.",
+      "explanation": "Нужный рост делим на рост за неделю: 9 : 1,2 = 7,5 недели."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "One kilometer is approximately 0.62 mile. Approximately how many miles are in 50 kilometers?",
+      "choices": [
+        "31",
+        "50.62",
+        "80.6",
+        "62"
+      ],
+      "answer": 0,
+      "check": "50*0.62",
+      "hint": "Умножь число километров на 0,62.",
+      "explanation": "50 · 0,62 = 31 миля (A). 80,6 — разделили на 0,62 (перевод в обратную сторону); 50,62 — сложили."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A runner burns 9 calories per minute. At this rate, how many minutes must the runner run to burn 630 calories?",
+      "answer": [
+        "70"
+      ],
+      "check": "630/9",
+      "hint": "Раздели 630 на 9.",
+      "explanation": "630 : 9 = 70 минут. Ошибка — умножить 630 на 9."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A bakery uses 5 kilograms of flour to make 40 loaves of bread. At this rate, how many kilograms of flour are needed for 64 loaves?",
+      "choices": [
+        "6.4",
+        "8",
+        "12.8",
+        "16"
+      ],
+      "answer": 1,
+      "check": "5*64/40",
+      "hint": "Сколько муки на одну буханку?",
+      "explanation": "5 : 40 = 0,125 кг на буханку, 64 · 0,125 = 8 кг (B). 12,8 — 64 : 5; 6,4 — 64 : 10."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A 2-liter bottle of juice costs $2.40. At the same price per liter, what is the cost, in dollars, of 250 milliliters of juice?",
+      "answer": [
+        "0.3",
+        "0.30"
+      ],
+      "check": "2.4/2*0.25",
+      "hint": "250 мл = 0,25 л.",
+      "explanation": "Литр стоит 1,20, четверть литра — 0,30. Ошибка — забыть перевести миллилитры в литры."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A speed of 30 meters per second is equivalent to how many kilometers per hour?",
+      "choices": [
+        "8.3",
+        "50",
+        "108",
+        "1,800"
+      ],
+      "answer": 2,
+      "check": "30*3600/1000",
+      "hint": "За час 3600 секунд; в километре 1000 метров.",
+      "explanation": "30 · 3600 = 108 000 м/ч = 108 км/ч (C). 1800 — это метры в минуту; 8,3 — перевели в обратную сторону."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "At a school, 3 out of every 8 students walk to school. If 360 students walk to school, how many students attend the school?",
+      "answer": [
+        "960"
+      ],
+      "check": "360*8/3",
+      "hint": "360 — это 3 части из 8.",
+      "explanation": "Одна часть 120, всего 8 частей — 960 учеников."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A car travels 30 miles per gallon of gasoline, and gasoline costs $3.20 per gallon. To the nearest cent, what is the cost of gasoline per mile driven?",
+      "choices": [
+        "$0.09",
+        "$0.11",
+        "$0.96",
+        "$9.38"
+      ],
+      "answer": 1,
+      "check": "0.11",
+      "verify": "abs(ans - 3.2/30) < 0.005",
+      "hint": "Цена галлона раздели на мили с галлона.",
+      "explanation": "3,20 : 30 ≈ 0,107 ≈ 0,11 доллара за милю (B). 9,38 — 30 : 3,20 (миль на доллар); 0,96 — 3,20 · 0,3."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Two numbers are in the ratio 4 to 7, and their sum is 99. What is the larger number?",
+      "answer": [
+        "63"
+      ],
+      "check": "99/11*7",
+      "hint": "Всего 11 частей.",
+      "explanation": "Одна часть 99 : 11 = 9, большее число 7 · 9 = 63 (меньшее 36)."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A 4-inch by 6-inch photo is enlarged so that its proportions stay the same and its shorter side becomes 10 inches. What is the length of the longer side of the enlarged photo, in inches?",
+      "choices": [
+        "12",
+        "15",
+        "16",
+        "24"
+      ],
+      "answer": 1,
+      "check": "6*10/4",
+      "hint": "Коэффициент увеличения: 10/4.",
+      "explanation": "Масштаб 2,5, длинная сторона 6 · 2,5 = 15 (B). 12 — если прибавить к длинной стороне те же 6 дюймов, что к короткой; 16 — прибавили 10; 24 — умножили на 4."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A swimmer swims 100 meters in 1 minute and 20 seconds. What is the swimmer's average speed, in meters per second?",
+      "answer": [
+        "1.25",
+        "5/4"
+      ],
+      "check": "100/80",
+      "hint": "Переведи время в секунды.",
+      "explanation": "1 мин 20 с = 80 с, 100 : 80 = 1,25 м/с. Ошибка — 100 : 1,2 (минуты записаны как десятичная дробь)."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "One gallon is approximately 3.785 liters. To the nearest tenth, how many gallons are in 20 liters?",
+      "choices": [
+        "4.8",
+        "5.3",
+        "16.2",
+        "75.7"
+      ],
+      "answer": 1,
+      "check": "5.3",
+      "verify": "abs(ans - 20/3.785) < 0.05",
+      "hint": "Галлон крупнее литра — число должно уменьшиться.",
+      "explanation": "20 : 3,785 ≈ 5,28 ≈ 5,3 галлона (B). 75,7 — умножили; 16,2 — вычли."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A dough recipe uses flour, sugar, and butter in the ratio 5 : 2 : 1 by weight. A batch of the dough weighs 640 grams. How many grams of sugar are in the batch?",
+      "answer": [
+        "160"
+      ],
+      "check": "640/8*2",
+      "hint": "Всего 5 + 2 + 1 = 8 частей.",
+      "explanation": "Одна часть 80 г, сахара 2 части — 160 г."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A painter paints 3 rooms in 4 hours. At this rate, how many rooms can the painter paint in 10 hours?",
+      "choices": [
+        "6",
+        "7.5",
+        "12",
+        "13.3"
+      ],
+      "answer": 1,
+      "check": "3*10/4",
+      "hint": "Комнат в час: 3/4.",
+      "explanation": "0,75 · 10 = 7,5 комнаты (B). 13,3 — 4 · 10 : 3 (перепутаны величины); 12 — 3 · 4."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "An object moves at a constant speed of 5 meters per second. How many kilometers does it travel in 30 minutes?",
+      "answer": [
+        "9"
+      ],
+      "check": "5*1800/1000",
+      "hint": "30 минут = 1800 секунд.",
+      "explanation": "30 минут = 1800 секунд; 5 · 1800 = 9000 м = 9 км."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A school has 480 students and 32 teachers. If 120 more students enroll and the ratio of students to teachers stays the same, how many more teachers will the school need?",
+      "choices": [
+        "4",
+        "8",
+        "15",
+        "40"
+      ],
+      "answer": 1,
+      "check": "120/15",
+      "hint": "Найди, сколько учеников приходится на одного учителя.",
+      "explanation": "480 : 32 = 15 учеников на учителя. Для 120 новых нужно 120 : 15 = 8 учителей (B). 40 — общее число учителей после роста."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A liquid has a density of 1.25 grams per cubic centimeter. What volume, in cubic centimeters, does 500 grams of the liquid occupy?",
+      "answer": [
+        "400"
+      ],
+      "check": "500/1.25",
+      "hint": "Объём = масса / плотность.",
+      "explanation": "500 : 1,25 = 400 см³. Ошибка — 500 · 1,25 = 625."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Sam reads 45 pages per hour and reads for 1.5 hours each day. What is the least number of days he needs to finish a 360-page book?",
+      "choices": [
+        "5",
+        "5.3",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "check": "6",
+      "verify": "45*1.5*ans >= 360 and 45*1.5*(ans - 1) < 360",
+      "hint": "Страниц в день: 45 · 1,5.",
+      "explanation": "67,5 страницы в день; за 5 дней 337,5 — мало, за 6 дней книга закончена (C). 8 — 360 : 45 (часы, а не дни); 5,3 — нецелое число дней."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "There are 5,280 feet in 1 mile. A car travels at 60 miles per hour. What is its speed in feet per second?",
+      "answer": [
+        "88"
+      ],
+      "check": "60*5280/3600",
+      "hint": "Переведи мили в футы и часы в секунды.",
+      "explanation": "60 · 5280 = 316 800 футов в час; делим на 3600: 88 футов в секунду."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A recipe for 4 servings uses 1.5 cups of rice. How many cups of rice are needed for 10 servings?",
+      "choices": [
+        "3",
+        "3.75",
+        "6",
+        "15"
+      ],
+      "answer": 1,
+      "check": "1.5*10/4",
+      "hint": "Риса на одну порцию: 1,5/4.",
+      "explanation": "0,375 · 10 = 3,75 стакана (B). 6 — 1,5 · 4; 15 — 1,5 · 10."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "At a party, the ratio of adults to children is 2 to 5. When 6 more adults arrive, the ratio of adults to children becomes 1 to 2. How many children are at the party?",
+      "answer": [
+        "60"
+      ],
+      "check": "6/0.1",
+      "verify": "(0.4*ans + 6)/ans == 1/2",
+      "hint": "Взрослых 0,4c. После прихода: (0,4c + 6)/c = 1/2.",
+      "explanation": "0,4c + 6 = 0,5c ⇒ c = 60. Проверка: взрослых было 24, стало 30, 30 : 60 = 1 : 2."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A pump can fill a pool in 12 hours. After the pump has run for 5 hours, what fraction of the pool is still empty?",
+      "choices": [
+        "5/12",
+        "7/12",
+        "5/7",
+        "7/5"
+      ],
+      "answer": 1,
+      "check": "7/12",
+      "hint": "За час заполняется 1/12 бассейна.",
+      "explanation": "За 5 часов заполнено 5/12, пусто 7/12 (B). 5/12 — заполненная часть; 5/7 — отношение заполненного к пустому."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A 20-liter tank contains 8 liters of water. Water leaks out at 0.25 liter per hour while a pump adds 0.4 liter per hour. How many hours will it take for the tank to be full?",
+      "answer": [
+        "80"
+      ],
+      "check": "12/0.15",
+      "hint": "Чистый прирост: 0,4 − 0,25 литра в час.",
+      "explanation": "Нужно добавить 12 л при чистом притоке 0,15 л/ч: 12 : 0,15 = 80 часов."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "How many square centimeters are in 2.5 square meters?",
+      "choices": [
+        "250",
+        "2,500",
+        "25,000",
+        "250,000"
+      ],
+      "answer": 2,
+      "check": "2.5*100^2",
+      "hint": "1 м² = 100 см × 100 см.",
+      "explanation": "1 м² = 10 000 см², поэтому 2,5 м² = 25 000 см² (C). 250 — использован множитель 100 вместо 10 000."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A train travels for 2 hours at 75 kilometers per hour and then for 3 hours at 90 kilometers per hour. What is its average speed, in kilometers per hour, for the whole trip?",
+      "answer": [
+        "84"
+      ],
+      "check": "(150+270)/5",
+      "hint": "Средняя скорость = весь путь / всё время.",
+      "explanation": "Путь 150 + 270 = 420 км за 5 часов, 84 км/ч. Ошибка — среднее скоростей 82,5: участки идут разное время."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Three cats eat 3 kilograms of food in 3 days. At this rate, how many kilograms of food do 6 cats eat in 6 days?",
+      "choices": [
+        "3",
+        "6",
+        "12",
+        "24"
+      ],
+      "answer": 2,
+      "check": "12",
+      "hint": "Сколько ест одна кошка за один день?",
+      "explanation": "Одна кошка за день съедает 1/3 кг. 6 кошек за 6 дней: 6 · 6 · 1/3 = 12 кг (C). 6 — учли только удвоение кошек или дней."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A dough uses flour and water in a ratio of 5 to 3 by weight. A baker has 2 kilograms of flour and 1 kilogram of water. Using this ratio, what is the greatest total weight of dough, in kilograms, the baker can make?",
+      "answer": [
+        "8/3",
+        "2.666",
+        "2.667"
+      ],
+      "check": "8/3",
+      "hint": "Проверь, что закончится раньше: мука или вода.",
+      "explanation": "На 1 кг воды нужно 5/3 ≈ 1,67 кг муки — она есть. Вода ограничивает: всего 1 + 5/3 = 8/3 ≈ 2,667 кг. Если исходить из муки, понадобилось бы 1,2 кг воды — её нет."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A pizza with a 12-inch diameter costs $10, and a pizza with a 16-inch diameter costs $16. Which statement about the area of pizza per dollar is true?",
+      "choices": [
+        "The 16-inch pizza gives about 0.4π more square inches per dollar.",
+        "The 12-inch pizza gives about 0.4π more square inches per dollar.",
+        "Both pizzas give the same area per dollar.",
+        "The 16-inch pizza gives about 4π more square inches per dollar."
+      ],
+      "answer": 0,
+      "hint": "Площадь круга πr². Раздели площадь на цену.",
+      "explanation": "12 дюймов: 36π/10 = 3,6π; 16 дюймов: 64π/16 = 4π. Большая пицца выгоднее на 0,4π кв. дюйма на доллар (A). C получится, если сравнивать диаметры, а не площади."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A cyclist rides 24 kilometers in 1 hour and 20 minutes. At the same speed, how many minutes will it take the cyclist to ride 33 kilometers?",
+      "answer": [
+        "110"
+      ],
+      "check": "33/24*80",
+      "hint": "1 ч 20 мин = 80 минут.",
+      "explanation": "24 км за 80 минут, то есть 0,3 км/мин. 33 : 0,3 = 110 минут."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Liquid A has a density of 0.8 gram per milliliter and liquid B has a density of 1.2 grams per milliliter. If 300 milliliters of liquid A are mixed with 200 milliliters of liquid B, what is the density of the mixture, in grams per milliliter? (Assume the volumes add.)",
+      "choices": [
+        "0.96",
+        "1.0",
+        "0.92",
+        "1.04"
+      ],
+      "answer": 0,
+      "check": "(300*0.8+200*1.2)/500",
+      "hint": "Найди общую массу и общий объём.",
+      "explanation": "Массы 240 г и 240 г, всего 480 г на 500 мл: 0,96 (A). 1,0 — простое среднее плотностей; оно не учитывает разные объёмы."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The exchange rates are 1 US dollar = 0.9 euro and 1 euro = 1.6 Australian dollars. How many US dollars are equal to 288 Australian dollars?",
+      "answer": [
+        "200"
+      ],
+      "check": "288/1.6/0.9",
+      "hint": "Сначала переведи австралийские доллары в евро.",
+      "explanation": "288 : 1,6 = 180 евро; 180 : 0,9 = 200 долларов США."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If x/y = 4/9 and x + y = 65, what is the value of y − x?",
+      "choices": [
+        "5",
+        "20",
+        "25",
+        "45"
+      ],
+      "answer": 2,
+      "check": "45-20",
+      "hint": "13 частей = 65.",
+      "explanation": "Часть 5, x = 20, y = 45, y − x = 25 (C). 5 — одна часть; 20 и 45 — сами числа."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Five identical machines produce 1,200 widgets in 8 hours. At the same rate, how many hours will it take 3 of these machines to produce 1,080 widgets?",
+      "answer": [
+        "12"
+      ],
+      "check": "1080/(3*30)",
+      "hint": "Сколько виджетов делает одна машина за час?",
+      "explanation": "1200 : (5 · 8) = 30 в час на машину. Три машины — 90 в час, 1080 : 90 = 12 часов."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The length and width of a rectangle are in the ratio 5 to 3, and the perimeter of the rectangle is 64. What is the area of the rectangle?",
+      "choices": [
+        "60",
+        "120",
+        "240",
+        "960"
+      ],
+      "answer": 2,
+      "check": "20*12",
+      "hint": "Полупериметр 32 = 8 частей.",
+      "explanation": "Часть 4: стороны 20 и 12, площадь 240 (C). 960 — если считать 64 суммой длины и ширины (стороны 40 и 24)."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A medicine is given at 2.5 milligrams per kilogram of body weight. A child weighs 44 pounds, and 1 kilogram is about 2.2 pounds. How many milligrams of the medicine should the child receive?",
+      "answer": [
+        "50"
+      ],
+      "check": "44/2.2*2.5",
+      "hint": "Сначала переведи вес в килограммы.",
+      "explanation": "44 : 2,2 = 20 кг, 20 · 2,5 = 50 мг. Ошибка — 44 · 2,5 = 110 (вес в фунтах)."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Water flows into a tank at 1.5 liters per second. About how long will it take to fill a tank that holds 3 cubic meters? (1 cubic meter = 1,000 liters)",
+      "choices": [
+        "2 minutes",
+        "20 minutes",
+        "About 33 minutes",
+        "About 3.3 hours"
+      ],
+      "answer": 2,
+      "hint": "Переведи кубометры в литры, затем секунды в минуты.",
+      "explanation": "3000 : 1,5 = 2000 с ≈ 33,3 минуты (C). 2 минуты — 3/1,5 без перевода единиц; 3,3 часа — неверный перевод секунд."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A bag contains red and blue marbles in the ratio 5 to 3. After 10 red marbles are removed, the ratio of red to blue marbles is 5 to 4. How many blue marbles are in the bag?",
+      "answer": [
+        "24"
+      ],
+      "check": "24",
+      "verify": "((5/3)*ans - 10)/ans == 5/4",
+      "hint": "Красных 5b/3. После: (5b/3 − 10)/b = 5/4.",
+      "explanation": "5b/3 − 10 = 5b/4 ⇒ 5b/12 = 10 ⇒ b = 24. Красных было 40, стало 30: 30 : 24 = 5 : 4."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A runner runs 5 kilometers in 22 minutes and 30 seconds. What is the runner's average time per kilometer?",
+      "choices": [
+        "4 min 5 s",
+        "4 min 30 s",
+        "4 min 50 s",
+        "5 min 30 s"
+      ],
+      "answer": 1,
+      "hint": "22,5 минуты раздели на 5.",
+      "explanation": "22,5 : 5 = 4,5 минуты = 4 мин 30 с (B). A — если 0,5 минуты принять за 5 секунд; C — если 0,5 минуты принять за 50 секунд; D — прибавили лишнюю минуту."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Eight identical pumps can drain a pool in 15 hours. How many hours would it take 10 of these pumps to drain the pool?",
+      "answer": [
+        "12"
+      ],
+      "check": "8*15/10",
+      "hint": "Работа в «насосо-часах» постоянна.",
+      "explanation": "8 · 15 = 120 насосо-часов; 120 : 10 = 12 часов. Больше насосов — меньше времени (обратная пропорциональность)."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The scale of a map is 1:50,000. A road measures 7.2 centimeters on the map. What is the actual length of the road, in kilometers?",
+      "choices": [
+        "0.36",
+        "3.6",
+        "36",
+        "360"
+      ],
+      "answer": 1,
+      "check": "7.2*50000/100000",
+      "hint": "1 км = 100 000 см.",
+      "explanation": "7,2 · 50 000 = 360 000 см = 3,6 км (B). 360 — перевели в метры дважды неверно; 36 — ошибка в одном нуле."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A car's tire has a circumference of 2 meters and makes 800 revolutions per minute. What is the car's speed, in kilometers per hour?",
+      "answer": [
+        "96"
+      ],
+      "check": "800*2*60/1000",
+      "hint": "Путь за минуту: 800 оборотов × 2 м.",
+      "explanation": "1600 м/мин · 60 = 96 000 м/ч = 96 км/ч."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A solution requires 0.5 gram of a substance for every 200 milliliters of water. How many grams of the substance are needed for 1.8 liters of water?",
+      "choices": [
+        "0.9",
+        "4.5",
+        "9",
+        "45"
+      ],
+      "answer": 1,
+      "check": "1800/200*0.5",
+      "hint": "1,8 л = 1800 мл.",
+      "explanation": "1800 : 200 = 9 порций по 0,5 г — 4,5 г (B). 9 — число порций; 0,9 — забыли перевести литры в миллилитры."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Car A leaves a town at 9:00 a.m. traveling at 60 kilometers per hour. Car B leaves the same town at 9:30 a.m. on the same road in the same direction, traveling at 80 kilometers per hour. How many minutes after 9:00 a.m. does car B catch up with car A?",
+      "answer": [
+        "120"
+      ],
+      "check": "2*60",
+      "verify": "60*(ans/60) == 80*(ans/60 - 0.5)",
+      "hint": "К моменту встречи A ехал на полчаса дольше.",
+      "explanation": "60t = 80(t − 0,5) ⇒ 20t = 40 ⇒ t = 2 часа после 9:00, то есть 120 минут (в 11:00). Ошибка — 90 минут (время B в пути)."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Pipe A can fill an empty tank in 4 hours. Pipe B can empty a full tank in 6 hours. If both pipes are opened when the tank is empty, how many hours will it take to fill the tank?",
+      "choices": [
+        "2.4",
+        "5",
+        "10",
+        "12"
+      ],
+      "answer": 3,
+      "check": "1/(1/4-1/6)",
+      "hint": "За час A заполняет 1/4, B сливает 1/6.",
+      "explanation": "Чистая скорость 1/4 − 1/6 = 1/12 бака в час: 12 часов (D). 2,4 — если сложить скорости, как будто обе трубы наливают."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Worker A can complete a job in 6 hours, and worker B can complete the same job in 9 hours. Worker A works alone for 2 hours, and then both workers finish the job together. How many hours does the whole job take?",
+      "answer": [
+        "4.4",
+        "22/5"
+      ],
+      "check": "2+(2/3)/(1/6+1/9)",
+      "hint": "За 2 часа A делает 1/3 работы. Совместная скорость 1/6 + 1/9.",
+      "explanation": "Осталось 2/3 работы, вместе 5/18 в час: (2/3)/(5/18) = 2,4 часа. Всего 2 + 2,4 = 4,4 часа."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A salt solution has a ratio of salt to water of 1 to 9 by mass. How many grams of water must evaporate from 500 grams of the solution so that the ratio becomes 1 to 4?",
+      "choices": [
+        "100",
+        "200",
+        "250",
+        "400"
+      ],
+      "answer": 2,
+      "check": "450-200",
+      "hint": "Соль не испаряется: найди её массу.",
+      "explanation": "Соли 50 г, воды 450 г. Для 1 : 4 воды должно остаться 200 г, испарится 250 г (C). 200 — оставшаяся вода; 400 — если считать 1 : 4 долей от всего раствора."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A gear with 36 teeth meshes with a gear with 24 teeth. The larger gear makes 40 revolutions per minute. How many revolutions per minute does the smaller gear make?",
+      "answer": [
+        "60"
+      ],
+      "check": "36*40/24",
+      "hint": "Число зубьев, прошедших точку зацепления, одинаково для обоих колёс.",
+      "explanation": "36 · 40 = 24 · r ⇒ r = 60. Меньшее колесо крутится быстрее. Ошибка — 40 · 24/36 ≈ 26,7."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "When a driver's average speed on a route increased from 50 kilometers per hour to 75 kilometers per hour, the travel time decreased by 24 minutes. How long is the route, in kilometers?",
+      "choices": [
+        "10",
+        "30",
+        "36",
+        "60"
+      ],
+      "answer": 3,
+      "check": "0.4/(1/50-1/75)",
+      "verify": "ans/50 - ans/75 == 0.4",
+      "hint": "d/50 − d/75 = 0,4 часа.",
+      "explanation": "d(3 − 2)/150 = 0,4 ⇒ d = 60 км (D): 1,2 ч и 0,8 ч. 10 — если умножить разность скоростей на 0,4 ч; 30 — путь за 24 минуты на скорости 75; 36 — если принять 24 минуты за 0,24 часа."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A mixture of nuts contains peanuts and cashews in the ratio 7 to 3 by weight. How many kilograms of cashews must be added to 20 kilograms of the mixture so that the ratio becomes 7 to 5?",
+      "answer": [
+        "4"
+      ],
+      "check": "10-6",
+      "hint": "Арахис не меняется: найди, сколько его.",
+      "explanation": "Арахиса 14 кг, кешью 6 кг. Для 7 : 5 при 14 кг арахиса нужно 10 кг кешью — добавить 4 кг."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Worker A can complete a job in x hours, and worker B can complete it in x + 3 hours. Working together, they complete the job in 2 hours. What is the value of x?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "check": "3",
+      "verify": "1/ans + 1/(ans + 3) == 1/2",
+      "hint": "1/x + 1/(x + 3) = 1/2.",
+      "explanation": "2(2x + 3) = x(x + 3) ⇒ x² − x − 6 = 0 ⇒ x = 3 (B). Проверка: 1/3 + 1/6 = 1/2. 6 — время B."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A cube with edges of 3 centimeters has a mass of 81 grams. What is the mass, in grams, of a cube with edges of 5 centimeters made of the same material?",
+      "answer": [
+        "375"
+      ],
+      "check": "81/27*125",
+      "hint": "Масса пропорциональна объёму, а объём — кубу ребра.",
+      "explanation": "Плотность 81 : 27 = 3 г/см³. Объём нового кубa 125 см³, масса 375 г. Ошибка — 81 · 5/3 = 135 (линейное увеличение)."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "On a blueprint with a scale of 1:200, a room has an area of 30 square centimeters. What is the actual area of the room, in square meters?",
+      "choices": [
+        "0.6",
+        "6",
+        "60",
+        "120"
+      ],
+      "answer": 3,
+      "check": "30*200^2/10000",
+      "hint": "Площадь масштабируется квадратом масштаба.",
+      "explanation": "30 · 200² = 1 200 000 см² = 120 м² (D). 0,6 — масштаб применён один раз (30 · 200 = 6000 см²); 60 — ошибка в переводе."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A train 300 meters long crosses a bridge 200 meters long. It takes 25 seconds from the moment the front of the train reaches the bridge until the back of the train leaves it. What is the speed of the train, in kilometers per hour?",
+      "answer": [
+        "72"
+      ],
+      "check": "500/25*3.6",
+      "hint": "Путь — длина моста плюс длина поезда.",
+      "explanation": "Поезд проходит 500 м за 25 с: 20 м/с = 72 км/ч. Ошибка — взять только 200 м моста (28,8 км/ч)."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "An empty 60-liter tank is filled by pipe A at 3 liters per minute. Ten minutes after pipe A is opened, pipe B, which adds 2 liters per minute, is also opened. How many minutes after pipe A was opened will the tank be full?",
+      "choices": [
+        "12",
+        "15",
+        "16",
+        "20"
+      ],
+      "answer": 2,
+      "check": "10+30/5",
+      "hint": "Первые 10 минут работает только A.",
+      "explanation": "За 10 минут A налил 30 л. Остальные 30 л при 5 л/мин — 6 минут. Всего 16 минут (C). 12 — если обе трубы работали с начала; 20 — если B не открывали."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A person walks 2 kilometers at 4 kilometers per hour and then runs 3 kilometers at 12 kilometers per hour. What is the average speed, in kilometers per hour, for the whole 5 kilometers?",
+      "answer": [
+        "20/3",
+        "6.666",
+        "6.667"
+      ],
+      "check": "5/(2/4+3/12)",
+      "hint": "Найди время каждого участка.",
+      "explanation": "0,5 ч + 0,25 ч = 0,75 ч. 5 : 0,75 = 20/3 ≈ 6,67 км/ч. Ошибка — (4 + 12)/2 = 8."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The ratio of boys to girls in a club is 3 to 2. When 12 boys leave the club and 12 girls join it, the ratio of boys to girls becomes 1 to 2. How many members does the club have?",
+      "choices": [
+        "30",
+        "45",
+        "60",
+        "75"
+      ],
+      "answer": 1,
+      "check": "45",
+      "hint": "Мальчиков 3k, девочек 2k. Общее число не меняется.",
+      "explanation": "(3k − 12)/(2k + 12) = 1/2 ⇒ 6k − 24 = 2k + 12 ⇒ k = 9. Членов 5k = 45 (B): было 27 и 18, стало 15 и 30."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "At a store, 3 cashiers can serve 90 customers per hour. Each cashier works at the same rate. What is the least number of cashiers needed to serve 210 customers in 1.5 hours?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "ans*30*1.5 >= 210 and (ans - 1)*30*1.5 < 210",
+      "hint": "Один кассир обслуживает 30 покупателей в час.",
+      "explanation": "За 1,5 часа кассир обслужит 45 человек. 210 : 45 ≈ 4,67 — нужно 5 кассиров."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A car uses 8 liters of fuel per 100 kilometers, and fuel costs 1.25 dollars per liter. What is the cost, in dollars, of the fuel for a 350-kilometer trip?",
+      "choices": [
+        "28",
+        "35",
+        "43.75",
+        "22.4"
+      ],
+      "answer": 1,
+      "check": "350/100*8*1.25",
+      "hint": "Сначала литры на 350 км.",
+      "explanation": "3,5 · 8 = 28 л, 28 · 1,25 = 35 долларов (B). 28 — литры, а не доллары; 43,75 — 350 · 1,25 / 10."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Concrete is made by mixing cement, sand, and gravel in the ratio 1 : 2 : 4 by volume. How many cubic meters of gravel are needed to make 3.5 cubic meters of concrete?",
+      "answer": [
+        "2"
+      ],
+      "check": "3.5*4/7",
+      "hint": "Всего 7 частей.",
+      "explanation": "Одна часть 0,5 м³, щебня 4 части — 2 м³."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Light travels at about 3 × 10⁸ meters per second. Light from the Sun takes about 8 minutes and 20 seconds to reach Earth. Which of the following is closest to the distance from the Sun to Earth, in kilometers?",
+      "choices": [
+        "1.5 × 10⁵",
+        "1.5 × 10⁸",
+        "1.5 × 10¹¹",
+        "2.4 × 10⁹"
+      ],
+      "answer": 1,
+      "check": "1.5*10^8",
+      "hint": "8 мин 20 с = 500 с. Не забудь перевести метры в километры.",
+      "explanation": "500 · 3 · 10⁸ = 1,5 · 10¹¹ м = 1,5 · 10⁸ км (B). C — ответ в метрах; D — 8,20 · 3 · 10⁸ (минуты приняты за секунды)."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A mason lays 450 bricks in 3 hours, and an apprentice lays 250 bricks in 2.5 hours. Working together at these rates, how many hours will it take them to lay 1,500 bricks?",
+      "answer": [
+        "6"
+      ],
+      "check": "1500/(150+100)",
+      "hint": "Найди скорость каждого в кирпичах в час.",
+      "explanation": "150 + 100 = 250 кирпичей в час, 1500 : 250 = 6 часов."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The ratio of x to y is 2 to 3, and the ratio of y to z is 6 to 5. What is the ratio x : y : z?",
+      "choices": [
+        "2 : 3 : 5",
+        "4 : 6 : 5",
+        "2 : 6 : 5",
+        "4 : 9 : 5"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "Приведи y к общему числу частей: 3 и 6 → 6.",
+      "explanation": "x : y = 4 : 6, y : z = 6 : 5, вместе 4 : 6 : 5 (B). A и C просто склеивают отношения без приведения y."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Water flows into a cylindrical tank with a radius of 2 meters at a rate of 0.5 cubic meter per minute. At what rate, in centimeters per minute, does the water level rise? Round your answer to the nearest hundredth.",
+      "answer": [
+        "3.98"
+      ],
+      "check": "50/(4*pi)",
+      "hint": "Площадь дна πr² = 4π м². Подъём = объём / площадь.",
+      "explanation": "0,5 : (4π) ≈ 0,0398 м/мин ≈ 3,98 см/мин. Ошибка — забыть π (12,5 см/мин) или перевод в сантиметры."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A runner completes a 42.2-kilometer marathon in 3 hours and 30 minutes. To the nearest tenth of a minute, what is the runner's average time per kilometer?",
+      "choices": [
+        "4.3",
+        "4.7",
+        "5.0",
+        "12.1"
+      ],
+      "answer": 2,
+      "check": "5.0",
+      "verify": "abs(ans - 210/42.2) < 0.05",
+      "hint": "3 ч 30 мин = 210 минут.",
+      "explanation": "210 : 42,2 ≈ 4,98 ≈ 5,0 минуты на километр (C). 4,3 — если забыть 30 минут; 4,7 — если записать 3 ч 30 мин как 3,30 ч; 12,1 — скорость в км/ч, а не время на километр."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Each of 5 identical pipes fills 1/20 of a pool per hour. All 5 pipes are opened when the pool is empty, and after 2 hours, 2 of the pipes are shut off. How many hours after the pipes were first opened will the pool be full?",
+      "answer": [
+        "16/3",
+        "5.333"
+      ],
+      "check": "2+(1/2)/(3/20)",
+      "hint": "За первые 2 часа 5 труб заполняют 5 · 2/20 = 1/2.",
+      "explanation": "Осталась половина бассейна при скорости 3/20 в час: (1/2)/(3/20) = 10/3 ч. Всего 2 + 10/3 = 16/3 ≈ 5,33 часа."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Two runners start at the same point on a 400-meter circular track and run in opposite directions at constant speeds of 5 meters per second and 3 meters per second. After how many seconds do they first meet?",
+      "choices": [
+        "50 seconds",
+        "80 seconds",
+        "133 seconds",
+        "200 seconds"
+      ],
+      "answer": 0,
+      "check": "400/8",
+      "hint": "Бегут навстречу — скорости складываются.",
+      "explanation": "Вместе они пробегают 8 м/с, круг 400 м — встреча через 50 с (A). 200 с — если бы бежали в одну сторону (разность скоростей 2 м/с); 80 с — 400 : 5."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A store sells 3 kilograms of apples for $7.20 and 5 kilograms of pears for $13.50. How many more dollars per kilogram do pears cost than apples?",
+      "answer": [
+        "0.3",
+        "0.30"
+      ],
+      "check": "13.5/5-7.2/3",
+      "hint": "Цена за килограмм каждого фрукта.",
+      "explanation": "Груши 2,70, яблоки 2,40 за кг: разница 0,30. Ошибка — сравнивать полные цены покупок."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A tank has two inlet pipes and one drain. Inlet A alone can fill the tank in 10 hours, inlet B alone can fill it in 15 hours, and the drain alone can empty a full tank in 12 hours. If all three are opened when the tank is empty, how many hours will it take to fill the tank?",
+      "answer": [
+        "12"
+      ],
+      "check": "1/(1/10+1/15-1/12)",
+      "hint": "Сложи скорости наполнения и вычти скорость слива.",
+      "explanation": "1/10 + 1/15 − 1/12 = (6 + 4 − 5)/60 = 1/12 бака в час: 12 часов."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A solid scale model of a statue is built at a scale of 1:3 and uses 4 kilograms of clay. A solid statue made of the same clay at full size would have what mass?",
+      "choices": [
+        "12 kg",
+        "36 kg",
+        "108 kg",
+        "324 kg"
+      ],
+      "answer": 2,
+      "check": "4*27",
+      "hint": "Объём масштабируется кубом коэффициента.",
+      "explanation": "Каждый размер в 3 раза больше, объём — в 27 раз: 4 · 27 = 108 кг (C). 12 — линейный масштаб; 36 — масштаб площади."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Towns A and B are 240 kilometers apart. A car leaves A for B at 60 kilometers per hour. One hour later, a second car leaves B for A at 90 kilometers per hour. How many kilometers from A do the two cars meet?",
+      "answer": [
+        "132"
+      ],
+      "check": "60+60*1.2",
+      "hint": "За первый час первая машина проезжает 60 км.",
+      "explanation": "Осталось 180 км, сближение 150 км/ч — 1,2 часа. Первая машина в пути 2,2 часа: 60 · 2,2 = 132 км от A."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Six workers can finish a job in 10 days. After 4 days of work, 2 of the workers leave. How many more days will it take the remaining workers to finish the job?",
+      "choices": [
+        "6",
+        "9",
+        "10",
+        "12"
+      ],
+      "answer": 1,
+      "check": "(60-24)/4",
+      "hint": "Вся работа — 60 человеко-дней.",
+      "explanation": "За 4 дня сделано 24 человеко-дня, осталось 36; четверо закончат за 9 дней (B). 6 — если бы все остались."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "An alloy contains gold and copper in the ratio 3 to 1 by mass. How many grams of gold must be added to 24 grams of the alloy so that the ratio of gold to copper becomes 4 to 1?",
+      "answer": [
+        "6"
+      ],
+      "check": "24-18",
+      "hint": "Медь не меняется.",
+      "explanation": "Золота 18 г, меди 6 г. Для 4 : 1 нужно 24 г золота — добавить 6 г."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If a/b = 3 and b/c = 2/5, what is the value of (a + b)/(b + c)?",
+      "choices": [
+        "8/7",
+        "7/8",
+        "6/5",
+        "4/3"
+      ],
+      "answer": 0,
+      "check": "8/7",
+      "hint": "Вырази a и c через b.",
+      "explanation": "a = 3b, c = 5b/2. (3b + b)/(b + 2,5b) = 4/3,5 = 8/7 (A). 7/8 — перевёрнуто."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A person standing on a moving escalator is carried from the bottom to the top in 60 seconds. Walking up the escalator when it is turned off takes the person 90 seconds. How many seconds does it take the person to walk up the escalator while it is moving?",
+      "answer": [
+        "36"
+      ],
+      "check": "1/(1/60+1/90)",
+      "hint": "Скорости складываются: доли пути в секунду.",
+      "explanation": "1/60 + 1/90 = 5/180 = 1/36 пути в секунду: 36 секунд. Ошибка — среднее 75 секунд."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A driver averages 40 kilometers per hour for the first half of the distance of a trip. At what average speed must the driver travel for the second half of the distance to average 60 kilometers per hour for the whole trip?",
+      "choices": [
+        "80 km/h",
+        "100 km/h",
+        "120 km/h",
+        "It is not possible."
+      ],
+      "answer": 2,
+      "check": "120",
+      "hint": "Средняя скорость по равным расстояниям: 2/(1/v₁ + 1/v₂).",
+      "explanation": "2/(1/40 + 1/v) = 60 ⇒ 1/40 + 1/v = 1/30 ⇒ 1/v = 1/120 ⇒ v = 120 (C). 80 — ошибка «среднее арифметическое»: (40 + 80)/2 = 60 верно только для равного времени."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Workers A and B together can finish a job in 12 days, workers B and C together in 15 days, and workers A and C together in 20 days. How many days would it take all three workers together to finish the job?",
+      "answer": [
+        "10"
+      ],
+      "check": "1/((1/12+1/15+1/20)/2)",
+      "hint": "Сложи три парные скорости: каждый рабочий войдёт дважды.",
+      "explanation": "1/12 + 1/15 + 1/20 = 12/60 = 1/5 — это удвоенная общая скорость. Трое вместе: 1/10 работы в день, 10 дней."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The speeds of two cars are in the ratio 5 to 4. On a 200-kilometer trip, the faster car takes 30 minutes less than the slower car. What is the speed of the slower car, in kilometers per hour?",
+      "choices": [
+        "64",
+        "80",
+        "100",
+        "120"
+      ],
+      "answer": 1,
+      "check": "80",
+      "verify": "200/ans - 200/(1.25*ans) == 0.5",
+      "hint": "Скорости 5k и 4k. Разница времени 0,5 часа.",
+      "explanation": "200/(4k) − 200/(5k) = 10/k = 0,5 ⇒ k = 20. Медленная 80 км/ч, быстрая 100 км/ч (B): 2,5 ч и 2 ч."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A 300-gram saline solution is 10% salt by mass. How many grams of water must be added to make a solution that is 6% salt by mass?",
+      "answer": [
+        "200"
+      ],
+      "check": "30/0.06-300",
+      "hint": "Соль не меняется: 30 г.",
+      "explanation": "30 г должны составить 6%: всего 500 г. Добавить 200 г воды."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A clock loses 3 minutes every hour. It is set to the correct time at 12:00 noon. What time does the clock show when the correct time is 8:00 p.m. the same day?",
+      "choices": [
+        "7:24 p.m.",
+        "7:36 p.m.",
+        "7:57 p.m.",
+        "8:24 p.m."
+      ],
+      "answer": 1,
+      "hint": "За 8 часов отставание 8 · 3 минуты.",
+      "explanation": "Отставание 24 минуты: часы показывают 7:36 (B). 8:24 — часы спешили бы; 7:57 — отставание только за один час."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Two taps together fill a tank in 6 hours. Tap A alone takes 5 hours less than tap B alone. How many hours does tap A take to fill the tank alone?",
+      "answer": [
+        "10"
+      ],
+      "check": "10",
+      "verify": "1/ans + 1/(ans + 5) == 1/6",
+      "hint": "1/a + 1/(a + 5) = 1/6.",
+      "explanation": "6(2a + 5) = a(a + 5) ⇒ a² − 7a − 30 = 0 ⇒ (a − 10)(a + 3) = 0 ⇒ a = 10 (B — 15 часов)."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A data plan includes 15 gigabytes, and 1 gigabyte = 1,024 megabytes. Streaming video uses 2.5 megabytes per minute. To the nearest hour, how many hours of video can be streamed on the plan?",
+      "choices": [
+        "100",
+        "102",
+        "104",
+        "6,144"
+      ],
+      "answer": 1,
+      "check": "102",
+      "verify": "abs(ans - 15*1024/2.5/60) < 0.5",
+      "hint": "Переведи гигабайты в мегабайты, затем минуты в часы.",
+      "explanation": "15 360 МБ : 2,5 = 6144 минуты ≈ 102,4 часа ≈ 102 (B). 6144 — минуты; 100 — если 1 ГБ = 1000 МБ."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "On a map with a scale of 1:2,500, a rectangular field measures 6 centimeters by 4 centimeters. What is the actual area of the field, in hectares? (1 hectare = 10,000 square meters)",
+      "answer": [
+        "1.5",
+        "3/2"
+      ],
+      "check": "150*100/10000",
+      "hint": "Переведи каждую сторону в метры.",
+      "explanation": "6 см → 150 м, 4 см → 100 м. Площадь 15 000 м² = 1,5 га."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The ratio of Ann's age to Bob's age is 4 to 3. In 6 years, the ratio will be 6 to 5. How old is Ann now?",
+      "choices": [
+        "12",
+        "16",
+        "18",
+        "24"
+      ],
+      "answer": 0,
+      "check": "12",
+      "hint": "Сейчас 4k и 3k. Через 6 лет (4k + 6)/(3k + 6) = 6/5.",
+      "explanation": "20k + 30 = 18k + 36 ⇒ k = 3. Ане 12, Бобу 9; через 6 лет 18 и 15 — это 6 : 5 (A)."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A machine can complete an order in 10 hours at its normal rate. It works on the order for 4 hours, is stopped for 1 hour of maintenance, and then works at a rate 25% faster than normal until the order is finished. How many hours after it started does the machine finish the order?",
+      "answer": [
+        "9.8"
+      ],
+      "check": "4+1+0.6/0.125",
+      "hint": "За 4 часа выполнено 0,4 заказа. Новая скорость: 1,25 · 0,1 в час.",
+      "explanation": "Осталось 0,6 заказа при 0,125 в час: 4,8 часа. Всего 4 + 1 + 4,8 = 9,8 часа."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A box containing 300 identical screws weighs 1.8 kilograms. The empty box weighs 150 grams. What is the weight, in grams, of 50 of the screws?",
+      "choices": [
+        "250",
+        "275",
+        "300",
+        "325"
+      ],
+      "answer": 1,
+      "check": "(1800-150)/300*50",
+      "hint": "Сначала вычти массу коробки.",
+      "explanation": "Винты весят 1650 г, один — 5,5 г, 50 винтов — 275 г (B). 300 — если не вычесть коробку (1800/6)."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A car travels 1 mile in 40 seconds. One mile is 1,609 meters. What is the car's speed, in meters per second, rounded to the nearest tenth?",
+      "answer": [
+        "40.2"
+      ],
+      "check": "1609/40",
+      "hint": "Метры раздели на секунды.",
+      "explanation": "Метры делим на секунды: 1609 : 40 = 40,225 ≈ 40,2 м/с."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Two identical heaters raise the temperature of a tank of water by 10°C in 6 minutes. Assuming the energy needed is proportional to the mass of water and the temperature increase, how many minutes would 3 identical heaters take to raise the temperature of twice as much water by 15°C?",
+      "choices": [
+        "6",
+        "9",
+        "12",
+        "18"
+      ],
+      "answer": 2,
+      "check": "12",
+      "hint": "Энергия ∝ масса × нагрев, работа нагревателей ∝ число × время.",
+      "explanation": "Было: 1 · 10 = 10 единиц за 2 · 6 = 12 «нагревателе-минут». Нужно 2 · 15 = 30 единиц — в 3 раза больше, 36 нагревателе-минут. Три нагревателя — 12 минут (C)."
+    }
+  ]
+}

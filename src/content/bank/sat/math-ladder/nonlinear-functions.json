@@ -1,0 +1,1626 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "advanced-math",
+    "skill": "nonlinear-functions",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 2x² − 5. What is the value of f(3)?",
+      "answer": [
+        "13"
+      ],
+      "check": "2*3^2-5",
+      "hint": "Сначала возведи в квадрат, потом умножай на 2.",
+      "explanation": "f(3) = 2 · 9 − 5 = 13. Ошибка — (2 · 3)² − 5 = 31: в квадрат возводится только x."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which of the following functions is exponential?",
+      "choices": [
+        "f(x) = 3x + 2",
+        "f(x) = x³",
+        "f(x) = 3(2)^x",
+        "f(x) = 2x²"
+      ],
+      "answer": 2,
+      "check": "3*2^x",
+      "hint": "В показательной функции переменная стоит в показателе степени.",
+      "explanation": "В f(x) = 3(2)^x переменная x — показатель, это показательная функция (C). A — линейная, B — кубическая, D — квадратичная."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "What are the x-intercepts of the graph of f(x) = x² − 9 in the xy-plane?",
+      "choices": [
+        "x = −3 and x = 3",
+        "x = −9 and x = 9",
+        "x = 0 and x = 9",
+        "x = 3 only"
+      ],
+      "answer": 0,
+      "hint": "Реши x² − 9 = 0.",
+      "explanation": "x² = 9 ⇒ x = ±3 (A). ±9 — если забыть извлечь корень; «только 3» теряет отрицательный корень."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A culture starts with 40 cells, and the number of cells triples every day. How many cells are in the culture after 3 days?",
+      "answer": [
+        "1080"
+      ],
+      "check": "40*3^3",
+      "hint": "Каждый день умножай на 3.",
+      "explanation": "40 · 3 · 3 · 3 = 40 · 27 = 1080. Ошибка — 40 · 9 = 360 (утроение два раза) или 40 + 3 · 3 (сложение вместо умножения)."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "What is the y-intercept of the graph of y = 4(0.5)^x in the xy-plane?",
+      "choices": [
+        "(0, 0.5)",
+        "(0, 2)",
+        "(0, 4)",
+        "(4, 0)"
+      ],
+      "answer": 2,
+      "hint": "Подставь x = 0: любое число в нулевой степени равно 1.",
+      "explanation": "y = 4 · 0,5⁰ = 4 · 1 = 4, точка (0, 4) (C). (0, 2) — это значение при x = 1; (0, 0,5) — основание степени."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = −x² + 4. What is the value of f(−3)?",
+      "choices": [
+        "13",
+        "−5",
+        "5",
+        "−13"
+      ],
+      "answer": 1,
+      "check": "-(-3)^2+4",
+      "hint": "−x² означает −(x²): сначала квадрат, потом минус.",
+      "explanation": "(−3)² = 9, f(−3) = −9 + 4 = −5 (B). 13 — если считать −x² = (−x)² = 9; −13 — ошибка в знаке у 4."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function g is defined by g(x) = (x − 1)(x + 6). What is the value of g(2)?",
+      "answer": [
+        "8"
+      ],
+      "check": "(2-1)*(2+6)",
+      "hint": "Подставь 2 в каждую скобку.",
+      "explanation": "g(2) = (2 − 1)(2 + 6) = 1 · 8 = 8. Ошибка — подставить 2 только в одну скобку."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The amount of a medicine in a patient's body, in milligrams, t hours after a dose is modeled by M(t) = 2,400(0.92)^t. What does the number 0.92 indicate about the amount of medicine?",
+      "choices": [
+        "It decreases by 8% each hour.",
+        "It decreases by 92% each hour.",
+        "It increases by 92% each hour.",
+        "It decreases by 0.92 milligram each hour."
+      ],
+      "answer": 0,
+      "hint": "Множитель 0,92 = 1 − 0,08.",
+      "explanation": "Каждый час количество умножается на 0,92, то есть остаётся 92% и уходит 8% (A). B путает остаток с убылью; D описывает линейное уменьшение."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which equation has a graph in the xy-plane that is a parabola opening upward with vertex (2, −3)?",
+      "choices": [
+        "y = (x + 2)² − 3",
+        "y = (x − 2)² − 3",
+        "y = −(x − 2)² − 3",
+        "y = (x − 3)² + 2"
+      ],
+      "answer": 1,
+      "check": "(x-2)^2-3",
+      "hint": "В виде y = a(x − h)² + k вершина (h, k), ветви вверх при a > 0.",
+      "explanation": "y = (x − 2)² − 3: вершина (2, −3), a = 1 > 0 (B). A — вершина (−2, −3); C открывается вниз; D — координаты перепутаны."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the minimum value of the function f(x) = x² + 6x + 10?",
+      "answer": [
+        "1"
+      ],
+      "check": "9-18+10",
+      "hint": "Выдели полный квадрат: x² + 6x + 9 + 1.",
+      "explanation": "f(x) = (x + 3)² + 1, наименьшее значение 1 при x = −3. Ошибка — ответ −3 (это x вершины, а не значение)."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function h is defined by h(x) = x² − 2x. For which values of x is h(x) = 0?",
+      "choices": [
+        "0 and 2",
+        "2 only",
+        "−2 and 0",
+        "1 and 2"
+      ],
+      "answer": 0,
+      "hint": "Вынеси x за скобки.",
+      "explanation": "x(x − 2) = 0 ⇒ x = 0 или x = 2 (A). «Только 2» — если поделить на x и потерять корень 0; −2 и 0 — ошибка знака."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = √(x + 7). What is the value of f(9)?",
+      "answer": [
+        "4"
+      ],
+      "check": "sqrt(16)",
+      "hint": "Сначала сложи под корнем.",
+      "explanation": "f(9) = √16 = 4. Ошибка — √9 + 7 = 10: корень берётся из всей суммы."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The height h, in feet, of a ball t seconds after it is thrown is given by h(t) = −16t² + 32t. How many seconds after it is thrown does the ball reach its maximum height?",
+      "choices": [
+        "0.5",
+        "1",
+        "2",
+        "16"
+      ],
+      "answer": 1,
+      "check": "32/32",
+      "hint": "Вершина параболы at² + bt: t = −b/(2a).",
+      "explanation": "t = −32/(2 · (−16)) = 1 секунда (B), высота h(1) = 16 футов. 2 — момент падения; 16 — сама высота."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = 3^x. Which of the following is equivalent to f(x + 1)?",
+      "choices": [
+        "3^x + 1",
+        "3(3^x)",
+        "3^x + 3",
+        "4^x"
+      ],
+      "answer": 1,
+      "check": "3*3^x",
+      "hint": "3^(x + 1) = 3^x · 3¹.",
+      "explanation": "f(x + 1) = 3^(x + 1) = 3 · 3^x (B). A — это f(x) + 1; C — f(x) + 3; D меняет основание."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The graph of y = x² − 4x + 3 crosses the x-axis at two points. What is the product of the x-coordinates of these points?",
+      "answer": [
+        "3"
+      ],
+      "check": "1*3",
+      "hint": "Разложи x² − 4x + 3 на множители.",
+      "explanation": "(x − 1)(x − 3) = 0 ⇒ x = 1 и x = 3, произведение 3. Это равно свободному члену при старшем коэффициенте 1."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = |x − 5|. What is the value of f(2)?",
+      "choices": [
+        "−3",
+        "3",
+        "7",
+        "2"
+      ],
+      "answer": 1,
+      "check": "3",
+      "hint": "Модуль — расстояние, он не бывает отрицательным.",
+      "explanation": "f(2) = |2 − 5| = |−3| = 3 (B). −3 — забыли модуль; 7 — сложили 2 и 5."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The value of a car t years after it was purchased is modeled by V(t) = 3,000(0.8)^t dollars. What is the value of V(2)?",
+      "choices": [
+        "1,800",
+        "1,920",
+        "2,400",
+        "4,800"
+      ],
+      "answer": 1,
+      "check": "3000*0.8^2",
+      "hint": "0,8² = 0,64.",
+      "explanation": "V(2) = 3000 · 0,64 = 1920 (B). 2400 — через один год; 1800 — если вычесть 20% дважды от исходной цены; 4800 — 3000 · 1,6."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = (x − 3)² + 5. What is the value of f(3) + f(5)?",
+      "answer": [
+        "14"
+      ],
+      "check": "5+9",
+      "hint": "Посчитай каждое значение отдельно.",
+      "explanation": "f(3) = 0 + 5 = 5, f(5) = 4 + 5 = 9, сумма 14."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The graph of which of the following equations in the xy-plane is symmetric with respect to the y-axis?",
+      "choices": [
+        "y = (x − 1)²",
+        "y = x² + 1",
+        "y = 2^x",
+        "y = x³ + 1"
+      ],
+      "answer": 1,
+      "check": "x^2+1",
+      "hint": "Симметрия относительно оси y: значения при x и −x одинаковы.",
+      "explanation": "Для y = x² + 1: (−x)² + 1 = x² + 1 (B). У A ось симметрии x = 1; 2^x и x³ + 1 дают разные значения при x и −x."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A colony of bacteria doubles every 3 hours. If the colony starts with 50 bacteria, how many bacteria will there be after 12 hours?",
+      "answer": [
+        "800"
+      ],
+      "check": "50*2^4",
+      "hint": "Сколько раз по 3 часа укладывается в 12 часов?",
+      "explanation": "За 12 часов колония удвоится 4 раза: 50 · 2⁴ = 800. Ошибка — 50 · 2¹² (удвоение каждый час)."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "What is the equation of the axis of symmetry of the graph of y = 2x² − 8x + 1?",
+      "choices": [
+        "x = 2",
+        "x = −2",
+        "x = 4",
+        "x = 8"
+      ],
+      "answer": 0,
+      "check": "2",
+      "hint": "Ось симметрии: x = −b/(2a).",
+      "explanation": "x = 8/(2 · 2) = 2 (A). x = 4 — если взять −b/a, забыв множитель 2; −2 — ошибка знака; 8 — это −b."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = x³ − 4x. What is the value of f(−2)?",
+      "answer": [
+        "0"
+      ],
+      "check": "(-2)^3-4*(-2)",
+      "hint": "(−2)³ = −8.",
+      "explanation": "f(−2) = −8 − 4 · (−2) = −8 + 8 = 0. Значит, −2 — нуль функции."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The function f is defined by f(t) = 200(1.5)^t. By what percent does the value of f increase each time t increases by 1?",
+      "choices": [
+        "1.5%",
+        "15%",
+        "50%",
+        "150%"
+      ],
+      "answer": 2,
+      "check": "50",
+      "hint": "Множитель 1,5 = 1 + 0,5.",
+      "explanation": "При росте t на 1 значение умножается на 1,5, то есть растёт на 50% (C). 150% — это всё новое значение относительно старого, а не прирост."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following is a zero of the function f(x) = 2x² − 8?",
+      "choices": [
+        "−4",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "2*ans^2 - 8 == 0",
+      "hint": "Реши 2x² = 8.",
+      "explanation": "x² = 4 ⇒ x = ±2. Среди вариантов есть 2 (B). 4 — это x²; 8 — свободный член."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The function g is defined by g(x) = 2√x − 1. For what value of x is g(x) = 9?",
+      "answer": [
+        "25"
+      ],
+      "check": "5^2",
+      "verify": "2*sqrt(ans) - 1 == 9",
+      "hint": "2√x = 10, √x = 5.",
+      "explanation": "√x = 5 ⇒ x = 25. Проверка: 2 · 5 − 1 = 9. Ошибка — ответ 5 (это √x)."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "What is the vertex of the graph of f(x) = x² − 10x + 21 in the xy-plane?",
+      "choices": [
+        "(5, 21)",
+        "(5, −4)",
+        "(−5, −4)",
+        "(10, 21)"
+      ],
+      "answer": 1,
+      "hint": "x вершины: −b/(2a) = 5. Подставь его в f.",
+      "explanation": "x = 5, f(5) = 25 − 50 + 21 = −4: вершина (5, −4) (B). (5, 21) — подставили 0 вместо 5 во вторую координату; (−5, −4) — ошибка знака."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "What is the maximum value of the function f(x) = −2(x − 1)(x − 7)?",
+      "answer": [
+        "18"
+      ],
+      "check": "-2*(4-1)*(4-7)",
+      "hint": "Вершина посередине между нулями 1 и 7.",
+      "explanation": "x вершины = (1 + 7)/2 = 4. f(4) = −2 · 3 · (−3) = 18. Ветви вниз (коэффициент −2), поэтому это максимум."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A parabola in the xy-plane has x-intercepts at 2 and −6 and passes through the point (0, 12). Which of the following is an equation of the parabola?",
+      "choices": [
+        "y = (x − 2)(x + 6)",
+        "y = −(x − 2)(x + 6)",
+        "y = (x + 2)(x − 6)",
+        "y = −(x + 2)(x − 6)"
+      ],
+      "answer": 1,
+      "check": "-(x-2)*(x+6)",
+      "hint": "y = a(x − 2)(x + 6). Найди a по точке (0, 12).",
+      "explanation": "При x = 0: a · (−2) · 6 = 12 ⇒ a = −1 (B). A проходит через (0, −12); C и D имеют нули −2 и 6."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "An investment of $2,000 grows by 6% each year. What is the least whole number of years after which the investment will be worth at least $2,500?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "2000*1.06^ans >= 2500 and 2000*1.06^(ans - 1) < 2500",
+      "hint": "Проверяй по годам: 2000 · 1,06^t.",
+      "explanation": "Через 3 года ≈ 2382, через 4 года ≈ 2525. Ответ 4. Ошибка — считать проценты простыми: 2000 + 120t ≥ 2500 даёт t ≥ 4,17, то есть 5 лет; при сложных процентах хватает 4."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The graph of f(x) = a(x − 3)² + 2, where a is a constant, passes through the point (5, 10). What is the value of a?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "check": "8/4",
+      "verify": "ans*(5 - 3)^2 + 2 == 10",
+      "hint": "Подставь x = 5 и y = 10.",
+      "explanation": "a · 4 + 2 = 10 ⇒ a = 2 (B). 8 — это 4a; 4 — если взять (5 − 3) без квадрата."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The function g is defined by g(x) = 5(0.6)^x. Which of the following statements is true?",
+      "choices": [
+        "The value of g(x) increases as x increases.",
+        "g(1) = 3",
+        "g(0) = 0.6",
+        "The value of g(x) decreases by 0.6 each time x increases by 1."
+      ],
+      "answer": 1,
+      "hint": "Основание 0,6 < 1: функция убывает. Проверь значения.",
+      "explanation": "g(1) = 5 · 0,6 = 3 (B). g(0) = 5; функция убывает; уменьшение не на 0,6, а в 0,6 раза."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The functions f and g are defined by f(x) = x² + 2x and g(x) = 3x − 1. What is the value of f(g(2))?",
+      "answer": [
+        "35"
+      ],
+      "check": "5^2+2*5",
+      "hint": "Сначала g(2), потом подставь результат в f.",
+      "explanation": "g(2) = 5. f(5) = 25 + 10 = 35. Ошибка — g(f(2)) = g(8) = 23."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The graph of f(x) = x² − 4 is shifted 3 units to the right. Which of the following defines the new function?",
+      "choices": [
+        "g(x) = (x − 3)² − 4",
+        "g(x) = (x + 3)² − 4",
+        "g(x) = x² − 7",
+        "g(x) = x² − 1"
+      ],
+      "answer": 0,
+      "check": "(x-3)^2-4",
+      "hint": "Сдвиг вправо на 3: x заменяется на x − 3.",
+      "explanation": "g(x) = f(x − 3) = (x − 3)² − 4 (A). B — сдвиг влево; C и D — сдвиги вниз и вверх на 3."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The population of a town t years after 2020 is modeled by P(t) = 1,500(1.02)^t. According to the model, what is the population in 2030, to the nearest whole number?",
+      "answer": [
+        "1828"
+      ],
+      "check": "1500*1.02^10",
+      "hint": "2030 — это t = 10.",
+      "explanation": "P(10) = 1500 · 1,02¹⁰ ≈ 1500 · 1,219 ≈ 1828. Ошибка — простой процент: 1500 · 1,2 = 1800."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For which values of x is the value of f(x) = x² − 2x − 15 negative?",
+      "choices": [
+        "−3 < x < 5",
+        "x < −3 or x > 5",
+        "x < 5",
+        "−5 < x < 3"
+      ],
+      "answer": 0,
+      "hint": "Нули функции: −3 и 5. Ветви вверх — где парабола ниже оси?",
+      "explanation": "f(x) = (x − 5)(x + 3). Парабола открывается вверх, поэтому отрицательна между нулями: −3 < x < 5 (A). B — где положительна; D — нули с неверными знаками."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "What is the minimum value of the function f(x) = 3x² − 12x + 20?",
+      "answer": [
+        "8"
+      ],
+      "check": "3*4-24+20",
+      "hint": "x вершины: 12/(2 · 3) = 2.",
+      "explanation": "f(2) = 12 − 24 + 20 = 8. Ошибка — ответ 2 (это x вершины)."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A ball is dropped from a height of 81 meters. After each bounce, it rises to 2/3 of the height from which it fell. What is the height, in meters, the ball reaches after the third bounce?",
+      "choices": [
+        "16",
+        "24",
+        "36",
+        "54"
+      ],
+      "answer": 1,
+      "check": "81*(2/3)^3",
+      "hint": "Каждый отскок умножает высоту на 2/3.",
+      "explanation": "81 · (2/3)³ = 81 · 8/27 = 24 (B). 54 — после первого отскока, 36 — после второго, 16 — после четвёртого."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 2^x. If f(a) = 64, what is the value of f(a − 2)?",
+      "answer": [
+        "16"
+      ],
+      "check": "64/4",
+      "hint": "Уменьшение показателя на 2 делит значение на 2² = 4.",
+      "explanation": "2^a = 64 ⇒ a = 6, f(4) = 16. Или сразу: 64 / 4 = 16."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following functions has a minimum value of −5?",
+      "choices": [
+        "y = (x − 5)² + 1",
+        "y = 2(x + 1)² − 5",
+        "y = −(x − 1)² − 5",
+        "y = x² + 5"
+      ],
+      "answer": 1,
+      "check": "2(x+1)^2-5",
+      "hint": "Минимум есть при положительном коэффициенте; он равен k в форме a(x − h)² + k.",
+      "explanation": "У y = 2(x + 1)² − 5 ветви вверх, наименьшее значение −5 (B). A имеет минимум 1; у C ветви вниз — там максимум −5; D — минимум 5."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The height, in meters, of a projectile t seconds after it is launched is h(t) = −5t² + 30t + 35. How many seconds after launch does the projectile hit the ground?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "-5*ans^2 + 30*ans + 35 == 0 and ans > 0",
+      "hint": "Реши h(t) = 0; вынеси −5.",
+      "explanation": "−5(t² − 6t − 7) = 0 ⇒ (t − 7)(t + 1) = 0 ⇒ t = 7 (отрицательный корень не подходит)."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = (x − 2)(x − k), where k is a constant. The x-coordinate of the vertex of the graph of y = f(x) is 5. What is the value of k?",
+      "choices": [
+        "3",
+        "5",
+        "8",
+        "10"
+      ],
+      "answer": 2,
+      "check": "8",
+      "verify": "(2 + ans)/2 == 5",
+      "hint": "Вершина посередине между нулями 2 и k.",
+      "explanation": "(2 + k)/2 = 5 ⇒ k = 8 (C). 10 — сумма нулей; 3 — разность 5 − 2."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = ax², where a is a constant. If f(3) − f(1) = 32, what is the value of a?",
+      "answer": [
+        "4"
+      ],
+      "check": "32/8",
+      "verify": "ans*9 - ans == 32",
+      "hint": "f(3) = 9a, f(1) = a.",
+      "explanation": "f(3) = 9a и f(1) = a, разность 9a − a = 8a = 32 ⇒ a = 4."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A colony of bacteria grows exponentially. There were 400 bacteria at the start and 900 bacteria 2 hours later. If the growth continues at the same rate, how many bacteria will there be 4 hours after the start?",
+      "choices": [
+        "1,400",
+        "1,600",
+        "2,025",
+        "2,700"
+      ],
+      "answer": 2,
+      "check": "900*2.25",
+      "hint": "За каждые 2 часа количество умножается на одно и то же число.",
+      "explanation": "Множитель за 2 часа: 900/400 = 2,25. Ещё через 2 часа: 900 · 2,25 = 2025 (C). 1400 — линейный рост (+500 за 2 часа); 1600 — удвоение; 2700 — утроение."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The graph of y = 2x² − 7x − 15 crosses the x-axis at two points. What is the distance between these two points?",
+      "answer": [
+        "6.5",
+        "13/2"
+      ],
+      "check": "5+1.5",
+      "hint": "Разложи: 2x² − 7x − 15 = (2x + 3)(x − 5).",
+      "explanation": "Нули: x = −1,5 и x = 5. Расстояние 5 − (−1,5) = 6,5."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = (x + 4)² − 9. On which of the following intervals is f decreasing?",
+      "choices": [
+        "x < −4",
+        "x > −4",
+        "x < 4",
+        "−7 < x < −1"
+      ],
+      "answer": 0,
+      "hint": "Ветви вверх: функция убывает слева от вершины.",
+      "explanation": "Вершина при x = −4, парабола открывается вверх, поэтому f убывает при x < −4 (A). При x > −4 возрастает; D — промежуток между нулями."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A rectangle has a length of x + 3 units and a width of x − 1 units. For what value of x is the area of the rectangle 32 square units?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "(ans + 3)*(ans - 1) == 32 and ans > 1",
+      "hint": "(x + 3)(x − 1) = 32 ⇒ x² + 2x − 35 = 0.",
+      "explanation": "(x + 7)(x − 5) = 0. x = −7 не подходит: ширина была бы отрицательной. x = 5, прямоугольник 8 × 4."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The value of a painting t years after it was bought is modeled by V(t) = 8,000(1.07)^t dollars. Which of the following is closest to the number of years it takes for the value of the painting to double?",
+      "choices": [
+        "7",
+        "10",
+        "14",
+        "70"
+      ],
+      "answer": 1,
+      "check": "10",
+      "verify": "8000*1.07^(ans + 0.5) >= 16000 and 8000*1.07^(ans - 0.5) <= 16000",
+      "hint": "Нужно 1,07^t ≈ 2. Проверь степени.",
+      "explanation": "1,07¹⁰ ≈ 1,97, 1,07¹¹ ≈ 2,10 — стоимость удвоится примерно через 10 лет (B). 14 — если считать простой процент (100/7); 7 — это процентная ставка."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The function g is defined by g(x) = −(x − 3)² + 16. What is the positive x-intercept of the graph of y = g(x)?",
+      "answer": [
+        "7"
+      ],
+      "check": "3+4",
+      "hint": "(x − 3)² = 16.",
+      "explanation": "x − 3 = ±4 ⇒ x = 7 или x = −1. Положительный — 7."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A parabola in the xy-plane has its vertex at (−2, 5) and passes through the point (0, 1). Which of the following is an equation of the parabola?",
+      "choices": [
+        "y = (x − 2)² + 5",
+        "y = −(x + 2)² + 5",
+        "y = −(x − 2)² + 5",
+        "y = −(x + 2)² + 1"
+      ],
+      "answer": 1,
+      "check": "-(x+2)^2+5",
+      "hint": "y = a(x + 2)² + 5. Подставь (0, 1).",
+      "explanation": "1 = a · 4 + 5 ⇒ a = −1 (B). A и C — вершина (2, 5); D — вершина (−2, 1)."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The functions f and g are defined by f(x) = 4x² − 1 and g(x) = 2x + 1. What is the value of f(10)/g(10)?",
+      "answer": [
+        "19"
+      ],
+      "check": "399/21",
+      "hint": "4x² − 1 = (2x − 1)(2x + 1).",
+      "explanation": "f(x)/g(x) = 2x − 1 при x ≠ −1/2. При x = 10: 19. Проверка: 399/21 = 19."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The amount Q of a substance after t days is modeled by Q(t) = 640(1/2)^(t/3). After how many days will the amount be 40?",
+      "choices": [
+        "4",
+        "8",
+        "12",
+        "16"
+      ],
+      "answer": 2,
+      "check": "12",
+      "verify": "640*(1/2)^(ans/3) == 40",
+      "hint": "640/40 = 16 = 2⁴. Сколько раз нужно разделить пополам?",
+      "explanation": "Нужно 4 периода полураспада по 3 дня: t/3 = 4 ⇒ t = 12 (C). 4 — число периодов; 16 — отношение 640/40."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The range of the function f(x) = x² − 6x + 5 is all real numbers y such that y ≥ k. What is the value of k?",
+      "answer": [
+        "-4"
+      ],
+      "check": "9-18+5",
+      "hint": "Наименьшее значение — в вершине.",
+      "explanation": "Вершина при x = 3: f(3) = 9 − 18 + 5 = −4. Значит, k = −4."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = 2x + 3 and g(x) = x². Which of the following is equivalent to g(f(x)) − f(g(x))?",
+      "choices": [
+        "2x² + 12x + 6",
+        "2x² + 6",
+        "6x² + 12x + 12",
+        "0"
+      ],
+      "answer": 0,
+      "check": "2x^2+12x+6",
+      "hint": "g(f(x)) = (2x + 3)², f(g(x)) = 2x² + 3.",
+      "explanation": "(4x² + 12x + 9) − (2x² + 3) = 2x² + 12x + 6 (A). B — если возвести 2x + 3 в квадрат как 4x² + 9; D — если считать композиции перестановочными."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A town has 12,000 residents, and its population decreases by 4% each year. After how many whole years will the population first be less than 10,000?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "12000*0.96^ans < 10000 and not (12000*0.96^(ans - 1) < 10000)",
+      "hint": "Проверяй 12 000 · 0,96^t по годам.",
+      "explanation": "Через 4 года ≈ 10 192, через 5 лет ≈ 9784. Ответ 5. Ошибка — вычитать каждый год 4% от исходных 12 000: это линейная модель, а население каждый год теряет 4% от текущего числа."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = x(x − 4)(x + 3). How many x-intercepts does the graph of y = f(x) have, and what is the greatest of them?",
+      "choices": [
+        "2; 4",
+        "3; 4",
+        "3; 3",
+        "2; 3"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "Каждый множитель даёт свой нуль, включая x.",
+      "explanation": "Нули: 0, 4, −3 — три точки пересечения, наибольшая 4 (B). C путает знак у (x + 3); A и D забывают нуль x = 0."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The graph of y = a(x − 1)² − 8, where a is a constant, passes through the point (3, 0). What is the other x-intercept of the graph?",
+      "answer": [
+        "-1"
+      ],
+      "check": "1-2",
+      "hint": "Вершина при x = 1; x-intercepts симметричны относительно x = 1.",
+      "explanation": "Нуль x = 3 находится на 2 правее оси x = 1, второй — на 2 левее: x = −1. (a = 2 находить не обязательно.)"
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following is equivalent to f(x) = 3(2)^(x + 2)?",
+      "choices": [
+        "6(2)^x",
+        "12(2)^x",
+        "3(4)^x",
+        "9(2)^x"
+      ],
+      "answer": 1,
+      "check": "12*2^x",
+      "hint": "2^(x + 2) = 2² · 2^x.",
+      "explanation": "3 · 4 · 2^x = 12(2)^x (B). A — если взять 2^(x + 2) = 2 · 2^x; C — если сложить показатели неверно; D — 3²·2^x."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = −x² + 8x − 7. For how many integer values of x is f(x) > 0?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "hint": "Нули 1 и 7; ветви вниз.",
+      "explanation": "f(x) = −(x − 1)(x − 7) > 0 при 1 < x < 7: целые 2, 3, 4, 5, 6 — пять значений."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For a quadratic function f, f(2) = 5, f(8) = 5, and the minimum value of f is −4. What is the vertex of the graph of y = f(x)?",
+      "choices": [
+        "(5, 5)",
+        "(5, −4)",
+        "(−4, 5)",
+        "(4, 5)"
+      ],
+      "answer": 1,
+      "hint": "Равные значения при x = 2 и x = 8 — ось симметрии посередине.",
+      "explanation": "Ось x = 5, минимум −4: вершина (5, −4) (B). (5, 5) — значение в точках 2 и 8; C и D путают координаты."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A population after t weeks is modeled by P(t) = 50(3)^(t/4). By what factor does the population grow over any 8-week period?",
+      "answer": [
+        "9"
+      ],
+      "check": "3^2",
+      "hint": "За 8 недель показатель t/4 увеличивается на 2.",
+      "explanation": "P(t + 8)/P(t) = 3^(8/4) = 3² = 9. Ошибка — 3 · 2 = 6 (умножили вместо возведения в степень)."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A quadratic function f has zeros at x = −2 and x = 6, and f(0) = −24. What is the minimum value of f?",
+      "choices": [
+        "−24",
+        "−32",
+        "−16",
+        "−36"
+      ],
+      "answer": 1,
+      "check": "2*(2+2)*(2-6)",
+      "hint": "f(x) = a(x + 2)(x − 6). Найди a, затем значение в вершине x = 2.",
+      "explanation": "f(0) = −12a = −24 ⇒ a = 2. Вершина при x = (−2 + 6)/2 = 2: f(2) = 2 · 4 · (−4) = −32 (B). −24 — значение при x = 0, а не минимум; −16 — если взять a = 1."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = a·b^x, where a and b are positive constants. If f(1) = 12 and f(4) = 96, what is the least integer value of x for which f(x) > 1,000?",
+      "answer": [
+        "8"
+      ],
+      "check": "8",
+      "verify": "6*2^ans > 1000 and not (6*2^(ans - 1) > 1000)",
+      "hint": "f(4)/f(1) = b³.",
+      "explanation": "b³ = 96/12 = 8 ⇒ b = 2, a = 6. 6 · 2⁷ = 768 < 1000, 6 · 2⁸ = 1536 > 1000. Ответ 8."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The height, in meters, of a ball t seconds after it is thrown is modeled by h(t) = −4.9t² + 19.6t + 2. What is the maximum height, in meters, the ball reaches?",
+      "choices": [
+        "19.6",
+        "21.6",
+        "23.6",
+        "41.2"
+      ],
+      "answer": 1,
+      "check": "-4.9*4+19.6*2+2",
+      "hint": "Время подъёма: t = 19,6/(2 · 4,9).",
+      "explanation": "t = 2 с. h(2) = −19,6 + 39,2 + 2 = 21,6 м (B). 19,6 — если забыть начальную высоту 2; 41,2 — если не учесть −4,9t²."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The graph of f(x) = x² − 8x + c, where c is a constant, crosses the x-axis at two points that are 6 units apart. What is the value of c?",
+      "answer": [
+        "7"
+      ],
+      "check": "1*7",
+      "hint": "Нули симметричны относительно x = 4 и отстоят от него на 3.",
+      "explanation": "Нули 4 − 3 = 1 и 4 + 3 = 7. Произведение нулей равно c: c = 7. Проверка: x² − 8x + 7 = (x − 1)(x − 7)."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A substance decays so that 70% of it remains at the end of each hour. Which function gives the percent P of the original amount that remains after m minutes?",
+      "choices": [
+        "P = 100(0.7)^(60m)",
+        "P = 100(0.7)^(m/60)",
+        "P = 100(0.3)^(m/60)",
+        "P = 100(0.7)^m"
+      ],
+      "answer": 1,
+      "check": "100*0.7^(m/60)",
+      "hint": "За 60 минут проходит один «шаг» уменьшения.",
+      "explanation": "Число часов — m/60, поэтому P = 100(0,7)^(m/60) (B). D считает шаг в минуту; A — в 1/60 минуты; C использует убывающую долю 0,3 вместо остатка 0,7."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The functions f and g are defined by f(x) = 2^x and g(x) = 4x. For how many positive integers x ≤ 10 is f(x) > g(x)?",
+      "answer": [
+        "6"
+      ],
+      "check": "6",
+      "hint": "Сравни значения при x = 1, 2, 3, 4, 5.",
+      "explanation": "x = 1, 2, 3: 2^x меньше 4x; при x = 4 значения равны (16 = 16); с x = 5 (32 > 20) показательная функция обгоняет линейную. Подходят 5, 6, 7, 8, 9, 10 — шесть."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The graph of y = f(x) is a parabola with vertex (1, 4) that opens downward. If f(−1) = 0, what is the value of f(4)?",
+      "choices": [
+        "−5",
+        "0",
+        "−4",
+        "4"
+      ],
+      "answer": 0,
+      "check": "-1*(4-1)^2+4",
+      "hint": "f(x) = a(x − 1)² + 4. Найди a по точке (−1, 0).",
+      "explanation": "a · 4 + 4 = 0 ⇒ a = −1. f(4) = −9 + 4 = −5 (A). 0 — это f(3) (точка, симметричная −1); 4 — максимум."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The revenue, in dollars, a company earns from selling a product at a price of p dollars is R(p) = p(400 − 10p). What is the maximum revenue, in dollars?",
+      "answer": [
+        "4000"
+      ],
+      "check": "20*(400-200)",
+      "hint": "Нули R: p = 0 и p = 40. Максимум посередине.",
+      "explanation": "Вершина при p = 20: R(20) = 20 · 200 = 4000. Ошибка — ответ 20 (это цена, а не выручка)."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The functions f and g are defined by f(x) = 5(1.2)^x and g(x) = 5(1.2)^(x − 2). Which of the following is true for all values of x?",
+      "choices": [
+        "g(x) = f(x)/1.44",
+        "g(x) = f(x) − 2",
+        "g(x) = 1.44f(x)",
+        "g(x) = f(x)/2.4"
+      ],
+      "answer": 0,
+      "check": "conceptual",
+      "hint": "1,2^(x − 2) = 1,2^x / 1,2².",
+      "explanation": "g(x) = 5 · 1,2^x / 1,44 = f(x)/1,44 (A). Сдвиг аргумента в показательной функции — это умножение, а не вычитание (B); C — деление перепутано с умножением; D — 1,2 · 2 вместо 1,2²."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A quadratic function f satisfies f(x) = f(6 − x) for all values of x. The minimum value of f is −2, and f(0) = 7. What is the value of f(1)?",
+      "answer": [
+        "2"
+      ],
+      "check": "1*(1-3)^2-2",
+      "hint": "Условие f(x) = f(6 − x) задаёт ось симметрии x = 3.",
+      "explanation": "f(x) = a(x − 3)² − 2. f(0) = 9a − 2 = 7 ⇒ a = 1. f(1) = 4 − 2 = 2."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following functions has a graph with x-intercepts at x = −3 and x = 1 and a maximum value of 8?",
+      "choices": [
+        "y = 2(x + 3)(x − 1)",
+        "y = −2(x + 3)(x − 1)",
+        "y = −8(x + 3)(x − 1)",
+        "y = −2(x − 3)(x + 1)"
+      ],
+      "answer": 1,
+      "check": "-2*(x+3)*(x-1)",
+      "hint": "Вершина при x = −1; значение там должно быть 8.",
+      "explanation": "y = a(x + 3)(x − 1). При x = −1: a · 2 · (−2) = −4a = 8 ⇒ a = −2 (B). A — минимум −8; C — максимум 32; D — нули 3 и −1."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A deposit of $5,000 earns 6% annual interest compounded monthly. To the nearest dollar, what is the amount in the account after 2 years?",
+      "answer": [
+        "5636"
+      ],
+      "check": "5000*1.005^24",
+      "hint": "Ежемесячная ставка 0,06/12 = 0,005, число месяцев 24.",
+      "explanation": "5000 · 1,005²⁴ ≈ 5000 · 1,12716 ≈ 5636. При ежегодном начислении было бы 5000 · 1,06² = 5618."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = x² − 4x + 7. For what value of k does the equation f(x) = k have exactly one solution?",
+      "choices": [
+        "0",
+        "3",
+        "4",
+        "7"
+      ],
+      "answer": 1,
+      "check": "4-8+7",
+      "hint": "Прямая y = k касается параболы в вершине.",
+      "explanation": "Вершина при x = 2: f(2) = 3. Только при k = 3 уравнение имеет одно решение (B). При k > 3 решений два, при k < 3 — ни одного; 7 — f(0)."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The functions f and g are defined by f(x) = 3^x and g(x) = 9^x. For what value of x is g(x) = 27f(x)?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "9^ans == 27*3^ans",
+      "hint": "Запиши всё через основание 3: 9^x = 3^(2x), 27 = 3³.",
+      "explanation": "3^(2x) = 3^(x + 3) ⇒ 2x = x + 3 ⇒ x = 3. Проверка: 9³ = 729 = 27 · 27."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the graph of y = |x − 2| − 3 intersects the line y = 1 at which values of x?",
+      "choices": [
+        "−2 and 6",
+        "2 and 6",
+        "−6 and 2",
+        "−1 and 5"
+      ],
+      "answer": 0,
+      "hint": "|x − 2| = 4.",
+      "explanation": "x − 2 = 4 или x − 2 = −4 ⇒ x = 6 или x = −2 (A). −1 и 5 — если решить |x − 2| = 3."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The functions f and g are defined by f(x) = (x − 1)² and g(x) = x + 5. What is the sum of all values of x for which f(x) = g(x)?",
+      "answer": [
+        "3"
+      ],
+      "check": "4+(-1)",
+      "hint": "x² − 2x + 1 = x + 5.",
+      "explanation": "x² − 3x − 4 = 0 ⇒ (x − 4)(x + 1) = 0. Сумма корней 4 + (−1) = 3."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A population grows by 20% every 3 years. Which of the following is closest to the percent by which it grows each year?",
+      "choices": [
+        "6.3%",
+        "6.7%",
+        "20%",
+        "4.0%"
+      ],
+      "answer": 0,
+      "check": "6.3",
+      "verify": "abs(ans - (1.2^(1/3) - 1)*100) < 0.05",
+      "hint": "Годовой множитель m: m³ = 1,2.",
+      "explanation": "m = 1,2^(1/3) ≈ 1,063, то есть ≈ 6,3% в год (A). 6,7% — деление 20% на 3 (не учитывает сложный рост); 20% — рост за три года."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The graph of y = ax² + bx + c in the xy-plane has its vertex at (2, 9) and passes through the point (5, 0). What is the value of a + b + c?",
+      "answer": [
+        "8"
+      ],
+      "check": "-1*(1-2)^2+9",
+      "hint": "a + b + c — это значение y при x = 1.",
+      "explanation": "y = a(x − 2)² + 9; 0 = 9a + 9 ⇒ a = −1. При x = 1: −1 + 9 = 8, а это и есть a + b + c."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A ball is thrown upward so that its height, in feet, after t seconds is h(t) = −16t² + vt + 6, where v is a positive constant. The ball reaches a maximum height of 42 feet. What is the value of v?",
+      "choices": [
+        "36",
+        "48",
+        "64",
+        "96"
+      ],
+      "answer": 1,
+      "check": "48",
+      "verify": "-16*(ans/32)^2 + ans*(ans/32) + 6 == 42",
+      "hint": "Максимум при t = v/32. Подставь и приравняй к 42.",
+      "explanation": "h(v/32) = −16 · v²/1024 + v²/32 + 6 = v²/64 + 6 = 42 ⇒ v² = 2304 ⇒ v = 48 (B). Проверка: t = 1,5, h = −36 + 72 + 6 = 42."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = 2x² − 12x + c, where c is a constant. The minimum value of f is 5. What is the value of c?",
+      "answer": [
+        "23"
+      ],
+      "check": "5-18+36",
+      "hint": "Минимум в вершине x = 12/(2 · 2) = 3.",
+      "explanation": "f(3) = 18 − 36 + c = c − 18 = 5 ⇒ c = 23."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The table shows three values of an exponential function f. What is the value of f(4)?",
+      "table": {
+        "head": [
+          "x",
+          "0",
+          "1",
+          "2"
+        ],
+        "rows": [
+          [
+            "f(x)",
+            "5",
+            "7.5",
+            "11.25"
+          ]
+        ]
+      },
+      "choices": [
+        "16.875",
+        "25.3125",
+        "20",
+        "22.5"
+      ],
+      "answer": 1,
+      "check": "5*1.5^4",
+      "hint": "Найди множитель между соседними значениями.",
+      "explanation": "7,5/5 = 1,5 и 11,25/7,5 = 1,5. f(4) = 5 · 1,5⁴ = 5 · 5,0625 = 25,3125 (B). 16,875 — это f(3); 20 — линейное продолжение."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = x² − 5x, and the function g is defined by g(x) = f(x + 2) − f(x). For what value of x is g(x) = 0?",
+      "answer": [
+        "1.5",
+        "3/2"
+      ],
+      "check": "6/4",
+      "verify": "(ans + 2)^2 - 5*(ans + 2) - (ans^2 - 5*ans) == 0",
+      "hint": "Раскрой f(x + 2) − f(x): квадраты сократятся.",
+      "explanation": "(x + 2)² − 5(x + 2) − x² + 5x = 4x + 4 − 10 = 4x − 6 = 0 ⇒ x = 1,5. Значения f в точках 1,5 и 3,5 равны: они симметричны относительно оси x = 2,5."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = (x − a)(x − b), where a and b are constants and a < b. If f(0) = 12 and the vertex of the graph of y = f(x) has x-coordinate 4, what is the value of b?",
+      "choices": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "check": "6",
+      "hint": "f(0) = ab = 12, а x вершины = (a + b)/2 = 4.",
+      "explanation": "a + b = 8 и ab = 12 ⇒ a = 2, b = 6 (C). 2 — это a; 8 — сумма a + b."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A quantity doubles every 5 years. By what percent does the quantity increase over a 15-year period?",
+      "answer": [
+        "700"
+      ],
+      "check": "(2^3-1)*100",
+      "hint": "За 15 лет — три удвоения.",
+      "explanation": "Множитель 2³ = 8: новое значение в 8 раз больше, рост 700%. Ошибка — 300% (три раза по 100%) или 800% (весь множитель, а не прирост)."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following functions has a graph in the xy-plane that passes through (0, 3) and has the horizontal asymptote y = 1?",
+      "choices": [
+        "f(x) = 3(0.5)^x + 1",
+        "f(x) = 2(0.5)^x + 1",
+        "f(x) = 2(0.5)^x + 3",
+        "f(x) = (0.5)^x + 3"
+      ],
+      "answer": 1,
+      "check": "2*0.5^x+1",
+      "hint": "У a · b^x + k асимптота y = k, а f(0) = a + k.",
+      "explanation": "Асимптота y = 1 требует k = 1, тогда a + 1 = 3 ⇒ a = 2: f(x) = 2(0,5)^x + 1 (B). A проходит через (0, 4); C и D имеют асимптоту y = 3."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A theater sells 300 tickets per show at $20 each. For each $1 increase in the ticket price, it sells 10 fewer tickets. What ticket price, in dollars, gives the greatest revenue?",
+      "answer": [
+        "25"
+      ],
+      "check": "20+5",
+      "hint": "Выручка при повышении на n долларов: (20 + n)(300 − 10n).",
+      "explanation": "R(n) = (20 + n)(300 − 10n), нули n = −20 и n = 30, максимум при n = 5. Цена 25 долларов, выручка 25 · 250 = 6250."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The quadratic function f(x) = ax² + bx + c, where a < 0, has zeros at x = 1 and x = 5. Which of the following must be true?",
+      "choices": [
+        "f(3) > 0",
+        "f(0) > 0",
+        "f(6) > 0",
+        "f(3) < 0"
+      ],
+      "answer": 0,
+      "hint": "Ветви вниз: где парабола выше оси x?",
+      "explanation": "При a < 0 парабола положительна между нулями, поэтому f(3) > 0 (A). f(0) и f(6) лежат вне промежутка (1, 5) — там f < 0."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The functions f and g are defined by f(x) = 100(0.8)^x and g(x) = 20 + 5x. What is the least integer value of x ≥ 0 for which g(x) > f(x)?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "20 + 5*ans > 100*0.8^ans and not (20 + 5*(ans - 1) > 100*0.8^(ans - 1))",
+      "hint": "Сравни значения при x = 3, 4, 5.",
+      "explanation": "x = 4: g = 40, f = 40,96 — ещё меньше. x = 5: g = 45, f ≈ 32,77 — больше. Ответ 5."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The graph of y = x² is translated so that its vertex is at (3, −2), and the resulting graph is then reflected across the x-axis. Which of the following is an equation of the final graph?",
+      "choices": [
+        "y = −(x − 3)² − 2",
+        "y = −(x − 3)² + 2",
+        "y = (x + 3)² + 2",
+        "y = −(x + 3)² − 2"
+      ],
+      "answer": 1,
+      "check": "-(x-3)^2+2",
+      "hint": "Сначала y = (x − 3)² − 2, затем отражение меняет знак у всего y.",
+      "explanation": "−[(x − 3)² − 2] = −(x − 3)² + 2 (B): вершина переходит в (3, 2). A отражает только квадрат; C и D — сдвиг в другую сторону."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A ball is dropped from a height of 25 meters. After each bounce, it rises to 60% of the height from which it fell. What is the total vertical distance, in meters, that the ball has traveled when it hits the ground for the third time?",
+      "answer": [
+        "73"
+      ],
+      "check": "25+2*15+2*9",
+      "hint": "Посчитай каждый спуск и каждый подъём.",
+      "explanation": "Вниз 25, вверх 15, вниз 15, вверх 9, вниз 9: 25 + 30 + 18 = 73 м. Ошибка — забыть подъёмы (49) или посчитать лишний подъём после третьего удара."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The functions f(x) = x² + 6x + 13 and g(x) = −x² + 2x + k, where k is a constant, have graphs that intersect at exactly one point. What is the value of k?",
+      "choices": [
+        "9",
+        "11",
+        "13",
+        "15"
+      ],
+      "answer": 1,
+      "check": "11",
+      "hint": "f(x) = g(x) ⇒ 2x² + 4x + 13 − k = 0 должно иметь один корень.",
+      "explanation": "Дискриминант: 16 − 8(13 − k) = 0 ⇒ 13 − k = 2 ⇒ k = 11 (B). Тогда 2(x + 1)² = 0, точка касания x = −1."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "An exponential function is defined by f(t) = a·b^t, where a and b are positive constants. If f(2) = 18 and f(5) = 486, what is the value of f(3)?",
+      "answer": [
+        "54"
+      ],
+      "check": "18*3",
+      "hint": "f(5)/f(2) = b³.",
+      "explanation": "b³ = 486/18 = 27 ⇒ b = 3. f(3) = f(2) · 3 = 54."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = (x² − 9)/(x − 3). Which of the following best describes the graph of y = f(x) in the xy-plane?",
+      "choices": [
+        "A line with a hole at the point (3, 6)",
+        "A line with a hole at the point (3, 0)",
+        "A parabola with vertex (3, 6)",
+        "The line y = x − 3"
+      ],
+      "answer": 0,
+      "hint": "x² − 9 = (x − 3)(x + 3). Что происходит при x = 3?",
+      "explanation": "При x ≠ 3 f(x) = x + 3 — прямая; при x = 3 функция не определена, на прямой «выколота» точка (3, 6) (A). B — неверная высота; D — неверное сокращение."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = −2x² + 12x + c, where c is a constant. The maximum value of f is 3 times the y-coordinate of the y-intercept of the graph of y = f(x). What is the value of c?",
+      "answer": [
+        "9"
+      ],
+      "check": "9",
+      "verify": "-2*9 + 36 + ans == 3*ans",
+      "hint": "y-intercept: f(0) = c. Максимум — в вершине x = 3.",
+      "explanation": "f(3) = −18 + 36 + c = 18 + c. Условие: 18 + c = 3c ⇒ c = 9."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Quantity A is modeled by 1,000(1.05)^t and quantity B is modeled by 1,500(1.02)^t, where t is the number of years after 2020. In which year will quantity A first be greater than quantity B?",
+      "choices": [
+        "2030",
+        "2032",
+        "2034",
+        "2036"
+      ],
+      "answer": 2,
+      "check": "2034",
+      "verify": "1000*1.05^(ans - 2020) > 1500*1.02^(ans - 2020) and not (1000*1.05^(ans - 2021) > 1500*1.02^(ans - 2021))",
+      "hint": "Нужно (1,05/1,02)^t > 1,5. Проверь t = 13 и t = 14.",
+      "explanation": "При t = 13: A ≈ 1886, B ≈ 1941. При t = 14: A ≈ 1979,9, B ≈ 1979,4 — A впервые больше. Год 2020 + 14 = 2034 (C)."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The points (−1, 6), (1, 2), and (3, 6) lie on the graph of a quadratic function f. What is the value of f(5)?",
+      "answer": [
+        "18"
+      ],
+      "check": "1*(5-1)^2+2",
+      "hint": "Точки (−1, 6) и (3, 6) симметричны — значит, вершина при x = 1.",
+      "explanation": "Вершина (1, 2): f(x) = a(x − 1)² + 2, a · 4 + 2 = 6 ⇒ a = 1. f(5) = 16 + 2 = 18."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function g is defined by g(x) = 2^(x + 1) − 8. For which values of x is g(x) < 0?",
+      "choices": [
+        "x < 2",
+        "x < 3",
+        "x > 2",
+        "x < 4"
+      ],
+      "answer": 0,
+      "hint": "8 = 2³.",
+      "explanation": "2^(x + 1) < 2³ ⇒ x + 1 < 3 ⇒ x < 2 (A). x < 3 — если забыть +1 в показателе; x > 2 — неверный знак."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = x² − 2x − 8, and the function g is defined by g(x) = f(x − 3). What is the product of the zeros of g?",
+      "answer": [
+        "7"
+      ],
+      "check": "7*1",
+      "hint": "Нули g на 3 правее нулей f.",
+      "explanation": "f(x) = (x − 4)(x + 2), нули 4 и −2. У g нули 7 и 1, произведение 7. Ошибка — −8 (произведение нулей f)."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = x² + 4x. If f(a) = f(b) and a ≠ b, what is the value of a + b?",
+      "choices": [
+        "−4",
+        "−2",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "check": "-4",
+      "hint": "Равные значения параболы — в точках, симметричных относительно оси x = −2.",
+      "explanation": "Ось симметрии x = −2, поэтому (a + b)/2 = −2 ⇒ a + b = −4 (A). Алгебраически: a² − b² + 4(a − b) = 0 ⇒ (a − b)(a + b + 4) = 0."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The value V of an investment t years after it was made is modeled by V(t) = 2,000(1 + r)^t, where r is a constant. After 3 years, the value is $2,662. What is r, written as a percent?",
+      "answer": [
+        "10"
+      ],
+      "check": "(1.331^(1/3)-1)*100",
+      "hint": "(1 + r)³ = 2662/2000.",
+      "explanation": "(1 + r)³ = 1,331 = 1,1³ ⇒ r = 0,1, то есть 10%. Ошибка — 662/2000/3 ≈ 11% (простой процент)."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The function f is defined by f(x) = a(x − 2)² + k, where a and k are constants. If f(0) = 10 and f(3) = 1, what is the value of f(5)?",
+      "choices": [
+        "10",
+        "19",
+        "25",
+        "28"
+      ],
+      "answer": 2,
+      "check": "3*9-2",
+      "hint": "f(0) = 4a + k, f(3) = a + k.",
+      "explanation": "4a + k = 10 и a + k = 1 ⇒ 3a = 9, a = 3, k = −2. f(5) = 3 · 9 − 2 = 25 (C). 10 — если считать f(5) = f(0) по симметрии, но ось x = 2, и симметрична 0 точка 4."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A rectangle has a perimeter of 40 units, so its area, in square units, is A(w) = w(20 − w), where w is its width. For how many integer values of w is the area at least 84 square units?",
+      "answer": [
+        "9"
+      ],
+      "check": "9",
+      "hint": "w(20 − w) ≥ 84 ⇒ w² − 20w + 84 ≤ 0.",
+      "explanation": "(w − 6)(w − 14) ≤ 0 ⇒ 6 ≤ w ≤ 14. Целых значений 9. Ошибка — 8 (14 − 6 без учёта концов)."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which of the following functions has a graph with a y-intercept of 4 that increases for all values of x and has the x-axis as a horizontal asymptote?",
+      "choices": [
+        "f(x) = 4(1.5)^x",
+        "f(x) = 4(0.5)^x",
+        "f(x) = 1.5^x + 4",
+        "f(x) = 4x + 1.5"
+      ],
+      "answer": 0,
+      "check": "4*1.5^x",
+      "hint": "Асимптота y = 0, f(0) = 4, основание больше 1.",
+      "explanation": "f(x) = 4(1,5)^x: f(0) = 4, возрастает, при x → −∞ стремится к 0 (A). B убывает; C имеет асимптоту y = 4 и f(0) = 5; D — линейная."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = (x + 1)². If f(f(a)) = 100 and a > 0, what is the value of a?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "((ans + 1)^2 + 1)^2 == 100",
+      "hint": "Сначала найди f(a): (f(a) + 1)² = 100, причём f(a) ≥ 0.",
+      "explanation": "f(a) + 1 = 10 (значение −10 невозможно, так как f(a) ≥ 0) ⇒ f(a) = 9 ⇒ (a + 1)² = 9 ⇒ a = 2 (при a > 0)."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The quadratic function f has a maximum value of 10 at x = −1, and f(1) = 2. What is the value of f(0)?",
+      "choices": [
+        "2",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": 2,
+      "check": "-2*1+10",
+      "hint": "f(x) = a(x + 1)² + 10. Найди a по f(1) = 2.",
+      "explanation": "4a + 10 = 2 ⇒ a = −2. f(0) = −2 · 1 + 10 = 8 (C). 6 — среднее f(1) и максимума; 10 — максимум; 2 — f(1)."
+    }
+  ]
+}

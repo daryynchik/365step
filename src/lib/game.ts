@@ -14,13 +14,15 @@ import { COURSES, findByKey, findLesson, flatten, isSequentiallyUnlocked, PLAN_C
 import { isPlanUnlocked, nextPlanStep } from "@/content/plan";
 import { isDiagnosticSection } from "@/content/diagnostic";
 import type { AnyCourseId, CourseId, Question } from "@/content/types";
-import { isCorrect, type Response } from "./answers";
+import { adaptationMessages } from "@/content/bank/math-lessons";
+import { isCorrect, outcomeOf, type AttemptMeta, type Response } from "./answers";
 import { all, one, run, scalar, str, num, transaction } from "./db";
 import { addDays, lastNDays, nowIso, todayIso, weekStart } from "./date";
 import { getPlan } from "./profile";
 import { DAILY_GOAL, lessonPoints, levelFor, POINTS, type LevelInfo } from "./rules";
 import { resolveLesson, startLevelOf } from "./lesson-access";
 import { recordDiagnostic } from "./scores";
+import { clearDraw, recordMathAnswers } from "./mastery";
 import { recordSkillAnswers } from "./skill-stats";
 import { countWords } from "./writing";
 
@@ -182,6 +184,8 @@ export interface Completion {
   dailyGoal: number;
   /** Where "Continue" goes: the next lesson, or back to the path. */
   nextHref: string;
+  /** SAT Math ladder: what changed for which skill after this lesson. */
+  adaptation?: string[];
 }
 
 export type CompletionResult = { ok: true; result: Completion } | { ok: false; error: string };
@@ -276,6 +280,7 @@ export async function completeLesson(
   courseId: string,
   lessonId: string,
   responses: (Response | null)[],
+  meta: AttemptMeta = {},
 ): Promise<CompletionResult> {
   // The diagnostic sets the starting level of a section; open to everyone with a goal.
   if (courseId === "diagnostic") {
@@ -295,15 +300,39 @@ export async function completeLesson(
 
   const questions = found.lesson.questions;
   const results = questions.map((q, i) => isCorrect(q, responses[i]));
+  // A hint counts only where the question had one to open.
+  const hinted = questions.map((q, i) => Boolean(q.hint) && meta.hinted?.[i] === true);
+  const outcomes = results.map((right, i) => outcomeOf(right, hinted[i]));
   const correct = results.filter(Boolean).length;
   const result = await recordCompletion(userId, { key: found.key, courseId: found.courseId }, correct, questions.length, lessonPoints(correct, questions.length));
 
-  // First-try answers move the adaptive level of each skill.
+  // First-try answers move the adaptive level of each skill; a hinted answer does not count as right.
   if (found.taskSkills) {
     const plan = found.plan;
+    const skills = found.taskSkills;
+    // SAT Math: the ladder, task by task; a right answer after the solution was shown earns nothing.
+    // Recorded before skill_stats, which the ladder reads as old progress for skills it has not seen yet.
+    if (found.ladder) {
+      const ladder = found.ladder;
+      const events = await recordMathAnswers(
+        userId,
+        plan,
+        found.key,
+        skills.map((skill, i) => ({
+          taskId: ladder.taskIds[i] ?? null,
+          skill,
+          tier: ladder.taskTiers[i] ?? 3,
+          outcome: outcomes[i],
+          retried: outcomes[i] === "wrong" && meta.retried?.[i] === true,
+        })),
+        new Set(ladder.remediation),
+      );
+      if (ladder.drawn) await clearDraw(userId, found.key);
+      if (events.length) result.adaptation = adaptationMessages(events);
+    }
     await recordSkillAnswers(
       userId,
-      found.taskSkills.map((skill, i) => ({ skill, correct: results[i] })),
+      skills.map((skill, i) => ({ skill, correct: outcomes[i] === "clean" })),
       (skill) => startLevelOf(plan, skill),
     );
   }

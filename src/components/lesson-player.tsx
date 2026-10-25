@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
-import { ArrowUpRight, BookOpen, Calculator, Check, Loader2, X } from "lucide-react";
+import { ArrowUpRight, BookOpen, Calculator, Check, Lightbulb, Loader2, X } from "lucide-react";
 import { clsx } from "clsx";
 
 import { completeLessonAction, completePracticeAction } from "@/actions/lessons";
@@ -67,6 +67,10 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
   const [checked, setChecked] = useState(false);
   const [firstTry, setFirstTry] = useState<(Response | null)[]>(() => questions.map(() => null));
   const [cleared, setCleared] = useState<Set<number>>(new Set());
+  // Hints opened before the first answer, and right answers on the second try.
+  const [hinted, setHinted] = useState<boolean[]>(() => questions.map(() => false));
+  const [retried, setRetried] = useState<boolean[]>(() => questions.map(() => false));
+  const [hintOpen, setHintOpen] = useState(false);
   const [shake, setShake] = useState(false);
 
   const [result, setResult] = useState<Completion | null>(null);
@@ -86,7 +90,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
       start(async () => {
         const res = practiceSetId
           ? await completePracticeAction(practiceSetId, responses)
-          : await completeLessonAction(courseId, lesson.id, responses);
+          : await completeLessonAction(courseId, lesson.id, responses, { hinted, retried });
         if (res.ok) {
           setResult(res.result);
           setPhase("done");
@@ -95,7 +99,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
         }
       });
     },
-    [courseId, lesson.id, practiceSetId],
+    [courseId, lesson.id, practiceSetId, hinted, retried],
   );
 
   /** After the questions (or instead of them): writing, speaking, or done. */
@@ -119,6 +123,9 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
     const right = isCorrect(question, response);
     if (firstTry[current] === null) {
       setFirstTry((prev) => prev.map((r, i) => (i === current ? response : r)));
+    } else if (right) {
+      // Right after the solution was shown: noted, but it does not count towards the level.
+      setRetried((prev) => prev.map((r, i) => (i === current ? true : r)));
     }
     if (right) {
       setCleared((prev) => new Set(prev).add(current));
@@ -134,6 +141,7 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
     const nextPosition = position + 1;
     setChecked(false);
     setResponse(null);
+    setHintOpen(false);
     if (nextPosition < queue.length) {
       setPosition(nextPosition);
       return;
@@ -298,6 +306,29 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
               </p>
             )}
             <QuestionView question={question} response={response} onRespond={setResponse} checked={checked} disabled={checked || pending} />
+            {question.hint && !checked && firstTry[current] === null && (
+              <div className="mt-5">
+                {hintOpen || hinted[current] ? (
+                  <p className="flex gap-2 rounded-xl border border-warn/25 bg-warn-soft px-4 py-3 text-sm">
+                    <Lightbulb className="mt-0.5 size-4 flex-none text-warn" />
+                    <span>
+                      <span className="font-semibold">Подсказка.</span> {question.hint}
+                    </span>
+                  </p>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setHintOpen(true);
+                      setHinted((prev) => prev.map((h, i) => (i === current ? true : h)));
+                    }}
+                    className="flex items-center gap-1.5 text-sm font-medium text-muted hover:text-ink"
+                  >
+                    <Lightbulb className="size-4" /> Подсказка <span className="text-xs text-subtle">(ответ засчитается наполовину)</span>
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         )}
 

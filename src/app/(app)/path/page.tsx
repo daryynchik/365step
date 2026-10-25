@@ -7,6 +7,7 @@ import { FIELD_OPTIONS } from "@/content/fields/ids";
 import { COUNTRIES, currentPlanDay, nextPlanStep, todayPlanDay } from "@/content/plan";
 import { DesmosPath } from "@/components/desmos-path";
 import { DeadlinesCard } from "@/components/deadlines-card";
+import { MathSkillsCard } from "@/components/math-skills-card";
 import { PlanMap } from "@/components/plan-map";
 import { SectionsCard } from "@/components/sections-card";
 import { DailyGoalCard, FriendsMini, OfficialPractice } from "@/components/sidebar";
@@ -17,6 +18,7 @@ import { plural, todayIso } from "@/lib/date";
 import { getDeadlines } from "@/lib/deadlines";
 import { getLeaderboard } from "@/lib/friends";
 import { getActivity, getDoneKeys, getStats } from "@/lib/game";
+import { getMathContext } from "@/lib/mastery";
 import { getPlan } from "@/lib/profile";
 
 export const metadata: Metadata = { title: "Путь" };
@@ -45,6 +47,8 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
     getDeadlines(user.id),
   ]);
   if (!plan) redirect("/start");
+  const mathState = plan.sections.find((s) => s.section === "sat-math");
+  const ladder = mathState ? await getMathContext(user.id, plan) : null;
 
   const today = todayIso();
   const steps = plan.days.flatMap((d) => d.steps);
@@ -130,6 +134,8 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
         </div>
 
         <SectionsCard plan={plan} today={today} />
+
+        {mathState && ladder && <MathSkillsCard state={mathState} mastery={ladder.mastery} justPromoted={ladder.justPromoted} target={ladder.target} />}
 
         <DesmosPath lessons={plan.tutorials} done={done} />
 

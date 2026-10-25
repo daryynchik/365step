@@ -1,0 +1,1648 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "systems",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "If y = x − 3 and x + y = 11, what is the value of x?",
+      "answer": [
+        "7"
+      ],
+      "check": "14/2",
+      "verify": "ans + (ans - 3) == 11",
+      "hint": "Подставь y = x − 3 во второе уравнение.",
+      "explanation": "x + (x − 3) = 11 ⇒ 2x = 14 ⇒ x = 7, тогда y = 4."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "If 2x = 10 and x + y = 8, what is the value of y?",
+      "choices": [
+        "3",
+        "5",
+        "8",
+        "13"
+      ],
+      "answer": 0,
+      "check": "8-5",
+      "verify": "10/2 + ans == 8",
+      "hint": "Сначала найди x из первого уравнения.",
+      "explanation": "x = 5, тогда y = 8 − 5 = 3 (A). 5 — это x; 13 — если сложить 5 и 8."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which ordered pair (x, y) satisfies both x + y = 5 and x − y = 1?",
+      "choices": [
+        "(2, 3)",
+        "(3, 2)",
+        "(4, 1)",
+        "(5, 0)"
+      ],
+      "answer": 1,
+      "hint": "Проверь оба уравнения для каждой пары.",
+      "explanation": "(3, 2): 3 + 2 = 5 и 3 − 2 = 1 (B). (2, 3) даёт разность −1; (4, 1) — сумму 5, но разность 3; (5, 0) — разность 5."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "One number is 4 times another number, and the sum of the two numbers is 35. What is the smaller number?",
+      "answer": [
+        "7"
+      ],
+      "check": "35/5",
+      "verify": "ans + 4*ans == 35",
+      "hint": "Если меньшее n, то большее 4n.",
+      "explanation": "n + 4n = 35 ⇒ n = 7 (большее 28)."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "At a fruit stand, 2 apples and 1 melon cost $5 in total. One melon costs $3. How much does one apple cost?",
+      "choices": [
+        "$1",
+        "$1.50",
+        "$2",
+        "$4"
+      ],
+      "answer": 0,
+      "check": "(5-3)/2",
+      "hint": "Вычти цену дыни из 5.",
+      "explanation": "2a + 3 = 5 ⇒ a = 1 (A). 2 — цена двух яблок; 4 — если сложить вместо вычитания (5 + 3)/2."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x + 3y = 13 and x + y = 7, what is the value of y?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "check": "6/2",
+      "hint": "Вычти второе уравнение из первого: x уйдёт.",
+      "explanation": "(x + 3y) − (x + y) = 13 − 7 ⇒ 2y = 6 ⇒ y = 3 (B). 4 — это x; 6 — это 2y."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 4x + y = 14 and 2x − y = 4, what is the value of x?",
+      "answer": [
+        "3"
+      ],
+      "check": "18/6",
+      "verify": "4*ans + (14 - 4*ans) == 14 and 2*ans - (14 - 4*ans) == 4",
+      "hint": "Сложи уравнения: y сократится.",
+      "explanation": "6x = 18 ⇒ x = 3, тогда y = 2. Проверка: 2 · 3 − 2 = 4."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A matinee movie ticket costs $6 less than an evening ticket. Three evening tickets and two matinee tickets cost $78 in total. What is the price of an evening ticket?",
+      "choices": [
+        "12",
+        "16.8",
+        "18",
+        "24"
+      ],
+      "answer": 2,
+      "check": "18",
+      "verify": "3*ans + 2*(ans - 6) == 78",
+      "hint": "Если вечерний билет стоит e, то дневной e − 6.",
+      "explanation": "3e + 2(e − 6) = 78 ⇒ 5e = 90 ⇒ e = 18 (C). 12 — цена дневного билета; 16,8 — если не умножить 6 на 2 (5e − 6 = 78); 24 — если прибавить 6 к 18."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The graphs of y = 2x + 1 and y = −x + 7 intersect at the point (x, y). What is the value of y?",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": 2,
+      "check": "2*2+1",
+      "hint": "Приравняй правые части.",
+      "explanation": "2x + 1 = −x + 7 ⇒ x = 2, y = 5 (C). 2 — это x; 7 — свободный член второй прямой."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If a + b = 9 and a − b = 3, what is the value of a² − b²?",
+      "answer": [
+        "27"
+      ],
+      "check": "9*3",
+      "hint": "a² − b² = (a + b)(a − b).",
+      "explanation": "(a + b)(a − b) = 9 · 3 = 27. Можно и найти a = 6, b = 3: 36 − 9 = 27."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x = 2y + 1 and 3x − y = 13, what is the value of y?",
+      "choices": [
+        "1",
+        "2",
+        "5",
+        "7"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "3*(2*ans + 1) - ans == 13",
+      "hint": "Подставь x = 2y + 1 во второе уравнение.",
+      "explanation": "3(2y + 1) − y = 13 ⇒ 5y + 3 = 13 ⇒ y = 2 (B), x = 5. 5 — это x; 7 — если не умножить 1 на 3."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Jen has only $5 bills and $10 bills, worth $90 in total. She has 3 more $5 bills than $10 bills. How many $10 bills does she have?",
+      "answer": [
+        "5"
+      ],
+      "check": "75/15",
+      "verify": "5*(ans + 3) + 10*ans == 90",
+      "hint": "Если десяток t, то пятёрок t + 3.",
+      "explanation": "5(t + 3) + 10t = 90 ⇒ 15t = 75 ⇒ t = 5 (пятёрок 8)."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 2x + 3y = 12 and 2x + y = 8, what is the value of 2x?",
+      "choices": [
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "check": "8-2",
+      "hint": "Вычти второе уравнение из первого — найдёшь y.",
+      "explanation": "2y = 4 ⇒ y = 2. 2x = 8 − 2 = 6 (C). 3 — это x; 8 — если забыть про y."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The lines y = 3x and y = x + 4 intersect at which point?",
+      "choices": [
+        "(1, 3)",
+        "(2, 6)",
+        "(4, 8)",
+        "(6, 2)"
+      ],
+      "answer": 1,
+      "hint": "3x = x + 4.",
+      "explanation": "2x = 4 ⇒ x = 2, y = 6 (B). (6, 2) — координаты перепутаны; (1, 3) лежит только на первой прямой; (4, 8) — только на второй."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Together, a plumber and an assistant earn $80 per hour. The plumber earns $30 more per hour than the assistant. How many dollars per hour does the assistant earn?",
+      "answer": [
+        "25"
+      ],
+      "check": "50/2",
+      "verify": "ans + (ans + 30) == 80",
+      "hint": "a + (a + 30) = 80.",
+      "explanation": "2a = 50 ⇒ a = 25, сантехник получает 55. Ошибка — вычесть 30 из 80 и не поделить (50)."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 3x − 2y = 1 and x + 2y = 7, what is the value of x?",
+      "choices": [
+        "1",
+        "2",
+        "2.5",
+        "8"
+      ],
+      "answer": 1,
+      "check": "8/4",
+      "hint": "Сложи уравнения.",
+      "explanation": "4x = 8 ⇒ x = 2 (B), y = 2,5. 2,5 — это y; 8 — это 4x."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Two angles are supplementary, so the sum of their measures is 180°. One angle measures 40° more than the other. What is the measure, in degrees, of the larger angle?",
+      "answer": [
+        "110"
+      ],
+      "check": "220/2",
+      "verify": "ans + (ans - 40) == 180",
+      "hint": "a + b = 180 и a − b = 40.",
+      "explanation": "Сложим: 2a = 220 ⇒ a = 110°, второй угол 70°."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If y = 4x − 5 and y = 2x + 3, what is the value of x?",
+      "choices": [
+        "−1",
+        "2",
+        "4",
+        "11"
+      ],
+      "answer": 2,
+      "check": "8/2",
+      "verify": "4*ans - 5 == 2*ans + 3",
+      "hint": "Приравняй правые части.",
+      "explanation": "4x − 5 = 2x + 3 ⇒ 2x = 8 ⇒ x = 4 (C). 11 — это y; −1 — если перенести −5 без смены знака."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 6x + 3y = 21 and x = y, what is the value of x?",
+      "choices": [
+        "3/7",
+        "7/3",
+        "3",
+        "7/2"
+      ],
+      "answer": 1,
+      "check": "7/3",
+      "verify": "6*ans + 3*ans == 21",
+      "hint": "Замени y на x.",
+      "explanation": "9x = 21 ⇒ x = 7/3 (B). 7/2 — если забыть про 3y (6x = 21); 3 — если сложить коэффициенты как 6 + 1 = 7; 3/7 — если разделить 9 на 21."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 2x + y = 3 and 3x + y = 7, what is the value of y?",
+      "answer": [
+        "-5"
+      ],
+      "check": "3-2*4",
+      "hint": "Вычти первое уравнение из второго — останется x.",
+      "explanation": "x = 7 − 3 = 4. Тогда y = 3 − 8 = −5."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Ali is 6 years older than Bea. Five years ago, Ali was twice as old as Bea was then. How old is Bea now?",
+      "choices": [
+        "6",
+        "11",
+        "16",
+        "17"
+      ],
+      "answer": 1,
+      "check": "11",
+      "verify": "(ans + 6) - 5 == 2*(ans - 5)",
+      "hint": "Пять лет назад: a − 5 = 2(b − 5), где a = b + 6.",
+      "explanation": "b + 1 = 2b − 10 ⇒ b = 11 (B), Али 17. 17 — возраст Али; 6 — разница возрастов; 16 — возраст Беи через пять лет, а не сейчас."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x + y = 4 and 2x + 3y = 11, what is the value of y?",
+      "choices": [
+        "1",
+        "3",
+        "4",
+        "7"
+      ],
+      "answer": 1,
+      "check": "3",
+      "verify": "2*(4 - ans) + 3*ans == 11",
+      "hint": "Умножь первое уравнение на 2 и вычти из второго.",
+      "explanation": "(2x + 3y) − (2x + 2y) = 11 − 8 ⇒ y = 3 (B), x = 1. 1 — это x; 7 — это 11 − 4."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "On a 50-question test, each correct answer earns 2 points and each incorrect answer loses 1 point. A student answered every question and scored 70 points. How many questions did the student answer correctly?",
+      "answer": [
+        "40"
+      ],
+      "check": "120/3",
+      "verify": "2*ans - (50 - ans) == 70",
+      "hint": "c + w = 50 и 2c − w = 70.",
+      "explanation": "Сложим: 3c = 120 ⇒ c = 40 (неверных 10). Проверка: 80 − 10 = 70."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The lines 2x + y = 8 and x − y = 1 intersect at the point (a, b). What is the value of a + b?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 2,
+      "check": "3+2",
+      "hint": "Сложи уравнения, чтобы найти x.",
+      "explanation": "3x = 9 ⇒ a = 3, b = 2, a + b = 5 (C). 3 — только a; 9 — это 3x."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Two notebooks and three pens cost $9.50. Four notebooks and one pen cost $10.50. What is the price, in dollars, of one pen?",
+      "answer": [
+        "1.7",
+        "17/10"
+      ],
+      "check": "8.5/5",
+      "verify": "2*((10.5 - ans)/4) + 3*ans == 9.5",
+      "hint": "Умножь первое уравнение на 2 и вычти второе — тетради сократятся.",
+      "explanation": "4n + 6p = 19 и 4n + p = 10,5. Вычитаем: 5p = 8,5 ⇒ p = 1,70. Тетрадь стоит (10,5 − 1,7)/4 = 2,20."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 2x − 3y = −1 and 4x + y = 19, what is the value of x + y?",
+      "choices": [
+        "1",
+        "4",
+        "7",
+        "12"
+      ],
+      "answer": 2,
+      "check": "4+3",
+      "hint": "Вырази y из второго уравнения и подставь в первое.",
+      "explanation": "y = 19 − 4x ⇒ 2x − 57 + 12x = −1 ⇒ 14x = 56 ⇒ x = 4, y = 3. x + y = 7 (C). 4 — это x; 1 — это x − y; 12 — 4 · 3."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If 3a + 2b = 24 and a = b + 3, what is the value of b?",
+      "answer": [
+        "3"
+      ],
+      "check": "15/5",
+      "verify": "3*(ans + 3) + 2*ans == 24",
+      "hint": "Подставь a = b + 3.",
+      "explanation": "3(b + 3) + 2b = 24 ⇒ 5b = 15 ⇒ b = 3, a = 6."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The system of equations y = −2x + 7 and y = ax − 5, where a is a constant, has the solution (3, b). What is the value of a?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "3*ans - 5 == -2*3 + 7",
+      "hint": "Найди b из первого уравнения, затем a из второго.",
+      "explanation": "b = −6 + 7 = 1. 1 = 3a − 5 ⇒ a = 2 (B). 1 — это b; 4 — если сложить 5 и 7 неверно: (7 + 5)/3."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A coffee shop sells small drinks for $3 each and large drinks for $5 each. One morning it sold 18 more small drinks than large drinks and collected $286. How many large drinks did it sell?",
+      "choices": [
+        "25",
+        "29",
+        "36",
+        "47"
+      ],
+      "answer": 1,
+      "check": "232/8",
+      "verify": "3*(ans + 18) + 5*ans == 286",
+      "hint": "Маленьких l + 18.",
+      "explanation": "3(l + 18) + 5l = 286 ⇒ 8l + 54 = 286 ⇒ l = 29 (B), маленьких 47. 47 — маленькие; 36 — 286/8 без учёта 18 (≈ 35,75)."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If 5x + 4y = 3 and 3x + 4y = −1, what is the value of x − y?",
+      "answer": [
+        "3.75",
+        "15/4"
+      ],
+      "check": "2+7/4",
+      "hint": "Вычти уравнения: 4y сократится.",
+      "explanation": "2x = 4 ⇒ x = 2. 4y = 3 − 10 = −7 ⇒ y = −7/4. x − y = 2 + 7/4 = 15/4 = 3,75."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The equations x + 2y = 10 and 3x − y = 2 are graphed in the xy-plane. At which point do the graphs intersect?",
+      "choices": [
+        "(4, 3)",
+        "(2, 4)",
+        "(4, 2)",
+        "(3, 7)"
+      ],
+      "answer": 1,
+      "hint": "Из второго y = 3x − 2.",
+      "explanation": "x + 2(3x − 2) = 10 ⇒ 7x = 14 ⇒ x = 2, y = 4 (B). (4, 2) — координаты перепутаны; (4, 3) лежит только на первой прямой; (3, 7) — только на второй."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The perimeter of a rectangle is 46 centimeters. If its length were doubled and its width were tripled, the perimeter would be 114 centimeters. What is the length of the original rectangle, in centimeters?",
+      "choices": [
+        "11",
+        "12",
+        "17",
+        "23"
+      ],
+      "answer": 1,
+      "check": "12",
+      "verify": "2*(2*ans) + 2*(3*(23 - ans)) == 114",
+      "hint": "l + w = 23 и 4l + 6w = 114.",
+      "explanation": "Из первого w = 23 − l: 4l + 138 − 6l = 114 ⇒ l = 12 (B), w = 11. 11 — ширина; 23 — полупериметр."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If x/3 + y/2 = 5 and x/3 − y/2 = 1, what is the value of x?",
+      "answer": [
+        "9"
+      ],
+      "check": "3*3",
+      "hint": "Сложи уравнения.",
+      "explanation": "2x/3 = 6 ⇒ x = 9. Тогда y/2 = 2, y = 4."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The solution to the system of equations y = 2x − 1 and 3x + 2y = 33 is (a, b). What is the value of b − a?",
+      "choices": [
+        "4",
+        "5",
+        "9",
+        "14"
+      ],
+      "answer": 0,
+      "check": "9-5",
+      "hint": "Подставь y = 2x − 1 во второе уравнение.",
+      "explanation": "3x + 4x − 2 = 33 ⇒ x = 5, y = 9. b − a = 4 (A). 5 и 9 — сами координаты; 14 — их сумма."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A theater sold adult tickets for $15 each and child tickets for $9 each. It sold 120 tickets for a total of $1,404. If a is the number of adult tickets and c is the number of child tickets, which system represents this situation?",
+      "choices": [
+        "a + c = 120 and 15a + 9c = 1,404",
+        "a + c = 1,404 and 15a + 9c = 120",
+        "15a + 9c = 120 and a − c = 1,404",
+        "a + c = 120 and 9a + 15c = 1,404"
+      ],
+      "answer": 0,
+      "hint": "Одно уравнение — о количестве билетов, другое — о деньгах.",
+      "explanation": "Число билетов: a + c = 120; выручка: 15a + 9c = 1404 (A). В B перепутаны количества и деньги; в D цены приписаны не тем билетам."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Three T-shirts and two caps cost $64. Two T-shirts and three caps cost $56. What is the total cost, in dollars, of one T-shirt and one cap?",
+      "answer": [
+        "24"
+      ],
+      "check": "120/5",
+      "hint": "Сложи уравнения.",
+      "explanation": "5t + 5c = 120 ⇒ t + c = 24. Отдельно: t = 16, c = 8 — но для ответа это не нужно."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 2x + y = 10 and x + 2y = 11, what is the value of x − y?",
+      "choices": [
+        "−1",
+        "1",
+        "3",
+        "7"
+      ],
+      "answer": 0,
+      "check": "-1",
+      "hint": "Вычти второе уравнение из первого.",
+      "explanation": "(2x + y) − (x + 2y) = x − y = 10 − 11 = −1 (A). Проверка: x = 3, y = 4. 1 — неверный порядок вычитания; 7 — x + y."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The mean of two numbers x and y is 10, and x is 4 more than y. What is the value of y?",
+      "answer": [
+        "8"
+      ],
+      "check": "16/2",
+      "verify": "(ans + 4 + ans)/2 == 10",
+      "hint": "Среднее 10 значит x + y = 20.",
+      "explanation": "x + y = 20 и x − y = 4 ⇒ 2y = 16 ⇒ y = 8, x = 12."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A class has 33 students. If 3 boys left the class and 3 girls joined it, there would be twice as many girls as boys. How many boys are in the class now?",
+      "choices": [
+        "11",
+        "14",
+        "19",
+        "22"
+      ],
+      "answer": 1,
+      "check": "14",
+      "verify": "(33 - ans) + 3 == 2*(ans - 3)",
+      "hint": "b + g = 33 и g + 3 = 2(b − 3).",
+      "explanation": "33 − b + 3 = 2b − 6 ⇒ 42 = 3b ⇒ b = 14 (B), девочек 19. 19 — девочки; 11 — мальчики после ухода трёх; 22 — девочки после прихода трёх."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The sum of two numbers is 50. The larger number is 4 less than twice the smaller number. What is the larger number?",
+      "answer": [
+        "32"
+      ],
+      "check": "50-18",
+      "verify": "ans == 2*(50 - ans) - 4",
+      "hint": "Если меньшее s, то большее 2s − 4.",
+      "explanation": "s + 2s − 4 = 50 ⇒ s = 18, большее 32."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If x + y = 9, y + z = 11, and x + z = 12, what is the value of x + y + z?",
+      "answer": [
+        "16"
+      ],
+      "check": "32/2",
+      "hint": "Сложи все три уравнения.",
+      "explanation": "2x + 2y + 2z = 32 ⇒ x + y + z = 16. Каждое число входит в две суммы ровно один раз."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Four pencils and three erasers cost $2.55 in total. Each eraser costs $0.15 more than each pencil. What is the cost of one pencil?",
+      "choices": [
+        "$0.30",
+        "$0.25",
+        "$0.35",
+        "$0.45"
+      ],
+      "answer": 0,
+      "check": "2.1/7",
+      "verify": "4*ans + 3*(ans + 0.15) == 2.55",
+      "hint": "Ластик стоит p + 0,15.",
+      "explanation": "4p + 3(p + 0,15) = 2,55 ⇒ 7p = 2,10 ⇒ p = 0,30 (A). 0,45 — цена ластика; 0,35 — 2,55/7 без учёта надбавки (≈ 0,36)."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The lines y = ax + 4 and y = 2x − b, where a and b are constants, intersect at the point (3, 7). What is the value of a + b?",
+      "answer": [
+        "0"
+      ],
+      "check": "1+(-1)",
+      "hint": "Подставь (3, 7) в каждое уравнение.",
+      "explanation": "7 = 3a + 4 ⇒ a = 1. 7 = 6 − b ⇒ b = −1. a + b = 0."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If (x + y)/2 = 7 and (x − y)/3 = 2, what is the value of x?",
+      "choices": [
+        "4",
+        "6",
+        "10",
+        "14"
+      ],
+      "answer": 2,
+      "check": "(14+6)/2",
+      "hint": "Избавься от дробей: x + y = 14 и x − y = 6.",
+      "explanation": "Сложим: 2x = 20 ⇒ x = 10 (C), y = 4. 4 — это y; 14 — это x + y; 6 — это x − y."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A jar contains only red and blue marbles. If 6 red marbles were added, half of the marbles in the jar would be red. If instead 6 blue marbles were added, there would be twice as many blue marbles as red marbles. How many red marbles are in the jar?",
+      "answer": [
+        "12"
+      ],
+      "check": "12",
+      "verify": "ans + 6 == (ans + (ans + 6) + 6)/2 and (ans + 6) + 6 == 2*ans",
+      "hint": "Первое условие: r + 6 = b, второе: b + 6 = 2r.",
+      "explanation": "Половина красных после добавления: r + 6 = (r + b + 6)/2 ⇒ b = r + 6. Второе: r + 12 = 2r ⇒ r = 12, синих 18. Проверка: 18 красных из 36; 24 синих = 2 · 12."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following systems of equations has exactly one solution?",
+      "choices": [
+        "y = 3x + 2 and y = 3x − 2",
+        "y = 3x + 2 and y = −3x + 2",
+        "y = 3x + 2 and 6x − 2y = −4",
+        "2y = 6x + 4 and y = 3x + 2"
+      ],
+      "answer": 1,
+      "hint": "Ровно одно решение — когда наклоны прямых разные.",
+      "explanation": "В B наклоны 3 и −3 различны — прямые пересекаются в одной точке (0, 2) (B). A — параллельные прямые (решений нет); C и D — одна и та же прямая y = 3x + 2, записанная иначе (бесконечно много решений)."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If 3x + 4y = 24 and 3x − 4y = 0, what is the value of xy?",
+      "answer": [
+        "12"
+      ],
+      "check": "4*3",
+      "hint": "Сложи уравнения, потом найди y.",
+      "explanation": "6x = 24 ⇒ x = 4; 4y = 3x = 12 ⇒ y = 3. xy = 12."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A store sells pens in packs of 3 for $4 and packs of 5 for $6. Sam bought 32 pens and paid $42. How many 5-packs did Sam buy?",
+      "choices": [
+        "1",
+        "4",
+        "5",
+        "9"
+      ],
+      "answer": 0,
+      "check": "1",
+      "verify": "3*((42 - 6*ans)/4) + 5*ans == 32",
+      "hint": "3a + 5b = 32 (ручки) и 4a + 6b = 42 (деньги).",
+      "explanation": "Умножим первое на 4, второе на 3: 12a + 20b = 128 и 12a + 18b = 126 ⇒ 2b = 2 ⇒ b = 1 (A), a = 9. Проверка: 27 + 5 = 32 ручки, 36 + 6 = 42 доллара. 9 — число трёхштучных упаковок."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Ana runs 2 meters per second faster than Ben. In the time it takes Ben to run 160 meters, Ana runs 200 meters. What is Ben's speed, in meters per second?",
+      "answer": [
+        "8"
+      ],
+      "check": "320/40",
+      "verify": "200/(ans + 2) == 160/ans",
+      "hint": "Время одинаковое: 200/(b + 2) = 160/b.",
+      "explanation": "200b = 160(b + 2) ⇒ 40b = 320 ⇒ b = 8 м/с, Ана бежит 10 м/с. Оба тратят 20 секунд."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "At a bakery, 3 croissants and 2 muffins cost $13, and 2 croissants and 3 muffins cost $12. How much more does one croissant cost than one muffin?",
+      "choices": [
+        "$1",
+        "$2",
+        "$2.60",
+        "$5"
+      ],
+      "answer": 0,
+      "check": "1",
+      "hint": "Вычти второе уравнение из первого.",
+      "explanation": "(3c + 2m) − (2c + 3m) = c − m = 13 − 12 = 1 (A). Проверка: c = 3, m = 2. 5 — цена круассана и маффина вместе; 2,60 — 13/5."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Company A charges $25 plus $0.20 per mile to rent a car for a day. Company B charges $15 plus $0.30 per mile. For the number of miles at which the two companies charge the same amount, what is that amount, in dollars?",
+      "answer": [
+        "45"
+      ],
+      "check": "25+0.2*100",
+      "hint": "Сначала найди пробег, при котором цены равны, затем подставь его.",
+      "explanation": "25 + 0,2m = 15 + 0,3m ⇒ m = 100. Стоимость 25 + 20 = 45. Ошибка — ответить 100 (это мили)."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the xy-plane, the graphs of 2x − y = 5 and kx + y = 7, where k is a constant, intersect at a point on the x-axis. What is the value of k?",
+      "choices": [
+        "2",
+        "2.8",
+        "3.5",
+        "7"
+      ],
+      "answer": 1,
+      "check": "7/2.5",
+      "verify": "ans*2.5 == 7",
+      "hint": "Найди, где первая прямая пересекает ось x.",
+      "explanation": "При y = 0 первая прямая даёт x = 2,5. Вторая проходит через (2,5; 0): 2,5k = 7 ⇒ k = 2,8 (B). 3,5 — это 7/2; 7 — свободный член."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Three pounds of peanuts and two pounds of almonds cost $19. One pound of peanuts and four pounds of almonds cost $23. What is the price, in dollars, of one pound of almonds?",
+      "answer": [
+        "5"
+      ],
+      "check": "50/10",
+      "verify": "3*(23 - 4*ans) + 2*ans == 19",
+      "hint": "Из второго p = 23 − 4a. Подставь в первое.",
+      "explanation": "3(23 − 4a) + 2a = 19 ⇒ 69 − 10a = 19 ⇒ a = 5, арахис 3 доллара за фунт."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The solution (x, y) to the system 3x + 2y = 18 and x − y = 1 also satisfies the equation y = kx, where k is a constant. What is the value of k?",
+      "choices": [
+        "4/3",
+        "3/4",
+        "3",
+        "1/4"
+      ],
+      "answer": 1,
+      "check": "3/4",
+      "hint": "Реши систему, затем k = y/x.",
+      "explanation": "x = y + 1 ⇒ 3y + 3 + 2y = 18 ⇒ y = 3, x = 4. k = 3/4 (B). 4/3 — перевёрнутая дробь; 3 — это y."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "In one week, a museum sold 3 times as many adult tickets as student tickets. Adult tickets cost $11 and student tickets cost $7, and ticket sales totaled $3,200. How many student tickets were sold?",
+      "answer": [
+        "80"
+      ],
+      "check": "3200/40",
+      "verify": "11*3*ans + 7*ans == 3200",
+      "hint": "Взрослых 3s.",
+      "explanation": "33s + 7s = 40s = 3200 ⇒ s = 80 (взрослых 240)."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For what value of a do the lines y = ax + 1 and y = 4x − 2 intersect at a point with x-coordinate −1?",
+      "choices": [
+        "−7",
+        "−3",
+        "3",
+        "7"
+      ],
+      "answer": 3,
+      "check": "7",
+      "verify": "-ans + 1 == 4*(-1) - 2",
+      "hint": "При x = −1 обе прямые должны давать одно и то же y.",
+      "explanation": "Вторая прямая при x = −1: y = −6. Первая: −a + 1 = −6 ⇒ a = 7 (D). −7 — ошибка знака; 3 и −3 — если взять y = −2 вместо −6."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A drink is made by mixing water and juice in a ratio of 2 to 3. Ana made a batch of the drink with 3 liters more juice than water. How many liters of the drink did she make?",
+      "answer": [
+        "15"
+      ],
+      "check": "6+9",
+      "verify": "2*ans/5 + 3 == 3*ans/5",
+      "hint": "w : j = 2 : 3 и j = w + 3.",
+      "explanation": "3w = 2j и j = w + 3 ⇒ 3w = 2w + 6 ⇒ w = 6, j = 9. Всего 15 литров."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A school bought 3 basketballs and 5 soccer balls for $205. Later it bought 5 basketballs and 3 soccer balls for $195. What is the price of one basketball?",
+      "choices": [
+        "$22.50",
+        "$25.00",
+        "$27.50",
+        "$50.00"
+      ],
+      "answer": 0,
+      "check": "22.5",
+      "verify": "3*ans + 5*(50 - ans) == 205",
+      "hint": "Сложи уравнения, потом вычти — получишь b + s и s − b.",
+      "explanation": "Сумма: 8(b + s) = 400 ⇒ b + s = 50. Разность: 2s − 2b = 10 ⇒ s − b = 5. Тогда b = 22,50 (A), s = 27,50. 27,50 — футбольный мяч; 50 — оба мяча вместе."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The line through the points (1, 3) and (4, 9) intersects the line y = −x + 12. What is the x-coordinate of the point of intersection?",
+      "answer": [
+        "11/3",
+        "3.666",
+        "3.667"
+      ],
+      "check": "11/3",
+      "verify": "2*ans + 1 == -ans + 12",
+      "hint": "Уравнение первой прямой: наклон 2, проходит через (1, 3).",
+      "explanation": "y = 2x + 1. 2x + 1 = −x + 12 ⇒ 3x = 11 ⇒ x = 11/3 ≈ 3,667."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following ordered pairs (x, y) is a solution to the system x − 2y = 1 and 3x − 6y = 3?",
+      "choices": [
+        "(2, 1)",
+        "(5, 2)",
+        "(4, 2)",
+        "(1, 1)"
+      ],
+      "answer": 1,
+      "hint": "Сравни уравнения: второе получается из первого умножением на 3.",
+      "explanation": "Оба уравнения задают одну прямую x − 2y = 1, поэтому решение — любая её точка. (5, 2): 5 − 4 = 1 (B). Для (2, 1) и (4, 2) x − 2y = 0, для (1, 1) — −1."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 2x + 3y = 17 and 3x + 2y = 18, what is the value of x² − y²?",
+      "answer": [
+        "7"
+      ],
+      "check": "7*1",
+      "hint": "Сложи и вычти уравнения: получишь x + y и x − y.",
+      "explanation": "Сумма: 5x + 5y = 35 ⇒ x + y = 7. Разность: x − y = 1. x² − y² = (x + y)(x − y) = 7. Проверка: x = 4, y = 3, 16 − 9 = 7."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the system of equations ax + 2y = 4 and 3x + by = 6, a and b are constants. If the system has infinitely many solutions, what is the value of ab?",
+      "choices": [
+        "4",
+        "6",
+        "9",
+        "12"
+      ],
+      "answer": 1,
+      "check": "2*3",
+      "hint": "Второе уравнение должно быть первым, умноженным на одно и то же число.",
+      "explanation": "Правые части: 6 = 1,5 · 4, значит, второе уравнение — первое, умноженное на 1,5: 3 = 1,5a ⇒ a = 2, b = 1,5 · 2 = 3. ab = 6 (B). 9 и 4 — если взять a = b = 3 или a = b = 2."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Train A and train B start 450 kilometers apart and travel toward each other at constant speeds. If they start at the same time, they meet after 3 hours. If train A starts 1 hour before train B, they meet 2.4 hours after train B starts. What is the speed of train A, in kilometers per hour?",
+      "answer": [
+        "90"
+      ],
+      "check": "90",
+      "verify": "3.4*ans + 2.4*(150 - ans) == 450",
+      "hint": "a + b = 150. Во втором случае A едет 3,4 часа, B — 2,4 часа.",
+      "explanation": "3(a + b) = 450 ⇒ a + b = 150. 3,4a + 2,4b = 450 ⇒ 3,4a + 360 − 2,4a = 450 ⇒ a = 90, b = 60. Проверка: 306 + 144 = 450."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The system of equations 3x − 2y = 5 and 6x − 4y = c, where c is a constant, has no solution. Which of the following CANNOT be the value of c?",
+      "choices": [
+        "10",
+        "5",
+        "0",
+        "−10"
+      ],
+      "answer": 0,
+      "check": "10",
+      "hint": "Когда второе уравнение — просто первое, умноженное на 2?",
+      "explanation": "Левая часть второго — удвоенная левая часть первого. Если c = 10, уравнения совпадают и решений бесконечно много. При любом другом c прямые параллельны и решений нет. Значит, c не может быть 10 (A)."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "In 4 years, Leo will be twice as old as Mia will be then. Four years ago, Leo was 6 times as old as Mia was then. How old is Leo now?",
+      "answer": [
+        "16"
+      ],
+      "check": "2*6+4",
+      "verify": "ans + 4 == 2*((ans - 4)/2 + 4) and ans - 4 == 6*((ans - 4)/2 - 4)",
+      "hint": "L + 4 = 2(M + 4) и L − 4 = 6(M − 4).",
+      "explanation": "Из первого L = 2M + 4. Подставим: 2M = 6M − 24 ⇒ M = 6, L = 16. Проверка: через 4 года 20 и 10; 4 года назад 12 и 2."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation px + qy = 34, p and q are constants. The point (3, 7) satisfies both this equation and the equation x + y = 10, and p + q = 6. What is the value of p?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "3*ans + 7*(6 - ans) == 34",
+      "hint": "Подставь (3, 7): 3p + 7q = 34, и используй q = 6 − p.",
+      "explanation": "3p + 7(6 − p) = 34 ⇒ 42 − 4p = 34 ⇒ p = 2 (B), q = 4. 4 — это q; 6 — сумма p + q."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A concert sold 900 tickets: floor tickets for $40 each and balcony tickets for $25 each. The revenue from floor tickets was twice the revenue from balcony tickets. How many floor tickets were sold?",
+      "answer": [
+        "500"
+      ],
+      "check": "500",
+      "verify": "40*ans == 2*25*(900 - ans)",
+      "hint": "40f = 2 · 25b и f + b = 900.",
+      "explanation": "40f = 50b ⇒ f = 1,25b. 2,25b = 900 ⇒ b = 400, f = 500. Проверка: 20 000 = 2 · 10 000."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For what value of k does the system of equations kx + y = 3 and 4x + ky = 6 have no solution?",
+      "choices": [
+        "−2",
+        "2",
+        "4",
+        "−4"
+      ],
+      "answer": 0,
+      "check": "-2",
+      "hint": "Наклоны равны, когда k/1 = 4/k. Затем проверь, не совпадают ли прямые.",
+      "explanation": "Наклоны −k и −4/k равны при k² = 4, k = ±2. При k = 2: 2x + y = 3 и 4x + 2y = 6 — одна и та же прямая (бесконечно много решений). При k = −2: −2x + y = 3 и 4x − 2y = 6, то есть −2x + y = −3 — параллельные прямые, решений нет (A)."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The sum of the digits of a two-digit number is 11. When the digits are reversed, the new number is 27 greater than the original number. What is the original number?",
+      "answer": [
+        "47"
+      ],
+      "check": "47",
+      "hint": "Число 10t + u. Перестановка: 10u + t.",
+      "explanation": "t + u = 11 и (10u + t) − (10t + u) = 27 ⇒ 9(u − t) = 27 ⇒ u − t = 3. Тогда u = 7, t = 4: число 47, и 74 − 47 = 27."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "An isosceles triangle has a perimeter of 41 centimeters. If each of its two equal sides were decreased by 3 centimeters and its base were increased by 4 centimeters, the triangle would be equilateral. What is the length of the base, in centimeters?",
+      "choices": [
+        "9",
+        "12",
+        "13",
+        "16"
+      ],
+      "answer": 0,
+      "check": "9",
+      "verify": "2*(ans + 7) + ans == 41",
+      "hint": "s − 3 = b + 4 и 2s + b = 41.",
+      "explanation": "s = b + 7 ⇒ 2b + 14 + b = 41 ⇒ b = 9 (A), равные стороны 16. После изменений все стороны 13. 16 — боковая сторона; 13 — сторона равностороннего треугольника."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 3/x + 2/y = 2 and 1/x − 2/y = 2, what is the value of y?",
+      "answer": [
+        "-2"
+      ],
+      "check": "-2",
+      "verify": "3/1 + 2/ans == 2 and 1/1 - 2/ans == 2",
+      "hint": "Обозначь u = 1/x и v = 1/y — получится линейная система.",
+      "explanation": "3u + 2v = 2 и u − 2v = 2. Сложим: 4u = 4 ⇒ u = 1, тогда v = −1/2. y = 1/v = −2 (и x = 1)."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A school spent $13,500 on 30 devices: laptops that cost $600 each and tablets that cost $350 each. If the laptops had been 10% cheaper and the tablet price had stayed the same, how much would the same purchase have cost?",
+      "choices": [
+        "$12,150",
+        "$12,780",
+        "$13,140",
+        "$12,500"
+      ],
+      "answer": 1,
+      "check": "12780",
+      "hint": "Сначала найди, сколько было ноутбуков.",
+      "explanation": "600x + 350(30 − x) = 13 500 ⇒ 250x = 3000 ⇒ x = 12. Скидка: 0,1 · 12 · 600 = 720. Новая сумма 13 500 − 720 = 12 780 (B). 12 150 — скидка 10% на всю покупку; 13 140 — если ноутбуков 6."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Line ℓ passes through the point (0, 2) and through the point where the lines x + y = 8 and x − y = 2 intersect. What is the slope of line ℓ?",
+      "answer": [
+        "1/5",
+        "0.2"
+      ],
+      "check": "(3-2)/5",
+      "hint": "Найди точку пересечения: сложи уравнения.",
+      "explanation": "2x = 10 ⇒ x = 5, y = 3. Наклон через (0, 2) и (5, 3): 1/5."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If 2x + 5y = 1 and 5x + 2y = 13, what is the value of (x + y)/(x − y)?",
+      "choices": [
+        "1/2",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "check": "2/4",
+      "hint": "Сумма уравнений даёт x + y, разность — x − y.",
+      "explanation": "7(x + y) = 14 ⇒ x + y = 2. 3(x − y) = 12 ⇒ x − y = 4. Отношение 2/4 = 1/2 (A). 2 — перевёрнутое отношение; 4 и 8 — отдельные величины."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A pharmacist mixes x milliliters of solution A, which contains 2 milligrams of a drug per milliliter, with y milliliters of solution B, which contains 5 milligrams per milliliter. The mixture has a volume of 300 milliliters and contains 1,200 milligrams of the drug. What is the value of x?",
+      "answer": [
+        "100"
+      ],
+      "check": "300/3",
+      "verify": "2*ans + 5*(300 - ans) == 1200",
+      "hint": "x + y = 300 и 2x + 5y = 1200.",
+      "explanation": "2x + 5(300 − x) = 1200 ⇒ 1500 − 3x = 1200 ⇒ x = 100, y = 200."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The system of equations y = 2x + b and y = mx + 4, where b and m are constants, has the solution (1, 6). What is the value of m − b?",
+      "choices": [
+        "−2",
+        "2",
+        "6",
+        "10"
+      ],
+      "answer": 0,
+      "check": "2-4",
+      "hint": "Подставь (1, 6) в каждое уравнение отдельно.",
+      "explanation": "6 = 2 + b ⇒ b = 4. 6 = m + 4 ⇒ m = 2. m − b = −2 (A). 2 — это b − m; 6 — это m + b."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Tea blend A is 3 parts black tea to 1 part green tea, by weight. Tea blend B is 1 part black tea to 1 part green tea. How many kilograms of blend A are needed, together with blend B, to make 20 kilograms of a blend that is 60% black tea?",
+      "answer": [
+        "8"
+      ],
+      "check": "2/0.25",
+      "verify": "0.75*ans + 0.5*(20 - ans) == 12",
+      "hint": "В A чёрного чая 75%, в B — 50%.",
+      "explanation": "0,75a + 0,5(20 − a) = 0,6 · 20 ⇒ 0,25a + 10 = 12 ⇒ a = 8 кг (B — 12 кг)."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the line y = ax + b has a slope of 3 and passes through the point where the lines x + 2y = 8 and 3x − y = 3 intersect. What is the value of b?",
+      "choices": [
+        "−3",
+        "−1",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "check": "-3",
+      "hint": "Найди точку пересечения, затем b = y − 3x.",
+      "explanation": "Из второго y = 3x − 3: x + 6x − 6 = 8 ⇒ x = 2, y = 3. b = 3 − 3 · 2 = −3 (A). 3 — это y; 9 — если сложить 3 и 6."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A bus charges one fare for adults and another for children. A group of 12 adults and 20 children paid $264, and a group of 8 adults and 25 children paid $246. What is the adult fare, in dollars?",
+      "answer": [
+        "12"
+      ],
+      "check": "12",
+      "verify": "12*ans + 20*((264 - 12*ans)/20) == 264 and 8*ans + 25*((264 - 12*ans)/20) == 246",
+      "hint": "Исключи один из тарифов: умножь уравнения так, чтобы коэффициенты совпали.",
+      "explanation": "12a + 20c = 264 и 8a + 25c = 246. Умножим первое на 2, второе на 3: 24a + 40c = 528, 24a + 75c = 738 ⇒ 35c = 210 ⇒ c = 6. Тогда 12a = 144 ⇒ a = 12."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For what value of m do the lines y = mx + 3 and y = (2m − 1)x − 5 intersect at a point with x-coordinate 4?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 2,
+      "check": "3",
+      "verify": "4*ans + 3 == 4*(2*ans - 1) - 5",
+      "hint": "При x = 4 значения y должны совпасть.",
+      "explanation": "4m + 3 = 4(2m − 1) − 5 = 8m − 9 ⇒ 12 = 4m ⇒ m = 3 (C). Тогда обе прямые проходят через (4, 15). При m = 1 прямые параллельны и не пересекаются."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If (x + 2y)/(2x − y) = 5/3 and x + y = 18, what is the value of y?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "((18 - ans) + 2*ans)/(2*(18 - ans) - ans) == 5/3",
+      "hint": "Перемножь крест-накрест: 3(x + 2y) = 5(2x − y).",
+      "explanation": "3x + 6y = 10x − 5y ⇒ 11y = 7x. С x = 18 − y: 11y = 126 − 7y ⇒ 18y = 126 ⇒ y = 7, x = 11. Проверка: 25/15 = 5/3."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Working together at constant rates, pump A and pump B fill 3/4 of a tank in 2 hours. When pump A runs for 3 hours and pump B runs for 1 hour, they fill 7/8 of the tank. How many hours would pump B take to fill the tank by itself?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "answer": 2,
+      "check": "8",
+      "hint": "Пусть a и b — доли бака в час. 2(a + b) = 3/4 и 3a + b = 7/8.",
+      "explanation": "a + b = 3/8. Вычтем из второго: 2a = 1/2 ⇒ a = 1/4, b = 1/8. Насос B один заполнит бак за 8 часов (C). 4 — время насоса A; 12 — если сложить времена."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 0.3x − 0.2y = 1.1 and 0.5x + 0.4y = 1.1, what is the value of x?",
+      "answer": [
+        "3"
+      ],
+      "check": "33/11",
+      "verify": "0.3*ans - 0.2*(-1) == 1.1 and 0.5*ans + 0.4*(-1) == 1.1",
+      "hint": "Умножь оба уравнения на 10, затем первое — ещё на 2.",
+      "explanation": "3x − 2y = 11 и 5x + 4y = 11. Умножим первое на 2: 6x − 4y = 22. Сложим: 11x = 33 ⇒ x = 3, y = −1."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the graphs of 3x + 2y = 12 and x − 2y = 4 and the y-axis form a triangle. What is the area of the triangle?",
+      "choices": [
+        "8",
+        "12",
+        "16",
+        "32"
+      ],
+      "answer": 2,
+      "check": "0.5*8*4",
+      "hint": "Найди точку пересечения прямых и их пересечения с осью y.",
+      "explanation": "Сложим уравнения: 4x = 16 ⇒ x = 4, y = 0. Пересечения с осью y: 6 и −2, основание 8. Высота — расстояние от (4, 0) до оси y, то есть 4. Площадь 16 (C). 8 — это основание; 12 — если взять основание 6 (от 0 до 6); 32 — без множителя 1/2."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Two kilograms of apples and three kilograms of pears cost $13.50. The next week, the price of apples rose by 20% and the price of pears fell by 10%, and the same purchase cost $13.95. What was the original price, in dollars, of one kilogram of apples?",
+      "answer": [
+        "3"
+      ],
+      "check": "1.8/0.6",
+      "verify": "2.4*ans + 2.7*((13.5 - 2*ans)/3) == 13.95",
+      "hint": "Новые цены: 1,2a и 0,9p. Запиши второе уравнение и подставь p из первого.",
+      "explanation": "2a + 3p = 13,5 и 2,4a + 2,7p = 13,95. Из первого 3p = 13,5 − 2a ⇒ 2,7p = 0,9(13,5 − 2a). 2,4a + 12,15 − 1,8a = 13,95 ⇒ 0,6a = 1,8 ⇒ a = 3, груши 2,50."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the system of equations 2x − y = 3 and 4x + ay = b, a and b are constants. For which of the following values of a and b does the system have no solution?",
+      "choices": [
+        "a = −2, b = 6",
+        "a = −2, b = 3",
+        "a = 2, b = 6",
+        "a = 2, b = 3"
+      ],
+      "answer": 1,
+      "hint": "Нет решений: прямые параллельны (a = −2) и не совпадают.",
+      "explanation": "Удвоенное первое: 4x − 2y = 6. При a = −2 и b = 3: 4x − 2y = 3 — та же левая часть, другая правая: решений нет (B). При b = 6 уравнения совпадают; при a = 2 наклоны разные — одно решение."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "If 3x + 4y = 10 and 4x + 3y = 11, what is the value of x² + y²?",
+      "answer": [
+        "5"
+      ],
+      "check": "2^2+1^2",
+      "hint": "Сложи и вычти уравнения.",
+      "explanation": "7(x + y) = 21 ⇒ x + y = 3. x − y = 1. Значит, x = 2, y = 1, x² + y² = 5."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A jar contains only nickels and dimes, with a total value of $4.00. If every nickel were replaced by a dime and every dime were replaced by a nickel, the total value would be $3.50. How many coins are in the jar?",
+      "choices": [
+        "40",
+        "45",
+        "50",
+        "60"
+      ],
+      "answer": 2,
+      "check": "750/15",
+      "hint": "Сложи два уравнения стоимости.",
+      "explanation": "5n + 10d = 400 и 10n + 5d = 350. Сумма: 15(n + d) = 750 ⇒ n + d = 50 (C). Отдельно: n = 20, d = 30."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Line ℓ passes through the points (2, 7) and (5, 13). Line m passes through the point (0, 10) and has a slope of −1. What is the x-coordinate of the point where lines ℓ and m intersect?",
+      "answer": [
+        "7/3",
+        "2.333"
+      ],
+      "check": "7/3",
+      "verify": "2*ans + 3 == -ans + 10",
+      "hint": "ℓ: наклон 2, y = 2x + 3. m: y = −x + 10.",
+      "explanation": "2x + 3 = −x + 10 ⇒ 3x = 7 ⇒ x = 7/3 ≈ 2,333."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the system of equations y = ax + 3 and y = bx + 5, a and b are constants and a ≠ b. If the solution of the system has an x-coordinate of 1, which of the following must be true?",
+      "choices": [
+        "a − b = 2",
+        "a + b = 2",
+        "a − b = −2",
+        "ab = 2"
+      ],
+      "answer": 0,
+      "hint": "Приравняй правые части и подставь x = 1.",
+      "explanation": "ax + 3 = bx + 5 ⇒ (a − b)x = 2. При x = 1: a − b = 2 (A). Остальные равенства не следуют: a = 5, b = 3 подходит, но a + b = 8 и ab = 15."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In the system of equations 5x − 2y = c and 3x + 4y = 2c, c is a constant. If the solution (x, y) of the system satisfies x = 2y, what is the value of c?",
+      "answer": [
+        "0"
+      ],
+      "check": "0",
+      "hint": "Подставь x = 2y в оба уравнения и сравни.",
+      "explanation": "10y − 2y = 8y = c и 6y + 4y = 10y = 2c = 16y. Значит, 10y = 16y ⇒ y = 0, тогда x = 0 и c = 0."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A theater has 500 seats, in the orchestra and the balcony. Orchestra seats cost $60 and balcony seats cost $35, and the revenue is $25,750 when every seat is sold. One night, 80% of the orchestra seats and 60% of the balcony seats were sold. What was the revenue that night?",
+      "choices": [
+        "$15,450",
+        "$19,410",
+        "$20,600",
+        "$25,750"
+      ],
+      "answer": 1,
+      "check": "0.8*330*60+0.6*170*35",
+      "hint": "Сначала найди число мест в партере и на балконе.",
+      "explanation": "o + b = 500, 60o + 35b = 25 750 ⇒ 25o = 8250 ⇒ o = 330, b = 170. Выручка: 0,8 · 330 · 60 + 0,6 · 170 · 35 = 15 840 + 3570 = 19 410 (B). 20 600 — 80% от полной выручки; 15 450 — 60%."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The lines y = 3x − 7 and y = −x + k, where k is a constant, intersect at a point that lies on the line y = x. What is the value of k?",
+      "answer": [
+        "7"
+      ],
+      "check": "3.5+3.5",
+      "hint": "Точка пересечения лежит на y = x: найди её из первой прямой.",
+      "explanation": "3x − 7 = x ⇒ x = 3,5, точка (3,5; 3,5). Подставим во вторую: 3,5 = −3,5 + k ⇒ k = 7."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If a + 2b = 11 and 2a + b = 13, what is the value of (a + b)² − (a − b)²?",
+      "choices": [
+        "36",
+        "60",
+        "64",
+        "68"
+      ],
+      "answer": 1,
+      "check": "8^2-2^2",
+      "hint": "Сумма уравнений даёт a + b, разность — a − b.",
+      "explanation": "3(a + b) = 24 ⇒ a + b = 8. (2a + b) − (a + 2b) = a − b = 2. 64 − 4 = 60 (B). Это 4ab: a = 5, b = 3. 64 — только (a + b)²; 68 — сумма квадратов."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A boat travels 24 kilometers downstream and 16 kilometers upstream in a total of 6 hours. On another trip it travels 12 kilometers downstream and 20 kilometers upstream, also in a total of 6 hours. The boat's speed in still water and the speed of the current are constant. What is the speed of the current, in kilometers per hour?",
+      "answer": [
+        "4"
+      ],
+      "check": "(12-4)/2",
+      "hint": "Пусть u = 1/(скорость по течению), v = 1/(скорость против течения).",
+      "explanation": "24u + 16v = 6 и 12u + 20v = 6. Удвоим второе: 24u + 40v = 12 ⇒ 24v = 6 ⇒ v = 1/4, тогда u = 1/12. Скорости: 12 км/ч по течению и 4 км/ч против. Течение: (12 − 4)/2 = 4 км/ч."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which of the following systems of equations has the same solution as the system 2x + y = 7 and x − y = 2?",
+      "choices": [
+        "3x = 9 and x + y = 4",
+        "x + y = 3 and x − y = 1",
+        "2x + y = 7 and 2x − 2y = 2",
+        "x = 1 and y = 3"
+      ],
+      "answer": 0,
+      "hint": "Найди решение исходной системы и проверь варианты.",
+      "explanation": "Сложим: 3x = 9 ⇒ x = 3, y = 1. В A: x = 3, y = 1 (A). Решение B — (2, 1); в C второе уравнение x − y = 1 даёт другую точку; D — переставленные координаты."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The equations 2x + 3y = 4, 4x + 6y = 8, and x − y = 7 are all true for the same values of x and y. What is the value of y?",
+      "answer": [
+        "-2"
+      ],
+      "check": "-10/5",
+      "verify": "2*(ans + 7) + 3*ans == 4",
+      "hint": "Первые два уравнения задают одну прямую; используй первое и третье.",
+      "explanation": "x = y + 7 ⇒ 2y + 14 + 3y = 4 ⇒ 5y = −10 ⇒ y = −2, x = 5. Второе уравнение — удвоенное первое и новой информации не даёт."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "One coffee and two muffins cost $7. Three coffees and one muffin cost $11. What is the cost of four coffees and three muffins?",
+      "choices": [
+        "16",
+        "18",
+        "19",
+        "20"
+      ],
+      "answer": 1,
+      "check": "7+11",
+      "hint": "Сравни нужный набор с суммой двух данных.",
+      "explanation": "(c + 2m) + (3c + m) = 4c + 3m = 7 + 11 = 18 (B). Решать систему не нужно (c = 3, m = 2)."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Working together, painters A and B can paint a fence in 4 hours. One day A painted alone for 2 hours, and then B finished the fence alone in 9 more hours. How many hours would painter B take to paint the fence alone?",
+      "answer": [
+        "14"
+      ],
+      "check": "14",
+      "verify": "2*(1/4 - 1/ans) + 9/ans == 1",
+      "hint": "Пусть a и b — доли забора в час: a + b = 1/4, 2a + 9b = 1.",
+      "explanation": "a = 1/4 − b ⇒ 1/2 − 2b + 9b = 1 ⇒ 7b = 1/2 ⇒ b = 1/14. B один — 14 часов (A — 28/5 = 5,6 часа)."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The system of equations 6x + ky = 3 and kx + 6y = 3, where k is a constant, has infinitely many solutions. What is the value of k?",
+      "choices": [
+        "−6",
+        "6",
+        "3",
+        "36"
+      ],
+      "answer": 1,
+      "check": "6",
+      "hint": "Коэффициенты должны быть пропорциональны, включая правые части.",
+      "explanation": "Нужно 6/k = k/6 ⇒ k = ±6. При k = 6 оба уравнения — 6x + 6y = 3, решений бесконечно много (B). При k = −6: 6x − 6y = 3 и −6x + 6y = 3 — противоречие, решений нет."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The sum of a mother's age and her daughter's age is 50 years. In 5 years, the mother will be 3 times as old as the daughter will be then. In how many years from now will the mother be exactly twice as old as the daughter?",
+      "answer": [
+        "20"
+      ],
+      "check": "20",
+      "hint": "Сначала найди нынешние возрасты.",
+      "explanation": "m + d = 50 и m + 5 = 3(d + 5) ⇒ 55 − d = 3d + 15 ⇒ d = 10, m = 40. Затем 40 + t = 2(10 + t) ⇒ t = 20: матери будет 60, дочери 30."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the xy-plane, the lines y = 2x + 1 and y = −x + 7 and the horizontal line y = k, where k < 5, form a triangle with an area of 12. What is the value of k?",
+      "choices": [
+        "−1",
+        "1",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "check": "1",
+      "hint": "Прямые пересекаются в (2, 5). Основание треугольника лежит на y = k.",
+      "explanation": "На высоте k точки: x = (k − 1)/2 и x = 7 − k, основание (15 − 3k)/2, высота 5 − k. Площадь (3/4)(5 − k)² = 12 ⇒ (5 − k)² = 16 ⇒ k = 1 (B). Проверка: при k = 1 основание от 0 до 6, высота 4, площадь 12."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "At store X, item A costs $3 and item B costs $5. At store Y, item A costs $4 and item B costs $4. Buying a of item A and b of item B costs $46 at store X and $48 at store Y. What is the value of a?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "3*ans + 5*(12 - ans) == 46",
+      "hint": "Второе уравнение сразу даёт a + b.",
+      "explanation": "4a + 4b = 48 ⇒ a + b = 12. 3a + 5(12 − a) = 46 ⇒ 60 − 2a = 46 ⇒ a = 7, b = 5."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The ordered pair (x, y) satisfies 2x + 3y = 13 and 3x − 2y = 0. What is the distance between the point (x, y) and the origin in the xy-plane?",
+      "choices": [
+        "√13",
+        "√5",
+        "5",
+        "13"
+      ],
+      "answer": 0,
+      "check": "sqrt(13)",
+      "hint": "Реши систему, затем примени теорему Пифагора.",
+      "explanation": "Из второго y = 1,5x: 2x + 4,5x = 13 ⇒ x = 2, y = 3. Расстояние √(4 + 9) = √13 (A). 13 — квадрат расстояния; 5 — сумма координат."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A store makes 30 kilograms of a coffee blend from Brazilian beans that cost $12 per kilogram and Ethiopian beans that cost $18 per kilogram, so that the blend costs $14 per kilogram. How many kilograms of Brazilian beans must be replaced with Ethiopian beans so that the 30-kilogram blend costs $15 per kilogram?",
+      "answer": [
+        "5"
+      ],
+      "check": "15-10",
+      "hint": "Найди количество эфиопских зёрен в каждом варианте смеси.",
+      "explanation": "Цена смеси 12 + 6y/30: при 14 долларах y = 10 кг, при 15 — y = 15 кг. Нужно заменить 5 кг. Каждый замененный килограмм поднимает стоимость смеси на 6 долларов, то есть цену килограмма на 0,20."
+    }
+  ]
+}

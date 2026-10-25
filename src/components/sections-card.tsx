@@ -8,6 +8,7 @@ import { plural } from "@/lib/date";
 
 const SOURCE: Record<LevelSource, string> = {
   score: "по твоим баллам",
+  estimated: "предварительно: по общему баллу",
   converted: "пересчитано с другого экзамена",
   diagnostic: "по диагностике",
   default: "баллов нет — средний уровень",
@@ -53,9 +54,19 @@ export function SectionsCard({ plan, today }: { plan: Plan; today: string }) {
           );
         })}
       </ul>
+      {sections.some((s) => s.preliminary && (s.section === "sat-math" || s.section === "sat-rw")) && (
+        <p className="mt-4 rounded-lg bg-warn-soft px-3 py-2 text-xs">
+          Уровень {sections.filter((s) => s.preliminary && (s.section === "sat-math" || s.section === "sat-rw")).map((s) => SECTION_TITLES[s.section]).join(" и ")} пока
+          предварительный: общий балл не показывает разницу между секциями.{" "}
+          <Link href="/diagnostic" className="font-semibold text-accent hover:underline">
+            Пройти короткую диагностику
+          </Link>{" "}
+          или укажи баллы секций в «Моих баллах».
+        </p>
+      )}
       <p className="mt-4 text-xs text-muted">
         Больше практики — там, где разрыв с целью больше, но не меньше 15% на секцию. Задания: 60% на твоём уровне, по 20% проще и сложнее; каждые
-        10 ответов по навыку уровень пересчитывается.
+        10 ответов по навыку уровень пересчитывается. В SAT Math сложность подбирается по ступеням отдельно для каждого навыка — см. ниже.
         {nextExam && daysToExam !== null && (
           <>
             {" "}

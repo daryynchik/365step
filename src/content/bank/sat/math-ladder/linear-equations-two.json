@@ -1,0 +1,1655 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "linear-equations-two",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which of the following points lies on the line y = −x + 6 in the xy-plane?",
+      "choices": [
+        "(2, 8)",
+        "(4, 2)",
+        "(6, 6)",
+        "(−1, 5)"
+      ],
+      "answer": 1,
+      "hint": "Подставь x каждой точки и сравни результат с её y.",
+      "explanation": "При x = 4: y = −4 + 6 = 2 — точка (4, 2) на прямой (B). При x = 2 получилось бы 4, при x = 6 — 0, при x = −1 — 7."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "In the equation 2x + 5y = 30, what is the value of x when y = 4?",
+      "answer": [
+        "5"
+      ],
+      "check": "(30-20)/2",
+      "verify": "2*ans + 5*4 == 30",
+      "hint": "Подставь y = 4 и реши уравнение относительно x.",
+      "explanation": "2x + 20 = 30 ⇒ 2x = 10 ⇒ x = 5."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "What is the slope of the line with equation y = 7 − 2x?",
+      "choices": [
+        "−7",
+        "−2",
+        "2",
+        "7"
+      ],
+      "answer": 1,
+      "check": "-2",
+      "hint": "Наклон — это коэффициент при x, с его знаком.",
+      "explanation": "y = −2x + 7, наклон −2 (B). 7 — пересечение с осью y; 2 — потерян знак."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Kai walks at 4 miles per hour for x hours and then jogs at 6 miles per hour for y hours, covering 20 miles in total. Which equation represents this situation?",
+      "choices": [
+        "4x + 6y = 20",
+        "6x + 4y = 20",
+        "10(x + y) = 20",
+        "4x = 6y + 20"
+      ],
+      "answer": 0,
+      "hint": "Расстояние = скорость × время на каждом участке.",
+      "explanation": "Шагом пройдено 4x миль, бегом 6y миль, всего 20: 4x + 6y = 20 (A). В B скорости перепутаны; C считает обе скорости одинаковыми; D сравнивает участки вместо сложения."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "The line y = 3x + b, where b is a constant, passes through the point (2, 1). What is the value of b?",
+      "answer": [
+        "-5"
+      ],
+      "check": "1-6",
+      "verify": "1 == 3*2 + ans",
+      "hint": "Подставь x = 2 и y = 1.",
+      "explanation": "1 = 3 · 2 + b ⇒ b = 1 − 6 = −5. Прямая: y = 3x − 5."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The equation 6x + 2y = 14 is equivalent to which of the following?",
+      "choices": [
+        "y = 3x + 7",
+        "y = −3x + 7",
+        "y = −6x + 14",
+        "y = −3x + 14"
+      ],
+      "answer": 1,
+      "check": "-3x+7",
+      "hint": "Перенеси 6x вправо и раздели всё на 2.",
+      "explanation": "2y = −6x + 14 ⇒ y = −3x + 7 (B). A — потерян знак; C — забыли разделить на 2; D разделили на 2 только 6x."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "At what value of x does the graph of y = 4x − 10 cross the x-axis?",
+      "answer": [
+        "2.5",
+        "5/2"
+      ],
+      "check": "10/4",
+      "verify": "4*ans - 10 == 0",
+      "hint": "На оси x значение y равно 0.",
+      "explanation": "4x − 10 = 0 ⇒ x = 2,5. Ошибка — ответить −10 (это пересечение с осью y)."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which equation represents the horizontal line that passes through the point (3, −5) in the xy-plane?",
+      "choices": [
+        "x = 3",
+        "y = −5",
+        "y = 3",
+        "x = −5"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "У горизонтальной прямой все точки имеют одинаковый y.",
+      "explanation": "Горизонтальная прямая через (3, −5): y = −5 (B). x = 3 — вертикальная прямая через эту точку; C и D не проходят через (3, −5)."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A line in the xy-plane passes through the points (2, 3) and (6, 11). Which of the following is an equation of the line?",
+      "choices": [
+        "y = 2x + 3",
+        "y = 2x − 1",
+        "y = 4x − 5",
+        "y = (1/2)x + 2"
+      ],
+      "answer": 1,
+      "check": "2x-1",
+      "hint": "Наклон (11 − 3)/(6 − 2). Затем найди b по одной из точек.",
+      "explanation": "Наклон 8/4 = 2; 3 = 2 · 2 + b ⇒ b = −1: y = 2x − 1 (B). Проверка: 2 · 6 − 1 = 11. D — перевёрнутый наклон; C проходит через (2, 3), но не через (6, 11)."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A phone has 64 gigabytes (GB) of storage. Each photo uses 0.004 GB and each video uses 0.25 GB. A user stores 2,000 photos. How many videos can the user store in exactly the remaining space?",
+      "answer": [
+        "224"
+      ],
+      "check": "(64-2000*0.004)/0.25",
+      "verify": "2000*0.004 + 0.25*ans == 64",
+      "hint": "Сначала посчитай, сколько места заняли фотографии.",
+      "explanation": "Фото занимают 2000 · 0,004 = 8 ГБ, остаётся 56 ГБ. 56/0,25 = 224 видео. Ошибка — делить 64 на 0,25 без учёта фото (256)."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The graph of which of the following equations passes through the origin?",
+      "choices": [
+        "y = 2x + 1",
+        "3x − 5y = 0",
+        "x + y = 1",
+        "y = −4"
+      ],
+      "answer": 1,
+      "hint": "Подставь (0, 0) в каждое уравнение.",
+      "explanation": "3 · 0 − 5 · 0 = 0 — равенство верно, прямая проходит через начало координат (B). В остальных при x = 0, y = 0 получаются ложные равенства 0 = 1 и 0 = −4."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For the equation y = 5x − 3, how does the value of y change when the value of x increases by 2?",
+      "choices": [
+        "It increases by 10.",
+        "It increases by 7.",
+        "It increases by 2.",
+        "It decreases by 3."
+      ],
+      "answer": 0,
+      "hint": "Каждое увеличение x на 1 добавляет к y 5.",
+      "explanation": "Изменение y = 5 · 2 = 10 (A). Константа −3 на изменение не влияет. 7 — это 5 + 2; 2 — изменение x."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A line in the xy-plane passes through the point (−1, 4) and has a slope of 3. What is the y-coordinate of the point on the line with x-coordinate 2?",
+      "answer": [
+        "13"
+      ],
+      "check": "4+3*3",
+      "hint": "От x = −1 до x = 2 — три шага по 3.",
+      "explanation": "y = 4 + 3 · (2 − (−1)) = 4 + 9 = 13."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The cost C, in dollars, of a party for p people is given by C = 18p + 150. What is the best interpretation of 18 in this context?",
+      "choices": [
+        "The cost of the party with no people",
+        "The additional cost for each person",
+        "The number of people at the party",
+        "The total cost for 150 people"
+      ],
+      "answer": 1,
+      "hint": "18 умножается на число гостей.",
+      "explanation": "Каждый дополнительный гость добавляет 18 долларов (B). 150 — расходы, не зависящие от числа гостей; D неверно — 150 не число людей."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following lines is parallel to the line y = 4x − 1?",
+      "choices": [
+        "y = −4x + 1",
+        "y = (1/4)x − 1",
+        "y = 4x + 7",
+        "y = −(1/4)x"
+      ],
+      "answer": 2,
+      "check": "4x+7",
+      "hint": "Параллельные прямые имеют одинаковый наклон.",
+      "explanation": "Наклон 4 у прямой y = 4x + 7 (C), пересечение другое — прямые параллельны. A — противоположный наклон; B — обратный; D — перпендикулярная прямая."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For what value of y does the point (−2, y) lie on the line 4x − 3y = 1?",
+      "answer": [
+        "-3"
+      ],
+      "check": "(4*(-2)-1)/3",
+      "verify": "4*(-2) - 3*ans == 1",
+      "hint": "Подставь x = −2.",
+      "explanation": "−8 − 3y = 1 ⇒ −3y = 9 ⇒ y = −3."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "What is the slope of the line that passes through the points (−3, 5) and (3, 1)?",
+      "choices": [
+        "−3/2",
+        "−2/3",
+        "2/3",
+        "−4"
+      ],
+      "answer": 1,
+      "check": "(1-5)/(3+3)",
+      "hint": "(y₂ − y₁)/(x₂ − x₁).",
+      "explanation": "(1 − 5)/(3 − (−3)) = −4/6 = −2/3 (B). −3/2 — перевёрнутая дробь; 2/3 — потерян знак; −4 — не разделили на изменение x."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "At which point does the graph of y = −2x + 8 cross the x-axis?",
+      "choices": [
+        "(0, 8)",
+        "(4, 0)",
+        "(−4, 0)",
+        "(8, 0)"
+      ],
+      "answer": 1,
+      "hint": "Приравняй y к нулю.",
+      "explanation": "0 = −2x + 8 ⇒ x = 4: точка (4, 0) (B). (0, 8) — пересечение с осью y; (−4, 0) — ошибка знака."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A line in the xy-plane has a slope of −3 and a y-intercept of 12. For what value of x is y = 0?",
+      "answer": [
+        "4"
+      ],
+      "check": "12/3",
+      "verify": "-3*ans + 12 == 0",
+      "hint": "y = −3x + 12.",
+      "explanation": "Прямая y = −3x + 12; при y = 0: −3x + 12 = 0 ⇒ x = 4."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Line ℓ has the equation y = (1/2)x + 3. Which of the following points is NOT on line ℓ?",
+      "choices": [
+        "(0, 3)",
+        "(2, 4)",
+        "(−6, 0)",
+        "(4, 6)"
+      ],
+      "answer": 3,
+      "hint": "Подставь x каждой точки.",
+      "explanation": "При x = 4 получается y = 2 + 3 = 5, а не 6 — точка (4, 6) не на прямой (D). Остальные: (0, 3), (2, 4) и (−6, 0) удовлетворяют уравнению."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A student has $30 to spend on songs that cost $1.20 each and albums that cost $9 each. If she buys 2 albums, how many songs can she buy with exactly the remaining money?",
+      "answer": [
+        "10"
+      ],
+      "check": "(30-18)/1.2",
+      "verify": "1.2*ans + 9*2 == 30",
+      "hint": "Вычти стоимость альбомов.",
+      "explanation": "30 − 2 · 9 = 12, 12/1,2 = 10 песен."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following is equivalent to 2x − 3y = 9?",
+      "choices": [
+        "y = (2/3)x + 3",
+        "y = (2/3)x − 3",
+        "y = −(2/3)x + 3",
+        "y = (3/2)x − 3"
+      ],
+      "answer": 1,
+      "check": "(2/3)x-3",
+      "hint": "−3y = −2x + 9; раздели обе части на −3.",
+      "explanation": "y = (2/3)x − 3 (B). Деление на −3 меняет знаки обоих слагаемых. A — ошибка знака у свободного члена; C — у наклона; D — перевёрнут наклон."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The graph of which of the following equations has an x-intercept of 3 and a y-intercept of 6?",
+      "choices": [
+        "x + 2y = 6",
+        "2x + y = 6",
+        "x + y = 9",
+        "3x + 6y = 1"
+      ],
+      "answer": 1,
+      "hint": "Проверь каждое уравнение: при y = 0 должно быть x = 3, при x = 0 — y = 6.",
+      "explanation": "2x + y = 6: при y = 0 x = 3, при x = 0 y = 6 (B). У A пересечения 6 и 3 — наоборот; у C 9 и 9; у D — дробные."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "In the equation y = 0.75x + 12, what is the value of x when y = 30?",
+      "answer": [
+        "24"
+      ],
+      "check": "18/0.75",
+      "verify": "0.75*ans + 12 == 30",
+      "hint": "Подставь y = 30 и реши относительно x.",
+      "explanation": "0,75x = 18 ⇒ x = 24. Ошибка — подставить 30 вместо x (получится 34,5)."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following lines in the xy-plane has a negative slope and a positive y-intercept?",
+      "choices": [
+        "y = 2x + 3",
+        "y = −2x − 3",
+        "y = −2x + 3",
+        "y = 2x − 3"
+      ],
+      "answer": 2,
+      "check": "-2x+3",
+      "hint": "В y = mx + b нужно m < 0 и b > 0.",
+      "explanation": "У y = −2x + 3 наклон −2 < 0 и пересечение 3 > 0 (C). У A положительный наклон, у B отрицательное пересечение, у D — оба знака неподходящие."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A line passes through the points (1, −2) and (4, 7). At which point does the line cross the y-axis?",
+      "choices": [
+        "(0, −2)",
+        "(0, −5)",
+        "(0, 5)",
+        "(5/3, 0)"
+      ],
+      "answer": 1,
+      "hint": "Найди наклон, затем шагни от x = 1 к x = 0.",
+      "explanation": "Наклон 9/3 = 3. При x = 0: y = −2 − 3 = −5, точка (0, −5) (B). (5/3, 0) — пересечение с осью x; (0, 5) — ошибка знака; (0, −2) — y первой точки."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The equation 15x + 25y = 300 represents the number of 15-minute tasks, x, and 25-minute tasks, y, that fill exactly 300 minutes. What is the greatest possible number of 15-minute tasks?",
+      "answer": [
+        "20"
+      ],
+      "check": "300/15",
+      "verify": "15*ans + 25*0 == 300",
+      "hint": "Больше всего 15-минутных задач — когда 25-минутных нет совсем.",
+      "explanation": "При y = 0: 15x = 300 ⇒ x = 20. Это x-intercept графика."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following is an equation of the line that passes through the point (2, −1) and has a slope of −3/2?",
+      "choices": [
+        "y = −(3/2)x − 1",
+        "y = −(3/2)x + 2",
+        "y = −(3/2)x + 4",
+        "y = (3/2)x − 4"
+      ],
+      "answer": 1,
+      "check": "-(3/2)x+2",
+      "hint": "−1 = −(3/2) · 2 + b.",
+      "explanation": "−1 = −3 + b ⇒ b = 2: y = −(3/2)x + 2 (B). A принимает −1 за пересечение с осью y; C — ошибка при вычитании; D — неверный знак наклона."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Line p has the equation 3x + 2y = 6. Line q is parallel to line p and passes through the point (0, 7). What is the x-coordinate of the x-intercept of line q?",
+      "answer": [
+        "14/3",
+        "4.666",
+        "4.667"
+      ],
+      "check": "14/3",
+      "verify": "-1.5*ans + 7 == 0",
+      "hint": "Наклон p: −3/2. Тогда q: y = −(3/2)x + 7.",
+      "explanation": "q: y = −1,5x + 7. 0 = −1,5x + 7 ⇒ x = 14/3 ≈ 4,667. Ошибка — использовать x-intercept прямой p (2)."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A line passes through the points (−2, 3) and (4, 3). Which of the following is an equation of the line?",
+      "choices": [
+        "x = 3",
+        "y = 3",
+        "y = x + 5",
+        "x = −2"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "У обеих точек одинаковый y.",
+      "explanation": "y не меняется, наклон 0 — прямая горизонтальная: y = 3 (B). x = 3 — вертикальная прямая; y = x + 5 проходит только через (−2, 3)."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The points in the table lie on a line in the xy-plane. What is the y-coordinate of the y-intercept of the line?",
+      "table": {
+        "head": [
+          "x",
+          "−2",
+          "1",
+          "4"
+        ],
+        "rows": [
+          [
+            "y",
+            "9",
+            "3",
+            "−3"
+          ]
+        ]
+      },
+      "answer": [
+        "5"
+      ],
+      "check": "3+2",
+      "hint": "Найди наклон по таблице и шагни от x = 1 к x = 0.",
+      "explanation": "Наклон (3 − 9)/3 = −2. При x = 0: y = 3 + 2 = 5. Прямая y = −2x + 5."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following points lies on the line that passes through (0, −4) and (2, 2)?",
+      "choices": [
+        "(1, 1)",
+        "(3, 5)",
+        "(4, 6)",
+        "(−1, −1)"
+      ],
+      "answer": 1,
+      "hint": "Найди уравнение прямой: наклон и пересечение с осью y.",
+      "explanation": "Наклон 6/2 = 3, прямая y = 3x − 4. При x = 3: y = 5 — точка (3, 5) на прямой (B). При x = 1 было бы −1, при x = 4 — 8, при x = −1 — −7."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A lab fills x small beakers that hold 50 milliliters each and y large beakers that hold 250 milliliters each, using exactly 2,100 milliliters of solution. The number of small beakers is twice the number of large beakers. How many large beakers are filled?",
+      "choices": [
+        "4",
+        "6",
+        "8.4",
+        "12"
+      ],
+      "answer": 1,
+      "check": "2100/350",
+      "verify": "50*2*ans + 250*ans == 2100",
+      "hint": "Подставь x = 2y в 50x + 250y = 2100.",
+      "explanation": "100y + 250y = 350y = 2100 ⇒ y = 6 (B), маленьких 12. 12 — маленькие стаканы; 8,4 — это 2100/250 (без маленьких)."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The graph of 3x + 4y = 48 crosses the x-axis at point A and the y-axis at point B. What is the distance between A and B?",
+      "answer": [
+        "20"
+      ],
+      "check": "sqrt(16^2+12^2)",
+      "hint": "Найди A и B, затем примени теорему Пифагора.",
+      "explanation": "A = (16, 0), B = (0, 12). AB = √(16² + 12²) = √400 = 20."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The graph of which of the following equations has a slope of 2/5?",
+      "choices": [
+        "5x − 2y = 1",
+        "2x − 5y = 1",
+        "2x + 5y = 1",
+        "5x + 2y = 1"
+      ],
+      "answer": 1,
+      "hint": "Для ax + by = c наклон равен −a/b.",
+      "explanation": "2x − 5y = 1 ⇒ y = (2/5)x − 1/5, наклон 2/5 (B). A даёт 5/2, C — −2/5, D — −5/2."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The line through the points (k, 6) and (2, −2) has a slope of 4. What is the value of k?",
+      "choices": [
+        "0",
+        "4",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "check": "4",
+      "verify": "(6 - (-2))/(ans - 2) == 4",
+      "hint": "(6 − (−2))/(k − 2) = 4.",
+      "explanation": "8/(k − 2) = 4 ⇒ k − 2 = 2 ⇒ k = 4 (B). 10 — если забыть разделить 8 на 4 (k − 2 = 8); 6 — если просто прибавить наклон к 2; 0 — если вычесть y в другом порядке и получить −8 в числителе."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The points (1, 3), (4, 9), and (7, k) lie on the same line. What is the value of k?",
+      "answer": [
+        "15"
+      ],
+      "check": "9+6",
+      "hint": "На каждом шаге x на 3 значение y меняется на одну и ту же величину.",
+      "explanation": "От (1, 3) к (4, 9) y вырос на 6 при шаге x на 3. Ещё один такой шаг: k = 9 + 6 = 15."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The line 2x + y = c, where c is a constant, passes through the point (3, −1). Which of the following points also lies on this line?",
+      "choices": [
+        "(1, 3)",
+        "(0, −5)",
+        "(5, 0)",
+        "(2, 2)"
+      ],
+      "answer": 0,
+      "hint": "Найди c по точке (3, −1), потом проверь варианты.",
+      "explanation": "c = 2 · 3 + (−1) = 5. Для (1, 3): 2 + 3 = 5 — подходит (A). (0, −5) даёт −5, (5, 0) — 10, (2, 2) — 6."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A line in the xy-plane has an x-intercept of 4 and a y-intercept of −2. Which of the following is an equation of the line?",
+      "choices": [
+        "y = −(1/2)x − 2",
+        "y = (1/2)x − 2",
+        "y = 2x − 2",
+        "y = −2x + 4"
+      ],
+      "answer": 1,
+      "check": "(1/2)x-2",
+      "hint": "Точки (4, 0) и (0, −2). Наклон: (0 − (−2))/(4 − 0).",
+      "explanation": "Наклон 2/4 = 1/2, пересечение с осью y −2: y = (1/2)x − 2 (B). Проверка: при x = 4 y = 0. A — неверный знак; C — перевёрнутый наклон; D использует 4 как пересечение с осью y."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Line ℓ is perpendicular to the line y = −(1/4)x + 2 and passes through the point (1, 1). What is the y-coordinate of the y-intercept of line ℓ?",
+      "answer": [
+        "-3"
+      ],
+      "check": "1-4",
+      "hint": "Наклон перпендикулярной прямой: противоположное обратное к −1/4.",
+      "explanation": "Наклон ℓ = 4. y = 4x + b, 1 = 4 + b ⇒ b = −3."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The equation 5x + 3y = 60 represents buying x pounds of rice at $5 per pound and y pounds of beans at $3 per pound for exactly $60. Which of the following must be true?",
+      "choices": [
+        "If x increases by 3, then y decreases by 5.",
+        "If x increases by 3, then y increases by 5.",
+        "If x increases by 5, then y decreases by 5.",
+        "x + y = 20"
+      ],
+      "answer": 0,
+      "hint": "Чтобы сумма не изменилась, 5Δx + 3Δy = 0.",
+      "explanation": "Если Δx = 3, то 15 + 3Δy = 0 ⇒ Δy = −5 (A): 3 фунта риса стоят 15 долларов — как 5 фунтов фасоли. B нарушает бюджет; C даёт 25 − 15 ≠ 0; D верно не всегда (например, x = 12, y = 0)."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The line through the points (2, 5) and (a, 11) is parallel to the line through the points (0, 0) and (3, 2). What is the value of a?",
+      "answer": [
+        "11"
+      ],
+      "check": "2+9",
+      "verify": "(11 - 5)/(ans - 2) == 2/3",
+      "hint": "Наклон второй прямой 2/3; составь уравнение для первой.",
+      "explanation": "6/(a − 2) = 2/3 ⇒ a − 2 = 9 ⇒ a = 11. Ошибка — взять перевёрнутый наклон 3/2 (тогда a = 6)."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the xy-plane, the equations 3x + ay = 12 and bx − 2y = 6, where a and b are constants, have the same graph. What is the value of a + b?",
+      "choices": [
+        "−5.5",
+        "−2.5",
+        "2.5",
+        "5.5"
+      ],
+      "answer": 1,
+      "check": "-4+1.5",
+      "hint": "Умножь второе уравнение на 2, чтобы правые части совпали.",
+      "explanation": "2bx − 4y = 12 должно совпадать с 3x + ay = 12: 2b = 3 ⇒ b = 1,5; a = −4. a + b = −2,5 (B). 5,5 и −5,5 — ошибки знака у a или b; 2,5 — модуль ответа."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A line passes through the points (−3, 1) and (5, 7). What is the y-coordinate of the y-intercept of the line?",
+      "answer": [
+        "13/4",
+        "3.25"
+      ],
+      "check": "1+9/4",
+      "hint": "Наклон 6/8 = 3/4. От x = −3 до x = 0 три шага.",
+      "explanation": "y(0) = 1 + 3 · 3/4 = 13/4 = 3,25. Проверка: 3/4 · 5 + 13/4 = 28/4 = 7."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A delivery company charges C = 2.5m + 0.8w dollars to deliver a package that weighs w pounds a distance of m miles. A 15-pound package cost $37 to deliver. How many miles was it delivered?",
+      "choices": [
+        "10",
+        "12",
+        "14.8",
+        "19.6"
+      ],
+      "answer": 0,
+      "check": "(37-12)/2.5",
+      "verify": "2.5*ans + 0.8*15 == 37",
+      "hint": "Подставь w = 15 и реши относительно m.",
+      "explanation": "2,5m + 12 = 37 ⇒ 2,5m = 25 ⇒ m = 10 (A). 14,8 — это 37/2,5 без учёта веса; 19,6 — если прибавить плату за вес вместо вычитания (49/2,5); 12 — это плата за вес, а не мили."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following lines is perpendicular to the line 3x − 6y = 7?",
+      "choices": [
+        "y = (1/2)x + 4",
+        "y = 2x − 1",
+        "y = −2x + 5",
+        "y = −(1/2)x + 3"
+      ],
+      "answer": 2,
+      "check": "-2x+5",
+      "hint": "Найди наклон 3x − 6y = 7, затем противоположный обратный.",
+      "explanation": "y = (1/2)x − 7/6, наклон 1/2. Перпендикулярный наклон −2: y = −2x + 5 (C). A параллельна; B — обратный без смены знака; D — противоположный без обращения."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Line ℓ passes through the points (−2, 9) and (6, −3). What is the x-coordinate of the point where line ℓ crosses the x-axis?",
+      "answer": [
+        "4"
+      ],
+      "check": "6/1.5",
+      "hint": "Наклон −12/8. Найди уравнение и приравняй y к 0.",
+      "explanation": "Наклон −1,5; 9 = −1,5 · (−2) + b ⇒ b = 6. 0 = −1,5x + 6 ⇒ x = 4."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the xy-plane, the graph of ax + 4y = 20, where a is a constant, has a slope of −3/2. What is the x-coordinate of its x-intercept?",
+      "choices": [
+        "10/3",
+        "5",
+        "6",
+        "20/3"
+      ],
+      "answer": 0,
+      "check": "20/6",
+      "hint": "Наклон ax + 4y = 20 равен −a/4.",
+      "explanation": "−a/4 = −3/2 ⇒ a = 6. 6x = 20 ⇒ x = 10/3 (A). 5 — y-intercept (20/4); 6 — это a; 20/3 — если взять a = 3."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Notebooks cost $1.50 each and binders cost $2 each. A teacher spends exactly $40 and buys 4 times as many notebooks as binders. How many binders does the teacher buy?",
+      "choices": [
+        "4",
+        "5",
+        "8",
+        "20"
+      ],
+      "answer": 1,
+      "check": "40/8",
+      "verify": "1.5*4*ans + 2*ans == 40",
+      "hint": "Если биндеров b, то тетрадей 4b.",
+      "explanation": "1,5 · 4b + 2b = 6b + 2b = 8b = 40 ⇒ b = 5 (B), тетрадей 20. 20 — тетради; 8 — стоимость «набора» из 4 тетрадей и 1 биндера."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The line y = mx + 3, where m is a constant, passes through the midpoint of the segment with endpoints (2, 7) and (6, −1). What is the value of m?",
+      "answer": [
+        "0"
+      ],
+      "check": "0",
+      "verify": "4*ans + 3 == 3",
+      "hint": "Середина отрезка: среднее координат.",
+      "explanation": "Середина (4, 3). 3 = 4m + 3 ⇒ m = 0: прямая горизонтальна, y = 3."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following statements about the graph of 6x − 2y = 18 in the xy-plane is true?",
+      "choices": [
+        "Its slope is 3, and its y-intercept is −9.",
+        "Its slope is −3, and its y-intercept is 9.",
+        "Its slope is 3, and its x-intercept is −9.",
+        "Its slope is 6, and its y-intercept is 18."
+      ],
+      "answer": 0,
+      "hint": "Приведи к виду y = mx + b.",
+      "explanation": "−2y = −6x + 18 ⇒ y = 3x − 9: наклон 3, y-intercept −9 (A). x-intercept равен 3, а не −9; D берёт коэффициенты без преобразования."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A line passes through the point (4, 1) and has the same y-intercept as the graph of 5x + 2y = 16. What is the slope of the line?",
+      "answer": [
+        "-7/4",
+        "-1.75"
+      ],
+      "check": "(1-8)/4",
+      "hint": "y-intercept графика 5x + 2y = 16: подставь x = 0.",
+      "explanation": "При x = 0: y = 8. Наклон через (0, 8) и (4, 1): (1 − 8)/4 = −7/4."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "How many ordered pairs (x, y), where x and y are nonnegative integers, satisfy the equation x + 3y = 12?",
+      "choices": [
+        "4",
+        "5",
+        "12",
+        "13"
+      ],
+      "answer": 1,
+      "check": "5",
+      "hint": "Перебери y = 0, 1, 2, … и проверь, что x не отрицательный.",
+      "explanation": "y = 0, 1, 2, 3, 4 дают x = 12, 9, 6, 3, 0 — пять пар (B). При y = 5 x < 0. 4 — если забыть y = 0 или x = 0; 13 — если перебирать x от 0 до 12."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Line ℓ in the xy-plane passes through the points (0, 4) and (6, 0). Which of the following points lies above line ℓ?",
+      "choices": [
+        "(3, 1)",
+        "(3, 3)",
+        "(6, −1)",
+        "(−3, 5)"
+      ],
+      "answer": 1,
+      "hint": "Найди y на прямой при x каждой точки и сравни.",
+      "explanation": "ℓ: y = −(2/3)x + 4. При x = 3 прямая проходит через y = 2, поэтому (3, 3) выше (B), а (3, 1) ниже. При x = 6 прямая на y = 0 — (6, −1) ниже; при x = −3 она на y = 6 — (−3, 5) ниже."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A 120-kilogram load is packed into crates that hold 8 kilograms and crates that hold 12 kilograms, with every crate full. A total of 12 crates are used. How many 12-kilogram crates are used?",
+      "answer": [
+        "6"
+      ],
+      "check": "24/4",
+      "verify": "8*(12 - ans) + 12*ans == 120",
+      "hint": "Если больших ящиков y, то маленьких 12 − y.",
+      "explanation": "8(12 − y) + 12y = 120 ⇒ 96 + 4y = 120 ⇒ y = 6. Проверка: 6 · 8 + 6 · 12 = 120."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The point (a, b) lies on the line y = 3x − 2. Which of the following points must also lie on the line?",
+      "choices": [
+        "(a + 3, b + 1)",
+        "(a + 1, b + 3)",
+        "(3a, 3b)",
+        "(a, b + 3)"
+      ],
+      "answer": 1,
+      "hint": "Наклон 3: шаг x на 1 — шаг y на 3.",
+      "explanation": "3(a + 1) − 2 = 3a − 2 + 3 = b + 3 — точка (a + 1, b + 3) на прямой (B). A перепутала шаги; C верна только при прямой через начало координат; D — та же x, другой y."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "In the xy-plane, the lines 2x + 3y = 12 and kx − 6y = 5, where k is a constant, are perpendicular. What is the value of k?",
+      "answer": [
+        "9"
+      ],
+      "check": "9",
+      "verify": "(-2/3)*(ans/6) == -1",
+      "hint": "Наклоны: −2/3 и k/6. Произведение наклонов перпендикулярных прямых равно −1.",
+      "explanation": "(−2/3) · (k/6) = −1 ⇒ k/9 = 1 ⇒ k = 9. Тогда вторая прямая имеет наклон 3/2."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following is an equation of the line that passes through the point (−2, 5) and is parallel to the line through (1, 1) and (3, 7)?",
+      "choices": [
+        "y = 3x − 1",
+        "y = 3x + 11",
+        "y = −(1/3)x + 13/3",
+        "y = 3x + 5"
+      ],
+      "answer": 1,
+      "check": "3x+11",
+      "hint": "Наклон (7 − 1)/(3 − 1) = 3. Подставь (−2, 5).",
+      "explanation": "5 = 3 · (−2) + b ⇒ b = 11: y = 3x + 11 (B). D принимает 5 за пересечение; C — перпендикуляр; A проходит через (1, 2)."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A technician earns $40 per hour for repairs and $25 per hour for installations. The equation 40x + 25y = 1,000 represents the hours of repairs, x, and installations, y, for which the technician earns exactly $1,000. What is the best interpretation of the y-intercept of the graph of this equation?",
+      "choices": [
+        "The technician earns $40 per hour of installations.",
+        "If the technician does no repairs, 40 hours of installations earn $1,000.",
+        "If the technician does no installations, 25 hours of repairs earn $1,000.",
+        "The technician works 40 hours in total."
+      ],
+      "answer": 1,
+      "hint": "y-intercept — точка, где x = 0.",
+      "explanation": "При x = 0: 25y = 1000 ⇒ y = 40 — сорок часов установок без ремонтов (B). C — верное утверждение, но оно описывает x-intercept (25, 0), а не y-intercept; A путает ставки; D неверно — общее число часов меняется вдоль прямой."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The line 5x − 4y = k, where k is a constant, passes through the point (2, −3). What is the x-coordinate of the point where the line crosses the x-axis?",
+      "answer": [
+        "4.4",
+        "22/5"
+      ],
+      "check": "22/5",
+      "verify": "5*ans == 5*2 - 4*(-3)",
+      "hint": "Найди k по точке, затем подставь y = 0.",
+      "explanation": "k = 10 + 12 = 22. При y = 0: 5x = 22 ⇒ x = 4,4. Ошибка — k = 10 − 12 = −2 (потерян знак при −4 · (−3))."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the lines ax + 3y = 9 and 4x + by = 6, where a and b are constants, are perpendicular. The first line passes through the point (3, 1). What is the value of b?",
+      "choices": [
+        "−8/3",
+        "−2",
+        "8/3",
+        "6"
+      ],
+      "answer": 0,
+      "check": "-8/3",
+      "hint": "Сначала найди a по точке (3, 1), затем наклоны обеих прямых.",
+      "explanation": "3a + 3 = 9 ⇒ a = 2, наклон первой прямой −2/3. Перпендикулярный наклон 3/2. Наклон второй: −4/b = 3/2 ⇒ b = −8/3 (A). 8/3 — потерян знак; −2 и 6 — если приравнять наклоны или взять обратный без смены знака."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The point (a, b) lies on the line 4x − 3y = 24, and a + b = 20. What is the value of b?",
+      "answer": [
+        "8"
+      ],
+      "check": "56/7",
+      "verify": "4*(20 - ans) - 3*ans == 24",
+      "hint": "Вырази a = 20 − b и подставь в уравнение прямой.",
+      "explanation": "4(20 − b) − 3b = 24 ⇒ 80 − 7b = 24 ⇒ b = 8, a = 12. Проверка: 48 − 24 = 24."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A line in the xy-plane passes through the point (2, 3). Its x-intercept is twice its y-intercept, and both intercepts are nonzero. What is the slope of the line?",
+      "choices": [
+        "−2",
+        "−1/2",
+        "1/2",
+        "2"
+      ],
+      "answer": 1,
+      "check": "-1/2",
+      "hint": "Если y-intercept равен b, то x-intercept равен 2b. Наклон через (0, b) и (2b, 0).",
+      "explanation": "Наклон через (0, b) и (2b, 0): (0 − b)/(2b − 0) = −1/2 (B). Точка (2, 3) задаёт b: 3 = −1 + b ⇒ b = 4, x-intercept 8. −2 — перевёрнутая дробь; положительные наклоны невозможны: при одинаковых знаках пересечений прямая убывает."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A store sells pens at 3 for $2 and notebooks for $3.50 each. Maria spent exactly $33 and bought 3 times as many pens as notebooks. How many pens did she buy?",
+      "answer": [
+        "18"
+      ],
+      "check": "3*6",
+      "verify": "(2/3)*ans + 3.5*(ans/3) == 33",
+      "hint": "Если тетрадей n, то ручек 3n, а 3n ручек стоят 2n долларов.",
+      "explanation": "2n + 3,5n = 5,5n = 33 ⇒ n = 6 тетрадей, ручек 18. Ошибка — считать цену ручки 2 доллара вместо 2/3."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following lines in the xy-plane does NOT intersect the line 2x − 3y = 6?",
+      "choices": [
+        "y = (2/3)x − 2",
+        "4x − 6y = 6",
+        "3x − 2y = 6",
+        "y = −(2/3)x + 1"
+      ],
+      "answer": 1,
+      "hint": "Не пересекаются только параллельные различные прямые: наклон тот же, пересечение с осью y другое.",
+      "explanation": "2x − 3y = 6 ⇔ y = (2/3)x − 2. 4x − 6y = 6 ⇔ y = (2/3)x − 1 — тот же наклон, другое пересечение: прямые параллельны (B). A — та же самая прямая (пересекаются во всех точках); у C и D другие наклоны."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The line through the points (−4, 2) and (k, 8), where k > 0, has a slope of k/2. What is the value of k?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "6/(ans + 4) == ans/2",
+      "hint": "6/(k + 4) = k/2 приводит к квадратному уравнению.",
+      "explanation": "12 = k(k + 4) ⇒ k² + 4k − 12 = 0 ⇒ (k + 6)(k − 2) = 0. Условию k > 0 подходит k = 2. Проверка: наклон 6/6 = 1 = 2/2."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the lines y = mx + 4 and 3x − 2y = 8 intersect at a point on the x-axis. What is the value of m?",
+      "choices": [
+        "−3/2",
+        "−2/3",
+        "3/2",
+        "8/3"
+      ],
+      "answer": 0,
+      "check": "-3/2",
+      "hint": "Найди x-intercept второй прямой: первая должна проходить через ту же точку.",
+      "explanation": "Вторая прямая пересекает ось x при x = 8/3. 0 = m · 8/3 + 4 ⇒ m = −3/2 (A). 8/3 — это x точки; 3/2 — наклон второй прямой; −2/3 — перевёрнутая дробь."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A company pays a delivery driver $0.50 per mile driven plus $18 per hour worked. For one 7-hour shift, the driver was paid $371. How many miles did the driver drive during the shift?",
+      "answer": [
+        "490"
+      ],
+      "check": "(371-126)/0.5",
+      "verify": "0.5*ans + 18*7 == 371",
+      "hint": "Сначала вычти оплату за часы.",
+      "explanation": "371 − 7 · 18 = 245 долларов за мили; 245/0,5 = 490 миль. Ошибка — умножить 245 на 0,5."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Line ℓ passes through the points (1, 2) and (5, 4). Line m is the reflection of line ℓ across the x-axis. What is the y-coordinate of the y-intercept of line m?",
+      "choices": [
+        "−3/2",
+        "−1/2",
+        "3/2",
+        "3"
+      ],
+      "answer": 0,
+      "check": "-3/2",
+      "hint": "Отражение относительно оси x меняет знак у каждого y.",
+      "explanation": "ℓ: наклон 2/4 = 1/2, y = (1/2)x + 3/2. Отражение: y = −(1/2)x − 3/2, y-intercept −3/2 (A). 3/2 — пересечение самой ℓ; −1/2 — наклон m."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "In the xy-plane, the lines y = 2x + 3 and y = −x + 9 and the y-axis form a triangle. What is the area of the triangle?",
+      "answer": [
+        "6"
+      ],
+      "check": "0.5*6*2",
+      "hint": "Сторона на оси y — между пересечениями 3 и 9. Высота — x точки пересечения прямых.",
+      "explanation": "2x + 3 = −x + 9 ⇒ x = 2. Основание на оси y: 9 − 3 = 6, высота 2. Площадь (1/2) · 6 · 2 = 6."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The line 3x + 4y = c, where c is a constant, passes through the midpoint of the segment with endpoints (−2, 5) and (6, −1). What is the x-coordinate of the line's x-intercept?",
+      "choices": [
+        "7/2",
+        "14/3",
+        "7",
+        "14"
+      ],
+      "answer": 1,
+      "check": "14/3",
+      "hint": "Найди середину отрезка, затем c, затем x при y = 0.",
+      "explanation": "Середина (2, 2), c = 6 + 8 = 14. При y = 0: 3x = 14 ⇒ x = 14/3 (B). 14 — это c; 7/2 — это 14/4 (y-intercept); 7 — если делить 14 на 2."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The graph of y = (a − 1)x + 2a, where a is a constant, passes through the point (−3, 4). What is the slope of the graph?",
+      "choices": [
+        "−3",
+        "−2",
+        "−1",
+        "2"
+      ],
+      "answer": 1,
+      "check": "-2",
+      "hint": "Подставь точку, найди a, затем наклон a − 1.",
+      "explanation": "4 = −3(a − 1) + 2a = −a + 3 ⇒ a = −1. Наклон a − 1 = −2 (B). −1 — это a, а не наклон; 2 — потерян знак."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Line ℓ passes through the point (1, −3) and is perpendicular to the line x + 2y = 10. What is the x-coordinate of the point where line ℓ intersects the line x + 2y = 10?",
+      "answer": [
+        "4"
+      ],
+      "check": "20/5",
+      "hint": "Наклон данной прямой −1/2, значит, у ℓ наклон 2. Найди уравнение ℓ и реши систему.",
+      "explanation": "ℓ: y = 2x − 5. Подставляем: x + 2(2x − 5) = 10 ⇒ 5x = 20 ⇒ x = 4 (точка (4, 3)). Это основание перпендикуляра из (1, −3)."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The point P lies in the first quadrant on the line y = −(3/4)x + 6, and P is the same distance from the x-axis as from the y-axis. What is the x-coordinate of P?",
+      "answer": [
+        "24/7",
+        "3.428",
+        "3.429"
+      ],
+      "check": "24/7",
+      "verify": "ans == -(3/4)*ans + 6",
+      "hint": "Равноудалённость от осей в первой четверти означает x = y.",
+      "explanation": "x = −(3/4)x + 6 ⇒ (7/4)x = 6 ⇒ x = 24/7 ≈ 3,429. Точка лежит на пересечении данной прямой с y = x."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For every nonzero number d, the point (3 + d, 7 − 2d) lies on line ℓ. Which of the following is an equation of line ℓ?",
+      "choices": [
+        "y = 2x + 1",
+        "y = −2x + 13",
+        "y = −(1/2)x + 8.5",
+        "y = −2x + 7"
+      ],
+      "answer": 1,
+      "check": "-2x+13",
+      "hint": "При d = 0 получается точка (3, 7); шаг x на d меняет y на −2d.",
+      "explanation": "Наклон −2d/d = −2, прямая проходит через (3, 7): 7 = −6 + b ⇒ b = 13 (B). D принимает 7 за пересечение; C — перевёрнутый наклон; A — неверный знак."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "During a sale, shirts that were originally $20 are 30% off and pants that were originally $35 are 20% off. A customer bought 5 pairs of pants and some shirts at the sale prices, spending exactly $210. How many shirts did the customer buy?",
+      "answer": [
+        "5"
+      ],
+      "check": "(210-5*28)/14",
+      "verify": "14*ans + 5*28 == 210",
+      "hint": "Цены со скидкой: рубашка 14, брюки 28.",
+      "explanation": "5 · 28 = 140, на рубашки 70, 70/14 = 5. Ошибка — применять скидку 30% к брюкам или считать по исходным ценам (тогда 210 − 175 = 35 не делится на 20)."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following is an equation of the line that passes through the point (4, −1) and has an x-intercept of 6?",
+      "choices": [
+        "y = −(1/2)x + 3",
+        "y = (1/2)x − 3",
+        "y = 2x − 12",
+        "y = (1/2)x + 6"
+      ],
+      "answer": 1,
+      "check": "(1/2)x-3",
+      "hint": "Вторая точка — (6, 0).",
+      "explanation": "Наклон (0 − (−1))/(6 − 4) = 1/2. y = (1/2)(x − 6) = (1/2)x − 3 (B). Проверка: при x = 4 y = −1. A — неверный знак наклона; C — перевёрнутый; D принимает 6 за y-intercept."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The graph of px + qy = 12, where p and q are constants, passes through the points (2, 3) and (−4, 6). What is the value of p?",
+      "answer": [
+        "1.5",
+        "3/2"
+      ],
+      "check": "3/2",
+      "verify": "2*ans + 3*(12 - 2*ans)/3 == 12 and -4*ans + 6*((12 - 2*ans)/3) == 12",
+      "hint": "Две точки дают систему: 2p + 3q = 12 и −4p + 6q = 12.",
+      "explanation": "Умножим первое на 2: 4p + 6q = 24. Вычтем второе: 8p = 12 ⇒ p = 1,5, тогда q = 3. Проверка: −6 + 18 = 12."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A triangle in the xy-plane has vertices at (0, 0), (8, 0), and (2, 6). Which of the following is an equation of the line that contains the side opposite the vertex at the origin?",
+      "choices": [
+        "y = x − 8",
+        "x + y = 8",
+        "y = 3x",
+        "x + y = 6"
+      ],
+      "answer": 1,
+      "hint": "Противоположная сторона соединяет (8, 0) и (2, 6).",
+      "explanation": "Наклон (6 − 0)/(2 − 8) = −1, через (8, 0): y = −x + 8, то есть x + y = 8 (B). y = 3x — сторона из начала координат к (2, 6); A — неверный знак наклона; D не проходит через (8, 0)."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A line with a slope of −2 passes through the points (3, k) and (k, −3). What is the value of k?",
+      "answer": [
+        "9"
+      ],
+      "check": "9",
+      "verify": "(-3 - ans)/(ans - 3) == -2",
+      "hint": "(−3 − k)/(k − 3) = −2.",
+      "explanation": "−3 − k = −2(k − 3) = −2k + 6 ⇒ k = 9. Проверка: (−3 − 9)/(9 − 3) = −12/6 = −2."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The line y = kx, where k is a constant, intersects the line x + y = 12 at a point with x-coordinate 3. What is the value of k?",
+      "choices": [
+        "1/3",
+        "3",
+        "4",
+        "9"
+      ],
+      "answer": 1,
+      "check": "3",
+      "verify": "3*ans == 12 - 3",
+      "hint": "Найди y точки пересечения на прямой x + y = 12.",
+      "explanation": "При x = 3: y = 9. Точка (3, 9) лежит на y = kx ⇒ 9 = 3k ⇒ k = 3 (B). 9 — это y; 1/3 — перевёрнутое отношение; 4 — это 12/3."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The line 2x + 3y = 24 crosses the x-axis at point A and the y-axis at point B. Point C has coordinates (12, 8). What is the area of triangle ABC?",
+      "answer": [
+        "48"
+      ],
+      "check": "0.5*12*8",
+      "hint": "A = (12, 0), B = (0, 8). Где прямой угол?",
+      "explanation": "AC вертикальна (x = 12), BC горизонтальна (y = 8) — угол C прямой. Катеты 8 и 12, площадь (1/2) · 12 · 8 = 48."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following equations represents all points (x, y) in the xy-plane that are the same distance from (1, 2) as from (5, 2)?",
+      "choices": [
+        "y = 2",
+        "x = 3",
+        "y = x",
+        "x = 2"
+      ],
+      "answer": 1,
+      "check": "conceptual",
+      "hint": "Точки на одинаковом расстоянии от двух точек лежат на серединном перпендикуляре к отрезку между ними.",
+      "explanation": "Отрезок от (1, 2) до (5, 2) горизонтален, его середина (3, 2). Серединный перпендикуляр — вертикальная прямая x = 3 (B). y = 2 — сама прямая, содержащая отрезок."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A factory has 240 hours of labor. Each chair takes 3 hours and earns a profit of $20, and each table takes 8 hours and earns a profit of $50. How many more dollars of profit does the factory earn by using all of its labor on chairs than by using all of it on tables?",
+      "answer": [
+        "100"
+      ],
+      "check": "80*20-30*50",
+      "hint": "Найди точки пересечения 3x + 8y = 240 с осями.",
+      "explanation": "Только стулья: 240/3 = 80 стульев, прибыль 1600. Только столы: 30 столов, прибыль 1500. Разница 100. Хотя стол прибыльнее за штуку, за час стул даёт 20/3 ≈ 6,67, а стол 50/8 = 6,25."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Line ℓ has the equation y = 3x − 4. Line m is the image of line ℓ after a translation 2 units to the right and 5 units up. Which of the following is an equation of line m?",
+      "choices": [
+        "y = 3x + 7",
+        "y = 3x − 5",
+        "y = 3x − 3",
+        "y = 3x + 3"
+      ],
+      "answer": 1,
+      "check": "3x-5",
+      "hint": "Сдвиг вправо на 2: x → x − 2. Вверх на 5: прибавь 5.",
+      "explanation": "y = 3(x − 2) − 4 + 5 = 3x − 5 (B). Проверка: точка (0, −4) переходит в (2, 1), и 3 · 2 − 5 = 1. A — сдвиг влево; C — забыли −4 или знак; D — сдвиг влево и вверх с ошибкой."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The line 3x + 5y = 30 and the two coordinate axes form a triangle. A line through the origin divides the triangle into two triangles of equal area. What is the slope of that line?",
+      "answer": [
+        "3/5",
+        "0.6"
+      ],
+      "check": "3/5",
+      "hint": "Отрезок из вершины к середине противоположной стороны (медиана) делит треугольник пополам.",
+      "explanation": "Вершины (0, 0), (10, 0), (0, 6). Медиана из начала координат идёт к середине (5, 3) стороны между (10, 0) и (0, 6). Наклон 3/5. Обе части имеют площадь 15."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the xy-plane, the lines (k + 1)x + 2y = 6 and 4x + (k − 1)y = 3, where k is a constant, are parallel. Which of the following could be the value of k?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "9"
+      ],
+      "answer": 2,
+      "check": "3",
+      "verify": "(ans + 1)*(ans - 1) == 8",
+      "hint": "Наклоны: −(k + 1)/2 и −4/(k − 1). Приравняй.",
+      "explanation": "(k + 1)/2 = 4/(k − 1) ⇒ k² − 1 = 8 ⇒ k = ±3. При k = 3: 4x + 2y = 6 и 4x + 2y = 3 — параллельные, а не совпадающие прямые. Из вариантов подходит 3 (C). 9 — это k²; при k = 1 вторая прямая вертикальна."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Two lines pass through the point (2, 5). One has a slope of 3 and the other has a slope of −1/2. The lines cross the x-axis at points A and B. What is the distance between A and B?",
+      "answer": [
+        "35/3",
+        "11.66",
+        "11.67"
+      ],
+      "check": "12-1/3",
+      "hint": "Найди x-intercept каждой прямой: 0 = 5 + m(x − 2).",
+      "explanation": "Наклон 3: x = 2 − 5/3 = 1/3. Наклон −1/2: x = 2 + 10 = 12. AB = 12 − 1/3 = 35/3 ≈ 11,67."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Line ℓ passes through the points (0, 8) and (6, 0). Line m is parallel to line ℓ and passes through the point (3, 8). What is the area of the region in the first quadrant that lies between line ℓ and line m?",
+      "answer": [
+        "30"
+      ],
+      "check": "0.5*9*12-0.5*6*8",
+      "hint": "Найди пересечения m с осями; искомая область — разность двух треугольников.",
+      "explanation": "Наклон ℓ: −4/3. m: y − 8 = −(4/3)(x − 3) ⇒ y = −(4/3)x + 12, пересечения (9, 0) и (0, 12). Площади: 54 и 24, разность 30."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For how many integer values of k does the line y = kx + 3 intersect the segment from (1, 0) to (4, 0) in the xy-plane?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "Infinitely many"
+      ],
+      "answer": 1,
+      "check": "3",
+      "hint": "Прямая пересекает ось x при x = −3/k. Нужно 1 ≤ −3/k ≤ 4.",
+      "explanation": "Из 1 ≤ −3/k ≤ 4 следует k < 0 и −3 ≤ k ≤ −3/4. Целые: −3, −2, −1 — три значения (B). При k = −3 x = 1, при k = −1 x = 3; при k = −4 x = 0,75 — мимо отрезка."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "For every value of a other than 2, the lines y = ax + 2 and y = 2x + a intersect at exactly one point. What is the y-coordinate of the intersection point when a = 5?",
+      "answer": [
+        "7"
+      ],
+      "check": "5+2",
+      "hint": "Приравняй: ax + 2 = 2x + a. Что получится при любом a ≠ 2?",
+      "explanation": "(a − 2)x = a − 2 ⇒ x = 1 при любом a ≠ 2. Тогда y = a + 2; при a = 5 y = 7. Все такие прямые проходят через точку (1, a + 2)."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A line with a negative slope passes through the point (4, 3) and forms a triangle of area 24 with the positive x-axis and the positive y-axis. What is the slope of the line?",
+      "choices": [
+        "−4/3",
+        "−3/4",
+        "−1/2",
+        "−2"
+      ],
+      "answer": 1,
+      "check": "-3/4",
+      "hint": "Пусть пересечения p и q: x/p + y/q = 1, pq/2 = 24.",
+      "explanation": "4/p + 3/q = 1 ⇒ 4q + 3p = pq = 48. Подставляя p = 48/q: 4q + 144/q = 48 ⇒ q² − 12q + 36 = 0 ⇒ q = 6, p = 8. Наклон −6/8 = −3/4 (B). −4/3 — перевёрнутая дробь."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A shop mixes peanuts that cost $6 per kilogram with cashews that cost $15 per kilogram to make 30 kilograms of a mix that costs $9 per kilogram. How many kilograms of cashews are in the mix?",
+      "answer": [
+        "10"
+      ],
+      "check": "90/9",
+      "verify": "6*(30 - ans) + 15*ans == 9*30",
+      "hint": "Стоимость смеси: 9 · 30 = 270.",
+      "explanation": "6(30 − c) + 15c = 270 ⇒ 180 + 9c = 270 ⇒ c = 10 кг. Ошибка — считать среднюю цену (6 + 15)/2 и думать, что смесь пополам."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which of the following describes all points (x, y) that satisfy both 2x − y = 3 and 4x − 2y = 6?",
+      "choices": [
+        "No points",
+        "Exactly one point",
+        "All points on the line y = 2x − 3",
+        "All points on the line y = 2x + 3"
+      ],
+      "answer": 2,
+      "hint": "Сравни уравнения: не одно ли это уравнение, умноженное на число?",
+      "explanation": "Второе уравнение — первое, умноженное на 2: у них один и тот же график y = 2x − 3. Подходят все его точки (C). D — неверный знак свободного члена."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The x-intercept of line ℓ is 3 more than its y-intercept, both intercepts are positive, and line ℓ passes through the point (4, 1). What is the y-intercept of line ℓ?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "4/(ans + 3) + 1/ans == 1",
+      "hint": "Запиши ℓ в виде x/(b + 3) + y/b = 1 и подставь (4, 1).",
+      "explanation": "4/(b + 3) + 1/b = 1 ⇒ 4b + b + 3 = b² + 3b ⇒ b² − 2b − 3 = 0 ⇒ b = 3 (b = −1 отброшено). Прямая x/6 + y/3 = 1."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The lines 2x + y = 7, x − y = −1, and kx + 2y = 11 all pass through the same point. What is the value of k?",
+      "choices": [
+        "1.5",
+        "2",
+        "2.5",
+        "5"
+      ],
+      "answer": 2,
+      "check": "(11-6)/2",
+      "hint": "Найди точку пересечения первых двух прямых.",
+      "explanation": "Сложим: 3x = 6 ⇒ x = 2, y = 3. Подставим в третье: 2k + 6 = 11 ⇒ k = 2,5 (C). 5 — это 2k; 1,5 — ошибка при y."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In the xy-plane, points A(−2, 1), B(4, 4), and C(c, 7) form a right angle at B. What is the value of c?",
+      "answer": [
+        "2.5",
+        "5/2"
+      ],
+      "check": "2.5",
+      "verify": "(7 - 4)/(ans - 4) == -2",
+      "hint": "AB ⊥ BC: наклон BC — противоположный обратный к наклону AB.",
+      "explanation": "Наклон AB: 3/6 = 1/2, значит, наклон BC равен −2. (7 − 4)/(c − 4) = −2 ⇒ c − 4 = −1,5 ⇒ c = 2,5."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Line ℓ has a slope of 2/3. Points (x₁, y₁) and (x₂, y₂) lie on line ℓ, and x₂ − x₁ = 12. What is the distance between the two points?",
+      "choices": [
+        "8",
+        "4√13",
+        "20",
+        "12√2"
+      ],
+      "answer": 1,
+      "check": "sqrt(12^2+8^2)",
+      "hint": "Изменение y = наклон × изменение x. Затем теорема Пифагора.",
+      "explanation": "Δy = (2/3) · 12 = 8. Расстояние √(12² + 8²) = √208 = 4√13 ≈ 14,4 (B). 8 — только Δy; 20 — сумма 12 + 8; 12√2 — как при наклоне 1."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A club spends exactly $140 on x items that cost $4 each and y items that cost $7 each, buying at least one of each. What is the greatest possible value of x + y?",
+      "answer": [
+        "32"
+      ],
+      "check": "28+4",
+      "hint": "140 − 7y должно делиться на 4. Каждые 4 предмета по 7 стоят как 7 предметов по 4.",
+      "explanation": "7y должно делиться на 4 ⇒ y кратно 4. При y = 4: x = 28, сумма 32; при y = 8: x = 21, сумма 29 — сумма уменьшается с ростом y. Так как y ≥ 1, максимум 32 (y = 0 и x = 35 запрещено условием)."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The line y = 2x + 1 is reflected across the line y = x. Which of the following is an equation of the reflected line?",
+      "choices": [
+        "y = −2x + 1",
+        "y = (1/2)x − 1/2",
+        "y = (1/2)x + 1",
+        "y = −(1/2)x − 1/2"
+      ],
+      "answer": 1,
+      "check": "(1/2)x-1/2",
+      "hint": "Отражение относительно y = x меняет местами x и y.",
+      "explanation": "x = 2y + 1 ⇒ y = (x − 1)/2 = (1/2)x − 1/2 (B). Проверка: точка (0, 1) переходит в (1, 0), и (1/2) · 1 − 1/2 = 0. C — обратный наклон без пересчёта пересечения; A — отражение относительно оси y."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "What is the shortest distance from the origin to a point on the line 3x + 4y = 24?",
+      "answer": [
+        "4.8",
+        "24/5"
+      ],
+      "check": "24/5",
+      "hint": "Прямая и оси образуют прямоугольный треугольник; кратчайшее расстояние — его высота к гипотенузе.",
+      "explanation": "Пересечения: (8, 0) и (0, 6), гипотенуза 10. Площадь 24 = (1/2) · 10 · h ⇒ h = 4,8."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The graph of ax + by = c, where a, b, and c are constants and b ≠ 0, has a negative slope and a positive y-intercept. Which of the following must be true?",
+      "choices": [
+        "ab < 0 and bc > 0",
+        "ab > 0 and bc > 0",
+        "ab > 0 and bc < 0",
+        "ab < 0 and bc < 0"
+      ],
+      "answer": 1,
+      "hint": "Наклон −a/b, y-intercept c/b.",
+      "explanation": "−a/b < 0 ⇒ a и b одного знака ⇒ ab > 0. c/b > 0 ⇒ c и b одного знака ⇒ bc > 0 (B). Например, 2x + y = 3: a, b, c > 0."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A line passes through the point (6, 4) and has equal positive x- and y-intercepts. What is the area of the triangle that the line forms with the coordinate axes?",
+      "answer": [
+        "50"
+      ],
+      "check": "0.5*10*10",
+      "hint": "Равные пересечения: x + y = k.",
+      "explanation": "6 + 4 = k ⇒ прямая x + y = 10, пересечения 10 и 10. Площадь (1/2) · 10 · 10 = 50."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The line through the points (2, k) and (k, 8) is parallel to the line 3x − y = 4. What is the value of k?",
+      "choices": [
+        "2",
+        "3.5",
+        "4",
+        "7"
+      ],
+      "answer": 1,
+      "check": "3.5",
+      "verify": "(8 - ans)/(ans - 2) == 3",
+      "hint": "Наклон 3x − y = 4 равен 3.",
+      "explanation": "(8 − k)/(k − 2) = 3 ⇒ 8 − k = 3k − 6 ⇒ k = 3,5 (B). Проверка: 4,5/1,5 = 3. При k = 2 знаменатель равен нулю; 7 — если решить 8 − k = k − 6."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In the xy-plane, the lines y = x + 4 and y = −2x + 10 and the x-axis form a triangle. What is the area of the triangle?",
+      "answer": [
+        "27"
+      ],
+      "check": "0.5*9*6",
+      "hint": "Найди точку пересечения прямых и их пересечения с осью x.",
+      "explanation": "x + 4 = −2x + 10 ⇒ x = 2, y = 6. Пересечения с осью x: −4 и 5, основание 9, высота 6. Площадь (1/2) · 9 · 6 = 27."
+    }
+  ]
+}

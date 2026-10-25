@@ -40,6 +40,8 @@ export interface Exam {
   sections: ExamSection[];
   /** SAT asks for the date and kind of the practice test the score came from. */
   practiceSource: boolean;
+  /** SAT: targets per section may be given next to the total. */
+  sectionTargets?: boolean;
 }
 
 const BAND: ScoreScale = { min: 0, max: 9, step: 0.5 };
@@ -56,6 +58,7 @@ export const EXAMS: Exam[] = [
       { id: "math", title: "Math", min: 200, max: 800, step: 10 },
     ],
     practiceSource: true,
+    sectionTargets: true,
   },
   {
     id: "ielts",
@@ -115,6 +118,11 @@ export function examById(id: string): Exam | undefined {
 }
 
 export type PracticeSource = "bluebook" | "other";
+/** Where a result comes from: the real exam or a practice test. */
+export type ResultKind = "official" | "practice";
+
+export const RESULT_KIND_TITLES: Record<ResultKind, string> = { official: "Официальный экзамен", practice: "Пробный тест" };
+export const PRACTICE_SOURCE_TITLES: Record<PracticeSource, string> = { bluebook: "Bluebook (College Board)", other: "Другой пробник" };
 
 /** One exam in the student's profile. Every score is optional. */
 export interface ExamEntry {
@@ -123,8 +131,18 @@ export interface ExamEntry {
   current: { total: number | null; sections: Record<string, number | null> } | null;
   /** When the current result was obtained (the practice test date for SAT). */
   takenDate: string | null;
+  /**
+   * Official exam or practice test. Missing in results saved before it was
+   * asked (then `source` alone told "Bluebook / official" from "other").
+   */
+  kind?: ResultKind | null;
+  /** SAT practice tests: Bluebook or another one. */
   source: PracticeSource | null;
+  /** The name of another practice test ("Princeton Review #3"). */
+  sourceName?: string | null;
   target: number | null;
+  /** SAT: targets per section (rw, math), optional. */
+  targetSections?: Record<string, number | null> | null;
   /** Planned exam date, ISO. */
   examDate: string | null;
 }
@@ -191,7 +209,34 @@ export function validateScores(input: ScoresInput, today: string): ScoresValidat
       if (total !== null || values.some((v) => v !== null)) current = { total, sections };
     }
 
-    const target = raw.target ?? null;
+    // SAT: a section left out but implied by the total and the other section.
+    if (exam.id === "sat" && current && current.total !== null) {
+      const { rw, math } = current.sections;
+      if ((rw === null) !== (math === null)) {
+        const derived = current.total - (rw ?? math)!;
+        if (derived < 200 || derived > 800) return { ok: false, error: `SAT: при Total ${current.total} секция не может быть ${rw ?? math} — проверь баллы.` };
+      }
+    }
+
+    let target = raw.target ?? null;
+    let targetSections: Record<string, number | null> | null = null;
+    if (exam.sectionTargets && raw.targetSections) {
+      const t: Record<string, number | null> = {};
+      for (const s of exam.sections) {
+        const v = raw.targetSections[s.id] ?? null;
+        if (v !== null && !onScale(v, s)) return { ok: false, error: `${exam.title}: цель по ${s.title} — ${scaleHint(s)}.` };
+        t[s.id] = v;
+      }
+      const values = exam.sections.map((s) => t[s.id]);
+      if (values.some((v) => v !== null)) {
+        targetSections = t;
+        if (values.every((v) => v !== null)) {
+          const sum = values.reduce((a, b) => a! + b!, 0)!;
+          if (target === null) target = sum;
+          else if (sum !== target) return { ok: false, error: `${exam.title}: цели по секциям (${values.join(" + ")}) должны давать общий целевой балл ${target}.` };
+        }
+      }
+    }
     if (target !== null && !onScale(target, exam.total)) {
       return { ok: false, error: `${exam.title}: целевой балл — ${scaleHint(exam.total)}.` };
     }
@@ -209,9 +254,14 @@ export function validateScores(input: ScoresInput, today: string): ScoresValidat
       if (takenDate > today) return { ok: false, error: `${exam.title}: дата результата не может быть в будущем.` };
     }
 
-    const source = exam.practiceSource && current && (raw.source === "bluebook" || raw.source === "other") ? raw.source : null;
+    const kind: ResultKind | null = current && (raw.kind === "official" || raw.kind === "practice") ? raw.kind : null;
+    const source =
+      exam.practiceSource && current && kind !== "official" && (raw.source === "bluebook" || raw.source === "other") ? raw.source : null;
+    // A practice test's name: "other" on SAT; any practice test elsewhere.
+    const named = kind === "practice" && (source === "other" || !exam.practiceSource);
+    const sourceName = named && typeof raw.sourceName === "string" && raw.sourceName.trim() ? raw.sourceName.trim().slice(0, 80) : null;
 
-    entries.push({ exam: exam.id, current, takenDate, source, target, examDate });
+    entries.push({ exam: exam.id, current, takenDate, kind, source, sourceName, target, targetSections, examDate });
   }
 
   return { ok: true, value: { entries } };
@@ -234,13 +284,46 @@ export function sectionsOfExam(exam: ExamId): SectionId[] {
 export const DIAGNOSTIC_SECTIONS = ["sat-rw", "sat-math", "ielts-reading"] as const;
 export type DiagnosticSection = (typeof DIAGNOSTIC_SECTIONS)[number];
 
-/** Which diagnostic sections a student needs: those of chosen exams with no result yet. */
+/**
+ * SAT sections the result tells exactly: a section score, or the total minus
+ * the other section. Only a total (or an ACT composite) leaves both open.
+ */
+export function satSectionsKnown(e: ExamEntry): { rw: boolean; math: boolean } {
+  const c = e.current;
+  if (!c) return { rw: false, math: false };
+  if (e.exam === "sat") {
+    const { rw = null, math = null } = c.sections;
+    const viaTotal = c.total !== null;
+    return { rw: rw !== null || (viaTotal && math !== null), math: math !== null || (viaTotal && rw !== null) };
+  }
+  if (e.exam === "act") {
+    const { english = null, reading = null, math = null } = c.sections;
+    return { rw: english !== null && reading !== null, math: math !== null };
+  }
+  return { rw: false, math: false };
+}
+
+/**
+ * Which diagnostic sections a student needs: those of chosen exams with no
+ * result yet, and SAT sections a total alone only estimates.
+ */
 export function diagnosticNeeded(entries: ExamEntry[]): DiagnosticSection[] {
   if (entries.length === 0) return [...DIAGNOSTIC_SECTIONS];
   const out = new Set<DiagnosticSection>();
+  const satKnown = { rw: false, math: false };
   for (const e of entries) {
+    if (e.exam === "sat" || e.exam === "act") {
+      const k = satSectionsKnown(e);
+      satKnown.rw ||= k.rw;
+      satKnown.math ||= k.math;
+      continue;
+    }
     if (e.current) continue;
     for (const s of sectionsOfExam(e.exam)) if ((DIAGNOSTIC_SECTIONS as readonly string[]).includes(s)) out.add(s as DiagnosticSection);
+  }
+  if (entries.some((e) => e.exam === "sat" || e.exam === "act")) {
+    if (!satKnown.rw) out.add("sat-rw");
+    if (!satKnown.math) out.add("sat-math");
   }
   return DIAGNOSTIC_SECTIONS.filter((s) => out.has(s));
 }

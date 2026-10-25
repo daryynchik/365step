@@ -7,7 +7,8 @@ import { DIAGNOSTIC_SIZE } from "@/content/diagnostic";
 import { DIAGNOSTIC_SECTIONS, diagnosticNeeded, LEVEL_TITLES, SECTION_TITLES } from "@/content/exams";
 import { ButtonLink } from "@/components/ui";
 import { currentUser } from "@/lib/auth";
-import { getDiagnosticLevels, getScores } from "@/lib/scores";
+import { startTier } from "@/content/math-ladder";
+import { getDiagnosticEstimates, getDiagnosticLevels, getScores } from "@/lib/scores";
 
 export const metadata: Metadata = { title: "Диагностика" };
 export const dynamic = "force-dynamic";
@@ -15,7 +16,7 @@ export const dynamic = "force-dynamic";
 export default async function DiagnosticPage() {
   const user = await currentUser();
   if (!user) redirect("/signin");
-  const [scores, levels] = await Promise.all([getScores(user.id), getDiagnosticLevels(user.id)]);
+  const [scores, levels, estimates] = await Promise.all([getScores(user.id), getDiagnosticLevels(user.id), getDiagnosticEstimates(user.id)]);
   const needed = new Set(diagnosticNeeded(scores?.entries ?? []));
   const sections = DIAGNOSTIC_SECTIONS.filter((s) => needed.has(s) || levels[s]);
   const others = DIAGNOSTIC_SECTIONS.filter((s) => !sections.includes(s));
@@ -25,8 +26,9 @@ export default async function DiagnosticPage() {
     <div className="mx-auto max-w-2xl">
       <h1 className="text-2xl font-bold tracking-tight">Диагностика</h1>
       <p className="mt-2 text-muted">
-        По {DIAGNOSTIC_SIZE} заданий на секцию, разной сложности. Результат выставит стартовый уровень, дальше план подстраивается сам: каждые 10
-        заданий по навыку уровень растёт или снижается по твоей точности.
+        По {DIAGNOSTIC_SIZE} заданий на секцию, разной сложности. Результат выставит стартовый уровень, дальше план подстраивается сам по твоим
+        ответам. В SAT Math диагностика оценивает балл секции и стартовую ступень, а дальше сложность меняется отдельно по каждому навыку: после серии
+        верных ответов — выше, после повторяющихся ошибок — объяснение и задачи попроще.
       </p>
 
       <ol className="mt-8 space-y-2">
@@ -38,7 +40,11 @@ export default async function DiagnosticPage() {
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block font-semibold">{SECTION_TITLES[s]}</span>
-                <span className="block text-sm text-muted">{levels[s] ? `Уровень: ${LEVEL_TITLES[levels[s]!]} · можно пройти ещё раз` : `${DIAGNOSTIC_SIZE} заданий · ~15 минут`}</span>
+                <span className="block text-sm text-muted">{levels[s]
+                    ? estimates[s] != null
+                      ? `Оценка: ≈ ${estimates[s]} · старт со ступени ${startTier(estimates[s]!)} из 6 · можно пройти ещё раз`
+                      : `Уровень: ${LEVEL_TITLES[levels[s]!]} · можно пройти ещё раз`
+                    : `${DIAGNOSTIC_SIZE} заданий · ~15 минут`}</span>
               </span>
             </Link>
           </li>
@@ -57,7 +63,7 @@ export default async function DiagnosticPage() {
         )}
         {next && (
           <Link href="/path" className="text-sm font-medium text-muted hover:text-ink">
-            Позже — пока считать уровень средним
+            Позже — пока считать уровень по указанным баллам или средним
           </Link>
         )}
       </div>

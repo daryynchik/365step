@@ -62,6 +62,20 @@ export const TaskSchema = z
      * choices are equations or graphs to reason about, not values.
      */
     check: z.string().optional(),
+    /**
+     * SAT Math: a condition mathjs checks with the answer substituted for "ans"
+     * (e.g. "3*ans + 7 == 22"). It must hold for the marked choice and fail for
+     * every other one, so it proves the answer from the problem statement.
+     */
+    verify: z.string().optional(),
+    /**
+     * Internal step of the SAT Math ladder (math-ladder.ts), 1–6: easy 1–2,
+     * medium 3–4, hard 4–6. Left out: easy 1, medium 3, hard 4. Not an
+     * official difficulty — it only orders tasks for adaptive practice.
+     */
+    tier: z.number().int().min(1).max(6).optional(),
+    /** A first step, shown on request before answering. Using it lowers the credit for the answer. */
+    hint: z.string().min(5).optional(),
     // Writing prompts
     taskKind: z.enum(["chart", "table", "process", "map", "opinion", "discussion", "problem-solution", "two-part"]).optional(),
     minWords: z.number().int().positive().optional(),
@@ -90,6 +104,10 @@ export const TaskSchema = z
       if (typeof t.answer !== "string") issue("speaking-prompt answer: what a strong answer contains");
       if (!t.part || !t.questions?.length) issue("speaking-prompt needs part and questions");
       if (t.part === 2 && !t.cueCard) issue("Part 2 needs a cue card");
+    }
+    if (t.tier !== undefined) {
+      const allowed = { easy: [1, 2], medium: [3, 4], hard: [4, 5, 6] }[t.difficulty];
+      if (!allowed.includes(t.tier)) issue(`tier ${t.tier} does not fit difficulty ${t.difficulty}`);
     }
     if (t.source !== "original" && !/CC BY|public domain/i.test(t.license)) issue("external material needs an open licence (CC BY, CC BY-SA, public domain)");
   });

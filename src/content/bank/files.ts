@@ -15,6 +15,17 @@ import ieltsSpeakingPart2 from "./ielts/speaking/part2.json";
 import ieltsSpeakingPart3 from "./ielts/speaking/part3.json";
 import ieltsWritingTask1 from "./ielts/writing/task1.json";
 import ieltsWritingTask2 from "./ielts/writing/task2.json";
+import satMathLadderEquivalentExpressions from "./sat/math-ladder/equivalent-expressions.json";
+import satMathLadderInequalities from "./sat/math-ladder/inequalities.json";
+import satMathLadderLinearEquationsOne from "./sat/math-ladder/linear-equations-one.json";
+import satMathLadderLinearEquationsTwo from "./sat/math-ladder/linear-equations-two.json";
+import satMathLadderLinearFunctions from "./sat/math-ladder/linear-functions.json";
+import satMathLadderNonlinearEquations from "./sat/math-ladder/nonlinear-equations.json";
+import satMathLadderNonlinearFunctions from "./sat/math-ladder/nonlinear-functions.json";
+import satMathLadderOneVariableData from "./sat/math-ladder/one-variable-data.json";
+import satMathLadderPercentages from "./sat/math-ladder/percentages.json";
+import satMathLadderRatiosRates from "./sat/math-ladder/ratios-rates.json";
+import satMathLadderSystems from "./sat/math-ladder/systems.json";
 import satMathAreaVolume from "./sat/math/area-volume.json";
 import satMathCircles from "./sat/math/circles.json";
 import satMathEquivalentExpressions from "./sat/math/equivalent-expressions.json";
@@ -59,6 +70,17 @@ export const BANK_FILES: Record<string, unknown> = {
   "ielts/speaking/part3.json": ieltsSpeakingPart3,
   "ielts/writing/task1.json": ieltsWritingTask1,
   "ielts/writing/task2.json": ieltsWritingTask2,
+  "sat/math-ladder/equivalent-expressions.json": satMathLadderEquivalentExpressions,
+  "sat/math-ladder/inequalities.json": satMathLadderInequalities,
+  "sat/math-ladder/linear-equations-one.json": satMathLadderLinearEquationsOne,
+  "sat/math-ladder/linear-equations-two.json": satMathLadderLinearEquationsTwo,
+  "sat/math-ladder/linear-functions.json": satMathLadderLinearFunctions,
+  "sat/math-ladder/nonlinear-equations.json": satMathLadderNonlinearEquations,
+  "sat/math-ladder/nonlinear-functions.json": satMathLadderNonlinearFunctions,
+  "sat/math-ladder/one-variable-data.json": satMathLadderOneVariableData,
+  "sat/math-ladder/percentages.json": satMathLadderPercentages,
+  "sat/math-ladder/ratios-rates.json": satMathLadderRatiosRates,
+  "sat/math-ladder/systems.json": satMathLadderSystems,
   "sat/math/area-volume.json": satMathAreaVolume,
   "sat/math/circles.json": satMathCircles,
   "sat/math/equivalent-expressions.json": satMathEquivalentExpressions,

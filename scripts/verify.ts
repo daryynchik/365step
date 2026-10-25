@@ -47,7 +47,11 @@ import { canOpen, completeLesson, completePractice, getDoneKeys, getStats, submi
 import { resolveLesson } from "../src/lib/lesson-access";
 import { getPlan, getProfile, saveProfile } from "../src/lib/profile";
 import { getSkillStats } from "../src/lib/skill-stats";
-import { getDiagnosticLevels, getScoreHistory, getScores, saveScores } from "../src/lib/scores";
+import { getDiagnosticEstimates, getDiagnosticLevels, getScoreHistory, getScores, saveScores } from "../src/lib/scores";
+import { getDraw, getMathContext } from "../src/lib/mastery";
+import { diagnosticNeeded } from "../src/content/exams";
+import { startTier } from "../src/content/math-ladder";
+import { nowIso } from "../src/lib/date";
 
 // A fresh database for every run. The db module connects lazily on first query.
 const DB = path.join(process.cwd(), "data", "verify.db");
@@ -544,6 +548,116 @@ async function main() {
   ok(board[0].isMe && board[0].lessons >= steps && board[0].wins >= 1, "leaderboard counts plan steps and race wins");
   const stats = await getStats(A);
   ok(stats.level.level >= 5, `level after a whole plan: ${stats.level.level}`);
+
+  // ------------------------------------------------- SAT Math ladder --
+  {
+    const today = new Date().toISOString().slice(0, 10);
+    const satOnly = async (email: string, rw: number | null, math: number | null, total: number | null, target: number) => {
+      const id = (await registerUser(email, "password1", "Ступени"))!.userId!;
+      await saveProfile(id, { country: "usa", field: "cs", grade: 11, graduationMonth: monthFromNow(10) });
+      const r = await saveScores(id, {
+        entries: [{ exam: "sat", current: { total, sections: { rw, math } }, takenDate: today, kind: "official", source: null, target, examDate: null }],
+      });
+      ok(r.ok, `scores saved for ${email}${r.ok ? "" : ` — ${r.error}`}`);
+      return id;
+    };
+    const firstMathPractice = (p: Plan) => p.days.flatMap((d) => d.steps).find((x) => x.kind === "practice" && x.section === "sat-math")!;
+    /** Opens a step as the student would: every earlier day is marked done first. */
+    const open = async (id: string, key: string) => {
+      const p = (await getPlan(id))!;
+      const day = p.days.find((d) => d.steps.some((x) => x.key === key))!.day;
+      for (const d of p.days.filter((x) => x.day < day)) {
+        for (const st of d.steps) {
+          await run(
+            "INSERT INTO lesson_results (user_id, lesson_key, best_correct, total, attempts, first_done_at, last_done_at, last_day) VALUES (?, ?, 0, 0, 1, ?, ?, ?) ON CONFLICT DO NOTHING",
+            [id, st.key, nowIso(), nowIso(), today],
+          );
+        }
+      }
+      const [c, l] = key.split("/");
+      const found = (await resolveLesson(id, c, l, await getDoneKeys(id)))!;
+      ok(found.open, `${key} is open once the earlier days are done`);
+      return found;
+    };
+
+    // Strong and weak students get clearly different first sets.
+    const S750 = await satOnly("m750@test.kz", 750, 750, 1500, 1560);
+    const S400 = await satOnly("m400@test.kz", 500, 400, 900, 1100);
+    const p750 = (await getPlan(S750))!;
+    const p400 = (await getPlan(S400))!;
+    const k750 = firstMathPractice(p750).key;
+    const l750 = await open(S750, k750);
+    const l400 = await open(S400, firstMathPractice(p400).key);
+    const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
+    ok(l750.ladder && l750.ladder.taskTiers.length === 8, "SAT Math practice is drawn on the ladder");
+    ok(l750.ladder!.taskTiers.every((t) => t >= 4) && l400.ladder!.taskTiers.every((t) => t <= 3), `750 starts on hard steps, 400 on basic ones: ${l750.ladder!.taskTiers} vs ${l400.ladder!.taskTiers}`);
+    ok(mean(l750.ladder!.taskTiers) - mean(l400.ladder!.taskTiers) >= 2.5, "first sets differ by more than two steps on average");
+
+    // The draw is fixed until it is graded, so the server grades what was shown.
+    const again = await open(S750, k750);
+    ok(JSON.stringify(again.ladder!.taskIds) === JSON.stringify(l750.ladder!.taskIds), "the same practice lesson shows the same tasks until submitted");
+    ok((await getDraw(S750, k750)) !== null, "the draw is stored");
+
+    // Hints and answers after the solution do not raise the step.
+    const [c750, i750] = k750.split("/");
+    const right = l750.lesson.questions.map((q) => (q.kind === "choice" ? q.answer : q.answers[0]));
+    const skill = l750.taskSkills![0];
+    const before = (await getMathContext(S750, p750)).mastery[skill];
+    const hintedAll = l750.lesson.questions.map((q) => Boolean(q.hint));
+    const res = await completeLesson(S750, c750, i750, right, { hinted: hintedAll, retried: [] });
+    ok(res.ok, "practice with hints graded");
+    ok((await getDraw(S750, k750)) === null, "a graded lesson draws fresh tasks next time");
+    const after = (await getMathContext(S750, p750)).mastery[skill];
+    const hintable = hintedAll.filter(Boolean).length;
+    ok(after.answered === before.answered + 8 && after.clean === before.clean + (8 - hintable), `hinted answers are not counted as clean: ${JSON.stringify({ before, after, hintable, res: res.ok && res.result.correct })}`);
+    const attempts = await all("SELECT outcome FROM task_attempts WHERE user_id = ?", [S750]);
+    ok(attempts.length === 8 && attempts.filter((x) => x.outcome === "hinted").length === hintable, "every answer is logged with its outcome");
+
+    // All wrong on the step: help next time, with easier tasks first, for this skill only.
+    const S650 = await satOnly("m650@test.kz", 650, 650, 1300, 1450);
+    const p650 = (await getPlan(S650))!;
+    const k650 = firstMathPractice(p650).key;
+    const l650 = await open(S650, k650);
+    const skill650 = l650.taskSkills![0];
+    const wrongAll = l650.lesson.questions.map((q) => (q.kind === "choice" ? (q.answer + 1) % q.options.length : "-999"));
+    const [c650, i650] = k650.split("/");
+    const r650 = await completeLesson(S650, c650, i650, wrongAll, { retried: wrongAll.map(() => true) });
+    ok(r650.ok && (r650.result.adaptation ?? []).length > 0, "the student is told what changed");
+    const ctx650 = await getMathContext(S650, p650);
+    ok(ctx650.mastery[skill650].remediation && ctx650.mastery[skill650].tier === 4, "repeated errors: help, the step stays");
+    ok(Object.entries(ctx650.mastery).filter(([s]) => s !== skill650).every(([, m]) => m.tier === 4 && !m.remediation), "other skills are untouched");
+    const retried = await all("SELECT retried FROM task_attempts WHERE user_id = ?", [S650]);
+    ok(retried.every((x) => Number(x.retried) === 1), "right on the second try is logged, but earns no credit");
+
+    // Old progress: a skill_stats level from before the ladder keeps its distance from the section level.
+    const OLD = await satOnly("legacy@test.kz", 560, 560, 1120, 1300);
+    await run("INSERT INTO skill_stats (user_id, skill, level, window_correct, window_total, answered, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)", [OLD, "sat-math.systems", "hard", 2, 3, 23, nowIso()]);
+    const ctxOld = await getMathContext(OLD, (await getPlan(OLD))!);
+    ok(ctxOld.mastery["sat-math.systems"].tier === startTier(560) + 1 && ctxOld.mastery["sat-math.systems"].answered === 23, "old progress on a skill carries over to the ladder");
+    ok(ctxOld.mastery["sat-math.circles"].tier === startTier(560), "a skill with no old progress starts at the score's step");
+
+    // A total alone is a preliminary Math level, and the diagnostic is offered for it.
+    const TOT = await satOnly("total@test.kz", null, null, 1300, 1450);
+    const pTot = (await getPlan(TOT))!;
+    const mathTot = pTot.sections.find((x) => x.section === "sat-math")!;
+    ok(mathTot.source === "estimated" && mathTot.preliminary && mathTot.current === 650, "a total alone gives a preliminary Math estimate");
+    ok(diagnosticNeeded((await getScores(TOT))!.entries).includes("sat-math"), "the Math diagnostic is offered");
+    const mathDiag = diagnosticQuestions("sat-math").map((q) => (q.kind === "choice" ? q.answer : q.answers[0]));
+    await completeLesson(TOT, "diagnostic", "sat-math", mathDiag);
+    ok((await getDiagnosticEstimates(TOT))["sat-math"]! >= 760, "all right on the Math diagnostic: a top estimate");
+    const mathAfter = (await getPlan(TOT))!.sections.find((x) => x.section === "sat-math")!;
+    ok(mathAfter.source === "diagnostic" && !mathAfter.preliminary && mathAfter.current <= 1300 - 200, "the diagnostic replaces the estimate, within what the total allows");
+
+    // The kind of result and the practice test are kept in the history.
+    const KIND = await satOnly("kind@test.kz", 600, 620, 1220, 1400);
+    await saveScores(KIND, {
+      entries: [{ exam: "sat", current: { total: 1260, sections: { rw: 610, math: 650 } }, takenDate: today, kind: "practice", source: "other", sourceName: "Princeton Review #2", target: 1400, targetSections: { rw: 650, math: 750 }, examDate: null }],
+    });
+    const hist = await getScoreHistory(KIND);
+    ok(hist.length === 2 && hist[0].kind === "official" && hist[1].kind === "practice" && hist[1].source === "Princeton Review #2", "result kind and practice test are kept in the history");
+    ok(hist[1].targetSections?.math === 750, "section targets are kept");
+    ok((await getPlan(KIND))!.sections.find((x) => x.section === "sat-math")!.target === 750, "the Math target sets the direction for Math");
+  }
 
   // ---------------------------------------------------------------- demo --
   const demo = await ensureDemo();

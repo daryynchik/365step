@@ -153,7 +153,12 @@ export function actEnglishReadingToSatErw(sum: number): number {
 
 // -------------------------------------------------------------- state --
 
-export type LevelSource = "score" | "converted" | "diagnostic" | "default";
+/**
+ * score — the section's own score; estimated — only a total (SAT total, ACT
+ * composite) split in half; converted — another exam's section; diagnostic;
+ * default — nothing known, medium.
+ */
+export type LevelSource = "score" | "estimated" | "converted" | "diagnostic" | "default";
 
 export interface SectionState {
   section: SectionId;
@@ -166,6 +171,8 @@ export interface SectionState {
   /** gap in level widths, comparable between SAT and IELTS; never below 0. */
   normGap: number;
   source: LevelSource;
+  /** The level rests on a guess (a total only, or nothing): a diagnostic would sharpen it. */
+  preliminary: boolean;
   /** Planned exam date for this section, if the student gave one. */
   examDate: string | null;
 }
@@ -186,23 +193,28 @@ function currentScores(entries: ExamEntry[]): Known {
     if (value !== null && value !== undefined && Number.isFinite(value) && !out[s]) out[s] = { value, source };
   };
 
+  // Exact section scores first, from any exam; halves of a total only after them.
   const sat = entryOf(entries, "sat")?.current;
-  if (sat) {
-    const { rw, math } = sat.sections;
-    const total = sat.total;
-    set("sat-rw", rw ?? (total != null && math != null ? total - math : total != null ? round10(total / 2) : null), "score");
-    set("sat-math", math ?? (total != null && rw != null ? total - rw : total != null ? round10(total / 2) : null), "score");
-  }
   const act = entryOf(entries, "act")?.current;
+  if (sat) {
+    const { rw = null, math = null } = sat.sections;
+    const total = sat.total;
+    set("sat-rw", rw ?? (total != null && math != null ? total - math : null), "score");
+    set("sat-math", math ?? (total != null && rw != null ? total - rw : null), "score");
+  }
   if (act) {
     const { english, reading, math } = act.sections;
     if (math != null) set("sat-math", actMathToSat(math), "converted");
     if (english != null && reading != null) set("sat-rw", actEnglishReadingToSatErw(english + reading), "converted");
-    if (act.total != null) {
-      const half = round10(actCompositeToSat(act.total) / 2);
-      set("sat-rw", half, "converted");
-      set("sat-math", half, "converted");
-    }
+  }
+  if (sat?.total != null) {
+    set("sat-rw", round10(sat.total / 2), "estimated");
+    set("sat-math", round10(sat.total / 2), "estimated");
+  }
+  if (act?.total != null) {
+    const half = round10(actCompositeToSat(act.total) / 2);
+    set("sat-rw", half, "estimated");
+    set("sat-math", half, "estimated");
   }
 
   const ielts = entryOf(entries, "ielts")?.current;
@@ -222,11 +234,24 @@ function currentScores(entries: ExamEntry[]): Known {
   return out;
 }
 
-/** Targets per section: SAT/ACT totals split in half, IELTS/TOEFL/DET overall for every skill. */
+/**
+ * Targets per section: SAT section targets when given (the other section gets
+ * the rest of the total), else SAT/ACT totals split in half; IELTS/TOEFL/DET
+ * overall for every skill.
+ */
 function targetScores(entries: ExamEntry[]): Partial<Record<SectionId, number>> {
   const out: Partial<Record<SectionId, number>> = {};
   const set = (sections: SectionId[], value: number) => sections.forEach((s) => (out[s] ??= value));
   const t = (exam: ExamId) => entryOf(entries, exam)?.target ?? null;
+  const satEntry = entryOf(entries, "sat");
+  const ts = satEntry?.targetSections;
+  if (ts) {
+    const total = satEntry?.target ?? null;
+    const rw = ts.rw ?? (total != null && ts.math != null ? total - ts.math : null);
+    const math = ts.math ?? (total != null && ts.rw != null ? total - ts.rw : null);
+    if (rw != null && rw >= 200 && rw <= 800) out["sat-rw"] = rw;
+    if (math != null && math >= 200 && math <= 800) out["sat-math"] = math;
+  }
   if (t("sat") != null) set(SAT_SECTIONS, round10(t("sat")! / 2));
   if (t("act") != null) set(SAT_SECTIONS, round10(actCompositeToSat(t("act")!) / 2));
   if (t("ielts") != null) set(IELTS_SECTIONS, t("ielts")!);
@@ -257,14 +282,29 @@ function diagnosticLevel(section: SectionId, diagnostic: Partial<Record<Diagnost
   return diagnostic["ielts-reading"];
 }
 
-export function sectionStates(entries: ExamEntry[], diagnostic: Partial<Record<DiagnosticSection, Level>> = {}): SectionState[] {
+/**
+ * `estimates`: diagnostic score estimates (SAT Math). They come after exact
+ * scores but before a half of a total, kept within what the total allows.
+ */
+export function sectionStates(
+  entries: ExamEntry[],
+  diagnostic: Partial<Record<DiagnosticSection, Level>> = {},
+  estimates: Partial<Record<DiagnosticSection, number>> = {},
+): SectionState[] {
   const current = currentScores(entries);
   const targets = targetScores(entries);
   const dates = examDates(entries);
+  const satTotal = entryOf(entries, "sat")?.current?.total ?? null;
 
   return activeSections(entries).map((section) => {
     const sat = isSatSection(section);
-    const known = current[section];
+    let known = current[section];
+    const estimate = (estimates as Partial<Record<SectionId, number>>)[section];
+    if (estimate != null && (!known || known.source === "estimated")) {
+      const lo = satTotal != null ? Math.max(200, satTotal - 800) : 200;
+      const hi = satTotal != null ? Math.min(800, satTotal - 200) : 800;
+      known = { value: Math.min(hi, Math.max(lo, estimate)), source: "diagnostic" };
+    }
     const diag = diagnosticLevel(section, diagnostic);
     const source: LevelSource = known ? known.source : diag ? "diagnostic" : "default";
     const value = known ? (sat ? round10(known.value) : roundBand(known.value)) : scoreForLevel(section, diag ?? "medium");
@@ -274,10 +314,11 @@ export function sectionStates(entries: ExamEntry[], diagnostic: Partial<Record<D
       section,
       current: value,
       target,
-      level: known ? levelOf(section, value) : (diag ?? "medium"),
+      level: known && known.source !== "estimated" ? levelOf(section, value) : known ? (diag ?? levelOf(section, value)) : (diag ?? "medium"),
       gap,
       normGap: Math.max(0, gap / (sat ? LEVEL_WIDTH.sat : LEVEL_WIDTH.ielts)),
       source,
+      preliminary: source === "estimated" || source === "default",
       examDate: dates[section] ?? null,
     };
   });

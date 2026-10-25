@@ -1,0 +1,1640 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "advanced-math",
+    "skill": "nonlinear-equations",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "If (x − 2)² = 0, what is the value of x?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "(ans - 2)^2 == 0",
+      "hint": "Квадрат равен нулю, только если само число равно нулю.",
+      "explanation": "x − 2 = 0 ⇒ x = 2. У этого уравнения единственный корень."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which of the following values of x satisfies the equation x² + 3x = 10?",
+      "choices": [
+        "−2",
+        "2",
+        "5",
+        "10"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "ans^2 + 3*ans == 10",
+      "hint": "Перенеси 10 влево и разложи на множители.",
+      "explanation": "x² + 3x − 10 = (x + 5)(x − 2) = 0 ⇒ x = 2 или x = −5. Из вариантов подходит 2 (B). −2 и 5 — корни с перепутанными знаками."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "If √(2x) = 4, what is the value of x?",
+      "answer": [
+        "8"
+      ],
+      "check": "16/2",
+      "verify": "sqrt(2*ans) == 4",
+      "hint": "Возведи обе части в квадрат.",
+      "explanation": "2x = 16 ⇒ x = 8. Проверка: √16 = 4."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "If x/4 = 9/x and x > 0, what is the value of x?",
+      "choices": [
+        "3",
+        "6",
+        "9",
+        "36"
+      ],
+      "answer": 1,
+      "check": "6",
+      "verify": "ans/4 == 9/ans",
+      "hint": "Перемножь крест-накрест.",
+      "explanation": "x² = 36 ⇒ x = 6 (x > 0) (B). 36 — это x²; 9 — число из условия."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "If 5^x = 125, what is the value of x?",
+      "choices": [
+        "3",
+        "5",
+        "25",
+        "625"
+      ],
+      "answer": 0,
+      "check": "3",
+      "verify": "5^ans == 125",
+      "hint": "125 = 5 · 5 · 5.",
+      "explanation": "125 = 5³, поэтому x = 3 (A). 25 — это 125/5; 625 — 5⁴."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The equation x² − 3x − 10 = 0 has exactly one positive solution. What is that solution?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "ans^2 - 3*ans - 10 == 0",
+      "hint": "Найди два числа с произведением −10 и суммой −3.",
+      "explanation": "(x − 5)(x + 2) = 0 ⇒ x = 5 или x = −2. Положительный корень — 5."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "What are the solutions to the equation (2x − 1)(x + 4) = 0?",
+      "choices": [
+        "x = 1/2 and x = −4",
+        "x = −1/2 and x = 4",
+        "x = 2 and x = −4",
+        "x = 1 and x = −4"
+      ],
+      "answer": 0,
+      "hint": "Приравняй каждый множитель к нулю.",
+      "explanation": "2x − 1 = 0 ⇒ x = 1/2; x + 4 = 0 ⇒ x = −4 (A). C — если решить 2x − 1 = 0 как x = 2; D — забыли разделить на 2."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If (x + 3)(x − 3) = 16, what is the value of x²?",
+      "choices": [
+        "7",
+        "16",
+        "25",
+        "34"
+      ],
+      "answer": 2,
+      "check": "25",
+      "hint": "(x + 3)(x − 3) = x² − 9.",
+      "explanation": "x² − 9 = 16 ⇒ x² = 25 (C). 7 — это 16 − 9; 34 — если прибавить 18."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 6/(x − 1) = 2, what is the value of x?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "6/(ans - 1) == 2",
+      "hint": "x − 1 = 6/2.",
+      "explanation": "x − 1 = 3 ⇒ x = 4. Проверка: 6/3 = 2."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following values of x satisfies the equation |3x| = 12?",
+      "choices": [
+        "−3",
+        "−4",
+        "3",
+        "36"
+      ],
+      "answer": 1,
+      "check": "-4",
+      "verify": "abs(3*ans) == 12",
+      "hint": "|3x| = 12 означает 3x = 12 или 3x = −12.",
+      "explanation": "x = 4 или x = −4. Среди вариантов есть −4 (B). 36 — это 3 · 12; ±3 — 12 : 4."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If x² + 4 = 29 and x > 0, what is the value of x?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "ans^2 + 4 == 29",
+      "hint": "x² = 25.",
+      "explanation": "x² = 25 ⇒ x = 5 (так как x > 0)."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following equations has no real solution?",
+      "choices": [
+        "x² − 9 = 0",
+        "x² + 9 = 0",
+        "x² = 0",
+        "(x + 9)² = 0"
+      ],
+      "answer": 1,
+      "hint": "Может ли квадрат действительного числа быть отрицательным?",
+      "explanation": "x² + 9 = 0 ⇒ x² = −9 — невозможно для действительных чисел (B). У A корни ±3, у C — 0, у D — −9."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the positive difference between the two solutions to the equation (x − 1)(x − 5) = 0?",
+      "answer": [
+        "4"
+      ],
+      "check": "5-1",
+      "hint": "Найди оба корня.",
+      "explanation": "Множители дают корни 1 и 5, положительная разность 5 − 1 = 4."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "In the system of equations y = x² and y = x + 6, what are the possible values of x?",
+      "choices": [
+        "−2 and 3",
+        "2 and −3",
+        "3 only",
+        "−6 and 1"
+      ],
+      "answer": 0,
+      "hint": "x² = x + 6.",
+      "explanation": "x² − x − 6 = 0 ⇒ (x − 3)(x + 2) = 0 ⇒ x = 3 или x = −2 (A). Решения системы: (3, 9) и (−2, 4). B — знаки перепутаны; C теряет отрицательный корень."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 3√x = 12, what is the value of x?",
+      "answer": [
+        "16"
+      ],
+      "check": "4^2",
+      "verify": "3*sqrt(ans) == 12",
+      "hint": "Сначала найди √x.",
+      "explanation": "√x = 4 ⇒ x = 16. Ошибка — ответить 4 (это √x)."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x² = 0.36, which of the following could be the value of x?",
+      "choices": [
+        "0.06",
+        "0.18",
+        "−0.6",
+        "0.72"
+      ],
+      "answer": 2,
+      "check": "-0.6",
+      "verify": "ans^2 == 0.36",
+      "hint": "0,6 · 0,6 = 0,36.",
+      "explanation": "x = ±0,6; среди вариантов −0,6 (C). 0,06² = 0,0036; 0,18 — это 0,36/2; 0,72 — 2 · 0,36."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 2^(x + 1) = 32, what is the value of x?",
+      "answer": [
+        "4"
+      ],
+      "check": "5-1",
+      "verify": "2^(ans + 1) == 32",
+      "hint": "32 = 2⁵.",
+      "explanation": "x + 1 = 5 ⇒ x = 4. Ошибка — ответ 5 (это x + 1)."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following ordered pairs (x, y) is a solution to the system of equations y = x² + 1 and y = 2?",
+      "choices": [
+        "(2, 1)",
+        "(−1, 2)",
+        "(1, 1)",
+        "(0, 2)"
+      ],
+      "answer": 1,
+      "hint": "Подставь y = 2 в первое уравнение.",
+      "explanation": "x² + 1 = 2 ⇒ x = ±1, решения (1, 2) и (−1, 2). Из вариантов (−1, 2) (B). (0, 2): 0 + 1 = 1 ≠ 2; (2, 1) — координаты перепутаны."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 1/x + 1/(2x) = 3, what is the value of x?",
+      "answer": [
+        "0.5",
+        "1/2"
+      ],
+      "check": "1/2",
+      "verify": "1/ans + 1/(2*ans) == 3",
+      "hint": "Приведи к общему знаменателю 2x.",
+      "explanation": "2/(2x) + 1/(2x) = 3/(2x) = 3 ⇒ 2x = 1 ⇒ x = 1/2."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following equations has the solutions x = 3 and x = −5?",
+      "choices": [
+        "(x + 3)(x − 5) = 0",
+        "(x − 3)(x + 5) = 0",
+        "x² − 15 = 0",
+        "(x − 3)(x − 5) = 0"
+      ],
+      "answer": 1,
+      "hint": "Корень r даёт множитель (x − r).",
+      "explanation": "x = 3 ⇒ (x − 3), x = −5 ⇒ (x + 5) (B). A даёт −3 и 5; D — 3 и 5; C — ±√15."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If x² = 3x + 18 and x > 0, what is the value of x?",
+      "answer": [
+        "6"
+      ],
+      "check": "6",
+      "verify": "ans^2 == 3*ans + 18",
+      "hint": "x² − 3x − 18 = 0.",
+      "explanation": "(x − 6)(x + 3) = 0 ⇒ x = 6 (x > 0)."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 4^x = 2⁶, what is the value of x?",
+      "choices": [
+        "1.5",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "check": "3",
+      "verify": "4^ans == 2^6",
+      "hint": "4 = 2², поэтому 4^x = 2^(2x).",
+      "explanation": "2x = 6 ⇒ x = 3 (B). 6 — если не заменить основание; 1,5 — разделили 6 на 4."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "The product of two consecutive positive integers is 132. What is the larger of the two integers?",
+      "answer": [
+        "12"
+      ],
+      "check": "12",
+      "verify": "ans*(ans - 1) == 132",
+      "hint": "n(n + 1) = 132. Какие соседние числа дают 132?",
+      "explanation": "11 · 12 = 132, большее — 12. Через уравнение: n² + n − 132 = 0 ⇒ (n + 12)(n − 11) = 0."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If (x − 4)² = 9, which of the following could be the value of x?",
+      "choices": [
+        "−7",
+        "1",
+        "3",
+        "13"
+      ],
+      "answer": 1,
+      "check": "1",
+      "verify": "(ans - 4)^2 == 9",
+      "hint": "x − 4 = 3 или x − 4 = −3.",
+      "explanation": "x = 7 или x = 1. Среди вариантов 1 (B). 13 — это 4 + 9 (забыли корень); −7 — ошибка знака."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If x/(x + 2) = 3/5, what is the value of x?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "ans/(ans + 2) == 3/5",
+      "hint": "Перемножь крест-накрест.",
+      "explanation": "5x = 3(x + 2) ⇒ 2x = 6 ⇒ x = 3. Проверка: 3/5."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "What are the solutions to the equation 2x² − 5x − 3 = 0?",
+      "choices": [
+        "x = −1/2 and x = 3",
+        "x = 1/2 and x = −3",
+        "x = −1 and x = 3/2",
+        "x = 1 and x = −3/2"
+      ],
+      "answer": 0,
+      "hint": "Разложи: 2x² − 5x − 3 = (2x + 1)(x − 3).",
+      "explanation": "2x + 1 = 0 ⇒ x = −1/2; x − 3 = 0 ⇒ x = 3 (A). Проверка: 2 · 9 − 15 − 3 = 0. B — знаки перепутаны."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If x² + y² = 50 and y = x, what is the positive value of x?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "ans^2 + ans^2 == 50",
+      "hint": "Подставь y = x.",
+      "explanation": "Подставляем y = x: 2x² = 50 ⇒ x² = 25 ⇒ x = 5 (берём положительный корень)."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following ordered pairs (x, y) is a solution to the system of equations y = x² − 4x and y = −3?",
+      "choices": [
+        "(−1, −3)",
+        "(3, −3)",
+        "(−3, 3)",
+        "(2, −4)"
+      ],
+      "answer": 1,
+      "hint": "x² − 4x = −3.",
+      "explanation": "x² − 4x + 3 = 0 ⇒ (x − 1)(x − 3) = 0 ⇒ x = 1 или 3. Из вариантов (3, −3) (B). (2, −4) — вершина параболы, но не на прямой y = −3."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation √(x + 9) = x − 3?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "sqrt(ans + 9) == ans - 3",
+      "hint": "Возведи в квадрат и обязательно проверь корни.",
+      "explanation": "x + 9 = x² − 6x + 9 ⇒ x² − 7x = 0 ⇒ x = 0 или x = 7. При x = 0: √9 = 3 ≠ −3 — посторонний корень. Ответ 7: √16 = 4."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For x ≠ 0, what are the solutions to the equation x − 8/x = 2?",
+      "choices": [
+        "x = −4 and x = 2",
+        "x = 4 and x = −2",
+        "x = 4 only",
+        "x = 8 and x = −1"
+      ],
+      "answer": 1,
+      "hint": "Умножь на x: x² − 8 = 2x.",
+      "explanation": "x² − 2x − 8 = 0 ⇒ (x − 4)(x + 2) = 0 (B). Проверка: 4 − 2 = 2 и −2 + 4 = 2. C теряет отрицательный корень."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "What is the sum of the solutions to the equation 3x² − 12x − 15 = 0?",
+      "answer": [
+        "4"
+      ],
+      "check": "5+(-1)",
+      "hint": "Раздели всё на 3.",
+      "explanation": "x² − 4x − 5 = 0 ⇒ (x − 5)(x + 1) = 0. Сумма 5 + (−1) = 4."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "How many distinct real solutions does the equation (x − 2)(x² − 9) = 0 have?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 2,
+      "check": "3",
+      "hint": "x² − 9 тоже раскладывается.",
+      "explanation": "(x − 2)(x − 3)(x + 3) = 0: корни 2, 3 и −3 — три (C). 2 — если считать x² − 9 одним корнем."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If 5(x − 1)² = 45 and x < 0, what is the value of x?",
+      "answer": [
+        "-2"
+      ],
+      "check": "1-3",
+      "verify": "5*(ans - 1)^2 == 45 and ans < 0",
+      "hint": "(x − 1)² = 9.",
+      "explanation": "x − 1 = ±3 ⇒ x = 4 или x = −2. Условию x < 0 подходит −2."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "In the xy-plane, at which points does the parabola y = x² − 2x − 3 intersect the line y = x + 1?",
+      "choices": [
+        "(−1, 0) and (4, 5)",
+        "(1, 2) and (−4, −3)",
+        "(−1, 0) only",
+        "(3, 4) and (0, 1)"
+      ],
+      "answer": 0,
+      "hint": "x² − 2x − 3 = x + 1.",
+      "explanation": "x² − 3x − 4 = 0 ⇒ x = 4 или x = −1; y = 5 и 0 (A). B — корни с неверными знаками; D — точки на прямой, но не на параболе."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "What is the product of the solutions to the equation |x + 3| = 8?",
+      "answer": [
+        "-55"
+      ],
+      "check": "5*(-11)",
+      "hint": "x + 3 = 8 или x + 3 = −8.",
+      "explanation": "x = 5 или x = −11, произведение −55."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "How many real solutions does the equation x² + 1 = 2x have, and what are they?",
+      "choices": [
+        "Two: −1 and 1",
+        "One: 1",
+        "One: −1",
+        "None"
+      ],
+      "answer": 1,
+      "hint": "Перенеси 2x влево.",
+      "explanation": "x² − 2x + 1 = (x − 1)² = 0 — единственный корень 1 (B). A — решения x² = 1, а не этого уравнения."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If 3^(2x) = 81, what is the value of x?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "3^(2*ans) == 81",
+      "hint": "81 = 3⁴.",
+      "explanation": "3^(2x) = 3⁴ ⇒ 2x = 4 ⇒ x = 2. Ошибка — ответ 4 (это 2x)."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The side length of a square is increased by 3 centimeters, and the area of the new square is 64 square centimeters. What was the original side length, in centimeters?",
+      "choices": [
+        "5",
+        "8",
+        "11",
+        "61"
+      ],
+      "answer": 0,
+      "check": "5",
+      "verify": "(ans + 3)^2 == 64",
+      "hint": "(s + 3)² = 64.",
+      "explanation": "s + 3 = 8 ⇒ s = 5 (A). 8 — новая сторона; 61 — если вычесть 3 из площади; 11 — 8 + 3."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The sum of a positive number and its square is 72. What is the number?",
+      "answer": [
+        "8"
+      ],
+      "check": "8",
+      "verify": "ans + ans^2 == 72 and ans > 0",
+      "hint": "x² + x − 72 = 0.",
+      "explanation": "(x + 9)(x − 8) = 0 ⇒ x = 8 (положительный)."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If x² − 6x = 16, which of the following could be the value of x?",
+      "choices": [
+        "−8",
+        "−2",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "check": "-2",
+      "verify": "ans^2 - 6*ans == 16",
+      "hint": "x² − 6x − 16 = 0.",
+      "explanation": "(x − 8)(x + 2) = 0 ⇒ x = 8 или −2. Среди вариантов −2 (B). −8 — знак перепутан."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If x² − y² = 24 and x + y = 6, what is the value of x?",
+      "choices": [
+        "1",
+        "5",
+        "4",
+        "10"
+      ],
+      "answer": 1,
+      "check": "5",
+      "hint": "x² − y² = (x + y)(x − y).",
+      "explanation": "6(x − y) = 24 ⇒ x − y = 4. Тогда x = (6 + 4)/2 = 5 (B), y = 1. 4 — это x − y; 1 — это y."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation √(3x + 1) = √(x + 9)?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "sqrt(3*ans + 1) == sqrt(ans + 9)",
+      "hint": "Равные корни — равные подкоренные выражения.",
+      "explanation": "3x + 1 = x + 9 ⇒ x = 4. Проверка: √13 = √13."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The solutions to the equation x² + bx − 12 = 0, where b is a constant, are 3 and −4. What is the value of b?",
+      "choices": [
+        "−7",
+        "−1",
+        "1",
+        "7"
+      ],
+      "answer": 2,
+      "check": "1",
+      "hint": "(x − 3)(x + 4) = x² + x − 12.",
+      "explanation": "Раскрываем: x² + x − 12, значит, b = 1 (C). −1 — сумма корней (b = −(сумма)); 7 и −7 — разность корней."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "What is the sum of the x-coordinates of the solutions to the system y = x² − 6 and y = x?",
+      "answer": [
+        "1"
+      ],
+      "check": "3+(-2)",
+      "hint": "x² − 6 = x.",
+      "explanation": "x² − x − 6 = 0 ⇒ (x − 3)(x + 2) = 0, сумма 3 + (−2) = 1."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ 1 and x ≠ −1, what is the solution to the equation (x + 2)/(x − 1) = (x + 6)/(x + 1)?",
+      "choices": [
+        "2",
+        "4",
+        "−4",
+        "8"
+      ],
+      "answer": 1,
+      "check": "4",
+      "verify": "(ans + 2)/(ans - 1) == (ans + 6)/(ans + 1)",
+      "hint": "Перемножь крест-накрест: x² сократится.",
+      "explanation": "(x + 2)(x + 1) = (x + 6)(x − 1) ⇒ x² + 3x + 2 = x² + 5x − 6 ⇒ 8 = 2x ⇒ x = 4 (B). Проверка: 6/3 = 10/5 = 2."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "What is the positive solution to the equation 4x² − 12x + 9 = 25?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "4*ans^2 - 12*ans + 9 == 25 and ans > 0",
+      "hint": "Левая часть — полный квадрат (2x − 3)².",
+      "explanation": "(2x − 3)² = 25 ⇒ 2x − 3 = ±5 ⇒ x = 4 или x = −1. Положительный — 4."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "What is the solution to the equation 2^(x + 3) = 4^(x − 1)?",
+      "choices": [
+        "1",
+        "4",
+        "5",
+        "7"
+      ],
+      "answer": 2,
+      "check": "5",
+      "verify": "2^(ans + 3) == 4^(ans - 1)",
+      "hint": "4^(x − 1) = 2^(2x − 2).",
+      "explanation": "x + 3 = 2x − 2 ⇒ x = 5 (C). Проверка: 2⁸ = 4⁴ = 256. 4 — если забыть удвоить −1."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The height, in feet, of a ball t seconds after it is thrown is h(t) = −16t² + 48t + 64. At how many seconds after it is thrown is the ball again at its starting height of 64 feet?",
+      "answer": [
+        "3"
+      ],
+      "check": "48/16",
+      "verify": "-16*ans^2 + 48*ans + 64 == 64 and ans > 0",
+      "hint": "−16t² + 48t = 0.",
+      "explanation": "−16t(t − 3) = 0 ⇒ t = 0 (бросок) или t = 3 секунды."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If x² + 4x = 1, what is the value of (x + 2)²?",
+      "choices": [
+        "1",
+        "3",
+        "5",
+        "9"
+      ],
+      "answer": 2,
+      "check": "5",
+      "hint": "(x + 2)² = x² + 4x + 4.",
+      "explanation": "(x + 2)² = (x² + 4x) + 4 = 1 + 4 = 5 (C). Находить x не нужно. 9 — если взять (1 + 2)²."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "How many ordered pairs (x, y) satisfy the system of equations y = x² − 4 and y = 2x − 5?",
+      "answer": [
+        "1"
+      ],
+      "check": "1",
+      "hint": "x² − 4 = 2x − 5.",
+      "explanation": "x² − 2x + 1 = 0 ⇒ (x − 1)² = 0 — один корень. Прямая касается параболы в точке (1, −3)."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If √x + √x + √x = 12, what is the value of x?",
+      "choices": [
+        "4",
+        "16",
+        "48",
+        "144"
+      ],
+      "answer": 1,
+      "check": "16",
+      "verify": "3*sqrt(ans) == 12",
+      "hint": "3√x = 12.",
+      "explanation": "√x = 4 ⇒ x = 16 (B). 4 — это √x; 144 — если возвести 12 в квадрат."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The length of a rectangle is 2 units more than 3 times its width, and the area of the rectangle is 56 square units. What is the width of the rectangle?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "ans*(3*ans + 2) == 56 and ans > 0",
+      "hint": "w(3w + 2) = 56.",
+      "explanation": "3w² + 2w − 56 = 0 ⇒ (3w + 14)(w − 4) = 0 ⇒ w = 4 (длина 14)."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For x ≠ 2, what is the solution to the equation (x² − 4)/(x − 2) = 7?",
+      "choices": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": 1,
+      "check": "5",
+      "verify": "(ans^2 - 4)/(ans - 2) == 7",
+      "hint": "x² − 4 = (x − 2)(x + 2).",
+      "explanation": "При x ≠ 2 левая часть равна x + 2. x + 2 = 7 ⇒ x = 5 (B). 9 — это 7 + 2; 3 — 7 − 4."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "What is the sum of all solutions to the equation |2x − 7| = x + 1?",
+      "answer": [
+        "10"
+      ],
+      "check": "8+2",
+      "hint": "Два случая: 2x − 7 = x + 1 или 2x − 7 = −(x + 1). Проверь каждый.",
+      "explanation": "Первый: x = 8 (|9| = 9). Второй: 3x = 6, x = 2 (|−3| = 3). Оба подходят, сумма 10."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If x⁴ = 16x² and x ≠ 0, which of the following could be the value of x?",
+      "choices": [
+        "−4",
+        "2",
+        "8",
+        "16"
+      ],
+      "answer": 0,
+      "check": "-4",
+      "verify": "ans^4 == 16*ans^2 and ans != 0",
+      "hint": "Раздели на x² (это можно, так как x ≠ 0).",
+      "explanation": "x² = 16 ⇒ x = ±4. Из вариантов −4 (A). 16 — это x²; 2 — корень из 4."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The equation x² − 8x + k = 0, where k is a constant, has two solutions, r and r + 2. What is the value of k?",
+      "answer": [
+        "15"
+      ],
+      "check": "3*5",
+      "hint": "Сумма корней 2r + 2 = 8.",
+      "explanation": "r = 3, корни 3 и 5. k — их произведение: 15."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "When the equation √(x + 2) = x is solved by squaring both sides, two values of x are found. Which of them is NOT a solution to the original equation?",
+      "choices": [
+        "−1",
+        "1",
+        "2",
+        "−2"
+      ],
+      "answer": 0,
+      "check": "-1",
+      "hint": "Найди корни x² = x + 2 и подставь их в исходное уравнение.",
+      "explanation": "x² − x − 2 = 0 ⇒ x = 2 или x = −1. При x = −1: √1 = 1 ≠ −1 — посторонний корень (A). x = 2 подходит: √4 = 2."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For x ≠ 2 and x ≠ −2, what is the solution to the equation 5/(x + 2) + 3/(x − 2) = 0?",
+      "answer": [
+        "0.5",
+        "1/2"
+      ],
+      "check": "1/2",
+      "verify": "5/(ans + 2) + 3/(ans - 2) == 0",
+      "hint": "Умножь обе части на (x + 2)(x − 2).",
+      "explanation": "5(x − 2) + 3(x + 2) = 0 ⇒ 8x − 4 = 0 ⇒ x = 0,5. Проверка: 5/2,5 = 2 и 3/(−1,5) = −2."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the xy-plane, the graph of y = x² + 2 intersects the line y = k at two points that are 6 units apart. What is the value of k?",
+      "choices": [
+        "3",
+        "9",
+        "11",
+        "38"
+      ],
+      "answer": 2,
+      "check": "11",
+      "hint": "Точки симметричны: x = ±3.",
+      "explanation": "При x = 3: y = 9 + 2 = 11, значит, k = 11 (C). 9 — это 3² без +2; 38 — если взять x = 6."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If (x − 3)(x + k) = x² + 2x − 15 for all values of x, what is the value of k?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "-3 + ans == 2 and -3*ans == -15",
+      "hint": "Раскрой скобки и сравни коэффициенты.",
+      "explanation": "x² + (k − 3)x − 3k. Нужно k − 3 = 2 и −3k = −15: оба дают k = 5."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the system of equations y = x² − 2x + 3 and y = mx + 2, m is a constant. For which of the following values of m does the system have exactly one solution?",
+      "choices": [
+        "0",
+        "2",
+        "4",
+        "−2"
+      ],
+      "answer": 0,
+      "check": "0",
+      "verify": "(2 + ans)^2 - 4 == 0",
+      "hint": "x² − (2 + m)x + 1 = 0 должно иметь один корень: дискриминант равен 0.",
+      "explanation": "Дискриминант (2 + m)² − 4 = 0 ⇒ 2 + m = ±2 ⇒ m = 0 или m = −4. Из вариантов подходит 0 (A): прямая y = 2 касается параболы в вершине (1, 2)."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If a + b = 7 and ab = 10, what is the value of a² + b²?",
+      "answer": [
+        "29"
+      ],
+      "check": "49-20",
+      "hint": "(a + b)² = a² + 2ab + b².",
+      "explanation": "a² + b² = 49 − 2 · 10 = 29. Проверка: a = 5, b = 2: 25 + 4 = 29."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For which values of k does the equation x² + kx + 9 = 0 have no real solutions?",
+      "choices": [
+        "−6 < k < 6",
+        "k < −6 or k > 6",
+        "k = −6 or k = 6",
+        "k > 0"
+      ],
+      "answer": 0,
+      "hint": "Нет действительных решений — дискриминант отрицательный.",
+      "explanation": "k² − 36 < 0 ⇒ −6 < k < 6 (A). B — два корня; C — один корень."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "What is the positive solution to the equation √(2x + 3) − √(x + 1) = 1?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "sqrt(2*ans + 3) - sqrt(ans + 1) == 1",
+      "hint": "Перенеси √(x + 1) вправо и возведи в квадрат дважды.",
+      "explanation": "2x + 3 = 1 + 2√(x + 1) + x + 1 ⇒ x + 1 = 2√(x + 1) ⇒ (x + 1)² = 4(x + 1) ⇒ x = −1 или x = 3. Оба корня подходят, положительный — 3: √9 − √4 = 1."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The graphs of y = x² and y = −x² + 2x + 12 intersect at the points (a, b) and (c, d). What is the value of b + d?",
+      "choices": [
+        "5",
+        "9",
+        "13",
+        "1"
+      ],
+      "answer": 2,
+      "check": "9+4",
+      "hint": "Приравняй: 2x² − 2x − 12 = 0.",
+      "explanation": "x² − x − 6 = 0 ⇒ x = 3 или x = −2, тогда y = 9 и 4. b + d = 13 (C). 1 — сумма x-координат; 5 — их разность."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 2^x + 2^x + 2^x + 2^x = 2^10, what is the value of x?",
+      "answer": [
+        "8"
+      ],
+      "check": "8",
+      "verify": "4*2^ans == 2^10",
+      "hint": "Четыре одинаковых слагаемых — это 4 · 2^x = 2² · 2^x.",
+      "explanation": "2^(x + 2) = 2^10 ⇒ x = 8. Ошибка — 10/4 = 2,5 (сложение показателей вместо умножения на 4)."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x > 0, what is the solution to the equation 9^x − 4(3^x) + 3 = 0?",
+      "choices": [
+        "0",
+        "1",
+        "3",
+        "No solution"
+      ],
+      "answer": 1,
+      "check": "1",
+      "verify": "9^ans - 4*3^ans + 3 == 0 and ans > 0",
+      "hint": "Обозначь u = 3^x; тогда 9^x = u².",
+      "explanation": "u² − 4u + 3 = 0 ⇒ u = 1 или u = 3, то есть x = 0 или x = 1. С условием x > 0 подходит x = 1 (B). 3 — это значение u, а не x."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "One solution to the equation 2x² + bx − 6 = 0, where b is a constant, is x = 3. What is the other solution?",
+      "answer": [
+        "-1"
+      ],
+      "check": "-3/3",
+      "hint": "Произведение корней равно −6/2.",
+      "explanation": "Произведение корней −3, один корень 3, значит, второй −1. (Тогда b = −4.)"
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If (x − 2)² + (y + 1)² = 0, what is the value of x + y?",
+      "choices": [
+        "−1",
+        "0",
+        "1",
+        "3"
+      ],
+      "answer": 2,
+      "check": "1",
+      "hint": "Сумма двух квадратов равна нулю только если оба равны нулю.",
+      "explanation": "x − 2 = 0 и y + 1 = 0 ⇒ x = 2, y = −1, x + y = 1 (C). 3 — если y = 1."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A rectangle has a perimeter of 34 units and a diagonal of 13 units. What is the area of the rectangle, in square units?",
+      "answer": [
+        "60"
+      ],
+      "check": "(17^2-13^2)/2",
+      "hint": "l + w = 17 и l² + w² = 169. Нужно lw.",
+      "explanation": "(l + w)² = l² + w² + 2lw ⇒ 289 = 169 + 2lw ⇒ lw = 60. Это прямоугольник 5 × 12."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The equation x² − 6x + c = 0, where c is a constant, has two real solutions, and the product of the solutions is 4/3 times their sum. What is the value of c?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "24"
+      ],
+      "answer": 2,
+      "check": "8",
+      "hint": "Сумма корней 6, произведение c.",
+      "explanation": "c = (4/3) · 6 = 8 (C). Проверка: x² − 6x + 8 = (x − 2)(x − 4), корни действительные. 24 — если взять 4 · 6 (тогда корней нет: 36 − 96 < 0)."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "For x ≠ 1 and x ≠ −1, what is the solution to the equation 2/(x − 1) − 1/(x + 1) = 4/(x² − 1)?",
+      "choices": [
+        "1",
+        "−1",
+        "3",
+        "There is no solution."
+      ],
+      "answer": 3,
+      "hint": "Умножь на x² − 1 и проверь, допустим ли найденный корень.",
+      "explanation": "2(x + 1) − (x − 1) = 4 ⇒ x + 3 = 4 ⇒ x = 1. Но x = 1 запрещён (знаменатель равен нулю), поэтому решений нет (D)."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the graphs of y = x² − 4x and y = 2x + k, where k is a constant, intersect at two points whose x-coordinates differ by 4. What is the value of k?",
+      "choices": [
+        "−5",
+        "−4",
+        "4",
+        "5"
+      ],
+      "answer": 0,
+      "check": "-5",
+      "hint": "x² − 6x − k = 0. Разность корней равна √(дискриминант).",
+      "explanation": "Разность корней √(36 + 4k) = 4 ⇒ 36 + 4k = 16 ⇒ k = −5 (A). Проверка: x² − 6x + 5 = 0, корни 1 и 5."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If x² − 5x + 1 = 0, what is the value of x + 1/x?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "hint": "Раздели уравнение на x.",
+      "explanation": "x − 5 + 1/x = 0 ⇒ x + 1/x = 5. Находить корни (5 ± √21)/2 не нужно."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following equations has exactly two distinct real solutions?",
+      "choices": [
+        "(x² − 4)(x² + 4) = 0",
+        "x² + 4x + 4 = 0",
+        "x⁴ + 1 = 0",
+        "x³ − x = 0"
+      ],
+      "answer": 0,
+      "hint": "Разложи каждое уравнение на множители.",
+      "explanation": "(x² − 4)(x² + 4) = 0: x² = 4 даёт ±2, а x² = −4 решений не даёт — ровно два (A). B — один корень −2; C — ни одного; D — три: 0 и ±1."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A company's profit, in dollars, from selling x items is P(x) = −x² + 60x − 500. What is the smaller number of items for which the profit is $300?",
+      "answer": [
+        "20"
+      ],
+      "check": "20",
+      "verify": "-ans^2 + 60*ans - 500 == 300",
+      "hint": "−x² + 60x − 800 = 0.",
+      "explanation": "x² − 60x + 800 = (x − 20)(x − 40) = 0. Прибыль 300 при 20 и 40 изделиях; меньшее — 20."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If x² = 2x + 1, what is the value of x² − 2x + 7?",
+      "choices": [
+        "1",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "check": "8",
+      "hint": "Выдели в выражении x² − 2x.",
+      "explanation": "x² − 2x = 1, поэтому x² − 2x + 7 = 8 (C). Корни 1 ± √2 находить не нужно."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If x + y = 10 and xy = 21, what is the value of |x − y|?",
+      "answer": [
+        "4"
+      ],
+      "check": "sqrt(100-84)",
+      "hint": "(x − y)² = (x + y)² − 4xy.",
+      "explanation": "(x − y)² = 100 − 84 = 16 ⇒ |x − y| = 4. Числа 7 и 3."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation √(x − a) = x − 5, a is a constant. If x = 7 is a solution to the equation, what is the value of a?",
+      "choices": [
+        "1",
+        "3",
+        "5",
+        "−3"
+      ],
+      "answer": 1,
+      "check": "3",
+      "verify": "sqrt(7 - ans) == 7 - 5",
+      "hint": "Подставь x = 7.",
+      "explanation": "√(7 − a) = 2 ⇒ 7 − a = 4 ⇒ a = 3 (B). 5 — если решить 7 − a = 2 (без возведения в квадрат)."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 3^x · 9^(x − 1) = 27², what is the value of x?",
+      "answer": [
+        "8/3",
+        "2.666",
+        "2.667"
+      ],
+      "check": "8/3",
+      "verify": "3^ans * 9^(ans - 1) == 27^2",
+      "hint": "Запиши всё через 3: 9^(x − 1) = 3^(2x − 2), 27² = 3⁶.",
+      "explanation": "3^(x + 2x − 2) = 3⁶ ⇒ 3x − 2 = 6 ⇒ x = 8/3."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The equation x² + (k − 2)x + 9 = 0, where k is a positive constant, has exactly one real solution. What is that solution?",
+      "choices": [
+        "−3",
+        "3",
+        "−6",
+        "6"
+      ],
+      "answer": 0,
+      "check": "-3",
+      "hint": "Сначала найди k из условия «дискриминант = 0», затем само решение.",
+      "explanation": "(k − 2)² − 36 = 0 ⇒ k − 2 = ±6 ⇒ k = 8 (k = −4 не положительное). Уравнение x² + 6x + 9 = (x + 3)² = 0, решение −3 (A). 3 получилось бы при k = −4."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A rectangle has a width of w units and a length of w + 7 units. The length of its diagonal is 13 units. What is the value of w?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "ans^2 + (ans + 7)^2 == 169 and ans > 0",
+      "hint": "w² + (w + 7)² = 13².",
+      "explanation": "2w² + 14w + 49 = 169 ⇒ w² + 7w − 60 = 0 ⇒ (w + 12)(w − 5) = 0 ⇒ w = 5."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If x > 0 and x² + 3x = 2(x + 3), what is the value of x?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "ans^2 + 3*ans == 2*(ans + 3) and ans > 0",
+      "hint": "Раскрой скобки и перенеси всё влево.",
+      "explanation": "x² + x − 6 = 0 ⇒ (x + 3)(x − 2) = 0 ⇒ x = 2 (B). 3 — корень с неверным знаком."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The sum of two numbers is 15, and the sum of their reciprocals is 3/10. What is the product of the two numbers?",
+      "answer": [
+        "50"
+      ],
+      "check": "15*10/3",
+      "hint": "1/a + 1/b = (a + b)/(ab).",
+      "explanation": "15/(ab) = 3/10 ⇒ ab = 50. Числа 5 и 10: 1/5 + 1/10 = 3/10."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following describes all solutions to the equation |x − 1| + |x − 5| = 4?",
+      "choices": [
+        "1 ≤ x ≤ 5",
+        "x = 1 or x = 5",
+        "x = 3",
+        "There is no solution."
+      ],
+      "answer": 0,
+      "hint": "|x − 1| + |x − 5| — сумма расстояний от x до 1 и до 5.",
+      "explanation": "Для x между 1 и 5 сумма расстояний равна длине отрезка, 4. Вне отрезка сумма больше 4. Подходят все 1 ≤ x ≤ 5 (A). B и C — лишь некоторые из решений."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The function f is defined by f(x) = x² − 6x + 8. How many real solutions does the equation f(f(x)) = 0 have?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "hint": "f(u) = 0 при u = 2 или u = 4. Реши f(x) = 2 и f(x) = 4.",
+      "explanation": "f(x) = 2: x² − 6x + 6 = 0, дискриминант 12 > 0 — два корня. f(x) = 4: x² − 6x + 4 = 0, дискриминант 20 > 0 — два корня. Всего 4."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the system of equations y = x² + bx and y = x − 4, b is a constant. If the system has no real solutions, which of the following could be the value of b?",
+      "choices": [
+        "−4",
+        "2",
+        "5",
+        "6"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "(ans - 1)^2 - 16 < 0",
+      "hint": "x² + (b − 1)x + 4 = 0 не должно иметь корней.",
+      "explanation": "(b − 1)² − 16 < 0 ⇒ −3 < b < 5. Подходит 2 (B). При b = 5 дискриминант 0 — одно решение; −4 и 6 дают два."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The positive numbers x and y satisfy x² + y² = 61 and xy = 30. What is the value of x + y?",
+      "answer": [
+        "11"
+      ],
+      "check": "sqrt(61+60)",
+      "hint": "(x + y)² = x² + y² + 2xy.",
+      "explanation": "(x + y)² = 61 + 60 = 121 ⇒ x + y = 11 (числа 5 и 6)."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For how many integer values of k, where −10 ≤ k ≤ 10, does the equation x² + kx + 16 = 0 have two distinct real solutions?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "17"
+      ],
+      "answer": 1,
+      "check": "4",
+      "hint": "Два корня: k² − 64 > 0.",
+      "explanation": "|k| > 8 ⇒ k = −10, −9, 9, 10 — четыре значения (B). При k = ±8 корень один."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation 2x − √x − 6 = 0?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "2*ans - sqrt(ans) - 6 == 0",
+      "hint": "Обозначь u = √x ≥ 0: 2u² − u − 6 = 0.",
+      "explanation": "(2u + 3)(u − 2) = 0 ⇒ u = 2 (u = −1,5 не подходит, корень не отрицателен). x = 4. Проверка: 8 − 2 − 6 = 0."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The ordered pair (a, b) is a solution to the system of equations y = x² + 2x − 8 and y = 2x + 1. What is the greatest possible value of b?",
+      "choices": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": 2,
+      "check": "7",
+      "hint": "x² + 2x − 8 = 2x + 1.",
+      "explanation": "x² = 9 ⇒ x = ±3, тогда y = 7 или y = −5. Наибольшее b = 7 (C). 3 — это a."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A rectangular garden measures 20 meters by 12 meters. A path of uniform width surrounds the garden, and the garden and path together cover 384 square meters. What is the width of the path, in meters?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "(20 + 2*ans)*(12 + 2*ans) == 384 and ans > 0",
+      "hint": "Внешние размеры: (20 + 2w) и (12 + 2w).",
+      "explanation": "(20 + 2w)(12 + 2w) = 384 ⇒ 4w² + 64w − 144 = 0 ⇒ w² + 16w − 36 = 0 ⇒ (w + 18)(w − 2) = 0 ⇒ w = 2. Внешний прямоугольник 24 × 16."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The equation x² − 2(k + 1)x + k² + 5 = 0, where k is a constant, has exactly one real solution. What is the value of k?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 1,
+      "check": "2",
+      "verify": "4*(ans + 1)^2 - 4*(ans^2 + 5) == 0",
+      "hint": "Дискриминант: 4(k + 1)² − 4(k² + 5) = 0.",
+      "explanation": "(k + 1)² − (k² + 5) = 2k − 4 = 0 ⇒ k = 2 (B). Уравнение x² − 6x + 9 = 0 имеет единственный корень 3."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "For x ≠ −1 and x ≠ 3, what is the solution to the equation (x − 3)/(x + 1) = (x + 1)/(x − 3)?",
+      "answer": [
+        "1"
+      ],
+      "check": "1",
+      "verify": "(ans - 3)/(ans + 1) == (ans + 1)/(ans - 3)",
+      "hint": "Перемножь крест-накрест: (x − 3)² = (x + 1)².",
+      "explanation": "x² − 6x + 9 = x² + 2x + 1 ⇒ 8 = 8x ⇒ x = 1. Проверка: −2/2 = 2/(−2) = −1."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Each solution to the equation x² + px + q = 0 is 2 more than a solution to the equation x² − 5x + 6 = 0. What is the value of p + q?",
+      "choices": [
+        "−9",
+        "11",
+        "20",
+        "29"
+      ],
+      "answer": 1,
+      "check": "11",
+      "hint": "Найди корни второго уравнения и прибавь к ним 2.",
+      "explanation": "Корни x² − 5x + 6: 2 и 3. Новые корни 4 и 5: x² − 9x + 20, p = −9, q = 20, p + q = 11 (B)."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "What is the positive solution to the equation x³ − 2x² − 15x = 0?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "ans^3 - 2*ans^2 - 15*ans == 0 and ans > 0",
+      "hint": "Вынеси x.",
+      "explanation": "x(x² − 2x − 15) = x(x − 5)(x + 3) = 0. Корни 0, 5, −3; положительный — 5."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "At how many points do the graphs of y = x² − 2 and y = |x| intersect in the xy-plane?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "check": "2",
+      "hint": "Рассмотри x ≥ 0 и x < 0 отдельно.",
+      "explanation": "x ≥ 0: x² − x − 2 = 0 ⇒ x = 2 (x = −1 не подходит). x < 0: x² + x − 2 = 0 ⇒ x = −2 (x = 1 не подходит). Две точки: (2, 2) и (−2, 2) (B)."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "What is the sum of the squares of the solutions to the equation x² − 7x + 3 = 0?",
+      "answer": [
+        "43"
+      ],
+      "check": "49-6",
+      "hint": "r² + s² = (r + s)² − 2rs.",
+      "explanation": "r + s = 7, rs = 3 ⇒ r² + s² = 49 − 6 = 43."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Which of the following ordered pairs (x, y) is a solution to the system of equations x² + y² = 25 and y = x + 1?",
+      "choices": [
+        "(4, 3)",
+        "(−4, −3)",
+        "(−3, −4)",
+        "(3, −4)"
+      ],
+      "answer": 1,
+      "hint": "Подставь y = x + 1 в первое уравнение.",
+      "explanation": "x² + (x + 1)² = 25 ⇒ 2x² + 2x − 24 = 0 ⇒ x² + x − 12 = 0 ⇒ x = 3 или x = −4. Решения (3, 4) и (−4, −3) (B). Остальные точки лежат на окружности, но не на прямой y = x + 1."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation 4^x − 2^(x + 1) = 8?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "verify": "4^ans - 2^(ans + 1) == 8",
+      "hint": "Обозначь u = 2^x: 4^x = u², 2^(x + 1) = 2u.",
+      "explanation": "u² − 2u − 8 = 0 ⇒ u = 4 (u = −2 невозможно) ⇒ 2^x = 4 ⇒ x = 2."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the equation (x² − 1)(x − k) = 0, k is a constant. If the equation has exactly two distinct solutions, which of the following could be the value of k?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "−2"
+      ],
+      "answer": 1,
+      "check": "1",
+      "verify": "ans == 1 or ans == -1",
+      "hint": "Корни: 1, −1 и k. Когда их всего два?",
+      "explanation": "Различных корней два, только если k совпадает с 1 или −1. Из вариантов подходит k = 1 (B). При остальных k корней три."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The height, in meters, of a projectile t seconds after launch is h(t) = −5t² + 40t. For how many seconds is the projectile at a height of at least 60 meters?",
+      "answer": [
+        "4"
+      ],
+      "check": "6-2",
+      "hint": "−5t² + 40t ≥ 60 ⇒ t² − 8t + 12 ≤ 0.",
+      "explanation": "(t − 2)(t − 6) ≤ 0 ⇒ 2 ≤ t ≤ 6. Снаряд не ниже 60 м в течение 4 секунд."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If r and s are the solutions to the equation 2x² − 6x + 1 = 0, what is the value of 1/r + 1/s?",
+      "choices": [
+        "3",
+        "6",
+        "1/6",
+        "1/2"
+      ],
+      "answer": 1,
+      "check": "6",
+      "hint": "1/r + 1/s = (r + s)/(rs).",
+      "explanation": "r + s = 3, rs = 1/2. (r + s)/(rs) = 3/(1/2) = 6 (B). 3 — только сумма; 1/6 — перевёрнутое отношение."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A positive number is 15/4 greater than its reciprocal. What is the number?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "verify": "ans - 1/ans == 15/4 and ans > 0",
+      "hint": "x − 1/x = 15/4. Умножь на 4x.",
+      "explanation": "4x² − 15x − 4 = 0 ⇒ (4x + 1)(x − 4) = 0 ⇒ x = 4 (положительное). Проверка: 4 − 1/4 = 15/4."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the xy-plane, the line y = kx, where k is a constant, intersects the parabola y = x² + 4 at exactly one point, and that point has a positive x-coordinate. What is the value of k?",
+      "choices": [
+        "−4",
+        "2",
+        "4",
+        "16"
+      ],
+      "answer": 2,
+      "check": "4",
+      "hint": "x² − kx + 4 = 0 должно иметь один корень, и он положительный.",
+      "explanation": "k² − 16 = 0 ⇒ k = ±4. Корень x = k/2: при k = 4 x = 2 > 0, при k = −4 x = −2 < 0. Значит, k = 4 (C), точка касания (2, 8)."
+    }
+  ]
+}

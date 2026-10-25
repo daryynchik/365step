@@ -1,0 +1,1636 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "inequalities",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which of the following values of x is NOT a solution to the inequality x − 4 ≤ 3?",
+      "choices": [
+        "−2",
+        "0",
+        "7",
+        "8"
+      ],
+      "answer": 3,
+      "check": "8",
+      "verify": "not (ans - 4 <= 3)",
+      "hint": "Реши неравенство: x ≤ 7.",
+      "explanation": "x − 4 ≤ 3 ⇒ x ≤ 7. Значение 8 больше 7, поэтому не подходит (D). 7 подходит: знак «≤» включает равенство."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which inequality is equivalent to 5x > 20?",
+      "choices": [
+        "x > 15",
+        "x > 4",
+        "x < 4",
+        "x > 100"
+      ],
+      "answer": 1,
+      "hint": "Раздели обе части на 5; знак не меняется, потому что 5 > 0.",
+      "explanation": "x > 20/5 = 4 (B). x > 15 — вычли 5 вместо деления; x < 4 — знак перевёрнут без причины; x > 100 — умножили."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "What is the least integer x such that x + 9 > 15?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "ans + 9 > 15 and not (ans - 1 + 9 > 15)",
+      "hint": "Реши неравенство и найди наименьшее целое, которое больше результата.",
+      "explanation": "x > 6. Строгое неравенство не включает 6, поэтому наименьшее целое — 7."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "A box can hold at most 24 jars. Which inequality represents the number of jars, j, that can be placed in the box?",
+      "choices": [
+        "j ≥ 24",
+        "j ≤ 24",
+        "j < 24",
+        "j > 24"
+      ],
+      "answer": 1,
+      "hint": "«Не больше 24» включает и сами 24.",
+      "explanation": "«Не более 24» означает j ≤ 24 (B). j < 24 исключает полную коробку; A и D означают «не меньше» и «больше»."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "Which of the following is a solution to the inequality 3x ≥ 12?",
+      "choices": [
+        "0",
+        "2",
+        "3.5",
+        "5"
+      ],
+      "answer": 3,
+      "check": "5",
+      "verify": "3*ans >= 12",
+      "hint": "x ≥ 4.",
+      "explanation": "3x ≥ 12 ⇒ x ≥ 4. Из вариантов подходит только 5 (D); 3,5 немного меньше 4."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which inequality is equivalent to −4x ≤ 20?",
+      "choices": [
+        "x ≤ −5",
+        "x ≥ −5",
+        "x ≥ 5",
+        "x ≤ 5"
+      ],
+      "answer": 1,
+      "hint": "При делении на отрицательное число знак неравенства меняется.",
+      "explanation": "Делим на −4 и переворачиваем знак: x ≥ −5 (B). A — не перевернули знак; C и D — потеряли минус."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the greatest integer n for which 6n + 5 < 41?",
+      "answer": [
+        "5"
+      ],
+      "check": "5",
+      "verify": "6*ans + 5 < 41 and not (6*(ans + 1) + 5 < 41)",
+      "hint": "6n < 36.",
+      "explanation": "6n < 36 ⇒ n < 6. Наибольшее целое меньше 6 — это 5. Ошибка — ответ 6: при n = 6 получается 41 < 41, что неверно."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which inequality represents the statement \"Twice a number n, increased by 3, is no more than 15\"?",
+      "choices": [
+        "2n + 3 < 15",
+        "2n + 3 ≤ 15",
+        "2(n + 3) ≤ 15",
+        "2n + 3 ≥ 15"
+      ],
+      "answer": 1,
+      "hint": "«Не больше» — это ≤. «Удвоенное число, увеличенное на 3» — 2n + 3.",
+      "explanation": "2n + 3 ≤ 15 (B). A исключает равенство; C сначала прибавляет 3, потом удваивает; D — «не меньше»."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x < −2, which of the following must be true?",
+      "choices": [
+        "x + 2 > 0",
+        "−x > 2",
+        "2x > −4",
+        "x² < 4"
+      ],
+      "answer": 1,
+      "hint": "Умножь обе части на −1 и переверни знак.",
+      "explanation": "Из x < −2 следует −x > 2 (B). x + 2 < 0, а не > 0; 2x < −4; x² > 4 (например, x = −3 даёт 9)."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Each van can carry 8 people. What is the least number of vans needed to carry 53 people?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "8*ans >= 53 and 8*(ans - 1) < 53",
+      "hint": "8v ≥ 53. Округляй вверх: часть фургона не бывает.",
+      "explanation": "v ≥ 53/8 = 6,625, значит, нужно 7 фургонов. Шести хватит только на 48 человек."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following is the solution set of the inequality 2x − 7 ≥ 3x − 2?",
+      "choices": [
+        "x ≥ −5",
+        "x ≤ −5",
+        "x ≥ 5",
+        "x ≤ 5"
+      ],
+      "answer": 1,
+      "hint": "Собери x справа, чтобы коэффициент был положительным.",
+      "explanation": "−7 + 2 ≥ 3x − 2x ⇒ −5 ≥ x, то есть x ≤ −5 (B). Если собирать x слева, получится −x ≥ 5 — и при делении на −1 знак нужно перевернуть."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following values of y satisfies both y > 3 and y ≤ 7?",
+      "choices": [
+        "3",
+        "5",
+        "8",
+        "−4"
+      ],
+      "answer": 1,
+      "check": "5",
+      "verify": "ans > 3 and ans <= 7",
+      "hint": "Нужно число строго больше 3 и не больше 7.",
+      "explanation": "5 подходит (B). 3 не подходит — неравенство y > 3 строгое; 8 больше 7; −4 меньше 3."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A phone's battery is at 18%. While charging, the charge increases by 4% every 5 minutes. What is the least number of 5-minute periods of charging needed for the charge to be at least 50%?",
+      "answer": [
+        "8"
+      ],
+      "check": "8",
+      "verify": "18 + 4*ans >= 50 and 18 + 4*(ans - 1) < 50",
+      "hint": "18 + 4p ≥ 50.",
+      "explanation": "4p ≥ 32 ⇒ p ≥ 8. Ровно 8 периодов (40 минут) дают 50%."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following inequalities has the solution set x > 3?",
+      "choices": [
+        "x + 3 > 0",
+        "2x − 1 > 5",
+        "−x > 3",
+        "x/3 > 3"
+      ],
+      "answer": 1,
+      "hint": "Реши каждое неравенство.",
+      "explanation": "2x − 1 > 5 ⇒ 2x > 6 ⇒ x > 3 (B). A даёт x > −3; C — x < −3; D — x > 9."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "During one day, the temperature T, in degrees Celsius, was never below −5 and never above 8. Which inequality describes T?",
+      "choices": [
+        "−5 ≤ T ≤ 8",
+        "−5 < T < 8",
+        "T ≤ −5 or T ≥ 8",
+        "8 ≤ T ≤ −5"
+      ],
+      "answer": 0,
+      "hint": "«Не ниже» и «не выше» включают границы.",
+      "explanation": "−5 ≤ T ≤ 8 (A). B исключает сами −5 и 8; C описывает значения вне промежутка; D невозможно: 8 не меньше −5."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the least integer x that satisfies the inequality −3x < 10?",
+      "answer": [
+        "-3"
+      ],
+      "check": "-3",
+      "verify": "-3*ans < 10 and not (-3*(ans - 1) < 10)",
+      "hint": "Делишь на −3 — переворачиваешь знак.",
+      "explanation": "x > −10/3 ≈ −3,33. Наименьшее целое больше −3,33 — это −3. При x = −4 получается 12 < 10 — неверно."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following points (x, y) lies in the region of the xy-plane given by y ≤ x − 2?",
+      "choices": [
+        "(0, 0)",
+        "(1, 0)",
+        "(5, 1)",
+        "(2, 3)"
+      ],
+      "answer": 2,
+      "hint": "Подставь x точки и сравни её y с x − 2.",
+      "explanation": "Для (5, 1): 1 ≤ 5 − 2 = 3 — верно (C). Для (0, 0): 0 ≤ −2 — неверно; для (1, 0): 0 ≤ −1 — неверно; для (2, 3): 3 ≤ 0 — неверно."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "A runner wants her average speed for a 20-kilometer run to be at least 8 kilometers per hour. What is the greatest amount of time, in hours, the run can take?",
+      "choices": [
+        "2",
+        "2.5",
+        "3",
+        "160"
+      ],
+      "answer": 1,
+      "check": "20/8",
+      "verify": "20/ans >= 8 and 20/(ans + 0.5) < 8",
+      "hint": "Скорость = 20/t ≥ 8. Чем больше время, тем меньше скорость.",
+      "explanation": "20/t ≥ 8 ⇒ t ≤ 20/8 = 2,5 часа (B). При 3 часах средняя скорость ≈ 6,7 км/ч; 160 — это 20 · 8."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the least integer k for which 3k − 4 > 2k + 7?",
+      "answer": [
+        "12"
+      ],
+      "check": "12",
+      "verify": "3*ans - 4 > 2*ans + 7 and not (3*(ans - 1) - 4 > 2*(ans - 1) + 7)",
+      "hint": "Собери k в одной части.",
+      "explanation": "k > 11, поэтому наименьшее целое — 12. При k = 11 обе части равны 29, а неравенство строгое."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 5 − x > 9, which of the following is true?",
+      "choices": [
+        "x > −4",
+        "x < −4",
+        "x > 4",
+        "x < 4"
+      ],
+      "answer": 1,
+      "hint": "−x > 4. Умножь на −1 и переверни знак.",
+      "explanation": "−x > 4 ⇒ x < −4 (B). A — забыли перевернуть знак; C и D потеряли минус."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which inequality is equivalent to (x − 1)/2 ≥ 4?",
+      "choices": [
+        "x ≥ 7",
+        "x ≥ 9",
+        "x ≥ 4.5",
+        "x ≤ 9"
+      ],
+      "answer": 1,
+      "hint": "Умножь обе части на 2, затем прибавь 1.",
+      "explanation": "x − 1 ≥ 8 ⇒ x ≥ 9 (B). 7 — вычли 1 вместо прибавления; 4,5 — разделили 9 на 2; D — перевёрнутый знак."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "What is the least number of $20 bills needed to pay for an item that costs $135?",
+      "answer": [
+        "7"
+      ],
+      "check": "7",
+      "verify": "20*ans >= 135 and 20*(ans - 1) < 135",
+      "hint": "20b ≥ 135, а число купюр — целое.",
+      "explanation": "b ≥ 6,75, значит, нужно 7 купюр (140 долларов). Шести (120) не хватит."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which of the following values of x satisfies 2 < x/3 < 4?",
+      "choices": [
+        "5",
+        "6",
+        "9",
+        "12"
+      ],
+      "answer": 2,
+      "check": "9",
+      "verify": "2 < ans/3 and ans/3 < 4",
+      "hint": "Умножь все три части на 3.",
+      "explanation": "6 < x < 12. Подходит 9 (C). 6 и 12 — границы, которые не входят: неравенства строгие."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If a > b, which of the following must be true?",
+      "choices": [
+        "a + 5 > b + 5",
+        "−a > −b",
+        "a² > b²",
+        "2a < 2b"
+      ],
+      "answer": 0,
+      "hint": "Прибавление одного числа к обеим частям знак не меняет.",
+      "explanation": "a + 5 > b + 5 (A). При умножении на −1 знак переворачивается: −a < −b; a² > b² неверно, например, при a = 1, b = −3; 2a > 2b, а не меньше."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A cyclist has ridden 18 kilometers of a 60-kilometer route and rides at 16 kilometers per hour. What is the least whole number of hours she needs to finish the route?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "verify": "16*ans >= 42 and 16*(ans - 1) < 42",
+      "hint": "Осталось 60 − 18 = 42 км.",
+      "explanation": "16h ≥ 42 ⇒ h ≥ 2,625, значит, нужно 3 целых часа. Ошибка — делить весь маршрут: 60/16 = 3,75."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following is the solution set of −3 ≤ 2x + 1 < 9?",
+      "choices": [
+        "−2 ≤ x < 4",
+        "−1 ≤ x < 5",
+        "−2 < x ≤ 4",
+        "x ≥ −2"
+      ],
+      "answer": 0,
+      "hint": "Вычти 1 из всех трёх частей, затем раздели на 2.",
+      "explanation": "−4 ≤ 2x < 8 ⇒ −2 ≤ x < 4 (A). Знаки сохраняются: левый нестрогий, правый строгий. B — прибавили 1; C — перепутали знаки; D — потеряли верхнюю границу."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A gym charges $30 per month for a membership, or $6 per visit with no membership. What is the least number of visits in a month for which the membership costs less than paying per visit?",
+      "answer": [
+        "6"
+      ],
+      "check": "6",
+      "verify": "6*ans > 30 and not (6*(ans - 1) > 30)",
+      "hint": "Абонемент дешевле, когда 6v > 30.",
+      "explanation": "v > 5, наименьшее целое — 6. При 5 посещениях обе оплаты равны 30 долларам."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Renting a hall costs $250 plus $18 per guest. A family's budget for the hall is at least $700 and at most $1,000. Which inequality gives all possible numbers of guests, g?",
+      "choices": [
+        "25 ≤ g ≤ 41",
+        "25 < g < 42",
+        "38 ≤ g ≤ 55",
+        "g ≤ 41"
+      ],
+      "answer": 0,
+      "hint": "700 ≤ 250 + 18g ≤ 1000, а число гостей — целое.",
+      "explanation": "450 ≤ 18g ≤ 750 ⇒ 25 ≤ g ≤ 41,67. Целые: 25 ≤ g ≤ 41 (A). C — если забыть о 250; D — без нижней границы бюджета."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "For which values of x is 4(x − 3) > 2(x + 5)?",
+      "choices": [
+        "x > 1",
+        "x > 11",
+        "x < 11",
+        "x > 8.5"
+      ],
+      "answer": 1,
+      "hint": "Раскрой обе скобки.",
+      "explanation": "4x − 12 > 2x + 10 ⇒ 2x > 22 ⇒ x > 11 (B). 1 — ошибка знака при −12; 8,5 — если не умножить 5 на 2."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A test has 40 questions. Each correct answer earns 3 points and each incorrect answer loses 1 point, and every question is answered. What is the least number of correct answers needed for a score of at least 80?",
+      "answer": [
+        "30"
+      ],
+      "check": "30",
+      "verify": "3*ans - (40 - ans) >= 80 and 3*(ans - 1) - (40 - ans + 1) < 80",
+      "hint": "Неверных 40 − c. Счёт: 3c − (40 − c).",
+      "explanation": "4c − 40 ≥ 80 ⇒ c ≥ 30. Ровно 30 верных и 10 неверных дают 80."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following describes all values of x whose distance from 5 on the number line is less than 3?",
+      "choices": [
+        "2 < x < 8",
+        "x < 8",
+        "−2 < x < 8",
+        "x < 2 or x > 8"
+      ],
+      "answer": 0,
+      "hint": "На 3 влево и на 3 вправо от 5.",
+      "explanation": "Расстояние меньше 3: 5 − 3 < x < 5 + 3, то есть 2 < x < 8 (A). D — расстояние больше 3; B теряет левую границу."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "What is the least integer value of x for which (x + 3)/4 < (x − 1)/2?",
+      "answer": [
+        "6"
+      ],
+      "check": "6",
+      "verify": "(ans + 3)/4 < (ans - 1)/2 and not ((ans + 2)/4 < (ans - 2)/2)",
+      "hint": "Умножь обе части на 4.",
+      "explanation": "x + 3 < 2x − 2 ⇒ 5 < x. Наименьшее целое — 6. При x = 5 обе части равны 2."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A shipping service charges $8 for the first pound and $2.50 for each additional pound. Weights are whole numbers of pounds. A customer can pay at most $28. What is the greatest weight, in pounds, the customer can ship?",
+      "choices": [
+        "8",
+        "9",
+        "11",
+        "12"
+      ],
+      "answer": 1,
+      "check": "9",
+      "verify": "8 + 2.5*(ans - 1) <= 28 and 8 + 2.5*ans > 28",
+      "hint": "Первый фунт — 8 долларов, каждый следующий — 2,50.",
+      "explanation": "8 + 2,5(w − 1) ≤ 28 ⇒ w − 1 ≤ 8 ⇒ w ≤ 9 (B). 8 — число дополнительных фунтов; 11 — 28/2,5 без учёта первого фунта."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If −1 < x < 2, which of the following is a possible value of 3 − 2x?",
+      "choices": [
+        "−3",
+        "−1",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "check": "4",
+      "verify": "-1 < (3 - ans)/2 and (3 - ans)/2 < 2",
+      "hint": "Найди границы 3 − 2x: умножение на −2 переворачивает неравенство.",
+      "explanation": "Умножаем −1 < x < 2 на −2 и переворачиваем знаки: −4 < −2x < 2, затем 3 − 4 < 3 − 2x < 3 + 2, то есть −1 < 3 − 2x < 5. Подходит 4 (C). −1 и 5 — границы, не входящие в промежуток."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Phone plan A costs $40 per month plus $0.05 per text message. Plan B costs $55 per month with unlimited texts. What is the least number of text messages in a month for which plan B costs less than plan A?",
+      "answer": [
+        "301"
+      ],
+      "check": "301",
+      "verify": "40 + 0.05*ans > 55 and not (40 + 0.05*(ans - 1) > 55)",
+      "hint": "B дешевле, когда 40 + 0,05t > 55.",
+      "explanation": "0,05t > 15 ⇒ t > 300. Наименьшее целое — 301. При 300 сообщениях планы стоят одинаково."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following is NOT a solution to the inequality 2(3 − x) ≥ x − 9?",
+      "choices": [
+        "−5",
+        "0",
+        "5",
+        "6"
+      ],
+      "answer": 3,
+      "check": "6",
+      "verify": "not (2*(3 - ans) >= ans - 9)",
+      "hint": "Реши неравенство: 6 − 2x ≥ x − 9.",
+      "explanation": "15 ≥ 3x ⇒ x ≤ 5. Значение 6 не подходит (D); 5 подходит, потому что знак нестрогий."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "In the xy-plane, which inequality describes the region above the line that passes through (0, 3) with a slope of −2, not including the line itself?",
+      "choices": [
+        "y ≥ −2x + 3",
+        "y > −2x + 3",
+        "y < −2x + 3",
+        "y > 3x − 2"
+      ],
+      "answer": 1,
+      "hint": "Прямая y = −2x + 3. «Выше» — y больше; «без прямой» — строгий знак.",
+      "explanation": "y > −2x + 3 (B). A включает саму прямую; C — область ниже; D — наклон и пересечение перепутаны."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A water tank holds 1,200 liters and loses 15 liters per hour through a leak. The tank must always contain at least 750 liters. For at most how many whole hours can the tank go without being refilled?",
+      "answer": [
+        "30"
+      ],
+      "check": "30",
+      "verify": "1200 - 15*ans >= 750 and 1200 - 15*(ans + 1) < 750",
+      "hint": "1200 − 15h ≥ 750.",
+      "explanation": "15h ≤ 450 ⇒ h ≤ 30. Через 30 часов в баке ровно 750 литров — это ещё допустимо."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "How many integer values of x satisfy both 3x − 2 ≥ 7 and x < 6?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "check": "3",
+      "hint": "Реши первое неравенство и найди общую часть со вторым.",
+      "explanation": "3x ≥ 9 ⇒ x ≥ 3. Вместе с x < 6: x = 3, 4, 5 — три значения (B). 6 не входит — второе неравенство строгое."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A school needs at least 230 chairs for an event. It already has 85 chairs and can buy chairs in packs of 12. What is the least number of packs the school must buy?",
+      "choices": [
+        "12",
+        "13",
+        "19",
+        "20"
+      ],
+      "answer": 1,
+      "check": "13",
+      "verify": "85 + 12*ans >= 230 and 85 + 12*(ans - 1) < 230",
+      "hint": "85 + 12p ≥ 230 и p — целое.",
+      "explanation": "12p ≥ 145 ⇒ p ≥ 12,08, нужно 13 упаковок (B). 12 упаковок дают 229 стульев — на один меньше. 19 и 20 — если не учесть уже имеющиеся стулья."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The values x and y satisfy 2x + 3y ≤ 18, x ≥ 3, and y ≥ 0. What is the greatest possible value of y?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "answer": 0,
+      "check": "4",
+      "verify": "2*3 + 3*ans <= 18",
+      "hint": "y наибольший, когда x наименьший.",
+      "explanation": "При x = 3: 6 + 3y ≤ 18 ⇒ y ≤ 4 (A). 6 — если взять x = 0, но по условию x ≥ 3; 12 — это 18 − 6."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A delivery drone can carry at most 4.5 kilograms, including a 600-gram container. Each package weighs 350 grams. What is the greatest number of packages the drone can carry in the container?",
+      "answer": [
+        "11"
+      ],
+      "check": "11",
+      "verify": "0.6 + 0.35*ans <= 4.5 and 0.6 + 0.35*(ans + 1) > 4.5",
+      "hint": "Переведи граммы в килограммы: 0,6 и 0,35.",
+      "explanation": "0,6 + 0,35p ≤ 4,5 ⇒ 0,35p ≤ 3,9 ⇒ p ≤ 11,14, значит, 11 посылок. Ошибка — забыть контейнер: 4,5/0,35 ≈ 12,86."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following describes all values of x for which both x − 3 < 2x + 1 and 3x ≤ 12 are true?",
+      "choices": [
+        "−4 < x ≤ 4",
+        "x > −4",
+        "x ≤ 4",
+        "−4 ≤ x < 4"
+      ],
+      "answer": 0,
+      "hint": "Реши каждое неравенство и возьми общую часть.",
+      "explanation": "Первое: −4 < x. Второе: x ≤ 4. Вместе: −4 < x ≤ 4 (A). D перепутал строгость концов; B и C — только одно из условий."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A freelancer charges $45 per hour and pays $120 each month for software. She wants her monthly profit to be at least $1,500. What is the least number of whole hours she must work in a month?",
+      "answer": [
+        "36"
+      ],
+      "check": "36",
+      "verify": "45*ans - 120 >= 1500 and 45*(ans - 1) - 120 < 1500",
+      "hint": "Прибыль: 45h − 120 ≥ 1500.",
+      "explanation": "45h ≥ 1620 ⇒ h ≥ 36. При 36 часах прибыль ровно 1500."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the xy-plane, a region consists of all points (x, y) with x + y ≤ 6, x ≥ 1, and y ≥ 2. Which of the following points is NOT in the region?",
+      "choices": [
+        "(1, 2)",
+        "(2, 4)",
+        "(4, 2)",
+        "(3, 4)"
+      ],
+      "answer": 3,
+      "hint": "Проверь все три условия для каждой точки.",
+      "explanation": "У (3, 4): 3 + 4 = 7 > 6 — первое условие нарушено (D). (1, 2), (2, 4) и (4, 2) лежат в области: границы включены."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If x/(−3) + 2 ≥ 5, which of the following is true?",
+      "choices": [
+        "x ≥ −9",
+        "x ≤ −9",
+        "x ≥ 9",
+        "x ≤ 9"
+      ],
+      "answer": 1,
+      "hint": "x/(−3) ≥ 3. Умножь на −3 и переверни знак.",
+      "explanation": "x/(−3) ≥ 3 ⇒ x ≤ −9 (B). A — знак не перевёрнут; C и D — потерян минус."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "An online store offers free shipping on orders of at least $75. Lia's cart contains $48.60 of items. She adds pens that cost $3.20 each. What is the least number of pens she must add to get free shipping?",
+      "answer": [
+        "9"
+      ],
+      "check": "9",
+      "verify": "48.6 + 3.2*ans >= 75 and 48.6 + 3.2*(ans - 1) < 75",
+      "hint": "48,60 + 3,20p ≥ 75.",
+      "explanation": "3,2p ≥ 26,4 ⇒ p ≥ 8,25, значит, 9 ручек (сумма 77,40). Восьми ручек (74,20) не хватит."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the inequality 3x + a < 2x + 7, a is a constant. If the solution set of the inequality is x < 4, what is the value of a?",
+      "choices": [
+        "−3",
+        "3",
+        "4",
+        "7"
+      ],
+      "answer": 1,
+      "check": "3",
+      "verify": "7 - ans == 4",
+      "hint": "Реши неравенство относительно x: граница выразится через a.",
+      "explanation": "x < 7 − a. Нужно 7 − a = 4 ⇒ a = 3 (B). 4 — граница из условия; 7 — свободный член; −3 — ошибка знака."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A rectangle has width w and length 2w + 5. Its perimeter is at least 52 and at most 70. Which of the following could be the value of w?",
+      "choices": [
+        "5",
+        "6.5",
+        "8",
+        "11"
+      ],
+      "answer": 2,
+      "check": "8",
+      "verify": "52 <= 6*ans + 10 and 6*ans + 10 <= 70",
+      "hint": "Периметр: 2(w + 2w + 5) = 6w + 10.",
+      "explanation": "52 ≤ 6w + 10 ≤ 70 ⇒ 7 ≤ w ≤ 10. Подходит 8 (C). При w = 6,5 периметр 49, при w = 11 — 76."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "The sum of two consecutive even integers is at least 75. What is the least possible value of the smaller integer?",
+      "answer": [
+        "38"
+      ],
+      "check": "38",
+      "verify": "ans + (ans + 2) >= 75 and (ans - 2) + ans < 75",
+      "hint": "n + (n + 2) ≥ 75, и n чётное.",
+      "explanation": "2n ≥ 73 ⇒ n ≥ 36,5. Наименьшее чётное — 38 (38 + 40 = 78). Пара 36 и 38 даёт 74."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Each day a bakery bakes b loaves of bread and c cakes. It must bake at least 200 loaves and at most 80 cakes, and the number of loaves must be at least twice the number of cakes. Which system represents these conditions?",
+      "choices": [
+        "b ≥ 200, c ≤ 80, b ≥ 2c",
+        "b ≤ 200, c ≥ 80, b ≥ 2c",
+        "b ≥ 200, c ≤ 80, c ≥ 2b",
+        "b > 200, c < 80, b = 2c"
+      ],
+      "answer": 0,
+      "hint": "«Хлеба не меньше чем вдвое больше тортов» — b ≥ 2c.",
+      "explanation": "A записывает все три условия (A). B путает «не меньше» и «не больше»; C переворачивает отношение; D делает границы строгими и требует ровно вдвое."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "If 7 ≤ 3x − 2 ≤ 19, what is the greatest possible value of x + 4?",
+      "answer": [
+        "11"
+      ],
+      "check": "7+4",
+      "hint": "Найди наибольший x, затем прибавь 4.",
+      "explanation": "9 ≤ 3x ≤ 21 ⇒ 3 ≤ x ≤ 7. Наибольшее x + 4 = 11."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Notebooks cost $2 each and binders cost $5 each. A student has at most $30 and must buy at least 3 binders. What is the greatest number of notebooks the student can buy?",
+      "choices": [
+        "6",
+        "7",
+        "7.5",
+        "15"
+      ],
+      "answer": 1,
+      "check": "7",
+      "verify": "ans == floor(ans) and 2*ans + 15 <= 30 and 2*(ans + 1) + 15 > 30",
+      "hint": "Тетрадей больше всего, когда биндеров ровно 3.",
+      "explanation": "3 биндера стоят 15, на тетради остаётся 15: 2n ≤ 15 ⇒ n ≤ 7,5, то есть 7 (B). 7,5 — не целое число тетрадей; 15 — если забыть о биндерах."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If a < 0, which of the following inequalities is equivalent to ax > 3a?",
+      "choices": [
+        "x > 3",
+        "x < 3",
+        "x > a",
+        "x < −3"
+      ],
+      "answer": 1,
+      "hint": "Делишь на отрицательное a — переворачиваешь знак.",
+      "explanation": "Делим обе части на a < 0: x < 3 (B). A — знак не перевёрнут; D — потерян знак у 3a/a = 3."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A movie theater must sell at least $4,000 worth of tickets for a show. Adult tickets cost $14 and child tickets cost $8. The theater has sold 150 child tickets. What is the least number of adult tickets it must sell?",
+      "answer": [
+        "200"
+      ],
+      "check": "200",
+      "verify": "14*ans + 8*150 >= 4000 and 14*(ans - 1) + 8*150 < 4000",
+      "hint": "Детские билеты уже дали 1200 долларов.",
+      "explanation": "14a ≥ 2800 ⇒ a ≥ 200. Ошибка — делить 4000 на 14 (≈ 286), не учитывая проданные детские билеты."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Which of the following is the set of all values of x for which −2x + 5 > 1 or 3x − 4 > 11?",
+      "choices": [
+        "x < 2 or x > 5",
+        "2 < x < 5",
+        "x > 2",
+        "x < 5"
+      ],
+      "answer": 0,
+      "hint": "«Или» — подходит x, удовлетворяющий хотя бы одному условию.",
+      "explanation": "Первое: −2x > −4 ⇒ x < 2. Второе: 3x > 15 ⇒ x > 5. Объединение: x < 2 или x > 5 (A). B — это значения, где не выполнено ни одно из условий."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A 500-page print job must be finished in at most 25 minutes, and the printer needs 2 minutes to warm up before printing. What is the least whole number of pages per minute the printer must print?",
+      "answer": [
+        "22"
+      ],
+      "check": "22",
+      "verify": "23*ans >= 500 and 23*(ans - 1) < 500",
+      "hint": "На печать остаётся 23 минуты.",
+      "explanation": "23r ≥ 500 ⇒ r ≥ 21,7, значит, 22 страницы в минуту. Ошибка — делить на 25 минут (20 страниц не хватит)."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "In the xy-plane, which inequality describes the region on or below the line that passes through (−2, 0) and (0, 4)?",
+      "choices": [
+        "y ≥ 2x + 4",
+        "y ≤ 2x + 4",
+        "y ≤ −2x + 4",
+        "y < 2x − 2"
+      ],
+      "answer": 1,
+      "hint": "Найди уравнение прямой: наклон и пересечение с осью y.",
+      "explanation": "Наклон 4/2 = 2, пересечение 4: y = 2x + 4. «На прямой или ниже» — y ≤ 2x + 4 (B). C — неверный наклон; D — строгий знак и другая прямая."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If 0 < x < 1, which of the following has the greatest value?",
+      "choices": [
+        "x",
+        "x²",
+        "1/x",
+        "√x"
+      ],
+      "answer": 2,
+      "check": "conceptual",
+      "hint": "Подставь, например, x = 1/4.",
+      "explanation": "При 0 < x < 1: 1/x > 1, а x, x² и √x меньше 1. Например, x = 1/4: x = 0,25, x² = 0,0625, √x = 0,5, 1/x = 4 (C)."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A stock was worth $35 per share and then rose by $2.40 per share each day. A trader will sell when the price is at least 1.5 times the starting price. What is the least whole number of days after which the trader will sell?",
+      "answer": [
+        "8"
+      ],
+      "check": "8",
+      "verify": "35 + 2.4*ans >= 52.5 and 35 + 2.4*(ans - 1) < 52.5",
+      "hint": "Нужная цена: 1,5 · 35 = 52,5.",
+      "explanation": "35 + 2,4d ≥ 52,5 ⇒ d ≥ 7,29, значит, 8 дней. Через 7 дней цена 51,80 — ещё мало."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If −3 < x < 4 and −2 < y < 5, which of the following is a possible value of xy?",
+      "choices": [
+        "−16",
+        "−14",
+        "20",
+        "21"
+      ],
+      "answer": 1,
+      "check": "-14",
+      "hint": "Найди, какие произведения можно получить у концов промежутков; концы не входят.",
+      "explanation": "Наименьшее произведение получается при x около −3 и y около 5: оно приближается к −15, но не достигает его; наибольшее — при x и y около 4 и 5, приближается к 20. Значит, −15 < xy < 20. Подходит −14 (B): например, x ≈ −2,86 и y = 4,9 дают −14. 20 не достигается, −16 и 21 вне промежутка."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A school must take 300 students on a trip. Buses hold 52 students and cost $450 each; vans hold 12 students and cost $140 each. The school will use exactly 5 buses, must have enough seats for every student, and can spend at most $3,000. How many different numbers of vans could the school use?",
+      "answer": [
+        "2"
+      ],
+      "check": "2",
+      "hint": "Два условия: места (52 · 5 + 12v ≥ 300) и деньги (450 · 5 + 140v ≤ 3000).",
+      "explanation": "Места: 260 + 12v ≥ 300 ⇒ v ≥ 3,33, то есть v ≥ 4. Деньги: 2250 + 140v ≤ 3000 ⇒ v ≤ 5,36, то есть v ≤ 5. Подходят v = 4 и v = 5 — два варианта."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following inequalities is equivalent to −2 ≤ x ≤ 8?",
+      "choices": [
+        "|x − 3| ≤ 5",
+        "|x + 3| ≤ 5",
+        "|x − 5| ≤ 3",
+        "|x − 3| ≥ 5"
+      ],
+      "answer": 0,
+      "hint": "Середина промежутка — центр, половина длины — радиус.",
+      "explanation": "Середина отрезка [−2, 8] — 3, половина длины — 5. Значит, расстояние от x до 3 не больше 5: |x − 3| ≤ 5 (A). B центрирован в −3; C задаёт [2, 8]; D — значения вне промежутка."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A club earns a profit of $15 on each hat and $10 on each shirt it sells. It can sell at most 150 items in total and wants a profit of at least $1,500. If the club sells exactly 40 hats, how many different numbers of shirts could it sell?",
+      "answer": [
+        "21"
+      ],
+      "check": "21",
+      "hint": "Прибыль даёт нижнюю границу для рубашек, общее число — верхнюю.",
+      "explanation": "600 + 10s ≥ 1500 ⇒ s ≥ 90. 40 + s ≤ 150 ⇒ s ≤ 110. Целые от 90 до 110 включительно — 21 значение. Ошибка — 20 (110 − 90 без +1)."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, the solution region of the system y ≤ 2x + 3 and y ≥ −x + k, where k is a constant, contains no points with x < 0. What is the least possible value of k?",
+      "choices": [
+        "0",
+        "3",
+        "−3",
+        "6"
+      ],
+      "answer": 1,
+      "check": "3",
+      "hint": "Область существует там, где −x + k ≤ 2x + 3. Найди, при каких x это выполняется.",
+      "explanation": "−x + k ≤ 2x + 3 ⇒ x ≥ (k − 3)/3. Точек с x < 0 нет, когда (k − 3)/3 ≥ 0 ⇒ k ≥ 3. Наименьшее k = 3 (B): тогда граничные прямые пересекаются в (0, 3)."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A runner wants to average at least 9 kilometers per hour over a 30-kilometer race. She ran the first 12 kilometers in 1.5 hours. What is the greatest number of minutes she can take to run the remaining 18 kilometers?",
+      "answer": [
+        "110"
+      ],
+      "check": "110",
+      "verify": "1.5 + ans/60 <= 30/9 and 1.5 + (ans + 1)/60 > 30/9",
+      "hint": "Всё время не должно превышать 30/9 часа.",
+      "explanation": "Допустимое время 30/9 = 10/3 ч = 200 минут. Уже ушло 90 минут, осталось не больше 110. Ошибка — требовать 9 км/ч только на оставшемся участке (120 минут)."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the inequality 2x − c > 4x + 1, c is a constant. If the solution set of the inequality is x < 3, what is the value of c?",
+      "choices": [
+        "−7",
+        "−5",
+        "5",
+        "7"
+      ],
+      "answer": 0,
+      "check": "-7",
+      "verify": "-(1 + ans)/2 == 3",
+      "hint": "−2x > 1 + c. Деление на −2 переворачивает знак.",
+      "explanation": "x < −(1 + c)/2. Нужно −(1 + c)/2 = 3 ⇒ 1 + c = −6 ⇒ c = −7 (A). 7 — потерян знак; −5 и 5 — если забыть единицу."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "On a flight, a plane may burn at most 2,200 kilograms of fuel. It burns 18 kilograms per minute while climbing for 20 minutes and then 9.5 kilograms per minute while cruising. What is the greatest whole number of minutes it can cruise?",
+      "answer": [
+        "193"
+      ],
+      "check": "193",
+      "verify": "360 + 9.5*ans <= 2200 and 360 + 9.5*(ans + 1) > 2200",
+      "hint": "Набор высоты: 18 · 20 кг.",
+      "explanation": "360 + 9,5c ≤ 2200 ⇒ c ≤ 193,68. Целых минут — 193. Округление вверх (194) превысит лимит."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following inequalities has no solution?",
+      "choices": [
+        "3(x − 2) < 3x − 7",
+        "3(x − 2) < 3x − 5",
+        "3(x − 2) ≤ 3x − 6",
+        "3(x − 2) > 3x − 7"
+      ],
+      "answer": 0,
+      "hint": "Раскрой скобки: x сократится, останется верное или неверное числовое неравенство.",
+      "explanation": "В A: −6 < −7 — неверно при любом x, решений нет (A). B: −6 < −5 — верно всегда; C: −6 ≤ −6 — верно всегда; D: −6 > −7 — верно всегда."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 2 ≤ x ≤ 5 and 3 ≤ y ≤ 7, what is the greatest possible value of 2y − 3x?",
+      "answer": [
+        "8"
+      ],
+      "check": "2*7-3*2",
+      "hint": "Чтобы 2y − 3x было наибольшим, y берём наибольший, x — наименьший.",
+      "explanation": "2 · 7 − 3 · 2 = 14 − 6 = 8. Ошибка — взять оба наибольших: 14 − 15 = −1."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Which of the following describes all values of x that satisfy both 5 − 2x ≤ 3x + 20 and 4x − 1 < 2x + 9?",
+      "choices": [
+        "−3 ≤ x < 5",
+        "−3 < x ≤ 5",
+        "x ≥ −3",
+        "x < 5"
+      ],
+      "answer": 0,
+      "hint": "Реши каждое неравенство отдельно и возьми общую часть.",
+      "explanation": "Первое: −15 ≤ 5x ⇒ x ≥ −3. Второе: 2x < 10 ⇒ x < 5. Вместе: −3 ≤ x < 5 (A). B перепутал строгость концов; C и D — по одному условию."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "In the xy-plane, the point (x, y) satisfies y > 3x − 4, y < −2x + 6, and x ≥ 1. If y is an integer, what is the greatest possible value of y?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "hint": "При x ≥ 1 верхняя граница −2x + 6 не больше 4.",
+      "explanation": "Так как x ≥ 1, имеем y < −2x + 6 ≤ 4, поэтому y ≤ 3. Значение 3 достигается при x = 1: 3 > −1 и 3 < 4. Ответ 3."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Lena buys x shirts that cost $18 each and y pairs of pants that cost $35 each. She wants to spend no more than $200 and to buy at least 6 items in total. Which of the following purchases meets both conditions?",
+      "choices": [
+        "3 shirts and 2 pairs of pants",
+        "2 shirts and 5 pairs of pants",
+        "6 shirts and 3 pairs of pants",
+        "4 shirts and 3 pairs of pants"
+      ],
+      "answer": 3,
+      "hint": "Проверь оба условия: сумма и количество.",
+      "explanation": "4 рубашки и 3 пары брюк: 72 + 105 = 177 ≤ 200 и 7 вещей (D). A — всего 5 вещей; B — 211 долларов; C — 213 долларов."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The average of five numbers is at least 20 and at most 24. Four of the numbers are 18, 22, 25, and 19. What is the greatest possible value of the fifth number?",
+      "answer": [
+        "36"
+      ],
+      "check": "120-84",
+      "hint": "Сумма пяти чисел не больше 5 · 24.",
+      "explanation": "Сумма ≤ 120, четыре числа дают 84, поэтому пятое ≤ 36. Проверка нижней границы: при 36 среднее 24 — допустимо."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "How many ordered pairs of integers (x, y) satisfy 1 ≤ x ≤ 6, y ≥ 1, and x + 2y ≤ 10?",
+      "choices": [
+        "15",
+        "16",
+        "18",
+        "20"
+      ],
+      "answer": 2,
+      "check": "18",
+      "hint": "Перебери x от 1 до 6 и посчитай подходящие y.",
+      "explanation": "Для x = 1, 2: y ≤ 4 (по 4 значения); x = 3, 4: y ≤ 3 (по 3); x = 5, 6: y ≤ 2 (по 2). Всего 8 + 6 + 4 = 18 (C)."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A water park charges $28 per adult and $16 per child. A group of 20 people wants to spend at most $440 and must include at least 4 adults. What is the greatest number of adults the group can have?",
+      "answer": [
+        "10"
+      ],
+      "check": "10",
+      "verify": "28*ans + 16*(20 - ans) <= 440 and 28*(ans + 1) + 16*(19 - ans) > 440",
+      "hint": "Детей 20 − a.",
+      "explanation": "28a + 16(20 − a) ≤ 440 ⇒ 12a ≤ 120 ⇒ a ≤ 10. Условие «не меньше 4 взрослых» выполнено. Ответ 10."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The inequality 3 − x > 2x + k, where k is a constant, is true for every x < 1 and false for x = 1. What is the value of k?",
+      "choices": [
+        "−3",
+        "0",
+        "1",
+        "3"
+      ],
+      "answer": 1,
+      "check": "0",
+      "verify": "(3 - ans)/3 == 1",
+      "hint": "Реши неравенство: x < (3 − k)/3.",
+      "explanation": "3 − k > 3x ⇒ x < (3 − k)/3. Множество решений — ровно x < 1, значит, (3 − k)/3 = 1 ⇒ k = 0 (B). При k = −3 решения были бы x < 2 — тогда x = 1 подходил бы."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "What is the least positive integer n that is a multiple of 3 and satisfies 7n > 4n + 50?",
+      "answer": [
+        "18"
+      ],
+      "check": "18",
+      "hint": "Сначала реши неравенство, затем найди ближайшее кратное 3.",
+      "explanation": "3n > 50 ⇒ n > 16,67. Наименьшее целое — 17, но оно не кратно 3; следующее кратное — 18."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A bridge can hold at most 12,000 kilograms. A truck weighs 6,800 kilograms when empty, its driver weighs 90 kilograms, and each crate it carries weighs 450 kilograms. What is the greatest number of crates the truck can carry across the bridge?",
+      "choices": [
+        "10",
+        "11",
+        "12",
+        "26"
+      ],
+      "answer": 1,
+      "check": "11",
+      "verify": "6890 + 450*ans <= 12000 and 6890 + 450*(ans + 1) > 12000",
+      "hint": "6800 + 90 + 450c ≤ 12 000.",
+      "explanation": "450c ≤ 5110 ⇒ c ≤ 11,36, значит, 11 ящиков (B). 12 — округление вверх; 26 — если забыть массу грузовика."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "The perimeter P of a regular hexagon satisfies 45 < P < 63. If the side length of the hexagon is an integer, how many side lengths are possible?",
+      "answer": [
+        "3"
+      ],
+      "check": "3",
+      "hint": "P = 6s.",
+      "explanation": "45 < 6s < 63 ⇒ 7,5 < s < 10,5. Целые: 8, 9, 10 — три значения."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the xy-plane, a region is bounded by the dashed line through the points (0, −2) and (3, 4). The region contains the origin. Which inequality describes the region?",
+      "choices": [
+        "y ≥ 2x − 2",
+        "y > 2x − 2",
+        "y < 2x − 2",
+        "y > −2x + 2"
+      ],
+      "answer": 1,
+      "hint": "Пунктир — строгий знак. Подставь (0, 0), чтобы выбрать сторону.",
+      "explanation": "Прямая: наклон 6/3 = 2, y = 2x − 2. В начале координат 0 > −2, значит, область y > 2x − 2 (B). A включает прямую (сплошная линия); C — другая сторона."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A company's cost of producing n units is C = 1,200 + 15n dollars, and its revenue from selling n units is R = 40n dollars. What is the least number of units the company must sell for its profit to be at least 25% of its revenue?",
+      "answer": [
+        "80"
+      ],
+      "check": "80",
+      "verify": "40*ans - (1200 + 15*ans) >= 0.25*40*ans and 40*(ans - 1) - (1200 + 15*(ans - 1)) < 0.25*40*(ans - 1)",
+      "hint": "Прибыль R − C ≥ 0,25R.",
+      "explanation": "25n − 1200 ≥ 10n ⇒ 15n ≥ 1200 ⇒ n ≥ 80. При 80 единицах прибыль 800 = 25% от выручки 3200."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If x > y > 0, which of the following must be true?",
+      "choices": [
+        "x − y > x",
+        "x/y > 1",
+        "y/x > 1",
+        "−x > −y"
+      ],
+      "answer": 1,
+      "hint": "Раздели x > y на положительное y.",
+      "explanation": "x/y > 1 (B). A означает −y > 0 — неверно; C — y/x < 1; D — при умножении на −1 знак меняется: −x < −y."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A rideshare trip costs $2.50 plus $1.80 per mile plus $0.30 per minute. On a trip, the car travels at an average speed of 24 miles per hour. What is the greatest whole number of miles the trip can be if it must cost at most $35?",
+      "answer": [
+        "12"
+      ],
+      "check": "12",
+      "verify": "2.5 + 1.8*ans + 0.3*2.5*ans <= 35 and 2.5 + 1.8*(ans + 1) + 0.3*2.5*(ans + 1) > 35",
+      "hint": "При 24 милях в час одна миля занимает 2,5 минуты.",
+      "explanation": "Стоимость мили: 1,80 + 0,30 · 2,5 = 2,55. 2,5 + 2,55m ≤ 35 ⇒ m ≤ 12,75, значит, 12 миль. Ошибка — забыть плату за минуты (18 миль)."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The cost to produce x units of a product is C = 500 + 4x dollars, and each unit sells for $9. For the profit to be at least $1,000 but no more than $2,000, which inequality must x satisfy?",
+      "choices": [
+        "300 ≤ x ≤ 500",
+        "200 ≤ x ≤ 400",
+        "100 ≤ x ≤ 300",
+        "300 ≤ x ≤ 400"
+      ],
+      "answer": 0,
+      "hint": "Прибыль: 9x − (500 + 4x) = 5x − 500.",
+      "explanation": "1000 ≤ 5x − 500 ≤ 2000 ⇒ 1500 ≤ 5x ≤ 2500 ⇒ 300 ≤ x ≤ 500 (A). B — если забыть фиксированные затраты (1000 ≤ 5x ≤ 2000); C — если вычесть 500 вместо прибавления (500 ≤ 5x ≤ 1500); D смешивает верную нижнюю границу с неверной верхней."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "Plan A costs $25 plus $0.08 per minute, plan B costs $40 plus $0.03 per minute, and plan C costs $60 for any number of minutes. For how many whole numbers of minutes m, where 0 ≤ m ≤ 1,000, is plan B strictly cheaper than both of the other plans?",
+      "answer": [
+        "366"
+      ],
+      "check": "366",
+      "hint": "Нужно одновременно B < A и B < C.",
+      "explanation": "B < A: 40 + 0,03m < 25 + 0,08m ⇒ m > 300. B < C: 40 + 0,03m < 60 ⇒ m < 666,67. Целые от 301 до 666: 666 − 301 + 1 = 366."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "How many integer values of x satisfy the inequality |2x − 5| < 7?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "12"
+      ],
+      "answer": 1,
+      "check": "6",
+      "hint": "−7 < 2x − 5 < 7.",
+      "explanation": "−2 < 2x < 12 ⇒ −1 < x < 6. Целые: 0, 1, 2, 3, 4, 5 — шесть (B). 7 — если включить концы −1 или 6; 12 — длина промежутка для 2x."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A cargo plane can carry at most 9,000 kilograms and at most 60 cubic meters of cargo. A type A crate weighs 300 kilograms and takes up 1.5 cubic meters; a type B crate weighs 150 kilograms and takes up 3 cubic meters. If the plane carries 20 type A crates, what is the greatest number of type B crates it can also carry?",
+      "answer": [
+        "10"
+      ],
+      "check": "10",
+      "hint": "Проверь оба ограничения — по массе и по объёму.",
+      "explanation": "Масса: 6000 + 150b ≤ 9000 ⇒ b ≤ 20. Объём: 30 + 3b ≤ 60 ⇒ b ≤ 10. Решает более строгое ограничение: 10 ящиков. Ошибка — проверить только массу (20)."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If x > 0 and 1/3 < 2/x < 1/2, which of the following could be the value of x?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1,
+      "check": "5",
+      "verify": "1/3 < 2/ans and 2/ans < 1/2",
+      "hint": "При x > 0 можно перевернуть дроби, меняя знаки: 2 < x/... — или реши каждое неравенство.",
+      "explanation": "2/x > 1/3 ⇒ x < 6; 2/x < 1/2 ⇒ x > 4. Значит, 4 < x < 6, подходит 5 (B). 4 и 6 — границы, не входящие в промежуток."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A course grade is 40% quiz average and 60% final exam score. A student's quiz average is 72. The final exam is scored as a whole number out of 100. What is the least final exam score that gives the student a course grade of at least 80?",
+      "answer": [
+        "86"
+      ],
+      "check": "86",
+      "verify": "0.4*72 + 0.6*ans >= 80 and 0.4*72 + 0.6*(ans - 1) < 80",
+      "hint": "28,8 + 0,6f ≥ 80.",
+      "explanation": "0,6f ≥ 51,2 ⇒ f ≥ 85,33. Наименьший целый балл — 86. Проверка: 28,8 + 51,6 = 80,4; при 85 получается 79,8."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If a < b < 0, which of the following must be true?",
+      "choices": [
+        "1/a > 1/b",
+        "a² < b²",
+        "ab < 0",
+        "a/b < 1"
+      ],
+      "answer": 0,
+      "hint": "Подставь, например, a = −2 и b = −1.",
+      "explanation": "Для отрицательных чисел переход к обратным переворачивает неравенство: 1/a > 1/b (A); при a = −2, b = −1: −0,5 > −1. a² = 4 > b² = 1; ab = 2 > 0; a/b = 2 > 1 — остальные утверждения неверны."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The sum of three consecutive odd integers is greater than 80 and less than 100. How many such sets of three integers are there?",
+      "answer": [
+        "4"
+      ],
+      "check": "4",
+      "hint": "Если наименьшее n, сумма 3n + 6, и n нечётное.",
+      "explanation": "80 < 3n + 6 < 100 ⇒ 24,67 < n < 31,33. Нечётные n: 25, 27, 29, 31 — четыре набора (суммы 81, 87, 93, 99)."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the xy-plane, the region defined by y ≤ 6, y ≥ 2x − 4, and y ≥ −x + 2 is a triangle. What is the area of the triangle?",
+      "choices": [
+        "18",
+        "24",
+        "27",
+        "54"
+      ],
+      "answer": 2,
+      "check": "0.5*9*6",
+      "hint": "Найди три вершины — попарные пересечения граничных прямых.",
+      "explanation": "y = 6 и y = 2x − 4: (5, 6). y = 6 и y = −x + 2: (−4, 6). 2x − 4 = −x + 2: (2, 0). Основание 9 на прямой y = 6, высота 6, площадь 27 (C). 54 — без множителя 1/2."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "What is the greatest integer k for which the inequality 3x + k < 2(x + 4) is true for every value of x that is less than or equal to −1?",
+      "answer": [
+        "8"
+      ],
+      "check": "8",
+      "hint": "Реши относительно x: x < 8 − k. Все x ≤ −1 должны попасть в это множество.",
+      "explanation": "x < 8 − k должно выполняться при x = −1 (и тем более при меньших x): −1 < 8 − k ⇒ k < 9. Наибольшее целое k = 8. При k = 9 точка x = −1 не подходит: −3 + 9 = 6 не меньше 6."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A farmer has 300 meters of fencing to enclose a rectangular field along a straight river; no fence is needed along the river. The side parallel to the river must be at least twice as long as each side perpendicular to it. Which inequality gives all possible widths w, in meters, of the perpendicular sides?",
+      "choices": [
+        "0 < w ≤ 75",
+        "0 < w ≤ 100",
+        "75 ≤ w < 150",
+        "0 < w ≤ 50"
+      ],
+      "answer": 0,
+      "hint": "Сторона вдоль реки: 300 − 2w. Условие: 300 − 2w ≥ 2w.",
+      "explanation": "300 − 2w ≥ 2w ⇒ w ≤ 75, и w > 0 (A). B — если забыть, что забор нужен на две стороны ширины (300 − w ≥ 2w); C — перевёрнутое условие."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The numbers x and y satisfy x + y ≤ 10, x − y ≥ 2, and y ≥ 1. What is the greatest possible value of x?",
+      "answer": [
+        "9"
+      ],
+      "check": "9",
+      "hint": "x наибольший, когда y наименьший.",
+      "explanation": "Из x + y ≤ 10 и y ≥ 1: x ≤ 9. При x = 9, y = 1 выполнено и x − y = 8 ≥ 2. Ответ 9."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the inequality (k − 2)x ≥ 3k − 6, k is a constant. If the solution set of the inequality is x ≤ 3, which of the following could be the value of k?",
+      "choices": [
+        "0",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 0,
+      "check": "0",
+      "hint": "3k − 6 = 3(k − 2). Что происходит при делении на k − 2 разных знаков?",
+      "explanation": "(k − 2)x ≥ 3(k − 2). Если k − 2 < 0, делим и переворачиваем знак: x ≤ 3 — подходит k < 2, например 0 (A). При k > 2 получается x ≥ 3; при k = 2 неравенство 0 ≥ 0 верно для всех x."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A bike rental costs $12 for the first hour and $7.50 for each additional half hour or part of a half hour. With $50, what is the greatest amount of time, in hours, a rider can rent a bike?",
+      "answer": [
+        "3.5",
+        "7/2"
+      ],
+      "check": "3.5",
+      "verify": "12 + 7.5*((ans - 1)*2) <= 50 and 12 + 7.5*((ans - 1)*2 + 1) > 50",
+      "hint": "После первого часа платишь за каждые полчаса: 12 + 7,5k ≤ 50.",
+      "explanation": "7,5k ≤ 38 ⇒ k ≤ 5,07, то есть 5 дополнительных получасов. Всего 1 + 2,5 = 3,5 часа (стоимость 49,50)."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "How many even integers x satisfy 4 ≤ (3x − 2)/2 ≤ 11?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "check": "3",
+      "hint": "Умножь на 2, прибавь 2, раздели на 3.",
+      "explanation": "8 ≤ 3x − 2 ≤ 22 ⇒ 10 ≤ 3x ≤ 24 ⇒ 3,33 ≤ x ≤ 8. Чётные: 4, 6, 8 — три (B). 5 — все целые от 4 до 8."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "An elevator has a maximum load of 1,050 kilograms, but for safety at least 15% of the maximum load must remain unused. Six people with an average mass of 78 kilograms are in the elevator. What is the greatest number of 24-kilogram boxes that can also be loaded?",
+      "answer": [
+        "17"
+      ],
+      "check": "17",
+      "verify": "468 + 24*ans <= 0.85*1050 and 468 + 24*(ans + 1) > 0.85*1050",
+      "hint": "Допустимая нагрузка: 85% от 1050.",
+      "explanation": "0,85 · 1050 = 892,5 кг. Люди: 6 · 78 = 468. 24b ≤ 424,5 ⇒ b ≤ 17,69, значит, 17 коробок. Без запаса было бы 24."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If 0 < a < b and c < 0, which of the following must be true?",
+      "choices": [
+        "ac > bc",
+        "ac < bc",
+        "a + c > b",
+        "c/a > c/b"
+      ],
+      "answer": 0,
+      "hint": "Умножение неравенства на отрицательное число меняет знак.",
+      "explanation": "Умножаем a < b на c < 0: ac > bc (A), значит, B неверно. a + c < a < b, поэтому C неверно. При a = 1, b = 2, c = −2: c/a = −2 < c/b = −1 — D неверно."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The sum of two positive integers is at most 20, and their difference is at least 6. What is the greatest possible value of their product?",
+      "answer": [
+        "91"
+      ],
+      "check": "13*7",
+      "hint": "Произведение растёт, когда числа ближе друг к другу и сумма больше.",
+      "explanation": "Возьмём наибольшую сумму 20 и наименьшую разность 6: x = 13, y = 7, произведение 91. Варианты 14 и 6 (84) или сумма 19 (например, 13 и 6 — 78) дают меньше."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the system of inequalities y > mx + 1 and y < mx − 3, m is a constant. Which of the following is true?",
+      "choices": [
+        "The system has no solution for any value of m.",
+        "The system has solutions only if m > 0.",
+        "The system has solutions only if m = 0.",
+        "The system has infinitely many solutions for every value of m."
+      ],
+      "answer": 0,
+      "hint": "При одном x может ли y быть больше mx + 1 и одновременно меньше mx − 3?",
+      "explanation": "Для любого x нужно mx + 1 < y < mx − 3, но mx − 3 < mx + 1 всегда. Граничные прямые параллельны, области не пересекаются: решений нет ни при каком m (A)."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A store sells juice in 1.5-liter bottles for $2.10 each and in 0.5-liter bottles for $0.80 each. Mia needs at least 10 liters of juice. What is the least amount of money, in dollars, she can spend?",
+      "answer": [
+        "14.2",
+        "14.20"
+      ],
+      "check": "14.2",
+      "hint": "Литр в большой бутылке дешевле (1,40 против 1,60). Но можно ли набрать ровно 10 литров?",
+      "explanation": "Только большие: 7 бутылок = 10,5 л за 14,70. Шесть больших (9 л) и две маленькие (1 л) = 10 л за 12,60 + 1,60 = 14,20. Пять больших и пять маленьких — 14,50. Минимум 14,20."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "If 3 ≤ x ≤ 7 and 2 ≤ y ≤ 4, which of the following gives all possible values of x/y?",
+      "choices": [
+        "0.75 ≤ x/y ≤ 3.5",
+        "1.5 ≤ x/y ≤ 1.75",
+        "0.75 ≤ x/y ≤ 1.75",
+        "1.5 ≤ x/y ≤ 3.5"
+      ],
+      "answer": 0,
+      "hint": "Наименьшее частное: наименьший x на наибольший y. Наибольшее — наоборот.",
+      "explanation": "Наименьшее 3/4 = 0,75, наибольшее 7/2 = 3,5 (A). B делит концы на концы того же порядка (3/2 и 7/4); C и D смешивают эти варианты."
+    }
+  ]
+}

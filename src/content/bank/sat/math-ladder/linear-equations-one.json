@@ -1,0 +1,1744 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "linear-equations-one",
+    "source": "original",
+    "license": "original — © 365step"
+  },
+  "items": [
+    {
+      "id": "e16",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "A gardener planted tulip bulbs in 9 rows with the same number of bulbs in each row. She started with a bag of 76 bulbs and had 4 bulbs left over. How many bulbs did she plant in each row?",
+      "answer": [
+        "8"
+      ],
+      "check": "(76-4)/9",
+      "verify": "9*ans + 4 == 76",
+      "hint": "Посаженные луковицы плюс оставшиеся 4 — это все 76.",
+      "explanation": "9r + 4 = 76 ⇒ 9r = 72 ⇒ r = 8 луковиц в ряду. Ошибка — разделить 76 на 9, не вычтя остаток."
+    },
+    {
+      "id": "e17",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "If −3m = 27, what is the value of m?",
+      "choices": [
+        "−30",
+        "−9",
+        "9",
+        "24"
+      ],
+      "answer": 1,
+      "check": "27/(-3)",
+      "verify": "-3*ans == 27",
+      "hint": "Раздели обе части на −3 и следи за знаком.",
+      "explanation": "m = 27 : (−3) = −9 (B). 9 — потерян знак; −30 и 24 — результат вычитания 3 вместо деления."
+    },
+    {
+      "id": "e18",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "If 15 = 4 + x/2, what is the value of x?",
+      "choices": [
+        "5.5",
+        "22",
+        "26",
+        "38"
+      ],
+      "answer": 1,
+      "check": "(15-4)*2",
+      "verify": "15 == 4 + ans/2",
+      "hint": "Сначала вычти 4 из 15 — получится x/2.",
+      "explanation": "x/2 = 11 ⇒ x = 22 (B). 5,5 — это 11 : 2 (поделили вместо умножения); 38 — если прибавить 4 к 15 и умножить на 2; 26 — 22 + 4."
+    },
+    {
+      "id": "e19",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "Twice a number, decreased by 7, is equal to the number increased by 5. What is the number?",
+      "answer": [
+        "12"
+      ],
+      "check": "5+7",
+      "verify": "2*ans - 7 == ans + 5",
+      "hint": "Запиши: 2n − 7 = n + 5.",
+      "explanation": "2n − 7 = n + 5 ⇒ 2n − n = 5 + 7 ⇒ n = 12. Проверка: 24 − 7 = 17 = 12 + 5."
+    },
+    {
+      "id": "e20",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "mcq",
+      "stem": "If 8 = 2(5 − w), what is the value of w?",
+      "choices": [
+        "−1",
+        "1",
+        "4",
+        "9"
+      ],
+      "answer": 1,
+      "check": "5-8/2",
+      "verify": "8 == 2*(5 - ans)",
+      "hint": "Раздели обе части на 2: 4 = 5 − w.",
+      "explanation": "4 = 5 − w ⇒ w = 1 (B). 4 — это 5 − w; 9 — если сложить 5 и 4; −1 — ошибка знака при переносе w."
+    },
+    {
+      "id": "e21",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "What value of x satisfies the equation 3x + 8 = 8 − x?",
+      "choices": [
+        "−4",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 1,
+      "check": "0",
+      "verify": "3*ans + 8 == 8 - ans",
+      "hint": "Перенеси −x влево, а 8 вправо.",
+      "explanation": "3x + x = 8 − 8 ⇒ 4x = 0 ⇒ x = 0 (B). Ноль — допустимое решение. 4 — если перенести 8 без смены знака (4x = 16); −4 — если и знак у x перепутан (−4x = 16); 2 — если сложить 3x и −x как 2x и перенести 8 неверно."
+    },
+    {
+      "id": "e22",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "If 5a = 3, what is the value of 20a + 4?",
+      "answer": [
+        "16"
+      ],
+      "check": "4*3+4",
+      "hint": "20a — это 4 · 5a.",
+      "explanation": "20a = 4 · 5a = 4 · 3 = 12, значит, 20a + 4 = 16. Находить a = 0,6 не обязательно (хотя 20 · 0,6 + 4 = 16)."
+    },
+    {
+      "id": "e23",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x/3 + 2 = 7, what is the value of x?",
+      "choices": [
+        "3",
+        "5",
+        "15",
+        "27"
+      ],
+      "answer": 2,
+      "check": "(7-2)*3",
+      "verify": "ans/3 + 2 == 7",
+      "hint": "Сначала убери +2, потом избавься от деления на 3.",
+      "explanation": "x/3 = 5, x = 15 (C). 5 — это x/3, а не x; 27 — если прибавить 2 вместо вычитания (x/3 = 9); 3 — если поделить 5 на 3."
+    },
+    {
+      "id": "e24",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Maya has $140 and spends $12 each week. After how many weeks will she have exactly $56 left?",
+      "answer": [
+        "7"
+      ],
+      "check": "(140-56)/12",
+      "verify": "140 - 12*ans == 56",
+      "hint": "Сколько денег она должна потратить? Это 140 − 56.",
+      "explanation": "140 − 12w = 56 ⇒ 12w = 84 ⇒ w = 7 недель. Проверка: 140 − 84 = 56."
+    },
+    {
+      "id": "e25",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "What is the solution to the equation 2.5 − 0.5x = 0.75x?",
+      "choices": [
+        "1.25",
+        "2",
+        "5",
+        "10"
+      ],
+      "answer": 1,
+      "check": "2.5/1.25",
+      "verify": "2.5 - 0.5*ans == 0.75*ans",
+      "hint": "Собери x справа: 0,75x + 0,5x.",
+      "explanation": "2,5 = 1,25x ⇒ x = 2 (B). 5 — если потерять 0,75x и решить 2,5 = 0,5x; 10 — если вычесть коэффициенты (2,5 = 0,25x); 1,25 — это коэффициент при x, а не сам x."
+    },
+    {
+      "id": "e26",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 4(x − 2) − x = 13, what is the value of x?",
+      "choices": [
+        "−7",
+        "5",
+        "7",
+        "21"
+      ],
+      "answer": 2,
+      "check": "(13+8)/3",
+      "verify": "4*(ans - 2) - ans == 13",
+      "hint": "Раскрой скобку: множитель 4 умножается и на x, и на −2.",
+      "explanation": "4x − 8 − x = 13 ⇒ 3x = 21 ⇒ x = 7 (C). 5 получается, если не умножить −2 на 4 (3x = 15); 21 — это 3x; −7 — ошибка знака."
+    },
+    {
+      "id": "e27",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "For what value of k is x = 3 a solution to the equation kx − 5 = 7?",
+      "choices": [
+        "2/3",
+        "4",
+        "6",
+        "12"
+      ],
+      "answer": 1,
+      "check": "(7+5)/3",
+      "verify": "3*ans - 5 == 7",
+      "hint": "Подставь x = 3 и реши уравнение относительно k.",
+      "explanation": "При x = 3: 3k − 5 = 7, 3k = 12, k = 4 (B). 12 — это 3k; 2/3 — если вычесть 5 вместо прибавления: (7 − 5)/3; 6 — 12 : 2."
+    },
+    {
+      "id": "e28",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "Three friends each paid the same amount for a meal, and together they also left a $9 tip. The total, including the tip, was $54. How many dollars did each friend pay for the meal, not counting the tip?",
+      "answer": [
+        "15"
+      ],
+      "check": "(54-9)/3",
+      "verify": "3*ans + 9 == 54",
+      "hint": "Чаевые оплачены один раз, а еда — три раза по одной и той же сумме.",
+      "explanation": "3m + 9 = 54 ⇒ 3m = 45 ⇒ m = 15 долларов. Частая ошибка — разделить 54 на 3 (18), не вычтя чаевые."
+    },
+    {
+      "id": "e29",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If (1/2)(x + 8) = x, what is the value of x?",
+      "choices": [
+        "−8",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "check": "8",
+      "verify": "(ans + 8)/2 == ans",
+      "hint": "Умножь обе части на 2: x + 8 = 2x.",
+      "explanation": "x + 8 = 2x ⇒ x = 8 (C). Проверка: (8 + 8)/2 = 8. 16 — если раскрыть скобку как x/2 + 8 (тогда x/2 = 8); 4 — это 8 : 2; −8 — ошибка знака при переносе."
+    },
+    {
+      "id": "e30",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "The equation 12 + 3n = 5n − 8 is true for which value of n?",
+      "choices": [
+        "2",
+        "4",
+        "10",
+        "20"
+      ],
+      "answer": 2,
+      "check": "(12+8)/2",
+      "verify": "12 + 3*ans == 5*ans - 8",
+      "hint": "Перенеси 3n вправо, а −8 влево.",
+      "explanation": "12 + 8 = 5n − 3n ⇒ 20 = 2n ⇒ n = 10 (C). 20 — это 2n; 2 получается, если перенести −8 без смены знака (4 = 2n даёт 2); 4 — это 12 − 8."
+    },
+    {
+      "id": "e31",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A movie theater sold 210 tickets on Friday, which was 30 fewer than twice the number of tickets it sold on Thursday. How many tickets did the theater sell on Thursday?",
+      "answer": [
+        "120"
+      ],
+      "check": "(210+30)/2",
+      "verify": "2*ans - 30 == 210",
+      "hint": "«На 30 меньше, чем дважды t» — это 2t − 30.",
+      "explanation": "2t − 30 = 210 ⇒ 2t = 240 ⇒ t = 120 билетов. Ошибка — вычесть 30 вместо прибавления (2t = 180, t = 90)."
+    },
+    {
+      "id": "e32",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 6 − 2(x + 1) = 0, what is the value of x?",
+      "choices": [
+        "−2",
+        "2",
+        "2.5",
+        "4"
+      ],
+      "answer": 1,
+      "check": "(6-2)/2",
+      "verify": "6 - 2*(ans + 1) == 0",
+      "hint": "Минус перед скобкой меняет знаки обоих слагаемых внутри.",
+      "explanation": "6 − 2x − 2 = 0 ⇒ 4 = 2x ⇒ x = 2 (B). 2,5 — если не умножить 1 на 2 (6 − 2x − 1 = 0); 4 — если раскрыть скобку как −2x + 2; −2 — ошибка знака при переносе."
+    },
+    {
+      "id": "e33",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Which value of x makes the equation 3x/4 = 18 true?",
+      "choices": [
+        "6",
+        "13.5",
+        "24",
+        "72"
+      ],
+      "answer": 2,
+      "check": "18*4/3",
+      "verify": "3*ans/4 == 18",
+      "hint": "Умножь на 4, затем раздели на 3.",
+      "explanation": "3x = 72, x = 24 (C). 72 — это 3x; 13,5 — если умножить 18 на 3/4 вместо деления; 6 — это 18 : 3."
+    },
+    {
+      "id": "e34",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "At 6 a.m. the temperature was −4°F. It then rose at a constant rate of 3°F per hour. How many hours after 6 a.m. was the temperature 17°F?",
+      "answer": [
+        "7"
+      ],
+      "check": "(17+4)/3",
+      "verify": "-4 + 3*ans == 17",
+      "hint": "На сколько градусов всего поднялась температура — от −4 до 17?",
+      "explanation": "−4 + 3t = 17 ⇒ 3t = 21 ⇒ t = 7 часов. Подъём составил 17 − (−4) = 21 градус. Ошибка — считать подъём равным 13 (17 − 4)."
+    },
+    {
+      "id": "e35",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 2x + 2x + 2x = 30, what is the value of 4x?",
+      "choices": [
+        "5",
+        "10",
+        "20",
+        "24"
+      ],
+      "answer": 2,
+      "check": "4*(30/6)",
+      "hint": "Сложи одинаковые слагаемые, найди x, а затем 4x.",
+      "explanation": "6x = 30 ⇒ x = 5 ⇒ 4x = 20 (C). 5 — это x, а вопрос о 4x; 10 — это 2x; 24 — результат 30 − 6."
+    },
+    {
+      "id": "e36",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "What is the solution to the equation 1.5(t − 4) = 9?",
+      "choices": [
+        "2",
+        "6",
+        "10",
+        "13.5"
+      ],
+      "answer": 2,
+      "check": "9/1.5+4",
+      "verify": "1.5*(ans - 4) == 9",
+      "hint": "Раздели обе части на 1,5 — останется t − 4.",
+      "explanation": "t − 4 = 6, t = 10 (C). 6 — это t − 4; 13,5 — если умножить 9 на 1,5; 2 — если вычесть 4 из 6."
+    },
+    {
+      "id": "e37",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If x − x/4 = 9, what is the value of x?",
+      "choices": [
+        "3",
+        "6.75",
+        "12",
+        "36"
+      ],
+      "answer": 2,
+      "check": "9*4/3",
+      "verify": "ans - ans/4 == 9",
+      "hint": "x − x/4 — это три четверти x.",
+      "explanation": "x − x/4 = (3/4)x = 9 ⇒ x = 12 (C). 36 — если решить x/4 = 9; 6,75 — это 9 · 3/4; 3 — это x/4."
+    },
+    {
+      "id": "e38",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "A dog walker charges a $45 booking fee plus $30 per hour of walking. One bill came to $150. For how many hours of walking was the bill?",
+      "answer": [
+        "3.5",
+        "7/2"
+      ],
+      "check": "(150-45)/30",
+      "verify": "45 + 30*ans == 150",
+      "hint": "Сначала вычти плату за бронирование.",
+      "explanation": "45 + 30h = 150 ⇒ 30h = 105 ⇒ h = 3,5 часа. Ответ не обязан быть целым: 3,5 · 30 = 105."
+    },
+    {
+      "id": "e39",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "If 10 − 3x = x + 2, what is the value of x?",
+      "choices": [
+        "−2",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "check": "(10-2)/4",
+      "verify": "10 - 3*ans == ans + 2",
+      "hint": "Перенеси −3x вправо: там окажется 4x.",
+      "explanation": "10 − 2 = x + 3x ⇒ 8 = 4x ⇒ x = 2 (B). 4 — если сложить x и −3x как 2x; 8 — это 4x; −2 — ошибка знака."
+    },
+    {
+      "id": "e40",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "mcq",
+      "stem": "Ana is 3 times as old as Ben. In 6 years, the sum of their ages will be 40. How old is Ben now?",
+      "choices": [
+        "7",
+        "8.5",
+        "10",
+        "21"
+      ],
+      "answer": 0,
+      "check": "(40-12)/4",
+      "verify": "ans + 3*ans + 12 == 40",
+      "hint": "Через 6 лет к возрасту каждого прибавится 6 — значит, к сумме прибавится 12.",
+      "explanation": "Сейчас: Бен b, Ана 3b. Через 6 лет: (b + 6) + (3b + 6) = 40 ⇒ 4b = 28 ⇒ b = 7 (A). 10 — если забыть о 6 годах; 8,5 — если прибавить 6 только один раз; 21 — возраст Аны."
+    },
+    {
+      "id": "m16",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "In the equation 3(2x − a) = 6x + 12, a is a constant. If the equation has infinitely many solutions, what is the value of a?",
+      "choices": [
+        "−12",
+        "−4",
+        "4",
+        "12"
+      ],
+      "answer": 1,
+      "check": "-4",
+      "verify": "-3*ans == 12",
+      "hint": "Раскрой скобку: при бесконечном числе решений обе части должны совпасть полностью.",
+      "explanation": "6x − 3a = 6x + 12. Коэффициенты при x уже равны, значит, нужно −3a = 12, a = −4 (B). При a = 4 получилось бы −12 = 12 — решений нет; −12 и 12 — это −3a, а не a."
+    },
+    {
+      "id": "m17",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "How many solutions does the equation 4(x + 3) − 2x = 2(x + 6) have?",
+      "choices": [
+        "Zero",
+        "Exactly one",
+        "Exactly two",
+        "Infinitely many"
+      ],
+      "answer": 3,
+      "hint": "Упрости обе части и сравни их.",
+      "explanation": "Левая часть: 4x + 12 − 2x = 2x + 12. Правая: 2x + 12. Части совпадают при любом x, поэтому решений бесконечно много (D). «Ровно одно» было бы, если бы коэффициенты при x различались."
+    },
+    {
+      "id": "m18",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Which of the following equations has exactly one solution?",
+      "choices": [
+        "2(x + 4) = 2x + 8",
+        "2(x + 4) = 2x + 4",
+        "2(x + 4) = 3x + 8",
+        "8 + 2x = 2(x + 3)"
+      ],
+      "answer": 2,
+      "hint": "Ровно одно решение — когда после упрощения коэффициенты при x разные.",
+      "explanation": "В C: 2x + 8 = 3x + 8 ⇒ x = 0 — ровно одно решение (C). A — тождество (бесконечно много решений); в B и D после упрощения получаются ложные равенства 8 = 4 и 8 = 6 — решений нет."
+    },
+    {
+      "id": "m19",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "If (2/3)x − 5 = 7, what is the value of x?",
+      "answer": [
+        "18"
+      ],
+      "check": "12*3/2",
+      "verify": "2/3*ans - 5 == 7",
+      "hint": "Сначала (2/3)x = 12, затем умножь на 3/2.",
+      "explanation": "(2/3)x = 12 ⇒ x = 12 · 3/2 = 18. Ошибка — умножить 12 на 2/3 (получится 8)."
+    },
+    {
+      "id": "m20",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "The sum of three consecutive even integers is 138. What is the largest of the three integers?",
+      "choices": [
+        "44",
+        "46",
+        "48",
+        "50"
+      ],
+      "answer": 2,
+      "check": "138/3+2",
+      "verify": "(ans - 4) + (ans - 2) + ans == 138",
+      "hint": "Последовательные чётные числа: n, n + 2, n + 4.",
+      "explanation": "n + (n + 2) + (n + 4) = 138 ⇒ 3n + 6 = 138 ⇒ n = 44. Наибольшее — 44 + 4 = 48 (C). 44 — наименьшее, 46 — среднее (138 : 3); 50 — если взять шаг 3."
+    },
+    {
+      "id": "m21",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "A phone plan costs $25 per month plus $0.10 for each text message after the first 100 texts in that month. One month's bill was $41.50. How many text messages were sent that month?",
+      "choices": [
+        "165",
+        "215",
+        "265",
+        "415"
+      ],
+      "answer": 2,
+      "check": "(41.5-25)/0.1+100",
+      "verify": "25 + 0.1*(ans - 100) == 41.5",
+      "hint": "Сначала найди, сколько сообщений было сверх бесплатных 100.",
+      "explanation": "Платных сообщений: (41,50 − 25)/0,10 = 165. Всего: 165 + 100 = 265 (C). 165 — только платные; 415 — если поделить 41,50 на 0,10; 215 — если прибавить 50 вместо 100."
+    },
+    {
+      "id": "m22",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "The average (arithmetic mean) of a student's 5 test scores is 84. What score on a sixth test would raise the average of all 6 tests to exactly 86?",
+      "answer": [
+        "96"
+      ],
+      "check": "6*86-5*84",
+      "verify": "(5*84 + ans)/6 == 86",
+      "hint": "Работай с суммами: сумма пяти тестов и нужная сумма шести.",
+      "explanation": "Сейчас сумма 5 · 84 = 420. Нужно 6 · 86 = 516. Шестой тест: 516 − 420 = 96. Ошибка — думать, что достаточно 88 (на 2 балла выше среднего): каждый из шести тестов «должен» поднять среднее, поэтому нужно 86 + 5 · 2 = 96."
+    },
+    {
+      "id": "m23",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 5x − 2 = 3x + 10, what is the value of x − 2?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "answer": 0,
+      "check": "(10+2)/2-2",
+      "verify": "5*(ans + 2) - 2 == 3*(ans + 2) + 10",
+      "hint": "Найди x, а потом не забудь вычесть 2 — спрашивают не x.",
+      "explanation": "2x = 12 ⇒ x = 6 ⇒ x − 2 = 4 (A). 6 — это x; 12 — это 2x; 8 — это x + 2."
+    },
+    {
+      "id": "m24",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 3/(x − 1) = 6/(x + 4), what is the value of x?",
+      "choices": [
+        "−9",
+        "−6",
+        "6",
+        "18"
+      ],
+      "answer": 2,
+      "check": "18/3",
+      "verify": "3/(ans - 1) == 6/(ans + 4)",
+      "hint": "Перемножь крест-накрест: 3(x + 4) = 6(x − 1).",
+      "explanation": "3x + 12 = 6x − 6 ⇒ 18 = 3x ⇒ x = 6 (C). Проверка: 3/5 = 6/10. 18 — это 3x; −6 — ошибка знака; −9 — если перемножить не крест-накрест: 3(x − 1) = 6(x + 4)."
+    },
+    {
+      "id": "m25",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Leo read a 120-page book. He read 28 pages before the weekend and finished the rest over the weekend, reading 3 times as many pages on Sunday as on Saturday. How many pages did he read on Saturday?",
+      "answer": [
+        "23"
+      ],
+      "check": "(120-28)/4",
+      "verify": "28 + ans + 3*ans == 120",
+      "hint": "Все страницы: 28 + s + 3s = 120.",
+      "explanation": "28 + 4s = 120 ⇒ 4s = 92 ⇒ s = 23 страницы в субботу (и 69 в воскресенье). Ошибка — поделить 92 на 3."
+    },
+    {
+      "id": "m26",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 7(x + 2) = 4(x + 2) + 18, what is the value of x + 2?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "18"
+      ],
+      "answer": 1,
+      "check": "18/3",
+      "hint": "Не раскрывай скобки: считай x + 2 одним «блоком».",
+      "explanation": "Пусть u = x + 2. Тогда 7u = 4u + 18 ⇒ 3u = 18 ⇒ u = 6 (B). 4 — это x; 18 — это 3u; 8 — u + 2."
+    },
+    {
+      "id": "m27",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 4x + 6 = 3, what is the value of 2x + 3?",
+      "choices": [
+        "−3/4",
+        "3/2",
+        "3",
+        "6"
+      ],
+      "answer": 1,
+      "check": "3/2",
+      "hint": "Сравни 2x + 3 и 4x + 6.",
+      "explanation": "4x + 6 = 2(2x + 3), значит, 2x + 3 = 3/2 (B). Через x: 4x = −3, x = −3/4, 2 · (−3/4) + 3 = 3/2. −3/4 — это x; 6 и 3 — ошибки при делении."
+    },
+    {
+      "id": "m28",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "A store prices items using the formula P = 1.2c + 3, where P is the price, in dollars, and c is the store's cost, in dollars. An item is priced at $57. What was the store's cost for the item, in dollars?",
+      "answer": [
+        "45"
+      ],
+      "check": "(57-3)/1.2",
+      "verify": "1.2*ans + 3 == 57",
+      "hint": "Подставь P = 57 и реши уравнение относительно c.",
+      "explanation": "57 = 1,2c + 3 ⇒ 1,2c = 54 ⇒ c = 45. Ошибка — сначала поделить 57 на 1,2 (47,5), а потом вычесть 3."
+    },
+    {
+      "id": "m29",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "If 3(x − 2) = 12, what is the value of (x − 2)/2 + x?",
+      "choices": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "answer": 1,
+      "check": "4/2+6",
+      "hint": "Сначала найди x − 2, потом сам x.",
+      "explanation": "x − 2 = 4 ⇒ x = 6. Значит, (x − 2)/2 + x = 2 + 6 = 8 (B). 6 — это x; 10 — если сложить x − 2 и x; 12 — правая часть исходного уравнения."
+    },
+    {
+      "id": "m30",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "mcq",
+      "stem": "Jon is 4 years older than twice his sister's age. The difference between their ages is 13 years. How old is Jon's sister?",
+      "choices": [
+        "9",
+        "13",
+        "17",
+        "22"
+      ],
+      "answer": 0,
+      "check": "13-4",
+      "verify": "(2*ans + 4) - ans == 13",
+      "hint": "Возраст Джона: 2s + 4. Разность: (2s + 4) − s.",
+      "explanation": "(2s + 4) − s = 13 ⇒ s + 4 = 13 ⇒ s = 9 (A). 22 — возраст Джона; 17 — если сложить 13 и 4; 13 — разность возрастов."
+    },
+    {
+      "id": "m31",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "Each day a bakery makes 40 more muffins than bagels. Muffins sell for $2.50 each and bagels sell for $1.75 each. One day the bakery sold all of them for a total of $525. How many bagels did the bakery make that day?",
+      "answer": [
+        "100"
+      ],
+      "check": "(525-100)/4.25",
+      "verify": "2.5*(ans + 40) + 1.75*ans == 525",
+      "hint": "Маффинов b + 40. Выручка: 2,5(b + 40) + 1,75b.",
+      "explanation": "2,5b + 100 + 1,75b = 525 ⇒ 4,25b = 425 ⇒ b = 100 бейглов (и 140 маффинов). Проверка: 350 + 175 = 525."
+    },
+    {
+      "id": "m32",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "For what value of k does the equation k(x − 3) = 5x + 9 have no solution?",
+      "choices": [
+        "−3",
+        "3",
+        "5",
+        "9"
+      ],
+      "answer": 2,
+      "check": "5",
+      "hint": "Раскрой скобку и сравни коэффициенты при x.",
+      "explanation": "kx − 3k = 5x + 9. Решений нет, если коэффициенты при x равны (k = 5), а свободные члены различны: −15 ≠ 9 — верно. Ответ: 5 (C). При k = −3 получится −3x + 9 = 5x + 9 — одно решение x = 0."
+    },
+    {
+      "id": "m33",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation (x + 3)/2 + (x − 1)/4 = 5?",
+      "answer": [
+        "5"
+      ],
+      "check": "15/3",
+      "verify": "(ans + 3)/2 + (ans - 1)/4 == 5",
+      "hint": "Умножь всё на 4 — общий знаменатель.",
+      "explanation": "2(x + 3) + (x − 1) = 20 ⇒ 2x + 6 + x − 1 = 20 ⇒ 3x + 5 = 20 ⇒ x = 5. Ошибка — умножить на 4 только дроби, а 5 оставить: тогда 3x + 5 = 5 и x = 0."
+    },
+    {
+      "id": "m34",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The formula F = (9/5)C + 32 converts a temperature C, in degrees Celsius, to F, in degrees Fahrenheit. At what Celsius temperature is the Fahrenheit reading 40 degrees greater than the Celsius reading?",
+      "choices": [
+        "10",
+        "18",
+        "40",
+        "50"
+      ],
+      "answer": 0,
+      "check": "8*5/4",
+      "verify": "9/5*ans + 32 == ans + 40",
+      "hint": "Нужно, чтобы F = C + 40. Подставь формулу вместо F.",
+      "explanation": "(9/5)C + 32 = C + 40 ⇒ (4/5)C = 8 ⇒ C = 10 (A). Проверка: 10 °C = 50 °F, а 50 − 10 = 40. 50 — это градусы Фаренгейта; 18 — это (9/5) · 10; 40 — разность из условия."
+    },
+    {
+      "id": "m35",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Candle A is 30 centimeters tall and burns down 2 centimeters per hour. Candle B is 22 centimeters tall and burns down 1.2 centimeters per hour. Both candles are lit at the same time. After how many hours will the two candles be the same height?",
+      "choices": [
+        "4",
+        "10",
+        "20",
+        "26"
+      ],
+      "answer": 1,
+      "check": "8/0.8",
+      "verify": "30 - 2*ans == 22 - 1.2*ans",
+      "hint": "Высота каждой свечи через t часов: 30 − 2t и 22 − 1,2t.",
+      "explanation": "30 − 2t = 22 − 1,2t ⇒ 8 = 0,8t ⇒ t = 10 часов (B); обе будут высотой 10 см. 20 — если поделить 8 на 0,4; 4 — если поделить 8 на 2; 26 — ошибка знака."
+    },
+    {
+      "id": "m36",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The equation 6(p − 1) = 2(3p + k), where k is a constant, has no solution. Which of the following CANNOT be the value of k?",
+      "choices": [
+        "−3",
+        "−1",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "check": "-3",
+      "hint": "Раскрой обе скобки: при каком k уравнение стало бы тождеством?",
+      "explanation": "6p − 6 = 6p + 2k ⇒ −6 = 2k. Если k = −3, равенство верно при любом p — решений бесконечно много, а не ноль. При любом другом k решений нет. Значит, k не может быть −3 (A)."
+    },
+    {
+      "id": "m37",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A school spent $1,950 on 30 calculators. Some were basic calculators that cost $45 each, and the rest were graphing calculators that cost $95 each. How many graphing calculators did the school buy?",
+      "answer": [
+        "12"
+      ],
+      "check": "(1950-45*30)/(95-45)",
+      "verify": "45*(30 - ans) + 95*ans == 1950",
+      "hint": "Пусть g — графические; тогда базовых 30 − g.",
+      "explanation": "45(30 − g) + 95g = 1950 ⇒ 1350 + 50g = 1950 ⇒ 50g = 600 ⇒ g = 12. Проверка: 18 · 45 + 12 · 95 = 810 + 1140 = 1950."
+    },
+    {
+      "id": "m38",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A number is doubled, and then 9 is subtracted from the result. This gives the same value as subtracting the number from 18. What is the number?",
+      "choices": [
+        "−9",
+        "9",
+        "13.5",
+        "27"
+      ],
+      "answer": 1,
+      "check": "27/3",
+      "verify": "2*ans - 9 == 18 - ans",
+      "hint": "«Вычесть число из 18» — это 18 − n, а не n − 18.",
+      "explanation": "2n − 9 = 18 − n ⇒ 3n = 27 ⇒ n = 9 (B). −9 — если записать «вычесть число из 18» как n − 18; 13,5 — если потерять −n справа (2n = 27); 27 — это 3n."
+    },
+    {
+      "id": "m39",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The equations 3x − 5 = 2x + 1 and 5x + c = 40 have the same solution. What is the value of c?",
+      "choices": [
+        "6",
+        "10",
+        "34",
+        "70"
+      ],
+      "answer": 1,
+      "check": "40-5*6",
+      "hint": "Реши первое уравнение и подставь x во второе.",
+      "explanation": "Из первого x = 6. Тогда 5 · 6 + c = 40 ⇒ c = 10 (B). 6 — это x, а не c; 34 — если забыть умножить x на 5 (40 − 6); 70 — ошибка знака (c = 40 + 30)."
+    },
+    {
+      "id": "m40",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "A train leaves a station traveling at 60 miles per hour. Two hours later, a second train leaves the same station on a parallel track in the same direction, traveling at 80 miles per hour. How many hours after the second train leaves will it catch up with the first train?",
+      "answer": [
+        "6"
+      ],
+      "check": "120/20",
+      "verify": "60*(ans + 2) == 80*ans",
+      "hint": "К моменту встречи первый поезд был в пути на 2 часа дольше. Приравняй пройденные расстояния.",
+      "explanation": "60(t + 2) = 80t ⇒ 120 = 20t ⇒ t = 6 часов. За это время оба проедут 480 миль. Ошибка — ответ 8 (время первого поезда)."
+    },
+    {
+      "id": "m41",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "What is the solution to the equation 5 − (2x − 3)/4 = x?",
+      "choices": [
+        "17/6",
+        "23/6",
+        "4",
+        "23/2"
+      ],
+      "answer": 1,
+      "check": "23/6",
+      "verify": "5 - (2*ans - 3)/4 == ans",
+      "hint": "Умножь обе части на 4; минус перед дробью относится ко всему числителю.",
+      "explanation": "20 − (2x − 3) = 4x ⇒ 20 − 2x + 3 = 4x ⇒ 23 = 6x ⇒ x = 23/6 (B). 17/6 — если написать −3 вместо +3; 23/2 — если забыть перенести −2x; 4 — округление."
+    },
+    {
+      "id": "m42",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "If 3(x + k) = 18 and k = x − 4, what is the value of x?",
+      "choices": [
+        "1",
+        "5",
+        "6",
+        "11"
+      ],
+      "answer": 1,
+      "check": "(18/3+4)/2",
+      "verify": "3*(ans + ans - 4) == 18",
+      "hint": "Подставь k = x − 4 в первое уравнение — останется одна переменная.",
+      "explanation": "3(x + x − 4) = 18 ⇒ 2x − 4 = 6 ⇒ x = 5 (B), тогда k = 1. 1 — это k, а не x; 6 — это x + k; 11 — если забыть разделить 18 на 3 (2x − 4 = 18)."
+    },
+    {
+      "id": "m43",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "An investor put some money into an account that pays 4% simple annual interest and put $2,000 more than that amount into an account that pays 6% simple annual interest. After one year, the total interest from both accounts was $420. How many dollars were put into the 4% account?",
+      "answer": [
+        "3000"
+      ],
+      "check": "(420-120)/0.1",
+      "verify": "0.04*ans + 0.06*(ans + 2000) == 420",
+      "hint": "Проценты за год: 0,04x и 0,06(x + 2000).",
+      "explanation": "0,04x + 0,06x + 120 = 420 ⇒ 0,1x = 300 ⇒ x = 3000 долларов. Проверка: 120 + 300 = 420 (на втором счёте 5000 · 0,06 = 300)."
+    },
+    {
+      "id": "m44",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Two-thirds of a number is 10 more than one-fourth of the number. What is the number?",
+      "choices": [
+        "12",
+        "24",
+        "30",
+        "40"
+      ],
+      "answer": 1,
+      "check": "10/(2/3-1/4)",
+      "verify": "2/3*ans == ans/4 + 10",
+      "hint": "(2/3)n − (1/4)n = 10; приведи дроби к знаменателю 12.",
+      "explanation": "(8/12 − 3/12)n = 10 ⇒ (5/12)n = 10 ⇒ n = 24 (B). Проверка: 16 = 6 + 10. 12 — если считать разность дробей равной 5/6; 40 — если взять 1/4 вместо 5/12."
+    },
+    {
+      "id": "m45",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A theater company's profit, in dollars, from selling n tickets to a show is given by 18n − 2,700. How many tickets must be sold for the profit to be exactly $900?",
+      "choices": [
+        "50",
+        "150",
+        "200",
+        "250"
+      ],
+      "answer": 2,
+      "check": "(900+2700)/18",
+      "verify": "18*ans - 2700 == 900",
+      "hint": "Приравняй прибыль к 900.",
+      "explanation": "18n − 2700 = 900 ⇒ 18n = 3600 ⇒ n = 200 (C). 150 — это точка безубыточности (прибыль 0); 50 — если вычесть 900 из 2700; 250 — ошибка деления."
+    },
+    {
+      "id": "m46",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "In the equation (k − 2)x = 3k − 6 + 5x, k is a constant. If x = −3 is the solution to the equation, what is the value of k?",
+      "answer": [
+        "4.5",
+        "9/2"
+      ],
+      "check": "27/6",
+      "verify": "(ans - 2)*(-3) == 3*ans - 6 + 5*(-3)",
+      "hint": "Подставь x = −3 и реши уравнение относительно k.",
+      "explanation": "(k − 2)(−3) = 3k − 6 − 15 ⇒ −3k + 6 = 3k − 21 ⇒ 27 = 6k ⇒ k = 4,5. Частая ошибка — потерять знак при умножении −2 на −3: −3k − 6 = 3k − 21 даёт k = 2,5."
+    },
+    {
+      "id": "m47",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "The equation 9x − 15 = 3(ax + b) is true for all values of x, where a and b are constants. What is the value of a − b?",
+      "choices": [
+        "−2",
+        "2",
+        "8",
+        "10"
+      ],
+      "answer": 2,
+      "check": "3-(-5)",
+      "hint": "3(ax + b) = 3ax + 3b. Сравни коэффициенты.",
+      "explanation": "3a = 9 ⇒ a = 3; 3b = −15 ⇒ b = −5. a − b = 3 − (−5) = 8 (C). −2 — это a + b; 2 и 10 — ошибки знака у b."
+    },
+    {
+      "id": "m48",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "A recipe uses flour and sugar with a combined weight of 750 grams. The weight of the flour is 150 grams more than twice the weight of the sugar. How many grams of sugar does the recipe use?",
+      "choices": [
+        "200",
+        "300",
+        "450",
+        "550"
+      ],
+      "answer": 0,
+      "check": "(750-150)/3",
+      "verify": "ans + 2*ans + 150 == 750",
+      "hint": "Мука: 2s + 150. Сумма с сахаром — 750.",
+      "explanation": "s + (2s + 150) = 750 ⇒ 3s = 600 ⇒ s = 200 г (A); муки 550 г. 550 — это мука; 300 — если поделить 600 на 2; 450 — ошибка при вычитании."
+    },
+    {
+      "id": "m49",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation 0.3(x − 20) + 0.7x = 0.5x + 4?",
+      "answer": [
+        "20"
+      ],
+      "check": "10/0.5",
+      "verify": "0.3*(ans - 20) + 0.7*ans == 0.5*ans + 4",
+      "hint": "Раскрой скобку и сложи 0,3x и 0,7x.",
+      "explanation": "0,3x − 6 + 0,7x = 0,5x + 4 ⇒ x − 6 = 0,5x + 4 ⇒ 0,5x = 10 ⇒ x = 20. Ошибка — забыть умножить 20 на 0,3."
+    },
+    {
+      "id": "m50",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "mcq",
+      "stem": "Three more than 4 times a number is equal to 5 less than 6 times the number. What is 10 times the number?",
+      "choices": [
+        "4",
+        "8",
+        "40",
+        "80"
+      ],
+      "answer": 2,
+      "check": "10*4",
+      "verify": "4*(ans/10) + 3 == 6*(ans/10) - 5",
+      "hint": "4n + 3 = 6n − 5. Найди n, а потом умножь на 10.",
+      "explanation": "3 + 5 = 6n − 4n ⇒ 8 = 2n ⇒ n = 4 ⇒ 10n = 40 (C). 4 — это само число; 8 — это 2n; 80 — это 20n."
+    },
+    {
+      "id": "h16",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation 3(ax − 2) = 12x + b, a and b are constants. If the equation has no solution, which of the following must be true?",
+      "choices": [
+        "a = 4 and b = −6",
+        "a = 4 and b ≠ −6",
+        "a ≠ 4 and b = −6",
+        "a ≠ 4 and b ≠ −6"
+      ],
+      "answer": 1,
+      "hint": "Раскрой скобку. Когда у линейного уравнения нет решений?",
+      "explanation": "3ax − 6 = 12x + b. Решений нет, когда коэффициенты при x равны, а свободные члены различны: 3a = 12 ⇒ a = 4, и −6 ≠ b (B). При a = 4 и b = −6 уравнение — тождество (бесконечно много решений, A); при a ≠ 4 решение ровно одно при любом b (C и D)."
+    },
+    {
+      "id": "h17",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "What is the solution to the equation (x + 3)/5 = (2x − 1)/3 − 2/15?",
+      "answer": [
+        "16/7",
+        "2.285",
+        "2.286"
+      ],
+      "check": "16/7",
+      "verify": "(ans + 3)/5 == (2*ans - 1)/3 - 2/15",
+      "hint": "Умножь все три дроби на 15.",
+      "explanation": "3(x + 3) = 5(2x − 1) − 2 ⇒ 3x + 9 = 10x − 7 ⇒ 16 = 7x ⇒ x = 16/7 ≈ 2,286. Частая ошибка — умножить 2/15 на 15 и получить 30 вместо 2."
+    },
+    {
+      "id": "h18",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A chemist has 40 milliliters of a 15% acid solution. How many milliliters of a 60% acid solution must be added to obtain a solution that is 30% acid?",
+      "choices": [
+        "2.4",
+        "20",
+        "40",
+        "80"
+      ],
+      "answer": 1,
+      "check": "6/0.3",
+      "verify": "0.15*40 + 0.6*ans == 0.3*(40 + ans)",
+      "hint": "Приравняй количество кислоты: было + добавили = 30% от нового объёма.",
+      "explanation": "0,15 · 40 + 0,6x = 0,3(40 + x) ⇒ 6 + 0,6x = 12 + 0,3x ⇒ 0,3x = 6 ⇒ x = 20 мл (B). 40 — равные объёмы дают 37,5%, а не 30%; 80 — если перепутать плечи в правиле смешения; 2,4 — если забыть, что объём раствора тоже растёт."
+    },
+    {
+      "id": "h19",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The equation k(2x − 5) = 3x + 10, where k is a constant, has the solution x = 5. If the value of k is doubled, what is the solution to the new equation?",
+      "choices": [
+        "15/17",
+        "5/2",
+        "60/17",
+        "10"
+      ],
+      "answer": 2,
+      "check": "60/17",
+      "verify": "10*(2*ans - 5) == 3*ans + 10",
+      "hint": "Сначала найди k из x = 5, затем реши уравнение с 2k.",
+      "explanation": "При x = 5: 5k = 25 ⇒ k = 5. Новое уравнение: 10(2x − 5) = 3x + 10 ⇒ 20x − 50 = 3x + 10 ⇒ 17x = 60 ⇒ x = 60/17 (C). 5/2 и 10 — ожидание, что решение просто уменьшится или увеличится вдвое; 15/17 — если умножить на 10 только 2x."
+    },
+    {
+      "id": "h20",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation (a − 3)x + 2a = 5x + 16, a is a constant. For what value of a does the equation have infinitely many solutions?",
+      "choices": [
+        "3",
+        "5",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "check": "8",
+      "verify": "ans - 3 == 5 and 2*ans == 16",
+      "hint": "Нужно выполнить сразу два условия: при x и в свободных членах.",
+      "explanation": "Бесконечно много решений, когда a − 3 = 5 и 2a = 16. Оба условия дают a = 8 (C) — совпадение не случайно, его нужно проверить. 5 — это a − 3; 16 — это 2a; при a = 3 уравнение 6 = 5x + 16 имеет одно решение."
+    },
+    {
+      "id": "h21",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For what value of c is the solution to the equation 4x − c = 2x + 9 equal to twice the solution to the equation 3x + c = 15?",
+      "answer": [
+        "33/7",
+        "4.714"
+      ],
+      "check": "33/7",
+      "verify": "(9 + ans)/2 == 2*(15 - ans)/3",
+      "hint": "Вырази каждое решение через c: x₁ = (9 + c)/2, x₂ = (15 − c)/3.",
+      "explanation": "Из первого x = (9 + c)/2, из второго x = (15 − c)/3. Условие: (9 + c)/2 = 2(15 − c)/3 ⇒ 3(9 + c) = 4(15 − c) ⇒ 27 + 3c = 60 − 4c ⇒ 7c = 33 ⇒ c = 33/7 ≈ 4,714. Ошибка — удвоить первое решение вместо второго."
+    },
+    {
+      "id": "h22",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A number is increased by 20%, and then 15 is subtracted from the result. The final value is equal to three-fourths of the original number plus 12. What is the original number?",
+      "choices": [
+        "28",
+        "45",
+        "60",
+        "72"
+      ],
+      "answer": 2,
+      "check": "27/0.45",
+      "verify": "1.2*ans - 15 == 0.75*ans + 12",
+      "hint": "Увеличить на 20% — значит умножить на 1,2.",
+      "explanation": "1,2n − 15 = 0,75n + 12 ⇒ 0,45n = 27 ⇒ n = 60 (C). Проверка: 72 − 15 = 57 = 45 + 12. 28 — если понять «на 20%» как «на 20»; 45 — это (3/4) · 60; 72 — число после увеличения."
+    },
+    {
+      "id": "h23",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "Account A starts with $360, and $35 is added to it each week. Account B starts with $1,200, and $25 is withdrawn from it each week. After how many weeks will account A hold exactly twice as much money as account B?",
+      "choices": [
+        "14",
+        "24",
+        "34",
+        "48"
+      ],
+      "answer": 1,
+      "check": "2040/85",
+      "verify": "360 + 35*ans == 2*(1200 - 25*ans)",
+      "hint": "Удвоить нужно весь остаток на счёте B, включая снятые суммы.",
+      "explanation": "360 + 35w = 2(1200 − 25w) ⇒ 360 + 35w = 2400 − 50w ⇒ 85w = 2040 ⇒ w = 24 (B). Проверка: на A 1200, на B 600. 14 — момент, когда суммы равны; 34 — если удвоить только 1200 (60w = 2040); 48 — удвоенный ответ."
+    },
+    {
+      "id": "h24",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A course grade is computed as 30% homework, 30% midterm, and 40% final exam. A student has a homework score of 92 and a midterm score of 78. What score on the final exam would give the student a course grade of exactly 84?",
+      "answer": [
+        "82.5",
+        "165/2"
+      ],
+      "check": "(84-0.3*92-0.3*78)/0.4",
+      "verify": "0.3*92 + 0.3*78 + 0.4*ans == 84",
+      "hint": "Вклад домашних работ и промежуточного экзамена уже известен: посчитай его.",
+      "explanation": "0,3 · 92 + 0,3 · 78 = 27,6 + 23,4 = 51. Нужно 0,4f = 84 − 51 = 33 ⇒ f = 82,5. Ошибка — брать простое среднее трёх оценок: (92 + 78 + f)/3 = 84 даёт 82, но веса не равны."
+    },
+    {
+      "id": "h25",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A car travels from town A to town B at an average speed of 60 kilometers per hour and returns along the same road at an average speed of 40 kilometers per hour. The round trip takes 5 hours. What is the distance, in kilometers, from town A to town B?",
+      "choices": [
+        "100",
+        "120",
+        "125",
+        "240"
+      ],
+      "answer": 1,
+      "check": "5/(1/60+1/40)",
+      "verify": "ans/60 + ans/40 == 5",
+      "hint": "Время = расстояние / скорость. Сложи время туда и обратно.",
+      "explanation": "d/60 + d/40 = 5 ⇒ (2d + 3d)/120 = 5 ⇒ 5d = 600 ⇒ d = 120 км (B). 125 — если взять среднюю скорость 50 км/ч, но средняя скорость здесь 48 км/ч, а не 50; 240 — путь туда и обратно; 100 — это 40 · 2,5."
+    },
+    {
+      "id": "h26",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "When 7 is added to one-third of a number, the result is the same as when 5 is subtracted from one-half of the number. What is the number?",
+      "answer": [
+        "72"
+      ],
+      "check": "12*6",
+      "verify": "ans/3 + 7 == ans/2 - 5",
+      "hint": "n/3 + 7 = n/2 − 5. Перенеси дроби в одну часть.",
+      "explanation": "7 + 5 = n/2 − n/3 ⇒ 12 = n/6 ⇒ n = 72. Проверка: 24 + 7 = 31 = 36 − 5. Ошибка — вычесть дроби как 1/2 − 1/3 = 1/1."
+    },
+    {
+      "id": "h27",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "If 3x − 5 = k and 6x + 1 = 4k − 25, what is the value of k?",
+      "choices": [
+        "31/3",
+        "23/3",
+        "18",
+        "36"
+      ],
+      "answer": 2,
+      "check": "36/2",
+      "hint": "Из первого уравнения 6x = 2(k + 5). Подставь это во второе.",
+      "explanation": "6x = 2k + 10, поэтому 2k + 10 + 1 = 4k − 25 ⇒ 36 = 2k ⇒ k = 18 (C). 23/3 — это x, а не k; 36 — это 2k; 31/3 — если подставить 6x = k + 5, забыв удвоить."
+    },
+    {
+      "id": "h28",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A water tank is one-fourth full. After 150 liters of water are added, the tank is five-eighths full. What is the capacity of the tank, in liters?",
+      "answer": [
+        "400"
+      ],
+      "check": "150/(5/8-1/4)",
+      "verify": "ans/4 + 150 == 5*ans/8",
+      "hint": "150 литров — это разность долей 5/8 и 1/4 от вместимости.",
+      "explanation": "(5/8 − 2/8)V = 150 ⇒ (3/8)V = 150 ⇒ V = 400 л. Проверка: 100 + 150 = 250 = (5/8) · 400. Ошибка — считать 150 равным 5/8 объёма (тогда 240)."
+    },
+    {
+      "id": "h29",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The sides of a triangle have lengths x, 2x − 3, and x + 9. The perimeter of the triangle is 50. What is the length of the longest side?",
+      "choices": [
+        "11",
+        "19",
+        "20",
+        "22"
+      ],
+      "answer": 2,
+      "check": "11+9",
+      "hint": "Найди x из периметра, затем вычисли все три стороны.",
+      "explanation": "x + (2x − 3) + (x + 9) = 4x + 6 = 50 ⇒ x = 11. Стороны: 11, 19 и 20; самая длинная — 20 (C). 11 — это x; 19 — сторона 2x − 3; 22 — это 2x."
+    },
+    {
+      "id": "h30",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A school club pays a one-time design fee of $180 and $6 per T-shirt to have T-shirts made. The club sells every T-shirt it makes for $15. How many T-shirts must the club make and sell to earn a profit of exactly $360?",
+      "choices": [
+        "24",
+        "40",
+        "60",
+        "90"
+      ],
+      "answer": 2,
+      "check": "(360+180)/9",
+      "verify": "15*ans - 6*ans - 180 == 360",
+      "hint": "Прибыль с одной футболки 15 − 6 = 9 долларов, но сначала нужно покрыть 180.",
+      "explanation": "15n − 6n − 180 = 360 ⇒ 9n = 540 ⇒ n = 60 (C). 40 — если забыть плату за дизайн (9n = 360); 24 — это 360 : 15; 90 — это 540 : 6."
+    },
+    {
+      "id": "h31",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "If 2(p + 3) − 3(p − q) = 14 and q = 2p, what is the value of p?",
+      "answer": [
+        "8/5",
+        "1.6"
+      ],
+      "check": "8/5",
+      "verify": "2*(ans + 3) - 3*(ans - 2*ans) == 14",
+      "hint": "Подставь q = 2p и аккуратно раскрой −3(p − 2p).",
+      "explanation": "−3(p − 2p) = −3 · (−p) = 3p. Получаем 2p + 6 + 3p = 14 ⇒ 5p = 8 ⇒ p = 8/5 = 1,6. Ошибка — раскрыть как −3p − 6p, что даёт −7p + 6 = 14 и p = −8/7."
+    },
+    {
+      "id": "h32",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation (x − a)/3 = (x + a)/5, a is a constant. If x = 12 is the solution to the equation, what is the value of a?",
+      "choices": [
+        "−3",
+        "3",
+        "12",
+        "24"
+      ],
+      "answer": 1,
+      "check": "24/8",
+      "verify": "(12 - ans)/3 == (12 + ans)/5",
+      "hint": "Подставь x = 12 и перемножь крест-накрест.",
+      "explanation": "5(12 − a) = 3(12 + a) ⇒ 60 − 5a = 36 + 3a ⇒ 24 = 8a ⇒ a = 3 (B). −3 — если перемножить не крест-накрест: 3(12 − a) = 5(12 + a); 24 — это 8a; 12 — это x."
+    },
+    {
+      "id": "h33",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The length of a rectangle is 3 more than twice its width. If the length is decreased by 5 and the width is increased by 4, the result is a square. What is the width of the original rectangle?",
+      "choices": [
+        "4",
+        "6",
+        "10",
+        "15"
+      ],
+      "answer": 1,
+      "check": "6",
+      "verify": "2*ans + 3 - 5 == ans + 4",
+      "hint": "Длина 2w + 3. У квадрата новые длина и ширина равны.",
+      "explanation": "(2w + 3) − 5 = w + 4 ⇒ 2w − 2 = w + 4 ⇒ w = 6 (B). Исходный прямоугольник 6 × 15, квадрат 10 × 10. 10 — сторона квадрата; 15 — исходная длина; 4 — если ширину уменьшить, а не увеличить."
+    },
+    {
+      "id": "h34",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "A cyclist rode for 2 hours at a constant speed and then for 3 hours at a constant speed that was 4 kilometers per hour less. The total distance was 68 kilometers. What was the cyclist's speed, in kilometers per hour, during the first 2 hours?",
+      "choices": [
+        "11.2",
+        "12",
+        "13.6",
+        "16"
+      ],
+      "answer": 3,
+      "check": "80/5",
+      "verify": "2*ans + 3*(ans - 4) == 68",
+      "hint": "Расстояние = скорость × время на каждом участке.",
+      "explanation": "2s + 3(s − 4) = 68 ⇒ 5s − 12 = 68 ⇒ s = 16 км/ч (D). 12 — скорость на втором участке; 13,6 — это 68 : 5 (средняя скорость); 11,2 — если прибавить 4 вместо вычитания."
+    },
+    {
+      "id": "h35",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "The sum of two numbers is 40. Three times the smaller number is 8 more than the larger number. What is the larger number?",
+      "choices": [
+        "12",
+        "28",
+        "32",
+        "36"
+      ],
+      "answer": 1,
+      "check": "40-12",
+      "verify": "3*(40 - ans) == ans + 8",
+      "hint": "Если меньшее s, то большее 40 − s.",
+      "explanation": "3s = (40 − s) + 8 ⇒ 4s = 48 ⇒ s = 12, большее 40 − 12 = 28 (B). 12 — меньшее число; 32 — если записать 3s = 40 − s − 8 (s = 8); 36 — это 3s."
+    },
+    {
+      "id": "h36",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Dana earns $16 per hour for the first 40 hours she works in a week and 1.5 times that hourly rate for each hour over 40. One week she earned $808. How many hours did she work that week?",
+      "answer": [
+        "47"
+      ],
+      "check": "40+(808-640)/24",
+      "verify": "16*40 + 24*(ans - 40) == 808",
+      "hint": "Сначала посчитай заработок за 40 обычных часов, потом — сверхурочные.",
+      "explanation": "40 · 16 = 640. Сверхурочно: 808 − 640 = 168 долларов по 24 в час ⇒ 7 часов. Всего 47 часов. Ошибка — ответить 7 (только сверхурочные) или делить 808 на 16."
+    },
+    {
+      "id": "h37",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Machine B starts producing parts at 7:00 a.m. at a rate of 80 parts per hour. Machine A starts 1.5 hours later and produces 120 parts per hour. How many hours after 7:00 a.m. will the two machines have produced the same total number of parts?",
+      "answer": [
+        "4.5",
+        "9/2"
+      ],
+      "check": "180/40",
+      "verify": "80*ans == 120*(ans - 1.5)",
+      "hint": "К моменту t машина A работала на 1,5 часа меньше.",
+      "explanation": "80t = 120(t − 1,5) ⇒ 80t = 120t − 180 ⇒ 40t = 180 ⇒ t = 4,5 часа, то есть в 11:30. Обе произведут по 360 деталей. Ошибка — считать, что A работала t + 1,5 часа."
+    },
+    {
+      "id": "h38",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation 5(x − m) = 3(x + n), m and n are nonzero constants. If x = 4m is a solution to the equation, what is the value of n/m?",
+      "choices": [
+        "1/3",
+        "1",
+        "3",
+        "5"
+      ],
+      "answer": 1,
+      "check": "1",
+      "hint": "Подставь x = 4m и вырази n через m.",
+      "explanation": "5(4m − m) = 3(4m + n) ⇒ 15m = 12m + 3n ⇒ 3m = 3n ⇒ n/m = 1 (B). 3 — если забыть разделить 3m на 3; 5 и 1/3 — ошибки при раскрытии скобок."
+    },
+    {
+      "id": "h39",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "A phone's battery loses 10% of its full charge per hour while the phone is in use and 2% of its full charge per hour while it is idle. The battery was at 100% and, after 6 hours, it was at 52%. For how many of the 6 hours was the phone in use?",
+      "answer": [
+        "4.5",
+        "9/2"
+      ],
+      "check": "36/8",
+      "verify": "100 - 10*ans - 2*(6 - ans) == 52",
+      "hint": "Если в работе u часов, то в покое 6 − u часов.",
+      "explanation": "100 − 10u − 2(6 − u) = 52 ⇒ 88 − 8u = 52 ⇒ 8u = 36 ⇒ u = 4,5 часа. Проверка: 45% + 3% = 48% расхода. Ошибка — раскрыть −2(6 − u) как −12 − 2u."
+    },
+    {
+      "id": "h40",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "mcq",
+      "stem": "In the equation 4(3x + p) − 2x = 10x + 3p − 7, p is a constant. For what value of p does the equation have infinitely many solutions?",
+      "choices": [
+        "−7",
+        "−1",
+        "1",
+        "7"
+      ],
+      "answer": 0,
+      "check": "-7",
+      "verify": "4*ans == 3*ans - 7",
+      "hint": "Упрости левую часть до вида ax + b и сравни с правой.",
+      "explanation": "Левая часть: 12x + 4p − 2x = 10x + 4p. Коэффициенты при x уже равны, нужно 4p = 3p − 7 ⇒ p = −7 (A). 7 — потерян знак; ±1 — если сравнить 4p и 3p, забыв про −7."
+    },
+    {
+      "id": "h41",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "For how many positive integer values of k is the solution to the equation kx = 24 − 2x a positive integer?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "check": "6",
+      "hint": "Вырази x через k: x = 24/(k + 2). Каким может быть k + 2?",
+      "explanation": "x(k + 2) = 24 ⇒ x = 24/(k + 2). Нужно, чтобы k + 2 было делителем 24 и при этом k ≥ 1, то есть k + 2 ≥ 3: подходят 3, 4, 6, 8, 12, 24. Значит, k = 1, 2, 4, 6, 10, 22 — шесть значений (C). 8 — все делители 24, включая 1 и 2, которые дают k ≤ 0."
+    },
+    {
+      "id": "h42",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the equations below, a and b are constants.\nax + b = 3x − 5\nbx + 2 = ax + 8\nThe first equation has no solution, and the second equation has the solution x = −2. What is the value of b?",
+      "choices": [
+        "−5",
+        "−3",
+        "0",
+        "3"
+      ],
+      "answer": 2,
+      "check": "0",
+      "verify": "ans*(-2) + 2 == 3*(-2) + 8",
+      "hint": "Из «нет решений» следует a = 3 (и b ≠ −5). Подставь a и x = −2 во второе уравнение.",
+      "explanation": "Первое уравнение не имеет решений ⇒ a = 3 и b ≠ −5. Второе при a = 3 и x = −2: −2b + 2 = −6 + 8 = 2 ⇒ b = 0 (C), и условие b ≠ −5 выполнено. −5 исключено самим условием «нет решений»; 3 — это a; −3 — ошибка знака."
+    },
+    {
+      "id": "h43",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A runner leaves a trailhead running at 9 kilometers per hour. Twenty minutes later, a cyclist leaves the same trailhead on the same path, riding at 24 kilometers per hour. How many minutes after the cyclist leaves will the cyclist catch up with the runner?",
+      "answer": [
+        "12"
+      ],
+      "check": "0.2*60",
+      "verify": "9*(ans/60 + 1/3) == 24*ans/60",
+      "hint": "Переведи 20 минут в часы, а ответ — обратно в минуты.",
+      "explanation": "Пусть t — время велосипедиста в часах: 9(t + 1/3) = 24t ⇒ 3 = 15t ⇒ t = 0,2 ч = 12 минут. Ошибка — подставить 20 вместо 1/3 часа или дать ответ 0,2 (в часах)."
+    },
+    {
+      "id": "h44",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the equation k(x + 4) = 2(x − 6) + c, k and c are constants. If the equation has infinitely many solutions, what is the value of c?",
+      "choices": [
+        "−4",
+        "8",
+        "12",
+        "20"
+      ],
+      "answer": 3,
+      "check": "8+12",
+      "hint": "Сначала найди k по коэффициентам при x, потом c.",
+      "explanation": "kx + 4k = 2x − 12 + c. Нужно k = 2 и 4k = −12 + c ⇒ 8 = −12 + c ⇒ c = 20 (D). 8 — это 4k; 12 — потерян знак при −12; −4 — если взять 4k = −12 + c с k = −2."
+    },
+    {
+      "id": "h45",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A father is 30 years older than his son. In 5 years, the father will be 3 times as old as his son will be then. How old will the son be when the father is exactly twice as old as the son?",
+      "choices": [
+        "20",
+        "25",
+        "30",
+        "40"
+      ],
+      "answer": 2,
+      "check": "30",
+      "hint": "Сначала найди возраст обоих сейчас, потом — когда отношение станет 2 : 1.",
+      "explanation": "Сейчас сын s, отец s + 30. Через 5 лет: s + 35 = 3(s + 5) ⇒ s = 10, отец 40. Через t лет: 40 + t = 2(10 + t) ⇒ t = 20, сыну будет 30 (C). Заметь: разность возрастов 30 не меняется, поэтому «вдвое старше» — когда сыну 30. 40 — возраст отца сейчас; 20 — число лет до этого момента."
+    },
+    {
+      "id": "h46",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the equation 3(2x − 1) = 2(3x − 1) − k, k is a constant. If the equation has at least one solution, what is the value of k?",
+      "choices": [
+        "−5",
+        "−1",
+        "1",
+        "5"
+      ],
+      "answer": 2,
+      "check": "1",
+      "verify": "-3 == -2 - ans",
+      "hint": "После раскрытия скобок x исчезнет. Когда тогда у уравнения есть хоть одно решение?",
+      "explanation": "6x − 3 = 6x − 2 − k ⇒ −3 = −2 − k. Если это неверно, решений нет; если верно — подходит любой x. «Хотя бы одно решение» ⇒ −3 = −2 − k ⇒ k = 1 (C), и решений бесконечно много. −1 — ошибка знака; ±5 — сложение −3 и −2."
+    },
+    {
+      "id": "h47",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A 12-liter radiator is filled with a solution that is 40% antifreeze. How many liters of the solution must be drained and replaced with pure antifreeze so that the radiator contains a 60% antifreeze solution?",
+      "choices": [
+        "2.4",
+        "4",
+        "4.8",
+        "6"
+      ],
+      "answer": 1,
+      "check": "2.4/0.6",
+      "verify": "0.4*(12 - ans) + ans == 0.6*12",
+      "hint": "Слитые x литров уносят с собой 40% антифриза.",
+      "explanation": "После слива антифриза 0,4(12 − x), после долива +x: 0,4(12 − x) + x = 7,2 ⇒ 4,8 + 0,6x = 7,2 ⇒ x = 4 л (B). 2,4 — если забыть, что слитая жидкость содержала антифриз (4,8 + x = 7,2); 4,8 — сколько антифриза было; 6 — половина объёма."
+    },
+    {
+      "id": "h48",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In the equations 4x − 3 = 2x + c and 3x + c = 2, c is a constant. The solution to the first equation is 1 greater than the solution to the second equation. What is the value of c?",
+      "answer": [
+        "1/5",
+        "0.2"
+      ],
+      "check": "1/5",
+      "verify": "(ans + 3)/2 == (2 - ans)/3 + 1",
+      "hint": "Вырази оба решения через c.",
+      "explanation": "Первое: x = (c + 3)/2. Второе: x = (2 − c)/3. Условие: (c + 3)/2 = (2 − c)/3 + 1 ⇒ 3c + 9 = 4 − 2c + 6 ⇒ 5c = 1 ⇒ c = 0,2. Ошибка — прибавить 1 к решению первого уравнения вместо второго (тогда c = −11/5)."
+    },
+    {
+      "id": "h49",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A bookstore sold hardcover books for $24 each and paperback books for $9 each. It sold 3 times as many paperbacks as hardcovers, and its revenue from paperbacks was $90 more than its revenue from hardcovers. How many hardcover books did the bookstore sell?",
+      "answer": [
+        "30"
+      ],
+      "check": "90/3",
+      "verify": "9*3*ans == 24*ans + 90",
+      "hint": "Выручка от мягких обложек: 9 · 3h.",
+      "explanation": "27h = 24h + 90 ⇒ 3h = 90 ⇒ h = 30. Проверка: 90 мягких книг дают 810 долларов, 30 твёрдых — 720, разница 90. Ошибка — забыть утроить количество мягких книг."
+    },
+    {
+      "id": "h50",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The mean of a list of n numbers is 15. When the number 33 is added to the list, the mean of the new list is 16. What is the value of n?",
+      "answer": [
+        "17"
+      ],
+      "check": "33-16",
+      "verify": "15*ans + 33 == 16*(ans + 1)",
+      "hint": "Сумма до: 15n. Сумма после: 16(n + 1).",
+      "explanation": "15n + 33 = 16n + 16 ⇒ n = 17. Проверка: (255 + 33)/18 = 16. Ошибка — забыть, что в новом списке n + 1 число (тогда n = 33)."
+    },
+    {
+      "id": "h51",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "Plan A costs $30 per month plus $0.05 per minute of calls. Plan B costs $10 per month plus $0.15 per minute for the first 300 minutes and $0.05 per minute for each minute over 300. For how many minutes of calls in a month do the two plans cost the same?",
+      "choices": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "answer": 1,
+      "check": "20/0.1",
+      "verify": "30 + 0.05*ans == 10 + 0.15*ans",
+      "hint": "Сначала предположи, что минут не больше 300, и проверь, выполняется ли это. Затем рассмотри больше 300.",
+      "explanation": "При m ≤ 300: 30 + 0,05m = 10 + 0,15m ⇒ 20 = 0,1m ⇒ m = 200 — условие m ≤ 300 выполнено. При m > 300 план B стоит 10 + 45 + 0,05(m − 300) = 40 + 0,05m — всегда на 10 долларов дороже A, равенства нет. Ответ: 200 минут (B). 300 — граница тарифа, а не точка равенства."
+    },
+    {
+      "id": "h52",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "The equation 0.2(5x − c) = x − 0.6 is true for all values of x, where c is a constant. What is the solution to the equation cx + 4 = 2x + 13?",
+      "answer": [
+        "9"
+      ],
+      "check": "13-4",
+      "verify": "3*ans + 4 == 2*ans + 13",
+      "hint": "Из тождества найди c, затем подставь во второе уравнение.",
+      "explanation": "0,2(5x − c) = x − 0,2c. Равенство при всех x ⇒ 0,2c = 0,6 ⇒ c = 3. Тогда 3x + 4 = 2x + 13 ⇒ x = 9. Ошибка — c = 0,6 (забыли разделить на 0,2): тогда 0,6x + 4 = 2x + 13 и x отрицательный."
+    },
+    {
+      "id": "h53",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A merchant bought 50 lamps for $18 each. She sold some of them for $30 each and, after a price cut, sold the rest for $20 each. Her total profit on the 50 lamps was $260. How many lamps did she sell for $30 each?",
+      "answer": [
+        "16"
+      ],
+      "check": "(260+900-1000)/10",
+      "verify": "30*ans + 20*(50 - ans) - 50*18 == 260",
+      "hint": "Прибыль = выручка − затраты. Затраты: 50 · 18.",
+      "explanation": "Затраты 900. Выручка 30k + 20(50 − k) = 1000 + 10k. Прибыль: 1000 + 10k − 900 = 260 ⇒ 10k = 160 ⇒ k = 16. Ошибка — принять 260 за выручку, а не прибыль."
+    },
+    {
+      "id": "h54",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "What is the solution to the equation x + 2/3 = (3x − 1)/2 − (x − 5)/6?",
+      "choices": [
+        "−1",
+        "1",
+        "3",
+        "6"
+      ],
+      "answer": 1,
+      "check": "1",
+      "verify": "ans + 2/3 == (3*ans - 1)/2 - (ans - 5)/6",
+      "hint": "Умножь всё на 6. Минус перед второй дробью меняет знаки обоих слагаемых.",
+      "explanation": "6x + 4 = 3(3x − 1) − (x − 5) = 9x − 3 − x + 5 = 8x + 2 ⇒ 2 = 2x ⇒ x = 1 (B). 6 — если раскрыть −(x − 5) как −x − 5 (тогда 6x + 4 = 8x − 8); −1 и 3 — ошибки при умножении на 6."
+    },
+    {
+      "id": "h55",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "A bus travels from city A to city B at an average speed of 50 kilometers per hour, stops in city B for 30 minutes, and then returns to city A along the same route at an average speed of 60 kilometers per hour. The entire trip, including the stop, takes 6 hours. What is the distance, in kilometers, from city A to city B?",
+      "choices": [
+        "125",
+        "150",
+        "163.6",
+        "165"
+      ],
+      "answer": 1,
+      "check": "5.5/(1/50+1/60)",
+      "verify": "ans/50 + ans/60 + 0.5 == 6",
+      "hint": "На дорогу ушло 6 − 0,5 = 5,5 часа.",
+      "explanation": "d/50 + d/60 = 5,5 ⇒ 11d/300 = 5,5 ⇒ d = 150 км (B). 163,6 — если забыть вычесть остановку; 165 — если считать среднюю скорость равной 55 км/ч и время в одну сторону 3 часа; 125 — 50 · 2,5."
+    },
+    {
+      "id": "h56",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "A student's scores on three tests are 78, 85, and 92. The final exam counts as two tests. What score on the final exam would make the student's average, with the final counted twice, exactly 88?",
+      "answer": [
+        "92.5",
+        "185/2"
+      ],
+      "check": "(5*88-255)/2",
+      "verify": "(78 + 85 + 92 + 2*ans)/5 == 88",
+      "hint": "Делить нужно на 5: три теста и финал, посчитанный дважды.",
+      "explanation": "(255 + 2f)/5 = 88 ⇒ 255 + 2f = 440 ⇒ f = 92,5. Ошибка — делить на 4 (тогда f = 97) или считать финал один раз (f = 97, деление на 4)."
+    },
+    {
+      "id": "h57",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "In the equations 3x + 2 = 5(x − k) + 4 and 2x = k + 1, k is a constant. If the two equations have the same solution, what is the value of k?",
+      "answer": [
+        "3/4",
+        "0.75"
+      ],
+      "check": "3/4",
+      "verify": "3*((ans + 1)/2) + 2 == 5*((ans + 1)/2 - ans) + 4",
+      "hint": "Из второго x = (k + 1)/2. Реши первое тоже относительно x и приравняй.",
+      "explanation": "Первое: 3x + 2 = 5x − 5k + 4 ⇒ 2x = 5k − 2. Второе: 2x = k + 1. Значит, 5k − 2 = k + 1 ⇒ 4k = 3 ⇒ k = 3/4. Тогда x = 7/8 и обе части первого уравнения равны 4,625."
+    },
+    {
+      "id": "h58",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "The sum of four consecutive odd integers is 7 less than 5 times the smallest of the four integers. What is the largest of the four integers?",
+      "choices": [
+        "19",
+        "21",
+        "23",
+        "25"
+      ],
+      "answer": 3,
+      "check": "19+6",
+      "verify": "4*(ans - 6) + 12 == 5*(ans - 6) - 7",
+      "hint": "Нечётные подряд: n, n + 2, n + 4, n + 6.",
+      "explanation": "4n + 12 = 5n − 7 ⇒ n = 19. Числа 19, 21, 23, 25; наибольшее — 25 (D). Проверка: сумма 88 = 95 − 7. 19 — наименьшее; 21 и 23 — средние."
+    },
+    {
+      "id": "h59",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "stem": "On a 420-mile trip, a family drove some of the time at 65 miles per hour on highways and drove 2 more hours than that at 35 miles per hour on local roads. What was the total driving time, in hours, for the trip?",
+      "answer": [
+        "9"
+      ],
+      "check": "3.5+5.5",
+      "verify": "65*((ans - 2)/2) + 35*((ans - 2)/2 + 2) == 420",
+      "hint": "Пусть h часов по шоссе, тогда h + 2 по местным дорогам. Спрашивают всё время.",
+      "explanation": "65h + 35(h + 2) = 420 ⇒ 100h + 70 = 420 ⇒ h = 3,5. Всего 3,5 + 5,5 = 9 часов. Ошибка — ответить 3,5 (только шоссе)."
+    },
+    {
+      "id": "h60",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "mcq",
+      "stem": "In the equation (m² − 9)x = m − 3, m is a constant. For what value of m does the equation have infinitely many solutions?",
+      "choices": [
+        "−3",
+        "3",
+        "0",
+        "Both −3 and 3"
+      ],
+      "answer": 1,
+      "check": "3",
+      "hint": "Бесконечно много решений, когда и коэффициент при x, и правая часть равны нулю.",
+      "explanation": "Нужно m² − 9 = 0 и m − 3 = 0 одновременно. Первое даёт m = ±3, второе — только m = 3 (B). При m = −3 получаем 0 · x = −6 — решений нет; при m = 0 уравнение −9x = −3 имеет одно решение."
+    }
+  ]
+}

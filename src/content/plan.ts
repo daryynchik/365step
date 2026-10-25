@@ -114,6 +114,8 @@ export interface Plan {
 export interface PlanInputs {
   entries: ExamEntry[];
   diagnostic: Partial<Record<DiagnosticSection, Level>>;
+  /** Diagnostic score estimates (SAT Math). */
+  estimates?: Partial<Record<DiagnosticSection, number>>;
 }
 
 export const NO_INPUTS: PlanInputs = { entries: [], diagnostic: {} };
@@ -307,7 +309,8 @@ function practiceStep(skill: Skill, round: number, level: Level): PlanStep {
     kind: "practice",
     courseId: SECTION_COURSE[skill.section],
     title: `Практика: ${skill.title}`,
-    label: `${SECTION_TITLES[skill.section]} · ${LEVEL_TITLES[level]}`,
+    // SAT Math difficulty follows each skill's step as the student answers, not the plan.
+    label: skill.section === "sat-math" ? "SAT Math · по твоей ступени" : `${SECTION_TITLES[skill.section]} · ${LEVEL_TITLES[level]}`,
     minutes: practiceMinutes(skill),
     icon: SECTION_ICON[skill.section],
     section: skill.section,
@@ -382,7 +385,7 @@ export function buildPlan(profile: StudentProfile, inputs: PlanInputs = NO_INPUT
   const prep = deadlinePassed ? total : Math.min(total, untilDeadline);
   const finalFrom = Math.max(1, Math.floor(prep * 0.88));
 
-  const states = sectionStates(inputs.entries, inputs.diagnostic);
+  const states = sectionStates(inputs.entries, inputs.diagnostic, inputs.estimates ?? {});
   const active = new Set(states.map((s) => s.section));
   const stateOf = new Map(states.map((s) => [s.section, s]));
   const shares = lessonShares(states);
@@ -541,12 +544,16 @@ export function buildPlan(profile: StudentProfile, inputs: PlanInputs = NO_INPUT
   };
 }
 
-/** Checks every practice step against the pool, as planned; the bank logs each shortage once. */
+/**
+ * Checks every practice step against the pool, as planned; the bank logs each
+ * shortage once. SAT Math is left out: its ladder falls back step by step
+ * (math-ladder.ts drawLadder).
+ */
 function planShortages(days: PlanDay[], seed: string): Shortage[] {
   const out = new Map<string, Shortage>();
   for (const d of days) {
     for (const s of d.steps) {
-      if (s.kind !== "practice" || !s.skill || !s.level) continue;
+      if (s.kind !== "practice" || !s.skill || !s.level || s.section === "sat-math") continue;
       const skill = skillById(s.skill)!;
       const n = skill.kind === "questions" ? PRACTICE_SIZE : 1;
       const round = Number(s.key.split("~")[1]) - 1;

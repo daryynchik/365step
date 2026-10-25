@@ -6,12 +6,13 @@
  */
 
 import { findLesson, isSequentiallyUnlocked, PLAN_COURSES, type PathEntry } from "@/content";
-import { bankLesson } from "@/content/bank/lessons";
-import { skillOfLesson } from "@/content/bank/taxonomy";
+import { bankLesson, parseBankKey } from "@/content/bank/lessons";
+import { skillById, skillOfLesson } from "@/content/bank/taxonomy";
 import { diagnosticLesson, isDiagnosticSection } from "@/content/diagnostic";
 import type { Level, SectionId } from "@/content/exams";
 import { isPlanUnlocked, reviewLesson, SECTION_COURSE, STRAND_COURSE, type Plan } from "@/content/plan";
 import type { AnyCourseId, CourseId, Lesson } from "@/content/types";
+import { getDraw, getMathContext, saveDraw } from "./mastery";
 import { getPlan } from "./profile";
 import { getSkillStats } from "./skill-stats";
 
@@ -27,10 +28,22 @@ export interface ResolvedLesson {
   calculator: boolean;
   /** Skill of each question, when answers feed the adaptive level. */
   taskSkills: string[] | null;
+  /** SAT Math on the ladder: bank task and step per question, skills in remediation. */
+  ladder: { taskIds: (string | null)[]; taskTiers: number[]; remediation: string[]; drawn: boolean } | null;
   /** Lesson key fresh practice can be generated for. */
   moreKey: string | null;
   entry: PathEntry | null;
   plan: Plan | null;
+}
+
+/** The step authored SAT Math lessons count as on the ladder (medium). */
+const AUTHORED_TIER = 3;
+
+/** Practice, weak-skill and mock lessons of SAT Math use the ladder. */
+function isMathBankKey(key: string): boolean {
+  const parsed = parseBankKey(key);
+  if (!parsed) return false;
+  return parsed.type === "practice" ? skillById(parsed.skill)?.section === "sat-math" : parsed.section === "sat-math";
 }
 
 /** The level a skill starts at: its section's level in the plan. */
@@ -61,6 +74,7 @@ export async function resolveLesson(
       open: true,
       calculator: lessonId === "sat-math",
       taskSkills: null,
+      ladder: null,
       moreKey: null,
       entry: null,
       plan: null,
@@ -70,15 +84,17 @@ export async function resolveLesson(
   const virtual = course === "review" || course === "bank";
   const entry = virtual ? null : findLesson(course, lessonId);
   if (!virtual && !entry) return null;
-  const [finished, plan, stats] = await Promise.all([
+  const key = `${course}/${lessonId}`;
+  const math = course === "bank" && isMathBankKey(key);
+  const [finished, plan, stats, saved] = await Promise.all([
     done,
     !entry || PLAN_COURSES.includes(entry.course.id) ? getPlan(userId) : null,
     course === "bank" ? getSkillStats(userId) : null,
+    math ? getDraw(userId, key) : null,
   ]);
 
   if (!entry) {
     if (!plan) return null;
-    const key = `${course}/${lessonId}`;
     const open = isPlanUnlocked(plan, key, finished);
     if (course === "review") {
       const review = reviewLesson(plan, key);
@@ -93,13 +109,21 @@ export async function resolveLesson(
         open,
         calculator: review.strand === "math",
         taskSkills: null,
+        ladder: null,
         moreKey: review.sourceKey,
         entry: null,
         plan,
       };
     }
-    const practice = bankLesson(plan, key, stats ?? {});
+    const practice = bankLesson(plan, key, stats ?? {}, math ? { state: await getMathContext(userId, plan), saved } : undefined);
     if (!practice) return null;
+    // A new draw is kept once the lesson can be opened, so grading sees the same tasks.
+    let ladder: ResolvedLesson["ladder"] = null;
+    if (practice.ladder) {
+      const drawn = Boolean(saved) || open;
+      if (!saved && open) await saveDraw(userId, key, practice.ladder.draw);
+      ladder = { taskIds: practice.ladder.taskIds, taskTiers: practice.ladder.taskTiers, remediation: practice.ladder.remediation, drawn };
+    }
     return {
       key,
       courseId: "bank",
@@ -110,6 +134,7 @@ export async function resolveLesson(
       open,
       calculator: practice.section === "sat-math",
       taskSkills: practice.taskSkills,
+      ladder,
       moreKey: null,
       entry: null,
       plan,
@@ -133,6 +158,11 @@ export async function resolveLesson(
     calculator: entry.course.id === "sat-math",
     // An authored lesson of a bank skill counts towards that skill's level too.
     taskSkills: skill && skill.kind === "questions" ? entry.lesson.questions.map(() => skill.id) : null,
+    // Authored SAT Math lessons count on the ladder as step-3 tasks.
+    ladder:
+      skill && skill.section === "sat-math" && skill.kind === "questions"
+        ? { taskIds: entry.lesson.questions.map(() => null), taskTiers: entry.lesson.questions.map(() => AUTHORED_TIER), remediation: [], drawn: false }
+        : null,
     moreKey: entry.key,
     entry,
     plan,

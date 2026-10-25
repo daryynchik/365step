@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 
-import type { Response } from "@/lib/answers";
+import type { AttemptMeta, Response } from "@/lib/answers";
 import { requireUser } from "@/lib/auth";
 import { examinerFollowUp, speakingAssessment, writingFeedback, type FeedbackResult } from "@/lib/ai-feedback";
 import { getOrCreatePractice, getPracticeSet, type PracticeOutcome } from "@/lib/content-engine";
@@ -17,9 +17,11 @@ export async function completeLessonAction(
   courseId: string,
   lessonId: string,
   responses: (Response | null)[],
+  meta: AttemptMeta = {},
 ): Promise<CompletionResult> {
   const user = await requireUser();
-  const result = await completeLesson(user.id, courseId, lessonId, responses);
+  const clean = (xs: unknown) => (Array.isArray(xs) ? xs.slice(0, 200).map((x) => x === true) : undefined);
+  const result = await completeLesson(user.id, courseId, lessonId, responses, { hinted: clean(meta?.hinted), retried: clean(meta?.retried) });
   if (result.ok) revalidateProgress();
   return result;
 }
