@@ -52,10 +52,12 @@ export function practiceEnabled(): boolean {
 }
 
 export function isGeneratable(entry: PathEntry): boolean {
+  // Math practice expands through attributed source imports, never AI-written questions.
+  if (entry.course.id === "sat-math") return false;
   const { lesson, course } = entry;
   if (lesson.tutorial || lesson.listening || lesson.speaking || lesson.writing) return false;
   if (lesson.questions.length === 0) return false;
-  return course.id === "sat-rw" || course.id === "sat-math" || course.id === "ielts" || course.id === "reading";
+  return course.id === "sat-rw" || course.id === "ielts" || course.id === "reading";
 }
 
 // ------------------------------------------------------------- wikipedia --

@@ -1,0 +1,125 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "linear-equations-one"
+  },
+  "items": [
+    {
+      "id": "openstax-m51253-fs-id2019698",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the equation for x.\n\n4x−3=5",
+      "answer": [
+        "2"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id2019698",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    },
+    {
+      "id": "openstax-m51253-fs-id3120624",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the equation for x.\n\n12−5(x+3)=2x−5",
+      "answer": [
+        "2/7"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=(2)/(7)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id3120624",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    },
+    {
+      "id": "openstax-m51253-fs-id1833287",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the equation for x.\n\n(x)/(3)−(3)/(4)=(2x+3)/(12)",
+      "answer": [
+        "6"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=6\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id1833287",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    },
+    {
+      "id": "openstax-m51253-fs-id2483678",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the equation for x.\n\n3(2x−1)+x=5x+3",
+      "answer": [
+        "3"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id2483678",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    },
+    {
+      "id": "openstax-m51253-fs-id2301811",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the equation for x.\n\n(x+2)/(4)−(x−1)/(3)=2",
+      "answer": [
+        "-14"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−14\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id2301811",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    }
+  ]
+}

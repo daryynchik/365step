@@ -1,0 +1,286 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "problem-solving-data",
+    "skill": "probability"
+  },
+  "items": [
+    {
+      "id": "openstax-m49450-fs-id1505434",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, two coins are tossed.\n\nFind the probability of tossing two heads.",
+      "answer": [
+        "1/4"
+      ],
+      "explanation": "Ключ ответа OpenStax: (1)/(4).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1505434",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1149123",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, two coins are tossed.\n\nFind the probability of tossing at least one tail.",
+      "answer": [
+        "3/4"
+      ],
+      "explanation": "Ключ ответа OpenStax: (3)/(4).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1149123",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1107735",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, four coins are tossed.\n\nFind the probability of tossing exactly two heads.",
+      "answer": [
+        "3/8"
+      ],
+      "explanation": "Ключ ответа OpenStax: (3)/(8).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1107735",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1435199",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, four coins are tossed.\n\nFind the probability of tossing four heads or four tails.",
+      "answer": [
+        "1/8"
+      ],
+      "explanation": "Ключ ответа OpenStax: (1)/(8).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1435199",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1102277",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, four coins are tossed.\n\nFind the probability of tossing not all tails.",
+      "answer": [
+        "15/16"
+      ],
+      "explanation": "Ключ ответа OpenStax: (15)/(16).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1102277",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1407240",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, four coins are tossed.\n\nFind the probability of tossing either two heads or three heads.",
+      "answer": [
+        "5/8"
+      ],
+      "explanation": "Ключ ответа OpenStax: (5)/(8).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1407240",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1429776",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For the following exercises, two dice are rolled, and the results are summed.\n\nFind the probability of rolling at least one four or a sum of 8.",
+      "answer": [
+        "5/12"
+      ],
+      "explanation": "Ключ ответа OpenStax: (5)/(12).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1429776",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1504285",
+      "difficulty": "easy",
+      "tier": 1,
+      "type": "grid-in",
+      "stem": "For the following exercises, two dice are rolled, and the results are summed.\n\nFind the probability of rolling a sum greater than or equal to 15.",
+      "answer": [
+        "0"
+      ],
+      "explanation": "Ключ ответа OpenStax: 0.\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1504285",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1352158",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, two dice are rolled, and the results are summed.\n\nFind the probability of rolling a sum less than 6 or greater than 9.",
+      "answer": [
+        "4/9"
+      ],
+      "explanation": "Ключ ответа OpenStax: (4)/(9).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1352158",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1405147",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, two dice are rolled, and the results are summed.\n\nFind the probability of rolling a sum of 5 or 6.",
+      "answer": [
+        "1/4"
+      ],
+      "explanation": "Ключ ответа OpenStax: (1)/(4).\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1405147",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1403033",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, a coin is tossed, and a card is pulled from a standard deck. Find the probability of the following:\n\nA head on the coin or a club",
+      "answer": [
+        "5/8"
+      ],
+      "explanation": "Ключ ответа OpenStax: (5)/(8)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1403033",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    },
+    {
+      "id": "openstax-m49450-fs-id1406358",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, a coin is tossed, and a card is pulled from a standard deck. Find the probability of the following:\n\nA head on the coin or a face card",
+      "answer": [
+        "8/13"
+      ],
+      "explanation": "Ключ ответа OpenStax: (8)/(13)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Probability» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49450/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Probability",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49450",
+        "exercise": "fs-id1406358",
+        "sha256": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52"
+      }
+    }
+  ]
+}

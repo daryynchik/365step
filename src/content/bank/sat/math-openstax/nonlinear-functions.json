@@ -1,0 +1,102 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "advanced-math",
+    "skill": "nonlinear-functions"
+  },
+  "items": [
+    {
+      "id": "openstax-m51263-fs-id1165137851207",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the average rate of change of each function on the interval specified.\n\nh(x)=5−2(x)^(2) on [−2,4]",
+      "answer": [
+        "-4"
+      ],
+      "explanation": "Ключ ответа OpenStax: -4\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Rates of Change and Behavior of Graphs» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51263/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Rates of Change and Behavior of Graphs",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51263",
+        "exercise": "fs-id1165137851207",
+        "sha256": "c5b2cb39b81f8449d1466d0d1abe4c608218f740e003fb19b09e8eb2454f1edc"
+      }
+    },
+    {
+      "id": "openstax-m51263-fs-id1165135453186",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the average rate of change of each function on the interval specified.\n\ng(x)=3(x)^(3)−1 on [−3,3]",
+      "answer": [
+        "27"
+      ],
+      "explanation": "Ключ ответа OpenStax: 27\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Rates of Change and Behavior of Graphs» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51263/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Rates of Change and Behavior of Graphs",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51263",
+        "exercise": "fs-id1165135453186",
+        "sha256": "c5b2cb39b81f8449d1466d0d1abe4c608218f740e003fb19b09e8eb2454f1edc"
+      }
+    },
+    {
+      "id": "openstax-m51263-fs-id1165134299101",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "Let f(x)=(1)/(x) . Find the number b such that the average rate of change of f on the interval (2,b) is −(1)/(10).",
+      "answer": [
+        "5"
+      ],
+      "explanation": "Ключ ответа OpenStax: b=5\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Rates of Change and Behavior of Graphs» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51263/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Rates of Change and Behavior of Graphs",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51263",
+        "exercise": "fs-id1165134299101",
+        "sha256": "c5b2cb39b81f8449d1466d0d1abe4c608218f740e003fb19b09e8eb2454f1edc"
+      }
+    },
+    {
+      "id": "openstax-m49362-fs-id1165135519341",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, evaluate the exponential functions for the indicated value of x.\n\nh(x)=−(1)/(2)(((1)/(2)))^(x)+6 for h(−7).",
+      "answer": [
+        "-58"
+      ],
+      "explanation": "Ключ ответа OpenStax: h(−7)=−58\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Graphs of Exponential Functions» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49362/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Graphs of Exponential Functions",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49362",
+        "exercise": "fs-id1165135519341",
+        "sha256": "4c10dd2e05db186d725c467e5eb5cd44e3844c9ba8a1c26d74c6eddfeaefb136"
+      }
+    }
+  ]
+}

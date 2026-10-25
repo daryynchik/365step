@@ -86,7 +86,7 @@ function poolOf(skill: string): MathPoolTask[] {
   if (!pool) {
     pool = bankTasksOf(skill)
       .filter((t) => t.type === "mcq" || t.type === "grid-in")
-      .map((t) => ({ id: t.id, tier: tierOf(t), task: t }));
+      .map((t) => ({ id: t.id, tier: tierOf(t), sourced: t.source !== "original", task: t }));
     pools.set(skill, pool);
   }
   return pool;
@@ -161,28 +161,40 @@ function lastMiss(skill: string, state: LadderState): TheoryBlock | null {
 }
 
 /** One skill's practice lesson. */
-export function mathPractice(skillId: string, state: LadderState, seed: string, size = 8): MathLesson {
+export function mathPractice(skillId: string, state: LadderState, seed: string, size = 8, sourceOnly = false): MathLesson {
   const skill = skillById(skillId)!;
   const m = state.mastery[skillId] ?? newMastery(state.start);
   const slots = lessonSlots(m.tier, state.target, m.remediation, size);
-  const draw = drawLadder({ pool: poolOf(skillId), slots, history: state.history, now: state.now, seed: `${seed}|${skillId}`, maxRetryTier: m.tier + 1 });
-  const picks = draw.picks;
+  const pool = sourceOnly ? poolOf(skillId).filter((t) => t.sourced && t.tier >= m.tier - 1 && t.tier <= m.tier + 1) : poolOf(skillId);
+  const draw = drawLadder({ pool, slots, history: state.history, now: state.now, seed: `${seed}|${skillId}`, maxRetryTier: m.tier + 1, ...(sourceOnly ? { minimumCurrentTier: m.tier } : {}) });
+  // A source-only set must contain current/stretch practice, never just easy review.
+  const picks = sourceOnly && !draw.picks.some((p) => p.task.tier >= m.tier) ? [] : draw.picks;
   const justPromoted = state.justPromoted.has(skillId);
   const theory: TheoryBlock[] = [
     { heading: selectionHeadline(skillId, m, state.target, justPromoted), body: `${selectionDetail(m.tier, picks)}\n\n${RULES}` },
   ];
+  if (sourceOnly) theory.unshift({
+    heading: "Задачи из открытого учебника",
+    body: picks.length ? `${picks.length} упражнений OpenStax с исходными условиями и ответами. Это практика навыка, не официальный пробный SAT. Если решений несколько, введи все корни через точку с запятой.` : "В подборке пока нет упражнений этой темы на твоей ступени. Выбери другую тему или открой внешний банк. Более простые задачи не подставляются вместо твоего уровня.",
+  });
   if (m.remediation) {
     theory.push(...skillRefresher(skill));
     const miss = lastMiss(skillId, state);
     if (miss) theory.push(miss);
   }
-  if (skill.lesson) theory.push({ heading: "Если забыл приёмы", body: `Повтори урок «${skill.title}» — он есть в твоём плане раньше.` });
+  if (skill.lesson) theory.push({ heading: "Если забыл приёмы", body: sourceOnly ? `Теория этого навыка есть в основном плане: урок «${skill.title}». Его можно повторить, когда он открыт.` : `Повтори урок «${skill.title}» — он есть в твоём плане раньше.` });
   return assemble(picks, {
     remediation: m.remediation ? [skillId] : [],
     theory,
     summary: `SAT Math · ступень ${m.tier} из 6 («${TIER_TITLES[m.tier]}»)`,
     shortages: draw.shortages.map((s) => ({ skill: skillId, ...s })),
   });
+}
+
+/** Honest source coverage: counts, not a claim that a whole external bank was copied. */
+export function sourceCoverage(skill: string, tier: Tier): { total: number; suitable: number } {
+  const source = poolOf(skill).filter((t) => t.sourced);
+  return { total: source.length, suitable: source.filter((t) => t.tier >= tier && t.tier <= tier + 1).length };
 }
 
 /** Skills furthest below where they started first; then remediation, accuracy, least practised. */
@@ -240,7 +252,7 @@ export function mathMock(state: LadderState, seed: string, day: number, size = 1
   sequence.forEach((s, i) => {
     const m = state.mastery[s.id] ?? newMastery(state.start);
     const slot: Slot = { tier: m.tier, role: "current" };
-    const draw = drawLadder({ pool: poolOf(s.id).filter((t) => !used.has(t.id)), slots: [slot], history: state.history, now: state.now, seed: `${seed}|mock|${day}|${i}`, maxRetries: 0 });
+    const draw = drawLadder({ pool: poolOf(s.id).filter((t) => !t.task.answerFormat && !used.has(t.id)), slots: [slot], history: state.history, now: state.now, seed: `${seed}|mock|${day}|${i}`, maxRetries: 0 });
     for (const p of draw.picks) {
       used.add(p.task.id);
       picks.push(p);

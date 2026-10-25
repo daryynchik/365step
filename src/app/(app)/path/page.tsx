@@ -138,6 +138,11 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
         {mathState && ladder && <MathSkillsCard state={mathState} mastery={ladder.mastery} justPromoted={ladder.justPromoted} target={ladder.target} />}
 
         <DesmosPath lessons={plan.tutorials} done={done} />
+        <section className="card mb-8 p-5">
+          <h2 className="font-semibold">Задачи из открытых источников</h2>
+          <p className="mt-1 text-sm text-muted">Упражнения OpenStax с исходными условиями и ответами, подобранные по твоему уровню. Можно решать параллельно основному плану.</p>
+          <ButtonLink href="/math-sources" size="sm" className="mt-3">Открыть подборку</ButtonLink>
+        </section>
 
         <div className="mx-auto max-w-md">
           <PlanMap plan={plan} done={done} today={today} openWeek={week !== undefined && /^\d+$/.test(week) ? Number(week) : null} />

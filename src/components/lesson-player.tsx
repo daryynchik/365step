@@ -362,10 +362,10 @@ export function LessonPlayer({ courseId, lesson, unitTitle, tone, backHref, draf
       {phase === "theory" && (
         <footer className={clsx("fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface", showCalculator && calculatorOpen && "right-[min(52vw,520px)]")}>
           <div className="mx-auto flex max-w-3xl justify-end px-4 py-4">
-            <Button size="lg" onClick={begin} disabled={pending} className="w-full sm:w-auto">
+            {courseId === "source" && questions.length === 0 ? <Link href="/math-sources" className="font-semibold text-accent">К открытым задачам</Link> : <Button size="lg" onClick={begin} disabled={pending} className="w-full sm:w-auto">
               {pending && <Loader2 className="size-4 animate-spin" />}
               {questions.length > 0 ? "К заданиям" : lesson.speaking ? "К разговору с экзаменатором" : lesson.writing ? "К письменной работе" : "Готово"}
-            </Button>
+            </Button>}
           </div>
         </footer>
       )}

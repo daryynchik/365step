@@ -47,6 +47,13 @@ export function isCorrect(question: Question, response: Response | null | undefi
   if (question.kind === "choice") return response === question.answer;
 
   if (typeof response !== "string" || !response.trim()) return false;
+  if (question.answerFormat === "number-set") {
+    const given = parseNumberSet(response);
+    return given !== null && question.answers.some((a) => {
+      const expected = parseNumberSet(a);
+      return expected !== null && expected.length === given.length && expected.every((n, i) => Math.abs(n - given[i]) < 1e-9);
+    });
+  }
   const given = normalise(response);
   const givenNumber = parseNumber(response);
   return question.answers.some((accepted) => {
@@ -54,6 +61,13 @@ export function isCorrect(question: Question, response: Response | null | undefi
     const acceptedNumber = parseNumber(accepted);
     return acceptedNumber !== null && givenNumber !== null && Math.abs(acceptedNumber - givenNumber) < 1e-9;
   });
+}
+
+/** A set of real numbers, entered with commas or semicolons; never a partial root set. */
+export function parseNumberSet(text: string): number[] | null {
+  const parts = text.trim().replace(/^\{(.*)\}$/s, "$1").split(/[;,]/).map((s) => parseNumber(s));
+  if (parts.length === 0 || parts.some((n) => n === null || !Number.isFinite(n))) return null;
+  return [...new Set(parts as number[])].sort((a, b) => a - b);
 }
 
 /** The answer as it should be shown after a wrong attempt. */

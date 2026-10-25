@@ -26,6 +26,13 @@ import satMathLadderOneVariableData from "./sat/math-ladder/one-variable-data.js
 import satMathLadderPercentages from "./sat/math-ladder/percentages.json";
 import satMathLadderRatiosRates from "./sat/math-ladder/ratios-rates.json";
 import satMathLadderSystems from "./sat/math-ladder/systems.json";
+import satMathOpenstaxLinearEquationsOne from "./sat/math-openstax/linear-equations-one.json";
+import satMathOpenstaxLinearFunctions from "./sat/math-openstax/linear-functions.json";
+import satMathOpenstaxNonlinearEquations from "./sat/math-openstax/nonlinear-equations.json";
+import satMathOpenstaxNonlinearFunctions from "./sat/math-openstax/nonlinear-functions.json";
+import satMathOpenstaxProbability from "./sat/math-openstax/probability.json";
+import satMathOpenstaxRatiosRates from "./sat/math-openstax/ratios-rates.json";
+import satMathOpenstaxSystems from "./sat/math-openstax/systems.json";
 import satMathAreaVolume from "./sat/math/area-volume.json";
 import satMathCircles from "./sat/math/circles.json";
 import satMathEquivalentExpressions from "./sat/math/equivalent-expressions.json";
@@ -81,6 +88,13 @@ export const BANK_FILES: Record<string, unknown> = {
   "sat/math-ladder/percentages.json": satMathLadderPercentages,
   "sat/math-ladder/ratios-rates.json": satMathLadderRatiosRates,
   "sat/math-ladder/systems.json": satMathLadderSystems,
+  "sat/math-openstax/linear-equations-one.json": satMathOpenstaxLinearEquationsOne,
+  "sat/math-openstax/linear-functions.json": satMathOpenstaxLinearFunctions,
+  "sat/math-openstax/nonlinear-equations.json": satMathOpenstaxNonlinearEquations,
+  "sat/math-openstax/nonlinear-functions.json": satMathOpenstaxNonlinearFunctions,
+  "sat/math-openstax/probability.json": satMathOpenstaxProbability,
+  "sat/math-openstax/ratios-rates.json": satMathOpenstaxRatiosRates,
+  "sat/math-openstax/systems.json": satMathOpenstaxSystems,
   "sat/math/area-volume.json": satMathAreaVolume,
   "sat/math/circles.json": satMathCircles,
   "sat/math/equivalent-expressions.json": satMathEquivalentExpressions,

@@ -1,0 +1,699 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "advanced-math",
+    "skill": "nonlinear-equations"
+  },
+  "items": [
+    {
+      "id": "openstax-m51256-fs-id1227822",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by factoring.\n\n(x)^(2)−9x+18=0",
+      "answer": [
+        "3; 6"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=6, x=3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id1227822",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id1333066",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by factoring.\n\n6(x)^(2)+17x+5=0",
+      "answer": [
+        "-5/2; -1/3"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=(−5)/(2), x=(−1)/(3)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id1333066",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id2708935",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by factoring.\n\n3(x)^(2)−75=0",
+      "answer": [
+        "-5; 5"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=5, x=−5\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id2708935",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id1417836",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by factoring.\n\n4(x)^(2)=9",
+      "answer": [
+        "-3/2; 3/2"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=(−3)/(2), x=(3)/(2)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id1417836",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id3207565",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by factoring.\n\n5(x)^(2)=5x+30",
+      "answer": [
+        "-2; 3"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−2,3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id3207565",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id1520388",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by factoring.\n\n7(x)^(2)+3x=0",
+      "answer": [
+        "-3/7; 0"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=0, x=(−3)/(7)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id1520388",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id2370842",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by using the square root property.\n\n(x)^(2)=36",
+      "answer": [
+        "-6; 6"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−6, x=6\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id2370842",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id1354953",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by using the square root property.\n\n((x−1))^(2)=25",
+      "answer": [
+        "-4; 6"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=6, x=−4\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id1354953",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id2977340",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by using the square root property.\n\n((2x+1))^(2)=9",
+      "answer": [
+        "-2; 1"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=1, x=−2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id2977340",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id2432300",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by completing the square. Show each step.\n\n(x)^(2)−9x−22=0",
+      "answer": [
+        "-2; 11"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−2, x=11\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id2432300",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51256-fs-id1840550",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the quadratic equation by completing the square. Show each step.\n\n2+z=6(z)^(2)",
+      "answer": [
+        "-1/2; 2/3"
+      ],
+      "explanation": "Ключ ответа OpenStax: z=(2)/(3), z=−(1)/(2)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Quadratic Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51256/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Quadratic Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51256",
+        "exercise": "fs-id1840550",
+        "sha256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1973815",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the rational exponent equation. Use factoring where necessary.\n\n(x)^((3)/(4))=27",
+      "answer": [
+        "81"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=81\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1973815",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id3040226",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the rational exponent equation. Use factoring where necessary.\n\n((x−1))^((3)/(4))=8",
+      "answer": [
+        "17"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=17\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id3040226",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1763592",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the rational exponent equation. Use factoring where necessary.\n\n(x)^((2)/(3))−5(x)^((1)/(3))+6=0",
+      "answer": [
+        "8; 27"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=8, x=27\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1763592",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2382874",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the following polynomial equations by grouping and factoring.\n\n(x)^(3)+2(x)^(2)−x−2=0",
+      "answer": [
+        "-2; -1; 1"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−2,1,−1\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2382874",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1393262",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the following polynomial equations by grouping and factoring.\n\n4(y)^(3)−9y=0",
+      "answer": [
+        "-3/2; 0; 3/2"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=0, (3)/(2), (−3)/(2)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1393262",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1582399",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the following polynomial equations by grouping and factoring.\n\n(m)^(3)+(m)^(2)−m−1=0",
+      "answer": [
+        "-1; 1"
+      ],
+      "explanation": "Ключ ответа OpenStax: m=1,−1\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1582399",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2332670",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the radical equation. Be sure to check all solutions to eliminate extraneous solutions.\n\nsqrt(x−7)=5",
+      "answer": [
+        "32"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=32\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2332670",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2486495",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the radical equation. Be sure to check all solutions to eliminate extraneous solutions.\n\nsqrt(3t+5)=7",
+      "answer": [
+        "44/3"
+      ],
+      "explanation": "Ключ ответа OpenStax: t=(44)/(3)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2486495",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id3256844",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the radical equation. Be sure to check all solutions to eliminate extraneous solutions.\n\nsqrt(12−x)=x",
+      "answer": [
+        "3"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id3256844",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1441558",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the radical equation. Be sure to check all solutions to eliminate extraneous solutions.\n\nsqrt(3x+7)+sqrt(x+2)=1",
+      "answer": [
+        "-2"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1441558",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1150948",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the equation involving absolute value.\n\n|3x−4|=8",
+      "answer": [
+        "-4/3; 4"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=4,(−4)/(3)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1150948",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2410873",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the equation involving absolute value.\n\n|1−4x|−1=5",
+      "answer": [
+        "-5/4; 7/4"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=(−5)/(4),(7)/(4)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2410873",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1717824",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the equation involving absolute value.\n\n|2x−1|−7=−2",
+      "answer": [
+        "-2; 3"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=3,−2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1717824",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2382990",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, solve the equation involving absolute value.\n\n|x+5|=0",
+      "answer": [
+        "-5"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=−5\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2382990",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2665062",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the equation by identifying the quadratic form. Use a substitute variable and find all real solutions by factoring.\n\n(x)^(4)−10(x)^(2)+9=0",
+      "answer": [
+        "-3; -1; 1; 3"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=1,−1,3,-3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2665062",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1577029",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the equation by identifying the quadratic form. Use a substitute variable and find all real solutions by factoring.\n\n(((x)^(2)−1))^(2)+((x)^(2)−1)−12=0",
+      "answer": [
+        "-2; 2"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=2,−2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1577029",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id2797000",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve the equation by identifying the quadratic form. Use a substitute variable and find all real solutions by factoring.\n\n((x−3))^(2)−4=0",
+      "answer": [
+        "1; 5"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=1,5\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id2797000",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    },
+    {
+      "id": "openstax-m51258-fs-id1276816",
+      "difficulty": "hard",
+      "tier": 6,
+      "type": "grid-in",
+      "answerFormat": "number-set",
+      "stem": "For the following exercises, solve for the unknown variable.\n\n|(x)^(2)+2x−36|=12",
+      "answer": [
+        "-8; -6; 4; 6"
+      ],
+      "explanation": "Ключ ответа OpenStax: x=4,6,−6,−8\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Other Types of Equations» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51258/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Other Types of Equations",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51258",
+        "exercise": "fs-id1276816",
+        "sha256": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff"
+      }
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "repository": "openstax/osbooks-college-algebra-bundle",
+  "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "modules": {
+    "m49362": "4c10dd2e05db186d725c467e5eb5cd44e3844c9ba8a1c26d74c6eddfeaefb136",
+    "m49420": "f088532517882f2439faa82ed365daecb1d766d590245862a02d6796601a46ae",
+    "m49450": "2affa3f648584046242ee2fa8bb7f2ddf55a705cda90316e6e2f35593c620c52",
+    "m51253": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b",
+    "m51256": "4c50b475e3a3ab9fd4da9f08e4ac60f47ded08f09118544b12a4f255e01a35e4",
+    "m51258": "9a96de87df085482f876d5c4c0728abef5359e73cd1ce45e0adf42be1e7d22ff",
+    "m51263": "c5b2cb39b81f8449d1466d0d1abe4c608218f740e003fb19b09e8eb2454f1edc",
+    "m51270": "141a0c7a4c08bfe935884898dcc5cd78ca4e015f38a39e69704ada36441df816",
+    "m51271": "358b3b35253ed445d958052f9d7a969eb35cbb576868da26d226c9e30f101260",
+    "m51281": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+  },
+  "exercises": [
+    {
+      "module": "m51253",
+      "exercise": "fs-id2019698",
+      "skill": "linear-equations-one",
+      "tier": 2
+    },
+    {
+      "module": "m51253",
+      "exercise": "fs-id3120624",
+      "skill": "linear-equations-one",
+      "tier": 3
+    },
+    {
+      "module": "m51253",
+      "exercise": "fs-id1833287",
+      "skill": "linear-equations-one",
+      "tier": 4
+    },
+    {
+      "module": "m51253",
+      "exercise": "fs-id2483678",
+      "skill": "linear-equations-one",
+      "tier": 3
+    },
+    {
+      "module": "m51253",
+      "exercise": "fs-id2301811",
+      "skill": "linear-equations-one",
+      "tier": 4
+    },
+    {
+      "module": "m51253",
+      "exercise": "fs-id1773932",
+      "skill": "linear-functions",
+      "tier": 2
+    },
+    {
+      "module": "m51253",
+      "exercise": "fs-id3160370",
+      "skill": "linear-functions",
+      "tier": 2
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id1227822",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id1333066",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id2708935",
+      "skill": "nonlinear-equations",
+      "tier": 2
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id1417836",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id3207565",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id1520388",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id2370842",
+      "skill": "nonlinear-equations",
+      "tier": 2
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id1354953",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id2977340",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id2432300",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51256",
+      "exercise": "fs-id1840550",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1973815",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id3040226",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1763592",
+      "skill": "nonlinear-equations",
+      "tier": 5
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2382874",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1393262",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1582399",
+      "skill": "nonlinear-equations",
+      "tier": 4
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2332670",
+      "skill": "nonlinear-equations",
+      "tier": 2
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2486495",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id3256844",
+      "skill": "nonlinear-equations",
+      "tier": 5
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1441558",
+      "skill": "nonlinear-equations",
+      "tier": 5
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1150948",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2410873",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1717824",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2382990",
+      "skill": "nonlinear-equations",
+      "tier": 2
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2665062",
+      "skill": "nonlinear-equations",
+      "tier": 5
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1577029",
+      "skill": "nonlinear-equations",
+      "tier": 6
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id2797000",
+      "skill": "nonlinear-equations",
+      "tier": 3
+    },
+    {
+      "module": "m51258",
+      "exercise": "fs-id1276816",
+      "skill": "nonlinear-equations",
+      "tier": 6
+    },
+    {
+      "module": "m51263",
+      "exercise": "fs-id1165135403475",
+      "skill": "linear-functions",
+      "tier": 3
+    },
+    {
+      "module": "m51263",
+      "exercise": "fs-id1165137851207",
+      "skill": "nonlinear-functions",
+      "tier": 4
+    },
+    {
+      "module": "m51263",
+      "exercise": "fs-id1165135453186",
+      "skill": "nonlinear-functions",
+      "tier": 4
+    },
+    {
+      "module": "m51263",
+      "exercise": "fs-id1165134299101",
+      "skill": "nonlinear-functions",
+      "tier": 5
+    },
+    {
+      "module": "m51270",
+      "exercise": "fs-id2083836",
+      "skill": "linear-functions",
+      "tier": 2
+    },
+    {
+      "module": "m51270",
+      "exercise": "fs-id2597529",
+      "skill": "linear-functions",
+      "tier": 2
+    },
+    {
+      "module": "m51270",
+      "exercise": "fs-id2266935",
+      "skill": "linear-functions",
+      "tier": 3
+    },
+    {
+      "module": "m51271",
+      "exercise": "fs-id1727719",
+      "skill": "linear-functions",
+      "tier": 3
+    },
+    {
+      "module": "m51271",
+      "exercise": "fs-id1485112",
+      "skill": "linear-functions",
+      "tier": 3
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165137619342",
+      "skill": "ratios-rates",
+      "tier": 3
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165137722717",
+      "skill": "ratios-rates",
+      "tier": 2
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165137476513",
+      "skill": "ratios-rates",
+      "tier": 3
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165135545751",
+      "skill": "ratios-rates",
+      "tier": 3
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165137696700",
+      "skill": "ratios-rates",
+      "tier": 3
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165134401069",
+      "skill": "ratios-rates",
+      "tier": 4
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165137737695",
+      "skill": "ratios-rates",
+      "tier": 4
+    },
+    {
+      "module": "m51281",
+      "exercise": "fs-id1165135440221",
+      "skill": "ratios-rates",
+      "tier": 5
+    },
+    {
+      "module": "m49362",
+      "exercise": "fs-id1165135519341",
+      "skill": "nonlinear-functions",
+      "tier": 4
+    },
+    {
+      "module": "m49420",
+      "exercise": "fs-id1165131863026",
+      "skill": "systems",
+      "tier": 3
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1505434",
+      "skill": "probability",
+      "tier": 2
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1149123",
+      "skill": "probability",
+      "tier": 2
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1107735",
+      "skill": "probability",
+      "tier": 4
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1435199",
+      "skill": "probability",
+      "tier": 3
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1102277",
+      "skill": "probability",
+      "tier": 3
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1407240",
+      "skill": "probability",
+      "tier": 4
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1429776",
+      "skill": "probability",
+      "tier": 5
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1504285",
+      "skill": "probability",
+      "tier": 1
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1352158",
+      "skill": "probability",
+      "tier": 4
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1405147",
+      "skill": "probability",
+      "tier": 3
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1403033",
+      "skill": "probability",
+      "tier": 4
+    },
+    {
+      "module": "m49450",
+      "exercise": "fs-id1406358",
+      "skill": "probability",
+      "tier": 4
+    }
+  ],
+  "licenseSha256": "97d24386ff776d7160b87031b259a942bd03c9939796cab6724ad5d17d2cf785"
+}

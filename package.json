@@ -16,6 +16,8 @@
     "test": "tsx --test \"src/**/*.test.ts\"",
     "validate:content": "tsx scripts/validate-content.ts",
     "bank:index": "tsx scripts/bank-index.ts",
+    "bank:import:openstax": "python3 scripts/import-openstax.py --download",
+    "verify:sources": "NODE_OPTIONS=--conditions=react-server tsx scripts/verify-source-practice.ts",
     "compare:plans": "tsx scripts/compare-plans.ts"
   },
   "dependencies": {

@@ -12,7 +12,7 @@
 export type CourseId = "ielts" | "sat-rw" | "sat-math" | "admissions" | "reading" | "vocab" | "seminar";
 
 /** Lessons assembled per student rather than authored: reviews, the diagnostic, practice from the task bank. */
-export type VirtualCourseId = "review" | "diagnostic" | "bank";
+export type VirtualCourseId = "review" | "diagnostic" | "bank" | "source";
 export type AnyCourseId = CourseId | VirtualCourseId;
 
 export interface Passage {
@@ -35,6 +35,15 @@ interface QuestionBase {
   explanation: string;
   /** A first step the student may open before answering (the answer then counts as helped). */
   hint?: string;
+  /** Attribution travels with the question through practice, review and races. */
+  source?: {
+    title: string;
+    url: string;
+    license: string;
+    licenseUrl: string;
+    attribution: string;
+    note: string;
+  };
 }
 
 export interface ChoiceQuestion extends QuestionBase {
@@ -50,6 +59,8 @@ export interface ChoiceQuestion extends QuestionBase {
 export interface InputQuestion extends QuestionBase {
   kind: "input";
   answers: string[];
+  /** All listed roots are required; their order does not matter. */
+  answerFormat?: "number-set";
 }
 
 export type Question = ChoiceQuestion | InputQuestion;

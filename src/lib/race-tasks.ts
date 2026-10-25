@@ -109,6 +109,8 @@ let built: Map<string, RaceTask> | null = null;
 function build(): Map<string, RaceTask> {
   const map = new Map<string, RaceTask>();
   for (const t of bankTasks()) {
+    // Multi-root textbook practice is not a single-number SAT race question.
+    if (t.source !== "original" || t.answerFormat === "number-set") continue;
     if (t.type !== "mcq" && t.type !== "grid-in" && t.type !== "short-answer") continue;
     const section = t.exam === "sat" ? (t.section === "math" ? "sat-math" : t.section === "rw" ? "sat-rw" : null) : t.section === "reading" ? "ielts-reading" : null;
     if (!section) continue;

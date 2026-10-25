@@ -1,0 +1,194 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "problem-solving-data",
+    "skill": "ratios-rates"
+  },
+  "items": [
+    {
+      "id": "openstax-m51281-fs-id1165137619342",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies directly as the square of x. When x=2, then y=16. Find y when x=8.",
+      "answer": [
+        "256"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=256\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165137619342",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165137722717",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies directly as the square root of x. When x=16, then y=4. Find y when x=36.",
+      "answer": [
+        "6"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=6\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165137722717",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165137476513",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies inversely with x. When x=3, then y=2. Find y when x=1.",
+      "answer": [
+        "6"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=6\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165137476513",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165135545751",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies inversely with the cube of x. When x=3, then y=1. Find y when x=1.",
+      "answer": [
+        "27"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=27\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165135545751",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165137696700",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies inversely with the cube root of x. When x=27, then y=5. Find y when x=125.",
+      "answer": [
+        "3"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165137696700",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165134401069",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies jointly as x, z, and w. When x=2, z=1, and w=12, then y=72. Find y when x=1, z=2, and w=3.",
+      "answer": [
+        "18"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=18\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165134401069",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165137737695",
+      "difficulty": "medium",
+      "tier": 4,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies jointly as the square of x and the square root of z. When x=2 and z=9, then y=24. Find y when x=3 and z=25.",
+      "answer": [
+        "90"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=90\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165137737695",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    },
+    {
+      "id": "openstax-m51281-fs-id1165135440221",
+      "difficulty": "hard",
+      "tier": 5,
+      "type": "grid-in",
+      "stem": "For the following exercises, use the given information to find the unknown value.\n\ny varies jointly as the square of x and the cube of z and inversely as the square root of w. When x=2, z=2, and w=64, then y=12. Find y when x=1, z=3, and w=4.",
+      "answer": [
+        "81/2"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=(81)/(2)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling Using Variation» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51281/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling Using Variation",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51281",
+        "exercise": "fs-id1165135440221",
+        "sha256": "bb7b5264b0e6b5156156a0cf8f01fd0d30b1b040a718868d05de2168cf6fd0a8"
+      }
+    }
+  ]
+}

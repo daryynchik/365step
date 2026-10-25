@@ -265,6 +265,7 @@ export function reviewDueAt(attempts: Attempt[]): string | null {
 export interface LadderTask {
   id: string;
   tier: number;
+  sourced?: boolean;
 }
 
 export interface LadderPick<T extends LadderTask> {
@@ -325,6 +326,8 @@ export interface DrawInput<T extends LadderTask> {
   /** Past mistakes at most this step come back; at most `maxRetries` of them. */
   maxRetryTier?: number;
   maxRetries?: number;
+  /** Source-only practice must not fill current/stretch slots with easier drills. */
+  minimumCurrentTier?: number;
 }
 
 /**
@@ -362,7 +365,9 @@ export function drawLadder<T extends LadderTask>(input: DrawInput<T>): LadderDra
   const ordered = new Map<number, T[]>();
   const orderOf = (tier: number): T[] => {
     if (!ordered.has(tier)) {
-      const list = shuffled(byTier.get(tier) ?? [], `${seed}|${tier}`);
+      // At the same difficulty, use real attributed source exercises first.
+      // Freshness still takes precedence: do not loop through a small source pool.
+      const list = shuffled(byTier.get(tier) ?? [], `${seed}|${tier}`).sort((a, b) => Number(b.sourced ?? false) - Number(a.sourced ?? false));
       const fresh = list.filter((t) => lastSeen(t.id) === null);
       const old = list.filter((t) => lastSeen(t.id) !== null && lastSeen(t.id)! < recentCutoff);
       const recentlySeen = list.filter((t) => lastSeen(t.id) !== null && lastSeen(t.id)! >= recentCutoff);
@@ -381,6 +386,7 @@ export function drawLadder<T extends LadderTask>(input: DrawInput<T>): LadderDra
     let from: Tier = s.tier;
     for (const allowRecent of [false, true]) {
       for (const t of [s.tier, ...fallbackTiers(s.tier, s.role)]) {
+        if ((s.role === "current" || s.role === "stretch") && t < (input.minimumCurrentTier ?? 1)) continue;
         task = firstFree(t, allowRecent);
         if (task) {
           from = t;

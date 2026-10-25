@@ -56,6 +56,17 @@ export const TaskSchema = z
     explanation: z.string().min(20),
     source: Source,
     license: License,
+    attribution: z.object({
+      title: z.string().min(3),
+      licenseUrl: z.string().url().refine((s) => s.startsWith("https://"), "license URL must use HTTPS"),
+      credit: z.string().min(10),
+      note: z.string().min(10),
+      revision: z.string().regex(/^[a-f0-9]{40}$/),
+      module: z.string().regex(/^m\d+$/),
+      exercise: z.string().min(3),
+      sha256: z.string().regex(/^[a-f0-9]{64}$/),
+    }).optional(),
+    answerFormat: z.literal("number-set").optional(),
     /**
      * SAT Math: an expression mathjs evaluates to the answer (or, with variables,
      * an expression equivalent to the right choice). "conceptual" when the
@@ -110,6 +121,9 @@ export const TaskSchema = z
       if (!allowed.includes(t.tier)) issue(`tier ${t.tier} does not fit difficulty ${t.difficulty}`);
     }
     if (t.source !== "original" && !/CC BY|public domain/i.test(t.license)) issue("external material needs an open licence (CC BY, CC BY-SA, public domain)");
+    if (t.source !== "original" && (!t.attribution || !t.source.startsWith("https://"))) issue("external tasks need HTTPS source and complete attribution");
+    if (t.source === "original" && t.attribution) issue("sourced tasks must not be labelled original");
+    if (t.answerFormat && t.type !== "grid-in") issue("number-set needs a grid-in question");
   });
 
 export type Task = z.infer<typeof TaskSchema>;

@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (course === "review") return { title: lesson.startsWith("mock-") ? "Пробная секция" : "Повторение" };
   if (course === "diagnostic") return { title: "Диагностика" };
   if (course === "bank") return { title: lesson.startsWith("mock~") ? "Пробная секция" : "Практика" };
+  if (course === "source") return { title: "Задачи из открытых источников" };
   return { title: findLesson(course, lesson)?.lesson.title ?? "Урок" };
 }
 

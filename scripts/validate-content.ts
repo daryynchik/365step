@@ -25,6 +25,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { all, create } from "mathjs";
+import { parseNumber, parseNumberSet } from "../src/lib/answers";
 
 import { BANK_FILES } from "../src/content/bank/files";
 import { FIXED_CHOICES, loadFile, type Task } from "../src/content/bank/schema";
@@ -234,8 +235,45 @@ function sameExpression(a: string, b: string, vars: string[]): boolean {
 const close = (a: number, b: number, rel = 1e-9) => Math.abs(a - b) <= rel * Math.max(1, Math.abs(b));
 let checked = 0;
 let conceptual = 0;
+let sourced = 0;
+let sourceRootsChecked = 0;
+const sourceManifest = JSON.parse(fs.readFileSync(path.join(process.cwd(), "scripts/sources/openstax-math.json"), "utf8")) as {
+  repository: string; revision: string; modules: Record<string, string>;
+  exercises: { module: string; exercise: string; skill: string; tier: number }[];
+};
 
 for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
+  if (t.source !== "original") {
+    const a = t.attribution;
+    const spec = sourceManifest.exercises.find((e) => e.module === a?.module && e.exercise === a?.exercise);
+    const expectedUrl = `https://github.com/${sourceManifest.repository}/blob/${sourceManifest.revision}/modules/${a?.module}/index.cnxml`;
+    if (!a || !spec || a.revision !== sourceManifest.revision || a.sha256 !== sourceManifest.modules[a.module] || t.source !== expectedUrl || t.skill !== `sat-math.${spec.skill}` || t.tier !== spec.tier) {
+      errors.push(`${t.id}: source does not match the reviewed import manifest`);
+      continue;
+    }
+    if (!Array.isArray(t.answer) || t.answer.length !== 1 || (t.answerFormat === "number-set" ? parseNumberSet(t.answer[0]) === null : parseNumber(t.answer[0]) === null)) {
+      errors.push(`${t.id}: invalid sourced numeric answer`);
+      continue;
+    }
+    // A source answer key is not a proof. Independently substitute every root
+    // into the original equation where the imported task asks to solve one.
+    const equation = t.stem.split("\n\n").at(-1)!;
+    if (/solve/i.test(t.stem) && equation.split("=").length === 2) {
+      const [left, right] = equation.split("=");
+      const variables = variablesIn(`${left}+${right}`);
+      if (variables.length === 1 && !equation.includes("|")) {
+        const answers = t.answerFormat ? parseNumberSet(t.answer[0])! : [parseNumber(t.answer[0])!];
+        for (const answer of answers) {
+          const scope = { [variables[0]]: answer };
+          const l = evaluate(left, scope), r = evaluate(right, scope);
+          if (l === null || r === null || !close(l, r)) errors.push(`${t.id}: sourced root ${answer} does not satisfy the original equation`);
+        }
+        sourceRootsChecked++;
+      }
+    }
+    sourced++;
+    continue;
+  }
   const raw = t.type === "mcq" ? (t.choices ?? [])[t.answer as number] : Array.isArray(t.answer) ? t.answer[0] : null;
   const answerText = raw ? formulaOf(raw) : null;
   if (answerText === undefined || answerText === null) continue;
@@ -336,7 +374,9 @@ const skeletons = new Map<string, string>();
 for (const t of tasks.filter((x) => x.exam === "sat" && x.section === "math")) {
   const skeleton = `${t.passage ?? ""} ${t.stem}`.toLowerCase().replace(/[−–]/g, "-").replace(/\d+(\.\d+)?/g, "#").replace(/\s+/g, " ").trim();
   const other = skeletons.get(skeleton);
-  if (other) (skeleton.length >= 50 ? errors : warnings).push(`template with swapped numbers: ${other} ~ ${t.id}`);
+  // Genuine textbook drill families retain their source wording. Keep them
+  // visible as warnings; number-swapped newly authored expansion is an error.
+  if (other) (skeleton.length >= 50 && t.source === "original" ? errors : warnings).push(`template with swapped numbers: ${other} ~ ${t.id}`);
   else skeletons.set(skeleton, t.id);
 }
 
@@ -353,7 +393,13 @@ function normalise(t: Task): string {
   // Prompts share the examiner's script (left out for speaking); their questions,
   // cue cards and data differ.
   const extra = [...(t.questions ?? []), t.cueCard?.topic ?? "", ...(t.table?.rows.flat() ?? [])].join(" ");
-  const stem = t.type === "speaking-prompt" ? "" : t.stem;
+  let stem = t.type === "speaking-prompt" ? "" : t.stem;
+  // A shared textbook instruction ("For the following exercises, solve…")
+  // must not dominate similarity. Keep contexts carrying numerical data.
+  if (t.source !== "original") {
+    const [instruction, ...body] = stem.split("\n\n");
+    if (body.length && /^For the following exercises/i.test(instruction) && !/[\d=]/.test(instruction)) stem = body.join("\n\n");
+  }
   return `${t.passageRef ?? ""} ${t.passage ?? ""} ${t.passage2 ?? ""} ${stem} ${(t.choices ?? []).join(" ")} ${extra}`
     .toLowerCase()
     .replace(/[−–—]/g, "-")
@@ -483,7 +529,7 @@ for (const [level, n] of Object.entries(listeningLevels)) if (n < MIN_PER_CELL) 
 for (const w of warnings) console.warn(`warning: ${w}`);
 console.log(
   `Bank: ${tasks.length} tasks in ${files.length} files; SAT Math ${mathTotal} tasks, ${checked} answers recomputed (${conceptual} conceptual), ${verified} verified against the statement; ` +
-    `${mathUnder.length} SAT Math skills under the 40/50/60 target; ${duplicatePairs} duplicate pairs; ` +
+    `${sourced} source exercises (${sourceRootsChecked} original equations independently checked); ${mathUnder.length} SAT Math skills under the 40/50/60 target; ${duplicatePairs} duplicate pairs; ` +
     `${quotesChecked} quotations checked against the novel; ${fullCells}/${cells} question cells at ≥${MIN_PER_CELL}; ${under.length} skills under the minimum; ` +
     `race Listening: ${listening.items.length} items with audio (${listeningLevels.easy}/${listeningLevels.medium}/${listeningLevels.hard}).`,
 );

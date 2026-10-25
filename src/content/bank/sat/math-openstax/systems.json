@@ -1,0 +1,33 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "systems"
+  },
+  "items": [
+    {
+      "id": "openstax-m49420-fs-id1165131863026",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, use a system of linear equations with two variables and two equations to solve.\n\nThe startup cost for a restaurant is $120,000, and each meal costs $10 for the restaurant to make. If each meal is then sold for $15, after how many meals does the restaurant break even?",
+      "answer": [
+        "24000"
+      ],
+      "explanation": "Ключ ответа OpenStax: 24,000\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Systems of Linear Equations: Two Variables» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m49420/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Systems of Linear Equations: Two Variables",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m49420",
+        "exercise": "fs-id1165131863026",
+        "sha256": "f088532517882f2439faa82ed365daecb1d766d590245862a02d6796601a46ae"
+      }
+    }
+  ]
+}

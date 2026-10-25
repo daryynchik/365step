@@ -7,9 +7,11 @@
 
 import { findLesson, isSequentiallyUnlocked, PLAN_COURSES, type PathEntry } from "@/content";
 import { bankLesson, parseBankKey } from "@/content/bank/lessons";
+import { drawOf, lessonFromDraw, mathPractice } from "@/content/bank/math-lessons";
 import { skillById, skillOfLesson } from "@/content/bank/taxonomy";
 import { diagnosticLesson, isDiagnosticSection } from "@/content/diagnostic";
 import type { Level, SectionId } from "@/content/exams";
+import { skillNameRu } from "@/content/math-ladder";
 import { isPlanUnlocked, reviewLesson, SECTION_COURSE, STRAND_COURSE, type Plan } from "@/content/plan";
 import type { AnyCourseId, CourseId, Lesson } from "@/content/types";
 import { getDraw, getMathContext, saveDraw } from "./mastery";
@@ -62,6 +64,25 @@ export async function resolveLesson(
   lessonId: string,
   done: Set<string> | Promise<Set<string>>,
 ): Promise<ResolvedLesson | null> {
+  if (course === "source") {
+    const skill = skillById(lessonId);
+    if (skill?.section !== "sat-math") return null;
+    const key = `source/${skill.id}`;
+    const [plan, saved] = await Promise.all([getPlan(userId), getDraw(userId, key)]);
+    if (!plan) return null;
+    const state = await getMathContext(userId, plan);
+    const practice = (saved ? lessonFromDraw(saved) : null) ?? mathPractice(skill.id, state, `${userId}|${state.now.slice(0, 10)}`, 8, true);
+    if (practice.questions.some((q) => !q.source)) return null;
+    if (!saved && practice.questions.length > 0) await saveDraw(userId, key, drawOf(practice));
+    return {
+      key, courseId: "source", tone: "sat-math",
+      lesson: { id: skill.id, title: skillNameRu(skill.id).replace(/^./, (c) => c.toUpperCase()), summary: practice.summary, minutes: 12, theory: practice.theory, questions: practice.questions },
+      unitTitle: "Математика · открытые источники", backHref: "/math-sources", open: true, calculator: true,
+      taskSkills: practice.taskSkills,
+      ladder: { taskIds: practice.taskIds, taskTiers: practice.taskTiers, remediation: practice.remediation, drawn: practice.questions.length > 0 },
+      moreKey: null, entry: null, plan,
+    };
+  }
   if (course === "diagnostic") {
     if (!isDiagnosticSection(lessonId)) return null;
     return {

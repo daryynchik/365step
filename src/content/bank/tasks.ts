@@ -56,9 +56,13 @@ export function toQuestion(t: Task): Question {
           ]
         : [{ text: t.passage }]
       : undefined;
-  const base = { passages, table: t.table, prompt: t.stem, explanation: t.explanation, ...(t.hint ? { hint: t.hint } : {}) };
+  const source = t.source !== "original" && t.attribution ? {
+    title: t.attribution.title, url: t.source, license: t.license,
+    licenseUrl: t.attribution.licenseUrl, attribution: t.attribution.credit, note: t.attribution.note,
+  } : undefined;
+  const base = { passages, table: t.table, prompt: t.stem, explanation: t.explanation, ...(t.hint ? { hint: t.hint } : {}), ...(source ? { source } : {}) };
   if (t.type === "mcq") return { ...base, kind: "choice", options: t.choices!, answer: t.answer as number };
-  return { ...base, kind: "input", answers: t.answer as string[] };
+  return { ...base, kind: "input", answers: t.answer as string[], ...(t.answerFormat ? { answerFormat: t.answerFormat } : {}) };
 }
 
 export function toWriting(t: Task): WritingTask {

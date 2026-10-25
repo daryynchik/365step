@@ -21,8 +21,16 @@ export function QuestionView({
   disabled: boolean;
 }) {
   const numeric = question.kind === "input" && question.answers.every((a) => parseNumber(a) !== null);
+  const numberSet = question.kind === "input" && question.answerFormat === "number-set";
   return (
     <div className="space-y-5">
+      {question.source && (
+        <div className="rounded-lg border border-line bg-surface px-4 py-3 text-xs leading-relaxed text-muted">
+          <a href={question.source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">{question.source.title} ↗</a>
+          <p>{question.source.note}</p>
+          <p>{question.source.attribution} · <a href={question.source.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{question.source.license}</a></p>
+        </div>
+      )}
       {question.table && <DataTableView table={question.table} />}
 
       {question.passages?.map((p, i) => (
@@ -60,7 +68,7 @@ export function QuestionView({
       ) : (
         <div>
           <label htmlFor="answer" className="mb-1.5 block text-sm text-muted">
-            {numeric ? "Введи ответ — число, десятичную дробь или дробь вида 3/4" : "Впиши ответ — слово или число, без лишних слов"}
+            {numberSet ? "Введи все корни через точку с запятой, например: -2; 3/4. Порядок не важен." : numeric ? "Введи ответ — число, десятичную дробь или дробь вида 3/4" : "Впиши ответ — слово или число, без лишних слов"}
           </label>
           <input
             id="answer"

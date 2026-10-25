@@ -193,6 +193,7 @@ export type CompletionResult = { ok: true; result: Completion } | { ok: false; e
 /** Where "Continue" goes: the next step of the plan, or the next seminar lesson. */
 async function continueHref(userId: string, target: { key?: string; courseId: AnyCourseId }, done: Set<string>): Promise<string> {
   const { courseId } = target;
+  if (courseId === "source") return "/math-sources";
   if (courseId === "seminar") {
     const next = nextLesson("seminar", done);
     return next ? `/lesson/seminar/${next.lesson.id}` : "/seminar";
@@ -299,6 +300,7 @@ export async function completeLesson(
   if (!found.open) return { ok: false, error: "Сначала пройди предыдущие уроки." };
 
   const questions = found.lesson.questions;
+  if (courseId === "source" && questions.length === 0) return { ok: false, error: "В этой теме пока нет задач твоего уровня. Выбери другую тему в открытом банке." };
   const results = questions.map((q, i) => isCorrect(q, responses[i]));
   // A hint counts only where the question had one to open.
   const hinted = questions.map((q, i) => Boolean(q.hint) && meta.hinted?.[i] === true);

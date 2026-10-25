@@ -1,0 +1,194 @@
+{
+  "defaults": {
+    "exam": "sat",
+    "section": "math",
+    "domain": "algebra",
+    "skill": "linear-functions"
+  },
+  "items": [
+    {
+      "id": "openstax-m51253-fs-id1773932",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the slope of the line that passes through the given points.\n\n(−3,2) and (4,−7)",
+      "answer": [
+        "-9/7"
+      ],
+      "explanation": "Ключ ответа OpenStax: m=−(9)/(7)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id1773932",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    },
+    {
+      "id": "openstax-m51253-fs-id3160370",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the slope of the line that passes through the given points.\n\n(−1,−2) and (3,4)",
+      "answer": [
+        "3/2"
+      ],
+      "explanation": "Ключ ответа OpenStax: m=(3)/(2)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Equations in One Variable» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51253/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Equations in One Variable",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51253",
+        "exercise": "fs-id3160370",
+        "sha256": "680e2612254b8c5417759dcf4953e07db6719274f3c35b86dc2c27b0a386988b"
+      }
+    },
+    {
+      "id": "openstax-m51263-fs-id1165135403475",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the average rate of change of each function on the interval specified for real numbers b or h in simplest form.\n\np(x)=3x+4 on [2, 2+h]",
+      "answer": [
+        "3"
+      ],
+      "explanation": "Ключ ответа OpenStax: 3\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Rates of Change and Behavior of Graphs» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51263/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Rates of Change and Behavior of Graphs",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51263",
+        "exercise": "fs-id1165135403475",
+        "sha256": "c5b2cb39b81f8449d1466d0d1abe4c608218f740e003fb19b09e8eb2454f1edc"
+      }
+    },
+    {
+      "id": "openstax-m51270-fs-id2083836",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the slope of the line that passes through the two given points.\n\n(1,5) and (4,11)",
+      "answer": [
+        "2"
+      ],
+      "explanation": "Ключ ответа OpenStax: 2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Functions» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51270/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Functions",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51270",
+        "exercise": "fs-id2083836",
+        "sha256": "141a0c7a4c08bfe935884898dcc5cd78ca4e015f38a39e69704ada36441df816"
+      }
+    },
+    {
+      "id": "openstax-m51270-fs-id2597529",
+      "difficulty": "easy",
+      "tier": 2,
+      "type": "grid-in",
+      "stem": "For the following exercises, find the slope of the line that passes through the two given points.\n\n(8,–2) and (4,6)",
+      "answer": [
+        "-2"
+      ],
+      "explanation": "Ключ ответа OpenStax: –2\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Functions» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51270/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Functions",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51270",
+        "exercise": "fs-id2597529",
+        "sha256": "141a0c7a4c08bfe935884898dcc5cd78ca4e015f38a39e69704ada36441df816"
+      }
+    },
+    {
+      "id": "openstax-m51270-fs-id2266935",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "Find the value of x if a linear function goes through the following points and has the following slope: (x,2),(−4,6), m=3",
+      "answer": [
+        "-16/3"
+      ],
+      "explanation": "Ключ ответа OpenStax: y=−(16)/(3)\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Linear Functions» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51270/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Linear Functions",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51270",
+        "exercise": "fs-id2266935",
+        "sha256": "141a0c7a4c08bfe935884898dcc5cd78ca4e015f38a39e69704ada36441df816"
+      }
+    },
+    {
+      "id": "openstax-m51271-fs-id1727719",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, consider this scenario: A town’s population has been decreasing at a constant rate. In 2010 the population was 5,900. By 2012 the population had dropped to 4,700. Assume this trend continues.\n\nPredict the population in 2016.",
+      "answer": [
+        "2300"
+      ],
+      "explanation": "Ключ ответа OpenStax: 2,300\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling with Linear Functions» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51271/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling with Linear Functions",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51271",
+        "exercise": "fs-id1727719",
+        "sha256": "358b3b35253ed445d958052f9d7a969eb35cbb576868da26d226c9e30f101260"
+      }
+    },
+    {
+      "id": "openstax-m51271-fs-id1485112",
+      "difficulty": "medium",
+      "tier": 3,
+      "type": "grid-in",
+      "stem": "For the following exercises, consider this scenario: A town’s population has been increased at a constant rate. In 2010 the population was 46,020. By 2012 the population had increased to 52,070. Assume this trend continues.\n\nPredict the population in 2016.",
+      "answer": [
+        "64170"
+      ],
+      "explanation": "Ключ ответа OpenStax: 64,170\n\nЭто ответ из учебника. Разбор приёма смотри в разделе «Modeling with Linear Functions» по ссылке на источник.",
+      "source": "https://github.com/openstax/osbooks-college-algebra-bundle/blob/4922e46ebc04326979e19392ccc2384cb8b9076c/modules/m51271/index.cnxml",
+      "license": "CC BY 4.0",
+      "attribution": {
+        "title": "OpenStax · College Algebra 2e · Modeling with Linear Functions",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "© Rice University, OpenStax. Access for free at openstax.org.",
+        "note": "Упражнение из открытого учебника, не официальное задание SAT. Формулы переведены в текст; приложение проверяет конечный числовой ответ или все корни. Ступень сложности назначена 365step.",
+        "revision": "4922e46ebc04326979e19392ccc2384cb8b9076c",
+        "module": "m51271",
+        "exercise": "fs-id1485112",
+        "sha256": "358b3b35253ed445d958052f9d7a969eb35cbb576868da26d226c9e30f101260"
+      }
+    }
+  ]
+}
